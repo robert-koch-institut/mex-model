@@ -1,0 +1,27 @@
+{
+    "$id": "https://mex.rki.de/schema/fields/text",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "examples": [
+        {
+            "value": "hello",
+            "language": "de"
+        }
+    ],
+    "properties": {
+        "value": {
+            "minLength": 1,
+            "type": "string"
+        },
+        "language": {
+            "enum": [
+                "de",
+                "en"
+            ]
+        }
+    },
+    "required": [
+        "value"
+    ],
+    "title": "Text",
+    "type": "object"
+}

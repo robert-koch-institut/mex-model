@@ -1,0 +1,223 @@
+{
+    "$id": "https://mex.rki.de/schema/entities/distribution",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "accessService": {
+            "$ref": "/schema/entities/access-platform#/identifier",
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#accessService"
+            ]
+        },
+        "accessRestriction": {
+            "$ref": "/schema/entities/concept#/identifier",
+            "examples": [
+                "https://mex.rki.de/item/access-restriction-1"
+            ],
+            "sameAs": [
+                "http://purl.org/dc/terms/accessRights"
+            ],
+            "useScheme": "https://mex.rki.de/item/access-restriction"
+        },
+        "accessURL": {
+            "$ref": "/schema/fields/link",
+            "subPropertyOf": [
+                "http://www.w3.org/ns/dcat#accessURL"
+            ]
+        },
+        "author": {
+            "items": {
+                "$ref": "/schema/entities/person#/identifier"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/creator"
+            ],
+            "type": "array"
+        },
+        "contactPerson": {
+            "items": {
+                "$ref": "/schema/entities/person#/identifier"
+            },
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#contactPoint"
+            ],
+            "type": "array"
+        },
+        "dataCurator": {
+            "items": {
+                "$ref": "/schema/entities/person#/identifier"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
+        "dataManager": {
+            "items": {
+                "$ref": "/schema/entities/person#/identifier"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
+        "downloadURL": {
+            "$ref": "/schema/fields/link",
+            "subPropertyOf": [
+                "http://www.w3.org/ns/dcat#downloadURL"
+            ]
+        },
+        "hadPrimarySource": {
+            "$ref": "/schema/entities/primary-source#/identifier",
+            "sameAs": [
+                "http://www.w3.org/ns/prov#hadPrimarySource"
+            ]
+        },
+        "identifier": {
+            "$ref": "/schema/fields/identifier",
+            "sameAs": [
+                "http://purl.org/dc/elements/1.1/identifier"
+            ]
+        },
+        "identifierInPrimarySource": {
+            "examples": [
+                "123456",
+                "item-501",
+                "D7/x4/zz.final3"
+            ],
+            "minLength": 1,
+            "type": "string"
+        },
+        "issued": {
+            "anyOf": [
+                {
+                    "format": "date-time",
+                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+                },
+                {
+                    "format": "date",
+                    "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$"
+                }
+            ],
+            "examples": [
+                "2023-01-16",
+                "2023",
+                "2023-02",
+                "2020-04-03T08:58:26Z"
+            ],
+            "sameAs": [
+                "http://purl.org/dc/terms/issued"
+            ],
+            "type": "string"
+        },
+        "license": {
+            "$ref": "/schema/entities/concept#/identifier",
+            "sameAs": [
+                "http://purl.org/dc/terms/license"
+            ]
+        },
+        "mediaType": {
+            "$ref": "/schema/entities/concept#/identifier",
+            "examples": [
+                "https://mex.rki.de/item/mime-type-1"
+            ],
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#mediaType",
+                "http://purl.org/dc/terms/format"
+            ],
+            "useScheme": "https://mex.rki.de/item/mime-type"
+        },
+        "modified": {
+            "anyOf": [
+                {
+                    "format": "date-time",
+                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+                },
+                {
+                    "format": "date",
+                    "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$"
+                }
+            ],
+            "examples": [
+                "2023-01-16",
+                "2023",
+                "2023-02",
+                "2020-04-03T08:58:26Z"
+            ],
+            "sameAs": [
+                "http://purl.org/dc/terms/modified"
+            ],
+            "type": "string"
+        },
+        "otherContributor": {
+            "items": {
+                "$ref": "/schema/entities/person#/identifier"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
+        "projectLeader": {
+            "items": {
+                "$ref": "/schema/entities/person#/identifier"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
+        "projectManager": {
+            "items": {
+                "$ref": "/schema/entities/person#/identifier"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
+        "publisher": {
+            "items": {
+                "$ref": "/schema/entities/organization#/identifier"
+            },
+            "minItems": 1,
+            "type": "array"
+        },
+        "researcher": {
+            "items": {
+                "$ref": "/schema/entities/person#/identifier"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
+        "stableTargetId": {
+            "$ref": "/schema/fields/identifier"
+        },
+        "title": {
+            "examples": [
+                "theNameOfTheFile"
+            ],
+            "minLength": 1,
+            "sameAs": [
+                "http://purl.org/dc/terms/title"
+            ],
+            "type": "string"
+        }
+    },
+    "required": [
+        "accessRestriction",
+        "hadPrimarySource",
+        "identifier",
+        "identifierInPrimarySource",
+        "issued",
+        "publisher",
+        "stableTargetId",
+        "title"
+    ],
+    "sameAs": [
+        "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "title": "Distribution",
+    "type": "object"
+}

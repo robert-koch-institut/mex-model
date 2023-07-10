@@ -1,0 +1,257 @@
+{
+    "$id": "https://mex.rki.de/schema/entities/activity",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "abstract": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/description"
+            ],
+            "type": "array"
+        },
+        "activityType": {
+            "examples": [
+                "https://mex.rki.de/item/activity-type-1"
+            ],
+            "items": {
+                "$ref": "/schema/entities/concept#/identifier"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/type"
+            ],
+            "type": "array",
+            "useScheme": "https://mex.rki.de/item/activity-type"
+        },
+        "alternativeTitle": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/alternative"
+            ],
+            "type": "array"
+        },
+        "contact": {
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "/schema/entities/organizational-unit#/identifier"
+                    },
+                    {
+                        "$ref": "/schema/entities/person#/identifier"
+                    },
+                    {
+                        "$ref": "/schema/entities/contact-point#/identifier"
+                    }
+                ]
+            },
+            "minItems": 1,
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#contactPoint"
+            ],
+            "type": "array"
+        },
+        "documentation": {
+            "items": {
+                "$ref": "/schema/fields/link"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/isReferencedBy"
+            ],
+            "type": "array"
+        },
+        "end": {
+            "examples": [
+                "2024-01-17",
+                "2024",
+                "2024-01"
+            ],
+            "format": "date",
+            "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
+            "sameAs": [
+                "http://www.wikidata.org/entity/P582"
+            ],
+            "type": "string"
+        },
+        "externalAssociate": {
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "/schema/entities/organization#/identifier"
+                    },
+                    {
+                        "$ref": "/schema/entities/person#/identifier"
+                    }
+                ]
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
+        "funderOrCommissioner": {
+            "items": {
+                "$ref": "/schema/entities/organization#/identifier"
+            },
+            "sameAs": "http://www.wikidata.org/entity/P8324",
+            "type": "array"
+        },
+        "fundingProgram": {
+            "items": {
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "hadPrimarySource": {
+            "$ref": "/schema/entities/primary-source#/identifier",
+            "sameAs": [
+                "http://www.w3.org/ns/prov#hadPrimarySource"
+            ]
+        },
+        "identifier": {
+            "$ref": "/schema/fields/identifier",
+            "sameAs": [
+                "http://purl.org/dc/elements/1.1/identifier"
+            ]
+        },
+        "identifierInPrimarySource": {
+            "examples": [
+                "123456",
+                "item-501",
+                "D7/x4/zz.final3"
+            ],
+            "minLength": 1,
+            "type": "string"
+        },
+        "involvedPerson": {
+            "items": {
+                "$ref": "/schema/entities/person#/identifier"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
+        "involvedUnit": {
+            "items": {
+                "$ref": "/schema/entities/organizational-unit#/identifier"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
+        "isPartOfActivity": {
+            "items": {
+                "$ref": "/schema/entities/activity#/identifier"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/isPartOf",
+                "http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of"
+            ],
+            "type": "array"
+        },
+        "publication": {
+            "items": {
+                "$ref": "/schema/fields/link"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/isReferencedBy"
+            ],
+            "type": "array"
+        },
+        "responsibleUnit": {
+            "items": {
+                "$ref": "/schema/entities/organizational-unit#/identifier"
+            },
+            "minItems": 1,
+            "sameAs": "http.//dcat-ap.de/def/dcatde/maintainer",
+            "type": "array"
+        },
+        "shortName": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://www.wikidata.org/entity/P1813"
+            ],
+            "type": "array"
+        },
+        "stableTargetId": {
+            "$ref": "/schema/fields/identifier"
+        },
+        "start": {
+            "examples": [
+                "2023-01-16",
+                "2023",
+                "2023-02"
+            ],
+            "format": "date",
+            "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
+            "sameAs": [
+                "http://www.wikidata.org/entity/P580"
+            ],
+            "type": "string"
+        },
+        "succeeds": {
+            "items": {
+                "$ref": "/schema/entities/activity#/identifier"
+            },
+            "sameAs": [
+                "http://www.cidoc-crm.org/cidoc-crm/P173_start_before_or_with_the_end_of"
+            ],
+            "type": "array"
+        },
+        "theme": {
+            "examples": [
+                "https://mex.rki.de/item/theme-1"
+            ],
+            "items": {
+                "$ref": "/schema/entities/concept#/identifier"
+            },
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#theme"
+            ],
+            "type": "array",
+            "useScheme": "https://mex.rki.de/item/theme"
+        },
+        "title": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "minItems": 1,
+            "sameAs": [
+                "http://purl.org/dc/terms/title"
+            ],
+            "type": "array"
+        },
+        "website": {
+            "items": {
+                "$ref": "/schema/fields/link"
+            },
+            "sameAs": [
+                "http://www.wikidata.org/entity/P856",
+                "http://xmlns.com/foaf/0.1/homepage"
+            ],
+            "type": "array"
+        }
+    },
+    "required": [
+        "contact",
+        "hadPrimarySource",
+        "identifier",
+        "identifierInPrimarySource",
+        "responsibleUnit",
+        "stableTargetId",
+        "title"
+    ],
+    "sameAs": [
+        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+        "http://purl.org/dc/terms/Activity",
+        "http://www.w3.org/ns/prov#Activity"
+    ],
+    "title": "Activity",
+    "type": "object"
+}

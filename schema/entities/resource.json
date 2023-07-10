@@ -1,0 +1,438 @@
+{
+    "$id": "https://mex.rki.de/schema/entities/resource",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "description": "A defined piece of information or collection of information on Public Health, that has been generated as part of a (research) activity at the RKI or to comply with a (federal) law or regulation that applies to the RKI.",
+    "properties": {
+        "accessPlatform": {
+            "items": {
+                "$ref": "/schema/entities/access-platform#/identifier"
+            },
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#accessService"
+            ],
+            "type": "array"
+        },
+        "accessRestriction": {
+            "$ref": "/schema/entities/concept#/identifier",
+            "examples": [
+                "https://mex.rki.de/item/access-restriction-1"
+            ],
+            "sameAs": [
+                "http://purl.org/dc/terms/accessRights"
+            ],
+            "useScheme": "https://mex.rki.de/item/access-restriction"
+        },
+        "accrualPeriodicity": {
+            "$ref": "/schema/entities/concept#/identifier",
+            "sameAs": [
+                "http://purl.org/dc/terms/accrualPeriodicity"
+            ],
+            "useScheme": "https://mex.rki.de/item/frequency",
+            "examples": [
+                "https://mex.rki.de/item/frequency-1"
+            ]
+        },
+        "alternativeTitle": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/alternative"
+            ],
+            "type": "array"
+        },
+        "anonymizationPseudonymization": {
+            "items": {
+                "$ref": "/schema/entities/concept#/identifier"
+            },
+            "type": "array",
+            "examples": [
+                "https://mex.rki.de/item/anonymization-pseudonymization-1"
+            ],
+            "useScheme": "https://mex.rki.de/item/anonymization-pseudonymization"
+        },
+        "contact": {
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "/schema/entities/organizational-unit#/identifier"
+                    },
+                    {
+                        "$ref": "/schema/entities/person#/identifier"
+                    },
+                    {
+                        "$ref": "/schema/entities/contact-point#/identifier"
+                    }
+                ]
+            },
+            "minItems": 1,
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#contactPoint"
+            ],
+            "type": "array"
+        },
+        "contributingUnit": {
+            "items": {
+                "$ref": "/schema/entities/organizational-unit#/identifier"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
+        "contributor": {
+            "items": {
+                "$ref": "/schema/entities/person#/identifier"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
+        "created": {
+            "anyOf": [
+                {
+                    "format": "date-time",
+                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+                },
+                {
+                    "format": "date",
+                    "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$"
+                }
+            ],
+            "sameAs": [
+                "http://purl.org/dc/terms/created"
+            ],
+            "type": "string"
+        },
+        "creator": {
+            "items": {
+                "$ref": "/schema/entities/person#/identifier"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/creator"
+            ],
+            "type": "array"
+        },
+        "description": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/description"
+            ],
+            "type": "array"
+        },
+        "distribution": {
+            "items": {
+                "$ref": "/schema/entities/distribution#/identifier"
+            },
+            "type": "array"
+        },
+        "documentation": {
+            "items": {
+                "$ref": "/schema/fields/link"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/isReferencedBy"
+            ],
+            "type": "array"
+        },
+        "externalPartner": {
+            "items": {
+                "$ref": "/schema/entities/organization#/identifier"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
+        "hadPrimarySource": {
+            "$ref": "/schema/entities/primary-source#/identifier",
+            "sameAs": [
+                "http://www.w3.org/ns/prov#hadPrimarySource"
+            ]
+        },
+        "icd10code": {
+            "items": {
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "identifier": {
+            "$ref": "/schema/fields/identifier",
+            "sameAs": [
+                "http://purl.org/dc/elements/1.1/identifier"
+            ]
+        },
+        "identifierInPrimarySource": {
+            "examples": [
+                "123456",
+                "item-501",
+                "D7/x4/zz.final3"
+            ],
+            "minLength": 1,
+            "type": "string"
+        },
+        "instrumentToolOrApparatus": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "type": "array"
+        },
+        "isPartOf": {
+            "items": {
+                "$ref": "/schema/entities/resource#/identifier"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/isPartOf"
+            ],
+            "type": "array"
+        },
+        "keyword": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#keyword"
+            ],
+            "type": "array"
+        },
+        "language": {
+            "items": {
+                "$ref": "/schema/entities/concept#/identifier"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/language"
+            ],
+            "type": "array",
+            "examples": [
+                "https://mex.rki.de/item/language-1"
+            ],
+            "useScheme": "https://mex.rki.de/item/language"
+        },
+        "license": {
+            "$ref": "/schema/entities/concept#/identifier",
+            "examples": [
+                "https://mex.rki.de/item/license-1"
+            ],
+            "sameAs": [
+                "http://purl.org/dc/terms/license"
+            ],
+            "useScheme": "https://mex.rki.de/item/license"
+        },
+        "loincId": {
+            "items": {
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "meshId": {
+            "items": {
+                "format": "uri",
+                "pattern": "^https://id\\.nlm\\.nih\\.gov/mesh/[A-Z0-9]{2,64}$",
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "method": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "type": "array"
+        },
+        "methodDescription": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/description"
+            ],
+            "type": "array"
+        },
+        "modified": {
+            "anyOf": [
+                {
+                    "format": "date-time",
+                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+                },
+                {
+                    "format": "date",
+                    "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$"
+                }
+            ],
+            "sameAs": [
+                "http://purl.org/dc/terms/modified"
+            ],
+            "type": "string"
+        },
+        "publication": {
+            "items": {
+                "$ref": "/schema/fields/link"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/isReferencedBy"
+            ],
+            "type": "array"
+        },
+        "publisher": {
+            "items": {
+                "$ref": "/schema/entities/organization#/identifier"
+            },
+            "type": "array"
+        },
+        "qualityInformation": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/description"
+            ],
+            "type": "array"
+        },
+        "resourceTypeGeneral": {
+            "items": {
+                "$ref": "/schema/entities/concept#/identifier"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/type"
+            ],
+            "type": "array",
+            "examples": [
+                "https://mex.rki.de/item/resource-type-general-1"
+            ],
+            "useScheme": "https://mex.rki.de/item/resource-type-general"
+        },
+        "resourceTypeSpecific": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/type"
+            ],
+            "type": "array"
+        },
+        "rights": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/rights"
+            ],
+            "type": "array"
+        },
+        "sizeOfDataBasis": {
+            "type": "string"
+        },
+        "spatial": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/spatial"
+            ],
+            "type": "array"
+        },
+        "stableTargetId": {
+            "$ref": "/schema/fields/identifier"
+        },
+        "stateOfDataProcessing": {
+            "items": {
+                "$ref": "/schema/entities/concept#/identifier"
+            },
+            "type": "array",
+            "examples": [
+                "https://mex.rki.de/item/data-processing-state-1"
+            ],
+            "useScheme": "https://mex.rki.de/item/data-processing-state"
+        },
+        "temporal": {
+            "anyOf": [
+                {
+                    "examples": [
+                        "2020-04-03T08:58:26Z"
+                    ],
+                    "format": "date-time",
+                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+                    "type": "string"
+                },
+                {
+                    "examples": [
+                        "2023-01-16",
+                        "2023",
+                        "2023-02"
+                    ],
+                    "format": "date",
+                    "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
+                    "type": "string"
+                },
+                {
+                    "examples": [
+                        "2022-01 bis 2022-03",
+                        "Sommer 2023",
+                        "nach 2013",
+                        "1998-2008"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "sameAs": [
+                "http://purl.org/dc/terms/temporal"
+            ]
+        },
+        "theme": {
+            "items": {
+                "$ref": "/schema/entities/concept#/identifier"
+            },
+            "minItems": 1,
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#theme"
+            ],
+            "examples": [
+                "https://mex.rki.de/item/theme-1"
+            ],
+            "type": "array",
+            "useScheme": "https://mex.rki.de/item/theme"
+        },
+        "title": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "minItems": 1,
+            "sameAs": [
+                "http://purl.org/dc/terms/title"
+            ],
+            "type": "array"
+        },
+        "unitInCharge": {
+            "items": {
+                "$ref": "/schema/entities/organizational-unit#/identifier"
+            },
+            "minItems": 1,
+            "sameAs": [
+                "http://dcat-ap.de/def/dcatde/maintainer"
+            ],
+            "type": "array"
+        },
+        "wasGenereatedBy": {
+            "$ref": "/schema/entities/activity#/identifier",
+            "sameAs": "http://www.w3.org/ns/prov#wasGenereatedBy"
+        }
+    },
+    "required": [
+        "accessRestriction",
+        "contact",
+        "hadPrimarySource",
+        "identifier",
+        "identifierInPrimarySource",
+        "stableTargetId",
+        "theme",
+        "title",
+        "unitInCharge"
+    ],
+    "sameAs": [
+        "http://www.w3.org/ns/dcat#Dataset"
+    ],
+    "title": "Resource",
+    "type": "object"
+}

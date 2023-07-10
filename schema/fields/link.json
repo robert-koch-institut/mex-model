@@ -1,0 +1,38 @@
+{
+    "$id": "https://mex.rki.de/schema/fields/link",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "examples": [
+        {
+            "language": "en",
+            "title": "hello",
+            "url": "https://hello-world.org"
+        },
+        {
+            "language": "de",
+            "title": "Dateipfad",
+            "url": "file://S:/OE/MF4/Projekte/MEx"
+        }
+    ],
+    "properties": {
+        "language": {
+            "enum": [
+                "de",
+                "en"
+            ]
+        },
+        "title": {
+            "type": "string"
+        },
+        "url": {
+            "format": "uri",
+            "minLength": 1,
+            "pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?",
+            "type": "string"
+        }
+    },
+    "required": [
+        "url"
+    ],
+    "title": "Link",
+    "type": "object"
+}

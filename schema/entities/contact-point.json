@@ -1,0 +1,58 @@
+{
+    "$id": "https://mex.rki.de/schema/entities/contact-point",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "email": {
+            "items": {
+                "examples": [
+                    "info@rki.de"
+                ],
+                "format": "email",
+                "pattern": "^[^@ \t\r\n]+@[^@ \t\r\n]+\\.[^@ \t\r\n]+$",
+                "type": "string"
+            },
+            "minItems": 1,
+            "sameAs": [
+                "http://www.w3.org/2006/vcard/ns#hasEmail",
+                "https://schema.org/email"
+            ],
+            "type": "array"
+        },
+        "hadPrimarySource": {
+            "$ref": "/schema/entities/primary-source#/identifier",
+            "sameAs": [
+                "http://www.w3.org/ns/prov#hadPrimarySource"
+            ]
+        },
+        "identifier": {
+            "$ref": "/schema/fields/identifier",
+            "sameAs": [
+                "http://purl.org/dc/elements/1.1/identifier"
+            ]
+        },
+        "identifierInPrimarySource": {
+            "examples": [
+                "123456",
+                "item-501",
+                "D7/x4/zz.final3"
+            ],
+            "minLength": 1,
+            "type": "string"
+        },
+        "stableTargetId": {
+            "$ref": "/schema/fields/identifier"
+        }
+    },
+    "required": [
+        "email",
+        "hadPrimarySource",
+        "identifier",
+        "identifierInPrimarySource",
+        "stableTargetId"
+    ],
+    "sameAs": [
+        "https://schema.org/ContactPoint"
+    ],
+    "title": "Contact Point",
+    "type": "object"
+}

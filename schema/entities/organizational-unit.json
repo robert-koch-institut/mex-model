@@ -1,0 +1,106 @@
+{
+    "$id": "https://mex.rki.de/schema/entities/organizational-unit",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "alternativeName": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/alternative"
+            ],
+            "type": "array"
+        },
+        "email": {
+            "items": {
+                "examples": [
+                    "info@rki.de"
+                ],
+                "format": "email",
+                "pattern": "^[^@ \t\r\n]+@[^@ \t\r\n]+\\.[^@ \t\r\n]+$",
+                "type": "string"
+            },
+            "sameAs": [
+                "http://www.w3.org/2006/vcard/ns#hasEmail",
+                "https://schema.org/email"
+            ],
+            "type": "array"
+        },
+        "hadPrimarySource": {
+            "$ref": "/schema/entities/primary-source#/identifier",
+            "sameAs": [
+                "http://www.w3.org/ns/prov#hadPrimarySource"
+            ]
+        },
+        "identifier": {
+            "$ref": "/schema/fields/identifier",
+            "sameAs": [
+                "http://purl.org/dc/elements/1.1/identifier"
+            ]
+        },
+        "identifierInPrimarySource": {
+            "examples": [
+                "123456",
+                "item-501",
+                "D7/x4/zz.final3"
+            ],
+            "minLength": 1,
+            "type": "string"
+        },
+        "name": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "minItems": 1,
+            "sameAs": "http://xmlns.com/foaf/0.1/name",
+            "type": "array"
+        },
+        "parentUnit": {
+            "$ref": "/schema/entities/organizational-unit#/identifier"
+        },
+        "shortName": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://www.wikidata.org/entity/P1813"
+            ],
+            "type": "array"
+        },
+        "stableTargetId": {
+            "$ref": "/schema/fields/identifier"
+        },
+        "unitOf": {
+            "items": {
+                "$ref": "/schema/entities/organization#/identifier"
+            },
+            "sameAs": [
+                "http://www.w3.org/ns/org#unitOf"
+            ],
+            "type": "array"
+        },
+        "website": {
+            "items": {
+                "$ref": "/schema/fields/link"
+            },
+            "sameAs": [
+                "http://www.wikidata.org/entity/P856",
+                "http://www.w3.org/2006/vcard/ns#hasUrl",
+                "http://xmlns.com/foaf/0.1/homepage"
+            ],
+            "type": "array"
+        }
+    },
+    "required": [
+        "hadPrimarySource",
+        "identifier",
+        "identifierInPrimarySource",
+        "name",
+        "stableTargetId"
+    ],
+    "sameAs": [
+        "http://www.w3.org/ns/org#OrganizationalUnit"
+    ],
+    "title": "Organizational Unit",
+    "type": "object"
+}

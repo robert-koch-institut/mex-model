@@ -1,0 +1,138 @@
+{
+    "$id": "https://mex.rki.de/schema/entities/access-platform",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "alternativeTitle": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/alternative"
+            ],
+            "type": "array"
+        },
+        "contact": {
+            "items": {
+                "oneOf": [
+                    {
+                        "$ref": "/schema/entities/organizational-unit#/identifier"
+                    },
+                    {
+                        "$ref": "/schema/entities/person#/identifier"
+                    },
+                    {
+                        "$ref": "/schema/entities/contact-point#/identifier"
+                    }
+                ]
+            },
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#contactPoint"
+            ],
+            "type": "array"
+        },
+        "description": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/description"
+            ],
+            "type": "array"
+        },
+        "endpointDescription": {
+            "$ref": "/schema/fields/link",
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#endpointDescription"
+            ]
+        },
+        "endpointType": {
+            "$ref": "/schema/entities/concept#/identifier",
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/type"
+            ],
+            "useScheme": "https://mex.rki.de/item/api-type",
+            "examples": [
+                "https://mex.rki.de/item/api-type-1"
+            ]
+        },
+        "endpointURL": {
+            "$ref": "/schema/fields/link",
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#endpointURL"
+            ]
+        },
+        "hadPrimarySource": {
+            "$ref": "/schema/entities/primary-source#/identifier",
+            "sameAs": [
+                "http://www.w3.org/ns/prov#hadPrimarySource"
+            ]
+        },
+        "identifier": {
+            "$ref": "/schema/fields/identifier",
+            "sameAs": [
+                "http://purl.org/dc/elements/1.1/identifier"
+            ]
+        },
+        "identifierInPrimarySource": {
+            "examples": [
+                "123456",
+                "item-501",
+                "D7/x4/zz.final3"
+            ],
+            "minLength": 1,
+            "type": "string"
+        },
+        "landingPage": {
+            "items": {
+                "$ref": "/schema/fields/link"
+            },
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#landingPage"
+            ],
+            "type": "array"
+        },
+        "stableTargetId": {
+            "$ref": "/schema/fields/identifier"
+        },
+        "technicalAccessibility": {
+            "$ref": "/schema/entities/concept#/identifier",
+            "examples": [
+                "https://mex.rki.de/concept/technical-accessibility-1"
+            ],
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/type"
+            ],
+            "useScheme": "https://mex.rki.de/item/technical-accessbility"
+        },
+        "title": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/title"
+            ],
+            "type": "array"
+        },
+        "unitInCharge": {
+            "items": {
+                "$ref": "/schema/entities/organizational-unit#/identifier"
+            },
+            "sameAs": [
+                "http://dcat-ap.de/def/dcatde/maintainer"
+            ],
+            "type": "array"
+        }
+    },
+    "required": [
+        "hadPrimarySource",
+        "identifier",
+        "identifierInPrimarySource",
+        "stableTargetId",
+        "technicalAccessibility"
+    ],
+    "sameAs": [
+        "http://www.w3.org/ns/dcat#DataService"
+    ],
+    "title": "Access Platform",
+    "type": "object"
+}

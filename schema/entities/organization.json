@@ -1,0 +1,151 @@
+{
+    "$id": "https://mex.rki.de/schema/entities/organization",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "alternativeName": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/alternative"
+            ],
+            "type": "array"
+        },
+        "geprisId": {
+            "items": {
+                "examples": [
+                    "https://gepris.dfg.de/gepris/institution/10179"
+                ],
+                "format": "uri",
+                "pattern": "^https://gepris\\.dfg\\.de/gepris/institution/[0-9]{1,64}$",
+                "type": "string"
+            },
+            "sameAs": [
+                "http://www.wikidata.org/entity/P4871"
+            ],
+            "type": "array"
+        },
+        "gndId": {
+            "items": {
+                "examples": [
+                    "https://d-nb.info/gnd/17690-4"
+                ],
+                "format": "uri",
+                "pattern": "^https://d\\-nb\\.info/gnd/[-X0-9]{3,10}$",
+                "type": "string"
+            },
+            "sameAs": [
+                "http://www.wikidata.org/entity/P227"
+            ],
+            "type": "array"
+        },
+        "hadPrimarySource": {
+            "$ref": "/schema/entities/primary-source#/identifier",
+            "sameAs": [
+                "http://www.w3.org/ns/prov#hadPrimarySource"
+            ]
+        },
+        "identifier": {
+            "$ref": "/schema/fields/identifier",
+            "sameAs": [
+                "http://purl.org/dc/elements/1.1/identifier"
+            ]
+        },
+        "identifierInPrimarySource": {
+            "examples": [
+                "123456",
+                "item-501",
+                "D7/x4/zz.final3"
+            ],
+            "minLength": 1,
+            "type": "string"
+        },
+        "isniId": {
+            "items": {
+                "examples": [
+                    "https://isni.org/isni/0000000109403744"
+                ],
+                "format": "uri",
+                "pattern": "^https://isni\\.org/isni/[X0-9]{16}$",
+                "type": "string"
+            },
+            "sameAs": [
+                "http://www.wikidata.org/entity/P213"
+            ],
+            "type": "array"
+        },
+        "officialName": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "minItems": 1,
+            "sameAs": [
+                "http://www.wikidata.org/entity/P1448"
+            ],
+            "type": "array"
+        },
+        "rorId": {
+            "items": {
+                "examples": [
+                    "https://ror.org/01k5qnb77"
+                ],
+                "format": "uri",
+                "pattern": "^https://ror\\.org/[a-z0-9]{9}$",
+                "type": "string"
+            },
+            "sameAs": [
+                "http://www.wikidata.org/entity/P6782"
+            ],
+            "type": "array"
+        },
+        "shortName": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://www.wikidata.org/entity/P1813"
+            ],
+            "type": "array"
+        },
+        "stableTargetId": {
+            "$ref": "/schema/fields/identifier"
+        },
+        "viafId": {
+            "items": {
+                "examples": [
+                    "https://viaf.org/viaf/123556639"
+                ],
+                "format": "uri",
+                "pattern": "^https://viaf\\.org/viaf/[0-9]{2,22}$",
+                "type": "string"
+            },
+            "sameAs": [
+                "http://www.wikidata.org/entity/P214"
+            ],
+            "type": "array"
+        },
+        "wikidataId": {
+            "items": {
+                "examples": [
+                    "http://www.wikidata.org/entity/Q679041"
+                ],
+                "format": "uri",
+                "pattern": "^https://www\\.wikidata\\.org/entity/[PQ0-9]{2,64}$",
+                "type": "string"
+            },
+            "type": "array"
+        }
+    },
+    "required": [
+        "hadPrimarySource",
+        "identifier",
+        "identifierInPrimarySource",
+        "officialName",
+        "stableTargetId"
+    ],
+    "sameAs": [
+        "http://www.w3.org/ns/org#Organization"
+    ],
+    "title": "Organization",
+    "type": "object"
+}

@@ -1,0 +1,88 @@
+{
+    "$id": "https://mex.rki.de/schema/entities/concept",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "altLabel": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://www.w3.org/2004/02/skos/core#altLabel"
+            ],
+            "type": "array"
+        },
+        "broader": {
+            "items": {
+                "$ref": "/schema/entities/concept#/identifier"
+            },
+            "sameAs": [
+                "http://www.w3.org/2004/02/skos/core#broader"
+            ],
+            "type": "array"
+        },
+        "definition": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://www.w3.org/2004/02/skos/core#definition"
+            ],
+            "type": "array"
+        },
+        "exactMatch": {
+            "items": {
+                "format": "uri",
+                "type": "string"
+            },
+            "sameAs": [
+                "http://www.w3.org/2004/02/skos/core#exactMatch"
+            ],
+            "type": "array"
+        },
+        "identifier": {
+            "examples": [
+                "https://mex.rki.de/item/Xc124df"
+            ],
+            "format": "uri",
+            "pattern": "^https://mex\\.rki\\.de/item/[\\w\\d]+$",
+            "sameAs": [
+                "http://purl.org/dc/elements/1.1/identifier"
+            ],
+            "type": "string"
+        },
+        "inScheme": {
+            "$ref": "/schema/entities/concept-scheme#/identifier",
+            "sameAs": [
+                "http://www.w3.org/2004/02/skos/core#inScheme"
+            ]
+        },
+        "notation": {
+            "examples": [
+                "1.0",
+                "1.1",
+                "C01.100.500"
+            ],
+            "type": "string"
+        },
+        "prefLabel": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "minItems": 1,
+            "sameAs": [
+                "http://www.w3.org/2004/02/skos/core#prefLabel"
+            ],
+            "type": "array"
+        }
+    },
+    "required": [
+        "identifier",
+        "inScheme",
+        "prefLabel"
+    ],
+    "sameAs": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "title": "Concept",
+    "type": "object"
+}

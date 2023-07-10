@@ -1,0 +1,60 @@
+{
+    "$id": "https://mex.rki.de/schema/entities/variable-group",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "containedBy": {
+            "items": {
+                "$ref": "/schema/entities/resource#/identifier"
+            },
+            "minItems": 1,
+            "sameAs": [
+                "http://purl.org/dc/terms/isPartOf"
+            ],
+            "type": "array"
+        },
+        "hadPrimarySource": {
+            "$ref": "/schema/entities/primary-source#/identifier",
+            "sameAs": [
+                "http://www.w3.org/ns/prov#hadPrimarySource"
+            ]
+        },
+        "identifier": {
+            "$ref": "/schema/fields/identifier",
+            "sameAs": [
+                "http://purl.org/dc/elements/1.1/identifier"
+            ]
+        },
+        "identifierInPrimarySource": {
+            "examples": [
+                "123456",
+                "item-501",
+                "D7/x4/zz.final3"
+            ],
+            "minLength": 1,
+            "type": "string"
+        },
+        "label": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "minItems": 1,
+            "sameAs": [
+                "http://www.w3.org/2000/01/rdf-schema#label"
+            ],
+            "type": "array"
+        },
+        "stableTargetId": {
+            "$ref": "/schema/fields/identifier"
+        }
+    },
+    "required": [
+        "containedBy",
+        "hadPrimarySource",
+        "identifier",
+        "identifierInPrimarySource",
+        "label",
+        "stableTargetId"
+    ],
+    "title": "Variable Group",
+    "type": "object"
+}

@@ -1,0 +1,43 @@
+{
+    "$id": "https://mex.rki.de/schema/entities/concept-scheme",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "description": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/elements/1.1/description"
+            ],
+            "type": "array"
+        },
+        "identifier": {
+            "examples": [
+                "https://mex.rki.de/item/Xc124df"
+            ],
+            "format": "uri",
+            "pattern": "^https://mex\\.rki\\.de/item/[\\w\\d]+$",
+            "sameAs": [
+                "http://purl.org/dc/elements/1.1/identifier"
+            ],
+            "type": "string"
+        },
+        "label": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://www.w3.org/2000/01/rdf-schema#label"
+            ],
+            "type": "array"
+        }
+    },
+    "required": [
+        "identifier"
+    ],
+    "sameAs": [
+        "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    ],
+    "title": "Concept Scheme",
+    "type": "object"
+}

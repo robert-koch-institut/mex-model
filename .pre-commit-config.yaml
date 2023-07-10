@@ -1,0 +1,13 @@
+fail_fast: false
+default_language_version:
+  python: python3.11
+files: schema
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: pretty-format-json
+        args: [--autofix, --no-sort-keys, --indent=4, --no-ensure-ascii]
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: fix-byte-order-marker

@@ -1,0 +1,29 @@
+{
+    "$id": "https://mex.rki.de/schema/extension/definition",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "description": "Extensions to the json schema with custom properties.",
+    "properties": {
+        "sameAs": {
+            "description": "Property as defined by http://www.w3.org/2002/07/owl#sameAs.",
+            "items": {
+                "format": "uri",
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "subPropertyOf": {
+            "description": "Property as defined by http://www.w3.org/2000/01/rdf-schema#subPropertyOf.",
+            "items": {
+                "format": "uri",
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "useScheme": {
+            "description": "Identifier of the concept scheme that should be used.",
+            "format": "uri",
+            "pattern": "^https://mex.rki.de/concept-scheme/[\\w]+(-[\\w]*)*$",
+            "type": "string"
+        }
+    }
+}

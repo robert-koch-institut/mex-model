@@ -1,0 +1,148 @@
+{
+    "$id": "https://mex.rki.de/schema/entities/person",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "affiliation": {
+            "items": {
+                "$ref": "/schema/entities/organization#/identifier"
+            },
+            "sameAs": [
+                "https://schema.org/affiliation",
+                "http://www.wikidata.org/entity/P1416"
+            ],
+            "type": "array"
+        },
+        "email": {
+            "items": {
+                "examples": [
+                    "info@rki.de"
+                ],
+                "format": "email",
+                "pattern": "^[^@ \t\r\n]+@[^@ \t\r\n]+\\.[^@ \t\r\n]+$",
+                "type": "string"
+            },
+            "sameAs": [
+                "http://www.w3.org/2006/vcard/ns#hasEmail",
+                "https://schema.org/email"
+            ],
+            "type": "array"
+        },
+        "familyName": {
+            "examples": [
+                "Schmidt",
+                "Meier",
+                "Schmidt-Meier"
+            ],
+            "items": {
+                "type": "string"
+            },
+            "sameAs": [
+                "http://xmlns.com/foaf/0.1/familyName",
+                "https://schema.org/familyName"
+            ],
+            "type": "array"
+        },
+        "fullName": {
+            "examples": [
+                "Anna Schmidt",
+                "P. Meier",
+                "Wolf Maria Hermann"
+            ],
+            "items": {
+                "type": "string"
+            },
+            "sameAs": [
+                "http://xmlns.com/foaf/0.1/name"
+            ],
+            "type": "array"
+        },
+        "givenName": {
+            "examples": [
+                "Thomas",
+                "Anna"
+            ],
+            "items": {
+                "type": "string"
+            },
+            "sameAs": [
+                "http://xmlns.com/foaf/0.1/givenName",
+                "https://schema.org/givenName"
+            ],
+            "type": "array"
+        },
+        "hadPrimarySource": {
+            "$ref": "/schema/entities/primary-source#/identifier",
+            "sameAs": [
+                "http://www.w3.org/ns/prov#hadPrimarySource"
+            ]
+        },
+        "identifier": {
+            "$ref": "/schema/fields/identifier",
+            "sameAs": [
+                "http://purl.org/dc/elements/1.1/identifier"
+            ]
+        },
+        "identifierInPrimarySource": {
+            "examples": [
+                "123456",
+                "item-501",
+                "D7/x4/zz.final3"
+            ],
+            "minLength": 1,
+            "type": "string"
+        },
+        "isniId": {
+            "items": {
+                "examples": [
+                    "https://isni.org/isni/0000000109403744"
+                ],
+                "format": "uri",
+                "pattern": "^https://isni\\.org/isni/[X0-9]{16}$",
+                "type": "string"
+            },
+            "sameAs": [
+                "http://www.wikidata.org/entity/P213"
+            ],
+            "type": "array"
+        },
+        "memberOf": {
+            "items": {
+                "$ref": "/schema/entities/organizational-unit#/identifier"
+            },
+            "sameAs": [
+                "http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of"
+            ],
+            "type": "array"
+        },
+        "orcidId": {
+            "items": {
+                "examples": [
+                    "https://orcid.org/0000-0003-4365-3717"
+                ],
+                "format": "uri",
+                "pattern": "^https://orcid\\.org/[-X0-9]{9,21}$",
+                "type": "string"
+            },
+            "sameAs": [
+                "http://www.wikidata.org/entity/P496"
+            ],
+            "type": "array"
+        },
+        "stableTargetId": {
+            "$ref": "/schema/fields/identifier"
+        }
+    },
+    "required": [
+        "hadPrimarySource",
+        "identifier",
+        "identifierInPrimarySource",
+        "stableTargetId"
+    ],
+    "sameAs": [
+        "http://www.cidoc-crm.org/cidoc-crm/E21_Person",
+        "http://xmlns.com/foaf/0.1/Person",
+        "http://www.w3.org/2006/vcard/ns#Individual"
+    ],
+    "title": "Person",
+    "type": "object"
+}
