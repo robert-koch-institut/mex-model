@@ -1,5 +1,9 @@
 # MEx model
 
+Conceptual and machine-readable versions of the MEx metadata model.
+
+[![linting](https://github.com/robert-koch-institut/mex-model/actions/workflows/linting.yml/badge.svg)](https://github.com/robert-koch-institut/mex-model/actions/workflows/linting.yml)
+
 ## project
 
 With the Metadata Exchange (MEx) project, the [RKI](https.//www.rki.de) is developing a
