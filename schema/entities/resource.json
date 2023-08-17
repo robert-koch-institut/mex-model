@@ -230,7 +230,7 @@
         "meshId": {
             "items": {
                 "format": "uri",
-                "pattern": "^https://id\\.nlm\\.nih\\.gov/mesh/[A-Z0-9]{2,64}$",
+                "pattern": "^http://id\\.nlm\\.nih\\.gov/mesh/[A-Z0-9]{2,64}$",
                 "type": "string"
             },
             "type": "array"
