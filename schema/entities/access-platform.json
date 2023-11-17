@@ -97,12 +97,12 @@
         "technicalAccessibility": {
             "$ref": "/schema/entities/concept#/identifier",
             "examples": [
-                "https://mex.rki.de/concept/technical-accessibility-1"
+                "https://mex.rki.de/item/technical-accessibility-1"
             ],
             "subPropertyOf": [
                 "http://purl.org/dc/terms/type"
             ],
-            "useScheme": "https://mex.rki.de/item/technical-accessbility"
+            "useScheme": "https://mex.rki.de/item/technical-accessibility"
         },
         "title": {
             "items": {

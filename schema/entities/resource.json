@@ -93,12 +93,20 @@
             "anyOf": [
                 {
                     "format": "date-time",
-                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+                    "type": "string"
                 },
                 {
                     "format": "date",
-                    "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$"
+                    "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
+                    "type": "string"
                 }
+            ],
+            "examples": [
+                "2011",
+                "2019-03",
+                "2014-08-24",
+                "2022-09-30T20:48:35Z"
             ],
             "sameAs": [
                 "http://purl.org/dc/terms/created"
@@ -228,6 +236,9 @@
             "type": "array"
         },
         "meshId": {
+            "examples": [
+                "http://id.nlm.nih.gov/mesh/D001604"
+            ],
             "items": {
                 "format": "uri",
                 "pattern": "^http://id\\.nlm\\.nih\\.gov/mesh/[A-Z0-9]{2,64}$",
@@ -254,12 +265,20 @@
             "anyOf": [
                 {
                     "format": "date-time",
-                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+                    "type": "string"
                 },
                 {
                     "format": "date",
-                    "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$"
+                    "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
+                    "type": "string"
                 }
+            ],
+            "examples": [
+                "2011",
+                "2019-03",
+                "2014-08-24",
+                "2022-09-30T20:48:35Z"
             ],
             "sameAs": [
                 "http://purl.org/dc/terms/modified"
@@ -414,9 +433,9 @@
             ],
             "type": "array"
         },
-        "wasGenereatedBy": {
+        "wasGeneratedBy": {
             "$ref": "/schema/entities/activity#/identifier",
-            "sameAs": "http://www.w3.org/ns/prov#wasGenereatedBy"
+            "sameAs": "http://www.w3.org/ns/prov#wasGeneratedBy"
         }
     },
     "required": [
