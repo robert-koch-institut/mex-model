@@ -24,7 +24,7 @@
         "dataType": {
             "$ref": "/schema/entities/concept#/identifier",
             "examples": [
-                "https://mex.rki.de/concept/data-type-1"
+                "https://mex.rki.de/item/data-type-1"
             ],
             "subPropertyOf": [
                 "http://purl.org/dc/terms/type"

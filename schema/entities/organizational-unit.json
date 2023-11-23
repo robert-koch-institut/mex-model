@@ -17,7 +17,7 @@
                     "info@rki.de"
                 ],
                 "format": "email",
-                "pattern": "^[^@ \t\r\n]+@[^@ \t\r\n]+\\.[^@ \t\r\n]+$",
+                "pattern": "^[^@ \\t\\r\\n]+@[^@ \\t\\r\\n]+\\.[^@ \\t\\r\\n]+$",
                 "type": "string"
             },
             "sameAs": [

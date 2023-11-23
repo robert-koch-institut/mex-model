@@ -91,18 +91,20 @@
             "anyOf": [
                 {
                     "format": "date-time",
-                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+                    "type": "string"
                 },
                 {
                     "format": "date",
-                    "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$"
+                    "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
+                    "type": "string"
                 }
             ],
             "examples": [
-                "2023-01-16",
-                "2023",
-                "2023-02",
-                "2020-04-03T08:58:26Z"
+                "2011",
+                "2019-03",
+                "2014-08-24",
+                "2022-09-30T20:48:35Z"
             ],
             "sameAs": [
                 "http://purl.org/dc/terms/issued"
@@ -111,9 +113,13 @@
         },
         "license": {
             "$ref": "/schema/entities/concept#/identifier",
+            "examples": [
+                "https://mex.rki.de/item/license-1"
+            ],
             "sameAs": [
                 "http://purl.org/dc/terms/license"
-            ]
+            ],
+            "useScheme": "https://mex.rki.de/item/license"
         },
         "mediaType": {
             "$ref": "/schema/entities/concept#/identifier",
@@ -130,18 +136,20 @@
             "anyOf": [
                 {
                     "format": "date-time",
-                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+                    "type": "string"
                 },
                 {
                     "format": "date",
-                    "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$"
+                    "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
+                    "type": "string"
                 }
             ],
             "examples": [
-                "2023-01-16",
-                "2023",
-                "2023-02",
-                "2020-04-03T08:58:26Z"
+                "2011",
+                "2019-03",
+                "2014-08-24",
+                "2022-09-30T20:48:35Z"
             ],
             "sameAs": [
                 "http://purl.org/dc/terms/modified"

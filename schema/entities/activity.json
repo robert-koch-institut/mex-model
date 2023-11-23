@@ -63,17 +63,20 @@
             "type": "array"
         },
         "end": {
+            "items": {
+                "format": "date",
+                "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
+                "type": "string"
+            },
             "examples": [
                 "2024-01-17",
                 "2024",
                 "2024-01"
             ],
-            "format": "date",
-            "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
             "sameAs": [
                 "http://www.wikidata.org/entity/P582"
             ],
-            "type": "string"
+            "type": "array"
         },
         "externalAssociate": {
             "items": {
@@ -183,17 +186,20 @@
             "$ref": "/schema/fields/identifier"
         },
         "start": {
+            "items": {
+                "format": "date",
+                "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
+                "type": "string"
+            },
             "examples": [
                 "2023-01-16",
                 "2023",
                 "2023-02"
             ],
-            "format": "date",
-            "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
             "sameAs": [
                 "http://www.wikidata.org/entity/P580"
             ],
-            "type": "string"
+            "type": "array"
         },
         "succeeds": {
             "items": {

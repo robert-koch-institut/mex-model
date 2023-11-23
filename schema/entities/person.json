@@ -18,7 +18,7 @@
                     "info@rki.de"
                 ],
                 "format": "email",
-                "pattern": "^[^@ \t\r\n]+@[^@ \t\r\n]+\\.[^@ \t\r\n]+$",
+                "pattern": "^[^@ \\t\\r\\n]+@[^@ \\t\\r\\n]+\\.[^@ \\t\\r\\n]+$",
                 "type": "string"
             },
             "sameAs": [
@@ -29,9 +29,9 @@
         },
         "familyName": {
             "examples": [
-                "Schmidt",
-                "Meier",
-                "Schmidt-Meier"
+                "Patapoutian",
+                "Skłodowska-Curie",
+                "Muta Maathai"
             ],
             "items": {
                 "type": "string"
@@ -44,9 +44,9 @@
         },
         "fullName": {
             "examples": [
-                "Anna Schmidt",
-                "P. Meier",
-                "Wolf Maria Hermann"
+                "Juturna Felicitás",
+                "M. Berhanu",
+                "Keone Seong-Hyeon"
             ],
             "items": {
                 "type": "string"
@@ -58,8 +58,9 @@
         },
         "givenName": {
             "examples": [
-                "Thomas",
-                "Anna"
+                "Romāns",
+                "Marie Salomea",
+                "May-Britt"
             ],
             "items": {
                 "type": "string"
@@ -117,7 +118,7 @@
         "orcidId": {
             "items": {
                 "examples": [
-                    "https://orcid.org/0000-0003-4365-3717"
+                    "https://orcid.org/0000-0002-9079-593X"
                 ],
                 "format": "uri",
                 "pattern": "^https://orcid\\.org/[-X0-9]{9,21}$",
