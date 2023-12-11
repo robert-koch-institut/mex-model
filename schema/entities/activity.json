@@ -16,13 +16,13 @@
                 "$ref": "/schema/entities/concept#/identifier",
                 "examples": [
                     "https://mex.rki.de/item/activity-type-1"
-                ]
+                ],
+                "useScheme": "https://mex.rki.de/item/activity-type"
             },
             "subPropertyOf": [
                 "http://purl.org/dc/terms/type"
             ],
-            "type": "array",
-            "useScheme": "https://mex.rki.de/item/activity-type"
+            "type": "array"
         },
         "alternativeTitle": {
             "items": {
@@ -215,13 +215,13 @@
                 "examples": [
                     "https://mex.rki.de/item/theme-1"
                 ],
-                "$ref": "/schema/entities/concept#/identifier"
+                "$ref": "/schema/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/theme"
             },
             "sameAs": [
                 "http://www.w3.org/ns/dcat#theme"
             ],
-            "type": "array",
-            "useScheme": "https://mex.rki.de/item/theme"
+            "type": "array"
         },
         "title": {
             "items": {

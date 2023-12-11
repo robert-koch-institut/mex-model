@@ -46,10 +46,10 @@
                 "examples": [
                     "https://mex.rki.de/item/anonymization-pseudonymization-1"
                 ],
-                "$ref": "/schema/entities/concept#/identifier"
+                "$ref": "/schema/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/anonymization-pseudonymization"
             },
-            "type": "array",
-            "useScheme": "https://mex.rki.de/item/anonymization-pseudonymization"
+            "type": "array"
         },
         "contact": {
             "items": {
@@ -211,13 +211,13 @@
                 "examples": [
                     "https://mex.rki.de/item/language-1"
                 ],
-                "$ref": "/schema/entities/concept#/identifier"
+                "$ref": "/schema/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/language"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/language"
             ],
-            "type": "array",
-            "useScheme": "https://mex.rki.de/item/language"
+            "type": "array"
         },
         "license": {
             "$ref": "/schema/entities/concept#/identifier",
@@ -314,13 +314,13 @@
                 "examples": [
                     "https://mex.rki.de/item/resource-type-general-1"
                 ],
-                "$ref": "/schema/entities/concept#/identifier"
+                "$ref": "/schema/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/resource-type-general"
             },
             "subPropertyOf": [
                 "http://purl.org/dc/terms/type"
             ],
-            "type": "array",
-            "useScheme": "https://mex.rki.de/item/resource-type-general"
+            "type": "array"
         },
         "resourceTypeSpecific": {
             "items": {
@@ -360,10 +360,10 @@
                 "examples": [
                     "https://mex.rki.de/item/data-processing-state-1"
                 ],
-                "$ref": "/schema/entities/concept#/identifier"
+                "$ref": "/schema/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/data-processing-state"
             },
-            "type": "array",
-            "useScheme": "https://mex.rki.de/item/data-processing-state"
+            "type": "array"
         },
         "temporal": {
             "anyOf": [
@@ -404,14 +404,14 @@
                 "examples": [
                     "https://mex.rki.de/item/theme-1"
                 ],
-                "$ref": "/schema/entities/concept#/identifier"
+                "$ref": "/schema/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/theme"
             },
             "minItems": 1,
             "sameAs": [
                 "http://www.w3.org/ns/dcat#theme"
             ],
-            "type": "array",
-            "useScheme": "https://mex.rki.de/item/theme"
+            "type": "array"
         },
         "title": {
             "items": {
