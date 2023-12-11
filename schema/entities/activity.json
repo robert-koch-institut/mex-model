@@ -12,11 +12,11 @@
             "type": "array"
         },
         "activityType": {
-            "examples": [
-                "https://mex.rki.de/item/activity-type-1"
-            ],
             "items": {
-                "$ref": "/schema/entities/concept#/identifier"
+                "$ref": "/schema/entities/concept#/identifier",
+                "examples": [
+                    "https://mex.rki.de/item/activity-type-1"
+                ]
             },
             "subPropertyOf": [
                 "http://purl.org/dc/terms/type"
@@ -64,15 +64,15 @@
         },
         "end": {
             "items": {
+                "examples": [
+                    "2024-01-17",
+                    "2024",
+                    "2024-01"
+                ],
                 "format": "date",
                 "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
                 "type": "string"
             },
-            "examples": [
-                "2024-01-17",
-                "2024",
-                "2024-01"
-            ],
             "sameAs": [
                 "http://www.wikidata.org/entity/P582"
             ],
@@ -187,15 +187,15 @@
         },
         "start": {
             "items": {
+                "examples": [
+                    "2023-01-16",
+                    "2023",
+                    "2023-02"
+                ],
                 "format": "date",
                 "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
                 "type": "string"
             },
-            "examples": [
-                "2023-01-16",
-                "2023",
-                "2023-02"
-            ],
             "sameAs": [
                 "http://www.wikidata.org/entity/P580"
             ],
@@ -211,10 +211,10 @@
             "type": "array"
         },
         "theme": {
-            "examples": [
-                "https://mex.rki.de/item/theme-1"
-            ],
             "items": {
+                "examples": [
+                    "https://mex.rki.de/item/theme-1"
+                ],
                 "$ref": "/schema/entities/concept#/identifier"
             },
             "sameAs": [

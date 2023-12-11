@@ -43,12 +43,12 @@
         },
         "anonymizationPseudonymization": {
             "items": {
+                "examples": [
+                    "https://mex.rki.de/item/anonymization-pseudonymization-1"
+                ],
                 "$ref": "/schema/entities/concept#/identifier"
             },
             "type": "array",
-            "examples": [
-                "https://mex.rki.de/item/anonymization-pseudonymization-1"
-            ],
             "useScheme": "https://mex.rki.de/item/anonymization-pseudonymization"
         },
         "contact": {
@@ -208,15 +208,15 @@
         },
         "language": {
             "items": {
+                "examples": [
+                    "https://mex.rki.de/item/language-1"
+                ],
                 "$ref": "/schema/entities/concept#/identifier"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/language"
             ],
             "type": "array",
-            "examples": [
-                "https://mex.rki.de/item/language-1"
-            ],
             "useScheme": "https://mex.rki.de/item/language"
         },
         "license": {
@@ -236,10 +236,10 @@
             "type": "array"
         },
         "meshId": {
-            "examples": [
-                "http://id.nlm.nih.gov/mesh/D001604"
-            ],
             "items": {
+                "examples": [
+                    "http://id.nlm.nih.gov/mesh/D001604"
+                ],
                 "format": "uri",
                 "pattern": "^http://id\\.nlm\\.nih\\.gov/mesh/[A-Z0-9]{2,64}$",
                 "type": "string"
@@ -311,15 +311,15 @@
         },
         "resourceTypeGeneral": {
             "items": {
+                "examples": [
+                    "https://mex.rki.de/item/resource-type-general-1"
+                ],
                 "$ref": "/schema/entities/concept#/identifier"
             },
             "subPropertyOf": [
                 "http://purl.org/dc/terms/type"
             ],
             "type": "array",
-            "examples": [
-                "https://mex.rki.de/item/resource-type-general-1"
-            ],
             "useScheme": "https://mex.rki.de/item/resource-type-general"
         },
         "resourceTypeSpecific": {
@@ -357,12 +357,12 @@
         },
         "stateOfDataProcessing": {
             "items": {
+                "examples": [
+                    "https://mex.rki.de/item/data-processing-state-1"
+                ],
                 "$ref": "/schema/entities/concept#/identifier"
             },
             "type": "array",
-            "examples": [
-                "https://mex.rki.de/item/data-processing-state-1"
-            ],
             "useScheme": "https://mex.rki.de/item/data-processing-state"
         },
         "temporal": {
@@ -401,14 +401,14 @@
         },
         "theme": {
             "items": {
+                "examples": [
+                    "https://mex.rki.de/item/theme-1"
+                ],
                 "$ref": "/schema/entities/concept#/identifier"
             },
             "minItems": 1,
             "sameAs": [
                 "http://www.w3.org/ns/dcat#theme"
-            ],
-            "examples": [
-                "https://mex.rki.de/item/theme-1"
             ],
             "type": "array",
             "useScheme": "https://mex.rki.de/item/theme"

@@ -62,13 +62,13 @@
             "type": "string"
         },
         "label": {
-            "examples": [
-                {
-                    "language": "de",
-                    "value": "Mehrere Treppenabsätze steigen"
-                }
-            ],
             "items": {
+                "examples": [
+                    {
+                        "language": "de",
+                        "value": "Mehrere Treppenabsätze steigen"
+                    }
+                ],
                 "$ref": "/schema/fields/text"
             },
             "minItems": 1,
@@ -91,12 +91,12 @@
             "type": "array"
         },
         "valueSet": {
-            "examples": [
-                "Ja, stark eingeschränkt",
-                "Ja, etwas eingeschränkt",
-                "Nein, überhaupt nicht eingeschränkt"
-            ],
             "items": {
+                "examples": [
+                    "Ja, stark eingeschränkt",
+                    "Ja, etwas eingeschränkt",
+                    "Nein, überhaupt nicht eingeschränkt"
+                ],
                 "type": "string"
             },
             "type": "array"

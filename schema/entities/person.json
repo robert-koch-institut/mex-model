@@ -28,12 +28,12 @@
             "type": "array"
         },
         "familyName": {
-            "examples": [
-                "Patapoutian",
-                "Skłodowska-Curie",
-                "Muta Maathai"
-            ],
             "items": {
+                "examples": [
+                    "Patapoutian",
+                    "Skłodowska-Curie",
+                    "Muta Maathai"
+                ],
                 "type": "string"
             },
             "sameAs": [
@@ -43,12 +43,12 @@
             "type": "array"
         },
         "fullName": {
-            "examples": [
-                "Juturna Felicitás",
-                "M. Berhanu",
-                "Keone Seong-Hyeon"
-            ],
             "items": {
+                "examples": [
+                    "Juturna Felicitás",
+                    "M. Berhanu",
+                    "Keone Seong-Hyeon"
+                ],
                 "type": "string"
             },
             "sameAs": [
@@ -57,12 +57,12 @@
             "type": "array"
         },
         "givenName": {
-            "examples": [
-                "Romāns",
-                "Marie Salomea",
-                "May-Britt"
-            ],
             "items": {
+                "examples": [
+                    "Romāns",
+                    "Marie Salomea",
+                    "May-Britt"
+                ],
                 "type": "string"
             },
             "sameAs": [
