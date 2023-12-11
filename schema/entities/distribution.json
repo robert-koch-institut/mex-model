@@ -92,19 +92,21 @@
                 {
                     "format": "date-time",
                     "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
-                    "type": "string"
+                    "type": "string",
+                    "examples": [
+                        "2022-09-30T20:48:35Z"
+                    ]
                 },
                 {
                     "format": "date",
                     "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
-                    "type": "string"
+                    "type": "string",
+                    "examples": [
+                        "2011",
+                        "2019-03",
+                        "2014-08-24"
+                    ]
                 }
-            ],
-            "examples": [
-                "2011",
-                "2019-03",
-                "2014-08-24",
-                "2022-09-30T20:48:35Z"
             ],
             "sameAs": [
                 "http://purl.org/dc/terms/issued"
