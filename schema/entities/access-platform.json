@@ -9,11 +9,12 @@
             "sameAs": [
                 "http://purl.org/dc/terms/alternative"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "contact": {
             "items": {
-                "oneOf": [
+                "anyOf": [
                     {
                         "$ref": "/schema/entities/organizational-unit#/identifier"
                     },
@@ -28,7 +29,8 @@
             "sameAs": [
                 "http://www.w3.org/ns/dcat#contactPoint"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "description": {
             "items": {
@@ -37,26 +39,51 @@
             "sameAs": [
                 "http://purl.org/dc/terms/description"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "endpointDescription": {
-            "$ref": "/schema/fields/link",
             "sameAs": [
                 "http://www.w3.org/ns/dcat#endpointDescription"
-            ]
+            ],
+            "anyOf": [
+                {
+                    "$ref": "/schema/fields/link"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null
         },
         "endpointType": {
-            "$ref": "/schema/entities/concept#/identifier",
+            "anyOf": [
+                {
+                    "$ref": "/schema/entities/concept#/identifier",
+                    "useScheme": "https://mex.rki.de/item/api-type",
+                    "examples": [
+                        "https://mex.rki.de/item/api-type-1"
+                    ]
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
             "subPropertyOf": [
                 "http://purl.org/dc/terms/type"
-            ],
-            "useScheme": "https://mex.rki.de/item/api-type",
-            "examples": [
-                "https://mex.rki.de/item/api-type-1"
             ]
         },
         "endpointURL": {
-            "$ref": "/schema/fields/link",
+            "anyOf": [
+                {
+                    "$ref": "/schema/fields/link"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
             "sameAs": [
                 "http://www.w3.org/ns/dcat#endpointURL"
             ]
@@ -89,7 +116,8 @@
             "sameAs": [
                 "http://www.w3.org/ns/dcat#landingPage"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "stableTargetId": {
             "$ref": "/schema/fields/identifier"
@@ -111,7 +139,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/title"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "unitInCharge": {
             "items": {
@@ -120,7 +149,8 @@
             "sameAs": [
                 "http://dcat-ap.de/def/dcatde/maintainer"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         }
     },
     "required": [

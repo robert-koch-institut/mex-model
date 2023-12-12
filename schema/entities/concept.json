@@ -9,7 +9,8 @@
             "sameAs": [
                 "http://www.w3.org/2004/02/skos/core#altLabel"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "broader": {
             "items": {
@@ -18,7 +19,8 @@
             "sameAs": [
                 "http://www.w3.org/2004/02/skos/core#broader"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "definition": {
             "items": {
@@ -27,7 +29,8 @@
             "sameAs": [
                 "http://www.w3.org/2004/02/skos/core#definition"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "exactMatch": {
             "items": {
@@ -37,7 +40,8 @@
             "sameAs": [
                 "http://www.w3.org/2004/02/skos/core#exactMatch"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "identifier": {
             "examples": [
@@ -78,6 +82,7 @@
     "required": [
         "identifier",
         "inScheme",
+        "notation",
         "prefLabel"
     ],
     "sameAs": [

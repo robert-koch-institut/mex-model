@@ -97,12 +97,20 @@
             "type": "array"
         },
         "version": {
-            "examples": [
-                "v1",
-                "2023-01-16",
-                "Schema 9"
+            "anyOf": [
+                {
+                    "examples": [
+                        "v1",
+                        "2023-01-16",
+                        "Schema 9"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
             ],
-            "type": "string"
+            "default": null
         }
     },
     "required": [

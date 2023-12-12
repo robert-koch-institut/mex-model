@@ -9,7 +9,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/description"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "activityType": {
             "items": {
@@ -22,7 +23,8 @@
             "subPropertyOf": [
                 "http://purl.org/dc/terms/type"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "alternativeTitle": {
             "items": {
@@ -31,7 +33,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/alternative"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "contact": {
             "items": {
@@ -60,7 +63,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/isReferencedBy"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "end": {
             "items": {
@@ -76,7 +80,8 @@
             "sameAs": [
                 "http://www.wikidata.org/entity/P582"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "externalAssociate": {
             "items": {
@@ -92,20 +97,23 @@
             "sameAs": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "funderOrCommissioner": {
             "items": {
                 "$ref": "/schema/entities/organization#/identifier"
             },
             "sameAs": "http://www.wikidata.org/entity/P8324",
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "fundingProgram": {
             "items": {
                 "type": "string"
             },
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "hadPrimarySource": {
             "$ref": "/schema/entities/primary-source#/identifier",
@@ -135,7 +143,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "involvedUnit": {
             "items": {
@@ -144,7 +153,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "isPartOfActivity": {
             "items": {
@@ -154,7 +164,8 @@
                 "http://purl.org/dc/terms/isPartOf",
                 "http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "publication": {
             "items": {
@@ -163,7 +174,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/isReferencedBy"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "responsibleUnit": {
             "items": {
@@ -180,7 +192,8 @@
             "sameAs": [
                 "http://www.wikidata.org/entity/P1813"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "stableTargetId": {
             "$ref": "/schema/fields/identifier"
@@ -199,7 +212,8 @@
             "sameAs": [
                 "http://www.wikidata.org/entity/P580"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "succeeds": {
             "items": {
@@ -208,7 +222,8 @@
             "sameAs": [
                 "http://www.cidoc-crm.org/cidoc-crm/P173_start_before_or_with_the_end_of"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "theme": {
             "items": {
@@ -221,7 +236,8 @@
             "sameAs": [
                 "http://www.w3.org/ns/dcat#theme"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "title": {
             "items": {
@@ -241,7 +257,8 @@
                 "http://www.wikidata.org/entity/P856",
                 "http://xmlns.com/foaf/0.1/homepage"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         }
     },
     "required": [
