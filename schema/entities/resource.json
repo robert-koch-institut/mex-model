@@ -21,8 +21,7 @@
             "sameAs": [
                 "http://purl.org/dc/terms/accessRights"
             ],
-            "useScheme": "https://mex.rki.de/item/access-restriction",
-            "default": []
+            "useScheme": "https://mex.rki.de/item/access-restriction"
         },
         "accrualPeriodicity": {
             "anyOf": [
@@ -130,8 +129,7 @@
             "default": null,
             "sameAs": [
                 "http://purl.org/dc/terms/created"
-            ],
-            "type": "string"
+            ]
         },
         "creator": {
             "items": {
@@ -330,7 +328,6 @@
             "sameAs": [
                 "http://purl.org/dc/terms/modified"
             ],
-            "type": "string",
             "default": null
         },
         "publication": {

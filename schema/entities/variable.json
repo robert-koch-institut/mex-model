@@ -117,7 +117,8 @@
                 ],
                 "type": "string"
             },
-            "type": "array"
+            "type": "array",
+            "default": []
         }
     },
     "required": [

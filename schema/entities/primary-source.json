@@ -9,7 +9,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/alternative"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "contact": {
             "items": {
@@ -28,7 +29,8 @@
                     "http://www.w3.org/ns/dcat#contactPoint"
                 ]
             },
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "description": {
             "items": {
@@ -37,7 +39,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/description"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "documentation": {
             "items": {
@@ -46,7 +49,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/isReferencedBy"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "hadPrimarySource": {
             "$ref": "/schema/entities/primary-source#/identifier",
@@ -73,7 +77,8 @@
             "items": {
                 "$ref": "/schema/fields/link"
             },
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "stableTargetId": {
             "$ref": "/schema/fields/identifier"
@@ -85,7 +90,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/title"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "unitInCharge": {
             "items": {
@@ -94,7 +100,8 @@
             "sameAs": [
                 "http://dcat-ap.de/def/dcatde/maintainer"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "version": {
             "anyOf": [

@@ -67,9 +67,9 @@
                     "Marie Salomea",
                     "May-Britt"
                 ],
-                "type": "string",
-                "default": []
+                "type": "string"
             },
+            "default": [],
             "sameAs": [
                 "http://xmlns.com/foaf/0.1/givenName",
                 "https://schema.org/givenName"
