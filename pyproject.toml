@@ -6,7 +6,7 @@ authors = ["RKI MEx Team <mex@rki.de>"]
 readme = "README.md"
 license = "MIT"
 repository = "https://github.com/robert-koch-institut/mex-model"
-packages = [{ include = "**/*", from = "schema" }]
+packages = [{ include = "mex" }]
 
 [build-system]
 requires = ["poetry-core>=1.8.1"]
