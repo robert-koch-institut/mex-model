@@ -1,19 +1,14 @@
-[tool.poetry]
+[project]
 name = "mex-model"
-version = "2.2.0"
-description = "RKI MEx metadata model."
-authors = ["RKI MEx Team <mex@rki.de>"]
-readme = "README.md"
-license = "MIT"
-repository = "https://github.com/robert-koch-institut/mex-model"
-packages = [{ include = "**/*", from = "schema" }]
+version="2.2.0"
+description="RKI MEx metadata model"
+
+[tool.setuptools.packages.find]
+namespaces = true
+where = ["schema"]
 
 [tool.setuptools]
 include-package-data = true
 
 [tool.setuptools.package-data]
-mex-model = ["*.json"]
-
-[build-system]
-requires = ["poetry-core>=1.8.1"]
-build-backend = "poetry.core.masonry.api"
+"*" = ["*.json"]
