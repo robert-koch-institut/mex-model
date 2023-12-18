@@ -29,10 +29,12 @@ data Findable, Accessible, Interoperable and Reusable.
 
 ## package
 
-The `mex-model` repository contains two models:
+The `mex-model` repository contains the MEx metadata model in two formats.
 
-- the conceptual model, which is mainly used to facilitate interoperability with other metadata schemas and models
-- the json schema, which represents the conceptual model in a format that can be used for technical implementation in applications
+- `/docs` contains the conceptual model, which is mainly used to facilitate
+  interoperability with other metadata schemas and models
+- `mex/model` holds the JSON schema, which represents the conceptual model in a format
+  that can be used for technical implementation in applications
 
 ## license
 

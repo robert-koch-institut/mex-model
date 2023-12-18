@@ -9,7 +9,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/alternative"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "geprisId": {
             "items": {
@@ -23,7 +24,8 @@
             "sameAs": [
                 "http://www.wikidata.org/entity/P4871"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "gndId": {
             "items": {
@@ -37,7 +39,8 @@
             "sameAs": [
                 "http://www.wikidata.org/entity/P227"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "hadPrimarySource": {
             "$ref": "/schema/entities/primary-source#/identifier",
@@ -72,7 +75,8 @@
             "sameAs": [
                 "http://www.wikidata.org/entity/P213"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "officialName": {
             "items": {
@@ -96,7 +100,8 @@
             "sameAs": [
                 "http://www.wikidata.org/entity/P6782"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "shortName": {
             "items": {
@@ -105,7 +110,8 @@
             "sameAs": [
                 "http://www.wikidata.org/entity/P1813"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "stableTargetId": {
             "$ref": "/schema/fields/identifier"
@@ -122,7 +128,8 @@
             "sameAs": [
                 "http://www.wikidata.org/entity/P214"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "wikidataId": {
             "items": {
@@ -133,7 +140,8 @@
                 "pattern": "^https://www\\.wikidata\\.org/entity/[PQ0-9]{2,64}$",
                 "type": "string"
             },
-            "type": "array"
+            "type": "array",
+            "default": []
         }
     },
     "required": [

@@ -10,7 +10,8 @@
             "sameAs": [
                 "http://www.w3.org/ns/dcat#accessService"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "accessRestriction": {
             "$ref": "/schema/entities/concept#/identifier",
@@ -23,13 +24,21 @@
             "useScheme": "https://mex.rki.de/item/access-restriction"
         },
         "accrualPeriodicity": {
-            "$ref": "/schema/entities/concept#/identifier",
+            "anyOf": [
+                {
+                    "$ref": "/schema/entities/concept#/identifier",
+                    "useScheme": "https://mex.rki.de/item/frequency",
+                    "examples": [
+                        "https://mex.rki.de/item/frequency-1"
+                    ]
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
             "sameAs": [
                 "http://purl.org/dc/terms/accrualPeriodicity"
-            ],
-            "useScheme": "https://mex.rki.de/item/frequency",
-            "examples": [
-                "https://mex.rki.de/item/frequency-1"
             ]
         },
         "alternativeTitle": {
@@ -39,17 +48,19 @@
             "sameAs": [
                 "http://purl.org/dc/terms/alternative"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "anonymizationPseudonymization": {
             "items": {
-                "$ref": "/schema/entities/concept#/identifier"
+                "examples": [
+                    "https://mex.rki.de/item/anonymization-pseudonymization-1"
+                ],
+                "$ref": "/schema/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/anonymization-pseudonymization"
             },
             "type": "array",
-            "examples": [
-                "https://mex.rki.de/item/anonymization-pseudonymization-1"
-            ],
-            "useScheme": "https://mex.rki.de/item/anonymization-pseudonymization"
+            "default": []
         },
         "contact": {
             "items": {
@@ -78,7 +89,8 @@
             "subPropertyOf": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "contributor": {
             "items": {
@@ -87,31 +99,37 @@
             "subPropertyOf": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "created": {
             "anyOf": [
                 {
                     "format": "date-time",
                     "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
-                    "type": "string"
+                    "type": "string",
+                    "examples": [
+                        "2022-09-30T20:48:35Z"
+                    ]
                 },
                 {
                     "format": "date",
                     "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
+                    "examples": [
+                        "2011",
+                        "2019-03",
+                        "2014-08-24"
+                    ],
                     "type": "string"
+                },
+                {
+                    "type": "null"
                 }
             ],
-            "examples": [
-                "2011",
-                "2019-03",
-                "2014-08-24",
-                "2022-09-30T20:48:35Z"
-            ],
+            "default": null,
             "sameAs": [
                 "http://purl.org/dc/terms/created"
-            ],
-            "type": "string"
+            ]
         },
         "creator": {
             "items": {
@@ -120,7 +138,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/creator"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "description": {
             "items": {
@@ -129,13 +148,15 @@
             "sameAs": [
                 "http://purl.org/dc/terms/description"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "distribution": {
             "items": {
                 "$ref": "/schema/entities/distribution#/identifier"
             },
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "documentation": {
             "items": {
@@ -144,7 +165,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/isReferencedBy"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "externalPartner": {
             "items": {
@@ -153,7 +175,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "hadPrimarySource": {
             "$ref": "/schema/entities/primary-source#/identifier",
@@ -165,7 +188,8 @@
             "items": {
                 "type": "string"
             },
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "identifier": {
             "$ref": "/schema/fields/identifier",
@@ -186,7 +210,8 @@
             "items": {
                 "$ref": "/schema/fields/text"
             },
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "isPartOf": {
             "items": {
@@ -195,7 +220,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/isPartOf"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "keyword": {
             "items": {
@@ -204,53 +230,66 @@
             "sameAs": [
                 "http://www.w3.org/ns/dcat#keyword"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "language": {
             "items": {
-                "$ref": "/schema/entities/concept#/identifier"
+                "examples": [
+                    "https://mex.rki.de/item/language-1"
+                ],
+                "$ref": "/schema/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/language"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/language"
             ],
             "type": "array",
-            "examples": [
-                "https://mex.rki.de/item/language-1"
-            ],
-            "useScheme": "https://mex.rki.de/item/language"
+            "default": []
         },
         "license": {
-            "$ref": "/schema/entities/concept#/identifier",
-            "examples": [
-                "https://mex.rki.de/item/license-1"
+            "anyOf": [
+                {
+                    "$ref": "/schema/entities/concept#/identifier",
+                    "examples": [
+                        "https://mex.rki.de/item/license-1"
+                    ],
+                    "useScheme": "https://mex.rki.de/item/license"
+                },
+                {
+                    "type": "null"
+                }
             ],
             "sameAs": [
                 "http://purl.org/dc/terms/license"
             ],
-            "useScheme": "https://mex.rki.de/item/license"
+            "default": null
         },
         "loincId": {
             "items": {
                 "type": "string"
             },
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "meshId": {
-            "examples": [
-                "http://id.nlm.nih.gov/mesh/D001604"
-            ],
             "items": {
+                "examples": [
+                    "http://id.nlm.nih.gov/mesh/D001604"
+                ],
                 "format": "uri",
                 "pattern": "^http://id\\.nlm\\.nih\\.gov/mesh/[A-Z0-9]{2,64}$",
                 "type": "string"
             },
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "method": {
             "items": {
                 "$ref": "/schema/fields/text"
             },
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "methodDescription": {
             "items": {
@@ -259,31 +298,37 @@
             "subPropertyOf": [
                 "http://purl.org/dc/terms/description"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "modified": {
             "anyOf": [
                 {
                     "format": "date-time",
+                    "examples": [
+                        "2022-09-30T20:48:35Z"
+                    ],
                     "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
                     "type": "string"
                 },
                 {
                     "format": "date",
                     "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
+                    "examples": [
+                        "2011",
+                        "2019-03",
+                        "2014-08-24"
+                    ],
                     "type": "string"
+                },
+                {
+                    "type": "null"
                 }
-            ],
-            "examples": [
-                "2011",
-                "2019-03",
-                "2014-08-24",
-                "2022-09-30T20:48:35Z"
             ],
             "sameAs": [
                 "http://purl.org/dc/terms/modified"
             ],
-            "type": "string"
+            "default": null
         },
         "publication": {
             "items": {
@@ -292,13 +337,15 @@
             "sameAs": [
                 "http://purl.org/dc/terms/isReferencedBy"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "publisher": {
             "items": {
                 "$ref": "/schema/entities/organization#/identifier"
             },
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "qualityInformation": {
             "items": {
@@ -307,20 +354,22 @@
             "sameAs": [
                 "http://purl.org/dc/terms/description"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "resourceTypeGeneral": {
             "items": {
-                "$ref": "/schema/entities/concept#/identifier"
+                "examples": [
+                    "https://mex.rki.de/item/resource-type-general-1"
+                ],
+                "$ref": "/schema/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/resource-type-general"
             },
             "subPropertyOf": [
                 "http://purl.org/dc/terms/type"
             ],
             "type": "array",
-            "examples": [
-                "https://mex.rki.de/item/resource-type-general-1"
-            ],
-            "useScheme": "https://mex.rki.de/item/resource-type-general"
+            "default": []
         },
         "resourceTypeSpecific": {
             "items": {
@@ -329,7 +378,8 @@
             "subPropertyOf": [
                 "http://purl.org/dc/terms/type"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "rights": {
             "items": {
@@ -338,10 +388,19 @@
             "sameAs": [
                 "http://purl.org/dc/terms/rights"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "sizeOfDataBasis": {
-            "type": "string"
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null
         },
         "spatial": {
             "items": {
@@ -350,20 +409,22 @@
             "sameAs": [
                 "http://purl.org/dc/terms/spatial"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "stableTargetId": {
             "$ref": "/schema/fields/identifier"
         },
         "stateOfDataProcessing": {
             "items": {
-                "$ref": "/schema/entities/concept#/identifier"
+                "examples": [
+                    "https://mex.rki.de/item/data-processing-state-1"
+                ],
+                "$ref": "/schema/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/data-processing-state"
             },
             "type": "array",
-            "examples": [
-                "https://mex.rki.de/item/data-processing-state-1"
-            ],
-            "useScheme": "https://mex.rki.de/item/data-processing-state"
+            "default": []
         },
         "temporal": {
             "anyOf": [
@@ -393,25 +454,29 @@
                         "1998-2008"
                     ],
                     "type": "string"
+                },
+                {
+                    "type": "null"
                 }
             ],
             "sameAs": [
                 "http://purl.org/dc/terms/temporal"
-            ]
+            ],
+            "default": null
         },
         "theme": {
             "items": {
-                "$ref": "/schema/entities/concept#/identifier"
+                "examples": [
+                    "https://mex.rki.de/item/theme-1"
+                ],
+                "$ref": "/schema/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/theme"
             },
             "minItems": 1,
             "sameAs": [
                 "http://www.w3.org/ns/dcat#theme"
             ],
-            "examples": [
-                "https://mex.rki.de/item/theme-1"
-            ],
-            "type": "array",
-            "useScheme": "https://mex.rki.de/item/theme"
+            "type": "array"
         },
         "title": {
             "items": {
@@ -434,8 +499,16 @@
             "type": "array"
         },
         "wasGeneratedBy": {
-            "$ref": "/schema/entities/activity#/identifier",
-            "sameAs": "http://www.w3.org/ns/prov#wasGeneratedBy"
+            "anyOf": [
+                {
+                    "$ref": "/schema/entities/activity#/identifier"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "sameAs": "http://www.w3.org/ns/prov#wasGeneratedBy",
+            "default": null
         }
     },
     "required": [

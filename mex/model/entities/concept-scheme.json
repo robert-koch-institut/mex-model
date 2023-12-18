@@ -9,7 +9,8 @@
             "sameAs": [
                 "http://purl.org/dc/elements/1.1/description"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "identifier": {
             "examples": [
@@ -29,7 +30,8 @@
             "sameAs": [
                 "http://www.w3.org/2000/01/rdf-schema#label"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         }
     },
     "required": [

@@ -3,7 +3,15 @@
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "properties": {
         "accessService": {
-            "$ref": "/schema/entities/access-platform#/identifier",
+            "anyOf": [
+                {
+                    "$ref": "/schema/entities/access-platform#/identifier"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
             "sameAs": [
                 "http://www.w3.org/ns/dcat#accessService"
             ]
@@ -19,7 +27,15 @@
             "useScheme": "https://mex.rki.de/item/access-restriction"
         },
         "accessURL": {
-            "$ref": "/schema/fields/link",
+            "anyOf": [
+                {
+                    "$ref": "/schema/fields/link"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
             "subPropertyOf": [
                 "http://www.w3.org/ns/dcat#accessURL"
             ]
@@ -31,7 +47,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/creator"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "contactPerson": {
             "items": {
@@ -40,7 +57,8 @@
             "sameAs": [
                 "http://www.w3.org/ns/dcat#contactPoint"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "dataCurator": {
             "items": {
@@ -49,7 +67,8 @@
             "subPropertyOf": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "dataManager": {
             "items": {
@@ -58,10 +77,19 @@
             "subPropertyOf": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "downloadURL": {
-            "$ref": "/schema/fields/link",
+            "anyOf": [
+                {
+                    "$ref": "/schema/fields/link"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
             "subPropertyOf": [
                 "http://www.w3.org/ns/dcat#downloadURL"
             ]
@@ -92,19 +120,21 @@
                 {
                     "format": "date-time",
                     "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
-                    "type": "string"
+                    "type": "string",
+                    "examples": [
+                        "2022-09-30T20:48:35Z"
+                    ]
                 },
                 {
                     "format": "date",
                     "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
-                    "type": "string"
+                    "type": "string",
+                    "examples": [
+                        "2011",
+                        "2019-03",
+                        "2014-08-24"
+                    ]
                 }
-            ],
-            "examples": [
-                "2011",
-                "2019-03",
-                "2014-08-24",
-                "2022-09-30T20:48:35Z"
             ],
             "sameAs": [
                 "http://purl.org/dc/terms/issued"
@@ -112,49 +142,70 @@
             "type": "string"
         },
         "license": {
-            "$ref": "/schema/entities/concept#/identifier",
-            "examples": [
-                "https://mex.rki.de/item/license-1"
+            "anyOf": [
+                {
+                    "$ref": "/schema/entities/concept#/identifier",
+                    "examples": [
+                        "https://mex.rki.de/item/license-1"
+                    ],
+                    "useScheme": "https://mex.rki.de/item/license"
+                },
+                {
+                    "type": "null"
+                }
             ],
+            "default": null,
             "sameAs": [
                 "http://purl.org/dc/terms/license"
-            ],
-            "useScheme": "https://mex.rki.de/item/license"
+            ]
         },
         "mediaType": {
-            "$ref": "/schema/entities/concept#/identifier",
-            "examples": [
-                "https://mex.rki.de/item/mime-type-1"
+            "anyOf": [
+                {
+                    "$ref": "/schema/entities/concept#/identifier",
+                    "examples": [
+                        "https://mex.rki.de/item/mime-type-1"
+                    ],
+                    "useScheme": "https://mex.rki.de/item/mime-type"
+                },
+                {
+                    "type": "null"
+                }
             ],
+            "default": null,
             "sameAs": [
                 "http://www.w3.org/ns/dcat#mediaType",
                 "http://purl.org/dc/terms/format"
-            ],
-            "useScheme": "https://mex.rki.de/item/mime-type"
+            ]
         },
         "modified": {
             "anyOf": [
                 {
                     "format": "date-time",
                     "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
-                    "type": "string"
+                    "type": "string",
+                    "examples": [
+                        "2022-09-30T20:48:35Z"
+                    ]
                 },
                 {
                     "format": "date",
                     "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$",
-                    "type": "string"
+                    "type": "string",
+                    "examples": [
+                        "2011",
+                        "2019-03",
+                        "2014-08-24"
+                    ]
+                },
+                {
+                    "type": "null"
                 }
-            ],
-            "examples": [
-                "2011",
-                "2019-03",
-                "2014-08-24",
-                "2022-09-30T20:48:35Z"
             ],
             "sameAs": [
                 "http://purl.org/dc/terms/modified"
             ],
-            "type": "string"
+            "default": null
         },
         "otherContributor": {
             "items": {
@@ -163,7 +214,8 @@
             "subPropertyOf": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "projectLeader": {
             "items": {
@@ -172,7 +224,8 @@
             "subPropertyOf": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "projectManager": {
             "items": {
@@ -181,7 +234,8 @@
             "subPropertyOf": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "publisher": {
             "items": {
@@ -197,7 +251,8 @@
             "subPropertyOf": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "stableTargetId": {
             "$ref": "/schema/fields/identifier"

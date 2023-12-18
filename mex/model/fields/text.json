@@ -1,14 +1,12 @@
 {
     "$id": "https://mex.rki.de/schema/fields/text",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
-    "examples": [
-        {
-            "value": "hello",
-            "language": "de"
-        }
-    ],
     "properties": {
         "value": {
+            "examples": [
+                "Dieser Text dient als Beispiel.",
+                "This is another example text."
+            ],
             "minLength": 1,
             "type": "string"
         },

@@ -1,0 +1,12 @@
+{
+    "$id": "https://mex.rki.de/schema/fields/identifier",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "examples": [
+        "dYb6qKqjdpocTAUEPPTTj2",
+        "fKJE3RzeJ6ntHtqsXOOQR8",
+        "gglGQVGwZNJtqYDkW4N8jL"
+    ],
+    "pattern": "^[a-zA-Z0-9]{14,22}$",
+    "title": "Identifier",
+    "type": "string"
+}

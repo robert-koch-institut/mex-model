@@ -10,7 +10,8 @@
                 "https://schema.org/affiliation",
                 "http://www.wikidata.org/entity/P1416"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "email": {
             "items": {
@@ -25,46 +26,50 @@
                 "http://www.w3.org/2006/vcard/ns#hasEmail",
                 "https://schema.org/email"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "familyName": {
-            "examples": [
-                "Patapoutian",
-                "Skłodowska-Curie",
-                "Muta Maathai"
-            ],
             "items": {
+                "examples": [
+                    "Patapoutian",
+                    "Skłodowska-Curie",
+                    "Muta Maathai"
+                ],
                 "type": "string"
             },
             "sameAs": [
                 "http://xmlns.com/foaf/0.1/familyName",
                 "https://schema.org/familyName"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "fullName": {
-            "examples": [
-                "Juturna Felicitás",
-                "M. Berhanu",
-                "Keone Seong-Hyeon"
-            ],
             "items": {
+                "examples": [
+                    "Juturna Felicitás",
+                    "M. Berhanu",
+                    "Keone Seong-Hyeon"
+                ],
                 "type": "string"
             },
             "sameAs": [
                 "http://xmlns.com/foaf/0.1/name"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "givenName": {
-            "examples": [
-                "Romāns",
-                "Marie Salomea",
-                "May-Britt"
-            ],
             "items": {
+                "examples": [
+                    "Romāns",
+                    "Marie Salomea",
+                    "May-Britt"
+                ],
                 "type": "string"
             },
+            "default": [],
             "sameAs": [
                 "http://xmlns.com/foaf/0.1/givenName",
                 "https://schema.org/givenName"
@@ -104,7 +109,8 @@
             "sameAs": [
                 "http://www.wikidata.org/entity/P213"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "memberOf": {
             "items": {
@@ -113,7 +119,8 @@
             "sameAs": [
                 "http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "orcidId": {
             "items": {
@@ -127,7 +134,8 @@
             "sameAs": [
                 "http://www.wikidata.org/entity/P496"
             ],
-            "type": "array"
+            "type": "array",
+            "default": []
         },
         "stableTargetId": {
             "$ref": "/schema/fields/identifier"
