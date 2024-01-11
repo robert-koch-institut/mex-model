@@ -1,0 +1,14 @@
+{
+  "template": "https://github.com/robert-koch-institut/mex-template",
+  "commit": "4b1ec006db77fb2d4691c062d1e78a2fd1838d81",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "model",
+      "short_summary": "Conceptual and machine-readable versions of the MEx metadata model.",
+      "long_summary": "The `mex-model` repository contains the MEx metadata model in two formats. `/docs/specification.md` contains the conceptual model, which is mainly used to facilitate interoperability with other metadata schemas and models. `mex/model` holds the JSON schema, which represents the conceptual model in a format that can be used for technical implementation in applications.",
+      "_template": "https://github.com/robert-koch-institut/mex-template"
+    }
+  },
+  "directory": null
+}
