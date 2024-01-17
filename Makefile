@@ -14,8 +14,16 @@ hooks:
 	fi; \
 
 install: setup hooks
+	# run the poetry installation with embedded virtual environment
+	@ echo installing package; \
+	poetry install --no-interaction --sync; \
 
 linter:
 	# run the linter hooks from pre-commit on all files
 	@ echo linting all files; \
 	pre-commit run --all-files; \
+
+docs:
+	# use sphinx to auto-generate html docs from code
+	@ echo generating docs; \
+	poetry run sphinx-build -aE -b dirhtml docs docs/dist; \
