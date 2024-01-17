@@ -1,4 +1,4 @@
-.PHONY: all test setup hooks install linter
+.PHONY: all test setup hooks install linter docs
 all: install test
 test: linter
 
