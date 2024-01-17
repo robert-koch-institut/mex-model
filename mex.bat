@@ -4,6 +4,7 @@ set target=%1
 
 if "%target%"=="install" goto install
 if "%target%"=="test" goto test
+if "%target%"=="docs" goto docs
 echo invalid argument %target%
 exit /b 1
 
@@ -29,4 +30,11 @@ exit /b %errorlevel%
 @REM run the linter hooks from pre-commit on all files
 echo linting all files
 pre-commit run --all-files
+exit /b %errorlevel%
+
+
+:docs
+@REM use sphinx to auto-generate html docs from code
+echo generating conceptual model docs
+poetry run sphinx-build -aE -b dirhtml docs docs\dist
 exit /b %errorlevel%
