@@ -10,7 +10,7 @@ exit /b 1
 
 :install
 @REM install meta requirements system-wide
-Python -m pip --disable-pip-version-check install --force-reinstall -r requirements.txt
+Python -m pip --quiet --disable-pip-version-check install --force-reinstall -r requirements.txt
 if %errorlevel% neq 0 exit /b %errorlevel%
 
 @REM install pre-commit hooks when not in CI
@@ -18,7 +18,11 @@ if "%CI%"=="" (
     pre-commit install
     if %errorlevel% neq 0 exit /b %errorlevel%
 )
-exit /b 0
+
+@REM run the poetry installation with embedded virtual environment
+echo installing package
+poetry install --no-interaction --sync
+exit /b %errorlevel%
 
 
 :test
