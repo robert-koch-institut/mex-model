@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - cve scan workflow
 - CHANGELOG file
 - cruft template link
+- sphinx configuration and documentation workflow
 
 ### Changes
 
