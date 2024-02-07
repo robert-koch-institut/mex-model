@@ -19,5 +19,5 @@ sphinx = "^7.2.6"
 template = "https://github.com/robert-koch-institut/mex-template"
 
 [build-system]
-requires = ["poetry-core>=1.8.1"]
+requires = ["poetry-core>=1.9.0"]
 build-backend = "poetry.core.masonry.api"
