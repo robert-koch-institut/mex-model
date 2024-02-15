@@ -105,7 +105,6 @@
         "created": {
             "anyOf": [
                 {
-                    "format": "date-time",
                     "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
                     "type": "string",
                     "examples": [
@@ -304,7 +303,6 @@
         "modified": {
             "anyOf": [
                 {
-                    "format": "date-time",
                     "examples": [
                         "2022-09-30T20:48:35Z"
                     ],
@@ -432,7 +430,6 @@
                     "examples": [
                         "2020-04-03T08:58:26Z"
                     ],
-                    "format": "date-time",
                     "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
                     "type": "string"
                 },
