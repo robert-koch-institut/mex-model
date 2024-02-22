@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - cruft template link
 - sphinx configuration and documentation workflow
 - open-code workflow
+- new partial date type (for YYYY or YYYY-MM formats)
+
 
 ### Changes
 
