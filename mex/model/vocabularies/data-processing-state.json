@@ -1,0 +1,62 @@
+[
+    {
+        "altLabel": {
+            "de": "Primärdaten",
+            "en": "primary data"
+        },
+        "definition": {
+            "de": "Rohdaten oder Primärdaten sind diejenigen Daten, die bei einer Beobachtung, einer Messung oder einer Datenerhebung unmittelbar gewonnen werden und die noch unbearbeitet vorliegen.",
+            "en": "Raw data or primary data are those data that are directly obtained during an observation, a measurement or a data collection and that are still available unprocessed."
+        },
+        "identifier": "https://mex.rki.de/item/data-processing-state-1",
+        "inScheme": "https://mex.rki.de/item/data-processing-state",
+        "notation": "1.",
+        "prefLabel": {
+            "de": "Rohdaten",
+            "en": "Raw data"
+        }
+    },
+    {
+        "definition": {
+            "de": "Sekundärdaten sind diejenigen Daten, die aus Primärdaten durch Verarbeitungsschritte (Primärdatenverarbeitung) hervorgehen. Es handelt sich um abgeleitete oder prozessierte Daten, die im Rahmen der Primärdatenverarbeitung als Ergebnis anfallen.",
+            "en": "Secondary data is that data which arises from primary data through processing steps (primary data processing). It is derived or processed data that is the result of primary data processing."
+        },
+        "identifier": "https://mex.rki.de/item/data-processing-state-2",
+        "inScheme": "https://mex.rki.de/item/data-processing-state",
+        "notation": "2.",
+        "prefLabel": {
+            "de": "Sekundärdaten",
+            "en": "Secondary data"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/data-processing-state-2",
+        "identifier": "https://mex.rki.de/item/data-processing-state-3",
+        "inScheme": "https://mex.rki.de/item/data-processing-state",
+        "notation": "2.1",
+        "prefLabel": {
+            "de": "aggregiert",
+            "en": "aggregated"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/data-processing-state-2",
+        "identifier": "https://mex.rki.de/item/data-processing-state-4",
+        "inScheme": "https://mex.rki.de/item/data-processing-state",
+        "notation": "2.2",
+        "prefLabel": {
+            "de": "Plausibilitätskontrolle",
+            "en": "plausibility checked"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/data-processing-state-2",
+        "identifier": "https://mex.rki.de/item/data-processing-state-5",
+        "inScheme": "https://mex.rki.de/item/data-processing-state",
+        "notation": "2.2",
+        "prefLabel": {
+            "de": "standardisiert",
+            "en": "normalized"
+        }
+    }
+]

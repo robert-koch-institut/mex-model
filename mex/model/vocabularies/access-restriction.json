@@ -1,0 +1,26 @@
+[
+    {
+        "definition": {
+            "de": "Die Ressource ist offen zugänglich.",
+            "en": "The resource is available to the public."
+        },
+        "identifier": "https://mex.rki.de/item/access-restriction-1",
+        "inScheme": "https://mex.rki.de/item/access-restriction",
+        "prefLabel": {
+            "de": "offen",
+            "en": "open"
+        }
+    },
+    {
+        "definition": {
+            "de": "Ressource ist eingeschränkt zugänglich. Beispielsweise enthalten die Daten vertragliche Informationen oder personenbezogene Daten. Dies bedeutet, dass Einschränkungen bei der Nachnutzung der Daten vorliegen und die Daten entweder öffentlich gar nicht oder nur unter bestimmten Voraussetzungen gegeben sind, z. B. aggregierte Daten.",
+            "en": "Resource has restricted access. For example, the data contains classified information or personal data. This means that there are restrictions on the subsequent use of the data and the data is either not available to the public at all or only available under certain conditions, e.g. aggregated data."
+        },
+        "identifier": "https://mex.rki.de/item/access-restriction-2",
+        "inScheme": "https://mex.rki.de/item/access-restriction",
+        "prefLabel": {
+            "de": "restriktiv",
+            "en": "restricted"
+        }
+    }
+]
