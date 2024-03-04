@@ -71,15 +71,16 @@ jobs:
             printf '```\n' >> .cruft-pr-body
           done
           git add --all --verbose
-          git config --global user.email ${{ vars.MEX_BOT_EMAIL }}
-          git config --global user.name ${{ vars.MEX_BOT_USER }}
-          git config --global gpg.format ssh
           mkdir -p 700 .sig
           echo $SIGNING_PUB >> .sig/mex.pub
           chmod 644 .sig/mex.pub
           echo $SIGNING_KEY >> .sig/mex
           chmod 600 .sig/mex
-          git config --global user.signingkey .sig/mex.pub
+          git config --local user.email ${{ vars.MEX_BOT_EMAIL }}
+          git config --local user.name ${{ vars.MEX_BOT_USER }}
+          git config --local gpg.format ssh
+          git config --local user.signingkey .sig/mex.pub
+          git config --local commit.gpgsign true
           git commit --message "Bump cookiecutter template to $template_ref" --verbose
           git push --set-upstream origin cruft/cookiecutter-template-${template_ref} --force --verbose
           gh pr create --title "Bump cookiecutter template to $template_ref" --body-file .cruft-pr-body --label cruft --assignee ${{ vars.MEX_BOT_USER }}
