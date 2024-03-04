@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/robert-koch-institut/mex-template",
-  "commit": "bd0e3bf51cb5d37695911e65fa2ae378d93866d1",
+  "commit": "77ce51f46b0897c6fbd29782c32923075e296c2a",
   "checkout": null,
   "context": {
     "cookiecutter": {
