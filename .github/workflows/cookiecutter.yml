@@ -42,11 +42,29 @@ jobs:
       - name: Install requirements
         run: make setup
 
+      - name: Configure git
+        env:
+          SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
+          SIGNING_PUB: ${{ secrets.SIGNING_PUB }}
+        run: |
+          mkdir -p 700 ~/.ssh
+          echo $SIGNING_PUB >> ~/.ssh/mex.pub
+          chmod 644 ~/.ssh/mex.pub
+          echo $SIGNING_KEY >> ~/.ssh/mex
+          chmod 600 ~/.ssh/mex
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/mex
+          ls -lah ~/.ssh
+          ssh-add -L
+          git config --local user.email ${{ vars.MEX_BOT_EMAIL }}
+          git config --local user.name ${{ vars.MEX_BOT_USER }}
+          git config --local gpg.format ssh
+          git config --local user.signingkey ~/.ssh/mex.pub
+          git config --local commit.gpgsign true
+
       - name: Update template
         env:
           GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
-          SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
-          SIGNING_PUB: ${{ secrets.SIGNING_PUB }}
         run: |
           if cruft check; then
             echo template is up to date
@@ -71,21 +89,7 @@ jobs:
             printf '```\n' >> .cruft-pr-body
           done
           git add --all --verbose
-          mkdir -p 700 ~/.ssh
-          echo $SIGNING_PUB >> ~/.ssh/mex.pub
-          chmod 644 ~/.ssh/mex.pub
-          echo $SIGNING_KEY >> ~/.ssh/mex
-          chmod 600 ~/.ssh/mex
-          ssh-add ~/.ssh/mex
-          ls -lah ~/.ssh
-          ssh-add -L
-          git config --local user.email ${{ vars.MEX_BOT_EMAIL }}
-          git config --local user.name ${{ vars.MEX_BOT_USER }}
-          git config --local gpg.format ssh
-          git config --local user.signingkey ~/.ssh/mex.pub
-          git config --local commit.gpgsign true
           git commit --message "Bump cookiecutter template to $template_ref" --verbose
           git push --set-upstream origin cruft/cookiecutter-template-${template_ref} --force --verbose
           gh pr create --title "Bump cookiecutter template to $template_ref" --body-file .cruft-pr-body --label cruft --assignee ${{ vars.MEX_BOT_USER }}
-          rm -rf ~/.ssh/mex ~/.ssh/mex.pub
           exit 1
