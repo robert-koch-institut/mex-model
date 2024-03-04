@@ -48,14 +48,11 @@ jobs:
           SIGNING_PUB: ${{ secrets.SIGNING_PUB }}
         run: |
           eval "$(ssh-agent -s)"
-          mkdir -p 700 ~/.ssh
-          echo $SIGNING_PUB > ~/.ssh/mex.pub
-          chmod 644 ~/.ssh/mex.pub
-          echo $SIGNING_KEY > ~/.ssh/mex
-          chmod 600 ~/.ssh/mex
-          ls -lah ~/.ssh
+          install --directory ~/.ssh --mode 700
+          base64 -d <<< '${{ secrets.SIGNING_KEY }}' > ~/.ssh/mex
+          base64 -d <<< '${{ secrets.SIGNING_PUB }}' > ~/.ssh/mex.pub
+          chmod 600 ~/.ssh/*
           ssh-add ~/.ssh/mex
-          ssh-add -L
           git config --local user.email ${{ vars.MEX_BOT_EMAIL }}
           git config --local user.name ${{ vars.MEX_BOT_USER }}
           git config --local gpg.format ssh
