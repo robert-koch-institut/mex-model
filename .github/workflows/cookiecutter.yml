@@ -22,6 +22,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.WORKFLOW_TOKEN }}
 
       - name: Cache requirements
         uses: actions/cache@v4
@@ -42,9 +43,8 @@ jobs:
         run: make setup
 
       - name: Update template
-        continue-on-error: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
         run: |
           if cruft check; then
             echo template is up to date
