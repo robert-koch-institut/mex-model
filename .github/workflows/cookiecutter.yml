@@ -79,7 +79,7 @@ jobs:
           git config --local user.email ${{ vars.MEX_BOT_EMAIL }}
           git config --local user.name ${{ vars.MEX_BOT_USER }}
           git config --local gpg.format ssh
-          git config --local user.signingkey ${{ secrets.SIGNING_PUB }}
+          git config --local user.signingkey '${{ secrets.SIGNING_PUB }}'
           git config --local commit.gpgsign true
           git commit --message "Bump cookiecutter template to $template_ref" --verbose
           git push --set-upstream origin cruft/cookiecutter-template-${template_ref} --force --verbose
