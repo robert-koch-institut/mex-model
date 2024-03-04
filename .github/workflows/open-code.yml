@@ -18,6 +18,6 @@ jobs:
           fetch-depth: 0
       - name: Push main branch
         run: |
-          git remote add opencode https://${{ secrets.OPENCODE_USER }}:${{ secrets.OPENCODE_TOKEN }}@gitlab.opencode.de/robert-koch-institut/mex/mex-{{ cookiecutter.project_name }}.git
+          git remote add opencode https://${{ secrets.OPENCODE_USER }}:${{ secrets.OPENCODE_TOKEN }}@gitlab.opencode.de/robert-koch-institut/mex/mex-model.git
           git push opencode -f
           git push opencode -f --tags
