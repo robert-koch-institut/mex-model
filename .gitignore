@@ -101,6 +101,7 @@ dmypy.json
 .ruff_cache
 
 # cruft
+.sig/
 .cruft-pr-body
 *.rej
 

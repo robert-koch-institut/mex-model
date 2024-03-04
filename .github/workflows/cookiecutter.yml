@@ -45,6 +45,8 @@ jobs:
       - name: Update template
         env:
           GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
+          SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
+          SIGNING_PUB: ${{ secrets.SIGNING_PUB }}
         run: |
           if cruft check; then
             echo template is up to date
@@ -60,7 +62,7 @@ jobs:
           git checkout -b cruft/cookiecutter-template-${template_ref}
           cruft update --skip-apply-ask
           printf '# Changes\n\n- bumped cookiecutter template to %s/commit/%s\n' "$template_url" "$template_ref" > .cruft-pr-body
-          if [[ $(git status --porcelain | wc -c) -ne 0 ]]; then
+          if [[ $(git status --porcelain | grep .rej | wc -c) -ne 0 ]]; then
             printf '\n# Conflicts\n' >> .cruft-pr-body
           fi
           git status --porcelain | grep .rej | awk '{print $2;}' | while read -r line ; do
@@ -71,6 +73,13 @@ jobs:
           git add --all --verbose
           git config --global user.email ${{ vars.MEX_BOT_EMAIL }}
           git config --global user.name ${{ vars.MEX_BOT_USER }}
+          git config --global gpg.format ssh
+          mkdir -p 700 .sig
+          echo $SIGNING_PUB >> .sig/mex.pub
+          chmod 644 .sig/mex.pub
+          echo $SIGNING_KEY >> .sig/mex
+          chmod 600 .sig/mex
+          git config --global user.signingkey .sig/mex.pub
           git commit --message "Bump cookiecutter template to $template_ref" --verbose
           git push --set-upstream origin cruft/cookiecutter-template-${template_ref} --force --verbose
           gh pr create --title "Bump cookiecutter template to $template_ref" --body-file .cruft-pr-body --label cruft --assignee ${{ vars.MEX_BOT_USER }}
