@@ -61,7 +61,7 @@ jobs:
 
       - name: Update template
         env:
-          GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
+          GH_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
         run: |
           if cruft check; then
             echo template is up to date
