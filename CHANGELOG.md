@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - sphinx configuration and documentation workflow
 - open-code workflow
 - translation files in PO format
+- move vocabularies from mex-common to mex-model
 
 ### Changes
 
