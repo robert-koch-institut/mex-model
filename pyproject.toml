@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mex-model"
-version = "2.2.0"
+version = "2.3.0"
 description = "Conceptual and machine-readable versions of the MEx metadata model."
 authors = ["RKI MEx Team <mex@rki.de>"]
 readme = "README.md"
