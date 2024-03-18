@@ -9,18 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- pull request template
-- cve scan workflow
-- CHANGELOG file
-- cruft template link
-- sphinx configuration and documentation workflow
-- open-code workflow
-- new partial date type (for YYYY or YYYY-MM formats)
-
-
 ### Changes
-
-- harmonized boilerplate
 
 ### Deprecated
 
@@ -29,3 +18,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+## [2.3.0] - 2024-03-18
+
+### Added
+
+- pull request template
+- cve scan workflow
+- CHANGELOG file
+- cruft template link
+- sphinx configuration and documentation workflow
+- open-code workflow
+- new partial date type (for YYYY or YYYY-MM formats)
+- translation files in PO format
+- move vocabularies from mex-common to mex-model
+
+### Changes
+
+- harmonized boilerplate
+
+## [2.2.0] - 2023-12-18
+
+### Added
+
+- first version with changelog

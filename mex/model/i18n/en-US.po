@@ -1,0 +1,445 @@
+msgid "accessLocation.singular"
+msgid_plural "accessLocation.plural"
+msgstr[0] "Access location"
+msgstr[1] "Access locations"
+
+msgid "accessLocation.description"
+msgstr "Access location (storage path or URL)"
+
+msgctxt "PrimarySource"
+msgid "accessLocation.description"
+msgstr "Access location (storage path or URL) of the platform"
+
+msgctxt "Resource"
+msgid "accessLocation.description"
+msgstr "Access location (storage path or URL) of the resource"
+
+msgid "accessPlatform.singular"
+msgid_plural "accessPlatform.plural"
+msgstr[0] "Access platform"
+msgstr[1] "Access platforms"
+
+msgid "accessPlatform.description"
+msgstr "Access platform of the resource"
+
+msgid "accessRestriction.singular"
+msgstr "Access restriction"
+
+msgid "accessRestriction.description"
+msgstr ""
+"Description if resource is available for everyone (open) or has got any "
+"restricted access (restricted)"
+
+msgid "acronym.singular"
+msgid_plural "acronym.plural"
+msgstr[0] "Short title"
+msgstr[1] "Short titles"
+
+msgctxt "OrganizationalUnit"
+msgid "acronym.singular"
+msgid_plural "acronym.plural"
+msgstr[0] "Acronym"
+msgstr[1] "Acronyms"
+
+msgid "acronym.description"
+msgstr "Short title or acronym"
+
+msgctxt "Activity"
+msgid "acronym.description"
+msgstr "Short title or acronym for the title of a project"
+
+msgctxt "Resource"
+msgid "acronym.description"
+msgstr "Short title or acronym for the title of a resource"
+
+msgctxt "PrimarySource"
+msgid "acronym.description"
+msgstr "Short title or acronym for the title of a platform"
+
+msgctxt "Variable"
+msgid "acronym.description"
+msgstr "Short title or acronym for the title of a data item"
+
+msgid "address.singular"
+msgid_plural "address.plural"
+msgstr[0] "Address"
+msgstr[1] "Addresses"
+
+msgid "apiAccessLocation.singular"
+msgid_plural "apiAccessLocation.plural"
+msgstr[0] "API access location"
+msgstr[1] "API access locations"
+
+msgid "apiAccessLocation.description"
+msgstr ""
+"URL of the Application Programming Interface (API) for accessing the "
+"platform"
+
+msgid "apiDescription.singular"
+msgstr "API documentation"
+
+msgid "apiDescription.description"
+msgstr "Documentation of the Application Programming Interface (API)"
+
+msgid "apiType.singular"
+msgid_plural "apiType.plural"
+msgstr[0] "API type"
+msgstr[1] "API types"
+
+msgid "apiType.description"
+msgstr "Type of an Application Programming Interface (API), e.g. REST or SOAP"
+
+msgid "completeness.singular"
+msgstr "Complete meta data"
+
+msgid "contact.singular"
+msgid_plural "contact.plural"
+msgstr[0] "Contact"
+msgstr[1] "Contacts"
+
+msgctxt "Activity"
+msgid "contact.description"
+msgstr ""
+"Person or unit that can help with accessing, troubleshooting, or "
+"otherwise field issues related to the resource."
+
+msgctxt "PrimarySource"
+msgid "contact.description"
+msgstr ""
+"Person or unit that can help with accessing, troubleshooting, or "
+"otherwise field issues related to the platform."
+
+msgid "contributor.singular"
+msgid_plural "contributor.plural"
+msgstr[0] "Contributor"
+msgstr[1] "Contributors"
+
+msgid "contributor.description"
+msgstr "Person(s) contributing to the project"
+
+msgid "created.singular"
+msgstr "Created"
+
+msgctxt "Resource"
+msgid "created.description"
+msgstr ""
+"Date the resource itself was created; this could refer to a time frame in "
+"history, a date range, or a single date for a final component, e.g., the "
+"finalized file with all the data."
+
+msgid "createdInContextOf.singular"
+msgid_plural "createdInContextOf.plural"
+msgstr[0] "Project"
+msgstr[1] "Projects"
+
+msgid "dataCollectionProcess.singular"
+msgid_plural "dataCollectionProcess.plural"
+msgstr[0] "Method"
+msgstr[1] "Methods"
+
+msgid "dataCollectionProcess.description"
+msgstr "Methodology employed for the study or research or resource"
+
+msgid "dataFileFormat.singular"
+msgstr "File format"
+
+msgid "dataFileFormat.description"
+msgstr "Technical format of the resource"
+
+msgid "dataOriginatesFrom.singular"
+msgstr "Data origin"
+
+msgid "datumType.singular"
+msgid_plural "datumType.plural"
+msgstr[0] "Data item type"
+msgstr[1] "Data item types"
+
+msgid "datumType.description"
+msgstr "General type of the data item"
+
+msgid "departmentOrUnit.singular"
+msgid_plural "departmentOrUnit.plural"
+msgstr[0] "Unit"
+msgstr[1] "Units"
+
+msgid "description.singular"
+msgstr "Description"
+
+msgctxt "Resource"
+msgid "description.description"
+msgstr ""
+"Brief description of the resource, its components, and the context of how"
+" the resource was created"
+
+msgctxt "Activity"
+msgid "description.description"
+msgstr ""
+"Brief description of the project or the research context in which the "
+"resource was created"
+
+msgctxt "PrimarySource"
+msgid "description.description"
+msgstr "Brief description of the platform"
+
+msgctxt "Variable"
+msgid "description.description"
+msgstr "Brief description of the data item"
+
+msgid "email.singular"
+msgid_plural "email.plural"
+msgstr[0] "Email address"
+msgstr[1] "Email addresses"
+
+msgid "endTime.singular"
+msgstr "End time"
+
+msgctxt "Activity"
+msgid "endTime.description"
+msgstr "(Planned) end of a project"
+
+msgid "entityName.singular"
+msgstr "Type"
+
+msgid "externalPartner.singular"
+msgstr "External Contributors"
+
+msgid "externalPartner.description"
+msgstr ""
+"External organizations or institutions, which contribute to the project, "
+"e. g. research cooperation partner or service provider"
+
+msgid "familyName.singular"
+msgstr "Family name"
+
+msgid "fundedOrCommissionedBy.singular"
+msgstr "Funded / commissioned by"
+
+msgid "fundedOrCommissionedBy.description"
+msgstr ""
+"Name of the funder (e.g. research funds) or commissioner (e.g. federal "
+"mandate)"
+
+msgid "givenName.singular"
+msgstr "Given name"
+
+msgid "hasContributingUnit.singular"
+msgid_plural "hasContributingUnit.plural"
+msgstr[0] "Contributing Unit"
+msgstr[1] "Contributing Units"
+
+msgid "hasContributingUnit.description"
+msgstr "Unit(s) contributing to the project"
+
+msgid "hasResponsibleUnit.singular"
+msgid_plural "hasResponsibleUnit.plural"
+msgstr[0] "Responsible unit"
+msgstr[1] "Responsible units"
+
+msgid "hasResponsibleUnit.description"
+msgstr "Unit(s) responsible for the project"
+
+msgid "keyword.singular"
+msgid_plural "keyword.plural"
+msgstr[0] "Keyword"
+msgstr[1] "Keywords"
+
+msgctxt "Resource"
+msgid "keyword.description"
+msgstr "Keywords describing a resource"
+
+msgctxt "Activity"
+msgid "keyword.description"
+msgstr "Keywords describing a project"
+
+msgctxt "Variable"
+msgid "keyword.description"
+msgstr "Keywords describing a data item"
+
+msgid "label.singular"
+msgstr "Title"
+
+msgctxt "Resource"
+msgid "label.singular"
+msgstr "Resource title"
+
+msgctxt "Activity"
+msgid "label.singular"
+msgstr "Project title"
+
+msgctxt "PrimarySource"
+msgid "label.singular"
+msgstr "Platform"
+
+msgctxt "Variable"
+msgid "label.singular"
+msgstr "Data item"
+
+msgctxt "Person"
+msgid "label.singular"
+msgid_plural "label.plural"
+msgstr[0] "Name"
+msgstr[1] "Names"
+
+msgctxt "OrganizationalUnit"
+msgid "label.singular"
+msgstr "Unit"
+
+msgctxt "Resource"
+msgid "label.description"
+msgstr ""
+"Name(s) or title(s) by which a resource is known. May be the title of a "
+"dataset, defined piece, collection of information or the name of a piece "
+"of research software."
+
+msgctxt "Activity"
+msgid "label.description"
+msgstr ""
+"Name(s) or title(s) by which a (research) project or planned operation is"
+" known by. This is the context of origin of the resources."
+
+msgctxt "PrimarySource"
+msgid "label.description"
+msgstr "Name(s) of a platform"
+
+msgctxt "Variable"
+msgid "label.description"
+msgstr "Name of a single piece of information within a resource"
+
+msgctxt "Person"
+msgid "label.description"
+msgstr "Name of a person"
+
+msgctxt "OrganizationalUnit"
+msgid "label.description"
+msgstr "Name of an organizational unit"
+
+msgid "license.singular"
+msgstr "License"
+
+msgid "license.description"
+msgstr "Reuse license of the resource"
+
+msgid "meshTerm.singular"
+msgid_plural "meshTerm.plural"
+msgstr[0] "MeSH term"
+msgstr[1] "MeSH terms"
+
+msgid "meshTerm.description"
+msgstr ""
+"Medical Subject Headings (MeSH) thesaurus is a controlled and "
+"hierarchically-organized vocabulary produced by the National Library of "
+"Medicine."
+
+msgid "parentDepartment.singular"
+msgstr "Parent Department"
+
+msgid "partOfResource.singular"
+msgstr "Resource"
+
+msgid "partOfSource.singular"
+msgstr "Source"
+
+msgid "relatedDocumentation.singular"
+msgstr "Documentation"
+
+msgctxt "Resource"
+msgid "relatedDocumentation.description"
+msgstr "Link to the documentation of the resource"
+
+msgctxt "Activity"
+msgid "relatedDocumentation.description"
+msgstr "Link to the documentation of the project or project related documentation"
+
+msgctxt "PrimarySource"
+msgid "relatedDocumentation.description"
+msgstr "Link to the documentation of the platform"
+
+msgid "relatedExternalIdentifier.singular"
+msgid_plural "relatedExternalIdentifier.plural"
+msgstr[0] "External identifier"
+msgstr[1] "External identifiers"
+
+msgid "relatedExternalIdentifier.description"
+msgstr "Persistent external identifier (ID), which are globally unique, e.g. DOI"
+
+msgid "resourceType.singular"
+msgid_plural "resourceType.plural"
+msgstr[0] "Resource type"
+msgstr[1] "Resource types"
+
+msgid "resourceType.description"
+msgstr ""
+"Type(s) of the resource. Like type of dataset, research software, and "
+"used database."
+
+msgid "rights.singular"
+msgstr "Rights"
+
+msgid "rights.description"
+msgstr "Any rights information for this resource"
+
+msgid "sampleEntries.singular"
+msgstr "Sample entries"
+
+msgid "sampleEntries.description"
+msgstr ""
+"Sample entries within the data item, like column names, variable names, "
+"keywords"
+
+msgid "sourceType.singular"
+msgstr "Project type"
+
+msgid "sourceType.description"
+msgstr "Type of a project"
+
+msgid "startTime.singular"
+msgstr "Start time"
+
+msgctxt "Activity"
+msgid "startTime.description"
+msgstr "Start of project"
+
+msgid "succeeds.singular"
+msgstr "Succeeds"
+
+msgid "technicalAccessibility.singular"
+msgstr "Technical accessibility"
+
+msgid "technicalAccessibility.description"
+msgstr "Technical accessibility within RKI or outside of RKI network"
+
+msgid "timePeriod.singular"
+msgstr "Date range"
+
+msgctxt "Activity"
+msgid "timePeriod.description"
+msgstr "Duration(s) or start of a project"
+
+msgid "unitOf.singular"
+msgstr "Unit of"
+
+msgid "usedInstrumentToolOrApparatus.singular"
+msgid_plural "usedInstrumentToolOrApparatus.plural"
+msgstr[0] "Tool"
+msgstr[1] "Tools"
+
+msgid "usedInstrumentToolOrApparatus.description"
+msgstr ""
+"Tools used for capturing, acquiring, monitoring, and analyzing the "
+"resource"
+
+msgid "version.singular"
+msgstr "Version"
+
+msgid "version.description"
+msgstr ""
+"Changes to a resource are stored in different states and called versions."
+" They indicate the specific state of a resource at a given time."
+
+msgid "website.singular"
+msgid_plural "website.plural"
+msgstr[0] "Website"
+msgstr[1] "Websites"
+
+msgid "worksFor.singular"
+msgstr "Works for"
