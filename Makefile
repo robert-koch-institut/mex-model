@@ -1,4 +1,4 @@
-.PHONY: all test setup hooks install linter docs
+.PHONY: all test setup hooks install linter wheel docs
 all: install test
 test: linter
 
@@ -16,14 +16,19 @@ hooks:
 install: setup hooks
 	# install packages from lock file in local virtual environment
 	@ echo installing package; \
-	poetry install --no-interaction --sync; \
+	pdm sync --clean --group dev; \
 
 linter:
 	# run the linter hooks from pre-commit on all files
 	@ echo linting all files; \
 	pre-commit run --all-files; \
 
+wheel:
+	# build the python package
+	@ echo building wheel; \
+	pdm build --no-sdist; \
+
 docs:
 	# use sphinx to auto-generate html docs from code
 	@ echo generating docs; \
-	poetry run sphinx-build -aE -b dirhtml docs docs/dist; \
+	pdm run sphinx-build -aE -b dirhtml docs docs/dist; \
