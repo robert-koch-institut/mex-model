@@ -36,5 +36,5 @@ exit /b %errorlevel%
 :docs
 @REM use sphinx to auto-generate html docs from code
 echo generating conceptual model docs
-poetry run sphinx-build -aE -b dirhtml docs docs\dist
+pdm run sphinx-build -aE -b dirhtml docs docs\dist
 exit /b %errorlevel%

@@ -66,8 +66,6 @@ components of the MEx project are open-sourced under the same license as well.
 - on windows run `.\mex.bat test`
 - or run manually
   - linter checks via `pre-commit run --all-files`
-  - all tests via `pdm run pytest`
-  - just unit tests via `pdm run pytest -m "not integration"`
 
 ### updating dependencies
 
