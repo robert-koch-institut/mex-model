@@ -15,7 +15,7 @@ optional-dependencies.dev = [
 
 [tool.cruft]
 template = "https://github.com/robert-koch-institut/mex-template"
-skip = ["tests", "mex/model/main.py"]
+skip = ["tests/conftest.py", "mex/model/main.py"]
 
 [tool.pdm]
 distribution = true
