@@ -4,6 +4,7 @@ Conceptual and machine-readable versions of the MEx metadata model.
 
 [![linting](https://github.com/robert-koch-institut/mex-model/actions/workflows/linting.yml/badge.svg)](https://github.com/robert-koch-institut/mex-model/actions/workflows/linting.yml)
 [![cve-scan](https://github.com/robert-koch-institut/mex-model/actions/workflows/cve-scan.yml/badge.svg)](https://github.com/robert-koch-institut/mex-model/actions/workflows/cve-scan.yml)
+[![documentation](https://github.com/robert-koch-institut/mex-model/actions/workflows/documentation.yml/badge.svg)](https://robert-koch-institut.github.io/mex-model)
 
 ## project
 

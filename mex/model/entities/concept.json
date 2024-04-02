@@ -3,36 +3,37 @@
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "properties": {
         "altLabel": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/text"
             },
             "sameAs": [
                 "http://www.w3.org/2004/02/skos/core#altLabel"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "broader": {
+            "default": [],
             "items": {
                 "$ref": "/schema/entities/concept#/identifier"
             },
             "sameAs": [
                 "http://www.w3.org/2004/02/skos/core#broader"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "definition": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/text"
             },
             "sameAs": [
                 "http://www.w3.org/2004/02/skos/core#definition"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "exactMatch": {
+            "default": [],
             "items": {
                 "format": "uri",
                 "type": "string"
@@ -40,8 +41,7 @@
             "sameAs": [
                 "http://www.w3.org/2004/02/skos/core#exactMatch"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "identifier": {
             "examples": [

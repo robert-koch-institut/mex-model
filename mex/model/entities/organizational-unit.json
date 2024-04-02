@@ -3,16 +3,17 @@
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "properties": {
         "alternativeName": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/text"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/alternative"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "email": {
+            "default": [],
             "items": {
                 "examples": [
                     "info@rki.de"
@@ -25,8 +26,7 @@
                 "http://www.w3.org/2006/vcard/ns#hasEmail",
                 "https://schema.org/email"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "hadPrimarySource": {
             "$ref": "/schema/entities/primary-source#/identifier",
@@ -69,29 +69,30 @@
             "default": null
         },
         "shortName": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/text"
             },
             "sameAs": [
                 "http://www.wikidata.org/entity/P1813"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "stableTargetId": {
             "$ref": "/schema/fields/identifier"
         },
         "unitOf": {
+            "default": [],
             "items": {
                 "$ref": "/schema/entities/organization#/identifier"
             },
             "sameAs": [
                 "http://www.w3.org/ns/org#unitOf"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "website": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/link"
             },
@@ -100,8 +101,7 @@
                 "http://www.w3.org/2006/vcard/ns#hasUrl",
                 "http://xmlns.com/foaf/0.1/homepage"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         }
     },
     "required": [

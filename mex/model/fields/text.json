@@ -2,6 +2,12 @@
     "$id": "https://mex.rki.de/schema/fields/text",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "properties": {
+        "language": {
+            "enum": [
+                "de",
+                "en"
+            ]
+        },
         "value": {
             "examples": [
                 "Dieser Text dient als Beispiel.",
@@ -9,12 +15,6 @@
             ],
             "minLength": 1,
             "type": "string"
-        },
-        "language": {
-            "enum": [
-                "de",
-                "en"
-            ]
         }
     },
     "required": [

@@ -2,6 +2,16 @@
     "$id": "https://mex.rki.de/schema/entities/distribution",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "properties": {
+        "accessRestriction": {
+            "$ref": "/schema/entities/concept#/identifier",
+            "examples": [
+                "https://mex.rki.de/item/access-restriction-1"
+            ],
+            "sameAs": [
+                "http://purl.org/dc/terms/accessRights"
+            ],
+            "useScheme": "https://mex.rki.de/item/access-restriction"
+        },
         "accessService": {
             "anyOf": [
                 {
@@ -15,16 +25,6 @@
             "sameAs": [
                 "http://www.w3.org/ns/dcat#accessService"
             ]
-        },
-        "accessRestriction": {
-            "$ref": "/schema/entities/concept#/identifier",
-            "examples": [
-                "https://mex.rki.de/item/access-restriction-1"
-            ],
-            "sameAs": [
-                "http://purl.org/dc/terms/accessRights"
-            ],
-            "useScheme": "https://mex.rki.de/item/access-restriction"
         },
         "accessURL": {
             "anyOf": [
@@ -41,44 +41,44 @@
             ]
         },
         "author": {
+            "default": [],
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/creator"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "contactPerson": {
+            "default": [],
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
             "sameAs": [
                 "http://www.w3.org/ns/dcat#contactPoint"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "dataCurator": {
+            "default": [],
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
             "subPropertyOf": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "dataManager": {
+            "default": [],
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
             "subPropertyOf": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "downloadURL": {
             "anyOf": [
@@ -118,28 +118,28 @@
         "issued": {
             "anyOf": [
                 {
-                    "format": "date-time",
-                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
-                    "type": "string",
                     "examples": [
                         "2022-09-30T20:48:35Z"
-                    ]
-                },
-                {
-                    "format": "date",
-                    "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$",
-                    "examples": [
-                        "2014-08-24"
                     ],
+                    "format": "date-time",
+                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
                     "type": "string"
                 },
                 {
-                    "pattern": "^(?:\\d{4}|(?:\\d{4}-(?:0[1-9]|1[0-2])))$",
-                    "type": "string",
+                    "examples": [
+                        "2014-08-24"
+                    ],
+                    "format": "date",
+                    "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$",
+                    "type": "string"
+                },
+                {
                     "examples": [
                         "2011",
                         "2019-03"
-                    ]
+                    ],
+                    "pattern": "^(?:\\d{4}|(?:\\d{4}-(?:0[1-9]|1[0-2])))$",
+                    "type": "string"
                 }
             ],
             "sameAs": [
@@ -186,67 +186,67 @@
         "modified": {
             "anyOf": [
                 {
-                    "format": "date-time",
-                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
-                    "type": "string",
                     "examples": [
                         "2022-09-30T20:48:35Z"
-                    ]
-                },
-                {
-                    "format": "date",
-                    "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$",
-                    "examples": [
-                        "2014-08-24"
                     ],
+                    "format": "date-time",
+                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
                     "type": "string"
                 },
                 {
-                    "pattern": "^(?:\\d{4}|(?:\\d{4}-(?:0[1-9]|1[0-2])))$",
-                    "type": "string",
+                    "examples": [
+                        "2014-08-24"
+                    ],
+                    "format": "date",
+                    "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$",
+                    "type": "string"
+                },
+                {
                     "examples": [
                         "2011",
                         "2019-03"
-                    ]
+                    ],
+                    "pattern": "^(?:\\d{4}|(?:\\d{4}-(?:0[1-9]|1[0-2])))$",
+                    "type": "string"
                 },
                 {
                     "type": "null"
                 }
             ],
+            "default": null,
             "sameAs": [
                 "http://purl.org/dc/terms/modified"
-            ],
-            "default": null
+            ]
         },
         "otherContributor": {
+            "default": [],
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
             "subPropertyOf": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "projectLeader": {
+            "default": [],
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
             "subPropertyOf": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "projectManager": {
+            "default": [],
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
             "subPropertyOf": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "publisher": {
             "items": {
@@ -256,14 +256,14 @@
             "type": "array"
         },
         "researcher": {
+            "default": [],
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
             "subPropertyOf": [
                 "http://purl.org/dc/terms/contributor"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "stableTargetId": {
             "$ref": "/schema/fields/identifier"

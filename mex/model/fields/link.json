@@ -9,19 +9,19 @@
             ]
         },
         "title": {
-            "type": "string",
             "examples": [
                 "Titel einer Webseite",
                 "some link title"
-            ]
+            ],
+            "type": "string"
         },
         "url": {
-            "format": "uri",
-            "minLength": 1,
             "examples": [
                 "https://hello-world.org",
                 "file://S:/OE/MF4/Projekte/MEx"
             ],
+            "format": "uri",
+            "minLength": 1,
             "pattern": "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?",
             "type": "string"
         }

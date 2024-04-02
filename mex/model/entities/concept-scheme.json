@@ -3,14 +3,14 @@
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "properties": {
         "description": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/text"
             },
             "sameAs": [
                 "http://purl.org/dc/elements/1.1/description"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "identifier": {
             "examples": [
@@ -24,14 +24,14 @@
             "type": "string"
         },
         "label": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/text"
             },
             "sameAs": [
                 "http://www.w3.org/2000/01/rdf-schema#label"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         }
     },
     "required": [

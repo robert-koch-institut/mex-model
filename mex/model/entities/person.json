@@ -3,6 +3,7 @@
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "properties": {
         "affiliation": {
+            "default": [],
             "items": {
                 "$ref": "/schema/entities/organization#/identifier"
             },
@@ -10,10 +11,10 @@
                 "https://schema.org/affiliation",
                 "http://www.wikidata.org/entity/P1416"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "email": {
+            "default": [],
             "items": {
                 "examples": [
                     "info@rki.de"
@@ -26,10 +27,10 @@
                 "http://www.w3.org/2006/vcard/ns#hasEmail",
                 "https://schema.org/email"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "familyName": {
+            "default": [],
             "items": {
                 "examples": [
                     "Patapoutian",
@@ -42,10 +43,10 @@
                 "http://xmlns.com/foaf/0.1/familyName",
                 "https://schema.org/familyName"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "fullName": {
+            "default": [],
             "items": {
                 "examples": [
                     "Juturna Felicitás",
@@ -57,10 +58,10 @@
             "sameAs": [
                 "http://xmlns.com/foaf/0.1/name"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "givenName": {
+            "default": [],
             "items": {
                 "examples": [
                     "Romāns",
@@ -69,7 +70,6 @@
                 ],
                 "type": "string"
             },
-            "default": [],
             "sameAs": [
                 "http://xmlns.com/foaf/0.1/givenName",
                 "https://schema.org/givenName"
@@ -98,6 +98,7 @@
             "type": "string"
         },
         "isniId": {
+            "default": [],
             "items": {
                 "examples": [
                     "https://isni.org/isni/0000000109403744"
@@ -109,20 +110,20 @@
             "sameAs": [
                 "http://www.wikidata.org/entity/P213"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "memberOf": {
+            "default": [],
             "items": {
                 "$ref": "/schema/entities/organizational-unit#/identifier"
             },
             "sameAs": [
                 "http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "orcidId": {
+            "default": [],
             "items": {
                 "examples": [
                     "https://orcid.org/0000-0002-9079-593X"
@@ -134,8 +135,7 @@
             "sameAs": [
                 "http://www.wikidata.org/entity/P496"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "stableTargetId": {
             "$ref": "/schema/fields/identifier"
