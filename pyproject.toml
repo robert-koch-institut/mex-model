@@ -9,7 +9,10 @@ urls = { Repository = "https://github.com/robert-koch-institut/mex-model" }
 requires-python = ">=3.11"
 dependencies = []
 optional-dependencies.dev = [
+    "black>=24.3.0",
+    "ipdb>=0.13.13",
     "myst-parser>=2.0.0",
+    "ruff>=0.3.3",
     "sphinx>=7.2.6",
 ]
 
@@ -23,6 +26,61 @@ distribution = true
 [tool.pdm.scripts]
 autoupdate = { cmd = "pdm update --group :all --update-eager --save-minimum" }
 lint = { cmd = "pre-commit run --all-files" }
+
+[tool.ruff]
+fix = true
+show-fixes = true
+
+[tool.ruff.lint]
+ignore = [
+    "D100",   # Allow missing module docstring for brevity
+    "D104",   # Allow missing package docstring for brevity
+    "D106",   # Allow missing nested class docstring (eg pydantic Config)
+    "D203",   # Disallow blank line before class docstring (inverse of D211)
+    "D213",   # Disallow multi-line docstring starting at second line (inverse of D212)
+    "D406",   # Allow section name ending with newline (google style compat)
+    "D407",   # Allow missing dashed underline after section (google style compat)
+    "D413",   # Allow missing blank line after last section (google style compat)
+    "N805",   # Allow first argument of a method to be non-self (pydantic compat)
+    "N815",   # Allow mixedCase variables in class scope (model compat)
+    "RUF012", # Allow mutable class attributes (pydantic compat)
+]
+select = [
+    "A",    # Flake8 builtin shaddow
+    "B",    # BugBear bug and issue finder
+    "C90",  # McCabe complexity checker
+    "D",    # Python docstring style checker
+    "E",    # Python code style errors
+    "ERA",  # Commented-out code detector
+    "F",    # Pyflakes passive python checker
+    "I",    # Isort import utility
+    "N",    # Pep8 naming conventions
+    "PERF", # Lint performance anti-patterns
+    "RET",  # Flake8 return statement checker
+    "RUF",  # Ruff-specific rules
+    "S",    # Bandit automated security testing
+    "T10",  # Flake8 debug statement checker
+    "T20",  # Flake8 print statement checker
+    "UP",   # PyUpgrade syntax recommender
+    "W",    # Python code style warnings
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = [
+    "D101", # Allow missing docstring in public class for tests
+    "D102", # Allow missing docstring in public method for tests
+    "D103", # Allow missing docstring in public function for tests
+    "D107", # Allow missing docstring in `__init__` for tests
+    "E501", # Allow line too long in tests
+    "N807", # Allow mocking `__init__` for tests
+    "S101", # Allow use of `assert` in tests
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["mex", "tests"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
 
 [build-system]
 requires = ["pdm-backend>=2.1.8"]

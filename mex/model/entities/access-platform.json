@@ -3,16 +3,17 @@
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "properties": {
         "alternativeTitle": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/text"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/alternative"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "contact": {
+            "default": [],
             "items": {
                 "anyOf": [
                     {
@@ -29,23 +30,19 @@
             "sameAs": [
                 "http://www.w3.org/ns/dcat#contactPoint"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "description": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/text"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/description"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "endpointDescription": {
-            "sameAs": [
-                "http://www.w3.org/ns/dcat#endpointDescription"
-            ],
             "anyOf": [
                 {
                     "$ref": "/schema/fields/link"
@@ -54,16 +51,19 @@
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#endpointDescription"
+            ]
         },
         "endpointType": {
             "anyOf": [
                 {
                     "$ref": "/schema/entities/concept#/identifier",
-                    "useScheme": "https://mex.rki.de/item/api-type",
                     "examples": [
                         "https://mex.rki.de/item/api-type-1"
-                    ]
+                    ],
+                    "useScheme": "https://mex.rki.de/item/api-type"
                 },
                 {
                     "type": "null"
@@ -110,14 +110,14 @@
             "type": "string"
         },
         "landingPage": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/link"
             },
             "sameAs": [
                 "http://www.w3.org/ns/dcat#landingPage"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "stableTargetId": {
             "$ref": "/schema/fields/identifier"
@@ -133,24 +133,24 @@
             "useScheme": "https://mex.rki.de/item/technical-accessibility"
         },
         "title": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/text"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/title"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "unitInCharge": {
+            "default": [],
             "items": {
                 "$ref": "/schema/entities/organizational-unit#/identifier"
             },
             "sameAs": [
                 "http://dcat-ap.de/def/dcatde/maintainer"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         }
     },
     "required": [

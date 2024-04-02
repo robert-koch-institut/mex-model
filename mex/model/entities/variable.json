@@ -4,14 +4,14 @@
     "description": "A variable describes how the actual data is modeled. It specifies how the data is represented: as a set of predefined values and what kind of value is allowed.",
     "properties": {
         "belongsTo": {
+            "default": [],
             "items": {
                 "$ref": "/schema/entities/variable-group#/identifier"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/isPartOf"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "codingSystem": {
             "anyOf": [
@@ -25,10 +25,10 @@
                     "type": "null"
                 }
             ],
+            "default": null,
             "sameAs": [
                 "http://purl.org/dc/terms/conformsTo"
-            ],
-            "default": null
+            ]
         },
         "dataType": {
             "anyOf": [
@@ -43,20 +43,20 @@
                     "type": "null"
                 }
             ],
+            "default": null,
             "subPropertyOf": [
                 "http://purl.org/dc/terms/type"
-            ],
-            "default": null
+            ]
         },
         "description": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/text"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/description"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "hadPrimarySource": {
             "$ref": "/schema/entities/primary-source#/identifier",
@@ -81,13 +81,13 @@
         },
         "label": {
             "items": {
+                "$ref": "/schema/fields/text",
                 "examples": [
                     {
                         "language": "de",
                         "value": "Mehrere Treppenabsätze steigen"
                     }
-                ],
-                "$ref": "/schema/fields/text"
+                ]
             },
             "minItems": 1,
             "sameAs": [
@@ -109,6 +109,7 @@
             "type": "array"
         },
         "valueSet": {
+            "default": [],
             "items": {
                 "examples": [
                     "Ja, stark eingeschränkt",
@@ -117,8 +118,7 @@
                 ],
                 "type": "string"
             },
-            "type": "array",
-            "default": []
+            "type": "array"
         }
     },
     "required": [

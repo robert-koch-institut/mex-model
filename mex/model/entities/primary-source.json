@@ -3,16 +3,17 @@
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "properties": {
         "alternativeTitle": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/text"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/alternative"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "contact": {
+            "default": [],
             "items": {
                 "anyOf": [
                     {
@@ -29,28 +30,27 @@
                     "http://www.w3.org/ns/dcat#contactPoint"
                 ]
             },
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "description": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/text"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/description"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "documentation": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/link"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/isReferencedBy"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "hadPrimarySource": {
             "$ref": "/schema/entities/primary-source#/identifier",
@@ -74,34 +74,34 @@
             "type": "string"
         },
         "locatedAt": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/link"
             },
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "stableTargetId": {
             "$ref": "/schema/fields/identifier"
         },
         "title": {
+            "default": [],
             "items": {
                 "$ref": "/schema/fields/text"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/title"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "unitInCharge": {
+            "default": [],
             "items": {
                 "$ref": "/schema/entities/organizational-unit#/identifier"
             },
             "sameAs": [
                 "http://dcat-ap.de/def/dcatde/maintainer"
             ],
-            "type": "array",
-            "default": []
+            "type": "array"
         },
         "version": {
             "anyOf": [
