@@ -12,7 +12,7 @@ optional-dependencies.dev = [
     "black>=24.3.0",
     "ipdb>=0.13.13",
     "myst-parser>=2.0.0",
-    "ruff>=0.3.3",
+    "ruff>=0.3.5",
     "sphinx>=7.2.6",
 ]
 
