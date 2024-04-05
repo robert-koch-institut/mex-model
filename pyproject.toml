@@ -20,6 +20,9 @@ optional-dependencies.dev = [
 template = "https://github.com/robert-koch-institut/mex-template"
 skip = ["CHANGELOG.md", "mex", "tests"]
 
+[tool.ipdb]
+context = 5
+
 [tool.pdm]
 distribution = true
 
