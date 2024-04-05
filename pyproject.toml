@@ -6,7 +6,7 @@ authors = [{ name = "MEx Team", email = "mex@rki.de" }]
 readme = { file = "README.md", content-type = "text/markdown" }
 license = { file = "LICENSE" }
 urls = { Repository = "https://github.com/robert-koch-institut/mex-model" }
-requires-python = ">=3.11"
+requires-python = "<3.13,>=3.11"
 dependencies = []
 optional-dependencies.dev = [
     "black>=24.3.0",
@@ -18,14 +18,24 @@ optional-dependencies.dev = [
 
 [tool.cruft]
 template = "https://github.com/robert-koch-institut/mex-template"
-skip = ["tests/conftest.py", "mex/model/main.py"]
+skip = ["CHANGELOG.md", "mex", "tests"]
+
+[tool.ipdb]
+context = 5
 
 [tool.pdm]
 distribution = true
 
 [tool.pdm.scripts]
-autoupdate = { cmd = "pdm update --group :all --update-eager --save-minimum" }
+update-all = { cmd = "pdm update --group :all --update-eager --save-minimum" }
+lock-all = { cmd = "pdm lock --group :all" }
+install-all = { cmd = "pdm install --group :all" }
+export-all = { cmd = "pdm export --group :all -f requirements" }
+sphinx = { cmd = "pdm run sphinx-build -aE -b dirhtml docs docs/dist" }
+doc = { composite = ["sphinx"] }
+wheel = { cmd = "pdm build --no-sdist" }
 lint = { cmd = "pre-commit run --all-files" }
+all = { composite = ["install-all", "lint", "doc"] }
 
 [tool.ruff]
 fix = true
