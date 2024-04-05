@@ -23,19 +23,19 @@ if "%CI%"=="" (
 
 @REM install packages from lock file in local virtual environment
 echo installing package
-pdm sync --clean --group dev
+pdm install-all
 exit /b %errorlevel%
 
 
 :test
 @REM run the linter hooks from pre-commit on all files
 echo linting all files
-pre-commit run --all-files
+pdm lint
 exit /b %errorlevel%
 
 
 :docs
 @REM use sphinx to auto-generate html docs from code
-echo generating conceptual model docs
-pdm run sphinx-build -aE -b dirhtml docs docs\dist
+echo generating docs
+pdm doc
 exit /b %errorlevel%

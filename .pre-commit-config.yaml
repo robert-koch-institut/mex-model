@@ -20,6 +20,7 @@ repos:
         exclude: .cruft.json
       - id: check-yaml
         name: yaml
+        exclude: templates\/[a-z_-]+.yaml
       - id: end-of-file-fixer
         name: eof
       - id: trailing-whitespace
