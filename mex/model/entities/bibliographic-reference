@@ -43,6 +43,20 @@
             ],
             "type": "array"
         },
+        "bibliographicReferenceType": {
+            "default": [],
+            "items": {
+                "$ref": "/schema/entities/concept#/identifier",
+                "examples": [
+                    "https://mex.rki.de/item/bibliographic-reference-type-1"
+                ],
+                "useScheme": "https://mex.rki.de/item/bibliographic-reference-type"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/type"
+            ],
+            "type": "array"
+        },
         "contributingUnit": {
             "default": [],
             "items": {
@@ -271,20 +285,6 @@
                 "$ref": "/schema/entities/organization#/identifier"
             },
             "sameAs": "http://purl.org/dc/terms/publisher",
-            "type": "array"
-        },
-        "bibliographicReferenceType": {
-            "default": [],
-            "items": {
-                "$ref": "/schema/entities/concept#/identifier",
-                "examples": [
-                    "https://mex.rki.de/item/bibliographic-reference-type-1"
-                ],
-                "useScheme": "https://mex.rki.de/item/bibliographic-reference-type"
-            },
-            "subPropertyOf": [
-                "http://purl.org/dc/terms/type"
-            ],
             "type": "array"
         },
         "respositoryURL": {
