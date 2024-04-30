@@ -1,0 +1,381 @@
+{
+    "$id": "https://mex.rki.de/schema/entities/resource",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "description": "A book, article, or other documentary resource.",
+    "properties": {
+        "abstract": {
+            "default": [],
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/abstract"
+            ],
+            "type": "array"
+        },
+        "accessRestriction": {
+            "$ref": "/schema/entities/concept#/identifier",
+            "examples": [
+                "https://mex.rki.de/item/access-restriction-1"
+            ],
+            "sameAs": [
+                "http://purl.org/dc/terms/accessRights"
+            ],
+            "useScheme": "https://mex.rki.de/item/access-restriction"
+        },
+        "alternateIdentifier": {
+            "default": [],
+            "items": {
+                "type": "string"
+            },
+            "sameAs": [
+                "http://datacite.org/schema/kernel-4/alternateIdentifier"
+            ],
+            "type": "array"
+        },
+        "alternativeTitle": {
+            "default": [],
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/alternative"
+            ],
+            "type": "array"
+        },
+        "contributingUnit": {
+            "default": [],
+            "items": {
+                "$ref": "/schema/entities/organizational-unit#/identifier"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
+        "creator": {
+            "default": [],
+            "items": {
+                "$ref": "/schema/entities/person#/identifier"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/creator"
+            ],
+            "type": "array"
+        },
+        "distribution": {
+            "default": [],
+            "items": {
+                "$ref": "/schema/entities/distribution#/identifier"
+            },
+            "type": "array"
+        },
+        "doi": {
+            "examples": [
+                "https://doi.org/10.1007/978-1-0716-2441-8_7",
+                "https://doi.org/10.2807/1560-7917.ES.2022.27.46.2200849",
+                "https://doi.org/10.3389/fmicb.2022.868887",
+                "http://dx.doi.org/10.25646/5147",
+                "https://doi.org/10.1016/j.vaccine.2022.11.065."
+            ],
+            "pattern": "^(((http)|(https)):\/\/(dx.)?doi.org\/)(10.\\d{4,9}\/[-._;()\/:A-Z0-9]+)$",
+            "type": "string"
+        },
+        "edition": {
+            "examples": [
+                "5",
+                "Band 2,1",
+                "Band 2,2",
+                "3rd edition"
+            ],
+            "type": "string"
+        },
+        "editor": {
+            "default": [],
+            "items": {
+                "$ref": "/schema/entities/person#/identifier"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
+        "editorOfSeries": {
+            "default": [],
+            "items": {
+                "$ref": "/schema/entities/person#/identifier"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
+        "hadPrimarySource": {
+            "$ref": "/schema/entities/primary-source#/identifier",
+            "sameAs": [
+                "http://www.w3.org/ns/prov#hadPrimarySource"
+            ]
+        },
+        "identifier": {
+            "$ref": "/schema/fields/identifier",
+            "sameAs": [
+                "http://purl.org/dc/elements/1.1/identifier"
+            ]
+        },
+        "identifierInPrimarySource": {
+            "examples": [
+                "123456",
+                "item-501",
+                "D7/x4/zz.final3"
+            ],
+            "minLength": 1,
+            "type": "string"
+        },
+        "isbnIssn": {
+            "default": [],
+            "items": {
+                "examples": [
+                    "ISBN 90-70002-34-5",
+                    "ISBN 90-70002-34-x",
+                    "ISBN 90-70002-34-5x",
+                    "ISBN 90-700-02-34-5",
+                    "ISBN: 978-3-642-11746-6",
+                    "978-3-642-11746-6",
+                    "ISSN 0176-6996",
+                    "ISSN 1430-855X",
+                    "1430-8551",
+                    "1467-9442"
+                ],
+                "type": "string"
+            },
+            "sameAs": [
+                "http://datacite.org/schema/kernel-4/alternateIdentifier"
+            ],
+            "type": "array"
+        },
+        "issue": {
+            "examples": [
+                "1",
+                "2",
+                "12"
+            ],
+            "type": "integer"
+        },
+        "issued": {
+            "anyOf": [
+                {
+                    "examples": [
+                        "2022-09-30T20:48:35Z"
+                    ],
+                    "format": "date-time",
+                    "pattern": "^[1-9]\\d{3}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+                    "type": "string"
+                },
+                {
+                    "examples": [
+                        "2014-08-24"
+                    ],
+                    "format": "date",
+                    "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$",
+                    "type": "string"
+                },
+                {
+                    "examples": [
+                        "2011",
+                        "2019-03"
+                    ],
+                    "pattern": "^(?:\\d{4}|(?:\\d{4}-(?:0[1-9]|1[0-2])))$",
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "sameAs": [
+                "http://purl.org/dc/terms/created"
+            ]
+        },
+        "journal": {
+            "default": [],
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "type": "array"
+        },
+        "keyword": {
+            "default": [],
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#keyword"
+            ],
+            "type": "array"
+        },
+        "language": {
+            "default": [],
+            "items": {
+                "$ref": "/schema/entities/concept#/identifier",
+                "examples": [
+                    "https://mex.rki.de/item/language-1"
+                ],
+                "useScheme": "https://mex.rki.de/item/language"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/language"
+            ],
+            "type": "array"
+        },
+        "license": {
+            "anyOf": [
+                {
+                    "$ref": "/schema/entities/concept#/identifier",
+                    "examples": [
+                        "https://mex.rki.de/item/license-1"
+                    ],
+                    "useScheme": "https://mex.rki.de/item/license"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "sameAs": [
+                "http://purl.org/dc/terms/license"
+            ]
+        },
+        "pages": {
+            "examples": [
+                "1",
+                "45-67",
+                "45 - 67",
+                "II",
+                "XI",
+                "10i"
+            ],
+            "type": "string"
+        },
+        "publicationYear": {
+            "examples": [
+                "2011",
+                "1982",
+                "1810"
+            ],
+            "pattern": "^(?:\\d{4})$",
+            "sameAs": "http://datacite.org/schema/kernel-4/publicationYear",
+            "type": "string"
+        },
+        "publisher": {
+            "items": {
+                "$ref": "/schema/entities/organization#/identifier"
+            },
+            "sameAs": "http://purl.org/dc/terms/publisher",
+            "type": "array"
+        },
+        "referenceType": {
+            "default": [],
+            "items": {
+                "$ref": "/schema/entities/concept#/identifier",
+                "examples": [
+                    "https://mex.rki.de/item/reference-type-1"
+                ],
+                "useScheme": "https://mex.rki.de/item/reference-type"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/type"
+            ],
+            "type": "array"
+        },
+        "respositoryURL": {
+            "anyOf": [
+                {
+                    "$ref": "/schema/fields/link"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null
+        },
+        "section": {
+            "examples": [
+                "Kapitel 1",
+                "A Section About Public Health",
+                "Chapter XII: The History of Public Health",
+                "12",
+                "A",
+                "B."
+            ],
+            "type": "string"
+        },
+        "subtitle": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/title"
+            ],
+            "type": "array"
+        },
+        "title": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "minItems": 1,
+            "sameAs": [
+                "http://purl.org/dc/terms/title"
+            ],
+            "type": "array"
+        },
+        "titleOfBook": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "minItems": 1,
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/title"
+            ],
+            "type": "array"
+        },
+        "titleOfSeries": {
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "minItems": 1,
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/title"
+            ],
+            "type": "array"
+        },
+        "volume": {
+            "examples": [
+                "24",
+                "34",
+                "1"
+            ],
+            "type": "integer"
+        },
+        "volumeOfSeries": {
+            "examples": [
+                "24",
+                "34",
+                "1"
+            ],
+            "type": "integer"
+        }
+    },
+    "required": [
+        "accessRestriction",
+        "hadPrimarySource",
+        "identifier",
+        "identifierInPrimarySource",
+        "stableTargetId",
+        "title"
+    ],
+    "sameAs": [
+        "http://purl.org/dc/terms/BibliographicResource"
+    ],
+    "title": "BibliographicReference",
+    "type": "object"
+}
