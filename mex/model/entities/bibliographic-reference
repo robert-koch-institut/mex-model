@@ -367,6 +367,7 @@
     },
     "required": [
         "accessRestriction",
+        "creator",
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
