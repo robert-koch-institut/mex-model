@@ -273,14 +273,14 @@
             "sameAs": "http://purl.org/dc/terms/publisher",
             "type": "array"
         },
-        "referenceType": {
+        "bibliographicReferenceType": {
             "default": [],
             "items": {
                 "$ref": "/schema/entities/concept#/identifier",
                 "examples": [
-                    "https://mex.rki.de/item/reference-type-1"
+                    "https://mex.rki.de/item/bibliographic-reference-type-1"
                 ],
-                "useScheme": "https://mex.rki.de/item/reference-type"
+                "useScheme": "https://mex.rki.de/item/bibliographic-reference-type"
             },
             "subPropertyOf": [
                 "http://purl.org/dc/terms/type"
