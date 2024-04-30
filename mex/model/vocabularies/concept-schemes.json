@@ -16,6 +16,10 @@
         "label": "Endpoint vocabulary"
     },
     {
+        "identifier": "https://mex.rki.de/item/bibliographic-reference-type",
+        "label": "Bibliographic reference type vocabulary"
+    },
+    {
         "identifier": "https://mex.rki.de/item/data-processing-state",
         "label": "Data processing state vocabulary"
     },
