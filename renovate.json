@@ -1,0 +1,30 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "enabledManagers": [
+        "github-actions",
+        "html",
+        "npm",
+        "pep621",
+        "pip_requirements"
+    ],
+    "gitAuthor": "RKIMetadataExchange <mex@rki.de>",
+    "lockFileMaintenance": {
+        "enabled": true,
+        "schedule": [
+            "before 4am on monday"
+        ]
+    },
+    "packageRules": [
+        {
+            "matchUpdateTypes": [
+                "digest",
+                "lockFileMaintenance",
+                "major",
+                "minor",
+                "patch",
+                "pin"
+            ],
+            "minimumReleaseAge": "7 days"
+        }
+    ]
+}
