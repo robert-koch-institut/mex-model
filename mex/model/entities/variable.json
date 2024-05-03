@@ -27,26 +27,30 @@
             ],
             "default": null,
             "sameAs": [
-                "http://purl.org/dc/terms/conformsTo"
+                "http://purl.org/dc/terms/conformsTo",
+                "https://schema.org/codingSystem"
             ]
         },
         "dataType": {
             "anyOf": [
                 {
-                    "$ref": "/schema/entities/concept#/identifier",
                     "examples": [
-                        "https://mex.rki.de/item/data-type-1"
+                        "integer",
+                        "string",
+                        "image",
+                        "int55",
+                        "number"
                     ],
-                    "useScheme": "https://mex.rki.de/item/data-type"
+                    "type": "string"
                 },
                 {
-                    "type": "null"
+                    "type": null
                 }
             ],
             "default": null,
-            "subPropertyOf": [
-                "http://purl.org/dc/terms/type"
-            ]
+            "sameAs": [
+                "http://www.w3.org/ns/csvw#datatype"
+            ],
         },
         "description": {
             "default": [],
