@@ -427,6 +427,19 @@
         "stableTargetId": {
             "$ref": "/schema/fields/identifier"
         },
+        "standardsUsed": {
+            "default": [],
+            "items": {
+                "examples": [
+                    "FHIR",
+                    "LOINC",
+                    "SNOMED",
+                    "FASTA"
+                ],
+                "type": "string"
+            },
+            "type": "array"
+        },
         "stateOfDataProcessing": {
             "default": [],
             "items": {
