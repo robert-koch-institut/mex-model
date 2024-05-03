@@ -50,7 +50,7 @@
             "default": null,
             "sameAs": [
                 "http://www.w3.org/ns/csvw#datatype"
-            ],
+            ]
         },
         "description": {
             "default": [],
