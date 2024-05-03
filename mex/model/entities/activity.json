@@ -180,7 +180,7 @@
         "publication": {
             "default": [],
             "items": {
-                "$ref": "/schema/fields/link"
+                "$ref": "/schema/entities/bibliographic-reference#/identifier"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/isReferencedBy"
