@@ -27,18 +27,21 @@
             ]
         },
         "accessURL": {
-            "anyOf": [
-                {
-                    "$ref": "/schema/fields/link"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "subPropertyOf": [
+            "default": [],
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "/schema/fields/link"
+                    },
+                    {
+                        "type": "null"
+                    }
+                ]
+            },
+            "sameAs": [
                 "http://www.w3.org/ns/dcat#accessURL"
-            ]
+            ],
+            "type": "array"
         },
         "author": {
             "default": [],
@@ -81,18 +84,21 @@
             "type": "array"
         },
         "downloadURL": {
-            "anyOf": [
-                {
-                    "$ref": "/schema/fields/link"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
+            "default": [],
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "/schema/fields/link"
+                    },
+                    {
+                        "type": "null"
+                    }
+                ]
+            },
             "subPropertyOf": [
                 "http://www.w3.org/ns/dcat#downloadURL"
-            ]
+            ],
+            "type": "array"
         },
         "hadPrimarySource": {
             "$ref": "/schema/entities/primary-source#/identifier",
