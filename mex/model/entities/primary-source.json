@@ -65,6 +65,7 @@
             ]
         },
         "identifierInPrimarySource": {
+            "description": "The identifier of the item used in the primary source.",
             "examples": [
                 "123456",
                 "item-501",

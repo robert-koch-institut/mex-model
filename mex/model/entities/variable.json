@@ -5,10 +5,11 @@
     "properties": {
         "belongsTo": {
             "default": [],
+            "definition": "The variable group, the described variable is part of. Used to group variables together, depending on how they are structured in the primary source.",
             "items": {
                 "$ref": "/schema/entities/variable-group#/identifier"
             },
-            "sameAs": [
+            "subPropertyOf": [
                 "http://purl.org/dc/terms/isPartOf"
             ],
             "type": "array"
@@ -75,6 +76,7 @@
             ]
         },
         "identifierInPrimarySource": {
+            "description": "The identifier of the item used in the primary source.",
             "examples": [
                 "123456",
                 "item-501",
