@@ -5,6 +5,7 @@
     "properties": {
         "accessPlatform": {
             "default": [],
+            "description": "A platform from which the resource can be accessed.",
             "items": {
                 "$ref": "/schema/entities/access-platform#/identifier"
             },
@@ -15,6 +16,7 @@
         },
         "accessRestriction": {
             "$ref": "/schema/entities/concept#/identifier",
+            "description": "Indicates how access to the resource is restricted.",
             "examples": [
                 "https://mex.rki.de/item/access-restriction-1"
             ],
@@ -37,12 +39,14 @@
                 }
             ],
             "default": null,
+            "description": "The frequency with which items are added to a collection.",
             "sameAs": [
                 "http://purl.org/dc/terms/accrualPeriodicity"
             ]
         },
         "alternativeTitle": {
             "default": [],
+            "description": "An alternative name for the resource.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -53,6 +57,7 @@
         },
         "anonymizationPseudonymization": {
             "default": [],
+            "description": "Indicates whether the data has been anonymized and/or pseudonymized.",
             "items": {
                 "$ref": "/schema/entities/concept#/identifier",
                 "examples": [
@@ -63,6 +68,7 @@
             "type": "array"
         },
         "contact": {
+            "description": "An agent that serves as a contact for the resource.",
             "items": {
                 "anyOf": [
                     {
@@ -84,6 +90,7 @@
         },
         "contributingUnit": {
             "default": [],
+            "description": "An organizational unit of RKI, that is contributing to the resource.",
             "items": {
                 "$ref": "/schema/entities/organizational-unit#/identifier"
             },
@@ -94,6 +101,7 @@
         },
         "contributor": {
             "default": [],
+            "description": " A person involved in the creation of the resource.",
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
@@ -133,12 +141,14 @@
                 }
             ],
             "default": null,
+            "description": "Date of creation of the resource",
             "sameAs": [
                 "http://purl.org/dc/terms/created"
             ]
         },
         "creator": {
             "default": [],
+            "description": "A person responsible for making the resource.",
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
@@ -149,6 +159,7 @@
         },
         "description": {
             "default": [],
+            "description": "A text describing the nature of the resource.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -159,6 +170,7 @@
         },
         "distribution": {
             "default": [],
+            "description": "An available distribution of the resource",
             "items": {
                 "$ref": "/schema/entities/distribution#/identifier"
             },
@@ -166,16 +178,18 @@
         },
         "documentation": {
             "default": [],
+            "description": "A link to a document documenting the resource.",
             "items": {
                 "$ref": "/schema/fields/link"
             },
-            "sameAs": [
+            "subPropertyOf": [
                 "http://purl.org/dc/terms/isReferencedBy"
             ],
             "type": "array"
         },
         "externalPartner": {
             "default": [],
+            "description": "An external organization that is somehow involved in the creation of the resource.",
             "items": {
                 "$ref": "/schema/entities/organization#/identifier"
             },
@@ -192,6 +206,7 @@
         },
         "icd10code": {
             "default": [],
+            "description": "A concept from ICD-10.",
             "items": {
                 "type": "string"
             },
@@ -215,6 +230,7 @@
         },
         "instrumentToolOrApparatus": {
             "default": [],
+            "description": "Instrument, tool, or apparatus used in the research, analysis, observation, or processing of the object that is the subject of this resource.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -222,6 +238,7 @@
         },
         "isPartOf": {
             "default": [],
+            "description": "A related resource, in which the described resource is physically or logically included.",
             "items": {
                 "$ref": "/schema/entities/resource#/identifier"
             },
@@ -232,6 +249,7 @@
         },
         "keyword": {
             "default": [],
+            "description": "A keyword or tag describing the resource.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -242,6 +260,7 @@
         },
         "language": {
             "default": [],
+            "description": "A language of the resource.",
             "items": {
                 "$ref": "/schema/entities/concept#/identifier",
                 "examples": [
@@ -255,6 +274,7 @@
             "type": "array"
         },
         "license": {
+            "$comment": "Information about licenses SHOULD be provided on the level of `dcat:Distribution`. Information about licenses MAY be provided for a `mex:Resource` in addition, but not instead, of the information provided for the distributions of that resource ([DCAT, 2020-02-04](https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/)).",
             "anyOf": [
                 {
                     "$ref": "/schema/entities/concept#/identifier",
@@ -268,12 +288,14 @@
                 }
             ],
             "default": null,
+            "description": "A legal document giving official permission to do something with the resource.",
             "sameAs": [
                 "http://purl.org/dc/terms/license"
             ]
         },
         "loincId": {
             "default": [],
+            "description": "A concept from LOINC.",
             "items": {
                 "examples": [
                     "https://loinc.org/95209-3",
@@ -287,6 +309,7 @@
         },
         "meshId": {
             "default": [],
+            "description": "A concept from MeSH.",
             "items": {
                 "examples": [
                     "http://id.nlm.nih.gov/mesh/D001604"
@@ -299,6 +322,7 @@
         },
         "method": {
             "default": [],
+            "description": "Method used in the research, analysis, observation or processing of the object that is subject to the resource.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -306,6 +330,7 @@
         },
         "methodDescription": {
             "default": [],
+            "description": "The description of the method, that was used to research, analysis, observation or processing of the object that was subject to the resource.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -345,12 +370,14 @@
                 }
             ],
             "default": null,
+            "description": "Date on which the resource was changed.",
             "sameAs": [
                 "http://purl.org/dc/terms/modified"
             ]
         },
         "publication": {
             "default": [],
+            "description": "A publication that deals with the research, analysis, observation or processing of the object that was subject to the resource, e.g. a research paper.",
             "items": {
                 "$ref": "/schema/entities/bibliographic-reference#/identifier"
             },
@@ -361,6 +388,7 @@
         },
         "publisher": {
             "default": [],
+            "description": "The entity responsible for making the item available.",
             "items": {
                 "$ref": "/schema/entities/organization#/identifier"
             },
@@ -368,6 +396,7 @@
         },
         "qualityInformation": {
             "default": [],
+            "description": "Some information about the quality of the resource.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -378,6 +407,7 @@
         },
         "resourceTypeGeneral": {
             "default": [],
+            "description": "General type of the resource.",
             "items": {
                 "$ref": "/schema/entities/concept#/identifier",
                 "examples": [
@@ -392,6 +422,7 @@
         },
         "resourceTypeSpecific": {
             "default": [],
+            "description": "A term describing the specific nature of the resource. A more precise term than given by the property 'resourceTypeGeneral'.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -402,6 +433,7 @@
         },
         "rights": {
             "default": [],
+            "description": "Information about rights held in and over the resource as well as rights about the possibilities of teh usage of the resource.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -419,10 +451,12 @@
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "The size of the underlying data basis, e.g. for studies: the size of the sample."
         },
         "spatial": {
             "default": [],
+            "description": " Spatial coverage of the resource.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -436,6 +470,7 @@
         },
         "standardsUsed": {
             "default": [],
+            "description": "Standards used in the creation, analysis or transmission of the resource.",
             "items": {
                 "examples": [
                     "FHIR",
@@ -449,6 +484,7 @@
         },
         "stateOfDataProcessing": {
             "default": [],
+            "description": "The processing state of the data, e.g. raw or aggregated.",
             "items": {
                 "$ref": "/schema/entities/concept#/identifier",
                 "examples": [
@@ -498,11 +534,13 @@
                 }
             ],
             "default": null,
+            "description": "Temporal coverage of the resource.",
             "sameAs": [
                 "http://purl.org/dc/terms/temporal"
             ]
         },
         "theme": {
+            "description": "A main category of the resource. A resource can have multiple themes.",
             "items": {
                 "$ref": "/schema/entities/concept#/identifier",
                 "examples": [
@@ -517,6 +555,7 @@
             "type": "array"
         },
         "title": {
+            "description": "The name of the resource.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -527,6 +566,7 @@
             "type": "array"
         },
         "unitInCharge": {
+            "description": "This property refers to agents who assume responsibility and accountability for the resource and its appropriate maintenance.",
             "items": {
                 "$ref": "/schema/entities/organizational-unit#/identifier"
             },
@@ -546,6 +586,7 @@
                 }
             ],
             "default": null,
+            "description": "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.",
             "sameAs": "http://www.w3.org/ns/prov#wasGeneratedBy"
         }
     },
