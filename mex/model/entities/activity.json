@@ -4,16 +4,18 @@
     "properties": {
         "abstract": {
             "default": [],
+            "description": "A short text describing the activity.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
             "sameAs": [
-                "http://purl.org/dc/terms/description"
+                "http://purl.org/dc/terms/abstract"
             ],
             "type": "array"
         },
         "activityType": {
             "default": [],
+            "description": "The type of the activity.",
             "items": {
                 "$ref": "/schema/entities/concept#/identifier",
                 "examples": [
@@ -28,6 +30,7 @@
         },
         "alternativeTitle": {
             "default": [],
+            "description": "Another name for the activity.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -37,6 +40,7 @@
             "type": "array"
         },
         "contact": {
+            "description": " An agent serving as a contact for the activity.",
             "items": {
                 "anyOf": [
                     {
@@ -58,16 +62,18 @@
         },
         "documentation": {
             "default": [],
+            "description": "A link to a document, that contains the documentation of the activity.",
             "items": {
                 "$ref": "/schema/fields/link"
             },
-            "sameAs": [
+            "subPropertyOf": [
                 "http://purl.org/dc/terms/isReferencedBy"
             ],
             "type": "array"
         },
         "end": {
             "default": [],
+            "description": "(Planned) end of the activity.",
             "items": {
                 "anyOf": [
                     {
@@ -95,6 +101,7 @@
         },
         "externalAssociate": {
             "default": [],
+            "description": "An external institution or person, that is associated with the activity.",
             "items": {
                 "anyOf": [
                     {
@@ -112,6 +119,7 @@
         },
         "funderOrCommissioner": {
             "default": [],
+            "description": "An agent, that has either funded or commissioned the activity.",
             "items": {
                 "$ref": "/schema/entities/organization#/identifier"
             },
@@ -120,6 +128,7 @@
         },
         "fundingProgram": {
             "default": [],
+            "description": "The program in which the activity is funded, e.g. Horizon2020.",
             "items": {
                 "type": "string"
             },
@@ -149,6 +158,7 @@
         },
         "involvedPerson": {
             "default": [],
+            "description": "A person involved in the activity.",
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
@@ -159,6 +169,7 @@
         },
         "involvedUnit": {
             "default": [],
+            "description": "An organizational unit that is involved in the activity.",
             "items": {
                 "$ref": "/schema/entities/organizational-unit#/identifier"
             },
@@ -169,6 +180,7 @@
         },
         "isPartOfActivity": {
             "default": [],
+            "description": "Another activity, this activity is part of.",
             "items": {
                 "$ref": "/schema/entities/activity#/identifier"
             },
@@ -180,15 +192,17 @@
         },
         "publication": {
             "default": [],
+            "description": "A publication related to the activity.",
             "items": {
                 "$ref": "/schema/entities/bibliographic-reference#/identifier"
             },
-            "sameAs": [
+            "subPropertyOf": [
                 "http://purl.org/dc/terms/isReferencedBy"
             ],
             "type": "array"
         },
         "responsibleUnit": {
+            "description": "A unit, that is responsible for the activity.",
             "items": {
                 "$ref": "/schema/entities/organizational-unit#/identifier"
             },
@@ -198,6 +212,7 @@
         },
         "shortName": {
             "default": [],
+            "description": "A short name for, or an abbreviated title of, the activity.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -211,6 +226,7 @@
         },
         "start": {
             "default": [],
+            "description": "The start of the activity.",
             "items": {
                 "anyOf": [
                     {
@@ -238,6 +254,7 @@
         },
         "succeeds": {
             "default": [],
+            "description": "Another activity, that ended with the start of the described activity. A follow-up activity.",
             "items": {
                 "$ref": "/schema/entities/activity#/identifier"
             },
@@ -248,6 +265,7 @@
         },
         "theme": {
             "default": [],
+            "description": "The main theme or subject of the activity.",
             "items": {
                 "$ref": "/schema/entities/concept#/identifier",
                 "examples": [
@@ -261,6 +279,7 @@
             "type": "array"
         },
         "title": {
+            "description": "The official title of the activity.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -272,6 +291,7 @@
         },
         "website": {
             "default": [],
+            "description": "A web presentation of the activity, e.g. on the RKI homepage.",
             "items": {
                 "$ref": "/schema/fields/link"
             },
