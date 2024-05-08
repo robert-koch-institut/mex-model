@@ -4,6 +4,7 @@
     "properties": {
         "alternativeTitle": {
             "default": [],
+            "description": "An alternative name for the access platform.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -14,6 +15,7 @@
         },
         "contact": {
             "default": [],
+            "description": "An agent that serves as a contact for the access platform.",
             "items": {
                 "anyOf": [
                     {
@@ -34,6 +36,7 @@
         },
         "description": {
             "default": [],
+            "description": "A short description of the access platform.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -52,6 +55,7 @@
                 }
             ],
             "default": null,
+            "description": "A description of the services available via the end-points, including their operations, parameters etc.",
             "sameAs": [
                 "http://www.w3.org/ns/dcat#endpointDescription"
             ]
@@ -70,6 +74,7 @@
                 }
             ],
             "default": null,
+            "description": "The type of endpoint, e.g. REST.",
             "subPropertyOf": [
                 "http://purl.org/dc/terms/type"
             ]
@@ -84,6 +89,7 @@
                 }
             ],
             "default": null,
+            "description": "The root location or primary endpoint of the service (a Web-resolvable IRI)",
             "sameAs": [
                 "http://www.w3.org/ns/dcat#endpointURL"
             ]
@@ -112,6 +118,7 @@
         },
         "landingPage": {
             "default": [],
+            "description": "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.",
             "items": {
                 "$ref": "/schema/fields/link"
             },
@@ -125,6 +132,7 @@
         },
         "technicalAccessibility": {
             "$ref": "/schema/entities/concept#/identifier",
+            "description": "Indicates form if the platform can be accessed only within RKI network (internally) or if the platform is accessible publicly (externally).",
             "examples": [
                 "https://mex.rki.de/item/technical-accessibility-1"
             ],
@@ -135,6 +143,7 @@
         },
         "title": {
             "default": [],
+            "description": "The name of the access platform.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -145,6 +154,7 @@
         },
         "unitInCharge": {
             "default": [],
+            "description": "This property refers to agents who assume responsibility and accountability for the resource and its appropriate maintenance.",
             "items": {
                 "$ref": "/schema/entities/organizational-unit#/identifier"
             },
