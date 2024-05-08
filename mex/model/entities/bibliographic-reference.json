@@ -92,7 +92,7 @@
                 "http://dx.doi.org/10.25646/5147",
                 "https://doi.org/10.1016/j.vaccine.2022.11.065."
             ],
-            "pattern": "^(((http)|(https)):\/\/(dx.)?doi.org\/)(10.\\d{4,9}\/[-._;()\/:A-Z0-9]+)$",
+            "pattern": "^(((http)|(https))://(dx.)?doi.org/)(10.\\d{4,9}/[-._;()/:A-Z0-9]+)$",
             "type": "string"
         },
         "edition": {
