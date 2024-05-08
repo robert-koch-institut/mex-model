@@ -1,8 +1,10 @@
 {
     "$id": "https://mex.rki.de/schema/entities/contact-point",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "description": "A mail address, where a group of people has access to.",
     "properties": {
         "email": {
+            "description": "The email address associated to the contact point.",
             "items": {
                 "examples": [
                     "info@rki.de"
