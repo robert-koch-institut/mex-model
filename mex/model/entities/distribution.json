@@ -65,6 +65,7 @@
         },
         "dataCurator": {
             "default": [],
+            "description": "The person responsible for data curation in the activity that eventually led to the creation of this distribution.",
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
@@ -75,6 +76,7 @@
         },
         "dataManager": {
             "default": [],
+            "description": "The person responsible for managing the data in the activity that eventually led to the creation of this distribution.",
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
@@ -95,7 +97,7 @@
                     }
                 ]
             },
-            "subPropertyOf": [
+            "sameAs": [
                 "http://www.w3.org/ns/dcat#downloadURL"
             ],
             "type": "array"
@@ -227,6 +229,7 @@
         },
         "otherContributor": {
             "default": [],
+            "description": "Other contributors involved in the activity that eventually led to the creation of this distribution.",
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
@@ -237,6 +240,7 @@
         },
         "projectLeader": {
             "default": [],
+            "description": " The head of the activity that eventually led to the creation of this distribution.",
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
@@ -247,6 +251,7 @@
         },
         "projectManager": {
             "default": [],
+            "description": "The manager of the activity that eventually led to the creation of this distribution.",
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
@@ -260,10 +265,15 @@
                 "$ref": "/schema/entities/organization#/identifier"
             },
             "minItems": 1,
+            "sameAs": [
+                "http://purl.org/dc/terms/publisher",
+                "http://datacite.org/schema/kernel-4/publisher"
+            ],
             "type": "array"
         },
         "researcher": {
             "default": [],
+            "description": "Researcher involved in the activity that led eventually to the creation of this distribution.",
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
