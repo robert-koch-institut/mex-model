@@ -97,6 +97,7 @@
             },
             "minItems": 1,
             "sameAs": [
+                "http://purl.org/dc/terms/title",
                 "http://www.w3.org/2000/01/rdf-schema#label"
             ],
             "type": "array"
@@ -105,17 +106,19 @@
             "$ref": "/schema/fields/identifier"
         },
         "usedIn": {
+            "description": "The resource, the variable is used in.",
             "items": {
                 "$ref": "/schema/entities/resource#/identifier"
             },
             "minItems": 1,
-            "sameAs": [
+            "subPropertyOf": [
                 "http://purl.org/dc/terms/isPartOf"
             ],
             "type": "array"
         },
         "valueSet": {
             "default": [],
+            "description": "A set of predefined values as given in teh primary source.",
             "items": {
                 "examples": [
                     "Ja, stark eingeschränkt",
