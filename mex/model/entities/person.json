@@ -1,9 +1,11 @@
 {
     "$id": "https://mex.rki.de/schema/entities/person",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "description": "A person ([FOAF, 2004-05-01](http://xmlns.com/foaf/0.1/)). This class comprises real persons who live or are assumed to have lived ([CIDOC CRM, version 7.1.1](https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html)).",
     "properties": {
         "affiliation": {
             "default": [],
+            "description": "An organization that the described person is affiliated with.",
             "items": {
                 "$ref": "/schema/entities/organization#/identifier"
             },
@@ -15,6 +17,7 @@
         },
         "email": {
             "default": [],
+            "description": "The email address through which the person can be contacted.",
             "items": {
                 "examples": [
                     "info@rki.de"
@@ -31,6 +34,7 @@
         },
         "familyName": {
             "default": [],
+            "description": "The name inherited from the family.",
             "items": {
                 "examples": [
                     "Patapoutian",
@@ -47,6 +51,7 @@
         },
         "fullName": {
             "default": [],
+            "description": "The full name of a person. Also used if the naming schema (given name and family name) does not apply to the name.",
             "items": {
                 "examples": [
                     "Juturna Felicitás",
@@ -62,6 +67,7 @@
         },
         "givenName": {
             "default": [],
+            "description": "The name given to the person e.g. by their parents.",
             "items": {
                 "examples": [
                     "Romāns",
@@ -100,6 +106,7 @@
         },
         "isniId": {
             "default": [],
+            "description": "The ISNI (International Standard Name Identifier) of the person.",
             "items": {
                 "examples": [
                     "https://isni.org/isni/0000000109403744"
@@ -115,6 +122,7 @@
         },
         "memberOf": {
             "default": [],
+            "description": "Organizational unit at RKI the person is associated with.",
             "items": {
                 "$ref": "/schema/entities/organizational-unit#/identifier"
             },
@@ -125,6 +133,7 @@
         },
         "orcidId": {
             "default": [],
+            "description": "Identifier of a person from the ORCID authority file.",
             "items": {
                 "examples": [
                     "https://orcid.org/0000-0002-9079-593X"
