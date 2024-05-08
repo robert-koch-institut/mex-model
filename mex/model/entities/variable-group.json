@@ -3,11 +3,12 @@
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "properties": {
         "containedBy": {
+            "description": "The resource, the variable group is contained by. Used to connect a variable group to its resource.",
             "items": {
                 "$ref": "/schema/entities/resource#/identifier"
             },
             "minItems": 1,
-            "sameAs": [
+            "subPropertyOf": [
                 "http://purl.org/dc/terms/isPartOf"
             ],
             "type": "array"
