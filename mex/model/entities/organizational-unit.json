@@ -1,9 +1,11 @@
 {
     "$id": "https://mex.rki.de/schema/entities/organizational-unit",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "description": "An Organization such as a department or support unit which is part of some larger Organization and only has full recognition within the context of that Organization. In particular the unit would not be regarded as a legal entity in its own right.",
     "properties": {
         "alternativeName": {
             "default": [],
+            "description": "An alternative name for the organizational unit.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -14,6 +16,7 @@
         },
         "email": {
             "default": [],
+            "description": "The email address through which the organizational unit can be contacted.",
             "items": {
                 "examples": [
                     "info@rki.de"
@@ -51,6 +54,7 @@
             "type": "string"
         },
         "name": {
+            "description": "The official name of the organizational unit.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -67,10 +71,12 @@
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "The described unit is a subunit of another organizational unit."
         },
         "shortName": {
             "default": [],
+            "description": "A short name or abbreviation of the organization unit.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -84,6 +90,7 @@
         },
         "unitOf": {
             "default": [],
+            "description": "Indicates an organization of which this unit is a part, e.g. a department within a larger organization.",
             "items": {
                 "$ref": "/schema/entities/organization#/identifier"
             },
@@ -94,6 +101,7 @@
         },
         "website": {
             "default": [],
+            "description": "A URL serving as the official web presentation of the organizational unit.",
             "items": {
                 "$ref": "/schema/fields/link"
             },
