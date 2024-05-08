@@ -5,6 +5,7 @@
     "properties": {
         "abstract": {
             "default": [],
+            "description": "An account of the publication.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -15,6 +16,7 @@
         },
         "accessRestriction": {
             "$ref": "/schema/entities/concept#/identifier",
+            "description": "Indicates how access to the publication is restricted.",
             "examples": [
                 "https://mex.rki.de/item/access-restriction-1"
             ],
@@ -25,6 +27,7 @@
         },
         "alternateIdentifier": {
             "default": [],
+            "description": "Another identifier used for the reference.",
             "items": {
                 "type": "string"
             },
@@ -35,6 +38,7 @@
         },
         "alternativeTitle": {
             "default": [],
+            "description": "Another title for the publication.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -45,6 +49,7 @@
         },
         "bibliographicReferenceType": {
             "default": [],
+            "description": "The type of reference.",
             "items": {
                 "$ref": "/schema/entities/concept#/identifier",
                 "examples": [
@@ -59,6 +64,7 @@
         },
         "contributingUnit": {
             "default": [],
+            "description": "An organizational unit of RKI, that is contributing to the publication.",
             "items": {
                 "$ref": "/schema/entities/organizational-unit#/identifier"
             },
@@ -69,6 +75,7 @@
         },
         "creator": {
             "default": [],
+            "description": "The author of the publication.",
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
@@ -79,12 +86,14 @@
         },
         "distribution": {
             "default": [],
+            "description": "An available distribution of the publication ([DCAT, 2020-02-04](https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/))",
             "items": {
                 "$ref": "/schema/entities/distribution#/identifier"
             },
             "type": "array"
         },
         "doi": {
+            "description": "The Digital Object Identifier (DOI) of the publication.",
             "examples": [
                 "https://doi.org/10.1007/978-1-0716-2441-8_7",
                 "https://doi.org/10.2807/1560-7917.ES.2022.27.46.2200849",
@@ -96,6 +105,7 @@
             "type": "string"
         },
         "edition": {
+            "description": "The edition of the publication.",
             "examples": [
                 "5",
                 "Band 2,1",
@@ -106,6 +116,7 @@
         },
         "editor": {
             "default": [],
+            "description": "The editor of the publication.",
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
@@ -116,6 +127,7 @@
         },
         "editorOfSeries": {
             "default": [],
+            "description": "The editor of the series.",
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
@@ -148,6 +160,7 @@
         },
         "isbnIssn": {
             "default": [],
+            "description": "Either the ISBN (for books) or ISSN (for periodicals) of the publication.",
             "items": {
                 "examples": [
                     "ISBN 90-70002-34-5",
@@ -169,6 +182,7 @@
             "type": "array"
         },
         "issue": {
+            "description": "The issue of the periodical.",
             "examples": [
                 "1",
                 "2",
@@ -207,12 +221,14 @@
                 }
             ],
             "default": null,
+            "description": "Date of formal issuance of the publication ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
             "sameAs": [
                 "http://purl.org/dc/terms/created"
             ]
         },
         "journal": {
             "default": [],
+            "description": "The periodical in which the article was published.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -220,6 +236,7 @@
         },
         "keyword": {
             "default": [],
+            "description": "A keyword or tag describing the resource ([DCAT, 2020-02-04](https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/)).",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -230,6 +247,7 @@
         },
         "language": {
             "default": [],
+            "description": "The language in which the publication was written.",
             "items": {
                 "$ref": "/schema/entities/concept#/identifier",
                 "examples": [
@@ -256,11 +274,13 @@
                 }
             ],
             "default": null,
+            "description": "A legal document giving official permission to do something with the publication ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
             "sameAs": [
                 "http://purl.org/dc/terms/license"
             ]
         },
         "pages": {
+            "description": "The range of pages or a single page.",
             "examples": [
                 "1",
                 "45-67",
@@ -272,6 +292,7 @@
             "type": "string"
         },
         "publicationYear": {
+            "describing": "The year in which the publication was issued.",
             "examples": [
                 "2011",
                 "1982",
@@ -282,6 +303,7 @@
             "type": "string"
         },
         "publisher": {
+            "description": "An entity responsible for making the publication available ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
             "items": {
                 "$ref": "/schema/entities/organization#/identifier"
             },
@@ -297,9 +319,11 @@
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "The handle of the publication in the repository, where the publication is stored."
         },
         "section": {
+            "description": "The name of the chapter of the publication, the book section belongs to.",
             "examples": [
                 "Kapitel 1",
                 "A Section About Public Health",
@@ -311,6 +335,7 @@
             "type": "string"
         },
         "subtitle": {
+            "description": "The subtitle of the publication.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -320,6 +345,7 @@
             "type": "array"
         },
         "title": {
+            "description": "The full title of the publication.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -330,6 +356,7 @@
             "type": "array"
         },
         "titleOfBook": {
+            "description": "The title of the book in which the book section is published.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -340,6 +367,7 @@
             "type": "array"
         },
         "titleOfSeries": {
+            "description": "The title of the book series, the book belongs to.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -350,6 +378,7 @@
             "type": "array"
         },
         "volume": {
+            "description": "The volume of the periodical.",
             "examples": [
                 "24",
                 "34",
@@ -358,6 +387,7 @@
             "type": "integer"
         },
         "volumeOfSeries": {
+            "description": "The volume of the periodical series.",
             "examples": [
                 "24",
                 "34",
