@@ -1,0 +1,17 @@
+[
+    {
+        "definition": {
+            "de": "Eine Monographie.",
+            "en": ""
+        },
+        "exactMatch": [
+            ""
+        ],
+        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-1",
+        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
+        "prefLabel": {
+            "de": "Buch",
+            "en": "Book"
+        }
+    }
+]
