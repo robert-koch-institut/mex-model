@@ -9,11 +9,11 @@ urls = { Repository = "https://github.com/robert-koch-institut/mex-model" }
 requires-python = "<3.13,>=3.11"
 dependencies = []
 optional-dependencies.dev = [
-    "black>=24.3.0",
-    "ipdb>=0.13.13",
-    "myst-parser>=2.0.0",
-    "ruff>=0.3.5",
-    "sphinx>=7.2.6",
+    "black==24.4.2",
+    "ipdb==0.13.13",
+    "myst-parser==2.0.0",
+    "ruff==0.4.4",
+    "sphinx==7.3.7",
 ]
 
 [tool.cruft]
