@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:c6df318c3d7fd52a23a41e2ae38a94de6b436dcd81775da389b63bd8de3f294e"
+content_hash = "sha256:6ac870ab7aefa19ab7c29010fe51520079ecba7e1d5834ce18c43d2f8e4d456b"
 
 [[package]]
 name = "alabaster"
@@ -369,12 +369,12 @@ files = [
 
 [[package]]
 name = "myst-parser"
-version = "2.0.0"
+version = "3.0.1"
 requires_python = ">=3.8"
 summary = "An extended [CommonMark](https://spec.commonmark.org/) compliant parser,"
 groups = ["dev"]
 dependencies = [
-    "docutils<0.21,>=0.16",
+    "docutils<0.22,>=0.18",
     "jinja2",
     "markdown-it-py~=3.0",
     "mdit-py-plugins~=0.4",
@@ -382,8 +382,8 @@ dependencies = [
     "sphinx<8,>=6",
 ]
 files = [
-    {file = "myst_parser-2.0.0-py3-none-any.whl", hash = "sha256:7c36344ae39c8e740dad7fdabf5aa6fc4897a813083c6cc9990044eb93656b14"},
-    {file = "myst_parser-2.0.0.tar.gz", hash = "sha256:ea929a67a6a0b1683cdbe19b8d2e724cd7643f8aa3e7bb18dd65beac3483bead"},
+    {file = "myst_parser-3.0.1-py3-none-any.whl", hash = "sha256:6457aaa33a5d474aca678b8ead9b3dc298e89c68e67012e73146ea6fd54babf1"},
+    {file = "myst_parser-3.0.1.tar.gz", hash = "sha256:88f0cb406cb363b077d176b51c476f62d60604d68a8dcdf4832e080441301a87"},
 ]
 
 [[package]]
