@@ -11,8 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- switch from poetry to pdm
-
 ### Deprecated
 
 ### Removed
@@ -20,6 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+## [2.4.0] - 2024-05-29
+
+### Changes
+
+- switch from poetry to pdm
 
 ## [2.3.0] - 2024-03-18
 
