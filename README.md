@@ -77,5 +77,5 @@ components of the MEx project are open-sourced under the same license as well.
 
 ### creating release
 
-- run `pdm release RULE` to release a new version where RULE determines which part of 
+- run `pdm release RULE` to release a new version where RULE determines which part of
   the version to update and is one of `major`, `minor`, `patch`.
