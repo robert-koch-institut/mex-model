@@ -1,6 +1,6 @@
 [project]
 name = "mex-model"
-version = "2.3.0"
+version = "2.4.0"
 description = "Conceptual and machine-readable versions of the MEx metadata model."
 authors = [{ name = "MEx Team", email = "mex@rki.de" }]
 readme = { file = "README.md", content-type = "text/markdown" }
@@ -9,11 +9,11 @@ urls = { Repository = "https://github.com/robert-koch-institut/mex-model" }
 requires-python = "<3.13,>=3.11"
 dependencies = []
 optional-dependencies.dev = [
-    "black>=24.3.0",
-    "ipdb>=0.13.13",
-    "myst-parser>=2.0.0",
-    "ruff>=0.3.5",
-    "sphinx>=7.2.6",
+    "black==24.4.2",
+    "ipdb==0.13.13",
+    "myst-parser==3.0.1",
+    "ruff==0.4.8",
+    "sphinx==7.3.7",
 ]
 
 [tool.cruft]
@@ -27,10 +27,10 @@ context = 5
 distribution = true
 
 [tool.pdm.scripts]
-update-all = { cmd = "pdm update --group :all --update-eager --save-minimum" }
-lock-all = { cmd = "pdm lock --group :all" }
-install-all = { cmd = "pdm install --group :all" }
-export-all = { cmd = "pdm export --group :all -f requirements" }
+update-all = { cmd = "pdm update --group :all --update-all --save-compatible" }
+lock-all = { cmd = "pdm lock --group :all --refresh" }
+install-all = { cmd = "pdm install --group :all --no-editable --no-lock" }
+export-all = { cmd = "pdm export --group :all --no-hashes -f requirements" }
 sphinx = { cmd = "pdm run sphinx-build -aE -b dirhtml docs docs/dist" }
 doc = { composite = ["sphinx"] }
 wheel = { cmd = "pdm build --no-sdist" }
@@ -93,5 +93,5 @@ known-first-party = ["mex", "tests"]
 convention = "google"
 
 [build-system]
-requires = ["pdm-backend>=2.1.8"]
+requires = ["pdm-backend==2.3.0"]
 build-backend = "pdm.backend"

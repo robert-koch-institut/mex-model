@@ -1,0 +1,78 @@
+name: Release
+
+run-name: bump ${{ inputs.version }} version by @${{ github.actor }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        type: choice
+        description: 'part of the project version to update'
+        options:
+        - major
+        - minor
+        - patch
+        required: true
+
+env:
+  PIP_NO_OPTION: on
+  PIP_NO_CLEAN: on
+  PIP_PREFER_BINARY: on
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "release"
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Cache requirements
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-requirements
+        with:
+          path: ~/.cache/pip
+          key: ${{ env.cache-name }}-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ env.cache-name }}-
+
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+
+      - name: Install requirements
+        run: make setup
+
+      - name: Configure git
+        env:
+          SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
+          SIGNING_PUB: ${{ secrets.SIGNING_PUB }}
+        run: |
+          eval "$(ssh-agent -s)"
+          install --directory ~/.ssh --mode 700
+          base64 -d <<< '${{ secrets.SIGNING_KEY }}' > ~/.ssh/mex
+          base64 -d <<< '${{ secrets.SIGNING_PUB }}' > ~/.ssh/mex.pub
+          chmod 600 ~/.ssh/*
+          ssh-add ~/.ssh/mex
+          git config --local user.email ${{ vars.MEX_BOT_EMAIL }}
+          git config --local user.name ${{ vars.MEX_BOT_USER }}
+          git config --local gpg.format ssh
+          git config --local user.signingkey ~/.ssh/mex.pub
+          git config --local commit.gpgsign true
+
+      - name: Release new version
+        env:
+          GH_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
+        run: |
+          pdm release ${{ inputs.version }}
