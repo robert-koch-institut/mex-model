@@ -405,6 +405,21 @@
             ],
             "type": "array"
         },
+        "resourceCreationMethod": {
+            "default": [],
+            "description": "Method how the resource was created.",
+            "items": {
+                "$ref": "/schema/entities/concept#/identifier",
+                "examples": [
+                    "https://mex.rki.de/item/resource-creation-method-1"
+                ],
+                "useScheme": "https://mex.rki.de/item/resource-creation-method"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/type"
+            ],
+            "type": "array"
+        },
         "resourceTypeGeneral": {
             "default": [],
             "description": "General type of the resource.",
