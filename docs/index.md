@@ -1,24 +1,5 @@
 # MEx Metadata Schema
 
-### MEx - Metadata Exchange Platform
-
-With the Metadata Exchange (MEx) project, the [Robert Koch Institute](https://www.rki.de) (RKI) is developing a transparency platform for finding metadata about the institute's research activities and data.
-
-Via MEx, metadata will be made findable, accessible and available for further research. The goal is to get an overview of RKI's research data, understand its context, and to know what to consider when reusing the data. The project is also one of the many iniatives to implement the German government's open data strategy.
-
-For further details, please consult the [project page](https://www.rki.de/DE/Content/Forsch/MEx/MEx_node.html).
-
-**Contact** \
-For more information, please feel free to email us at [mex@rki.de](mailto:mex@rki.de).
-
-### Publisher of this document
-**Robert Koch-Institut** \
-Nordufer 20 \
-13353 Berlin \
-Germany
-
-## Abstract
-
 The MEx metadata schema is used to catalog Public Health data, resources and activities of the [Robert Koch Institute (RKI)](https://www.rki.de) - the federal Public Health institute of Germany - with the goal of making them findable and accessible via a web application.
 
 The MEx metadata schema enables the description of data and resources derived from the (research) activities of RKI.
