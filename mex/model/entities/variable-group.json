@@ -35,6 +35,7 @@
                 "item-501",
                 "D7/x4/zz.final3"
             ],
+            "maxLength": 1000,
             "minLength": 1,
             "type": "string"
         },
