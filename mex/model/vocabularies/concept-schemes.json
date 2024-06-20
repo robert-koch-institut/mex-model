@@ -56,6 +56,10 @@
         "label": "MIME type vocabulary based on IANA media types"
     },
     {
+        "identifier": "https://mex.rki.de/item/personal-data",
+        "label": "Personal Data"
+    },
+    {
         "identifier": "https://mex.rki.de/item/resource-creation-method",
         "label": "Resource creation method vocabulary"
     },
