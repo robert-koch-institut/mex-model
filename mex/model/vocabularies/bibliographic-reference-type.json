@@ -1,31 +1,6 @@
 [
     {
         "altLabel": {
-            "de": [
-                "Bachelor-Thesis",
-                "BA-Thesis",
-                "BA-Arbeit"
-            ]
-        },
-        "closeMatch": [
-            "http://purl.org/ontology/bibo/Thesis"
-        ],
-        "definition": {
-            "de": "Abschlussarbeit eines Studiums zur Erlangung des Studiengrads Bachelor.",
-            "en": "Complementary work reporting a research project undertaken as part of an undergraduate course of education leading to a bachelor's degree."
-        },
-        "exactMatch": [
-            "https://www.wikidata.org/wiki/Q798134"
-        ],
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-1",
-        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
-        "prefLabel": {
-            "de": "Bachelorarbeit",
-            "en": "Bachelor thesis"
-        }
-    },
-    {
-        "altLabel": {
             "de": "Monografie",
             "en": "Monograph"
         },
@@ -35,7 +10,7 @@
         },
         "exactMatch": [
             "https://schema.org/Book",
-            "https://www.wikidata.org/wiki/Q571",
+            "http://www.wikidata.org/entity/Q571",
             "http://purl.org/ontology/bibo/Book"
         ],
         "identifier": "https://mex.rki.de/item/bibliographic-reference-type-2",
@@ -57,7 +32,7 @@
         },
         "exactMatch": [
             "https://schema.org/Chapter",
-            "https://www.wikidata.org/wiki/Q1980247",
+            "http://www.wikidata.org/entity/Q1980247",
             "http://purl.org/ontology/bibo/BookSection"
         ],
         "identifier": "https://mex.rki.de/item/bibliographic-reference-type-3",
@@ -73,7 +48,7 @@
             "en": "A document published as part of the proceedings of an academic conference."
         },
         "exactMatch": [
-            "https://www.wikidata.org/wiki/Q23927052"
+            "http://www.wikidata.org/entity/Q23927052"
         ],
         "identifier": "https://mex.rki.de/item/bibliographic-reference-type-4",
         "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
@@ -83,21 +58,29 @@
         }
     },
     {
+        "altLabel": {
+            "de": [
+                "Doktorarbeit"
+            ],
+            "en": [
+                "Doctoral thesis, doctoral dissertation"
+            ]
+        },
         "closeMatch": [
             "http://purl.org/ontology/bibo/Thesis"
         ],
         "definition": {
-            "de": "Abschlussarbeit eines Studiums zur Erlangung des Studiengrads Diplom.",
-            "en": "Complementary work reporting a research project undertaken as part of an undergraduate course of education leading to a diploma."
+            "de": "Wissenschaftliche Arbeit zur Erlangung des Doktorgrades an einer Universität",
+            "en": "Document submitted in support of candidature for a doctorate."
         },
         "exactMatch": [
-            "https://www.wikidata.org/wiki/Q30749496"
+            "http://www.wikidata.org/entity/Q187685"
         ],
         "identifier": "https://mex.rki.de/item/bibliographic-reference-type-5",
         "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
         "prefLabel": {
-            "de": "Diplomarbeit",
-            "en": "Diploma thesis"
+            "de": "Dissertation",
+            "en": "Doctoral thesis"
         }
     },
     {
@@ -117,7 +100,7 @@
             "en": "Type of thesis necessary for teaching in German universities."
         },
         "exactMatch": [
-            "https://www.wikidata.org/wiki/Q1414362"
+            "http://www.wikidata.org/entity/Q1414362"
         ],
         "identifier": "https://mex.rki.de/item/bibliographic-reference-type-6",
         "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
@@ -137,7 +120,7 @@
             "en": "Periodical journal publishing scientific research."
         },
         "exactMatch": [
-            "https://www.wikidata.org/wiki/Q5633421"
+            "http://www.wikidata.org/entity/Q5633421"
         ],
         "identifier": "https://mex.rki.de/item/bibliographic-reference-type-7",
         "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
@@ -158,31 +141,13 @@
             "en": "Article published in an academic journal."
         },
         "exactMatch": [
-            "https://www.wikidata.org/wiki/Q18918145"
+            "http://www.wikidata.org/entity/Q18918145"
         ],
         "identifier": "https://mex.rki.de/item/bibliographic-reference-type-8",
         "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
         "prefLabel": {
             "de": "Zeitschriftenartikel",
             "en": "Journal Article"
-        }
-    },
-    {
-        "altLabel": {
-            "de": "Magisterarbeit"
-        },
-        "definition": {
-            "de": "Wissenschaftliche Arbeit, die für den Abschluss eines Master-Studienganges (oder ehemals Magisterstudiums) verfasst wird.",
-            "en": "Thesis submitted in support of candidature for a master's degree."
-        },
-        "exactMatch": [
-            "https://www.wikidata.org/wiki/Q1907875"
-        ],
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-9",
-        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
-        "prefLabel": {
-            "de": "Masterarbeit",
-            "en": "Master thesis"
         }
     },
     {
@@ -207,7 +172,7 @@
         },
         "exactMatch": [
             "https://schema.org/Poster",
-            "https://www.wikidata.org/wiki/Q429785"
+            "http://www.wikidata.org/entity/Q429785"
         ],
         "identifier": "https://mex.rki.de/item/bibliographic-reference-type-11",
         "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
@@ -222,7 +187,7 @@
             "en": "Version of a scholarly or scientific paper that precedes publication in a peer-reviewed scholarly or scientific journal."
         },
         "exactMatch": [
-            "https://www.wikidata.org/wiki/Q580922"
+            "http://www.wikidata.org/entity/Q580922"
         ],
         "identifier": "https://mex.rki.de/item/bibliographic-reference-type-12",
         "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
@@ -241,7 +206,7 @@
             "en": "Process of presenting a topic to an audience."
         },
         "exactMatch": [
-            "https://www.wikidata.org/wiki/Q604733"
+            "http://www.wikidata.org/entity/Q604733"
         ],
         "identifier": "https://mex.rki.de/item/bibliographic-reference-type-13",
         "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
@@ -256,7 +221,7 @@
             "en": "Informational, formal, and detailed text."
         },
         "exactMatch": [
-            "https://www.wikidata.org/wiki/Q10870555"
+            "http://www.wikidata.org/entity/Q10870555"
         ],
         "identifier": "https://mex.rki.de/item/bibliographic-reference-type-14",
         "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
@@ -279,27 +244,21 @@
     },
     {
         "altLabel": {
-            "de": [
-                "Doktorarbeit"
-            ],
-            "en": [
-                "Doctoral thesis, doctoral dissertation"
-            ]
+            "de": "Studienabschlussarbeit",
+            "en": "Academic thesis"
         },
-        "closeMatch": [
-            "http://purl.org/ontology/bibo/Thesis"
-        ],
         "definition": {
-            "de": "Wissenschaftliche Arbeit zur Erlangung des Doktorgrades an einer Universität",
-            "en": "Document submitted in support of candidature for a doctorate."
+            "de": "Schriftliche Abschlussarbeit eines Studiengangs an einer Hochschule oder Berufsakademie",
+            "en": "General term for a document submitted in support of candidature for an academic degree."
         },
         "exactMatch": [
-            "https://www.wikidata.org/wiki/Q187685"
+            "http://www.wikidata.org/entity/Q1266946",
+            "http://purl.org/ontology/bibo/Thesis"
         ],
         "identifier": "https://mex.rki.de/item/bibliographic-reference-type-16",
         "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
         "prefLabel": {
-            "de": "Dissertation",
+            "de": "Abschlussarbeit",
             "en": "Thesis"
         }
     }
