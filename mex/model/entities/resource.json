@@ -67,6 +67,23 @@
             },
             "type": "array"
         },
+        "conformsTo": {
+            "default": [],
+            "description": "Standards used in the creation, analysis or transmission of the resource.",
+            "items": {
+                "examples": [
+                    "FHIR",
+                    "LOINC",
+                    "SNOMED",
+                    "FASTA"
+                ],
+                "type": "string"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/conformsTo"
+            ],
+            "type": "array"
+        },
         "contact": {
             "description": "An agent that serves as a contact for the resource.",
             "items": {
@@ -205,6 +222,20 @@
                 "http://www.w3.org/ns/prov#hadPrimarySource"
             ]
         },
+        "hasLegalBasis": {
+            "$ref": "/schema/fields/text",
+            "description": "The legal basis used to justify processing of personal data. Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions which can be represented using dpv:hasJurisdiction or dpv:hasLaw. Legal basis can be used without such declarations, e.g. 'Consent', however their interpretation will require association with a law, e.g. 'EU GDPR'.",
+            "sameAs": [
+                "https://w3id.org/dpv#hasLegalBasis"
+            ]
+        },
+        "hasPersonalData": {
+            "description": "Data directly or indirectly associated or related to an individual.",
+            "sameAs": [
+                "https://w3id.org/dpv#hasPersonalData"
+            ],
+            "type": "boolean"
+        },
         "icd10code": {
             "default": [],
             "description": "A concept from ICD-10.",
@@ -310,6 +341,15 @@
             },
             "type": "array"
         },
+        "maxTypicalAge": {
+            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
+            "description": "Specifies the maximum age of the population within the data collection, expressed in years.",
+            "examples": [
+                "99",
+                "21"
+            ],
+            "type": "integer"
+        },
         "meshId": {
             "default": [],
             "description": "A concept from MeSH.",
@@ -341,6 +381,15 @@
                 "http://purl.org/dc/terms/description"
             ],
             "type": "array"
+        },
+        "minTypicalAge": {
+            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
+            "description": "Specifies the minimum age of the population within the data collection, expressed in years.",
+            "examples": [
+                "0",
+                "18"
+            ],
+            "type": "integer"
         },
         "modified": {
             "anyOf": [
@@ -378,6 +427,23 @@
                 "http://purl.org/dc/terms/modified"
             ]
         },
+        "pathogenOrDisease": {
+            "default": [],
+            "description": "The pathogen or the disease that was researched, e.g. SARS-CoV-2, COVID-19.",
+            "items": {
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "populationCoverage": {
+            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
+            "default": [],
+            "description": "The type of population common to all subjects of the data collection.",
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "type": "array"
+        },
         "publication": {
             "default": [],
             "description": "A publication that deals with the research, analysis, observation or processing of the object that was subject to the resource, e.g. a research paper.",
@@ -404,7 +470,7 @@
                 "$ref": "/schema/fields/text"
             },
             "sameAs": [
-                "http://purl.org/dc/terms/description"
+                "http://www.w3.org/ns/dqv#hasQualityAnnotation"
             ],
             "type": "array"
         },
@@ -485,20 +551,6 @@
         },
         "stableTargetId": {
             "$ref": "/schema/fields/identifier"
-        },
-        "standardsUsed": {
-            "default": [],
-            "description": "Standards used in the creation, analysis or transmission of the resource.",
-            "items": {
-                "examples": [
-                    "FHIR",
-                    "LOINC",
-                    "SNOMED",
-                    "FASTA"
-                ],
-                "type": "string"
-            },
-            "type": "array"
         },
         "stateOfDataProcessing": {
             "default": [],
