@@ -338,11 +338,13 @@
         "publicationYear": {
             "anyOf": [
                 {
+                    "$comment": "year",
                     "examples": [
                         "2011",
                         "1982",
                         "1810"
                     ],
+                    "format": "date",
                     "pattern": "^(?:\\d{4})$",
                     "type": "string"
                 },

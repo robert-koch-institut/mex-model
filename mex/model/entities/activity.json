@@ -78,19 +78,30 @@
             "items": {
                 "anyOf": [
                     {
+                        "$comment": "year_month_day",
                         "examples": [
                             "2014-08-24"
                         ],
                         "format": "date",
-                        "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$",
+                        "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
                         "type": "string"
                     },
                     {
+                        "$comment": "year_month",
                         "examples": [
-                            "2011",
                             "2019-03"
                         ],
-                        "pattern": "^(?:\\d{4}|(?:\\d{4}-(?:0[1-9]|1[0-2])))$",
+                        "format": "date",
+                        "pattern": "\\d{4}-(?:0[1-9]|1[0-2])$",
+                        "type": "string"
+                    },
+                    {
+                        "$comment": "year",
+                        "examples": [
+                            "2024"
+                        ],
+                        "format": "date",
+                        "pattern": "^\\d{4}$",
                         "type": "string"
                     }
                 ]
@@ -234,19 +245,30 @@
             "items": {
                 "anyOf": [
                     {
+                        "$comment": "year_month_day",
                         "examples": [
                             "2014-08-24"
                         ],
                         "format": "date",
-                        "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$",
+                        "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
                         "type": "string"
                     },
                     {
+                        "$comment": "year_month",
                         "examples": [
-                            "2011",
                             "2019-03"
                         ],
-                        "pattern": "^(?:\\d{4}|(?:\\d{4}-(?:0[1-9]|1[0-2])))$",
+                        "format": "date",
+                        "pattern": "\\d{4}-(?:0[1-9]|1[0-2])$",
+                        "type": "string"
+                    },
+                    {
+                        "$comment": "year",
+                        "examples": [
+                            "2024"
+                        ],
+                        "format": "date",
+                        "pattern": "^\\d{4}$",
                         "type": "string"
                     }
                 ]
