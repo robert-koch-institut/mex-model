@@ -218,10 +218,13 @@
                         "Winter '23"
                     ],
                     "type": "string"
+                },
+                {
+                    "type": "null"
                 }
             ],
-            "description": "The issue of the periodical.",
-            "type": "array"
+            "default": null,
+            "description": "The issue of the periodical."
         },
         "issued": {
             "anyOf": [
@@ -333,15 +336,31 @@
             "description": "The range of pages or a single page."
         },
         "publicationYear": {
-            "describing": "The year in which the publication was issued.",
-            "examples": [
-                "2011",
-                "1982",
-                "1810"
+            "anyOf": [
+                {
+                    "examples": [
+                        "2011",
+                        "1982",
+                        "1810"
+                    ],
+                    "pattern": "^(?:\\d{4})$",
+                    "type": "string"
+                },
+                {
+                    "examples": [
+                        "1903-01",
+                        "2019-03"
+                    ],
+                    "pattern": "^(?:\\d{4}|(?:\\d{4}-(?:0[1-9]|1[0-2])))$",
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
             ],
-            "pattern": "^(?:\\d{4})$",
-            "sameAs": "http://datacite.org/schema/kernel-4/publicationYear",
-            "type": "string"
+            "default": null,
+            "description": "The year in which the publication was issued.",
+            "sameAs": "http://datacite.org/schema/kernel-4/publicationYear"
         },
         "publisher": {
             "default": [],
@@ -365,18 +384,27 @@
             "description": "The handle of the publication in the repository, where the publication is stored."
         },
         "section": {
-            "description": "The name of the chapter of the publication, the book section belongs to.",
-            "examples": [
-                "Kapitel 1",
-                "A Section About Public Health",
-                "Chapter XII: The History of Public Health",
-                "12",
-                "A",
-                "B."
+            "anyOf": [
+                {
+                    "examples": [
+                        "Kapitel 1",
+                        "A Section About Public Health",
+                        "Chapter XII: The History of Public Health",
+                        "12",
+                        "A",
+                        "B."
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
             ],
-            "type": "string"
+            "default": null,
+            "description": "The name of the chapter of the publication, the book section belongs to."
         },
         "subtitle": {
+            "default": [],
             "description": "The subtitle of the publication.",
             "items": {
                 "$ref": "/schema/fields/text"
@@ -398,6 +426,7 @@
             "type": "array"
         },
         "titleOfBook": {
+            "default": [],
             "description": "The title of the book in which the book section is published.",
             "items": {
                 "$ref": "/schema/fields/text"
@@ -409,6 +438,7 @@
             "type": "array"
         },
         "titleOfSeries": {
+            "default": [],
             "description": "The title of the book series, the book belongs to.",
             "items": {
                 "$ref": "/schema/fields/text"
@@ -436,10 +466,13 @@
                         "Winter '23"
                     ],
                     "type": "string"
+                },
+                {
+                    "type": "null"
                 }
             ],
-            "description": "The volume of the periodical.",
-            "type": "array"
+            "default": null,
+            "description": "The volume of the periodical."
         },
         "volumeOfSeries": {
             "anyOf": [
@@ -458,10 +491,13 @@
                         "Winter '23"
                     ],
                     "type": "string"
+                },
+                {
+                    "type": "null"
                 }
             ],
-            "description": "The volume of the periodical series.",
-            "type": "array"
+            "default": null,
+            "description": "The volume of the periodical series."
         }
     },
     "required": [
