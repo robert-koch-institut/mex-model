@@ -36,9 +36,6 @@
                 "anyOf": [
                     {
                         "$ref": "/schema/fields/link"
-                    },
-                    {
-                        "type": "null"
                     }
                 ]
             },
@@ -54,9 +51,6 @@
                 "anyOf": [
                     {
                         "$ref": "/schema/fields/link"
-                    },
-                    {
-                        "type": "null"
                     }
                 ]
             },
