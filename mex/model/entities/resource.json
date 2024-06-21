@@ -359,12 +359,17 @@
         },
         "maxTypicalAge": {
             "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
-            "description": "Specifies the maximum age of the population within the data collection, expressed in years.",
-            "examples": [
-                "99",
-                "21"
+            "anyOf": [
+                {
+                    "examples": [
+                        "99",
+                        "21"
+                    ],
+                    "type": "integer"
+                }
             ],
-            "type": "integer"
+            "default": null,
+            "description": "Specifies the maximum age of the population within the data collection, expressed in years."
         },
         "meshId": {
             "default": [],
@@ -400,12 +405,19 @@
         },
         "minTypicalAge": {
             "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
-            "description": "Specifies the minimum age of the population within the data collection, expressed in years.",
-            "examples": [
-                "0",
-                "18"
+            "anyOf": [
+                {
+                    "examples": [
+                        "0",
+                        "18"
+                    ],
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
             ],
-            "type": "integer"
+            "description": "Specifies the minimum age of the population within the data collection, expressed in years."
         },
         "modified": {
             "anyOf": [
