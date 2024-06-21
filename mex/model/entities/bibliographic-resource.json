@@ -79,6 +79,7 @@
             "items": {
                 "$ref": "/schema/entities/person#/identifier"
             },
+            "minItems": 1,
             "sameAs": [
                 "http://purl.org/dc/terms/creator"
             ],
