@@ -114,14 +114,22 @@
             "description": "The Digital Object Identifier (DOI) of the publication."
         },
         "edition": {
-            "description": "The edition of the publication.",
-            "examples": [
-                "5",
-                "Band 2,1",
-                "Band 2,2",
-                "3rd edition"
+            "anyOf": [
+                {
+                    "examples": [
+                        "5",
+                        "Band 2,1",
+                        "Band 2,2",
+                        "3rd edition"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
             ],
-            "type": "string"
+            "default": null,
+            "description": "The edition of the publication."
         },
         "editor": {
             "default": [],
