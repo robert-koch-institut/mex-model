@@ -198,7 +198,7 @@
             "default": [],
             "description": "A publication related to the activity.",
             "items": {
-                "$ref": "/schema/entities/bibliographic-reference#/identifier"
+                "$ref": "/schema/entities/bibliographic-resource#/identifier"
             },
             "subPropertyOf": [
                 "http://purl.org/dc/terms/isReferencedBy"
