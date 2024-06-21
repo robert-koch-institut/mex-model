@@ -431,7 +431,6 @@
             "items": {
                 "$ref": "/schema/fields/text"
             },
-            "minItems": 1,
             "subPropertyOf": [
                 "http://purl.org/dc/terms/title"
             ],
@@ -443,7 +442,6 @@
             "items": {
                 "$ref": "/schema/fields/text"
             },
-            "minItems": 1,
             "subPropertyOf": [
                 "http://purl.org/dc/terms/title"
             ],
