@@ -300,16 +300,24 @@
             ]
         },
         "pages": {
-            "description": "The range of pages or a single page.",
-            "examples": [
-                "1",
-                "45-67",
-                "45 - 67",
-                "II",
-                "XI",
-                "10i"
+            "anyOf": [
+                {
+                    "examples": [
+                        "1",
+                        "45-67",
+                        "45 - 67",
+                        "II",
+                        "XI",
+                        "10i"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
             ],
-            "type": "string"
+            "default": null,
+            "description": "The range of pages or a single page."
         },
         "publicationYear": {
             "describing": "The year in which the publication was issued.",
