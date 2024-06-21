@@ -223,26 +223,34 @@
             ]
         },
         "hasLegalBasis": {
-            "$ref": "/schema/fields/text",
-            "description": "The legal basis used to justify processing of personal data. Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions which can be represented using dpv:hasJurisdiction or dpv:hasLaw. Legal basis can be used without such declarations, e.g. 'Consent', however their interpretation will require association with a law, e.g. 'EU GDPR'.",
-            "sameAs": [
-                "https://w3id.org/dpv#hasLegalBasis"
-            ]
-        },
-        "hasPersonalData": {
             "default": [],
-            "description": "Indicates, if a resource contains data directly or indirectly associated or related to an individual.",
+            "description": "The legal basis used to justify processing of personal data. Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions which can be represented using dpv:hasJurisdiction or dpv:hasLaw. Legal basis can be used without such declarations, e.g. 'Consent', however their interpretation will require association with a law, e.g. 'EU GDPR'.",
             "items": {
-                "$ref": "/schema/entities/concept#/identifier",
-                "examples": [
-                    "https://mex.rki.de/item/personal-data-type-1"
-                ],
-                "useScheme": "https://mex.rki.de/item/personal-data"
+                "$ref": "/schema/fields/text"
             },
             "sameAs": [
-                "https://w3id.org/dpv#hasPersonalData"
+                "https://w3id.org/dpv#hasLegalBasis"
             ],
             "type": "array"
+        },
+        "hasPersonalData": {
+            "anyOf": [
+                {
+                    "$ref": "/schema/entities/concept#/identifier",
+                    "examples": [
+                        "https://mex.rki.de/item/personal-data-type-1"
+                    ],
+                    "useScheme": "https://mex.rki.de/item/personal-data"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Indicates, if a resource contains data directly or indirectly associated or related to an individual.",
+            "sameAs": [
+                "https://w3id.org/dpv#hasPersonalData"
+            ]
         },
         "icd10code": {
             "default": [],
