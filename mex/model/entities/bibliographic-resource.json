@@ -1,5 +1,5 @@
 {
-    "$id": "https://mex.rki.de/schema/entities/resource",
+    "$id": "https://mex.rki.de/schema/entities/bibliographic-resource",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "description": "A book, article, or other documentary resource.",
     "properties": {
@@ -47,15 +47,15 @@
             ],
             "type": "array"
         },
-        "bibliographicReferenceType": {
+        "bibliographicResourceType": {
             "default": [],
             "description": "The type of reference.",
             "items": {
                 "$ref": "/schema/entities/concept#/identifier",
                 "examples": [
-                    "https://mex.rki.de/item/bibliographic-reference-type-1"
+                    "https://mex.rki.de/item/bibliographic-resource-type-1"
                 ],
-                "useScheme": "https://mex.rki.de/item/bibliographic-reference-type"
+                "useScheme": "https://mex.rki.de/item/bibliographic-resource-type"
             },
             "subPropertyOf": [
                 "http://purl.org/dc/terms/type"

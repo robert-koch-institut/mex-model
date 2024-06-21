@@ -16,7 +16,7 @@
         "label": "Endpoint vocabulary"
     },
     {
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type",
+        "identifier": "https://mex.rki.de/item/bibliographic-resource-type",
         "label": "Bibliographic reference type vocabulary"
     },
     {

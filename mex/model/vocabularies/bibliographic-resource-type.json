@@ -13,8 +13,8 @@
             "http://www.wikidata.org/entity/Q571",
             "http://purl.org/ontology/bibo/Book"
         ],
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-2",
-        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
+        "identifier": "https://mex.rki.de/item/bibliographic-resource-type-1",
+        "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
             "de": "Buch",
             "en": "Book"
@@ -35,8 +35,8 @@
             "http://www.wikidata.org/entity/Q1980247",
             "http://purl.org/ontology/bibo/BookSection"
         ],
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-3",
-        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
+        "identifier": "https://mex.rki.de/item/bibliographic-resource-type-2",
+        "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
             "de": "Buchkapitel",
             "en": "Book chapter"
@@ -50,8 +50,8 @@
         "exactMatch": [
             "http://www.wikidata.org/entity/Q23927052"
         ],
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-4",
-        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
+        "identifier": "https://mex.rki.de/item/bibliographic-resource-type-3",
+        "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
             "de": "Konferenzbeitrag",
             "en": "Conference Paper"
@@ -76,8 +76,8 @@
         "exactMatch": [
             "http://www.wikidata.org/entity/Q187685"
         ],
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-5",
-        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
+        "identifier": "https://mex.rki.de/item/bibliographic-resource-type-4",
+        "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
             "de": "Dissertation",
             "en": "Doctoral thesis"
@@ -102,8 +102,8 @@
         "exactMatch": [
             "http://www.wikidata.org/entity/Q1414362"
         ],
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-6",
-        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
+        "identifier": "https://mex.rki.de/item/bibliographic-resource-type-5",
+        "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
             "de": "Habilitationsschrift",
             "en": "Habilitation thesis"
@@ -122,8 +122,8 @@
         "exactMatch": [
             "http://www.wikidata.org/entity/Q5633421"
         ],
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-7",
-        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
+        "identifier": "https://mex.rki.de/item/bibliographic-resource-type-6",
+        "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
             "de": "Zeitschrift",
             "en": "Journal"
@@ -143,8 +143,8 @@
         "exactMatch": [
             "http://www.wikidata.org/entity/Q18918145"
         ],
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-8",
-        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
+        "identifier": "https://mex.rki.de/item/bibliographic-resource-type-7",
+        "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
             "de": "Zeitschriftenartikel",
             "en": "Journal Article"
@@ -152,11 +152,11 @@
     },
     {
         "definition": {
-            "de": "Andere Arte von bibliografischen Referenztyp, der in diesem Vokabular nihct aufgeführt ist.",
+            "de": "Andere Arte von bibliografischen Referenztyp, der in diesem Vokabular nicht aufgeführt ist.",
             "en": "Other typ of bibliographic reference type, that is not described here in this vocabulary."
         },
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-10",
-        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
+        "identifier": "https://mex.rki.de/item/bibliographic-resource-type-8",
+        "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
             "de": "Andere",
             "en": "Other"
@@ -174,8 +174,8 @@
             "https://schema.org/Poster",
             "http://www.wikidata.org/entity/Q429785"
         ],
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-11",
-        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
+        "identifier": "https://mex.rki.de/item/bibliographic-resource-type-9",
+        "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
             "de": "Poster",
             "en": "Poster"
@@ -189,8 +189,8 @@
         "exactMatch": [
             "http://www.wikidata.org/entity/Q580922"
         ],
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-12",
-        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
+        "identifier": "https://mex.rki.de/item/bibliographic-resource-type-10",
+        "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
             "de": "Preprint",
             "en": "Preprint"
@@ -208,8 +208,8 @@
         "exactMatch": [
             "http://www.wikidata.org/entity/Q604733"
         ],
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-13",
-        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
+        "identifier": "https://mex.rki.de/item/bibliographic-resource-type-11",
+        "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
             "de": "Präsentation",
             "en": "Presentation"
@@ -223,8 +223,8 @@
         "exactMatch": [
             "http://www.wikidata.org/entity/Q10870555"
         ],
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-14",
-        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
+        "identifier": "https://mex.rki.de/item/bibliographic-resource-type-12",
+        "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
             "de": "Report",
             "en": "Bericht"
@@ -235,8 +235,8 @@
             "de": "Wissenschaftliche Arbeit, die im Rahmen eines Studiums erstellt wird.",
             "en": "Academic paper produced as part of a degree programme."
         },
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-15",
-        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
+        "identifier": "https://mex.rki.de/item/bibliographic-resource-type-13",
+        "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
             "de": "Studienarbeit",
             "en": "Seminar paper"
@@ -255,8 +255,8 @@
             "http://www.wikidata.org/entity/Q1266946",
             "http://purl.org/ontology/bibo/Thesis"
         ],
-        "identifier": "https://mex.rki.de/item/bibliographic-reference-type-16",
-        "inScheme": "https://mex.rki.de/item/bibliographic-reference-type",
+        "identifier": "https://mex.rki.de/item/bibliographic-resource-type-14",
+        "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
             "de": "Abschlussarbeit",
             "en": "Thesis"
