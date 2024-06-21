@@ -324,6 +324,7 @@
         },
         "publisher": {
             "description": "An entity responsible for making the publication available ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
+            "default": [],
             "items": {
                 "$ref": "/schema/entities/organization#/identifier"
             },
