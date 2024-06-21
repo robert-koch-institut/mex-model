@@ -94,16 +94,24 @@
             "type": "array"
         },
         "doi": {
-            "description": "The Digital Object Identifier (DOI) of the publication.",
-            "examples": [
-                "https://doi.org/10.1007/978-1-0716-2441-8_7",
-                "https://doi.org/10.2807/1560-7917.ES.2022.27.46.2200849",
-                "https://doi.org/10.3389/fmicb.2022.868887",
-                "http://dx.doi.org/10.25646/5147",
-                "https://doi.org/10.1016/j.vaccine.2022.11.065."
+            "anyOf": [
+                {
+                    "pattern": "^(((http)|(https))://(dx.)?doi.org/)(10.\\d{4,9}/[-._;()/:A-Z0-9]+)$",
+                    "examples": [
+                        "https://doi.org/10.1007/978-1-0716-2441-8_7",
+                        "https://doi.org/10.2807/1560-7917.ES.2022.27.46.2200849",
+                        "https://doi.org/10.3389/fmicb.2022.868887",
+                        "http://dx.doi.org/10.25646/5147",
+                        "https://doi.org/10.1016/j.vaccine.2022.11.065"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
             ],
-            "pattern": "^(((http)|(https))://(dx.)?doi.org/)(10.\\d{4,9}/[-._;()/:A-Z0-9]+)$",
-            "type": "string"
+            "default": null,
+            "description": "The Digital Object Identifier (DOI) of the publication."
         },
         "edition": {
             "description": "The edition of the publication.",
