@@ -118,6 +118,7 @@
             ],
             "maxLength": 1000,
             "minLength": 1,
+            "pattern": "^[^\\n\\r]+$",
             "type": "string"
         },
         "landingPage": {
