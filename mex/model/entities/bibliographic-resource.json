@@ -96,7 +96,6 @@
         "doi": {
             "anyOf": [
                 {
-                    "pattern": "^(((http)|(https))://(dx.)?doi.org/)(10.\\d{4,9}/[-._;()/:A-Z0-9]+)$",
                     "examples": [
                         "https://doi.org/10.1007/978-1-0716-2441-8_7",
                         "https://doi.org/10.2807/1560-7917.ES.2022.27.46.2200849",
@@ -104,6 +103,7 @@
                         "http://dx.doi.org/10.25646/5147",
                         "https://doi.org/10.1016/j.vaccine.2022.11.065"
                     ],
+                    "pattern": "^(((http)|(https))://(dx.)?doi.org/)(10.\\d{4,9}/[-._;()/:A-Z0-9]+)$",
                     "type": "string"
                 },
                 {
@@ -202,13 +202,26 @@
             "type": "array"
         },
         "issue": {
-            "description": "The issue of the periodical.",
-            "examples": [
-                "1",
-                "2",
-                "12"
+            "anyOf": [
+                {
+                    "examples": [
+                        "1",
+                        "2",
+                        "12"
+                    ],
+                    "type": "integer"
+                },
+                {
+                    "examples": [
+                        "Q3",
+                        "11/12",
+                        "Winter '23"
+                    ],
+                    "type": "string"
+                }
             ],
-            "type": "integer"
+            "description": "The issue of the periodical.",
+            "type": "array"
         },
         "issued": {
             "anyOf": [
@@ -323,8 +336,8 @@
             "type": "string"
         },
         "publisher": {
-            "description": "An entity responsible for making the publication available ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
             "default": [],
+            "description": "An entity responsible for making the publication available ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
             "items": {
                 "$ref": "/schema/entities/organization#/identifier"
             },
@@ -399,22 +412,48 @@
             "type": "array"
         },
         "volume": {
-            "description": "The volume of the periodical.",
-            "examples": [
-                "24",
-                "34",
-                "1"
+            "anyOf": [
+                {
+                    "examples": [
+                        "1",
+                        "2",
+                        "12"
+                    ],
+                    "type": "integer"
+                },
+                {
+                    "examples": [
+                        "Q3",
+                        "11/12",
+                        "Winter '23"
+                    ],
+                    "type": "string"
+                }
             ],
-            "type": "integer"
+            "description": "The volume of the periodical.",
+            "type": "array"
         },
         "volumeOfSeries": {
-            "description": "The volume of the periodical series.",
-            "examples": [
-                "24",
-                "34",
-                "1"
+            "anyOf": [
+                {
+                    "examples": [
+                        "1",
+                        "2",
+                        "12"
+                    ],
+                    "type": "integer"
+                },
+                {
+                    "examples": [
+                        "Q3",
+                        "11/12",
+                        "Winter '23"
+                    ],
+                    "type": "string"
+                }
             ],
-            "type": "integer"
+            "description": "The volume of the periodical series.",
+            "type": "array"
         }
     },
     "required": [
