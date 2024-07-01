@@ -205,14 +205,7 @@
             "anyOf": [
                 {
                     "examples": [
-                        "1",
                         "2",
-                        "12"
-                    ],
-                    "type": "integer"
-                },
-                {
-                    "examples": [
                         "Q3",
                         "11/12",
                         "Winter '23"
@@ -458,14 +451,7 @@
             "anyOf": [
                 {
                     "examples": [
-                        "1",
                         "2",
-                        "12"
-                    ],
-                    "type": "integer"
-                },
-                {
-                    "examples": [
                         "Q3",
                         "11/12",
                         "Winter '23"
