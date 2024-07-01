@@ -142,8 +142,8 @@
     },
     {
         "definition": {
-            "de": "Andere Arte von bibliografischen Referenztyp, der in diesem Vokabular nicht aufgeführt ist.",
-            "en": "Other typ of bibliographic reference type, that is not described here in this vocabulary."
+            "de": "Andere Art von bibliografischem Typ, der in diesem Vokabular nicht aufgeführt ist.",
+            "en": "Other type of bibliographic resource, that is not described here in this vocabulary."
         },
         "identifier": "https://mex.rki.de/item/bibliographic-resource-type-8",
         "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",

@@ -17,7 +17,7 @@
     },
     {
         "identifier": "https://mex.rki.de/item/bibliographic-resource-type",
-        "label": "Bibliographic reference type vocabulary"
+        "label": "Bibliographic resource type vocabulary"
     },
     {
         "identifier": "https://mex.rki.de/item/data-processing-state",
