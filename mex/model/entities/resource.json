@@ -505,7 +505,7 @@
             "default": [],
             "description": "A publication that deals with the research, analysis, observation or processing of the object that was subject to the resource, e.g. a research paper.",
             "items": {
-                "$ref": "/schema/entities/bibliographic-reference#/identifier"
+                "$ref": "/schema/entities/bibliographic-resource#/identifier"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/isReferencedBy"
