@@ -22,9 +22,7 @@
     },
     {
         "altLabel": {
-            "en": [
-                "Book section"
-            ]
+            "en": "Book section"
         },
         "definition": {
             "de": "Ein Teil eines Buches.",
@@ -59,12 +57,8 @@
     },
     {
         "altLabel": {
-            "de": [
-                "Doktorarbeit"
-            ],
-            "en": [
-                "Doctoral thesis, doctoral dissertation"
-            ]
+            "de": "Doktorarbeit",
+            "en": "Doctoral dissertation"
         },
         "closeMatch": [
             "http://purl.org/ontology/bibo/Thesis"
@@ -85,12 +79,8 @@
     },
     {
         "altLabel": {
-            "de": [
-                "Habilitation"
-            ],
-            "en": [
-                "Postdoctoral thesis"
-            ]
+            "de": "Habilitation",
+            "en": "Postdoctoral thesis"
         },
         "closeMatch": [
             "http://purl.org/ontology/bibo/Thesis"
@@ -111,9 +101,7 @@
     },
     {
         "altLabel": {
-            "de": [
-                "Wissenschaftliche Fachzeitschrift"
-            ]
+            "de": "Wissenschaftliche Fachzeitschrift"
         },
         "definition": {
             "de": "Zeitschrift, die regelmäßig wissenschaftliche Forschungsergebnisse veröffentlicht.",
@@ -130,12 +118,14 @@
         }
     },
     {
-        "altLabel": {
-            "de": [
-                "Wissenschaftlicher Artikel",
-                "Paper"
-            ]
-        },
+        "altLabel": [
+            {
+                "de": "Wissenschaftlicher Artikel"
+            },
+            {
+                "de": "Paper"
+            }
+        ],
         "definition": {
             "de": "Beitrag, der in einer wissenschaftlichen Zeitschrift veröffentlicht wurde.",
             "en": "Article published in an academic journal."
