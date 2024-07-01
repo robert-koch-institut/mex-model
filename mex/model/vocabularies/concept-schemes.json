@@ -24,10 +24,6 @@
         "label": "Data processing state vocabulary"
     },
     {
-        "identifier": "https://mex.rki.de/item/data-type",
-        "label": "Datatype vocabulary"
-    },
-    {
         "description": {
             "de": "Dieses Vokabular basiert auf dem Dublin Core Collection Description Frequency Vokabular, verfügbar unter https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/.",
             "en": "This vocabulary is based on the Dublin Core Collection Description Frequency Vocabulary, available at https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/."
