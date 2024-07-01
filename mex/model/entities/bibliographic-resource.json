@@ -49,7 +49,7 @@
         },
         "bibliographicResourceType": {
             "default": [],
-            "description": "The type of reference.",
+            "description": "The type of bibliographic resource.",
             "items": {
                 "$ref": "/schema/entities/concept#/identifier",
                 "examples": [
@@ -505,6 +505,6 @@
     "sameAs": [
         "http://purl.org/dc/terms/BibliographicResource"
     ],
-    "title": "BibliographicReference",
+    "title": "BibliographicResource",
     "type": "object"
 }
