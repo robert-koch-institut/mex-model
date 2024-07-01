@@ -341,9 +341,7 @@
                 {
                     "$comment": "year",
                     "examples": [
-                        "2011",
-                        "1982",
-                        "1810"
+                        "2024"
                     ],
                     "format": "date",
                     "pattern": "^(?:\\d{4})$",
