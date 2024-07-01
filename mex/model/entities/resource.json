@@ -379,6 +379,9 @@
                         "21"
                     ],
                     "type": "integer"
+                },
+                {
+                    "type": "null"
                 }
             ],
             "default": null,
