@@ -430,6 +430,7 @@
                     "type": "null"
                 }
             ],
+            "default": null,
             "description": "Specifies the minimum age of the population within the data collection, expressed in years."
         },
         "modified": {
