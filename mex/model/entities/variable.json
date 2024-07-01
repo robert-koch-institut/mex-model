@@ -46,7 +46,7 @@
                     "type": "string"
                 },
                 {
-                    "type": null
+                    "type": "null"
                 }
             ],
             "default": null,
