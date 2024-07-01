@@ -355,7 +355,7 @@
                         "2024"
                     ],
                     "format": "date",
-                    "pattern": "^(?:\\d{4})$",
+                    "pattern": "^\\d{4}$",
                     "type": "string"
                 },
                 {
