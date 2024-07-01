@@ -118,14 +118,10 @@
         }
     },
     {
-        "altLabel": [
-            {
-                "de": "Wissenschaftlicher Artikel"
-            },
-            {
-                "de": "Paper"
-            }
-        ],
+        "altLabel": {
+            "de": "Wissenschaftlicher Artikel",
+            "en": "Paper"
+        },
         "definition": {
             "de": "Beitrag, der in einer wissenschaftlichen Zeitschrift veröffentlicht wurde.",
             "en": "Article published in an academic journal."
