@@ -407,6 +407,9 @@
             "default": null,
             "description": "The name of the chapter of the publication, the book section belongs to."
         },
+        "stableTargetId": {
+            "$ref": "/schema/fields/identifier"
+        },
         "subtitle": {
             "default": [],
             "description": "The subtitle of the publication.",
