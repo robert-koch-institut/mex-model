@@ -250,7 +250,7 @@
                 {
                     "$ref": "/schema/entities/concept#/identifier",
                     "examples": [
-                        "https://mex.rki.de/item/personal-data-type-1"
+                        "https://mex.rki.de/item/personal-data-1"
                     ],
                     "useScheme": "https://mex.rki.de/item/personal-data"
                 },
