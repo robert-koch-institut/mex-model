@@ -75,7 +75,7 @@
                     "FHIR",
                     "LOINC",
                     "SNOMED",
-                    "FASTA"
+                    "ICD-10"
                 ],
                 "type": "string"
             },
@@ -483,14 +483,6 @@
             "sameAs": [
                 "http://purl.org/dc/terms/modified"
             ]
-        },
-        "pathogenOrDisease": {
-            "default": [],
-            "description": "The pathogen or the disease that was researched, e.g. SARS-CoV-2, COVID-19.",
-            "items": {
-                "type": "string"
-            },
-            "type": "array"
         },
         "populationCoverage": {
             "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
