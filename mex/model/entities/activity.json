@@ -82,7 +82,6 @@
                         "examples": [
                             "2014-08-24"
                         ],
-                        "format": "date",
                         "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
                         "type": "string"
                     },
@@ -91,7 +90,6 @@
                         "examples": [
                             "2019-03"
                         ],
-                        "format": "date",
                         "pattern": "\\d{4}-(?:0[1-9]|1[0-2])$",
                         "type": "string"
                     },
@@ -100,7 +98,6 @@
                         "examples": [
                             "2024"
                         ],
-                        "format": "date",
                         "pattern": "^\\d{4}$",
                         "type": "string"
                     }
@@ -250,7 +247,6 @@
                         "examples": [
                             "2014-08-24"
                         ],
-                        "format": "date",
                         "pattern": "^\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
                         "type": "string"
                     },
@@ -259,7 +255,6 @@
                         "examples": [
                             "2019-03"
                         ],
-                        "format": "date",
                         "pattern": "\\d{4}-(?:0[1-9]|1[0-2])$",
                         "type": "string"
                     },
@@ -268,7 +263,6 @@
                         "examples": [
                             "2024"
                         ],
-                        "format": "date",
                         "pattern": "^\\d{4}$",
                         "type": "string"
                     }
