@@ -558,7 +558,7 @@
         },
         "rights": {
             "default": [],
-            "description": "Information about rights held in and over the resource as well as rights about the possibilities of teh usage of the resource.",
+            "description": "Information about rights held in and over the resource as well as rights about the possibilities of the usage of the resource.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
