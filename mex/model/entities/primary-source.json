@@ -1,7 +1,7 @@
 {
     "$id": "https://mex.rki.de/schema/entities/primary-source",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
-    "description": "An collection of information, that is managed and curated by an RKI unit ans lists activities and/or resources.",
+    "description": "A collection of information, that is managed and curated by an RKI unit and lists activities and/or resources.",
     "properties": {
         "alternativeTitle": {
             "default": [],
