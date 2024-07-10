@@ -27,7 +27,7 @@
                 }
             ],
             "default": null,
-            "description": "n established standard to which the described resource conforms ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
+            "description": "An established standard to which the described resource conforms ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
             "sameAs": [
                 "http://purl.org/dc/terms/conformsTo",
                 "https://schema.org/codingSystem"
