@@ -35,6 +35,15 @@ For further details, please consult our
 [FAIR data principles](https://www.go-fair.org/fair-principles/) – guidelines to make
 data Findable, Accessible, Interoperable and Reusable.
 
+**Contact** \
+For more information, please feel free to email us at [mex@rki.de](mailto:mex@rki.de).
+
+### Publisher of this document
+**Robert Koch-Institut** \
+Nordufer 20 \
+13353 Berlin \
+Germany
+
 ## package
 
 The `mex-model` repository contains the MEx metadata model in two formats.

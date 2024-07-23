@@ -39,7 +39,11 @@ all = { composite = ["install-all", "lint", "doc"] }
 
 [tool.ruff]
 fix = true
+line-length = 88
 show-fixes = true
+
+[tool.ruff.format]
+docstring-code-format = true
 
 [tool.ruff.lint]
 ignore = [
