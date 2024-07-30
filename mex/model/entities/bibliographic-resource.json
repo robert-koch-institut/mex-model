@@ -336,6 +336,24 @@
             "default": null,
             "description": "The range of pages or a single page."
         },
+        "publicationPlace": {
+            "anyOf": [
+                {
+                    "examples": [
+                        "Berlin",
+                        "Chigago",
+                        "NYC/NY",
+                        "Tampa, FL"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "The place where the document was issued."
+        },
         "publicationYear": {
             "anyOf": [
                 {
