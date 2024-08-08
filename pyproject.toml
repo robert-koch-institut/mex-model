@@ -1,6 +1,6 @@
 [project]
 name = "mex-model"
-version = "2.4.0"
+version = "2.5.0"
 description = "Conceptual and machine-readable versions of the MEx metadata model."
 authors = [{ name = "MEx Team", email = "mex@rki.de" }]
 readme = { file = "README.md", content-type = "text/markdown" }
@@ -12,8 +12,8 @@ optional-dependencies.dev = [
     "black==24.4.2",
     "ipdb==0.13.13",
     "myst-parser==3.0.1",
-    "ruff==0.4.8",
-    "sphinx==7.3.7",
+    "ruff==0.5.5",
+    "sphinx==7.4.7",
 ]
 
 [tool.cruft]
@@ -39,7 +39,11 @@ all = { composite = ["install-all", "lint", "doc"] }
 
 [tool.ruff]
 fix = true
+line-length = 88
 show-fixes = true
+
+[tool.ruff.format]
+docstring-code-format = true
 
 [tool.ruff.lint]
 ignore = [
@@ -93,5 +97,5 @@ known-first-party = ["mex", "tests"]
 convention = "google"
 
 [build-system]
-requires = ["pdm-backend==2.3.0"]
+requires = ["pdm-backend==2.3.3"]
 build-backend = "pdm.backend"
