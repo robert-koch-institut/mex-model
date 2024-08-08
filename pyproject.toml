@@ -13,7 +13,7 @@ optional-dependencies.dev = [
     "ipdb==0.13.13",
     "myst-parser==3.0.1",
     "ruff==0.5.5",
-    "sphinx==7.4.7",
+    "sphinx==8.0.2",
 ]
 
 [tool.cruft]
