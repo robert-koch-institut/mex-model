@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:0eb6bb4ed503e4eba18c67fa7ce061037970397cf8375dc5af35a0c52c3d5573"
+content_hash = "sha256:7f2baf5a890afb61ca60751c70404474a8eb3a1073e9a45a621733f60a34f98a"
 
 [[metadata.targets]]
 requires_python = ">=3.11,<3.13"
@@ -390,21 +390,21 @@ files = [
 
 [[package]]
 name = "myst-parser"
-version = "3.0.1"
-requires_python = ">=3.8"
+version = "4.0.0"
+requires_python = ">=3.10"
 summary = "An extended [CommonMark](https://spec.commonmark.org/) compliant parser,"
 groups = ["dev"]
 dependencies = [
-    "docutils<0.22,>=0.18",
+    "docutils<0.22,>=0.19",
     "jinja2",
     "markdown-it-py~=3.0",
-    "mdit-py-plugins~=0.4",
+    "mdit-py-plugins>=0.4.1,~=0.4",
     "pyyaml",
-    "sphinx<8,>=6",
+    "sphinx<9,>=7",
 ]
 files = [
-    {file = "myst_parser-3.0.1-py3-none-any.whl", hash = "sha256:6457aaa33a5d474aca678b8ead9b3dc298e89c68e67012e73146ea6fd54babf1"},
-    {file = "myst_parser-3.0.1.tar.gz", hash = "sha256:88f0cb406cb363b077d176b51c476f62d60604d68a8dcdf4832e080441301a87"},
+    {file = "myst_parser-4.0.0-py3-none-any.whl", hash = "sha256:b9317997552424448c6096c2558872fdb6f81d3ecb3a40ce84a7518798f3f28d"},
+    {file = "myst_parser-4.0.0.tar.gz", hash = "sha256:851c9dfb44e36e56d15d05e72f02b80da21a9e0d07cba96baf5e2d476bb91531"},
 ]
 
 [[package]]
