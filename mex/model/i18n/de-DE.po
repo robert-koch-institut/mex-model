@@ -501,7 +501,7 @@ msgstr[1] "Verlagsorte"
 msgid "populationCoverage.singular"
 msgstr "Bevölkerungsabdeckung"
 
-msgid"populationCoverage.description"
+msgid "populationCoverage.description"
 msgstr "Angabe welcher Teil oder welche Gruppe der Bevölkerung Untersuchungsgegenstand bei der Datenerhebung ist, z. B. Kleinkinder im Alter von 1 bis 3 Jahren oder Patient*innen mit Diabetes Typ 2"
 
 msgid "publication.singular"
@@ -635,7 +635,7 @@ msgid "temporal.description"
 msgstr "Zeitliche Abdeckung der Forschungsdaten"
 
 msgid "theme.singular"
-mgsid_plural "theme.plural"
+msgid_plural "theme.plural"
 msgstr[0] "Thema"
 msgstr[1] "Themen"
 
