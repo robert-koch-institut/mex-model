@@ -1,5 +1,13 @@
 [
     {
+        "identifier": "https://mex.rki.de/item/theme-1",
+        "inScheme": "https://mex.rki.de/item/theme",
+        "prefLabel": {
+            "de": "Public Health",
+            "en": "Public Health"
+        }
+    },
+    {
         "identifier": "https://mex.rki.de/item/theme-11",
         "inScheme": "https://mex.rki.de/item/theme",
         "prefLabel": {
