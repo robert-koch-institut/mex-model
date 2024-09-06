@@ -66,6 +66,18 @@
                 "http://purl.org/dc/elements/1.1/identifier"
             ]
         },
+        "identifierInPrimarySource": {
+            "description": "The identifier of the item used in the primary source.",
+            "examples": [
+                "123456",
+                "item-501",
+                "D7/x4/zz.final3"
+            ],
+            "maxLength": 1000,
+            "minLength": 1,
+            "pattern": "^[^\\n\\r]+$",
+            "type": "string"
+        },
         "isIndicatedAtTime": {
             "$comment": "year_month_day_time",
             "description": "Specifies the temporal information for when the entity has indicated the specific context.",
