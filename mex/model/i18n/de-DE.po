@@ -54,7 +54,7 @@ msgstr "Die Häufigkeit/Frequenz, mit der neue Forschungsdaten der Datensammlung
 
 msgid "activityType.singular"
 msgid_plural "activityType.plural"
-msgstr[0] "Projektart"
+msgstr[0] "Projekttyp"
 msgstr[1] "Projekttypen"
 
 msgid "activityType.description"
