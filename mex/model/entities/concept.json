@@ -69,6 +69,16 @@
             ],
             "type": "string"
         },
+        "note": {
+            "default": [],
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://www.w3.org/2004/02/skos/core#note"
+            ],
+            "type": "array"
+        },
         "prefLabel": {
             "items": {
                 "$ref": "/schema/fields/text"
@@ -83,7 +93,6 @@
     "required": [
         "identifier",
         "inScheme",
-        "notation",
         "prefLabel"
     ],
     "sameAs": [
