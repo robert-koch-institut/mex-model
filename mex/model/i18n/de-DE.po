@@ -5,7 +5,7 @@ msgid "abstract.description"
 msgstr "Kurze Beschreibung des Projekts oder des Forschungskontexts, in dem die Forschungsdaten erstellt wurden"
 
 msgid "accessPlatform.singular"
-msgid "accessPlatform.plural"
+msgid_plural "accessPlatform.plural"
 msgstr[0] "Zugriffsplattform"
 msgstr[1] "Zugriffsplattformen"
 
@@ -31,7 +31,7 @@ msgid "accessRestriction.description"
 msgstr "Beschreibung, ob die Forschungsdaten für alle zugänglich sind (offen) oder einen eingeschränkten Zugang haben (restriktiv)"
 
 msgid "accessService.singular"
-msgid "accessService.plural"
+msgid_plural "accessService.plural"
 msgstr[0] "Zugangsdienst"
 msgstr[1] "Zugangsdienste"
 
@@ -39,7 +39,7 @@ msgid "accessService.description"
 msgstr "Ein Datendienst, der Zugriff auf die Forschungsdaten bietet."
 
 msgid "accessURL.singular"
-msgid "accessURL.plural"
+msgid_plural "accessURL.plural"
 msgstr[0] "Zugriffs-URL"
 msgstr[1] "Zugriffs-URLs"
 
@@ -53,7 +53,7 @@ msgid "accrualPeriodicity.description"
 msgstr "Die Häufigkeit/Frequenz, mit der neue Forschungsdaten der Datensammlung hinzugefügt werden."
 
 msgid "activityType.singular"
-msgid "activityType.plural"
+msgid_plural "activityType.plural"
 msgstr[0] "Projektart"
 msgstr[1] "Projekttypen"
 
@@ -62,7 +62,7 @@ msgstr "Der Typ des Projekts/Vorhabens gibt an, ob es sich um ein internes Proje
 
 msgctxt "BibliographicResource"
 msgid "alternateIdentifier.singular"
-msgid "alternateIdentifier.plural"
+msgid_plural "alternateIdentifier.plural"
 msgstr[0] "Anderer Identifier"
 msgstr[1] "Andere Identifier"
 
@@ -103,7 +103,7 @@ msgid "anonymizationPseudonymization.description"
 msgstr "Gibt an, ob die Forschungsdaten anonymisiert und/oder pseudonymisiert wurden."
 
 msgid "belongsTo.singular"
-msgid "belongsTo.plural"
+msgid_plural "belongsTo.plural"
 msgstr[0] "Zugehörige Variablengruppe"
 msgstr[1] "Zugehörige Variablengruppen"
 
@@ -123,7 +123,7 @@ msgid "codingSystem.description"
 msgstr "Ein Codierungssystem ist ein standardisiertes System zur Verschlüsselung von medizinischen Informationen, wie Diagnosen, Behandlungen, Medikamenten und Verfahren. Diese Systeme dienen der einheitlichen Erfassung, Dokumentation und Abrechnung medizinischer Leistungen sowie der Unterstützung von klinischen Studien und der Gesundheitsforschung."
 
 msgid "conformsTo.singular"
-msgid "conformsTo.plural"
+msgid_plural "conformsTo.plural"
 msgstr[0] "Standard"
 msgstr[1] "Standards"
 
@@ -131,7 +131,7 @@ msgid "conformsTo.description"
 msgstr "Ein etablierter Standard, dem die beschriebenen Daten entsprechen."
 
 msgid "contact.singular"
-msgid "contact.plural"
+msgid_plural "contact.plural"
 msgstr[0] "Kontakt"
 msgstr[1] "Kontakte"
 
@@ -161,7 +161,7 @@ msgid "containedBy.description"
 msgstr "Forschungsdaten, zu denen die Variablengruppe gehört"
 
 msgid "contributor.singular"
-msgid "contributor.plural"
+msgid_plural "contributor.plural"
 msgstr[0] "Mitwirkende*r"
 msgstr[1] "Mitwirkende"
 
@@ -169,7 +169,7 @@ msgid "contributor.description"
 msgstr "An den Forschungsdaten mitwirkende Person(en)"
 
 msgid "contributingUnit.singular"
-msgid "contributingUnit.plural"
+msgid_plural "contributingUnit.plural"
 msgstr[0] "Mitwirkendes Fachgebiet"
 msgstr[1] "Mitwirkende Fachgebiete"
 
@@ -188,7 +188,7 @@ msgstr ""
 "Datensatz."
 
 msgid "creator.singular"
-msgid "creator.plural"
+msgid_plural "creator.plural"
 msgstr[0] "Autor*in"
 msgstr[1] "Autor*innen"
 
@@ -223,7 +223,7 @@ msgid "description.description"
 msgstr "Kurze Beschreibung der Variable"
 
 msgid "distribution.singular"
-msgid "distribution.plural"
+msgid_plural "distribution.plural"
 msgstr[0] "Zugehörige Datei"
 msgstr[1] "Zugehörige Dateien"
 
@@ -231,7 +231,7 @@ msgid "distribution.description"
 msgstr "Zu den Foschungsdaten dazugehörige Dateien."
 
 msgid "documentation.singular"
-msgid "documentation.plural"
+msgid_plural "documentation.plural"
 msgstr[0] "Dokumentation"
 msgstr [1] "Dokumentationen"
 
@@ -245,7 +245,7 @@ msgid "doi.description"
 msgstr "Ein DOI ist ein einzigartiger, stabiler Identifikator, der digitalen Objekten wie wissenschaftlichen Artikeln, Forschungsdaten oder Datensammlungen zugewiesen wird. Er ermöglicht eine dauerhafte und zuverlässige Verlinkung zu dem Objekt, unabhängig von Änderungen an dessen Webadresse oder Speicherort."
 
 msgid "downloadURL.singular"
-msgid "downloadURL.plural"
+msgid_plural "downloadURL.plural"
 msgstr[0] "Download-URL"
 msgstr[1] "Download-URLs"
 
@@ -259,7 +259,7 @@ msgid "edition.description"
 msgstr "Die Ausgabe der Publikation"
 
 msgid "editor.singular"
-msgid "editor.plural"
+msgid_plural "editor.plural"
 msgstr[0] "Herausgeber*in"
 msgstr[1] "Herausgebende"
 
@@ -267,7 +267,7 @@ msgid "editor.description"
 msgstr "Herausgebende der Publikation"
 
 msgid "editorOfSeries.singular"
-msgid "editorOfSeries.plural"
+msgid_plural "editorOfSeries.plural"
 msgstr[0] "Herausgeber*in der Reihe"
 msgstr[1] "Herausgebende der Reihe"
 
@@ -275,7 +275,7 @@ msgid "editorOfSeries.description"
 msgstr "Herausgebende der Reihe"
 
 msgid "email.singular"
-msgid "email.plural"
+msgid_plural "email.plural"
 msgstr[0] "E-Mail-Adresse"
 msgstr[1] "E-Mail-Adressen"
 
@@ -378,7 +378,7 @@ msgid "identifierInPrimarySource.description"
 msgstr "Dient der Identifizierung des Metadatenobjekts im Originaldatenspeicher (Primärsystem)."
 
 msgid "instrumentToolOrApparatus.singular"
-msgid "usedInstrumentToolOrApparatus.plural"
+msgid_plural "usedInstrumentToolOrApparatus.plural"
 msgstr[0] "Tool"
 msgstr[1] "Tools"
 
@@ -388,7 +388,7 @@ msgstr ""
 "Forschungsdaten verwendet wurden"
 
 msgid "involvedPerson.singular"
-msgid "involvedPerson.plural"
+msgid_plural "involvedPerson.plural"
 msgstr[0] "Mitwirkende*r"
 msgstr[1] "Mitwirkende"
 
@@ -396,7 +396,7 @@ msgid "involvedPerson.description"
 msgstr "An dem Projekt/Vorhaben mitwirkende Person(en)"
 
 msgid "involvedUnit.singular"
-msgid "involvedUnit.plural"
+msgid_plural "involvedUnit.plural"
 msgstr[0] "Mitwirkendes Fachgebiet"
 msgstr[1] "Mitwirkende Fachgebiete"
 
@@ -440,7 +440,7 @@ msgid "journal.description"
 msgstr "Die Zeitschrift in jener der wissenschaftliche Artikel publiziert worden ist."
 
 msgid "keyword.singular"
-msgid "keyword.plural"
+msgid_plural "keyword.plural"
 msgstr[0] "Schlagwort"
 msgstr[1] "Schlagwörter"
 
@@ -470,7 +470,7 @@ msgid "landingPage.description"
 msgstr "Webseite, die in einem Webbrowser aufgerufen werden kann, um Zugriff auf das System zu erhalten"
 
 msgid "language.singular"
-msgid "keyword.plural"
+msgid_plural "keyword.plural"
 msgstr[0] "Sprache"
 msgstr[1] "Sprachen"
 
@@ -517,7 +517,7 @@ msgstr ""
 "Medicine erstellt wurde."
 
 msgid "method.singular"
-msgid "method.plural"
+msgid_plural "method.plural"
 msgstr[0] "Methode"
 msgstr[1] "Methoden"
 
@@ -555,7 +555,7 @@ msgid "pages.description"
 msgstr "Angabe der Seite(n)"
 
 msgid "publicationPlace.singular"
-msgid "publicationPlace.plural"
+msgid_plural "publicationPlace.plural"
 msgstr[0] "Verlagsort"
 msgstr[1] "Verlagsorte"
 
@@ -566,7 +566,7 @@ msgid "populationCoverage.description"
 msgstr "Angabe welcher Teil oder welche Gruppe der Bevölkerung Untersuchungsgegenstand bei der Datenerhebung ist, z. B. Kleinkinder im Alter von 1 bis 3 Jahren oder Patient*innen mit Diabetes Typ 2"
 
 msgid "publication.singular"
-msgid "publication.plural"
+msgid_plural "publication.plural"
 msgstr[0] "Veröffentlichung"
 msgstr[1] "Veröffentlichungen"
 
@@ -580,7 +580,7 @@ msgid "publicationYear.description"
 msgstr "Angabe des Jahres der Veröffentlichung der Publikation"
 
 msgid "publisher.singular"
-msgid "publisher.plural"
+msgid_plural "publisher.plural"
 msgstr[0] "Herausgeber"
 msgstr[1] "Herausgebende"
 
@@ -606,7 +606,7 @@ msgid "resourceCreationMethod.description"
 msgstr "Methode mit der die Forschungsdaten erzeugt werden"
 
 msgid "resourceTypeGeneral.singular"
-msgid "resourceTypeGeneral.plural"
+msgid_plural "resourceTypeGeneral.plural"
 msgstr[0] "Allgemeiner Forschungsdatentyp"
 msgstr[1] "Allgemeine Forschungsdatentypen"
 
@@ -615,7 +615,7 @@ msgstr ""
 "Typ(en) der Forschungsdaten, z. B. Datensatz, Abbildung oder Softwarecode"
 
 msgid "resourceTypeSpecific.singular"
-msgid "resourceTypeSpecific.plural"
+msgid_plural "resourceTypeSpecific.plural"
 msgstr[0] "Spezifischer Forschunsdatentyp"
 msgstr[1] "Spezifischere Forschungsdatentypen"
 
@@ -624,7 +624,7 @@ msgstr ""
 "Genauere Angaben zu der Art des Forschungsdatentyps. Zum Beispiel beim allgemeinen Forschungsdatentyp 'Datensatz' könnte die spezifische Angabe beschreiben, ob es sich um Gesundheitsumfragedaten, Epidemiologische Daten oder Registerdaten handelt"
 
 msgid "responsibleUnit.singular"
-msgid "responsibleUnit.plural"
+msgid_plural "responsibleUnit.plural"
 msgstr[0] "Verantwortliche Abteilung"
 msgstr[1] "Verantwortliche Abteilungen"
 
@@ -705,7 +705,7 @@ msgid "temporal.description"
 msgstr "Zeitliche Abdeckung der Forschungsdaten"
 
 msgid "theme.singular"
-msgid "theme.plural"
+msgid_plural "theme.plural"
 msgstr[0] "Thema"
 msgstr[1] "Themen"
 
@@ -729,7 +729,7 @@ msgid "titleOfSeries.singular"
 msgstr "Serientitel"
 
 msgid "unitInCharge.singular"
-msgid "unitInCharge.plural"
+msgid_plural "unitInCharge.plural"
 msgstr[0] "Verantwortliches Fachgebiete"
 msgstr[1] "Verantwortliche Fachgebiete"
 
@@ -762,7 +762,7 @@ msgid "volume.description"
 msgstr "Band/Volume der Zeitschrift"
 
 msgid "wasGeneratedBy.singular"
-msgid "wasGeneratedBy.plural"
+msgid_plural "wasGeneratedBy.plural"
 msgstr[0] "Zugehörige Aktivität"
 msgstr[1] "Zugehörige Aktivitäten"
 
@@ -770,6 +770,6 @@ msgid "wasGeneratedBy.description"
 msgstr "Kontext, in dem die Forschungsdaten entstanden sind."
 
 msgid "website.singular"
-msgid "website.plural"
+msgid_plural "website.plural"
 msgstr[0] "Website"
 msgstr[1] "Websites"
