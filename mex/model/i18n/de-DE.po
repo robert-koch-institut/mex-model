@@ -55,10 +55,10 @@ msgstr "Die Häufigkeit/Frequenz, mit der neue Forschungsdaten der Datensammlung
 msgid "activityType.singular"
 msgid "activityType.plural"
 msgstr[0] "Projektart"
-msgstr[1] "Projektarten"
+msgstr[1] "Projekttypen"
 
 msgid "activityType.description"
-msgstr "Typ des Projekts/Vorhabens"
+msgstr "Der Typ des Projekts/Vorhabens gibt an, ob es sich um ein internes Projekt/Vorhaben oder ein drittmittelgefördertes Projekt handelt."
 
 msgctxt "BibliographicResource"
 msgid "alternateIdentifier.singular"
