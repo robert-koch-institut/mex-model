@@ -361,7 +361,7 @@
                     "https://loinc.org/LA26211-5"
                 ],
                 "format": "uri",
-                "pattern": "^https://loinc.org/([a-zA-z]*)|(([0-9]{5}-[0-9]*))$",
+                "pattern": "^https://loinc.org/([a-zA-z]*)|(([0-9]*(-[0-9])*))$",
                 "type": "string"
             },
             "type": "array"
