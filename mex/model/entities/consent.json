@@ -56,8 +56,7 @@
             "description": "Indicates association with Data Subject.",
             "sameAs": [
                 "https://w3id.org/dpv#hasDataSubject"
-            ],
-            "type": "object"
+            ]
         },
         "identifier": {
             "$ref": "/schema/fields/identifier",
