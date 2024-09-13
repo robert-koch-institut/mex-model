@@ -12,7 +12,7 @@
             ]
         },
         "hasConsentStatus": {
-            "$comment": "Used to indcate if personal details are allowed to publish or not.",
+            "$comment": "Used to indicate if personal details are allowed to publish or not.",
             "anyOf": [
                 {
                     "$ref": "/schema/entities/concept#/identifier",
@@ -22,6 +22,7 @@
                     "useScheme": "https://mex.rki.de/item/consent-status"
                 }
             ],
+            "default": "https://mex.rki.de/item/consent-status-1",
             "description": "Specifies the state or status of consent.",
             "sameAs": [
                 "https://w3id.org/dpv#hasConsentStatus"
