@@ -20,9 +20,6 @@
                         "https://mex.rki.de/item/consent-status-1"
                     ],
                     "useScheme": "https://mex.rki.de/item/consent-status"
-                },
-                {
-                    "type": "null"
                 }
             ],
             "description": "Specifies the state or status of consent.",
@@ -31,7 +28,7 @@
             ]
         },
         "hasConsentType": {
-            "$comment": "In DPV there is no property for the type of consent. in DPV, the types are subclasses of dpv:Consent. In order to align with our modelling approach, we model types of consent as a concepts (skos:Concept). Since dpv:Consent is also defined as a skos:Concept, this is no conflict, just another way of implementing it.",
+            "$comment": "In DPV there is no property for the type of consent. In DPV, the types are subclasses of dpv:Consent. In order to align with our modelling approach, we model types of consent as a concept (skos:Concept). Since dpv:Consent is also defined as a skos:Concept, this is no conflict, just another way of implementing it.",
             "anyOf": [
                 {
                     "$ref": "/schema/entities/concept#/identifier",

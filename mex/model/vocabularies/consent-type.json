@@ -29,7 +29,7 @@
         "identifier": "https://mex.rki.de/item/consent-type-2",
         "inScheme": "https://mex.rki.de/item/consent-type",
         "note": {
-            "de": "Eine ausdrückliche Einwilligung erfordert eine spezifisiche und eindeutige Handlung der Person, die die Einwilligung auf direkte Weise ausdrückt. Diese Handlung kann Teil eines Prozesses sein, z. B. die Einstellung von Nutzer-Präferenzen oder Zustimmung zu einem Vertrag. Ein Beispiel ist das Anklicken einer Checkbox in einem Webformular.",
+            "de": "Eine ausdrückliche Einwilligung erfordert eine spezifische und eindeutige Handlung der Person, die die Einwilligung auf direkte Weise ausdrückt. Diese Handlung kann Teil eines Prozesses sein, z. B. die Einstellung von Nutzerpräferenzen oder Zustimmung zu einem Vertrag. Ein Beispiel ist das Anklicken einer Checkbox in einem Webformular.",
             "en": "Expressed consent requires the individual take a specific and unambiguous action that directly indicates their consent. This action may be a part of other processes such as setting preferences, or agreeing to a contract, or other matters not relating to consent. An example of expressed consent is interacting with a checkbox within a dashboard or clicking a button on a web form."
         },
         "prefLabel": {
