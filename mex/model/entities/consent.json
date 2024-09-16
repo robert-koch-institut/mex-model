@@ -13,20 +13,15 @@
         },
         "hasConsentStatus": {
             "$comment": "Used to indicate if personal details are allowed to publish or not.",
-            "anyOf": [
-                {
-                    "$ref": "/schema/entities/concept#/identifier",
-                    "examples": [
-                        "https://mex.rki.de/item/consent-status-1"
-                    ],
-                    "useScheme": "https://mex.rki.de/item/consent-status"
-                }
-            ],
-            "default": "https://mex.rki.de/item/consent-status-1",
+            "$ref": "/schema/entities/concept#/identifier",
             "description": "Specifies the state or status of consent.",
+            "examples": [
+                "https://mex.rki.de/item/consent-status-1"
+            ],
             "sameAs": [
                 "https://w3id.org/dpv#hasConsentStatus"
-            ]
+            ],
+            "useScheme": "https://mex.rki.de/item/consent-status"
         },
         "hasConsentType": {
             "$comment": "In DPV there is no property for the type of consent. In DPV, the types are subclasses of dpv:Consent. In order to align with our modelling approach, we model types of consent as a concept (skos:Concept). Since dpv:Consent is also defined as a skos:Concept, this is no conflict, just another way of implementing it.",
@@ -96,6 +91,7 @@
         "hasDataSubject",
         "hadPrimarySource",
         "identifier",
+        "identifierInPrimarySource",
         "isIndicatedAtTime",
         "stableTargetId"
     ],
