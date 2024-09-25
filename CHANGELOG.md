@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- release script, creating merged-models. Merged models are written to a zip file,
+  together with the content of the following directories: i18n, fields, vocabularies.
 
 ### Changes
 
