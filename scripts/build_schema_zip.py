@@ -10,7 +10,7 @@ MODEL_DIR = REPO_ROOT / "mex" / "model"
 README = """\
 # MEx model
 
-Conceptual and machine-readable versions of the MEx metadata model.
+JSON schema files defining the MEx metadata model.
 
 ## project
 
