@@ -3,6 +3,8 @@ from pathlib import Path
 from typing import Any
 from zipfile import ZipFile
 
+MODEL_DIR = Path(__file__).parent.parent / "mex" / "model"
+
 
 def create_merged_entities() -> dict[str, dict[str, Any]]:
     """Create merged models out of models in `entities` folder.
@@ -15,7 +17,7 @@ def create_merged_entities() -> dict[str, dict[str, Any]]:
         mapping of source filenames to merged entities.
     """
     merged_entities = {}
-    for extracted_model_file in (Path(__file__).parent / "entities").glob("*.json"):
+    for extracted_model_file in (MODEL_DIR / "entities").glob("*.json"):
         if extracted_model_file.stem in [
             "concept",
             "concept-scheme",
@@ -45,14 +47,14 @@ def create_release_zip():
                 "merged_entities/" + filename, json.dumps(content, indent=4)
             )
         for directory in ["fields", "i18n", "vocabularies"]:
-            for _file in (Path(__file__).parent / directory).glob("*"):
+            for _file in (MODEL_DIR / directory).glob("*"):
                 if _file.stem in [
                     "concept-schemes",
                     "consent-status",
                     "consent-type",
                 ]:
                     continue
-                release_zip.write(_file, _file.relative_to(Path(__file__).parent))
+                release_zip.write(_file, _file.relative_to(MODEL_DIR))
 
 
 if __name__ == "__main__":
