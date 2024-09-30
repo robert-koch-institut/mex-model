@@ -50,8 +50,13 @@ Germany
 
 ## package
 
-This zip file holds the JSON schema, which represents the conceptual model in a format
-that can be used for technical implementation in applications.
+This zip file contains the JSON schema. We defined 1.
+`entities`, described by their properties, 2. `fields`, small objects, that are used as
+`$ref` for certain properties, 3. an `extension`, which contains additional properties,
+that are not in scope of the JSON schema definition, 4. `i18n` files, that hold
+translations of the properties and are to be used in the context of user interfaces
+and 5. `vocabularies`, which are used in context of the `entities`. A more detailed
+description of the model's context can be found in `/docs/index.md`.
 
 ## license
 
@@ -109,7 +114,7 @@ def create_schema_zip():
                 schema_zip.write(_file, _file.relative_to(MODEL_DIR))
         schema_zip.writestr("README.md", README)
         schema_zip.write(REPO_ROOT / "LICENSE", "LICENSE")
-        schema_zip.write(REPO_ROOT / "docs" / "index.md", "index.md")
+        schema_zip.write(REPO_ROOT / "docs" / "index.md", "docs/index.md")
 
 
 if __name__ == "__main__":
