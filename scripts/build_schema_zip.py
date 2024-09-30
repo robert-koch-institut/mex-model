@@ -34,18 +34,16 @@ def create_merged_entities() -> dict[str, dict[str, Any]]:
     return merged_entities
 
 
-def create_release_zip():
-    """Create release.zip archive.
+def create_schema_zip():
+    """Create schema.zip archive.
 
     The archive includes the merged entities, all vocabularies except "concept-schemes",
     "consent-status", and "consent-type", and all files from the "fields" and "i18n"
     directories.
     """
-    with ZipFile("release.zip", "w") as release_zip:
+    with ZipFile("schema.zip", "w") as schema_zip:
         for filename, content in create_merged_entities().items():
-            release_zip.writestr(
-                "merged_entities/" + filename, json.dumps(content, indent=4)
-            )
+            schema_zip.writestr("entities/" + filename, json.dumps(content, indent=4))
         for directory in ["fields", "i18n", "vocabularies"]:
             for _file in (MODEL_DIR / directory).glob("*"):
                 if _file.stem in [
@@ -54,8 +52,8 @@ def create_release_zip():
                     "consent-type",
                 ]:
                     continue
-                release_zip.write(_file, _file.relative_to(MODEL_DIR))
+                schema_zip.write(_file, _file.relative_to(MODEL_DIR))
 
 
 if __name__ == "__main__":
-    create_release_zip()
+    create_schema_zip()
