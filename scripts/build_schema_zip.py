@@ -44,7 +44,7 @@ def create_schema_zip():
     with ZipFile("schema.zip", "w") as schema_zip:
         for filename, content in create_merged_entities().items():
             schema_zip.writestr("entities/" + filename, json.dumps(content, indent=4))
-        for directory in ["fields", "i18n", "vocabularies"]:
+        for directory in ["extension", "fields", "i18n", "vocabularies"]:
             for _file in (MODEL_DIR / directory).glob("*"):
                 if _file.stem in [
                     "concept-schemes",
