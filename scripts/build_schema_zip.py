@@ -109,6 +109,7 @@ def create_schema_zip():
                 schema_zip.write(_file, _file.relative_to(MODEL_DIR))
         schema_zip.writestr("README.md", README)
         schema_zip.write(REPO_ROOT / "LICENSE", "LICENSE")
+        schema_zip.write(REPO_ROOT / "docs" / "index.md", "index.md")
 
 
 if __name__ == "__main__":
