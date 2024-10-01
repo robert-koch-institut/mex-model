@@ -422,7 +422,7 @@ msgid "isPartOf.description"
 msgstr "Diese Forschungsdaten bilden eine Untermenge der übergeordneten Forschungsdaten."
 
 msgid "issue.singular"
-msgstr "Issue"
+msgstr "Ausgabe"
 
 msgid "issue.description"
 msgstr "Die Ausgabe der Zeitschrift"
@@ -570,8 +570,13 @@ msgid_plural "publication.plural"
 msgstr[0] "Veröffentlichung"
 msgstr[1] "Veröffentlichungen"
 
+msgctxt "Activity"
 msgid "publication.description"
 msgstr "im Rahmen eines Forschungsprojektes/-vorhabens entstandene Veröffentlichung"
+
+msgctxt "Resource"
+msgid "publication.description"
+msgstr "mit den Forschungsdaten zusammenhängende Veröffentlichung"
 
 msgid "publicationYear.singular"
 msgstr "Veröffentlichungsjahr"
@@ -606,18 +611,14 @@ msgid "resourceCreationMethod.description"
 msgstr "Methode mit der die Forschungsdaten erzeugt werden"
 
 msgid "resourceTypeGeneral.singular"
-msgid_plural "resourceTypeGeneral.plural"
-msgstr[0] "Allgemeiner Forschungsdatentyp"
-msgstr[1] "Allgemeine Forschungsdatentypen"
+msgstr "Allgemeiner Forschungsdatentyp"
 
 msgid "resourceTypeGeneral.description"
 msgstr ""
 "Typ(en) der Forschungsdaten, z. B. Datensatz, Abbildung oder Softwarecode"
 
 msgid "resourceTypeSpecific.singular"
-msgid_plural "resourceTypeSpecific.plural"
-msgstr[0] "Spezifischer Forschunsdatentyp"
-msgstr[1] "Spezifischere Forschungsdatentypen"
+msgstr "Spezifischer Forschunsdatentyp"
 
 msgid "resourceTypeSpecific.description"
 msgstr ""
@@ -632,10 +633,10 @@ msgid "responsibleUnit.description"
 msgstr "Für das Projekt/Vorhaben verantwortliche(s) Fachgebiet(e)"
 
 msgid "rights.singular"
-msgstr "Rechte"
+msgstr "Nutzungsbedingungen"
 
 msgid "rights.description"
-msgstr "Informationen zu den Rechten dieser Forschungsdaten"
+msgstr "Informationen zu den Nutzungsbedingungen der Forschungsdaten"
 
 msgid "section.singular"
 msgstr "Kapitel"
@@ -709,15 +710,13 @@ msgid_plural "theme.plural"
 msgstr[0] "Thema"
 msgstr[1] "Themen"
 
+msgctxt "Activity"
+msgid "theme.desription"
+msgstr "bezeichnet die Hauptkategorie oder das zentrale Thema, dem das Vorhaben zugeordnet sind"
+
+msgctxt "Resource"
 msgid "theme.desription"
 msgstr "bezeichnet die Hauptkategorie oder das zentrale Thema, dem die Forschungsdaten zugeordnet sind"
-
-msgid "timePeriod.singular"
-msgstr "Zeitraum"
-
-msgctxt "Activity"
-msgid "timePeriod.description"
-msgstr "Laufzeit(en) oder Start eines Projektes"
 
 msgid "title.singular"
 msgstr "Titel"
