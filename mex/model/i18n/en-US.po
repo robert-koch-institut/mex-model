@@ -179,7 +179,7 @@ msgstr "Person(s) contributing to the research data"
 msgid "contributingUnit.singular"
 msgid_plural "contributingUnit.plural"
 msgstr[0] "Contributing RKI unit"
-msgstr[1] "Contributing RKI untis"
+msgstr[1] "Contributing RKI units"
 
 msgid "contributingUnit.description"
 msgstr "RKI unit(s) contributing to the research data"
@@ -342,17 +342,17 @@ msgstr ""
 "Name of the funder (e.g. research funds) or commissioner (e.g. federal "
 "mandate)"
 
-msgid "fundingProgram.singular"                                                                             # (ae) gab es noch nicht im Englischen; hinzugefügt
+msgid "fundingProgram.singular"
 msgstr "Funding program"
 
 msgid "fundingProgram.description"
-msgstr "The program in which the project is funded, e.g. Horizon Europe"                                    # (ae) bis hier hinzugefügt
+msgstr "The program in which the project is funded, e.g. Horizon Europe"
 
 msgid "givenName.singular"
 msgstr "First name"
 
 msgid "hasPersonalData.singular"
-msgstr "Personenbezogene Daten"
+msgstr "Personal data"
 
 msgid "hasPersonalData.description"
 msgstr ""
@@ -461,10 +461,6 @@ msgstr "Keywords describing the publication"
 msgctxt "Resource"
 msgid "keyword.description"
 msgstr "Keywords describing the research data"
-
-msgctxt "Activity"                                                                                          # msgctxt "Activity" und "Variable" gibt es nicht mehr im Deutschen; zu entfernen
-msgid "keyword.description"                                                                                 # zu entfernen
-msgstr "Keywords describing the project"                                                                      # zu entfernen
 
 msgid "label.singular"
 msgstr "Title"
@@ -600,7 +596,7 @@ msgstr[1] "Publications"
 
 msgctxt "Activity"
 msgid "publication.description"
-msgstr "Publication created within the scope of a research project/undertaking"
+msgstr "Publication created within the scope of a research project"
 
 msgctxt "Resource"
 msgid "publication.description"
