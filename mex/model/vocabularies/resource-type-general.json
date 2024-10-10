@@ -1,130 +1,69 @@
 [
     {
-        "identifier": "https://mex.rki.de/item/resource-type-general-1",
-        "inScheme": "https://mex.rki.de/item/resource-type-general",
-        "notation": "1.",
-        "prefLabel": {
-            "de": "Public Health Fachdaten",
-            "en": "Public Health Data"
-        }
-    },
-    {
         "identifier": "https://mex.rki.de/item/resource-type-general-2",
         "inScheme": "https://mex.rki.de/item/resource-type-general",
-        "notation": "2.",
         "prefLabel": {
-            "de": "Bioproben",
-            "en": "Biospecimen"
+            "de": "Proben",
+            "en": "Samples"
         }
     },
     {
-        "identifier": "https://mex.rki.de/item/resource-type-general-3",
-        "inScheme": "https://mex.rki.de/item/resource-type-general",
-        "notation": "3.",
-        "prefLabel": {
-            "de": "Studiendaten",
-            "en": "Survey data"
-        }
-    },
-    {
-        "broader": "https://mex.rki.de/item/resource-type-general-3",
         "definition": {
-            "de": "Über einen längeren Zeitraum angelegte Studie, mit dem Ziel kontinuierlich den Zustand und die Entwicklung der Gesundheit der Bevölkerung zu beobachten.",
-            "en": "Long-term study to obtain information about the state and development of the public's health continuously."
+            "de": "Eine Datensammlung ist die Gesamtheit aller in einem System erfassten bzw. zusammengeführten Daten.",
+            "en": "A data collection is the entirety of the data gathered or brought together in a system."
         },
-        "identifier": "https://mex.rki.de/item/resource-type-general-4",
+        "identifier": "https://mex.rki.de/item/resource-type-general-13",
         "inScheme": "https://mex.rki.de/item/resource-type-general",
-        "notation": "3.1",
         "prefLabel": {
-            "de": "Monitoring-Studie",
-            "en": "Monitoring Study"
+            "de": "Datensammlung",
+            "en": "Data collection"
         }
     },
     {
-        "broader": "https://mex.rki.de/item/resource-type-general-3",
         "definition": {
-            "de": "Untersuchung zur Abschätzung der Durchführbarkeit eines Vorhabens.",
-            "en": "Study to assess the practicability of a proposed project."
+            "de": "Ein Datensatz ist eine Auswahl von Daten, die für eine konkrete Fragestellung zusammengestellt wurden.",
+            "en": "A dataset is a selection of data that has been compiled for a specific question."
         },
-        "identifier": "https://mex.rki.de/item/resource-type-general-5",
+        "identifier": "https://mex.rki.de/item/resource-type-general-14",
         "inScheme": "https://mex.rki.de/item/resource-type-general",
-        "notation": "3.2",
         "prefLabel": {
-            "de": "Machbarkeitsstudie",
-            "en": "Feasibility Study"
+            "de": "Datensatz",
+            "en": "Dataset"
         }
     },
     {
-        "broader": "https://mex.rki.de/item/resource-type-general-3",
-        "definition": {
-            "de": "Ergänzende Studie zur Hauptuntersuchung.",
-            "en": "Additional study to the main study."
+        "identifier": "https://mex.rki.de/item/resource-type-general-15",
+        "inScheme": "https://mex.rki.de/item/resource-type-general",
+        "prefLabel": {
+            "de": "Text",
+            "en": "Text"
+        }
+    },
+    {
+        "altLabel": {
+            "de": "Bild"
         },
-        "identifier": "https://mex.rki.de/item/resource-type-general-6",
+        "identifier": "https://mex.rki.de/item/resource-type-general-16",
         "inScheme": "https://mex.rki.de/item/resource-type-general",
-        "notation": "3.3",
         "prefLabel": {
-            "de": "Add-on-Studie",
-            "en": "Add-on Study"
+            "de": "Abbildung",
+            "en": "Image"
         }
     },
     {
-        "broader": "https://mex.rki.de/item/resource-type-general-3",
-        "definition": {
-            "de": "Zeitlich begrenzte Kurzzeitstudie, um den aktuellen Stand zu einem Public Health Thema zu ermitteln.",
-            "en": "Limited short-time study, conducted to obtain information about a current public health topic."
-        },
-        "identifier": "https://mex.rki.de/item/resource-type-general-7",
+        "identifier": "https://mex.rki.de/item/resource-type-general-17",
         "inScheme": "https://mex.rki.de/item/resource-type-general",
-        "notation": "3.4",
         "prefLabel": {
-            "de": "Ad-hoc-Studie",
-            "en": "Ad hoc Study"
+            "de": "Softwarecode",
+            "en": "Software code"
         }
     },
     {
-        "identifier": "https://mex.rki.de/item/resource-type-general-8",
+        "identifier": "https://mex.rki.de/item/resource-type-general-18",
         "inScheme": "https://mex.rki.de/item/resource-type-general",
-        "notation": "4.",
         "prefLabel": {
-            "de": "Fragebogen",
-            "en": "Questionnaire"
-        }
-    },
-    {
-        "identifier": "https://mex.rki.de/item/resource-type-general-9",
-        "inScheme": "https://mex.rki.de/item/resource-type-general",
-        "notation": "1.1",
-        "prefLabel": {
-            "de": "Sequenzdaten",
-            "en": "Sequence data"
-        }
-    },
-    {
-        "identifier": "https://mex.rki.de/item/resource-type-general-10",
-        "inScheme": "https://mex.rki.de/item/resource-type-general",
-        "notation": "1.2",
-        "prefLabel": {
-            "de": "Surveillancedaten",
-            "en": "Surveillance data"
-        }
-    },
-    {
-        "identifier": "https://mex.rki.de/item/resource-type-general-11",
-        "inScheme": "https://mex.rki.de/item/resource-type-general",
-        "notation": "1.3",
-        "prefLabel": {
-            "de": "Meldedaten",
-            "en": "Notifiable Diseases Data"
-        }
-    },
-    {
-        "identifier": "https://mex.rki.de/item/resource-type-general-12",
-        "inScheme": "https://mex.rki.de/item/resource-type-general",
-        "notation": "1.4",
-        "prefLabel": {
-            "de": "Labordaten",
-            "en": "Laboratory data"
+            "de": "Sonstige",
+            "en": "Other"
         }
     }
 ]

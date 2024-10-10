@@ -1,14 +1,15 @@
 {
     "$id": "https://mex.rki.de/schema/entities/variable",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
-    "description": "A variable describes how the actual data is modeled. It specifies how the data is represented: as a set of predefined values and what kind of value is allowed.",
+    "description": " Variables are defined for the data-based evaluation of investigations (e.g. studies). A variable is characterized by its data type (e.g. integer, string, date) and value range. The variable can be either quantitative or qualitative, i.e. the value range can take numerical or categorical values.",
     "properties": {
         "belongsTo": {
             "default": [],
+            "description": "The variable group, the described variable is part of. Used to group variables together, depending on how they are structured in the primary source.",
             "items": {
                 "$ref": "/schema/entities/variable-group#/identifier"
             },
-            "sameAs": [
+            "subPropertyOf": [
                 "http://purl.org/dc/terms/isPartOf"
             ],
             "type": "array"
@@ -26,30 +27,37 @@
                 }
             ],
             "default": null,
+            "description": "An established standard to which the described resource conforms ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
             "sameAs": [
-                "http://purl.org/dc/terms/conformsTo"
+                "http://purl.org/dc/terms/conformsTo",
+                "https://schema.org/codingSystem"
             ]
         },
         "dataType": {
             "anyOf": [
                 {
-                    "$ref": "/schema/entities/concept#/identifier",
                     "examples": [
-                        "https://mex.rki.de/item/data-type-1"
+                        "integer",
+                        "string",
+                        "image",
+                        "int55",
+                        "number"
                     ],
-                    "useScheme": "https://mex.rki.de/item/data-type"
+                    "type": "string"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "subPropertyOf": [
-                "http://purl.org/dc/terms/type"
+            "description": "The defined data type of the variable.",
+            "sameAs": [
+                "http://www.w3.org/ns/csvw#datatype"
             ]
         },
         "description": {
             "default": [],
+            "description": "A description of the variable. How the variable is defined in the primary source.",
             "items": {
                 "$ref": "/schema/fields/text"
             },
@@ -60,28 +68,34 @@
         },
         "hadPrimarySource": {
             "$ref": "/schema/entities/primary-source#/identifier",
+            "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30 ](http://www.w3.org/TR/2013/REC-prov-o-20130430/)).",
             "sameAs": [
                 "http://www.w3.org/ns/prov#hadPrimarySource"
             ]
         },
         "identifier": {
             "$ref": "/schema/fields/identifier",
+            "description": "An unambiguous reference to the resource within a given context. Persistent identifiers should be provided as HTTP URIs ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
             "sameAs": [
                 "http://purl.org/dc/elements/1.1/identifier"
             ]
         },
         "identifierInPrimarySource": {
+            "description": "The identifier of the item used in the primary source.",
             "examples": [
                 "123456",
                 "item-501",
                 "D7/x4/zz.final3"
             ],
+            "maxLength": 1000,
             "minLength": 1,
+            "pattern": "^[^\\n\\r]+$",
             "type": "string"
         },
         "label": {
             "items": {
                 "$ref": "/schema/fields/text",
+                "description": "The name of the variable.",
                 "examples": [
                     {
                         "language": "de",
@@ -91,6 +105,7 @@
             },
             "minItems": 1,
             "sameAs": [
+                "http://purl.org/dc/terms/title",
                 "http://www.w3.org/2000/01/rdf-schema#label"
             ],
             "type": "array"
@@ -99,17 +114,19 @@
             "$ref": "/schema/fields/identifier"
         },
         "usedIn": {
+            "description": "The resource, the variable is used in.",
             "items": {
                 "$ref": "/schema/entities/resource#/identifier"
             },
             "minItems": 1,
-            "sameAs": [
+            "subPropertyOf": [
                 "http://purl.org/dc/terms/isPartOf"
             ],
             "type": "array"
         },
         "valueSet": {
             "default": [],
+            "description": "A set of predefined values as given in the primary source.",
             "items": {
                 "examples": [
                     "Ja, stark eingeschränkt",

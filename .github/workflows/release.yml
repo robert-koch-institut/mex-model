@@ -120,3 +120,11 @@ jobs:
           for filename in dist/*; do
             gh release upload ${{ needs.release.outputs.tag }} ${filename};
           done
+
+      - name: Create schema.zip file and add to github release
+        env:
+          GH_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
+          PDM_CHECK_UPDATE: False
+        run: |
+          pdm run python scripts/build_schema_zip.py
+          gh release upload ${{ needs.release.outputs.tag }} schema.zip
