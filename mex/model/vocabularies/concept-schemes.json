@@ -16,12 +16,28 @@
         "label": "Endpoint vocabulary"
     },
     {
-        "identifier": "https://mex.rki.de/item/data-processing-state",
-        "label": "Data processing state vocabulary"
+        "identifier": "https://mex.rki.de/item/bibliographic-resource-type",
+        "label": "Bibliographic resource type vocabulary"
     },
     {
-        "identifier": "https://mex.rki.de/item/data-type",
-        "label": "Datatype vocabulary"
+        "description": {
+            "de": "Dieses Vokabular basiert auf dem W3C Standard DPV, Data Privacy Vocabulary, verfügbar unter https://w3c.github.io/dpv/2.0/dpv/. Insbesondere auf der Klasse dpv:ConsentStatus und deren Subklassen.",
+            "en": "This vocabulary is based of the W3C Standard DPV, Data Privacy Vocabulary, avaiable at https://w3c.github.io/dpv/2.0/dpv/. Specifically dpv:ConsentStatus and its subclasses."
+        },
+        "identifier": "https://mex.rki.de/item/consent-status",
+        "label": "Consent status vocabulary"
+    },
+    {
+        "description": {
+            "de": "Dieses Vokabular basiert auf dem W3C Standard DPV, Data Privacy Vocabulary, verfügbar unter https://w3c.github.io/dpv/2.0/dpv/. Insbesondere auf der Klasse dpv:Consent und deren Subklassen.",
+            "en": "This vocabulary is based of the W3C Standard DPV, Data Privacy Vocabulary, avaiable at https://w3c.github.io/dpv/2.0/dpv/. Specifically dpv:Consent and its subclasses."
+        },
+        "identifier": "https://mex.rki.de/item/consent-type",
+        "label": "Consent type vocabulary"
+    },
+    {
+        "identifier": "https://mex.rki.de/item/data-processing-state",
+        "label": "Data processing state vocabulary"
     },
     {
         "description": {
@@ -50,6 +66,14 @@
         },
         "identifier": "https://mex.rki.de/item/mime-type",
         "label": "MIME type vocabulary based on IANA media types"
+    },
+    {
+        "identifier": "https://mex.rki.de/item/personal-data",
+        "label": "Personal Data"
+    },
+    {
+        "identifier": "https://mex.rki.de/item/resource-creation-method",
+        "label": "Resource creation method vocabulary"
     },
     {
         "identifier": "https://mex.rki.de/item/resource-type-general",
