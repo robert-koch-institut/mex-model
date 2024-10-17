@@ -1,7 +1,7 @@
 [project]
 name = "mex-model"
 version = "2.5.0"
-description = "Conceptual and machine-readable versions of the MEx metadata model."
+description = "JSON schema files defining the MEx metadata model."
 authors = [{ name = "MEx Team", email = "mex@rki.de" }]
 readme = { file = "README.md", content-type = "text/markdown" }
 license = { file = "LICENSE" }
