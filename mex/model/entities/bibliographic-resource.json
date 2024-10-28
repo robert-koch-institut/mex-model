@@ -381,7 +381,7 @@
             "sameAs": "http://purl.org/dc/terms/publisher",
             "type": "array"
         },
-        "respositoryURL": {
+        "repositoryURL": {
             "anyOf": [
                 {
                     "$ref": "/schema/fields/link"

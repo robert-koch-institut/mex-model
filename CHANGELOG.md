@@ -17,15 +17,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- fix typo in `BibliographicResource.repositoryURL`
+
 ### Security
 
 ## [3.0.0] - 2024-10-28
 
 ### Added
+
 - release script, creating merged-models. Merged models are written to a zip file,
   together with the content of the following directories: i18n, fields, vocabularies.
 
 ## [2.5.0] - 2024-06-14
+
+### Changes
+
+- update versions and dependencies
 
 ## [2.4.0] - 2024-05-29
 
