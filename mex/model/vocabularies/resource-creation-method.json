@@ -1,0 +1,58 @@
+[
+    {
+        "identifier": "https://mex.rki.de/item/resource-creation-method-1",
+        "inScheme": "https://mex.rki.de/item/resource-creation-method",
+        "prefLabel": {
+            "de": "Sonstige",
+            "en": "Other"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/resource-creation-method-2",
+        "inScheme": "https://mex.rki.de/item/resource-creation-method",
+        "prefLabel": {
+            "de": "Studien, Umfragen und Interviews",
+            "en": "Studies, surveys and interviews"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/resource-creation-method-3",
+        "inScheme": "https://mex.rki.de/item/resource-creation-method",
+        "prefLabel": {
+            "de": "Surveillance",
+            "en": "Surveillance"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/resource-creation-method-4",
+        "inScheme": "https://mex.rki.de/item/resource-creation-method",
+        "prefLabel": {
+            "de": "Labortests",
+            "en": "Laboratory tests"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/resource-creation-method-5",
+        "inScheme": "https://mex.rki.de/item/resource-creation-method",
+        "prefLabel": {
+            "de": "Sequenzierung",
+            "en": "Sequencing"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/resource-creation-method-6",
+        "inScheme": "https://mex.rki.de/item/resource-creation-method",
+        "prefLabel": {
+            "de": "Register",
+            "en": "Registry"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/resource-creation-method-7",
+        "inScheme": "https://mex.rki.de/item/resource-creation-method",
+        "prefLabel": {
+            "de": "Modelle und Simulationen",
+            "en": "Models and simulations"
+        }
+    }
+]

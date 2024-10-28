@@ -1,0 +1,40 @@
+[
+    {
+        "definition": {
+            "de": "Der Status besagt, dass die Daten nicht prozessiert werden dürfen.",
+            "en": "States of consent that cannot be used as valid justifications for processing data."
+        },
+        "exactMatch": [
+            "https://w3id.org/dpv#ConsentStatusInvalidForProcessing"
+        ],
+        "identifier": "https://mex.rki.de/item/consent-status-1",
+        "inScheme": "https://mex.rki.de/item/consent-status",
+        "note": {
+            "de": "Der Status ist assoziert mit Formen der (nicht gegebenen) Einwilligung, die eine Prozessierung untersagen.",
+            "en": "This identifies the stages associated with consent that should not be used to process data."
+        },
+        "prefLabel": {
+            "de": "Prozessieren unzulässig",
+            "en": "Invalid for Processing"
+        }
+    },
+    {
+        "definition": {
+            "de": "Der Status besagt, dass die Daten prozessiert werden dürfen.",
+            "en": "States of consent that can be used as valid justifications for processing data."
+        },
+        "exactMatch": [
+            "https://w3id.org/dpv#ConsentStatusValidForProcessing"
+        ],
+        "identifier": "https://mex.rki.de/item/consent-status-2",
+        "inScheme": "https://mex.rki.de/item/consent-status",
+        "note": {
+            "de": "In der Praxis ist die einzige Form eines zulässigen Prozessierungsstatus, eine gegebene Einwilligung.'",
+            "en": "Practically, given consent is the only valid state for processing."
+        },
+        "prefLabel": {
+            "de": "Prozessieren zulässig",
+            "en": "Valid for Processing"
+        }
+    }
+]
