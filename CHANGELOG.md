@@ -17,9 +17,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- fix typo in `BibliographicResource.repositoryURL`
-
 ### Security
+
+## [3.1.0] - 2024-10-28
+
+### Fixed
+
+- fix typo in `BibliographicResource.repositoryURL`
 
 ## [3.0.0] - 2024-10-28
 
