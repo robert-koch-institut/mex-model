@@ -38,13 +38,14 @@ data Findable, Accessible, Interoperable and Reusable.
 **Contact** \
 For more information, please feel free to email us at [mex@rki.de](mailto:mex@rki.de).
 
-### Publisher of this document
+### Publisher
+
 **Robert Koch-Institut** \
 Nordufer 20 \
 13353 Berlin \
 Germany
 
-## package
+## Package
 
 Our metadata model is represented as JSON schema in `mex/model`. There, we defined 1.
 `entities`, described by their properties, 2. `fields`, small objects, that are used as
