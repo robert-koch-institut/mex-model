@@ -55,14 +55,14 @@ translations of the properties and are to be used in the context of user interfa
 and 5. `vocabularies`, which are used in context of the `entities`. A more detailed
 description of the model's context can be found in `/docs/index.md`.
 
-## license
+## License
 
 This package is licensed under the [MIT license](/LICENSE). All other software
 components of the MEx project are open-sourced under the same license as well.
 
-## development
+## Development
 
-### installation
+### Installation
 
 - on unix, consider using pyenv https://github.com/pyenv/pyenv
   - get pyenv `curl https://pyenv.run | bash`
@@ -75,11 +75,11 @@ components of the MEx project are open-sourced under the same license as well.
   - switch version `pyenv global 3.11`
   - run `.\mex.bat install`
 
-### linting and testing
+### Linting and testing
 
 - run all linters with `pdm lint`
 
-### updating dependencies
+### Updating dependencies
 
 - update boilerplate files with `cruft update`
 - update global requirements in `requirements.txt` manually
@@ -87,7 +87,7 @@ components of the MEx project are open-sourced under the same license as well.
 - update package dependencies using `pdm update-all`
 - update github actions in `.github/workflows/*.yml` manually
 
-### creating release
+### Creating release
 
 - run `pdm release RULE` to release a new version where RULE determines which part of
   the version to update and is one of `major`, `minor`, `patch`.
