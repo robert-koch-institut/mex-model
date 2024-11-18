@@ -10,6 +10,7 @@ requires-python = ">=3.11,<3.13"
 dependencies = []
 optional-dependencies.dev = [
     "ipdb>=0.13,<1",
+    "mypy>=1,<2",
     "myst-parser>=4,<5",
     "ruff>=0.7,<1",
     "sphinx>=8,<9",
@@ -35,6 +36,9 @@ doc = { composite = ["sphinx"] }
 wheel = { cmd = "pdm build --no-sdist" }
 lint = { cmd = "pre-commit run --all-files" }
 all = { composite = ["install-all", "lint", "doc"] }
+
+[tool.pydantic-mypy]
+warn_untyped_fields = true
 
 [tool.ruff]
 fix = true
@@ -105,5 +109,5 @@ known-first-party = ["mex", "tests"]
 convention = "google"
 
 [build-system]
-requires = ["pdm-backend==2.4.3"]
+requires = ["pdm-backend==2.4.1"]
 build-backend = "pdm.backend"

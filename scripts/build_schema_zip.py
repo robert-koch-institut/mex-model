@@ -12,7 +12,7 @@ README = """\
 
 JSON schema files defining the MEx metadata model.
 
-## project
+## Project
 
 The Metadata Exchange (MEx) project is committed to improve the retrieval of RKI
 research data and projects. How? By focusing on metadata: instead of providing the
@@ -36,33 +36,34 @@ For further details, please consult our
 [project page](https://www.rki.de/DE/Content/Forsch/MEx/MEx_node.html).
 
 [^1]: FAIR is referencing the so-called
-[FAIR data principles](https://www.go-fair.org/fair-principles/) - guidelines to make
+[FAIR data principles](https://www.go-fair.org/fair-principles/) \u2013 guidelines to make
 data Findable, Accessible, Interoperable and Reusable.
 
 **Contact** \
 For more information, please feel free to email us at [mex@rki.de](mailto:mex@rki.de).
 
-### Publisher of this document
+### Publisher
+
 **Robert Koch-Institut** \
 Nordufer 20 \
 13353 Berlin \
 Germany
 
-## package
+## Package
 
-This zip file contains the JSON schema. We defined 1.
+Our metadata model is represented as JSON schema in `mex/model`. There, we defined 1.
 `entities`, described by their properties, 2. `fields`, small objects, that are used as
 `$ref` for certain properties, 3. an `extension`, which contains additional properties,
 that are not in scope of the JSON schema definition, 4. `i18n` files, that hold
-translations of the properties and are to be used in the context of user interfaces
-and 5. `vocabularies`, which are used in context of the `entities`. A more detailed
+translations of the properties and are to be used in the context of user interfaces and
+5. `vocabularies`, which are used in context of the `entities`. A more detailed
 description of the model's context can be found in `/docs/index.md`.
 
-## license
+## License
 
 This package is licensed under the [MIT license](/LICENSE). All other software
 components of the MEx project are open-sourced under the same license as well.
-"""
+"""  # noqa: E501
 
 
 def create_merged_entities() -> dict[str, dict[str, Any]]:
@@ -93,7 +94,7 @@ def create_merged_entities() -> dict[str, dict[str, Any]]:
     return merged_entities
 
 
-def create_schema_zip():
+def create_schema_zip() -> None:
     """Create schema.zip archive.
 
     The archive includes the merged entities, all vocabularies except "concept-schemes",
