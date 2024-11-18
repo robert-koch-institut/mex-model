@@ -1,4 +1,5 @@
-# MEx Metadata Schema
+MEx Metadata Schema
+===================
 
 The MEx metadata schema is used to catalog Public Health data, resources and activities of the [Robert Koch Institute (RKI)](https://www.rki.de) - the federal Public Health institute of Germany - with the goal of making them findable and accessible via a web application.
 
@@ -8,3 +9,5 @@ To achieve this, we provide detailed information about the data in the form of v
 
 To collect information, MEx uses a mixed approach: In addition to manually compiling, we also automatically extract information from various primary sources managed by the RKI departments.
 To model this, we rely on the W3C recommendations [DCAT](https://www.w3.org/TR/vocab-dcat-2/) and [PROV-O](http://www.w3.org/TR/prov-o/).
+
+.. jsonschema:: mex/model/entities/activity.json
