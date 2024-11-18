@@ -78,6 +78,7 @@ select = ["ALL"]
 [tool.ruff.lint.per-file-ignores]
 "docs/**" = [
     "INP001",   # Docs folder does not need to be a package
+    "SLF001",   # Allow accessing private members to customize extensions
 ]
 "scripts/**" = [
     "INP001",   # Scripts folder does not need to be a package

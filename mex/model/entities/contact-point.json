@@ -1,4 +1,5 @@
 {
+    "$$target": "/schema/entities/contact-point#/identifier",
     "$id": "https://mex.rki.de/schema/entities/contact-point",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "description": "A mail address, where a group of people has access to.",

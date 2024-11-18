@@ -1,4 +1,5 @@
 {
+    "$$target": "/schema/fields/identifier",
     "$id": "https://mex.rki.de/schema/fields/identifier",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "examples": [

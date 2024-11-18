@@ -1,4 +1,5 @@
 {
+    "$$target": "/schema/entities/concept#/identifier",
     "$id": "https://mex.rki.de/schema/entities/concept",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "properties": {
