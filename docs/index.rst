@@ -9,5 +9,3 @@ To achieve this, we provide detailed information about the data in the form of v
 
 To collect information, MEx uses a mixed approach: In addition to manually compiling, we also automatically extract information from various primary sources managed by the RKI departments.
 To model this, we rely on the W3C recommendations [DCAT](https://www.w3.org/TR/vocab-dcat-2/) and [PROV-O](http://www.w3.org/TR/prov-o/).
-
-.. openapi:: swagger.yml
