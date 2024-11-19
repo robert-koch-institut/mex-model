@@ -9,12 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- add "$$target" property to model, to help with de-referencing
-
 ### Changes
-
-- setup json-schema rendering for sphinx docs
-- fix cruft diffs in README, pyproject and requirements
 
 ### Deprecated
 
@@ -23,6 +18,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+## [3.3.0] - 2024-11-19
+
+### Added
+
+- add "$$target" property to model, to help with de-referencing
+
+### Changes
+
+- setup json-schema rendering for sphinx docs
+- fix cruft diffs in README, pyproject and requirements
 
 ## [3.2.0] - 2024-11-18
 
