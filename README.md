@@ -53,7 +53,7 @@ Our metadata model is represented as JSON schema in `mex/model`. There, we defin
 that are not in scope of the JSON schema definition, 4. `i18n` files, that hold
 translations of the properties and are to be used in the context of user interfaces and
 5. `vocabularies`, which are used in context of the `entities`. A more detailed
-description of the model's context can be found in `/docs/index.md`.
+description of the model's context can be found in `/docs/index.rst`.
 
 ## License
 

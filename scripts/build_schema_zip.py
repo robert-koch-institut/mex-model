@@ -57,7 +57,7 @@ Our metadata model is represented as JSON schema in `mex/model`. There, we defin
 that are not in scope of the JSON schema definition, 4. `i18n` files, that hold
 translations of the properties and are to be used in the context of user interfaces and
 5. `vocabularies`, which are used in context of the `entities`. A more detailed
-description of the model's context can be found in `/docs/index.md`.
+description of the model's context can be found in `/docs/index.rst`.
 
 ## License
 
@@ -115,7 +115,7 @@ def create_schema_zip() -> None:
                 schema_zip.write(_file, _file.relative_to(MODEL_DIR))
         schema_zip.writestr("README.md", README)
         schema_zip.write(REPO_ROOT / "LICENSE", "LICENSE")
-        schema_zip.write(REPO_ROOT / "docs" / "index.md", "docs/index.md")
+        schema_zip.write(REPO_ROOT / "docs" / "index.rst", "docs/index.rst")
 
 
 if __name__ == "__main__":
