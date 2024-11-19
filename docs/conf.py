@@ -40,6 +40,7 @@ templates_path = ["."]
 
 
 def _patched_sphinx_jsonschema_simpletype(self, schema):
+    """Render the `useScheme` schema properties for every vocabulary type."""
     rows = _original_sphinx_jsonschema_simpletype(self, schema)
     if "useScheme" in schema:
         scheme = schema.pop("useScheme")
@@ -48,6 +49,7 @@ def _patched_sphinx_jsonschema_simpletype(self, schema):
 
 
 def _patched_sphinx_jsonschema_kvpairs(self, schema, keys):
+    """Render `default` and `pattern` schema properties as inline code-blocks."""
     for k in keys:
         if k in schema:
             value = schema[k]
