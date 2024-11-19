@@ -1,4 +1,5 @@
 {
+    "$$target": "/schema/entities/organizational-unit#/identifier",
     "$id": "https://mex.rki.de/schema/entities/organizational-unit",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "description": "An Organization such as a department or support unit which is part of some larger Organization and only has full recognition within the context of that Organization. In particular the unit would not be regarded as a legal entity in its own right.",

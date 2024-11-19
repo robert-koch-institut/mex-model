@@ -1,4 +1,5 @@
 {
+    "$$target": "/schema/entities/person#/identifier",
     "$id": "https://mex.rki.de/schema/entities/person",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "description": "A person ([FOAF, 2004-05-01](http://xmlns.com/foaf/0.1/)). This class comprises real persons who live or are assumed to have lived ([CIDOC CRM, version 7.1.1](https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html)).",

@@ -6,13 +6,14 @@ authors = [{ name = "MEx Team", email = "mex@rki.de" }]
 readme = { file = "README.md", content-type = "text/markdown" }
 license = { file = "LICENSE" }
 urls = { Repository = "https://github.com/robert-koch-institut/mex-model" }
-requires-python = "<3.13,>=3.11"
+requires-python = ">=3.11,<3.13"
 dependencies = []
 optional-dependencies.dev = [
-    "ipdb>=0.13.1,<1",
-    "myst-parser>=4.0.0,<5",
-    "ruff>=0.5.4,<1",
-    "sphinx>=7.4.5,<8",
+    "ipdb>=0.13,<1",
+    "mypy>=1,<2",
+    "ruff>=0.7,<1",
+    "sphinx-jsonschema>=1,<2",
+    "sphinx>=8.1,<9"
 ]
 
 [tool.cruft]
@@ -28,13 +29,16 @@ distribution = true
 [tool.pdm.scripts]
 update-all = { cmd = "pdm update --group :all --update-all --save-compatible" }
 lock-all = { cmd = "pdm lock --group :all --refresh" }
-install-all = { cmd = "pdm install --group :all --no-editable --no-lock" }
+install-all = { cmd = "pdm install --group :all --no-editable --frozen-lockfile" }
 export-all = { cmd = "pdm export --group :all --no-hashes -f requirements" }
 sphinx = { cmd = "pdm run sphinx-build -aE -b dirhtml docs docs/dist" }
 doc = { composite = ["sphinx"] }
 wheel = { cmd = "pdm build --no-sdist" }
 lint = { cmd = "pre-commit run --all-files" }
 all = { composite = ["install-all", "lint", "doc"] }
+
+[tool.pydantic-mypy]
+warn_untyped_fields = true
 
 [tool.ruff]
 fix = true
@@ -74,6 +78,7 @@ select = ["ALL"]
 [tool.ruff.lint.per-file-ignores]
 "docs/**" = [
     "INP001",   # Docs folder does not need to be a package
+    "SLF001",   # Allow accessing private members to customize extensions
 ]
 "scripts/**" = [
     "INP001",   # Scripts folder does not need to be a package

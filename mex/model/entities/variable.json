@@ -1,4 +1,5 @@
 {
+    "$$target": "/schema/entities/variable#/identifier",
     "$id": "https://mex.rki.de/schema/entities/variable",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "description": " Variables are defined for the data-based evaluation of investigations (e.g. studies). A variable is characterized by its data type (e.g. integer, string, date) and value range. The variable can be either quantitative or qualitative, i.e. the value range can take numerical or categorical values.",

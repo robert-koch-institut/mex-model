@@ -9,7 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- add "$$target" property to model, to help with de-referencing
+
 ### Changes
+
+- setup json-schema rendering for sphinx docs
+- fix cruft diffs in README, pyproject and requirements
 
 ### Deprecated
 
