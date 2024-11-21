@@ -1,5 +1,11 @@
 [
     {
+        "altLabel": [
+            {
+                "de": "Word Dokument",
+                "en": "Word document"
+            }
+        ],
         "exactMatch": [
             "https://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.wordprocessingml.document"
         ],
@@ -22,6 +28,12 @@
         }
     },
     {
+        "altLabel": [
+            {
+                "de": "Powerpoint Präsentation",
+                "en": "Powerpoint presentation"
+            }
+        ],
         "exactMatch": [
             "https://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.presentationml.presentation"
         ],
@@ -33,6 +45,15 @@
         }
     },
     {
+        "altLabel": [
+            {
+                "en": "application/pdf"
+            },
+            {
+                "de": "PDF",
+                "en": "PDF"
+            }
+        ],
         "exactMatch": [
             "https://www.iana.org/assignments/media-types/application/pdf"
         ],
@@ -66,6 +87,17 @@
         }
     },
     {
+        "altLabel": [
+            {
+                "en": "text/csv"
+            },
+            {
+                "en": "text/comma-separated-values"
+            },
+            {
+                "en": "comma-separated-values"
+            }
+        ],
         "exactMatch": [
             "https://www.iana.org/assignments/media-types/text/csv"
         ],
@@ -121,6 +153,14 @@
         }
     },
     {
+        "altLabel": [
+            {
+                "en": "fastq"
+            }
+        ],
+        "definition": {
+            "en": "FASTQ format is a text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores. Both the sequence letter and quality score are each encoded with a single ASCII character for brevity. "
+        },
         "exactMatch": [
             "http://maq.sourceforge.net/fastq.shtml"
         ],
@@ -129,6 +169,139 @@
         "prefLabel": {
             "de": "FASTQ",
             "en": "FASTQ"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "en": "text/tab-separated-values"
+            },
+            {
+                "en": "tab-separated-values"
+            }
+        ],
+        "exactMatch": [
+            "https://www.iana.org/assignments/media-types/text/tab-separated-values"
+        ],
+        "identifier": "https://mex.rki.de/item/mime-type-13",
+        "inScheme": "https://mex.rki.de/item/mime-type",
+        "prefLabel": {
+            "de": "tsv",
+            "en": "tsv"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "Powerpoint Präsentation",
+                "en": "Powerpoint presentation"
+            }
+        ],
+        "exactMatch": [
+            "https://www.iana.org/assignments/media-types/application/vnd.ms-powerpoint"
+        ],
+        "identifier": "https://mex.rki.de/item/mime-type-14",
+        "inScheme": "https://mex.rki.de/item/mime-type",
+        "prefLabel": {
+            "de": "ppt",
+            "en": "ppt"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "Excel",
+                "en": "Excel spreadsheet"
+            }
+        ],
+        "exactMatch": [
+            "https://www.iana.org/assignments/media-types/application/vnd.ms-excel"
+        ],
+        "identifier": "https://mex.rki.de/item/mime-type-15",
+        "inScheme": "https://mex.rki.de/item/mime-type",
+        "prefLabel": {
+            "de": "xls",
+            "en": "xls"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "en": "application/zip"
+            },
+            {
+                "en": "ZIP"
+            },
+            {
+                "de": "ZIP Datei",
+                "en": "ZIP file"
+            }
+        ],
+        "exactMatch": [
+            "https://www.iana.org/assignments/media-types/application/zip"
+        ],
+        "identifier": "https://mex.rki.de/item/mime-type-16",
+        "inScheme": "https://mex.rki.de/item/mime-type",
+        "prefLabel": {
+            "de": "zip",
+            "en": "zip"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "en": "application/gzip"
+            },
+            {
+                "en": "gzip"
+            }
+        ],
+        "exactMatch": [
+            "https://www.iana.org/assignments/media-types/application/gzip"
+        ],
+        "identifier": "https://mex.rki.de/item/mime-type-17",
+        "inScheme": "https://mex.rki.de/item/mime-type",
+        "prefLabel": {
+            "de": "tar.gz",
+            "en": "tar.gz"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "en": "text/html"
+            },
+            {
+                "en": "HTML"
+            }
+        ],
+        "exactMatch": [
+            "https://www.iana.org/assignments/media-types/text/html"
+        ],
+        "identifier": "https://mex.rki.de/item/mime-type-18",
+        "inScheme": "https://mex.rki.de/item/mime-type",
+        "prefLabel": {
+            "de": "html",
+            "en": "html"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "en": "application/json"
+            },
+            {
+                "en": "JSON"
+            }
+        ],
+        "exactMatch": [
+            "https://www.iana.org/assignments/media-types/application/json"
+        ],
+        "identifier": "https://mex.rki.de/item/mime-type-19",
+        "inScheme": "https://mex.rki.de/item/mime-type",
+        "prefLabel": {
+            "de": "json",
+            "en": "json"
         }
     }
 ]
