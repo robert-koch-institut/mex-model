@@ -215,14 +215,14 @@
         },
         "title": {
             "description": "The name of the distribution.",
-            "examples": [
-                "theNameOfTheFile"
-            ],
-            "minLength": 1,
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "minItems": 1,
             "sameAs": [
                 "http://purl.org/dc/terms/title"
             ],
-            "type": "string"
+            "type": "array"
         }
     },
     "required": [
