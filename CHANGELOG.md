@@ -11,8 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- type of Distribution.title is now a Text array field, instead of single string
-
 ### Deprecated
 
 ### Removed
@@ -20,6 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+## [3.4.0] - 2024-12-18
+
+### Changes
+
+- type of Distribution.title is now a Text array field, instead of single string
 
 ## [3.3.2] - 2024-11-19
 
