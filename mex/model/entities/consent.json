@@ -1,4 +1,5 @@
 {
+    "$$target": "/schema/entities/consent#/identifier",
     "$comment": "In our case, the 'specified process or activity' is the publication of contact details of a person (e.g. name and email address) in our metadata catalog. ",
     "$id": "https://mex.rki.de/schema/entities/consent",
     "$schema": "http://json-schema.org/draft/2020-12/schema",

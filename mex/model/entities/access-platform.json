@@ -1,4 +1,5 @@
 {
+    "$$target": "/schema/entities/access-platform#/identifier",
     "$id": "https://mex.rki.de/schema/entities/access-platform",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "description": "A technical system or service that provides access to distributions or resources.",

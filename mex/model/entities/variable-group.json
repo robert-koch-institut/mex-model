@@ -1,4 +1,5 @@
 {
+    "$$target": "/schema/entities/variable-group#/identifier",
     "$id": "https://mex.rki.de/schema/entities/variable-group",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "description": "The grouping of variables according to a certain aspect, e.g. how the information is modelled in the primary source.",

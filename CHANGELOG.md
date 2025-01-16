@@ -19,6 +19,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [3.4.0] - 2024-12-18
+
+### Changes
+
+- type of Distribution.title is now a Text array field, instead of single string
+
+## [3.3.2] - 2024-11-19
+
+### Fixed
+
+- fixed sidebar links in sphinx docs
+
+## [3.3.1] - 2024-11-19
+
+### Fixed
+
+- fixed index.rst file name
+
+## [3.3.0] - 2024-11-19
+
+### Added
+
+- add "$$target" property to model, to help with de-referencing
+
+### Changes
+
+- setup json-schema rendering for sphinx docs
+- fix cruft diffs in README, pyproject and requirements
+
+## [3.2.0] - 2024-11-18
+
 ## [3.1.0] - 2024-10-28
 
 ### Fixed

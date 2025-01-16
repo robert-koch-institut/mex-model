@@ -8,7 +8,7 @@ JSON schema files defining the MEx metadata model.
 [![linting](https://github.com/robert-koch-institut/mex-model/actions/workflows/linting.yml/badge.svg)](https://github.com/robert-koch-institut/mex-model/actions/workflows/linting.yml)
 [![open-code](https://github.com/robert-koch-institut/mex-model/actions/workflows/open-code.yml/badge.svg)](https://gitlab.opencode.de/robert-koch-institut/mex/mex-model)
 
-## project
+## Project
 
 The Metadata Exchange (MEx) project is committed to improve the retrieval of RKI
 research data and projects. How? By focusing on metadata: instead of providing the
@@ -51,18 +51,18 @@ Our metadata model is represented as JSON schema in `mex/model`. There, we defin
 `entities`, described by their properties, 2. `fields`, small objects, that are used as
 `$ref` for certain properties, 3. an `extension`, which contains additional properties,
 that are not in scope of the JSON schema definition, 4. `i18n` files, that hold
-translations of the properties and are to be used in the context of user interfaces
-and 5. `vocabularies`, which are used in context of the `entities`. A more detailed
-description of the model's context can be found in `/docs/index.md`.
+translations of the properties and are to be used in the context of user interfaces and
+5. `vocabularies`, which are used in context of the `entities`. A more detailed
+description of the model's context can be found in `/docs/index.rst`.
 
-## license
+## License
 
 This package is licensed under the [MIT license](/LICENSE). All other software
 components of the MEx project are open-sourced under the same license as well.
 
-## development
+## Development
 
-### installation
+### Installation
 
 - on unix, consider using pyenv https://github.com/pyenv/pyenv
   - get pyenv `curl https://pyenv.run | bash`
@@ -75,11 +75,11 @@ components of the MEx project are open-sourced under the same license as well.
   - switch version `pyenv global 3.11`
   - run `.\mex.bat install`
 
-### linting and testing
+### Linting and testing
 
 - run all linters with `pdm lint`
 
-### updating dependencies
+### Updating dependencies
 
 - update boilerplate files with `cruft update`
 - update global requirements in `requirements.txt` manually
@@ -87,7 +87,7 @@ components of the MEx project are open-sourced under the same license as well.
 - update package dependencies using `pdm update-all`
 - update github actions in `.github/workflows/*.yml` manually
 
-### creating release
+### Creating release
 
 - run `pdm release RULE` to release a new version where RULE determines which part of
   the version to update and is one of `major`, `minor`, `patch`.

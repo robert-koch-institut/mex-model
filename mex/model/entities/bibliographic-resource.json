@@ -1,4 +1,5 @@
 {
+    "$$target": "/schema/entities/bibliographic-resource#/identifier",
     "$id": "https://mex.rki.de/schema/entities/bibliographic-resource",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "description": "A book, article, or other documentary resource.",

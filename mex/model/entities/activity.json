@@ -1,4 +1,5 @@
 {
+    "$$target": "/schema/entities/activity#/identifier",
     "$id": "https://mex.rki.de/schema/entities/activity",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "description": "An activity carried out by RKI. This may be a research activity, such as a funded project, or a task that RKI performs under federal law.  Activities provide useful context information for resources.",
