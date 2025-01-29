@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- make altLabel property for vocabularies always a list
+
 ### Security
 
 ## [3.5.0] - 2025-01-29

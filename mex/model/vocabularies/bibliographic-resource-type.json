@@ -1,9 +1,11 @@
 [
     {
-        "altLabel": {
-            "de": "Monografie",
-            "en": "Monograph"
-        },
+        "altLabel": [
+            {
+                "de": "Monografie",
+                "en": "Monograph"
+            }
+        ],
         "definition": {
             "de": "Eine Monographie.",
             "en": "A monograph."
@@ -21,9 +23,11 @@
         }
     },
     {
-        "altLabel": {
-            "en": "Book section"
-        },
+        "altLabel": [
+            {
+                "en": "Book section"
+            }
+        ],
         "definition": {
             "de": "Ein Teil eines Buches.",
             "en": "One of the sections into which a book is divided."
@@ -56,10 +60,12 @@
         }
     },
     {
-        "altLabel": {
-            "de": "Doktorarbeit",
-            "en": "Doctoral dissertation"
-        },
+        "altLabel": [
+            {
+                "de": "Doktorarbeit",
+                "en": "Doctoral dissertation"
+            }
+        ],
         "closeMatch": [
             "http://purl.org/ontology/bibo/Thesis"
         ],
@@ -78,10 +84,12 @@
         }
     },
     {
-        "altLabel": {
-            "de": "Habilitation",
-            "en": "Postdoctoral thesis"
-        },
+        "altLabel": [
+            {
+                "de": "Habilitation",
+                "en": "Postdoctoral thesis"
+            }
+        ],
         "closeMatch": [
             "http://purl.org/ontology/bibo/Thesis"
         ],
@@ -100,9 +108,11 @@
         }
     },
     {
-        "altLabel": {
-            "de": "Wissenschaftliche Fachzeitschrift"
-        },
+        "altLabel": [
+            {
+                "de": "Wissenschaftliche Fachzeitschrift"
+            }
+        ],
         "definition": {
             "de": "Zeitschrift, die regelmäßig wissenschaftliche Forschungsergebnisse veröffentlicht.",
             "en": "Periodical journal publishing scientific research."
@@ -118,10 +128,12 @@
         }
     },
     {
-        "altLabel": {
-            "de": "Wissenschaftlicher Artikel",
-            "en": "Paper"
-        },
+        "altLabel": [
+            {
+                "de": "Wissenschaftlicher Artikel",
+                "en": "Paper"
+            }
+        ],
         "definition": {
             "de": "Beitrag, der in einer wissenschaftlichen Zeitschrift veröffentlicht wurde.",
             "en": "Article published in an academic journal."
@@ -149,9 +161,11 @@
         }
     },
     {
-        "altLabel": {
-            "de": "Plakat"
-        },
+        "altLabel": [
+            {
+                "de": "Plakat"
+            }
+        ],
         "definition": {
             "de": "Eine Plakat mit ein Thema auf einer wissenschaftlichen Veranstaltung vermittelt wird.",
             "en": "A type of graphical image created to promote a topic on a scientific event."
@@ -183,10 +197,12 @@
         }
     },
     {
-        "altLabel": {
-            "de": "Vortrag",
-            "en": "Talk"
-        },
+        "altLabel": [
+            {
+                "de": "Vortrag",
+                "en": "Talk"
+            }
+        ],
         "definition": {
             "de": "Vortrag über ein Thema in begrenzter Zeit.",
             "en": "Process of presenting a topic to an audience."
@@ -229,10 +245,12 @@
         }
     },
     {
-        "altLabel": {
-            "de": "Studienabschlussarbeit",
-            "en": "Academic thesis"
-        },
+        "altLabel": [
+            {
+                "de": "Studienabschlussarbeit",
+                "en": "Academic thesis"
+            }
+        ],
         "definition": {
             "de": "Schriftliche Abschlussarbeit eines Studiengangs an einer Hochschule oder Berufsakademie",
             "en": "General term for a document submitted in support of candidature for an academic degree."
