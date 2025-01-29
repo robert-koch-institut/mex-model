@@ -1,9 +1,11 @@
 [
     {
-        "altLabel": {
-            "de": "RESTful API",
-            "en": "RESTful API"
-        },
+        "altLabel": [
+            {
+                "de": "RESTful API",
+                "en": "RESTful API"
+            }
+        ],
         "definition": {
             "de": "Representational State Transfer: Softwarearchitektur verteilter Systemen, insbesondere für Webservices.",
             "en": "Representational State Transfer: Software architectural style for decoupled components, especially web services."

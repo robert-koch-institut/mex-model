@@ -1,9 +1,11 @@
 [
     {
-        "altLabel": {
-            "de": "Primärdaten",
-            "en": "primary data"
-        },
+        "altLabel": [
+            {
+                "de": "Primärdaten",
+                "en": "primary data"
+            }
+        ],
         "definition": {
             "de": "Rohdaten oder Primärdaten sind diejenigen Daten, die bei einer Beobachtung, einer Messung oder einer Datenerhebung unmittelbar gewonnen werden und die noch unbearbeitet vorliegen.",
             "en": "Raw data or primary data are those data that are directly obtained during an observation, a measurement or a data collection and that are still available unprocessed."

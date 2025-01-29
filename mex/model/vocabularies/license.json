@@ -1,9 +1,11 @@
 [
     {
-        "altLabel": {
-            "de": "CC-BY-4.0",
-            "en": "CC-BY-4.0"
-        },
+        "altLabel": [
+            {
+                "de": "CC-BY-4.0",
+                "en": "CC-BY-4.0"
+            }
+        ],
         "exactMatch": [
             "https://creativecommons.org/licenses/by/4.0/legalcode"
         ],

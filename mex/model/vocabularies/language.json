@@ -1,9 +1,11 @@
 [
     {
-        "altLabel": {
-            "de": "de",
-            "en": "de"
-        },
+        "altLabel": [
+            {
+                "de": "de",
+                "en": "de"
+            }
+        ],
         "exactMatch": "",
         "identifier": "https://mex.rki.de/item/language-1",
         "inScheme": "https://mex.rki.de/item/language",
@@ -13,10 +15,12 @@
         }
     },
     {
-        "altLabel": {
-            "de": "en",
-            "en": "en"
-        },
+        "altLabel": [
+            {
+                "de": "en",
+                "en": "en"
+            }
+        ],
         "exactMatch": "",
         "identifier": "https://mex.rki.de/item/language-2",
         "inScheme": "https://mex.rki.de/item/language",
@@ -26,10 +30,12 @@
         }
     },
     {
-        "altLabel": {
-            "de": "fr",
-            "en": "fr"
-        },
+        "altLabel": [
+            {
+                "de": "fr",
+                "en": "fr"
+            }
+        ],
         "exactMatch": "",
         "identifier": "https://mex.rki.de/item/language-3",
         "inScheme": "https://mex.rki.de/item/language",

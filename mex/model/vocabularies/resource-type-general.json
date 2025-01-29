@@ -40,9 +40,11 @@
         }
     },
     {
-        "altLabel": {
-            "de": "Bild"
-        },
+        "altLabel": [
+            {
+                "de": "Bild"
+            }
+        ],
         "identifier": "https://mex.rki.de/item/resource-type-general-16",
         "inScheme": "https://mex.rki.de/item/resource-type-general",
         "prefLabel": {
