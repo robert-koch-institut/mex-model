@@ -11,17 +11,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- add new vocab items and altLabels to existing mimeTypes
-
 ### Deprecated
 
 ### Removed
 
 ### Fixed
 
-- fix gnd-id pattern for organization models
-
 ### Security
+
+## [3.5.0] - 2025-01-29
+
+### Changes
+
+- add new vocab items and altLabels to existing mimeTypes
+
+### Fixed
+
+- fix gnd-id pattern for organization models
 
 ## [3.4.0] - 2024-12-18
 
