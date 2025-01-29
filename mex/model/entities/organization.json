@@ -39,7 +39,7 @@
                     "https://d-nb.info/gnd/17690-4"
                 ],
                 "format": "uri",
-                "pattern": "^https://d\\-nb\\.info/gnd/[-X0-9]{3,10}$",
+                "pattern": "^https://d-nb\\.info/gnd/[-X0-9]{3,10}$",
                 "type": "string"
             },
             "sameAs": [
