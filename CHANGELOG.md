@@ -17,9 +17,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- expand the pattern for DOI Urls as these can also contain lowercase letters.
-
 ### Security
+
+## [3.5.2] - 2025-02-12
+
+### Fixed
+
+- expand the pattern for DOI Urls as these can also contain lowercase letters.
 
 ## [3.5.1] - 2025-01-29
 
