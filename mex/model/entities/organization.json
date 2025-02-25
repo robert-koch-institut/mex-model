@@ -161,9 +161,9 @@
             "description": "Identifier from Wikidata.",
             "items": {
                 "examples": [
-                    "http://www.wikidata.org/entity/Q679041",
-                    "https://www.wikidata.org/wiki/Q918501",
-                    "https://www.wikidata.org/wiki/Q491566"
+                    "https://www.wikidata.org/entity/Q679041",
+                    "https://www.wikidata.org/entity/Q918501",
+                    "https://www.wikidata.org/entity/Q491566"
                 ],
                 "format": "uri",
                 "pattern": "^https://www\\.wikidata\\.org/entity/[PQ\\d]{2,64}$",
