@@ -11,11 +11,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
+- BREAKING: update patterns for all URI-like field definitions and add more examples
+
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+- BREAKING: fixed patterns for `year_month`, concept/scheme `identifier` and link `url`
 
 ### Security
 

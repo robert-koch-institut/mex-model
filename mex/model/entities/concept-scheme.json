@@ -16,10 +16,10 @@
         "identifier": {
             "description": "An unambiguous reference to the resource within a given context. Persistent identifiers should be provided as HTTP URIs ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
             "examples": [
-                "https://mex.rki.de/item/Xc124df"
+                "https://mex.rki.de/item/some-scheme-5000"
             ],
             "format": "uri",
-            "pattern": "^https://mex\\.rki\\.de/item/[\\w\\d]+$",
+            "pattern": "^https://mex\\.rki\\.de/item/[-\\d\\w]+$",
             "sameAs": [
                 "http://purl.org/dc/elements/1.1/identifier"
             ],

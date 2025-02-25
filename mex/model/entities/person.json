@@ -114,10 +114,12 @@
             "description": "The ISNI (International Standard Name Identifier) of the person.",
             "items": {
                 "examples": [
-                    "https://isni.org/isni/0000000109403744"
+                    "https://isni.org/isni/0000000019240398",
+                    "https://isni.org/isni/0000000453907343",
+                    "https://isni.org/isni/0000000038086111"
                 ],
                 "format": "uri",
-                "pattern": "^https://isni\\.org/isni/[X0-9]{16}$",
+                "pattern": "^https://isni\\.org/isni/[X\\d]{16}$",
                 "type": "string"
             },
             "sameAs": [
@@ -141,10 +143,12 @@
             "description": "Identifier of a person from the ORCID authority file.",
             "items": {
                 "examples": [
-                    "https://orcid.org/0000-0002-9079-593X"
+                    "https://orcid.org/0000-0002-9079-593X",
+                    "https://orcid.org/0000-0003-2300-3928",
+                    "https://orcid.org/0000-0002-1335-4022"
                 ],
                 "format": "uri",
-                "pattern": "^https://orcid\\.org/[-X0-9]{9,21}$",
+                "pattern": "^https://orcid\\.org/[-X\\d]{9,21}$",
                 "type": "string"
             },
             "sameAs": [
