@@ -144,8 +144,8 @@
             "items": {
                 "examples": [
                     "https://viaf.org/viaf/123556639",
-                    "https://viaf.org/en/viaf/137080884",
-                    "https://viaf.org/en/viaf/122203699"
+                    "https://viaf.org/viaf/137080884",
+                    "https://viaf.org/viaf/122203699"
                 ],
                 "format": "uri",
                 "pattern": "^https://viaf\\.org/viaf/[\\d]{2,22}$",
