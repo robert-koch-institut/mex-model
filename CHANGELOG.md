@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- BREAKING: fixed patterns for `year_month`, concept/scheme `identifier` and link `url`
+
 ### Security
 
 ## [3.5.2] - 2025-02-12
