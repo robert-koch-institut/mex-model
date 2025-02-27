@@ -25,7 +25,7 @@
                     "https://gepris.dfg.de/gepris/institution/21091092"
                 ],
                 "format": "uri",
-                "pattern": "^https://gepris\\.dfg\\.de/gepris/institution/[\\d]{1,64}$",
+                "pattern": "^https://gepris\\.dfg\\.de/gepris/institution/[0-9]{1,64}$",
                 "type": "string"
             },
             "sameAs": [
@@ -43,7 +43,7 @@
                     "https://d-nb.info/gnd/4603236-8"
                 ],
                 "format": "uri",
-                "pattern": "^https://d-nb\\.info/gnd/[-X\\d]{3,10}$",
+                "pattern": "^https://d-nb\\.info/gnd/[-X0-9]{3,10}$",
                 "type": "string"
             },
             "sameAs": [
@@ -87,7 +87,7 @@
                     "https://isni.org/isni/0000000459040795"
                 ],
                 "format": "uri",
-                "pattern": "^https://isni\\.org/isni/[X\\d]{16}$",
+                "pattern": "^https://isni\\.org/isni/[X0-9]{16}$",
                 "type": "string"
             },
             "sameAs": [
@@ -116,7 +116,7 @@
                     "https://ror.org/04t3en479"
                 ],
                 "format": "uri",
-                "pattern": "^https://ror\\.org/[a-z\\d]{9}$",
+                "pattern": "^https://ror\\.org/[a-z0-9]{9}$",
                 "type": "string"
             },
             "sameAs": [
@@ -148,7 +148,7 @@
                     "https://viaf.org/viaf/122203699"
                 ],
                 "format": "uri",
-                "pattern": "^https://viaf\\.org/viaf/[\\d]{2,22}$",
+                "pattern": "^https://viaf\\.org/viaf/[0-9]{2,22}$",
                 "type": "string"
             },
             "sameAs": [
@@ -166,7 +166,7 @@
                     "https://www.wikidata.org/entity/Q491566"
                 ],
                 "format": "uri",
-                "pattern": "^https://www\\.wikidata\\.org/entity/[PQ\\d]{2,64}$",
+                "pattern": "^https://www\\.wikidata\\.org/entity/[PQ0-9]{2,64}$",
                 "type": "string"
             },
             "type": "array"

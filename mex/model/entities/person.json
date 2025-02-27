@@ -119,7 +119,7 @@
                     "https://isni.org/isni/0000000038086111"
                 ],
                 "format": "uri",
-                "pattern": "^https://isni\\.org/isni/[X\\d]{16}$",
+                "pattern": "^https://isni\\.org/isni/[X0-9]{16}$",
                 "type": "string"
             },
             "sameAs": [
@@ -148,7 +148,7 @@
                     "https://orcid.org/0000-0002-1335-4022"
                 ],
                 "format": "uri",
-                "pattern": "^https://orcid\\.org/[-X\\d]{9,21}$",
+                "pattern": "^https://orcid\\.org/[-X0-9]{9,21}$",
                 "type": "string"
             },
             "sameAs": [

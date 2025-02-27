@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- removed character and digit tokens from string patterns
+
 ### Security
 
 ## [3.5.4] - 2025-02-25
