@@ -19,7 +19,7 @@
                 "https://mex.rki.de/item/some-scheme-5000"
             ],
             "format": "uri",
-            "pattern": "^https://mex\\.rki\\.de/item/[-\\d\\w]+$",
+            "pattern": "^https://mex\\.rki\\.de/item/[-A-Za-z0-9]{1,512}$",
             "sameAs": [
                 "http://purl.org/dc/elements/1.1/identifier"
             ],
