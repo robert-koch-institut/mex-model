@@ -11,8 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- make doi pattern more lenient, allowing any digits in id section
-
 ### Deprecated
 
 ### Removed
@@ -20,6 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+## [3.5.6] - 2025-02-28
+
+### Changes
+
+- make doi pattern more lenient, allowing any digits in id section
 
 ## [3.5.5] - 2025-02-27
 
