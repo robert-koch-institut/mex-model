@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- expose fields, vocabularies and entities to python via module files
+- expose fields, vocabularies and entities to python
 - allow python 3.9 as baseline version
 
 ### Deprecated
