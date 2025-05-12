@@ -18,5 +18,5 @@ FIELD_JSON_BY_NAME = {
 }
 VOCABULARY_JSON_BY_NAME = {
     f.name.replace("-", "_").replace(".json", ""): json.loads(f.read_text("utf-8"))
-    for f in list(files("mex.model.entities").iterdir())
+    for f in list(files("mex.model.vocabularies").iterdir())
 }
