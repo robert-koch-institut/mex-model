@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/robert-koch-institut/mex-template",
-  "commit": "08b84c365a20d24ca04369a70495034491e0a401",
+  "commit": "ed5deb106b3d34aa758dcd4f4d3628a1ffb2b159",
   "checkout": null,
   "context": {
     "cookiecutter": {
@@ -8,7 +8,7 @@
       "short_summary": "JSON schema files defining the MEx metadata model.",
       "long_summary": "Our metadata model is represented as JSON schema in `mex/model`. There, we defined 1. `entities`, described by their properties, 2. `fields`, small objects, that are used as `$ref` for certain properties, 3. an `extension`, which contains additional properties, that are not in scope of the JSON schema definition, 4. `i18n` files, that hold translations of the properties and are to be used in the context of user interfaces and 5. `vocabularies`, which are used in context of the `entities`. A more detailed description of the model's context can be found in `/docs/index.rst`.",
       "_template": "https://github.com/robert-koch-institut/mex-template",
-      "_commit": "08b84c365a20d24ca04369a70495034491e0a401"
+      "_commit": "ed5deb106b3d34aa758dcd4f4d3628a1ffb2b159"
     }
   },
   "directory": null
