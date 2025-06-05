@@ -383,16 +383,19 @@
             "type": "array"
         },
         "repositoryURL": {
-            "anyOf": [
-                {
-                    "$ref": "/schema/fields/link"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "The handle of the publication in the repository, where the publication is stored."
+            "default": [],
+            "description": "The handle of the publication in the repository, where the publication is stored.",
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "/schema/fields/link"
+                    },
+                    {
+                        "type": "null"
+                    }
+                ]
+            },
+            "type": "array"
         },
         "section": {
             "anyOf": [

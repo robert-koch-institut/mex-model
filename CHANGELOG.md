@@ -19,6 +19,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [4.0.0] - 2025-06-05
+
+### Added
+
+- Two new properties to mex:Resource: provenance and hasPurpose
+
+### Changes
+
+- BREAKING: changed URI of wikidataId
+- BREAKING: repositoryURL (mex:BibliographicResource) is now an array
+
+### Removed
+
+- BREAKING: Deleted consent type "Implied Consent" because of the regulations from
+  Data Protection Officer.
+
 ## [3.6.1] - 2025-05-12
 
 ### Added
