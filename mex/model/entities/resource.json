@@ -282,6 +282,18 @@
                 "https://w3id.org/dpv#hasPersonalData"
             ]
         },
+        "hasPurpose": {
+            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
+            "default": [],
+            "description": "A free text statement of the purpose of the processing of data or personal data.",
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "https://w3id.org/dpv#hasPurpose"
+            ],
+            "type": "array"
+        },
         "icd10code": {
             "default": [],
             "description": "A concept from ICD-10.",
@@ -508,6 +520,18 @@
             "items": {
                 "$ref": "/schema/fields/text"
             },
+            "type": "array"
+        },
+        "provenance": {
+            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
+            "default": [],
+            "description": "A statement about the lineage of a Dataset. Information about how the data was collected, including methodologies, tools, and protocols used.",
+            "items": {
+                "$ref": "/schema/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/provenance"
+            ],
             "type": "array"
         },
         "publication": {
