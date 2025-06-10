@@ -386,14 +386,7 @@
             "default": [],
             "description": "The handle of the publication in the repository, where the publication is stored.",
             "items": {
-                "anyOf": [
-                    {
-                        "$ref": "/schema/fields/link"
-                    },
-                    {
-                        "type": "null"
-                    }
-                ]
+                "$ref": "/schema/fields/link"
             },
             "type": "array"
         },
