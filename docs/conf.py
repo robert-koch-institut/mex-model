@@ -40,7 +40,7 @@ templates_path = ["."]
 # see https://sphinx-jsonschema.readthedocs.io/en/latest/extensions.html
 
 
-def _patched_sphinx_jsonschema_simpletype(self, schema):
+def _patched_sphinx_jsonschema_simpletype(self, schema):  # noqa: ANN001, ANN202
     """Render the `useScheme` schema properties for every vocabulary type."""
     rows = _original_sphinx_jsonschema_simpletype(self, schema)
     if "useScheme" in schema:
@@ -49,7 +49,7 @@ def _patched_sphinx_jsonschema_simpletype(self, schema):
     return rows
 
 
-def _patched_sphinx_jsonschema_kvpairs(self, schema, keys):
+def _patched_sphinx_jsonschema_kvpairs(self, schema, keys):  # noqa: ANN001, ANN202
     """Render `default` and `pattern` schema properties as inline code-blocks."""
     for k in keys:
         if k in schema:
