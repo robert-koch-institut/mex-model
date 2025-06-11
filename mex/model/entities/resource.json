@@ -585,7 +585,7 @@
             "items": {
                 "$ref": "/schema/entities/concept#/identifier",
                 "examples": [
-                    "https://mex.rki.de/item/resource-type-general-1"
+                    "https://mex.rki.de/item/resource-type-general-2"
                 ],
                 "useScheme": "https://mex.rki.de/item/resource-type-general"
             },
