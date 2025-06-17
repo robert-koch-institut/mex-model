@@ -85,7 +85,7 @@ jobs:
     needs: release
     environment:
       name: pypi
-      url: https://pypi.org/p/mex-release
+      url: https://pypi.org/p/mex-model
     permissions:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
     steps:
