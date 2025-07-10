@@ -233,7 +233,7 @@ msgstr "Zu den Foschungsdaten dazugehörige Dateien."
 msgid "documentation.singular"
 msgid_plural "documentation.plural"
 msgstr[0] "Dokumentation"
-msgstr [1] "Dokumentationen"
+msgstr[1] "Dokumentationen"
 
 msgid "documentation.description"
 msgstr "Ein Link zu einer Dokumentation, welche die Forschungsdaten oder das Forschungsprojekt beschreibt"
