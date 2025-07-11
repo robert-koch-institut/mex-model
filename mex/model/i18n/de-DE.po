@@ -470,7 +470,7 @@ msgid "landingPage.description"
 msgstr "Webseite, die in einem Webbrowser aufgerufen werden kann, um Zugriff auf das System zu erhalten"
 
 msgid "language.singular"
-msgid_plural "keyword.plural"
+msgid_plural "language.plural"
 msgstr[0] "Sprache"
 msgstr[1] "Sprachen"
 
@@ -747,7 +747,7 @@ msgstr "Merkmalsausprägung"
 msgid "valueSet.description"
 msgstr "Gesamtheit aller möglichen Werte, die eine Variable annehmen kann, d. h. verschiedene Merkmalsausprägungen oder Werte, die für diese Variable zulässig sind"
 
-msgctxt "PrimarySource
+msgctxt "PrimarySource"
 msgid "version.singular"
 msgstr "Version"
 

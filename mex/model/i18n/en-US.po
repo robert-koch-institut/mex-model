@@ -322,7 +322,7 @@ msgstr ""
 "e.g. research cooperation partners or service providers"
 
 msgid "externalPartner.singular"
-msgid "externalPartner.plural"
+msgid_plural "externalPartner.plural"
 msgstr[0] "External partner"
 msgstr[1] "External partners"
 
