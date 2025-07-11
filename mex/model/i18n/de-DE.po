@@ -729,7 +729,7 @@ msgstr "Serientitel"
 
 msgid "unitInCharge.singular"
 msgid_plural "unitInCharge.plural"
-msgstr[0] "Verantwortliches Fachgebiete"
+msgstr[0] "Verantwortliches Fachgebiet"
 msgstr[1] "Verantwortliche Fachgebiete"
 
 msgid "unitInCharge.description"
