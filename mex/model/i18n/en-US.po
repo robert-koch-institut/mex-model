@@ -792,3 +792,6 @@ msgid "website.singular"
 msgid_plural "website.plural"
 msgstr[0] "Website"
 msgstr[1] "Websites"
+
+msgid "website.description"
+msgstr "Website(s) providing additional information about the project"
