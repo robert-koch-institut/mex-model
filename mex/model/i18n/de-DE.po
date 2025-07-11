@@ -711,11 +711,11 @@ msgstr[0] "Thema"
 msgstr[1] "Themen"
 
 msgctxt "Activity"
-msgid "theme.desription"
+msgid "theme.description"
 msgstr "bezeichnet die Hauptkategorie oder das zentrale Thema, dem das Vorhaben zugeordnet sind"
 
 msgctxt "Resource"
-msgid "theme.desription"
+msgid "theme.description"
 msgstr "bezeichnet die Hauptkategorie oder das zentrale Thema, dem die Forschungsdaten zugeordnet sind"
 
 msgid "title.singular"

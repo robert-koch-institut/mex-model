@@ -732,11 +732,11 @@ msgid "theme.singular"
 msgstr "Theme"
 
 msgctxt "Activity"
-msgid "theme.desription"
+msgid "theme.description"
 msgstr "Refers to the main category or central theme of the project"
 
 msgctxt "Resource"
-msgid "theme.desription"
+msgid "theme.description"
 msgstr "Refers to the main category or central theme associated with the research data"
 
 msgid "title.singular"
