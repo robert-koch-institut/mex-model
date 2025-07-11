@@ -233,7 +233,7 @@ msgstr "Zu den Foschungsdaten dazugehörige Dateien."
 msgid "documentation.singular"
 msgid_plural "documentation.plural"
 msgstr[0] "Dokumentation"
-msgstr [1] "Dokumentationen"
+msgstr[1] "Dokumentationen"
 
 msgid "documentation.description"
 msgstr "Ein Link zu einer Dokumentation, welche die Forschungsdaten oder das Forschungsprojekt beschreibt"
@@ -470,7 +470,7 @@ msgid "landingPage.description"
 msgstr "Webseite, die in einem Webbrowser aufgerufen werden kann, um Zugriff auf das System zu erhalten"
 
 msgid "language.singular"
-msgid_plural "keyword.plural"
+msgid_plural "language.plural"
 msgstr[0] "Sprache"
 msgstr[1] "Sprachen"
 
@@ -711,11 +711,11 @@ msgstr[0] "Thema"
 msgstr[1] "Themen"
 
 msgctxt "Activity"
-msgid "theme.desription"
+msgid "theme.description"
 msgstr "bezeichnet die Hauptkategorie oder das zentrale Thema, dem das Vorhaben zugeordnet sind"
 
 msgctxt "Resource"
-msgid "theme.desription"
+msgid "theme.description"
 msgstr "bezeichnet die Hauptkategorie oder das zentrale Thema, dem die Forschungsdaten zugeordnet sind"
 
 msgid "title.singular"
@@ -729,7 +729,7 @@ msgstr "Serientitel"
 
 msgid "unitInCharge.singular"
 msgid_plural "unitInCharge.plural"
-msgstr[0] "Verantwortliches Fachgebiete"
+msgstr[0] "Verantwortliches Fachgebiet"
 msgstr[1] "Verantwortliche Fachgebiete"
 
 msgid "unitInCharge.description"
@@ -747,7 +747,7 @@ msgstr "Merkmalsausprägung"
 msgid "valueSet.description"
 msgstr "Gesamtheit aller möglichen Werte, die eine Variable annehmen kann, d. h. verschiedene Merkmalsausprägungen oder Werte, die für diese Variable zulässig sind"
 
-msgctxt "PrimarySource
+msgctxt "PrimarySource"
 msgid "version.singular"
 msgstr "Version"
 
@@ -772,3 +772,6 @@ msgid "website.singular"
 msgid_plural "website.plural"
 msgstr[0] "Website"
 msgstr[1] "Websites"
+
+msgid "website.description"
+msgstr "Website(s) mit weiteren Informationen zum Projekt/Vorhaben"
