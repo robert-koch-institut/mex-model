@@ -42,6 +42,7 @@ jobs:
         with:
           fetch-depth: 1
           ref: ${{ needs.release.outputs.tag }}
+          persist-credentials: false
 
       - name: Cache requirements
         uses: actions/cache@v4
@@ -73,8 +74,6 @@ jobs:
 
       - name: Release new version
         id: release
-        env:
-          GH_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
         run: |
           pdm release ${{ inputs.version }}
           echo "tag=$(git describe --abbrev=0 --tags)" >> "$GITHUB_OUTPUT"
@@ -94,6 +93,7 @@ jobs:
         with:
           fetch-depth: 1
           ref: ${{ needs.release.outputs.tag }}
+          persist-credentials: false
 
       - name: Cache requirements
         uses: actions/cache@v4
