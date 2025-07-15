@@ -42,7 +42,6 @@ jobs:
         with:
           fetch-depth: 1
           ref: ${{ needs.release.outputs.tag }}
-          persist-credentials: false
 
       - name: Cache requirements
         uses: actions/cache@v4
