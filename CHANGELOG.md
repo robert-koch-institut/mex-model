@@ -11,17 +11,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- update mex-template to 82d72c
-
 ### Deprecated
 
 ### Removed
 
 ### Fixed
 
-- fix translations and po file syntax errors
-
 ### Security
+
+## [4.1.1] - 2025-07-15
+
+### Changes
+
+- update mex-template to 82d72c
+
+### Fixed
+
+- fix translations and po file syntax errors
 
 ## [4.1.0] - 2025-06-17
 
