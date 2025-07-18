@@ -1,4 +1,3 @@
-msgctxt "Activity"
 msgid "abstract.singular"
 msgstr "Kurzbeschreibung"
 
@@ -48,7 +47,7 @@ msgstr[1] "Zugangsdienste"
 
 msgctxt "Distribution"
 msgid "accessService.description"
-msgstr "Ein Datendienst, der Zugriff auf die Daten bietet"
+msgstr "Ein Datendienst, der Zugriff auf die Dateien bietet"
 
 msgctxt "Distribution"
 msgid "accessURL.singular"
@@ -58,7 +57,7 @@ msgstr[1] "Zugriffs-URLs"
 
 msgctxt "Distribution"
 msgid "accessURL.description"
-msgstr "Eine URL, die Zugriff auf die Daten ermöglicht."
+msgstr "Eine URL, die Zugriff auf die Dateien ermöglicht."
 
 msgctxt "Resource"
 msgid "accrualPeriodicity.singular"
@@ -157,7 +156,7 @@ msgstr[1] "Standards"
 
 msgctxt "Resource"
 msgid "conformsTo.description"
-msgstr "Ein etablierter Standard, dem die beschriebenen Daten entsprechen."
+msgstr "Etablierter Standard, dem die beschriebenen Daten entsprechen"
 
 msgid "contact.singular"
 msgid_plural "contact.plural"
@@ -201,6 +200,11 @@ msgid_plural "contributingUnit.plural"
 msgstr[0] "Mitwirkendes Fachgebiet"
 msgstr[1] "Mitwirkende Fachgebiete"
 
+msgctxt "BibliographicResource"
+msgid "contributingUnit.description"
+msgstr "An der Publikation beteiligte(s) Fachgebiet(e)"
+
+msgctxt "Resource"
 msgid "contributingUnit.description"
 msgstr "An den Daten mitwirkende(s) Fachgebiet(e)"
 
@@ -226,7 +230,7 @@ msgstr "Verfasser*in der Publikation"
 
 msgctxt "Resource"
 msgid "creator.description"
-msgstr "Person, die die Daten zusammengestellt hat"
+msgstr "Person, die die Daten zusammengestellt/erstellt hat"
 
 
 msgctxt "Variable"
@@ -256,7 +260,7 @@ msgstr "Kurze Beschreibung der Plattform"
 
 msgctxt "Variable"
 msgid "description.description"
-msgstr "Kurzbeschreibung der Variable"
+msgstr "Fachliche Beschreibung der Variable"
 
 msgctxt "Resource"
 msgid "distribution.singular"
