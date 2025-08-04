@@ -531,7 +531,7 @@ msgctxt "Activity"
 msgid "involvedUnit.singular"
 msgid_plural "involvedUnit.plural"
 msgstr[0] "Contributing unit"
-msgstr[1] "Contributing unit"
+msgstr[1] "Contributing units"
 
 msgctxt "Activity"
 msgid "involvedUnit.description"
