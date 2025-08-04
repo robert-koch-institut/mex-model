@@ -257,7 +257,7 @@ msgstr "Brief description of the primary source"
 
 msgctxt "Variable"
 msgid "description.description"
-msgstr "Formal description of the variable"
+msgstr "Domain-specific description of the variable"
 
 msgctxt "Resource"
 msgid "distribution.singular"
