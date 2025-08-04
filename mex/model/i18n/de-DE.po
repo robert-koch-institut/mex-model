@@ -385,7 +385,7 @@ msgstr "Beteiligte"
 msgctxt "Activity"
 msgid "externalAssociate.description"
 msgstr ""
-"Externe Institution, die am Projekt beteiligt sind, wie z. B. "
+"Externe Institution(en), die am Projekt beteiligt sind, wie z. B. "
 "Forschungskooperationspartner"
 
 msgctxt "Resource"
