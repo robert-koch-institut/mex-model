@@ -395,7 +395,7 @@ msgstr "Weitere Beteiligte"
 msgctxt "Resource"
 msgid "externalPartner.description"
 msgstr ""
-"Externe Organisationen oder Institutionen, die an der Erstellung der Daten "
+"Externe Organisationen oder Institutionen, die an der Erstellung und/oder Erforschung der Daten "
 "beteiligt sind"
 
 msgctxt "Person"
