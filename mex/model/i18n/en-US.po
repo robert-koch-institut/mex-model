@@ -214,7 +214,7 @@ msgctxt "Resource"
 msgid "created.description"
 msgstr ""
 "Date the data was created; this could refer to a time frame in the past, a "
-"date range, or a single date for a final component, e.g., the finalized file "
+"date range, or a single date for a finalized component, e.g., the completed dataset "
 "with all the data"
 
 msgid "creator.singular"
