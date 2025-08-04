@@ -15,7 +15,7 @@ msgstr[1] "Access platforms"
 
 msgctxt "Resource"
 msgid "accessPlatform.description"
-msgstr "Access platform of the data"
+msgstr "Access platform for the data"
 
 msgid "accessRestriction.singular"
 msgstr "Access restriction"
