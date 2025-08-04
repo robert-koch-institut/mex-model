@@ -341,7 +341,7 @@ msgstr "Herausgebende der Reihe"
 msgid "email.singular"
 msgid_plural "email.plural"
 msgstr[0] "E-Mail"
-msgstr[1] "E-Mail"
+msgstr[1] "E-Mails"
 
 msgctxt "Activity"
 msgid "end.singular"
