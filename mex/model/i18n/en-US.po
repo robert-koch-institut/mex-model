@@ -412,7 +412,7 @@ msgstr ""
 
 msgctxt "Activity"
 msgid "funderOrCommissioner.singular"
-msgstr "Funded / commissioned"
+msgstr "Funded / commissioned by"
 
 msgctxt "Activity"
 msgid "funderOrCommissioner.description"
