@@ -456,7 +456,7 @@ msgstr ""
 "Nationalbibliothek"
 
 msgid "hadPrimarySource.singular"
-msgstr "Originaldatenspeicher"
+msgstr "Primärsystem"
 
 msgid "hadPrimarySource.description"
 msgstr "Originaldatenspeicher (Primärsystem) aus dem die Information stammt"
@@ -508,7 +508,7 @@ msgstr ""
 "Alle extrahierten Metadatenobjekte werden mit einem Identifikator versehen"
 
 msgid "identifierInPrimarySource.singular"
-msgstr "Identifikator des Metadatenobjekts im Originaldatenspeicher"
+msgstr "Identifikator im Primärsystem"
 
 msgid "identifierInPrimarySource.description"
 msgstr ""
