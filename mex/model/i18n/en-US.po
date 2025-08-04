@@ -5,7 +5,7 @@ msgctxt "Activity"
 msgid "abstract.description"
 msgstr ""
 "Brief description of the context in which the"
-"data were created"
+"data was processed"
 
 msgctxt "Resource"
 msgid "accessPlatform.singular"
