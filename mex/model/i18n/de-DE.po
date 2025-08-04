@@ -491,7 +491,7 @@ msgstr ""
 
 msgctxt "Resource"
 msgid "icd10code.singular"
-msgstr "ICD-10-Code"
+msgstr "ICD-10"
 
 msgctxt "Resource"
 msgid "icd10code.description"
