@@ -266,7 +266,7 @@ msgctxt "Resource"
 msgid "distribution.singular"
 msgid_plural "distribution.plural"
 msgstr[0] "Datei"
-msgstr[1] "Zugehörige Dateien"
+msgstr[1] "Dateien"
 
 msgctxt "Resource"
 msgid "distribution.description"
