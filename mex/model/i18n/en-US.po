@@ -470,7 +470,7 @@ msgstr "Personal data"
 
 msgctxt "Resource"
 msgid "hasPersonalData.description"
-msgstr "Indicates whether the data includes personal data or not"
+msgstr "Indicates whether the data includes personal data"
 
 msgctxt "Resource"
 msgid "hasPurpose.singular"
