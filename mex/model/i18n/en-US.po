@@ -803,7 +803,7 @@ msgstr[1] "Publications"
 
 msgctxt "Activity"
 msgid "publication.description"
-msgstr "Publication(s) associated to the project/endeavor"
+msgstr "Publication(s) associated with the project/endeavor"
 
 msgctxt "Resource"
 msgid "publication.description"
