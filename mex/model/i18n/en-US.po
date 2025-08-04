@@ -972,7 +972,7 @@ msgstr "Succeeds"
 
 msgctxt "Activity"
 msgid "succeeds.description"
-msgstr "Another project that preceded the one described here"
+msgstr "Another project/endeavor that preceded the one described here"
 
 msgid "technicalAccessibility.singular"
 msgstr "Technical accessibility"
