@@ -792,7 +792,7 @@ msgstr "Herkunft der Daten"
 msgctxt "Resource"
 msgid "provenance.description"
 msgstr ""
-"Beschreibung, wie die Daten entstanden sind, woher die stammen, wie sie "
+"Beschreibung, wie die Daten entstanden sind, woher sie stammen, wie sie "
 "erhoben wurden; welchen Datenquellen für die Zusammenstellung der Daten "
 "genutzt wurden"
 
