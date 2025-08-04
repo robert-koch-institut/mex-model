@@ -1020,14 +1020,14 @@ msgstr[0] "Responsible unit"
 msgstr[1] "Verantwortliche Fachgebiete"
 
 msgid "unitInCharge.description"
-msgstr "Organizational unit resposible for the data"
+msgstr "Organizational unit responsible for the data"
 
 msgctxt "OrganizationalUnit"
 msgid "unitOf.singular"
 msgstr "Institution"
 
 msgctxt "OrganizationalUnit"
-msgid "unitOf.descrption"
+msgid "unitOf.description"
 msgstr "Institute to which the organizational unit belongs"
 
 msgctxt "Variable"
@@ -1077,8 +1077,8 @@ msgstr "Volume of the journal"
 msgctxt "Resource"
 msgid "wasGeneratedBy.singular"
 msgid_plural "wasGeneratedBy.plural"
-msgstr[0] "Project/endeavor"
-msgstr[1] "Zugehörige Aktivitäten"
+msgstr[0] "Related project/endeavor"
+msgstr[1] "Related projects/endeavors"
 
 msgctxt "Resource"
 msgid "wasGeneratedBy.description"
