@@ -78,7 +78,7 @@ msgstr[1] "Project types"
 msgctxt "Activity"
 msgid "activityType.description"
 msgstr ""
-"Type of project indicates whether it is internal or third-party funded"
+"Indicates whether it is an internal project or a third-party funded project/endeavor"
 
 msgctxt "Person"
 msgid "affiliation.singular"
