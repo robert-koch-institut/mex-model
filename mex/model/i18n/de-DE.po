@@ -832,7 +832,7 @@ msgstr "Veröffentlichungsjahr"
 
 msgctxt "BibliographicResource"
 msgid "publicationYear.description"
-msgstr "Angabe des Jahres der Veröffentlichung der Publikation"
+msgstr "Jahr der Veröffentlichung der Publikation"
 
 msgctxt "BibliographicResource"
 msgid "publisher.singular"
