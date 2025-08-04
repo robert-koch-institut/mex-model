@@ -59,7 +59,7 @@ msgstr[1] "Access URLs"
 
 msgctxt "Distribution"
 msgid "accessURL.description"
-msgstr "URL allowing access to the files"
+msgstr "URL provides access to the files"
 
 msgctxt "Resource"
 msgid "accrualPeriodicity.singular"
