@@ -561,7 +561,7 @@ msgstr "Superordinate project/endeavor"
 
 msgctxt "Activity"
 msgid "isPartOfActivity.description"
-msgstr "This activity is part of a higher-level activity, e.g. a sub-project"
+msgstr "This activity is part of a superordinate project, e.g. a sub-project"
 
 msgctxt "Activity"
 msgid "isPartOf.singular"
