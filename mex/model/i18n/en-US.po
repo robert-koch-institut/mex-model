@@ -4,7 +4,7 @@ msgstr "Abstract"
 msgctxt "Activity"
 msgid "abstract.description"
 msgstr ""
-"Brief description of the project or research context in which the research "
+"Brief description of the context in which the"
 "data were created"
 
 msgctxt "Resource"
