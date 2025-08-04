@@ -232,7 +232,7 @@ msgstr "Person who compiled the data; creator of the dataset"
 
 msgctxt "Variable"
 msgid "dataType.singular"
-msgstr "Data Type"
+msgstr "Data type"
 
 msgctxt "Variable"
 msgid "dataType.description"
