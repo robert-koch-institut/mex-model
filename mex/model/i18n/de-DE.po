@@ -125,7 +125,7 @@ msgctxt "Variable"
 msgid "belongsTo.description"
 msgstr ""
 "Gruppierung der Variablen, angelehnt an deren Organisation im "
-"Originaldatenspeicher"
+"Originaldatenspeicher (Primärsystem)"
 
 msgctxt "BibliographicResource"
 msgid "bibliographicResourceType.singular"
