@@ -73,7 +73,7 @@ msgctxt "Activity"
 msgid "activityType.singular"
 msgid_plural "activityType.plural"
 msgstr[0] "Project type"
-msgstr[1] "Types"
+msgstr[1] "Project types"
 
 msgctxt "Activity"
 msgid "activityType.description"
