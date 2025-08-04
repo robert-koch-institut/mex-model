@@ -200,7 +200,7 @@ msgstr[1] "Contributing Units"
 
 msgctxt "BibliographicResource"
 msgid "contributingUnit.description"
-msgstr "Organizational units contributing to the publication"
+msgstr "Organizational unit(s) contributing to the publication"
 
 msgctxt "Resource"
 msgid "contributingUnit.description"
