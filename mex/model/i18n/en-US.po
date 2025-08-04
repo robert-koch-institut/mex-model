@@ -22,7 +22,6 @@ msgstr "Access restriction"
 
 msgid "accessRestriction.description"
 msgstr "Description of the access restriction"
-"Description of whether it is accessible to everyone (open) or has restricted "
 "access (restricted)"
 
 msgctxt "BibliographicResource"
