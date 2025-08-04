@@ -416,7 +416,7 @@ msgstr "Funded / commissioned by"
 
 msgctxt "Activity"
 msgid "funderOrCommissioner.description"
-msgstr "Funding or commissioning body"
+msgstr "Name of the funding bodies (e.g., acquired research funds) or commissioning entities (e.g., legal mandate)."
 
 msgctxt "Activity"
 msgid "fundingProgram.singular"
