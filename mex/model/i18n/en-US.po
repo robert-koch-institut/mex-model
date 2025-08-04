@@ -67,7 +67,7 @@ msgstr "Update frequency"
 
 msgctxt "Resource"
 msgid "accrualPeriodicity.description"
-msgstr "Rate/frequency at which data is updated"
+msgstr "Rate/frequency with which data is updated"
 
 msgctxt "Activity"
 msgid "activityType.singular"
