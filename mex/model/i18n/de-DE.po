@@ -477,7 +477,7 @@ msgstr "Personenbezogene Daten"
 
 msgctxt "Resource"
 msgid "hasPersonalData.description"
-msgstr "Gibt an, ob die Daten eine Personenbezug aufweisen oder nicht"
+msgstr "Gibt an, ob die Daten einen Personenbezug aufweisen"
 
 msgctxt "Resource"
 msgid "hasPurpose.singular"
