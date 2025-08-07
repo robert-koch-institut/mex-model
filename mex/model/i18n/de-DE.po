@@ -1059,7 +1059,7 @@ msgid "unitOf.singular"
 msgstr "Institution"
 
 msgctxt "OrganizationalUnit"
-msgid "unitOf.descrption"
+msgid "unitOf.description"
 msgstr "Institut, der die Organisationseinheit zugehörig ist"
 
 msgctxt "Variable"
