@@ -4,8 +4,6 @@ set target=%1
 
 if "%target%"=="install" goto install
 if "%target%"=="lint" goto lint
-if "%target%"=="unit" goto unit
-if "%target%"=="test" goto test
 if "%target%"=="docs" goto docs
 echo invalid argument %target%
 exit /b 1
@@ -29,10 +27,10 @@ pdm install-all
 exit /b %errorlevel%
 
 
-:test
+:lint
 @REM run the linter hooks from pre-commit on all files
 echo linting all files
-pdm lint
+pre-commit run --all-files
 exit /b %errorlevel%
 
 

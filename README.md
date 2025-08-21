@@ -64,20 +64,13 @@ components of the MEx project are open-sourced under the same license as well.
 
 ### Installation
 
-- on unix, consider using pyenv https://github.com/pyenv/pyenv
-  - get pyenv `curl https://pyenv.run | bash`
-  - install 3.11 `pyenv install 3.11`
-  - switch version `pyenv global 3.11`
-  - run `make install`
-- on windows, consider using pyenv-win https://pyenv-win.github.io/pyenv-win/
-  - follow https://pyenv-win.github.io/pyenv-win/#quick-start
-  - install 3.11 `pyenv install 3.11`
-  - switch version `pyenv global 3.11`
-  - run `.\mex.bat install`
+- install python3.11 on your system
+- on unix, run `make install`
+- on windows, run `.\mex.bat install`
 
-### Linting and testing
+### Linting
 
-- run all linters with `pdm lint`
+- run all linters with `make lint` or `.\mex.bat lint`
 
 ### Updating dependencies
 

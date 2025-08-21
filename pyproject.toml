@@ -32,12 +32,9 @@ distribution = true
 update-all = { cmd = "pdm update --group :all --update-all --save-compatible" }
 lock-all = { cmd = "pdm lock --group :all --refresh" }
 install-all = { cmd = "pdm install --group :all --no-editable --frozen-lockfile" }
-export-all = { cmd = "pdm export --group :all --no-hashes -f requirements" }
 sphinx = { cmd = "pdm run sphinx-build -aE -b dirhtml docs docs/dist" }
 doc = { composite = ["sphinx"] }
-wheel = { cmd = "pdm build --no-sdist" }
 lint = { cmd = "pre-commit run --all-files" }
-all = { composite = ["install-all", "lint", "doc"] }
 
 [tool.pydantic-mypy]
 warn_untyped_fields = true
