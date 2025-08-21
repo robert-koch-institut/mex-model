@@ -29,3 +29,12 @@ repos:
     hooks:
       - id: pdm-lock-check
         name: pdm
+  - repo: local
+    hooks:
+    - id: mypy
+      name: mypy
+      entry: pdm run dmypy run --timeout 7200 -- mex
+      files: ^(mex|tests)/
+      language: system
+      pass_filenames: false
+      types: [python]

@@ -5,7 +5,7 @@ from typing import Any, Callable
 try:
     from importlib.resources import files
 except ImportError:
-    from importlib_resources import files
+    from importlib_resources import files  # type: ignore[import-not-found, no-redef]
 
 __all__ = (
     "ENTITY_JSON_BY_NAME",
