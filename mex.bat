@@ -3,6 +3,8 @@
 set target=%1
 
 if "%target%"=="install" goto install
+if "%target%"=="lint" goto lint
+if "%target%"=="unit" goto unit
 if "%target%"=="test" goto test
 if "%target%"=="docs" goto docs
 echo invalid argument %target%
