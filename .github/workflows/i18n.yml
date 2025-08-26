@@ -35,19 +35,19 @@ jobs:
       - name: Commit compiled .mo files
         env:
           GH_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
-          MEX_BOT_EMAIL: ${{ vars.MEX_BOT_EMAIL }}
-          MEX_BOT_USER: ${{ vars.MEX_BOT_USER }}
-          SIGNING_KEY: ${{ vars.MEX_BOT_USER }}
+          # MEX_BOT_EMAIL: ${{ vars.MEX_BOT_EMAIL }}
+          # MEX_BOT_USER: ${{ vars.MEX_BOT_USER }}
+          # SIGNING_KEY: ${{ vars.MEX_BOT_USER }}
         run: |
-          git config user.email $MEX_BOT_EMAIL
-          git config user.name $MEX_BOT_USER
-          git config user.signingkey $SIGNING_KEY
+          # git config user.email $MEX_BOT_EMAIL
+          # git config user.name $MEX_BOT_USER
+          # git config user.signingkey $SIGNING_KEY
 
           git add mex/model/i18n/*.mo
   
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -S -m "🔁 Compile .po to .mo [automated]"
+            git commit -m "🔁 Compile .po to .mo [automated]"
             git push
           fi
