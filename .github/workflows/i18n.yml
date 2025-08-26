@@ -37,10 +37,14 @@ jobs:
           GH_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
           MEX_BOT_EMAIL: ${{ vars.MEX_BOT_EMAIL }}
           MEX_BOT_USER: ${{ vars.MEX_BOT_USER }}
+          SIGNING_KEY: ${{ vars.MEX_BOT_USER }}
         run: |
-          git add mex/model/i18n/*.mo
           git config user.email $MEX_BOT_EMAIL
           git config user.name $MEX_BOT_USER
+          git config user.signingkey $SIGNING_KEY
+
+          git add mex/model/i18n/*.mo
+  
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
