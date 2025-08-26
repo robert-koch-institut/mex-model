@@ -591,7 +591,7 @@ msgstr "Journal"
 
 msgctxt "BibliographicResource"
 msgid "journal.description"
-msgstr "The journal in which the scientific article was published
+msgstr "The journal in which the scientific article was published"
 
 msgid "keyword.singular"
 msgid_plural "keyword.plural"
