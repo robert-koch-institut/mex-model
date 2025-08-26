@@ -1,0 +1,45 @@
+name: i18n convert .po -> .mo
+
+on:
+  push:
+    branches: ["main", "feature/mx-1531-i18n-po-to-mo"]
+    paths:
+      - 'mex/model/i18n/**.po'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  i18nPoToMo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+
+      - name: Install gettext (for msgfmt)
+        run: sudo apt-get install -y gettext
+
+      - name: Compile .po files to .mo
+        run: |
+          find mex/model/i18n -type f -name "*.po" | while read -r po_file; do
+            mo_file="${po_file%.po}.mo"
+            echo "Compiling $po_file → $mo_file"
+            msgfmt "$po_file" -o "$mo_file"
+          done
+      
+      - name: Commit compiled .mo files
+        env:
+          GH_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
+        run: |
+          git add mex/model/i18n/*.mo
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -S -m "🔁 Compile .po to .mo [automated]"
+            git push
+          fi
