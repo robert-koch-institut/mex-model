@@ -1103,3 +1103,4 @@ msgstr ""
 "collection of structured data to support Wikipedia and is also used as a "
 "reference database for the identification of things (in the sense of Linked "
 "Data)"
+
