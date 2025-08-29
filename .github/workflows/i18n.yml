@@ -31,7 +31,7 @@ jobs:
             echo "Compiling $po_file → $mo_file"
             msgfmt "$po_file" -o "$mo_file"
           done
-      
+
       - name: Commit compiled .mo files
         env:
           GH_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
@@ -42,7 +42,7 @@ jobs:
           git config user.name "$MEX_BOT_USER"
 
           git add mex/model/i18n/*.mo
-  
+
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
