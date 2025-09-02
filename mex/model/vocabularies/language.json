@@ -43,5 +43,35 @@
             "de": "Französisch",
             "en": "French"
         }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "es",
+                "en": "es"
+            }
+        ],
+        "exactMatch": "",
+        "identifier": "https://mex.rki.de/item/language-4",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Spanisch",
+            "en": "Spanish"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "ru",
+                "en": "ru"
+            }
+        ],
+        "exactMatch": "",
+        "identifier": "https://mex.rki.de/item/language-5",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Russisch",
+            "en": "Russian"
+        }
     }
 ]
