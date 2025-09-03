@@ -6,7 +6,10 @@
         "language": {
             "enum": [
                 "de",
-                "en"
+                "en",
+                "fr",
+                "es",
+                "ru"
             ]
         },
         "value": {
