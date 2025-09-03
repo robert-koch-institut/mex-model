@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- added more languages(fr, ru, es) to language.json, text.json and link.json
+
 ### Changes
 
 ### Deprecated
@@ -19,6 +19,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [4.2.0] - 2025-09-03
+
+### Added
+- added more languages(fr, ru, es) to language.json, text.json and link.json
 ## [4.1.2] - 2025-08-21
 
 ### Changes
