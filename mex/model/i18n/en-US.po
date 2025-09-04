@@ -1,10 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: mex-editor 1.0.1\n"
-"Language: en\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language: en"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
 
 msgid "abstract.singular"
 msgstr "Abstract"
@@ -107,10 +106,9 @@ msgid "alternateIdentifier.description"
 msgstr "Other identifier(s) for the publication, e.g. from other repositories"
 
 msgid "alternativeTitle.singular"
-msgstr "Alternative title"
-
-msgid "alternativeTitle.plural"
-msgstr "Alternative titles"
+msgid_plural "alternativeTitle.plural"
+msgstr[0] "Alternative title"
+msgstr[1] "Alternative titles"
 
 msgid "alternativeTitle.description"
 msgstr "Other title(s)"
