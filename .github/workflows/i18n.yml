@@ -1,10 +1,10 @@
 name: i18n convert .po -> .mo
+description: "This action converts the .po translation (mex/model/i18n/*.po) files into .mo translation files (mex/model/i18n/*.mo)."
 
 on:
   push:
-    branches: ["main", "feature/mx-1531-i18n-po-to-mo"]
     paths:
-      - 'mex/model/i18n/**.po'
+      - 'mex/model/i18n/*.po'
   workflow_dispatch:
 
 concurrency:
@@ -23,6 +23,16 @@ jobs:
 
       - name: Install gettext (for msgfmt)
         run: sudo apt-get install -y gettext
+
+      - name: Cache files
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-files
+        with:
+          path: mex/model/i18n/
+          key: ${{ env.cache-name }}-${{ hashFiles('mex/model/i18n/*.po') }}
+          restore-keys: |
+            ${{ env.cache-name }}-
 
       - name: Compile .po files to .mo
         run: |
@@ -46,6 +56,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "🔁 Compile .po to .mo [automated]"
+            git commit -m "🔁 Convert mex/model/i18n/*.po to mex/model/i18n/*.mo [automated]"
             git push
           fi
