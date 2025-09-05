@@ -11,7 +11,7 @@ msgstr "Abstract"
 msgctxt "Activity"
 msgid "abstract.description"
 msgstr ""
-"Brief description of the context in which the"
+"Brief description of the context in which the "
 "data was processed"
 
 msgctxt "Resource"
