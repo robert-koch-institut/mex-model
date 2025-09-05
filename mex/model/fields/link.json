@@ -18,7 +18,7 @@
         },
         "url": {
             "examples": [
-                "https://hello-world.org",
+                "https://hello-world.orgTEST",
                 "file://S:/OE/MF4/Projekte/MEx"
             ],
             "format": "uri",
