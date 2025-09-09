@@ -19,13 +19,14 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v5
         with:
-          fetch-depth: 1
-
-      - name: Install gettext (for msgfmt)
-        run: sudo apt-get install -y gettext
+          fetch-depth: 0
+          token: ${{ secrets.WORKFLOW_TOKEN }}
 
       - name: Install requirements
         run: make setup
+
+      - name: Install gettext (for msgfmt)
+        run: sudo apt-get install -y gettext
 
       - name: Cache i18n files
         uses: actions/cache@v4
