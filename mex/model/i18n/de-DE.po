@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "abstract.singular"
-msgstr "Kurzbeschreibung"
+msgstr "KurzbeschreibungTest"
 
 msgctxt "Activity"
 msgid "abstract.description"
