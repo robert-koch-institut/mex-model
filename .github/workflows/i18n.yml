@@ -19,8 +19,13 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v5
         with:
-          fetch-depth: 0
+          fetch-depth: 1
           token: ${{ secrets.WORKFLOW_TOKEN }}
+
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
 
       - name: Install requirements
         run: make setup
