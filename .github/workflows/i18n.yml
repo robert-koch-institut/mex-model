@@ -52,7 +52,7 @@ jobs:
           SIGNING_PUB: ${{ secrets.SIGNING_PUB }}
         run: |
           eval "$(ssh-agent -s)"
-          pdm setup-commit-signing -v
+          pdm setup-commit-signing
 
       - name: Compile .po files to .mo
         if: steps.cache-i18n.outputs.cache-hit != 'true'
