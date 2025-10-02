@@ -1,10 +1,17 @@
+msgid ""
+msgstr ""
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
 msgid "abstract.singular"
 msgstr "Abstract"
 
 msgctxt "Activity"
 msgid "abstract.description"
 msgstr ""
-"Brief description of the context in which the"
+"Brief description of the context in which the "
 "data was processed"
 
 msgctxt "Resource"
@@ -99,10 +106,9 @@ msgid "alternateIdentifier.description"
 msgstr "Other identifier(s) for the publication, e.g. from other repositories"
 
 msgid "alternativeTitle.singular"
-msgstr "Alternative title"
-
-msgid "alternativeTitle.plural"
-msgstr "Alternative titles"
+msgid_plural "alternativeTitle.plural"
+msgstr[0] "Alternative title"
+msgstr[1] "Alternative titles"
 
 msgid "alternativeTitle.description"
 msgstr "Other title(s)"
@@ -591,7 +597,7 @@ msgstr "Journal"
 
 msgctxt "BibliographicResource"
 msgid "journal.description"
-msgstr "The journal in which the scientific article was published
+msgstr "The journal in which the scientific article was published"
 
 msgid "keyword.singular"
 msgid_plural "keyword.plural"

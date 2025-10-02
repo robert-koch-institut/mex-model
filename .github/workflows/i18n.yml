@@ -1,0 +1,77 @@
+name: i18n convert .po -> .mo
+description: "This action converts the .po translation (mex/model/i18n/*.po) files into .mo translation files (mex/model/i18n/*.mo)."
+
+on:
+  push:
+    paths:
+      - 'mex/model/i18n/*.po'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  i18nPoToMo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.WORKFLOW_TOKEN }}
+
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+
+      - name: Install requirements
+        run: make setup
+
+      - name: Install gettext (for msgfmt)
+        run: sudo apt-get install -y gettext
+
+      - name: Cache i18n files
+        uses: actions/cache@v4
+        id: cache-i18n
+        env:
+          cache-name: cache-i18n-files
+        with:
+          path: mex/model/i18n/*.mo
+          key: ${{ env.cache-name }}-${{ hashFiles('mex/model/i18n/*.po') }}
+          restore-keys: |
+            ${{ env.cache-name }}-
+
+      - name: Configure git
+        env:
+          MEX_BOT_EMAIL: ${{ vars.MEX_BOT_EMAIL }}
+          MEX_BOT_USER: ${{ vars.MEX_BOT_USER }}
+          SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
+          SIGNING_PUB: ${{ secrets.SIGNING_PUB }}
+        run: |
+          eval "$(ssh-agent -s)"
+          pdm setup-commit-signing
+
+      - name: Compile .po files to .mo
+        if: steps.cache-i18n.outputs.cache-hit != 'true'
+        run: |
+          find mex/model/i18n -type f -name "*.po" | while read -r po_file; do
+            mo_file="${po_file%.po}.mo"
+            echo "Compiling $po_file → $mo_file"
+            msgfmt "$po_file" -o "$mo_file"
+          done
+
+      - name: Commit compiled .mo files
+        env:
+          GH_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
+        run: |
+          git add mex/model/i18n/*.mo
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "🔁 Convert mex/model/i18n/*.po to mex/model/i18n/*.mo [automated]"
+            git push
+          fi
