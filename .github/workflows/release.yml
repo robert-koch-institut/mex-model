@@ -109,7 +109,17 @@ jobs:
           python-version: 3.11
 
       - name: Install requirements
-        run: make setup
+        run: |
+          make setup
+          sudo apt-get install -y gettext
+
+      - name: Compile translation *.po files to *.mo
+        run: |
+          find mex/model/i18n -type f -name "*.po" | while read -r po_file; do
+            mo_file="${po_file%.po}.mo"
+            echo "Compiling $po_file → $mo_file"
+            msgfmt "$po_file" -o "$mo_file"
+          done
 
       - name: Build wheel and sdist distros and create a github release
         env:
