@@ -139,5 +139,5 @@ jobs:
           pdm run python scripts/build_schema_zip.py
           gh release upload ${{ needs.release.outputs.tag }} schema.zip
 
-#      - name: Publish distribution 📦 to PyPI
-#        uses: pypa/gh-action-pypi-publish@release/v1
+      - name: Publish distribution 📦 to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
