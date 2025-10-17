@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- add `additionalProperties: false` to all entity schemas
+- add `readOnly: true` to all identifier and stableTargetId field schemas
+
 ### Changes
 
 ### Deprecated
@@ -16,6 +19,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 ### Fixed
+
+- fixed BibliographicResource title
+- fixed sorting of required fields for Consent
+- fixed sameAs declaration level for PrimarySource.alternativeTitle
 
 ### Security
 
