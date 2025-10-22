@@ -10,7 +10,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 ### Changes
-- Rename of the localize files to only include the language code
 
 ### Deprecated
 
@@ -19,6 +18,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+## [4.4.0] - 2025-10-22
+
+### Changes
+- Rename of the localize files to only include the language code
 
 ## [4.3.0] - 2025-10-20
 
