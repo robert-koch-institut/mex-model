@@ -2,6 +2,7 @@
     "$$target": "/schema/entities/concept-scheme#/identifier",
     "$id": "https://mex.rki.de/schema/entities/concept-scheme",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
     "properties": {
         "description": {
             "default": [],
@@ -20,6 +21,7 @@
             ],
             "format": "uri",
             "pattern": "^https://mex\\.rki\\.de/item/[-A-Za-z0-9]{1,512}$",
+            "readOnly": true,
             "sameAs": [
                 "http://purl.org/dc/elements/1.1/identifier"
             ],

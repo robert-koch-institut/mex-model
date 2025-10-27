@@ -19,6 +19,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [4.4.0] - 2025-10-22
+
+### Changes
+- Rename of the localize files to only include the language code
+
+## [4.3.0] - 2025-10-20
+
+### Added
+
+- add `additionalProperties: false` to all entity schemas
+- add `readOnly: true` to all identifier and stableTargetId field schemas
+
+### Fixed
+
+- fixed BibliographicResource title
+- fixed sorting of required fields for Consent
+- fixed sameAs declaration level for PrimarySource.alternativeTitle
+
 ## [4.2.1] - 2025-10-07
 
 ### Changes
