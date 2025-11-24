@@ -21,58 +21,63 @@ def ensure_dir(path: Path) -> None:
     path.mkdir(parents=True, exist_ok=True)
 
 
+def dump_schema(schema: dict[str, Any], dest_path: Path) -> None:
+    """Dump schema into a JSON file."""
+    with dest_path.open("w", encoding="utf-8") as f:
+        json.dump(schema, f, indent=4, ensure_ascii=False)
+        f.write("\n")
+
+
 def split_entity_file(src_path: Path) -> None:
     """Split an entity file into extracted and merged entities."""
     with src_path.open(encoding="utf-8") as f:
         data: dict[str, Any] = json.load(f)
 
     # Make a copy for shared/base, merged, and extracted
-    base_props = {
+    shared_props = {
         k: v for k, v in data["properties"].items() if k not in EXTRACT_ONLY_FIELDS
     }
     extracted_only_props = {
         k: v for k, v in data["properties"].items() if k in EXTRACT_ONLY_FIELDS
     }
 
-    # Write base schema
-    base_schema = dict(data)
-    base_schema["properties"] = base_props
-    base_schema["title"] = "Base Entity: " + base_schema.get("title", src_path.stem)
-    base_file = BASE_DIR / f"base-{src_path.stem}"
-    with base_file.open("w", encoding="utf-8") as f:
-        json.dump(base_schema, f, indent=2, ensure_ascii=False)
-
     # Write merged schema
     merged_schema = {
+        "$$target": data.get("$$target", ""),
         "$schema": data.get("$schema", "http://json-schema.org/draft/2020-12/schema"),
         "$id": data.get("$id", "") + "-merged",
-        "title": (data.get("title", src_path.stem) + " (Merged)"),
-        "allOf": [{"$ref": f"/schema/base-entities/base-{src_path.stem}"}],
+        "additionalProperties": data.get("additionalProperties", False),
         "description": data.get("description", ""),
-        "type": "object",
+        "properties": shared_props,
         "required": [
             req for req in data.get("required", []) if req not in EXTRACT_ONLY_FIELDS
         ],
-        # properties technically not needed with allOf, but can include extension here
+        "sameAs": data.get("sameAs", "src_path.stem"),
+        "title": ("Merged " + data.get("title", src_path.stem)),
+        "type": "object",
     }
     merged_file = MERGED_DIR / f"merged-{src_path.stem}.json"
-    with merged_file.open("w", encoding="utf-8") as f:
-        json.dump(merged_schema, f, indent=2, ensure_ascii=False)
+    dump_schema(merged_schema, merged_file)
 
     # Write extracted schema
     extracted_schema = {
-        "$schema": data.get("$schema", "http://json-schema.org/draft/2020-12/schema"),
+        "$$target": data.get("$$target", ""),
         "$id": data.get("$id", "") + "-extracted",
-        "title": (data.get("title", src_path.stem) + " (Extracted)"),
-        "allOf": [{"$ref": f"/schema/base-entities/base-{src_path.stem}"}],
+        "$schema": data.get("$schema", "http://json-schema.org/draft/2020-12/schema"),
+        "additionalProperties": data.get("additionalProperties", False),
         "description": "Extracted fields for: " + data.get("title", src_path.stem),
-        "type": "object",
-        "properties": extracted_only_props,
+        "properties": dict(
+            sorted(
+                {**shared_props, **extracted_only_props}.items(),
+            )
+        ),
         "required": data.get("required", []),
+        "sameAs": data.get("sameAs", "src_path.stem"),
+        "title": ("Extracted " + data.get("title", src_path.stem)),
+        "type": "object",
     }
     extracted_file = EXTRACTED_DIR / f"extracted-{src_path.stem}.json"
-    with extracted_file.open("w", encoding="utf-8") as f:
-        json.dump(extracted_schema, f, indent=2, ensure_ascii=False)
+    dump_schema(extracted_schema, extracted_file)
 
 
 def main() -> None:
