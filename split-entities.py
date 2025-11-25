@@ -43,9 +43,7 @@ def split_entity_file(src_path: Path) -> None:
         {
             "properties": shared_props,
             "required": [
-                req
-                for req in data.get("required", [])
-                if req not in EXTRACT_ONLY_FIELDS
+                req for req in data["required"] if req not in EXTRACT_ONLY_FIELDS
             ],
         }
     )
@@ -56,9 +54,9 @@ def split_entity_file(src_path: Path) -> None:
     extracted_schema: dict[str, Any] = json.loads(json.dumps(data))  # create deep copy
     extracted_schema.update(
         {
-            "$id": data.get("$id", "") + "-extracted",
-            "description": "Extracted fields for: " + data.get("title", src_path.stem),
-            "title": ("Extracted " + data.get("title", src_path.stem)),
+            "$id": data["$id"] + "-extracted",
+            "description": "Extracted fields for: " + data["title"],
+            "title": "Extracted " + data["title"],
         }
     )
     extracted_file = EXTRACTED_DIR / f"extracted-{src_path.stem}.json"
