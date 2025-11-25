@@ -4,7 +4,6 @@ from typing import Any
 
 # Paths (adjust as needed)
 SRC_DIR = Path("mex/model/entities")
-BASE_DIR = Path("mex/model/base-entities")
 MERGED_DIR = Path("mex/model/merged-entities")
 EXTRACTED_DIR = Path("mex/model/extracted-entities")
 
@@ -37,52 +36,37 @@ def split_entity_file(src_path: Path) -> None:
     shared_props = {
         k: v for k, v in data["properties"].items() if k not in EXTRACT_ONLY_FIELDS
     }
-    extracted_only_props = {
-        k: v for k, v in data["properties"].items() if k in EXTRACT_ONLY_FIELDS
-    }
 
     # Write merged schema
-    merged_schema = {
-        "$$target": data.get("$$target", ""),
-        "$schema": data.get("$schema", "http://json-schema.org/draft/2020-12/schema"),
-        "$id": data.get("$id", "") + "-merged",
-        "additionalProperties": data.get("additionalProperties", False),
-        "description": data.get("description", ""),
-        "properties": shared_props,
-        "required": [
-            req for req in data.get("required", []) if req not in EXTRACT_ONLY_FIELDS
-        ],
-        "sameAs": data.get("sameAs", "src_path.stem"),
-        "title": ("Merged " + data.get("title", src_path.stem)),
-        "type": "object",
-    }
-    merged_file = MERGED_DIR / f"merged-{src_path.stem}.json"
+    merged_schema: dict[str, Any] = json.loads(json.dumps(data))  # create deep copy
+    merged_schema.update(
+        {
+            "properties": shared_props,
+            "required": [
+                req
+                for req in data.get("required", [])
+                if req not in EXTRACT_ONLY_FIELDS
+            ],
+        }
+    )
+    merged_file = MERGED_DIR / f"{src_path.stem}.json"
     dump_schema(merged_schema, merged_file)
 
     # Write extracted schema
-    extracted_schema = {
-        "$$target": data.get("$$target", ""),
-        "$id": data.get("$id", "") + "-extracted",
-        "$schema": data.get("$schema", "http://json-schema.org/draft/2020-12/schema"),
-        "additionalProperties": data.get("additionalProperties", False),
-        "description": "Extracted fields for: " + data.get("title", src_path.stem),
-        "properties": dict(
-            sorted(
-                {**shared_props, **extracted_only_props}.items(),
-            )
-        ),
-        "required": data.get("required", []),
-        "sameAs": data.get("sameAs", "src_path.stem"),
-        "title": ("Extracted " + data.get("title", src_path.stem)),
-        "type": "object",
-    }
+    extracted_schema: dict[str, Any] = json.loads(json.dumps(data))  # create deep copy
+    extracted_schema.update(
+        {
+            "$id": data.get("$id", "") + "-extracted",
+            "description": "Extracted fields for: " + data.get("title", src_path.stem),
+            "title": ("Extracted " + data.get("title", src_path.stem)),
+        }
+    )
     extracted_file = EXTRACTED_DIR / f"extracted-{src_path.stem}.json"
     dump_schema(extracted_schema, extracted_file)
 
 
 def main() -> None:
     """Split all entity files into extracted and merged entities."""
-    ensure_dir(BASE_DIR)
     ensure_dir(MERGED_DIR)
     ensure_dir(EXTRACTED_DIR)
 
