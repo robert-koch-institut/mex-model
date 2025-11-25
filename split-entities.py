@@ -39,6 +39,9 @@ def split_entity_file(src_path: Path) -> None:
 
     # Write merged schema
     merged_schema: dict[str, Any] = json.loads(json.dumps(data))  # create deep copy
+    # remove target because I think that merged items do not have a target since they
+    # are the target themselves
+    merged_schema.pop("$$target")
     merged_schema.update(
         {
             "properties": shared_props,
@@ -54,8 +57,12 @@ def split_entity_file(src_path: Path) -> None:
     extracted_schema: dict[str, Any] = json.loads(json.dumps(data))  # create deep copy
     extracted_schema.update(
         {
-            "$id": data["$id"] + "-extracted",
-            "description": "Extracted fields for: " + data["title"],
+            "$id": str(data["$id"]).replace(
+                "https://mex.rki.de/schema/entities/",
+                "https://mex.rki.de/schema/extracted-entities/extracted-",
+            ),
+            "description": data.get("description", "")
+            + " Extracted entities represent data from a single primary source",
             "title": "Extracted " + data["title"],
         }
     )
