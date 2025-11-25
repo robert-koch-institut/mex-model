@@ -54,6 +54,9 @@ def split_entity_file(src_path: Path) -> None:
     dump_schema(merged_schema, merged_file)
 
     # Write extracted schema
+    description = "Extracted entities represent data from a single primary source."
+    if "description" in data:
+        description += " " + data["description"]
     extracted_schema: dict[str, Any] = json.loads(json.dumps(data))  # create deep copy
     extracted_schema.update(
         {
@@ -61,8 +64,7 @@ def split_entity_file(src_path: Path) -> None:
                 "https://mex.rki.de/schema/entities/",
                 "https://mex.rki.de/schema/extracted-entities/extracted-",
             ),
-            "description": data.get("description", "")
-            + " Extracted entities represent data from a single primary source",
+            "description": description,
             "title": "Extracted " + data["title"],
         }
     )
