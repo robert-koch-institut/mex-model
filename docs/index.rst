@@ -29,22 +29,41 @@ Fields
 .. jsonschema:: ../mex/model/fields/link.json
 .. jsonschema:: ../mex/model/fields/text.json
 
-Entities
---------
+Extracted
+---------
 
-.. jsonschema:: ../mex/model/entities/access-platform.json
-.. jsonschema:: ../mex/model/entities/activity.json
-.. jsonschema:: ../mex/model/entities/bibliographic-resource.json
-.. jsonschema:: ../mex/model/entities/consent.json
-.. jsonschema:: ../mex/model/entities/contact-point.json
-.. jsonschema:: ../mex/model/entities/distribution.json
-.. jsonschema:: ../mex/model/entities/organization.json
-.. jsonschema:: ../mex/model/entities/organizational-unit.json
-.. jsonschema:: ../mex/model/entities/person.json
-.. jsonschema:: ../mex/model/entities/primary-source.json
-.. jsonschema:: ../mex/model/entities/resource.json
-.. jsonschema:: ../mex/model/entities/variable-group.json
-.. jsonschema:: ../mex/model/entities/variable.json
+.. jsonschema:: ../mex/model/entities/extracted-access-platform.json
+.. jsonschema:: ../mex/model/entities/extracted-activity.json
+.. jsonschema:: ../mex/model/entities/extracted-bibliographic-resource.json
+.. jsonschema:: ../mex/model/entities/extracted-consent.json
+.. jsonschema:: ../mex/model/entities/extracted-contact-point.json
+.. jsonschema:: ../mex/model/entities/extracted-distribution.json
+.. jsonschema:: ../mex/model/entities/extracted-organization.json
+.. jsonschema:: ../mex/model/entities/extracted-organizational-unit.json
+.. jsonschema:: ../mex/model/entities/extracted-person.json
+    :encoding: utf8
+.. jsonschema:: ../mex/model/entities/extracted-primary-source.json
+.. jsonschema:: ../mex/model/entities/extracted-resource.json
+.. jsonschema:: ../mex/model/entities/extracted-variable-group.json
+.. jsonschema:: ../mex/model/entities/extracted-variable.json
+
+Merged
+------
+
+.. jsonschema:: ../mex/model/entities/merged-access-platform.json
+.. jsonschema:: ../mex/model/entities/merged-activity.json
+.. jsonschema:: ../mex/model/entities/merged-bibliographic-resource.json
+.. jsonschema:: ../mex/model/entities/merged-consent.json
+.. jsonschema:: ../mex/model/entities/merged-contact-point.json
+.. jsonschema:: ../mex/model/entities/merged-distribution.json
+.. jsonschema:: ../mex/model/entities/merged-organization.json
+.. jsonschema:: ../mex/model/entities/merged-organizational-unit.json
+.. jsonschema:: ../mex/model/entities/merged-person.json
+    :encoding: utf8
+.. jsonschema:: ../mex/model/entities/merged-primary-source.json
+.. jsonschema:: ../mex/model/entities/merged-resource.json
+.. jsonschema:: ../mex/model/entities/merged-variable-group.json
+.. jsonschema:: ../mex/model/entities/merged-variable.json
 
 Concepts
 --------

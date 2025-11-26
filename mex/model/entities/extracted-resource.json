@@ -1,5 +1,5 @@
 {
-    "$$target": "/mex/model/entities/merged-resource#/identifier",
+    "$$target": "/mex/model/entities/extracted-resource#/identifier",
     "$id": "https://mex.rki.de/mex/model/entities/extracted-resource",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,

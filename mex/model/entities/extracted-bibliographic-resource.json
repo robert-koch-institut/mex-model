@@ -1,5 +1,5 @@
 {
-    "$$target": "/mex/model/entities/merged-bibliographic-resource#/identifier",
+    "$$target": "/mex/model/entities/extracted-bibliographic-resource#/identifier",
     "$id": "https://mex.rki.de/mex/model/entities/extracted-bibliographic-resource",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,

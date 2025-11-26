@@ -1,6 +1,6 @@
 {
-    "$$target": "/mex/model/entities/merged-consent#/identifier",
-    "$comment": "In our case, the 'specified process or activity' is the publication of contact details of a person (e.g. name and email address) in our metadata catalog. ",
+    "$$target": "/mex/model/entities/extracted-consent#/identifier",
+    "$comment": "In our case, the 'specified process or activity' is the publication of contact details of a person (e.g. name and email address) in our metadata catalog.",
     "$id": "https://mex.rki.de/mex/model/entities/extracted-consent",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
