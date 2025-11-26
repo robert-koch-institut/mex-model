@@ -1,13 +1,13 @@
 {
-    "$$target": "/schema/entities/concept#/identifier",
-    "$id": "https://mex.rki.de/schema/entities/concept",
+    "$$target": "/mex/model/entities/merged-concept#/identifier",
+    "$id": "https://mex.rki.de/mex/model/entities/merged-concept",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
     "properties": {
         "altLabel": {
             "default": [],
             "items": {
-                "$ref": "/schema/fields/text"
+                "$ref": "/mex/model/fields/text"
             },
             "sameAs": [
                 "http://www.w3.org/2004/02/skos/core#altLabel"
@@ -17,7 +17,7 @@
         "broader": {
             "default": [],
             "items": {
-                "$ref": "/schema/entities/concept#/identifier"
+                "$ref": "/mex/model/entities/merged-concept#/identifier"
             },
             "sameAs": [
                 "http://www.w3.org/2004/02/skos/core#broader"
@@ -27,7 +27,7 @@
         "definition": {
             "default": [],
             "items": {
-                "$ref": "/schema/fields/text"
+                "$ref": "/mex/model/fields/text"
             },
             "sameAs": [
                 "http://www.w3.org/2004/02/skos/core#definition"
@@ -59,7 +59,7 @@
             "type": "string"
         },
         "inScheme": {
-            "$ref": "/schema/entities/concept-scheme#/identifier",
+            "$ref": "/mex/model/entities/merged-concept-scheme#/identifier",
             "sameAs": [
                 "http://www.w3.org/2004/02/skos/core#inScheme"
             ]
@@ -75,7 +75,7 @@
         "note": {
             "default": [],
             "items": {
-                "$ref": "/schema/fields/text"
+                "$ref": "/mex/model/fields/text"
             },
             "sameAs": [
                 "http://www.w3.org/2004/02/skos/core#note"
@@ -84,7 +84,7 @@
         },
         "prefLabel": {
             "items": {
-                "$ref": "/schema/fields/text"
+                "$ref": "/mex/model/fields/text"
             },
             "minItems": 1,
             "sameAs": [

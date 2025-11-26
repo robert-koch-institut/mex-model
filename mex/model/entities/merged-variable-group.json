@@ -1,37 +1,34 @@
 {
-    "$$target": "/mex/model/entities/merged-concept-scheme#/identifier",
-    "$id": "https://mex.rki.de/mex/model/entities/merged-concept-scheme",
+    "$id": "https://mex.rki.de/mex/model/entities/merged-variable-group",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "description": "The grouping of variables according to a certain aspect, e.g. how the information is modelled in the primary source.",
     "properties": {
-        "description": {
-            "default": [],
+        "containedBy": {
+            "description": "The resource, the variable group is contained by. Used to connect a variable group to its resource.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
             },
-            "sameAs": [
-                "http://purl.org/dc/elements/1.1/description"
+            "minItems": 1,
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/isPartOf"
             ],
             "type": "array"
         },
         "identifier": {
+            "$ref": "/mex/model/fields/identifier",
             "description": "An unambiguous reference to the resource within a given context. Persistent identifiers should be provided as HTTP URIs ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
-            "examples": [
-                "https://mex.rki.de/item/some-scheme-5000"
-            ],
-            "format": "uri",
-            "pattern": "^https://mex\\.rki\\.de/item/[-A-Za-z0-9]{1,512}$",
             "readOnly": true,
             "sameAs": [
                 "http://purl.org/dc/elements/1.1/identifier"
-            ],
-            "type": "string"
+            ]
         },
         "label": {
-            "default": [],
+            "description": "The name of the variable group.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
+            "minItems": 1,
             "sameAs": [
                 "http://www.w3.org/2000/01/rdf-schema#label"
             ],
@@ -39,11 +36,10 @@
         }
     },
     "required": [
-        "identifier"
+        "containedBy",
+        "identifier",
+        "label"
     ],
-    "sameAs": [
-        "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-    ],
-    "title": "Concept Scheme",
+    "title": "Merged Variable Group",
     "type": "object"
 }
