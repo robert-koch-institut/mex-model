@@ -6,7 +6,7 @@
     "description": "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above) ([DCAT, 2020-02-04](https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/)).",
     "properties": {
         "accessRestriction": {
-            "$ref": "/mex/model/entities/merged-concept#/identifier",
+            "$ref": "/mex/model/entities/concept#/identifier",
             "description": "Indicates how access to the distribution is restricted.",
             "examples": [
                 "https://mex.rki.de/item/access-restriction-1"
@@ -113,7 +113,7 @@
             "$comment": "Information about licenses and rights SHOULD be provided on the level of `dcat:Distribution`. Information about licenses and rights MAY be provided for a `dcat:Dataset` [in the scope of this schema: `mex:Resource`] in addition to but not instead of the information provided for the distributions of that dataset ([DCAT, 2020-02-04](https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/)).",
             "anyOf": [
                 {
-                    "$ref": "/mex/model/entities/merged-concept#/identifier",
+                    "$ref": "/mex/model/entities/concept#/identifier",
                     "examples": [
                         "https://mex.rki.de/item/license-1"
                     ],
@@ -132,7 +132,7 @@
         "mediaType": {
             "anyOf": [
                 {
-                    "$ref": "/mex/model/entities/merged-concept#/identifier",
+                    "$ref": "/mex/model/entities/concept#/identifier",
                     "examples": [
                         "https://mex.rki.de/item/mime-type-1"
                     ],

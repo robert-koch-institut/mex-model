@@ -20,7 +20,7 @@
             "default": [],
             "description": "The type of the activity.",
             "items": {
-                "$ref": "/mex/model/entities/merged-concept#/identifier",
+                "$ref": "/mex/model/entities/concept#/identifier",
                 "examples": [
                     "https://mex.rki.de/item/activity-type-1"
                 ],
@@ -269,7 +269,7 @@
             "default": [],
             "description": "The main theme or subject of the activity.",
             "items": {
-                "$ref": "/mex/model/entities/merged-concept#/identifier",
+                "$ref": "/mex/model/entities/concept#/identifier",
                 "examples": [
                     "https://mex.rki.de/item/theme-1"
                 ],

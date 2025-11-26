@@ -1,6 +1,6 @@
 {
-    "$$target": "/mex/model/entities/merged-concept#/identifier",
-    "$id": "https://mex.rki.de/mex/model/entities/merged-concept",
+    "$$target": "/mex/model/entities/concept#/identifier",
+    "$id": "https://mex.rki.de/mex/model/entities/concept",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
     "properties": {
@@ -17,7 +17,7 @@
         "broader": {
             "default": [],
             "items": {
-                "$ref": "/mex/model/entities/merged-concept#/identifier"
+                "$ref": "/mex/model/entities/concept#/identifier"
             },
             "sameAs": [
                 "http://www.w3.org/2004/02/skos/core#broader"
@@ -59,7 +59,7 @@
             "type": "string"
         },
         "inScheme": {
-            "$ref": "/mex/model/entities/merged-concept-scheme#/identifier",
+            "$ref": "/mex/model/entities/concept-scheme#/identifier",
             "sameAs": [
                 "http://www.w3.org/2004/02/skos/core#inScheme"
             ]

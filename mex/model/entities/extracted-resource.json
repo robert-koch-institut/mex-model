@@ -17,7 +17,7 @@
             "type": "array"
         },
         "accessRestriction": {
-            "$ref": "/mex/model/entities/merged-concept#/identifier",
+            "$ref": "/mex/model/entities/concept#/identifier",
             "description": "Indicates how access to the resource is restricted.",
             "examples": [
                 "https://mex.rki.de/item/access-restriction-1"
@@ -30,7 +30,7 @@
         "accrualPeriodicity": {
             "anyOf": [
                 {
-                    "$ref": "/mex/model/entities/merged-concept#/identifier",
+                    "$ref": "/mex/model/entities/concept#/identifier",
                     "examples": [
                         "https://mex.rki.de/item/frequency-1"
                     ],
@@ -61,7 +61,7 @@
             "default": [],
             "description": "Indicates whether the data has been anonymized and/or pseudonymized.",
             "items": {
-                "$ref": "/mex/model/entities/merged-concept#/identifier",
+                "$ref": "/mex/model/entities/concept#/identifier",
                 "examples": [
                     "https://mex.rki.de/item/anonymization-pseudonymization-1"
                 ],
@@ -267,7 +267,7 @@
         "hasPersonalData": {
             "anyOf": [
                 {
-                    "$ref": "/mex/model/entities/merged-concept#/identifier",
+                    "$ref": "/mex/model/entities/concept#/identifier",
                     "examples": [
                         "https://mex.rki.de/item/personal-data-1"
                     ],
@@ -357,7 +357,7 @@
             "default": [],
             "description": "A language of the resource.",
             "items": {
-                "$ref": "/mex/model/entities/merged-concept#/identifier",
+                "$ref": "/mex/model/entities/concept#/identifier",
                 "examples": [
                     "https://mex.rki.de/item/language-1"
                 ],
@@ -372,7 +372,7 @@
             "$comment": "Information about licenses SHOULD be provided on the level of `dcat:Distribution`. Information about licenses MAY be provided for a `mex:Resource` in addition, but not instead, of the information provided for the distributions of that resource ([DCAT, 2020-02-04](https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/)).",
             "anyOf": [
                 {
-                    "$ref": "/mex/model/entities/merged-concept#/identifier",
+                    "$ref": "/mex/model/entities/concept#/identifier",
                     "examples": [
                         "https://mex.rki.de/item/license-1"
                     ],
@@ -570,7 +570,7 @@
             "default": [],
             "description": "Method how the resource was created.",
             "items": {
-                "$ref": "/mex/model/entities/merged-concept#/identifier",
+                "$ref": "/mex/model/entities/concept#/identifier",
                 "examples": [
                     "https://mex.rki.de/item/resource-creation-method-1"
                 ],
@@ -585,7 +585,7 @@
             "default": [],
             "description": "General type of the resource.",
             "items": {
-                "$ref": "/mex/model/entities/merged-concept#/identifier",
+                "$ref": "/mex/model/entities/concept#/identifier",
                 "examples": [
                     "https://mex.rki.de/item/resource-type-general-2"
                 ],
@@ -649,7 +649,7 @@
             "default": [],
             "description": "The processing state of the data, e.g. raw or aggregated.",
             "items": {
-                "$ref": "/mex/model/entities/merged-concept#/identifier",
+                "$ref": "/mex/model/entities/concept#/identifier",
                 "examples": [
                     "https://mex.rki.de/item/data-processing-state-1"
                 ],
@@ -713,7 +713,7 @@
         "theme": {
             "description": "A main category of the resource. A resource can have multiple themes.",
             "items": {
-                "$ref": "/mex/model/entities/merged-concept#/identifier",
+                "$ref": "/mex/model/entities/concept#/identifier",
                 "examples": [
                     "https://mex.rki.de/item/theme-1"
                 ],

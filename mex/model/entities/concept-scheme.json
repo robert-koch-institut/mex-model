@@ -1,6 +1,6 @@
 {
-    "$$target": "/mex/model/entities/merged-concept-scheme#/identifier",
-    "$id": "https://mex.rki.de/mex/model/entities/merged-concept-scheme",
+    "$$target": "/mex/model/entities/concept-scheme#/identifier",
+    "$id": "https://mex.rki.de/mex/model/entities/concept-scheme",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
     "properties": {

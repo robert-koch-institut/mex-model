@@ -8,7 +8,7 @@
     "properties": {
         "hasConsentStatus": {
             "$comment": "Used to indicate if personal details are allowed to publish or not.",
-            "$ref": "/mex/model/entities/merged-concept#/identifier",
+            "$ref": "/mex/model/entities/concept#/identifier",
             "description": "Specifies the state or status of consent.",
             "examples": [
                 "https://mex.rki.de/item/consent-status-1"
@@ -22,7 +22,7 @@
             "$comment": "In DPV there is no property for the type of consent. In DPV, the types are subclasses of dpv:Consent. In order to align with our modelling approach, we model types of consent as a concept (skos:Concept). Since dpv:Consent is also defined as a skos:Concept, this is no conflict, just another way of implementing it.",
             "anyOf": [
                 {
-                    "$ref": "/mex/model/entities/merged-concept#/identifier",
+                    "$ref": "/mex/model/entities/concept#/identifier",
                     "examples": [
                         "https://mex.rki.de/item/consent-type-2"
                     ],
