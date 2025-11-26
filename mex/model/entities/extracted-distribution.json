@@ -213,7 +213,7 @@
             ]
         },
         "stableTargetId": {
-            "$ref": "/mex/model/entities/merged-extracted-distribution#/identifier",
+            "$ref": "/mex/model/entities/merged-distribution#/identifier",
             "readOnly": true
         },
         "title": {

@@ -55,7 +55,7 @@
             "type": "array"
         },
         "stableTargetId": {
-            "$ref": "/mex/model/entities/merged-extracted-variable-group#/identifier",
+            "$ref": "/mex/model/entities/merged-variable-group#/identifier",
             "readOnly": true
         }
     },

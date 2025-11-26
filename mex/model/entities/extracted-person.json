@@ -159,7 +159,7 @@
             "type": "array"
         },
         "stableTargetId": {
-            "$ref": "/mex/model/entities/merged-extracted-person#/identifier",
+            "$ref": "/mex/model/entities/merged-person#/identifier",
             "readOnly": true
         }
     },

@@ -642,7 +642,7 @@
             "type": "array"
         },
         "stableTargetId": {
-            "$ref": "/mex/model/entities/merged-extracted-resource#/identifier",
+            "$ref": "/mex/model/entities/merged-resource#/identifier",
             "readOnly": true
         },
         "stateOfDataProcessing": {

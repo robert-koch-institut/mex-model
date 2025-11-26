@@ -138,7 +138,7 @@
             "type": "array"
         },
         "stableTargetId": {
-            "$ref": "/mex/model/entities/merged-extracted-organization#/identifier",
+            "$ref": "/mex/model/entities/merged-organization#/identifier",
             "readOnly": true
         },
         "viafId": {

@@ -86,7 +86,7 @@
             "type": "string"
         },
         "stableTargetId": {
-            "$ref": "/mex/model/entities/merged-extracted-consent#/identifier",
+            "$ref": "/mex/model/entities/merged-consent#/identifier",
             "readOnly": true
         }
     },

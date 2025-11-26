@@ -136,7 +136,7 @@
             "type": "array"
         },
         "stableTargetId": {
-            "$ref": "/mex/model/entities/merged-extracted-access-platform#/identifier",
+            "$ref": "/mex/model/entities/merged-access-platform#/identifier",
             "readOnly": true
         },
         "technicalAccessibility": {

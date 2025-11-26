@@ -6,7 +6,7 @@ authors = [{ name = "MEx Team", email = "mex@rki.de" }]
 readme = { file = "README.md", content-type = "text/markdown" }
 license = { file = "LICENSE" }
 urls = { Repository = "https://github.com/robert-koch-institut/mex-model" }
-requires-python = ">=3.9"
+requires-python = ">=3.11,<3.12"
 dependencies = [
     "importlib-resources>=1.3; python_version<'3.10'"
 ]
@@ -39,7 +39,7 @@ distribution = true
 
 [tool.pdm.scripts]
 update-all = { cmd = "pdm update --group :all --update-all --save-compatible" }
-lock-all = { cmd = "pdm lock --group :all --python='>=3.9'" }
+lock-all = { cmd = "pdm lock --group :all --python='==3.11.*'" }
 install-all = { cmd = "pdm install --group :all --frozen-lockfile" }
 sphinx = { cmd = "pdm run sphinx-build -aE -b dirhtml docs docs/dist" }
 doc = { composite = ["sphinx"] }

@@ -413,7 +413,7 @@
             "description": "The name of the chapter of the publication, the book section belongs to."
         },
         "stableTargetId": {
-            "$ref": "/mex/model/entities/merged-extracted-bibliographic-resource#/identifier",
+            "$ref": "/mex/model/entities/merged-bibliographic-resource#/identifier",
             "readOnly": true
         },
         "subtitle": {

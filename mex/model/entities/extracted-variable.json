@@ -114,7 +114,7 @@
             "type": "array"
         },
         "stableTargetId": {
-            "$ref": "/mex/model/entities/merged-extracted-variable#/identifier",
+            "$ref": "/mex/model/entities/merged-variable#/identifier",
             "readOnly": true
         },
         "usedIn": {

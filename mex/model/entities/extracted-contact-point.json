@@ -50,7 +50,7 @@
             "type": "string"
         },
         "stableTargetId": {
-            "$ref": "/mex/model/entities/merged-extracted-contact-point#/identifier",
+            "$ref": "/mex/model/entities/merged-contact-point#/identifier",
             "readOnly": true
         }
     },

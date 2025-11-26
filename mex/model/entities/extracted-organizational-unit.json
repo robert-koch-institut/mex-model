@@ -93,7 +93,7 @@
             "type": "array"
         },
         "stableTargetId": {
-            "$ref": "/mex/model/entities/merged-extracted-organizational-unit#/identifier",
+            "$ref": "/mex/model/entities/merged-organizational-unit#/identifier",
             "readOnly": true
         },
         "unitOf": {

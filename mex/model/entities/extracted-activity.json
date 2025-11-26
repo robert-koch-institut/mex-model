@@ -238,7 +238,7 @@
             "type": "array"
         },
         "stableTargetId": {
-            "$ref": "/mex/model/entities/merged-extracted-activity#/identifier",
+            "$ref": "/mex/model/entities/merged-activity#/identifier",
             "readOnly": true
         },
         "start": {

@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - split extracted item and merged item schemas
 - updated template to https://github.com/robert-koch-institut/mex-template/commit/a67c71
 - lock file maintenance (2025-11-24)
+- narrow python version to 3.11 to prevent dependency issues
 
 ### Deprecated
 

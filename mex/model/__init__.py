@@ -1,13 +1,8 @@
 import json
-import pkgutil
-from collections.abc import Generator
+from collections.abc import Callable, Generator
 from copy import deepcopy
-from typing import Any, Callable
-
-try:
-    from importlib.resources import files
-except ImportError:
-    from importlib_resources import files  # type: ignore[import-not-found, no-redef]
+from importlib.resources import files
+from typing import Any
 
 __all__ = (
     "ENTITY_JSON_BY_NAME",
@@ -25,41 +20,24 @@ def _normalize_name(name: str) -> str:
 
 def _load_json_resources(
     package_name: str, file_filter: Callable[[str], bool] = lambda _: True
-) -> Generator[tuple[str, dict[str, Any]]]:
+) -> Generator[tuple[str, Any]]:
     """Load JSON resources from a package with fallback for namespace packages."""
-    try:
-        # Primary approach using importlib.resources
-        for file in files(package_name).iterdir():
-            if file.name.endswith(".json") and file_filter(file.name):
-                yield _normalize_name(file.name), json.loads(file.read_text("utf-8"))
-    except (TypeError, AttributeError):
-        # Fallback for namespace package issues in Python 3.9
-        module = __import__(package_name, fromlist=[""])
-        for _, name, _ in pkgutil.iter_modules(module.__path__):
-            filename = f"{name}.json"
-            if file_filter(filename):
-                try:
-                    resource_path = files(package_name) / filename
-                    if resource_path.is_file():
-                        yield (
-                            _normalize_name(filename),
-                            json.loads(resource_path.read_text("utf-8")),
-                        )
-                except (OSError, ValueError, TypeError):
-                    # Skip files that can't be read or parsed
-                    continue
+    # Primary approach using importlib.resources
+    for file in files(package_name).iterdir():
+        if file.name.endswith(".json") and file_filter(file.name):
+            yield _normalize_name(file.name), json.loads(file.read_text("utf-8"))
 
 
 # Load all JSON resources with appropriate filters
 EXTRACTED_MODEL_JSON_BY_NAME = {
-    name.removeprefix("extracted-"): schema
+    name.removeprefix("extracted_"): schema
     for name, schema in _load_json_resources(
         "mex.model.entities", lambda name: name.startswith("extracted")
     )
 }
 
 MERGED_MODEL_JSON_BY_NAME = {
-    name.removeprefix("merged-"): schema
+    name.removeprefix("merged_"): schema
     for name, schema in _load_json_resources(
         "mex.model.entities", lambda name: name.startswith("merged")
     )
