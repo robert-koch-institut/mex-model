@@ -41,7 +41,6 @@ Entities
 .. jsonschema:: ../mex/model/entities/organization.json
 .. jsonschema:: ../mex/model/entities/organizational-unit.json
 .. jsonschema:: ../mex/model/entities/person.json
-    :encoding: utf8
 .. jsonschema:: ../mex/model/entities/primary-source.json
 .. jsonschema:: ../mex/model/entities/resource.json
 .. jsonschema:: ../mex/model/entities/variable-group.json

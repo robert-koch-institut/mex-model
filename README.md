@@ -7,6 +7,7 @@ JSON schema files defining the MEx metadata model.
 [![documentation](https://github.com/robert-koch-institut/mex-model/actions/workflows/documentation.yml/badge.svg)](https://robert-koch-institut.github.io/mex-model)
 [![linting](https://github.com/robert-koch-institut/mex-model/actions/workflows/linting.yml/badge.svg)](https://github.com/robert-koch-institut/mex-model/actions/workflows/linting.yml)
 [![open-code](https://github.com/robert-koch-institut/mex-model/actions/workflows/open-code.yml/badge.svg)](https://gitlab.opencode.de/robert-koch-institut/mex/mex-model)
+[![testing](https://github.com/robert-koch-institut/mex-model/actions/workflows/testing.yml/badge.svg)](https://github.com/robert-koch-institut/mex-model/actions/workflows/testing.yml)
 
 ## Project
 
@@ -68,9 +69,10 @@ components of the MEx project are open-sourced under the same license as well.
 - on unix, run `make install`
 - on windows, run `.\mex.bat install`
 
-### Linting
+### Linting and testing
 
-- run all linters with `make lint` or `.\mex.bat lint`
+- run unit and integration tests with `make test` or `.\mex.bat test`
+- run just the unit tests with `make unit` or `.\mex.bat unit`
 
 ### Updating dependencies
 
