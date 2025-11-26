@@ -1120,13 +1120,13 @@ msgstr ""
 "Data)"
 
 msgctxt "Consent"
-mgid "hasConsentStatus.singular"
+msgid "hasConsentStatus.singular"
 msgstr "Consent Status"
 
 msgctxt "Consent"
-mgid "hasConsentType.singular"
+msgid "hasConsentType.singular"
 msgstr "Consent Type"
 
 msgctxt "Consent"
-mgid "hasDataSubject.singular"
+msgid "hasDataSubject.singular"
 msgstr "Person concerned"
