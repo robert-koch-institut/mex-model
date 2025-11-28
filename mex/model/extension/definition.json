@@ -1,5 +1,5 @@
 {
-    "$id": "https://mex.rki.de/schema/extension/definition",
+    "$id": "https://mex.rki.de/mex/model/extension/definition",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "description": "Extensions to the json schema with custom properties.",
     "properties": {

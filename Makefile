@@ -1,5 +1,5 @@
-.PHONY: all setup hooks install lint wheel docs
-all: install lint
+.PHONY: all setup hooks install lint unit test wheel docs
+all: install lint test
 
 LATEST = $(shell git describe --tags $(shell git rev-list --tags --max-count=1))
 PWD = $(shell pwd)
@@ -24,6 +24,16 @@ lint:
 	# run the linter hooks from pre-commit on all files
 	@ echo linting all files; \
 	pre-commit run --all-files; \
+
+unit:
+	# run the test suite with all unit tests
+	@ echo running unit tests; \
+	pdm run pytest -m 'not integration'; \
+
+test:
+	# run the unit and integration test suites
+	@ echo running all tests; \
+	pdm run pytest --numprocesses=auto --dist=worksteal; \
 
 wheel:
 	# build the python package

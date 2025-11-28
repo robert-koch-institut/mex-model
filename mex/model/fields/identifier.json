@@ -1,6 +1,6 @@
 {
-    "$$target": "/schema/fields/identifier",
-    "$id": "https://mex.rki.de/schema/fields/identifier",
+    "$$target": "/mex/model/fields/identifier",
+    "$id": "https://mex.rki.de/mex/model/fields/identifier",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "examples": [
         "dYb6qKqjdpocTAUEPPTTj2",
