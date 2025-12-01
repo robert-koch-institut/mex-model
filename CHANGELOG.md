@@ -9,17 +9,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- EXTRACTED_MODEL_JSON_BY_NAME and MERGED_MODEL_JSON_BY_NAME schema lookups
+- added testing setup and github actions workflow
+
 ### Changes
 
-- bumped cookiecutter template to https://github.com/robert-koch-institut/mex-template/commit/a67c71
+- split extracted item and merged item schemas
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/a67c71
 - lock file maintenance (2025-11-24)
+- narrow python version to 3.11 to prevent dependency issues
 
 ### Deprecated
 
+- mark ENTITY_JSON_BY_NAME for deprecation, use extracted or merged specific lookup
+
 ### Removed
+
+- removed `schema.zip` from release pipeline
 
 ### Fixed
 
+- changed outdated `/schema/` paths and references to `/mex/model/`
 - fixed some translation issues, e.g. for publisher and isPartOf
 
 ### Security
@@ -28,9 +38,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- Removed .mo convertion from release action due to runtime convertion in mex-editor
-- bumped cookiecutter template to https://github.com/robert-koch-institut/mex-template/commit/6009e2
-- bumped cookiecutter template to https://github.com/robert-koch-institut/mex-template/commit/3c389d
+- Removed .mo conversion from release action due to runtime conversion in mex-editor
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/6009e2
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/3c389d
 
 ## [4.4.0] - 2025-10-22
 

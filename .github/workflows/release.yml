@@ -40,7 +40,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           fetch-depth: 1
-          ref: ${{ needs.release.outputs.tag }}
+          token: ${{ secrets.WORKFLOW_TOKEN }}
 
       - name: Cache requirements
         uses: actions/cache@v4
@@ -109,8 +109,7 @@ jobs:
           python-version: 3.11
 
       - name: Install requirements
-        run: |
-          make setup
+        run: make setup
 
       - name: Build wheel and sdist distros and create a github release
         env:
@@ -121,14 +120,6 @@ jobs:
           for filename in dist/*; do
             gh release upload ${{ needs.release.outputs.tag }} ${filename};
           done
-
-      - name: Create schema.zip file and add to github release
-        env:
-          GH_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
-          PDM_CHECK_UPDATE: False
-        run: |
-          pdm run python scripts/build_schema_zip.py
-          gh release upload ${{ needs.release.outputs.tag }} schema.zip
 
       - name: Publish distribution 📦 to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1

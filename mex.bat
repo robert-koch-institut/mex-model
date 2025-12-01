@@ -4,6 +4,8 @@ set target=%1
 
 if "%target%"=="install" goto install
 if "%target%"=="lint" goto lint
+if "%target%"=="unit" goto unit
+if "%target%"=="test" goto test
 if "%target%"=="docs" goto docs
 echo invalid argument %target%
 exit /b 1
@@ -31,6 +33,20 @@ exit /b %errorlevel%
 @REM run the linter hooks from pre-commit on all files
 echo linting all files
 pre-commit run --all-files
+exit /b %errorlevel%
+
+
+:unit
+@REM run the test suite with all unit tests
+echo running unit tests
+pdm run pytest -m "not integration"
+exit /b %errorlevel%
+
+
+:test
+@REM run the unit and integration test suites
+echo running all tests
+pdm run pytest --numprocesses=auto --dist=worksteal
 exit /b %errorlevel%
 
 
