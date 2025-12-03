@@ -14,7 +14,7 @@
     },
     {
         "definition": {
-            "de": "Von Haushaltsmitteln des RKI  (vom Bund zur Verfügung gestellt) finanziertes Projekt oder Vorhaben.",
+            "de": "Von Haushaltsmitteln des RKI (vom Bund zur Verfügung gestellt) finanziertes Projekt oder Vorhaben.",
             "en": "Project or endeavor financed with RKI budget (provided by the federal government)."
         },
         "entityType": "Concept",

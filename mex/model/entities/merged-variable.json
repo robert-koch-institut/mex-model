@@ -3,7 +3,7 @@
     "$id": "https://mex.rki.de/mex/model/entities/merged-variable",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
-    "description": " Variables are defined for the data-based evaluation of investigations (e.g. studies). A variable is characterized by its data type (e.g. integer, string, date) and value range. The variable can be either quantitative or qualitative, i.e. the value range can take numerical or categorical values.",
+    "description": "Variables are defined for the data-based evaluation of investigations (e.g. studies). A variable is characterized by its data type (e.g. integer, string, date) and value range. The variable can be either quantitative or qualitative, i.e. the value range can take numerical or categorical values.",
     "properties": {
         "belongsTo": {
             "default": [],
@@ -77,9 +77,9 @@
             ]
         },
         "label": {
+            "description": "The name of the variable.",
             "items": {
                 "$ref": "/mex/model/fields/text",
-                "description": "The name of the variable.",
                 "examples": [
                     {
                         "language": "de",
