@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+### Changes
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [4.6.0] - 2025-12-03
+
+### Added
+
 - EXTRACTED_MODEL_JSON_BY_NAME and MERGED_MODEL_JSON_BY_NAME schema lookups
 - added testing setup and github actions workflow
 
@@ -32,8 +46,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - changed outdated `/schema/` paths and references to `/mex/model/`
 - fixed some translation issues, e.g. for publisher and isPartOf
-
-### Security
 
 ## [4.5.0] - 2025-11-12
 
