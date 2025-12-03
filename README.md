@@ -71,6 +71,7 @@ components of the MEx project are open-sourced under the same license as well.
 
 ### Linting and testing
 
+- run all linters with `make lint` or `.\mex.bat lint`
 - run unit and integration tests with `make test` or `.\mex.bat test`
 - run just the unit tests with `make unit` or `.\mex.bat unit`
 
