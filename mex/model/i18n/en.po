@@ -571,7 +571,7 @@ msgstr "This activity is part of a superordinate project, e.g. a sub-project"
 
 msgctxt "Resource"
 msgid "isPartOf.singular"
-msgid "isPartOf.plural"
+msgid_plural "isPartOf.plural"
 msgstr[0] "Superordinate data source/data set"
 msgstr[1] "Superordinate data sources/data sets"
 
@@ -1032,7 +1032,7 @@ msgstr "Title of series"
 msgid "unitInCharge.singular"
 msgid_plural "unitInCharge.plural"
 msgstr[0] "Responsible unit"
-msgstr[1] "Verantwortliche Fachgebiete"
+msgstr[1] "Responsible units"
 
 msgid "unitInCharge.description"
 msgstr "Organizational unit responsible for the data"
@@ -1130,3 +1130,9 @@ msgstr "Consent Type"
 msgctxt "Consent"
 msgid "hasDataSubject.singular"
 msgstr "Person concerned"
+
+msgid "supersededBy"
+msgstr "superseded by"
+
+msgid "supersededBy.description"
+msgstr "A related item that supersedes, updates, consolidates, or otherwise renders this item obsolete."

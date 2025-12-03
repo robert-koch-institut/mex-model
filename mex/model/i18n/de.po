@@ -1159,3 +1159,9 @@ msgstr "Art der Einwilligung"
 msgctxt "Consent"
 msgid "hasDataSubject.singular"
 msgstr "Betreffende Person"
+
+msgid "supersededBy"
+msgstr "ersetzt durch"
+
+msgid "supersededBy.description"
+msgstr "Zugehöriges Element, welches dieses Element ersetzt, aktualisiert, konsolidiert oder auf andere Weise obsolet macht."

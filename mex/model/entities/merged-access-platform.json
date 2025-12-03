@@ -116,6 +116,21 @@
             ],
             "type": "array"
         },
+        "supersededBy": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/merged-access-platform#/identifier"
+                },
+                {
+                    "type": null
+                }
+            ],
+            "default": null,
+            "description": "A related access platform that supersedes this access platform. Use this property to point to the access platform which replaces, updates, consolidates or otherwise makes the current access platform obsolete.",
+            "sameAs": [
+                "https://schema.org/supersededBy"
+            ]
+        },
         "technicalAccessibility": {
             "$ref": "/mex/model/entities/concept#/identifier",
             "description": "Indicates form if the platform can be accessed only within RKI network (internally) or if the platform is accessible publicly (externally).",
