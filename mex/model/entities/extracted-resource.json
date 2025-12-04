@@ -120,7 +120,7 @@
         },
         "contributor": {
             "default": [],
-            "description": " A person involved in the creation of the resource.",
+            "description": "A person involved in the creation of the resource.",
             "items": {
                 "$ref": "/mex/model/entities/merged-person#/identifier"
             },
@@ -643,6 +643,7 @@
         },
         "stableTargetId": {
             "$ref": "/mex/model/entities/merged-resource#/identifier",
+            "description": "The identifier of the merged item that this extracted item belongs to.",
             "readOnly": true
         },
         "stateOfDataProcessing": {

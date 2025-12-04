@@ -51,6 +51,7 @@
         },
         "stableTargetId": {
             "$ref": "/mex/model/entities/merged-contact-point#/identifier",
+            "description": "The identifier of the merged item that this extracted item belongs to.",
             "readOnly": true
         }
     },

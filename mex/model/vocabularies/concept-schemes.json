@@ -22,7 +22,7 @@
     {
         "description": {
             "de": "Dieses Vokabular basiert auf dem W3C Standard DPV, Data Privacy Vocabulary, verfügbar unter https://w3c.github.io/dpv/2.0/dpv/. Insbesondere auf der Klasse dpv:ConsentStatus und deren Subklassen.",
-            "en": "This vocabulary is based of the W3C Standard DPV, Data Privacy Vocabulary, avaiable at https://w3c.github.io/dpv/2.0/dpv/. Specifically dpv:ConsentStatus and its subclasses."
+            "en": "This vocabulary is based of the W3C Standard DPV, Data Privacy Vocabulary, available at https://w3c.github.io/dpv/2.0/dpv/. Specifically dpv:ConsentStatus and its subclasses."
         },
         "identifier": "https://mex.rki.de/item/consent-status",
         "label": "Consent status vocabulary"
@@ -30,7 +30,7 @@
     {
         "description": {
             "de": "Dieses Vokabular basiert auf dem W3C Standard DPV, Data Privacy Vocabulary, verfügbar unter https://w3c.github.io/dpv/2.0/dpv/. Insbesondere auf der Klasse dpv:Consent und deren Subklassen.",
-            "en": "This vocabulary is based of the W3C Standard DPV, Data Privacy Vocabulary, avaiable at https://w3c.github.io/dpv/2.0/dpv/. Specifically dpv:Consent and its subclasses."
+            "en": "This vocabulary is based of the W3C Standard DPV, Data Privacy Vocabulary, available at https://w3c.github.io/dpv/2.0/dpv/. Specifically dpv:Consent and its subclasses."
         },
         "identifier": "https://mex.rki.de/item/consent-type",
         "label": "Consent type vocabulary"
