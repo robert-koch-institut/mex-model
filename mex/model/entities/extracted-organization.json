@@ -139,6 +139,7 @@
         },
         "stableTargetId": {
             "$ref": "/mex/model/entities/merged-organization#/identifier",
+            "description": "The identifier of the merged item that this extracted item belongs to.",
             "readOnly": true
         },
         "viafId": {

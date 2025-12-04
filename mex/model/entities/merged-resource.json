@@ -120,7 +120,7 @@
         },
         "contributor": {
             "default": [],
-            "description": " A person involved in the creation of the resource.",
+            "description": "A person involved in the creation of the resource.",
             "items": {
                 "$ref": "/mex/model/entities/merged-person#/identifier"
             },

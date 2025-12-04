@@ -3,7 +3,7 @@
     "$id": "https://mex.rki.de/mex/model/entities/extracted-activity",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
-    "description": "An activity carried out by RKI. This may be a research activity, such as a funded project, or a task that RKI performs under federal law.  Activities provide useful context information for resources.",
+    "description": "An activity carried out by RKI. This may be a research activity, such as a funded project, or a task that RKI performs under federal law. Activities provide useful context information for resources.",
     "properties": {
         "abstract": {
             "default": [],
@@ -43,7 +43,7 @@
             "type": "array"
         },
         "contact": {
-            "description": " An agent serving as a contact for the activity.",
+            "description": "An agent serving as a contact for the activity.",
             "items": {
                 "anyOf": [
                     {
@@ -239,6 +239,7 @@
         },
         "stableTargetId": {
             "$ref": "/mex/model/entities/merged-activity#/identifier",
+            "description": "The identifier of the merged item that this extracted item belongs to.",
             "readOnly": true
         },
         "start": {

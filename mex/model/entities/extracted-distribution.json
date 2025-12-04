@@ -35,11 +35,7 @@
             "default": [],
             "description": "A URL of the resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint ([DCAT, 2020-02-04](https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/)).",
             "items": {
-                "anyOf": [
-                    {
-                        "$ref": "/mex/model/fields/link"
-                    }
-                ]
+                "$ref": "/mex/model/fields/link"
             },
             "sameAs": [
                 "http://www.w3.org/ns/dcat#accessURL"
@@ -50,11 +46,7 @@
             "default": [],
             "description": "The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's `dcat:mediaType` ([DCAT, 2020-02-04](https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/)).",
             "items": {
-                "anyOf": [
-                    {
-                        "$ref": "/mex/model/fields/link"
-                    }
-                ]
+                "$ref": "/mex/model/fields/link"
             },
             "sameAs": [
                 "http://www.w3.org/ns/dcat#downloadURL"
@@ -207,13 +199,14 @@
                 }
             ],
             "default": null,
-            "description": "Date on which the resource was changed  ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
+            "description": "Date on which the resource was changed ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
             "sameAs": [
                 "http://purl.org/dc/terms/modified"
             ]
         },
         "stableTargetId": {
             "$ref": "/mex/model/entities/merged-distribution#/identifier",
+            "description": "The identifier of the merged item that this extracted item belongs to.",
             "readOnly": true
         },
         "title": {
