@@ -9,8 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- description for stableTargetId fields
-
 ### Changes
 
 ### Deprecated
@@ -19,10 +17,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+### Security
+
+## [4.6.1] - 2025-12-04
+
+### Added
+
+- description for stableTargetId fields
+
+### Fixed
+
 - fixed a few description whitespaces, typos and placements
 - fixed misuse of anyOf, where there was only one option
-
-### Security
 
 ## [4.6.0] - 2025-12-03
 
