@@ -191,7 +191,7 @@
                     "$ref": "/mex/model/entities/merged-distribution#/identifier"
                 },
                 {
-                    "type": null
+                    "type": "null"
                 }
             ],
             "default": null,

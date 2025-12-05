@@ -410,7 +410,7 @@
                     "$ref": "/mex/model/entities/merged-bibliographic-resource#/identifier"
                 },
                 {
-                    "type": null
+                    "type": "null"
                 }
             ],
             "default": null,

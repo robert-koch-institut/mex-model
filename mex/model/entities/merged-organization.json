@@ -124,7 +124,7 @@
                     "$ref": "/mex/model/entities/merged-organization#/identifier"
                 },
                 {
-                    "type": null
+                    "type": "null"
                 }
             ],
             "default": null,

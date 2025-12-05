@@ -36,7 +36,7 @@
                     "$ref": "/mex/model/entities/merged-contact-point#/identifier"
                 },
                 {
-                    "type": null
+                    "type": "null"
                 }
             ],
             "default": null,

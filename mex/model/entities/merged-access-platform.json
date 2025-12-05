@@ -122,7 +122,7 @@
                     "$ref": "/mex/model/entities/merged-access-platform#/identifier"
                 },
                 {
-                    "type": null
+                    "type": "null"
                 }
             ],
             "default": null,

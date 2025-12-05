@@ -145,7 +145,7 @@
                     "$ref": "/mex/model/entities/merged-person#/identifier"
                 },
                 {
-                    "type": null
+                    "type": "null"
                 }
             ],
             "default": null,

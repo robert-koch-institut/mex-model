@@ -79,7 +79,7 @@
                     "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
                 },
                 {
-                    "type": null
+                    "type": "null"
                 }
             ],
             "default": null,

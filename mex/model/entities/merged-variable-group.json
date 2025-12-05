@@ -41,7 +41,7 @@
                     "$ref": "/mex/model/entities/merged-variable-group#/identifier"
                 },
                 {
-                    "type": null
+                    "type": "null"
                 }
             ],
             "default": null,

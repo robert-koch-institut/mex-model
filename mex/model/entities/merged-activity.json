@@ -271,7 +271,7 @@
                     "$ref": "/mex/model/entities/merged-activity#/identifier"
                 },
                 {
-                    "type": null
+                    "type": "null"
                 }
             ],
             "default": null,

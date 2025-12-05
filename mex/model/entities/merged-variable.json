@@ -100,7 +100,7 @@
                     "$ref": "/mex/model/entities/merged-variable#/identifier"
                 },
                 {
-                    "type": null
+                    "type": "null"
                 }
             ],
             "default": null,
