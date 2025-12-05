@@ -404,6 +404,18 @@
             ],
             "type": "array"
         },
+        "supersededBy": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/merged-bibliographic-resource#/identifier"
+                },
+                {
+                    "type": null
+                }
+            ],
+            "default": null,
+            "description": "A merged item which is the preferred duplicate, because it replaces, consolidates or otherwise makes the current merged item obsolete."
+        },
         "title": {
             "description": "The full title of the publication.",
             "items": {

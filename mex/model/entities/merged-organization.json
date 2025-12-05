@@ -118,6 +118,18 @@
             ],
             "type": "array"
         },
+        "supersededBy": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/merged-organization#/identifier"
+                },
+                {
+                    "type": null
+                }
+            ],
+            "default": null,
+            "description": "A merged item which is the preferred duplicate, because it replaces, consolidates or otherwise makes the current merged item obsolete."
+        },
         "viafId": {
             "default": [],
             "description": "Identifier from VIAF (Virtual Authority File).",

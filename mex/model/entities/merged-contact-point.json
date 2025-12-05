@@ -29,6 +29,18 @@
             "sameAs": [
                 "http://purl.org/dc/elements/1.1/identifier"
             ]
+        },
+        "supersededBy": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/merged-contact-point#/identifier"
+                },
+                {
+                    "type": null
+                }
+            ],
+            "default": null,
+            "description": "A merged item which is the preferred duplicate, because it replaces, consolidates or otherwise makes the current merged item obsolete."
         }
     },
     "required": [

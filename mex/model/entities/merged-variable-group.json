@@ -34,6 +34,18 @@
                 "http://www.w3.org/2000/01/rdf-schema#label"
             ],
             "type": "array"
+        },
+        "supersededBy": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/merged-variable-group#/identifier"
+                },
+                {
+                    "type": null
+                }
+            ],
+            "default": null,
+            "description": "A merged item which is the preferred duplicate, because it replaces, consolidates or otherwise makes the current merged item obsolete."
         }
     },
     "required": [
