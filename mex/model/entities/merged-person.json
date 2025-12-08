@@ -138,6 +138,18 @@
                 "http://www.wikidata.org/entity/P496"
             ],
             "type": "array"
+        },
+        "supersededBy": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/merged-person#/identifier"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "A merged item which is the preferred duplicate, because it replaces, consolidates or otherwise makes the current merged item obsolete."
         }
     },
     "required": [

@@ -265,6 +265,18 @@
             ],
             "type": "array"
         },
+        "supersededBy": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/merged-activity#/identifier"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "A merged item which is the preferred duplicate, because it replaces, consolidates or otherwise makes the current merged item obsolete."
+        },
         "theme": {
             "default": [],
             "description": "The main theme or subject of the activity.",
