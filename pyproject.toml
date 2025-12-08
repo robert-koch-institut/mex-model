@@ -19,7 +19,7 @@ optional-dependencies.dev = [
     "pytest>=8",
     "ruff>=0.14",
     "sphinx-jsonschema",
-    "sphinx<9",
+    "sphinx<10",
 ]
 
 [tool.cruft]

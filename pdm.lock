@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:d93c6259f136be4636f450fe2b400fbebc43e204bd08609a11f8a5398c20f094"
+content_hash = "sha256:acddf6abc22b5812138de3ec8478f31f5a6ba019874cc5e04931a58df49763c4"
 
 [[metadata.targets]]
 requires_python = "==3.11.*"
@@ -164,13 +164,13 @@ files = [
 
 [[package]]
 name = "docutils"
-version = "0.21.2"
+version = "0.22.3"
 requires_python = ">=3.9"
 summary = "Docutils -- Python Documentation Utilities"
 groups = ["dev"]
 files = [
-    {file = "docutils-0.21.2-py3-none-any.whl", hash = "sha256:dafca5b9e384f0e419294eb4d2ff9fa826435bf15f15b7bd45723e8ad76811b2"},
-    {file = "docutils-0.21.2.tar.gz", hash = "sha256:3a6b18732edf182daa3cd12775bbb338cf5691468f91eeeb109deff6ebfa986f"},
+    {file = "docutils-0.22.3-py3-none-any.whl", hash = "sha256:bd772e4aca73aff037958d44f2be5229ded4c09927fcf8690c577b66234d6ceb"},
+    {file = "docutils-0.22.3.tar.gz", hash = "sha256:21486ae730e4ca9f622677b1412b879af1791efcfba517e4c6f60be543fc8cdd"},
 ]
 
 [[package]]
@@ -619,14 +619,14 @@ files = [
 ]
 
 [[package]]
-name = "roman-numerals-py"
+name = "roman-numerals"
 version = "3.1.0"
 requires_python = ">=3.9"
 summary = "Manipulate well-formed Roman numerals"
 groups = ["dev"]
 files = [
-    {file = "roman_numerals_py-3.1.0-py3-none-any.whl", hash = "sha256:9da2ad2fb670bcf24e81070ceb3be72f6c11c440d73bd579fbeca1e9f330954c"},
-    {file = "roman_numerals_py-3.1.0.tar.gz", hash = "sha256:be4bf804f083a4ce001b5eb7e3c0862479d10f94c936f6c4e5f250aa5ff5bd2d"},
+    {file = "roman_numerals-3.1.0-py3-none-any.whl", hash = "sha256:842ae5fd12912d62720c9aad8cab706e8c692556d01a38443e051ee6cc158d90"},
+    {file = "roman_numerals-3.1.0.tar.gz", hash = "sha256:384e36fc1e8d4bd361bdb3672841faae7a345b3f708aae9895d074c878332551"},
 ]
 
 [[package]]
@@ -670,7 +670,7 @@ files = [
 
 [[package]]
 name = "sphinx"
-version = "8.2.3"
+version = "9.0.4"
 requires_python = ">=3.11"
 summary = "Python documentation generator"
 groups = ["dev"]
@@ -680,11 +680,11 @@ dependencies = [
     "alabaster>=0.7.14",
     "babel>=2.13",
     "colorama>=0.4.6; sys_platform == \"win32\"",
-    "docutils<0.22,>=0.20",
+    "docutils<0.23,>=0.20",
     "imagesize>=1.3",
     "packaging>=23.0",
     "requests>=2.30.0",
-    "roman-numerals-py>=1.0.0",
+    "roman-numerals>=1.0.0",
     "snowballstemmer>=2.2",
     "sphinxcontrib-applehelp>=1.0.7",
     "sphinxcontrib-devhelp>=1.0.6",
@@ -694,8 +694,8 @@ dependencies = [
     "sphinxcontrib-serializinghtml>=1.1.9",
 ]
 files = [
-    {file = "sphinx-8.2.3-py3-none-any.whl", hash = "sha256:4405915165f13521d875a8c29c8970800a0141c14cc5416a38feca4ea5d9b9c3"},
-    {file = "sphinx-8.2.3.tar.gz", hash = "sha256:398ad29dee7f63a75888314e9424d40f52ce5a6a87ae88e7071e80af296ec348"},
+    {file = "sphinx-9.0.4-py3-none-any.whl", hash = "sha256:5bebc595a5e943ea248b99c13814c1c5e10b3ece718976824ffa7959ff95fffb"},
+    {file = "sphinx-9.0.4.tar.gz", hash = "sha256:594ef59d042972abbc581d8baa577404abe4e6c3b04ef61bd7fc2acbd51f3fa3"},
 ]
 
 [[package]]
@@ -820,13 +820,13 @@ files = [
 
 [[package]]
 name = "urllib3"
-version = "2.5.0"
+version = "2.6.0"
 requires_python = ">=3.9"
 summary = "HTTP library with thread-safe connection pooling, file post, and more."
 groups = ["dev"]
 files = [
-    {file = "urllib3-2.5.0-py3-none-any.whl", hash = "sha256:e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc"},
-    {file = "urllib3-2.5.0.tar.gz", hash = "sha256:3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"},
+    {file = "urllib3-2.6.0-py3-none-any.whl", hash = "sha256:c90f7a39f716c572c4e3e58509581ebd83f9b59cced005b7db7ad2d22b0db99f"},
+    {file = "urllib3-2.6.0.tar.gz", hash = "sha256:cb9bcef5a4b345d5da5d145dc3e30834f58e8018828cbc724d30b4cb7d4d49f1"},
 ]
 
 [[package]]
