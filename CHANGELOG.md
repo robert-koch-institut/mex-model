@@ -9,8 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- "supersededBy" property added to merged models, translation added to po files
-
 ### Changes
 
 ### Deprecated
@@ -20,6 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+## [4.7.0] - 2025-12-09
+
+### Added
+
+- "supersededBy" property added to merged models, translation added to po files
 
 ## [4.6.1] - 2025-12-04
 
