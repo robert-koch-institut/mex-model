@@ -1,6 +1,6 @@
 {
-    "$$target": "/schema/entities/variable-group#/identifier",
-    "$id": "https://mex.rki.de/schema/entities/variable-group",
+    "$$target": "/mex/model/entities/extracted-variable-group#/identifier",
+    "$id": "https://mex.rki.de/mex/model/entities/extracted-variable-group",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
     "description": "The grouping of variables according to a certain aspect, e.g. how the information is modelled in the primary source.",
@@ -8,7 +8,7 @@
         "containedBy": {
             "description": "The resource, the variable group is contained by. Used to connect a variable group to its resource.",
             "items": {
-                "$ref": "/schema/entities/resource#/identifier"
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
             },
             "minItems": 1,
             "subPropertyOf": [
@@ -17,14 +17,14 @@
             "type": "array"
         },
         "hadPrimarySource": {
-            "$ref": "/schema/entities/primary-source#/identifier",
+            "$ref": "/mex/model/entities/merged-primary-source#/identifier",
             "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30 ](http://www.w3.org/TR/2013/REC-prov-o-20130430/)).",
             "sameAs": [
                 "http://www.w3.org/ns/prov#hadPrimarySource"
             ]
         },
         "identifier": {
-            "$ref": "/schema/fields/identifier",
+            "$ref": "/mex/model/fields/identifier",
             "description": "An unambiguous reference to the resource within a given context. Persistent identifiers should be provided as HTTP URIs ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
             "readOnly": true,
             "sameAs": [
@@ -46,7 +46,7 @@
         "label": {
             "description": "The name of the variable group.",
             "items": {
-                "$ref": "/schema/fields/text"
+                "$ref": "/mex/model/fields/text"
             },
             "minItems": 1,
             "sameAs": [
@@ -55,7 +55,8 @@
             "type": "array"
         },
         "stableTargetId": {
-            "$ref": "/schema/fields/identifier",
+            "$ref": "/mex/model/entities/merged-variable-group#/identifier",
+            "description": "The identifier of the merged item that this extracted item belongs to.",
             "readOnly": true
         }
     },
@@ -67,6 +68,6 @@
         "label",
         "stableTargetId"
     ],
-    "title": "Variable Group",
+    "title": "Extracted Variable Group",
     "type": "object"
 }

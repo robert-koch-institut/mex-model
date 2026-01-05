@@ -1,13 +1,13 @@
 {
-    "$$target": "/schema/entities/concept-scheme#/identifier",
-    "$id": "https://mex.rki.de/schema/entities/concept-scheme",
+    "$$target": "/mex/model/entities/concept-scheme#/identifier",
+    "$id": "https://mex.rki.de/mex/model/entities/concept-scheme",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
     "properties": {
         "description": {
             "default": [],
             "items": {
-                "$ref": "/schema/fields/text"
+                "$ref": "/mex/model/fields/text"
             },
             "sameAs": [
                 "http://purl.org/dc/elements/1.1/description"
@@ -30,7 +30,7 @@
         "label": {
             "default": [],
             "items": {
-                "$ref": "/schema/fields/text"
+                "$ref": "/mex/model/fields/text"
             },
             "sameAs": [
                 "http://www.w3.org/2000/01/rdf-schema#label"

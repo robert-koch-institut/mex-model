@@ -1,6 +1,6 @@
 {
-    "$$target": "/schema/entities/access-platform#/identifier",
-    "$id": "https://mex.rki.de/schema/entities/access-platform",
+    "$$target": "/mex/model/entities/extracted-access-platform#/identifier",
+    "$id": "https://mex.rki.de/mex/model/entities/extracted-access-platform",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
     "description": "A technical system or service that provides access to distributions or resources.",
@@ -9,7 +9,7 @@
             "default": [],
             "description": "An alternative name for the access platform.",
             "items": {
-                "$ref": "/schema/fields/text"
+                "$ref": "/mex/model/fields/text"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/alternative"
@@ -22,13 +22,13 @@
             "items": {
                 "anyOf": [
                     {
-                        "$ref": "/schema/entities/organizational-unit#/identifier"
+                        "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
                     },
                     {
-                        "$ref": "/schema/entities/person#/identifier"
+                        "$ref": "/mex/model/entities/merged-person#/identifier"
                     },
                     {
-                        "$ref": "/schema/entities/contact-point#/identifier"
+                        "$ref": "/mex/model/entities/merged-contact-point#/identifier"
                     }
                 ]
             },
@@ -41,7 +41,7 @@
             "default": [],
             "description": "A short description of the access platform.",
             "items": {
-                "$ref": "/schema/fields/text"
+                "$ref": "/mex/model/fields/text"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/description"
@@ -51,7 +51,7 @@
         "endpointDescription": {
             "anyOf": [
                 {
-                    "$ref": "/schema/fields/link"
+                    "$ref": "/mex/model/fields/link"
                 },
                 {
                     "type": "null"
@@ -66,7 +66,7 @@
         "endpointType": {
             "anyOf": [
                 {
-                    "$ref": "/schema/entities/concept#/identifier",
+                    "$ref": "/mex/model/entities/concept#/identifier",
                     "examples": [
                         "https://mex.rki.de/item/api-type-1"
                     ],
@@ -85,7 +85,7 @@
         "endpointURL": {
             "anyOf": [
                 {
-                    "$ref": "/schema/fields/link"
+                    "$ref": "/mex/model/fields/link"
                 },
                 {
                     "type": "null"
@@ -98,14 +98,14 @@
             ]
         },
         "hadPrimarySource": {
-            "$ref": "/schema/entities/primary-source#/identifier",
+            "$ref": "/mex/model/entities/merged-primary-source#/identifier",
             "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30 ](http://www.w3.org/TR/2013/REC-prov-o-20130430/)).",
             "sameAs": [
                 "http://www.w3.org/ns/prov#hadPrimarySource"
             ]
         },
         "identifier": {
-            "$ref": "/schema/fields/identifier",
+            "$ref": "/mex/model/fields/identifier",
             "description": "An unambiguous reference to the resource within a given context. Persistent identifiers should be provided as HTTP URIs ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
             "readOnly": true,
             "sameAs": [
@@ -128,7 +128,7 @@
             "default": [],
             "description": "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.",
             "items": {
-                "$ref": "/schema/fields/link"
+                "$ref": "/mex/model/fields/link"
             },
             "sameAs": [
                 "http://www.w3.org/ns/dcat#landingPage"
@@ -136,11 +136,12 @@
             "type": "array"
         },
         "stableTargetId": {
-            "$ref": "/schema/fields/identifier",
+            "$ref": "/mex/model/entities/merged-access-platform#/identifier",
+            "description": "The identifier of the merged item that this extracted item belongs to.",
             "readOnly": true
         },
         "technicalAccessibility": {
-            "$ref": "/schema/entities/concept#/identifier",
+            "$ref": "/mex/model/entities/concept#/identifier",
             "description": "Indicates form if the platform can be accessed only within RKI network (internally) or if the platform is accessible publicly (externally).",
             "examples": [
                 "https://mex.rki.de/item/technical-accessibility-1"
@@ -154,7 +155,7 @@
             "default": [],
             "description": "The name of the access platform.",
             "items": {
-                "$ref": "/schema/fields/text"
+                "$ref": "/mex/model/fields/text"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/title"
@@ -165,7 +166,7 @@
             "default": [],
             "description": "This property refers to agents who assume responsibility and accountability for the resource and its appropriate maintenance.",
             "items": {
-                "$ref": "/schema/entities/organizational-unit#/identifier"
+                "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
             },
             "sameAs": [
                 "http://dcat-ap.de/def/dcatde/maintainer"
@@ -183,6 +184,6 @@
     "sameAs": [
         "http://www.w3.org/ns/dcat#DataService"
     ],
-    "title": "Access Platform",
+    "title": "Extracted Access Platform",
     "type": "object"
 }

@@ -17,12 +17,12 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 1
 
       - name: Run renovatebot
-        uses: renovatebot/github-action@v44.0.2
+        uses: renovatebot/github-action@v44.2.2
         env:
           RENOVATE_GIT_PRIVATE_KEY: ${{ secrets.GPG_SIGNING_KEY }}
           RENOVATE_REPOSITORIES: "robert-koch-institut/mex-model"

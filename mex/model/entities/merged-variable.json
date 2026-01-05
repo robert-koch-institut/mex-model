@@ -1,0 +1,141 @@
+{
+    "$$target": "/mex/model/entities/merged-variable#/identifier",
+    "$id": "https://mex.rki.de/mex/model/entities/merged-variable",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "description": "Variables are defined for the data-based evaluation of investigations (e.g. studies). A variable is characterized by its data type (e.g. integer, string, date) and value range. The variable can be either quantitative or qualitative, i.e. the value range can take numerical or categorical values.",
+    "properties": {
+        "belongsTo": {
+            "default": [],
+            "description": "The variable group, the described variable is part of. Used to group variables together, depending on how they are structured in the primary source.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-variable-group#/identifier"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/isPartOf"
+            ],
+            "type": "array"
+        },
+        "codingSystem": {
+            "anyOf": [
+                {
+                    "examples": [
+                        "SF-36 Version 1"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "An established standard to which the described resource conforms ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
+            "sameAs": [
+                "http://purl.org/dc/terms/conformsTo",
+                "https://schema.org/codingSystem"
+            ]
+        },
+        "dataType": {
+            "anyOf": [
+                {
+                    "examples": [
+                        "integer",
+                        "string",
+                        "image",
+                        "int55",
+                        "number"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "The defined data type of the variable.",
+            "sameAs": [
+                "http://www.w3.org/ns/csvw#datatype"
+            ]
+        },
+        "description": {
+            "default": [],
+            "description": "A description of the variable. How the variable is defined in the primary source.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/description"
+            ],
+            "type": "array"
+        },
+        "identifier": {
+            "$ref": "/mex/model/fields/identifier",
+            "description": "An unambiguous reference to the resource within a given context. Persistent identifiers should be provided as HTTP URIs ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
+            "readOnly": true,
+            "sameAs": [
+                "http://purl.org/dc/elements/1.1/identifier"
+            ]
+        },
+        "label": {
+            "description": "The name of the variable.",
+            "items": {
+                "$ref": "/mex/model/fields/text",
+                "examples": [
+                    {
+                        "language": "de",
+                        "value": "Mehrere Treppenabsätze steigen"
+                    }
+                ]
+            },
+            "minItems": 1,
+            "sameAs": [
+                "http://purl.org/dc/terms/title",
+                "http://www.w3.org/2000/01/rdf-schema#label"
+            ],
+            "type": "array"
+        },
+        "supersededBy": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/merged-variable#/identifier"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "A merged item which is the preferred duplicate, because it replaces, consolidates or otherwise makes the current merged item obsolete."
+        },
+        "usedIn": {
+            "description": "The resource, the variable is used in.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
+            },
+            "minItems": 1,
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/isPartOf"
+            ],
+            "type": "array"
+        },
+        "valueSet": {
+            "default": [],
+            "description": "A set of predefined values as given in the primary source.",
+            "items": {
+                "examples": [
+                    "Ja, stark eingeschränkt",
+                    "Ja, etwas eingeschränkt",
+                    "Nein, überhaupt nicht eingeschränkt"
+                ],
+                "type": "string"
+            },
+            "type": "array"
+        }
+    },
+    "required": [
+        "identifier",
+        "label",
+        "usedIn"
+    ],
+    "title": "Merged Variable",
+    "type": "object"
+}
