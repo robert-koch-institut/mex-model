@@ -9,14 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Translations for stem/entity types
-
 ### Changes
-
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/203934
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/c5ff3e
-- lock file maintenance (2026-01-05)
-- Update actions/cache action to v5
 
 ### Deprecated
 
@@ -25,6 +18,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+## [4.8.0] - 2026-01-06
+
+### Added
+
+- Translations for stem/entity types
+
+### Changes
+
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/203934
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/c5ff3e
+- lock file maintenance (2026-01-05)
+- Update actions/cache action to v5
 
 ## [4.7.0] - 2025-12-09
 
