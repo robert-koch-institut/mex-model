@@ -1165,3 +1165,39 @@ msgstr "ersetzt durch"
 
 msgid "supersededBy.description"
 msgstr "Zugehöriger Eintrag der ein bevorzugtes Duplikat ist, weil er diesen Eintrag ersetzt, konsolidiert oder auf andere Weise obsolet macht."
+
+msgid "AccessPlatform"
+msgstr "Zugriffsplattform"
+
+msgid "Activity"
+msgstr "Projekt"
+
+msgid "BibliographicResource"
+msgstr "Publikation"
+
+msgid "Consent"
+msgstr "Einwilligung"
+
+msgid "Distribution"
+msgstr "Datei"
+
+msgid "Organization"
+msgstr "Organisation"
+
+msgid "OrganizationalUnit"
+msgstr "Organisationseinheit"
+
+msgid "Person"
+msgstr "Person"
+
+msgid "PrimarySource"
+msgstr "Primärsystem"
+
+msgid "Resource"
+msgstr "Datenbestand/Datensatz"
+
+msgid "Variable"
+msgstr "Variable"
+
+msgid "VariableGroup"
+msgstr "Variablengruppe"

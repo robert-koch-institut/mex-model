@@ -1136,3 +1136,39 @@ msgstr "superseded by"
 
 msgid "supersededBy.description"
 msgstr "An item which is the preferred duplicate, because it replaces, consolidates or otherwise renders this item obsolete."
+
+msgid "AccessPlatform"
+msgstr "Access platform"
+
+msgid "Activity"
+msgstr "Project"
+
+msgid "BibliographicResource"
+msgstr "Publication"
+
+msgid "Consent"
+msgstr "Consent"
+
+msgid "Distribution"
+msgstr "Distribution"
+
+msgid "Organization"
+msgstr "Organization"
+
+msgid "OrganizationalUnit"
+msgstr "Organizational unit"
+
+msgid "Person"
+msgstr "Person"
+
+msgid "PrimarySource"
+msgstr "Primary source"
+
+msgid "Resource"
+msgstr "Data Source/Dataset"
+
+msgid "Variable"
+msgstr "Variable"
+
+msgid "VariableGroup"
+msgstr "Variable group"
