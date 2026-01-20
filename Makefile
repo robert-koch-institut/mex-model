@@ -43,5 +43,4 @@ wheel:
 docs:
 	# use sphinx to auto-generate html docs from code
 	@ echo generating docs; \
-	uv run sphinx-apidoc -f -o docs/source mex; \
 	uv run sphinx-build -aE -b dirhtml docs docs/dist; \
