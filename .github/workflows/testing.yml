@@ -58,7 +58,7 @@ jobs:
       - name: Setup python
         uses: actions/setup-python@v6
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: 3.11
 
       - name: Install requirements
         run: |
