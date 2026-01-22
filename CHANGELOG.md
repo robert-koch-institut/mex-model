@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- support for python 3.12 and 3.13
+
 ### Changes
 
 - lock file maintenance (2026-01-12)
