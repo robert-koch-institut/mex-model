@@ -65,7 +65,7 @@ components of the MEx project are open-sourced under the same license as well.
 
 ### Installation
 
-- install python3.11 on your system
+- install python on your system
 - on unix, run `make install`
 - on windows, run `.\mex.bat install`
 
