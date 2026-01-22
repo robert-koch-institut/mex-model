@@ -9,13 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- add python 3.11 - 3.13 support
-
 ### Changes
-
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/8c253f
-- lock file maintenance (2026-01-12)
-- switch package manager from pdm to uv
 
 ### Deprecated
 
@@ -24,6 +18,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+## [4.9.0] - 2026-01-22
+
+### Added
+
+- add python 3.11 - 3.13 support
+
+### Changes
+
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/8c253f
+- lock file maintenance (2026-01-12)
+- switch package manager from pdm to uv
 
 ## [4.8.0] - 2026-01-06
 
