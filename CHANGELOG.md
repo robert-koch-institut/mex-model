@@ -11,9 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/33ca3a
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/ad26e4
-
 ### Deprecated
 
 ### Removed
@@ -21,6 +18,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+## [4.9.1] - 2026-01-23
+
+### Changes
+
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/33ca3a
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/ad26e4
 
 ## [4.9.0] - 2026-01-22
 
