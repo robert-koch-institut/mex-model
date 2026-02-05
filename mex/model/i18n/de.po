@@ -1175,6 +1175,9 @@ msgstr "Projekt"
 msgid "BibliographicResource"
 msgstr "Publikation"
 
+msgid "ContactPoint"
+msgstr "Funktionspostfach"
+
 msgid "Consent"
 msgstr "Einwilligung"
 
