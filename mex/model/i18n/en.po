@@ -749,6 +749,16 @@ msgctxt "Organization"
 msgid "officialName.description"
 msgstr "Official name of the institution"
 
+msgctxt "OrganizationalUnit"
+msgid "alternativeName.singular"
+msgid_plural "alternativeName.plural"
+msgstr[0] "Other name"
+msgstr[1] "Other names"
+
+msgctxt "OrganizationalUnit"
+msgid "name.singular"
+msgstr "Name"
+
 msgctxt "Person"
 msgid "orcidId.singular"
 msgstr "ORCID"
