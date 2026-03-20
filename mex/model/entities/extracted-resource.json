@@ -618,6 +618,17 @@
             ],
             "type": "array"
         },
+        "sample": {
+            "default": [],
+            "description": "A sample distribution of the resource.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-distribution#/identifier"
+            },
+            "sameAs": [
+                "http://www.w3.org/ns/adms/sample"
+            ],
+            "type": "array"
+        },
         "sizeOfDataBasis": {
             "anyOf": [
                 {
