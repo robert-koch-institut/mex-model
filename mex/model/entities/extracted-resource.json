@@ -306,6 +306,18 @@
             ],
             "type": "array"
         },
+        "healthCategory": {
+            "description": "The health category to which this resource belongs as described in the Commission Regulation on the European Health Data Space laying down a list of categories of electronic data for secondary use, Art.51.",
+            "items": {
+                "$ref": "/mex/model/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/health-category"
+            },
+            "minItems": 1,
+            "sameAs": [
+                "http://healthdataportal.eu/ns/health#healthCategory"
+            ],
+            "type": "array"
+        },
         "icd10code": {
             "default": [],
             "description": "A concept from ICD-10.",
