@@ -57,6 +57,17 @@
             ],
             "type": "array"
         },
+        "analytics": {
+            "default": [],
+            "description": "An analytics distribution of the dataset.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-distribution#/identifier",            
+            },
+            "sameAs": [
+                "http://healthdataportal.eu/ns/health#healthdcatapanalytics"
+            ],
+            "type": "array"
+        },
         "anonymizationPseudonymization": {
             "default": [],
             "description": "Indicates whether the data has been anonymized and/or pseudonymized.",
