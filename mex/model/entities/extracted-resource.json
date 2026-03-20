@@ -630,6 +630,17 @@
             "default": null,
             "description": "The size of the underlying data basis, e.g. for studies: the size of the sample."
         },
+        "source": {
+            "default": [],
+            "description": "A related Resource from which the described Resource is derived.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/source"
+            ],
+            "type": "array"
+        },
         "spatial": {
             "default": [],
             "description": "Spatial coverage of the resource.",
