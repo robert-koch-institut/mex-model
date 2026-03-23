@@ -61,7 +61,7 @@
             "default": [],
             "description": "An analytics distribution of the dataset.",
             "items": {
-                "$ref": "/mex/model/entities/merged-distribution#/identifier",            
+                "$ref": "/mex/model/entities/merged-distribution#/identifier"            
             },
             "sameAs": [
                 "http://healthdataportal.eu/ns/health#healthdcatapanalytics"
