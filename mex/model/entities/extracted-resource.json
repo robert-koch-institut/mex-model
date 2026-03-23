@@ -264,6 +264,17 @@
                 "http://www.w3.org/ns/prov#hadPrimarySource"
             ]
         },
+         "hasCodeValues": {
+            "default": [],
+            "description": "A free-text description of any health classification, terminology, ontology, thesaurus, or coding system used in the dataset.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "sameAs": [
+                "http://healthdataportal.eu/ns/health#healthdcataphasCodeValues"
+            ],
+            "type": "array"
+        },
         "hasLegalBasis": {
             "default": [],
             "description": "The legal basis used to justify processing of personal data. Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions which can be represented using dpv:hasJurisdiction or dpv:hasLaw. Legal basis can be used without such declarations, e.g. 'Consent', however their interpretation will require association with a law, e.g. 'EU GDPR'.",
