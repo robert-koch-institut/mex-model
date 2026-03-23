@@ -37,6 +37,17 @@
             ],
             "type": "array"
         },
+        "contributor": {
+            "default": [],
+            "description": "A person responsible for making contributions to the resource.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-person#/identifier"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
         "description": {
             "default": [],
             "description": "A short description of the primary source.",
