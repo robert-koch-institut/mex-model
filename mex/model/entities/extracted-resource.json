@@ -600,6 +600,17 @@
             ],
             "type": "array"
         },
+        "relatedResource": {
+            "default": [],
+            "description": "A related Resource.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/relation"
+            ],
+            "type": "array"
+        },
         "resourceCreationMethod": {
             "default": [],
             "description": "Method how the resource was created.",
