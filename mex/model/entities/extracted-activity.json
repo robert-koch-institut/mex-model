@@ -218,6 +218,7 @@
             "type": "array"
         },
         "relatedActivity": {
+            "default": [],
             "description": "A related Activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-activity#/identifier"
