@@ -201,6 +201,16 @@ msgctxt "Resource"
 msgid "contributor.description"
 msgstr "An den Daten mitwirkende Person(en)"
 
+msgctxt "PrimarySource"
+msgid "contributor.singular"
+msgid_plural "contributor.plural"
+msgstr[0] "Mitwirkende*r"
+msgstr[1] "Mitwirkende"
+
+msgctxt "PrimarySource"
+msgid "contributor.description"
+msgstr "An den Daten mitwirkende Person(en)"
+
 msgid "contributingUnit.singular"
 msgid_plural "contributingUnit.plural"
 msgstr[0] "Mitwirkendes Fachgebiet"

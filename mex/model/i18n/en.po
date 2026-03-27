@@ -199,6 +199,16 @@ msgctxt "Resource"
 msgid "contributor.description"
 msgstr "Person(s) contributing to the data"
 
+msgctxt "PrimarySource"
+msgid "contributor.singular"
+msgid_plural "contributor.plural"
+msgstr[0] "Contributor"
+msgstr[1] "Contributors"
+
+msgctxt "PrimarySource"
+msgid "contributor.description"
+msgstr "Person(s) contributing to the data"
+
 msgid "contributingUnit.singular"
 msgid_plural "contributingUnit.plural"
 msgstr[0] "Contributing Unit"
