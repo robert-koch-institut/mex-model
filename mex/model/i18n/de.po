@@ -1009,6 +1009,16 @@ msgstr ""
 "Datenbank, die eine dauerhafte Kennung für jede Forschungseinrichtung in der "
 "Welt bereitstellen soll"
 
+msgctxt "Resource"
+msgid "sample.singular"
+msgid_plural "sample.plural"
+msgstr[0] "Beispieldaten"
+msgstr[1] "Beispieldaten"
+
+msgctxt "Resource"
+msgid "sample.description"
+msgstr "Beispielhafte Daten, die die Art der Realdaten nachahmen. Diese Daten haben keinen Personenbezug"
+
 msgctxt "BibliographicResource"
 msgid "section.singular"
 msgstr "Kapitel"

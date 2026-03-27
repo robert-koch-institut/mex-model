@@ -986,6 +986,16 @@ msgstr ""
 "Research Organization Registry is a community-managed database designed to "
 "provide a permanent identifier for every research organization in the world"
 
+msgctxt "Resource"
+msgid "sample.singular"
+msgid_plural "sample.plural"
+msgstr[0] "Sample data"
+msgstr[1] "Sample data"
+
+msgctxt "Resource"
+msgid "sample.description"
+msgstr "Sample data that mimics the nature of real data. This data does not relate to any identifiable individuals"
+
 msgctxt "BibliographicResource"
 msgid "section.singular"
 msgstr "Section"
