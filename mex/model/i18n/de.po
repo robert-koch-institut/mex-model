@@ -1044,6 +1044,16 @@ msgstr ""
 "Stichprobe"
 
 msgctxt "Resource"
+msgid "source.singular"
+msgid_plural "source.plural"
+msgstr[0] "Quelldatensatz"
+msgstr[1] "Quelldatensätze"
+
+msgctxt "Resource"
+msgid "source.description"
+msgstr "Ein Datensatz oder mehrere Datensätze, die als Quelle für den beschriebenen Datensatz genutzt wurden"
+
+msgctxt "Resource"
 msgid "spatial.singular"
 msgstr "Räumlicher Bezug"
 

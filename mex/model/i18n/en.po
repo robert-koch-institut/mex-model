@@ -1020,6 +1020,16 @@ msgstr ""
 "Size of the basis of the data, e.g. for studies: the size of the sample"
 
 msgctxt "Resource"
+msgid "source.singular"
+msgid_plural "source.plural"
+msgstr[0] "Source dataset"
+msgstr[1] "Source datasets"
+
+msgctxt "Resource"
+msgid "source.description"
+msgstr "One or more datasets that were used as sources for the dataset described"
+
+msgctxt "Resource"
 msgid "spatial.singular"
 msgstr "Geographical coverage"
 
