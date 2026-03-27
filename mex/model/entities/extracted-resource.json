@@ -270,6 +270,7 @@
                 }
             ],
             "default": null,
+            "maxItems": 1,
             "description": "End date of the temporal coverage of the resource.",
             "sameAs": [
                     "https://www.w3.org/ns/dcat#endDate"
@@ -766,6 +767,7 @@
                 }
             ],
             "default": null,
+            "maxItems": 1,
             "description": "Start date of the temporal coverage of the resource.",
             "sameAs": [
                     "https://www.w3.org/ns/dcat#startDate"

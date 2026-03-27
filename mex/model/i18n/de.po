@@ -357,6 +357,14 @@ msgctxt "Activity"
 msgid "end.description"
 msgstr "(Geplantes) Ende"
 
+msgctxt "Resource"
+msgid "endDate.singular"
+msgstr "Ende"
+
+msgctxt "Resource"
+msgid "endDate.description"
+msgstr "Ende des Zeitraumes, den die Daten abdecken"
+
 msgctxt "AccessPlatform"
 msgid "endpointDescription.singular"
 msgstr "Schnittstellen-Beschreibung"
@@ -1001,6 +1009,14 @@ msgid "start.description"
 msgstr "Start des Projekts/Vorhabens"
 
 msgctxt "Resource"
+msgid "startDate.singular"
+msgstr "Beginn"
+
+msgctxt "Resource"
+msgid "startDate.description"
+msgstr "Beginn des Zeitraumes, den die Daten abdecken"
+
+msgctxt "Resource"
 msgid "stateOfDataProcessing.singular"
 msgstr "Verarbeitungszustand"
 
@@ -1214,3 +1230,4 @@ msgstr "Variable"
 
 msgid "VariableGroup"
 msgstr "Variablengruppe"
+
