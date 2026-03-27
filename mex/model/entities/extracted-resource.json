@@ -579,6 +579,40 @@
                 "http://purl.org/dc/terms/modified"
             ]
         },
+        "numberOfRecords": {
+            "default": null,
+            "description": "Size of the dataset in terms of the number of records.",
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "subPropertyOf": [
+                "http://healthdataportal.eu/ns/health#numberOfRecords"
+            ],
+            "maxItems": 1,
+            "type": "array"
+        },
+        "numberOfUniqueIndividuals": {
+            "default": null,
+            "description": "Number of records for unique individuals.",
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "subPropertyOf": [
+                "http://healthdataportal.eu/ns/health#numberOfUniqueIndividuals"
+            ],
+            "maxItems": 1,
+            "type": "array"
+        },
         "populationCoverage": {
             "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
             "default": [],
