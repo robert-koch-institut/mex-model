@@ -514,6 +514,16 @@ msgstr ""
 "Personenbezug"
 
 msgctxt "Resource"
+msgid "healthCategory.singular"
+msgid_plural "healthCategory.plural"
+msgstr[0] "Kategorie nach EHDS"
+msgstr[1] "Kategorien nach EHDS"
+
+msgctxt "Resource"
+msgid "healthCategory.description"
+msgstr "Kategorie der Gesundheitsdaten nach EHDS-VO Art. 51"
+
+msgctxt "Resource"
 msgid "icd10code.singular"
 msgstr "ICD-10"
 

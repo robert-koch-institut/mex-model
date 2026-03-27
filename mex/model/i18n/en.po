@@ -507,6 +507,16 @@ msgstr ""
 "personal data"
 
 msgctxt "Resource"
+msgid "healthCategory.singular"
+msgid_plural "healthCategory.plural"
+msgstr[0] "EHDS category"
+msgstr[1] "EHDS categories"
+
+msgctxt "Resource"
+msgid "healthCategory.description"
+msgstr "Category of health data pursuant to Article 51 of the EHDS Regulation"
+
+msgctxt "Resource"
 msgid "icd10code.singular"
 msgstr "ICD-10"
 
