@@ -209,7 +209,7 @@ msgstr[1] "Mitwirkende"
 
 msgctxt "PrimarySource"
 msgid "contributor.description"
-msgstr "An den Daten mitwirkende Person(en)"
+msgstr "Personen, die für das Primärsystem als Ansprechpartner fungieren"
 
 msgid "contributingUnit.singular"
 msgid_plural "contributingUnit.plural"

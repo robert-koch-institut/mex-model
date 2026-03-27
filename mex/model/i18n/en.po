@@ -207,7 +207,7 @@ msgstr[1] "Contributors"
 
 msgctxt "PrimarySource"
 msgid "contributor.description"
-msgstr "Person(s) contributing to the data"
+msgstr "Persons, who function as contact for the primary source"
 
 msgid "contributingUnit.singular"
 msgid_plural "contributingUnit.plural"
