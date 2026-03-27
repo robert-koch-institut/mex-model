@@ -267,13 +267,13 @@
                     "$comment": "year",
                     "pattern": "^[0-9]{4}$",
                     "type": "string"
-                }
+                },
+                {"type": "null"}
             ],
-            "default": null,
-            "maxItems": 1,
+            "default": "null",
             "description": "End date of the temporal coverage of the resource.",
             "sameAs": [
-                    "https://www.w3.org/ns/dcat#endDate"
+                    "http://www.w3.org/ns/dcat#endDate"
             ]
         },
         "externalPartner": {
@@ -798,13 +798,13 @@
                     "$comment": "year",
                     "pattern": "^[0-9]{4}$",
                     "type": "string"
-                }
+                },
+                {"type": "null"}
             ],
             "default": null,
-            "maxItems": 1,
             "description": "Start date of the temporal coverage of the resource.",
             "sameAs": [
-                    "https://www.w3.org/ns/dcat#startDate"
+                    "http://www.w3.org/ns/dcat#startDate"
             ]
         },
         "stateOfDataProcessing": {
