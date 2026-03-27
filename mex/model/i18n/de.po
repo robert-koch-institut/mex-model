@@ -486,6 +486,16 @@ msgid "hadPrimarySource.description"
 msgstr "Originaldatenspeicher (Primärsystem) aus dem die Information stammt"
 
 msgctxt "Resource"
+msgid "hasCodeValues.singular"
+msgid_plural "hasCodeValues.plural"
+msgstr[0] "Kodierter Wert"
+msgstr[1] "Kodierte Werte"
+
+msgctxt "Resource"
+msgid "hasCodeValues.description"
+msgstr "Wert(e) aus standardisierten Kodiersystemen"
+
+msgctxt "Resource"
 msgid "hasLegalBasis.singular"
 msgstr "Rechtliche Grundlage"
 

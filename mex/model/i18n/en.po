@@ -481,6 +481,16 @@ msgstr ""
 "Original data storage (primary system) from which the information originates"
 
 msgctxt "Resource"
+msgid "hasCodeValues.singular"
+msgid_plural "hasCodeValues.plural"
+msgstr[0] "Code value"
+msgstr[1] "Code values"
+
+msgctxt "Resource"
+msgid "hasCodeValues.description"
+msgstr "Values deriving from standardised coding systems"
+
+msgctxt "Resource"
 msgid "hasLegalBasis.singular"
 msgstr "Legal basis"
 
