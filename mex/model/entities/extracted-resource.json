@@ -270,7 +270,7 @@
                 },
                 {"type": "null"}
             ],
-            "default": "null",
+            "default": null,
             "description": "End date of the temporal coverage of the resource.",
             "sameAs": [
                     "http://www.w3.org/ns/dcat#endDate"
