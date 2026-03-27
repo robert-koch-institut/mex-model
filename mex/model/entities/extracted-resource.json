@@ -294,7 +294,7 @@
                 "http://www.w3.org/ns/prov#hadPrimarySource"
             ]
         },
-         "hasCodeValues": {
+        "hasCodeValues": {
             "default": [],
             "description": "A free-text description of any health classification, terminology, ontology, thesaurus, or coding system used in the dataset.",
             "items": {
