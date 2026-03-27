@@ -114,6 +114,16 @@ msgid "alternativeTitle.description"
 msgstr "Other title(s)"
 
 msgctxt "Resource"
+msgid "analytics.singular"
+msgid_plural "analytics.plural"
+msgstr[0] "Descriptive statistics"
+msgstr[1] "Descriptive statistics"
+
+msgctxt "Resource"
+msgid "analytics.description"
+msgstr "Statistical information about the data, such as probability distributions"
+
+msgctxt "Resource"
 msgid "anonymizationPseudonymization.singular"
 msgstr "Anonymization/pseudonymization"
 
