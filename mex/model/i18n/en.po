@@ -881,6 +881,16 @@ msgctxt "Resource"
 msgid "qualityInformation.description"
 msgstr "Information on the accuracy, reliability and validity of the data"
 
+msgctxt "Activity"
+msgid "relatedActivity.singular"
+msgid_plural "relatedActivity.plural"
+msgstr[0] "Related project"
+msgstr[1] "Related projects"
+
+msgctxt "Activity"
+msgid "relatedActivity.description"
+msgstr "Other project(s), that are somehow related to the project described"
+
 msgctxt "Resource"
 msgid "relatedResource.singular"
 msgid_plural "relatedResource.plural"

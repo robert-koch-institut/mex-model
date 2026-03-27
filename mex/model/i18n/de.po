@@ -902,6 +902,16 @@ msgid "qualityInformation.description"
 msgstr ""
 "Angaben zu Genauigkeit, Zuverlässigkeit und Validität der Daten"
 
+msgctxt "Activity"
+msgid "relatedActivity.singular"
+msgid_plural "relatedActivity.plural"
+msgstr[0] "Zusammenhängendes Projekt"
+msgstr[1] "Zusammenhängende Projekte"
+
+msgctxt "Activity"
+msgid "relatedActivity.description"
+msgstr "Andere(s) Projekt(e), die mit dem beschriebenen in Zusammenhang stehen"
+
 msgctxt "Resource"
 msgid "relatedResource.singular"
 msgid_plural "relatedResource.plural"
