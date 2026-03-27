@@ -881,6 +881,16 @@ msgctxt "Resource"
 msgid "qualityInformation.description"
 msgstr "Information on the accuracy, reliability and validity of the data"
 
+msgctxt "Resource"
+msgid "relatedResource.singular"
+msgid_plural "relatedResource.plural"
+msgstr[0] "Related data source/dataset"
+msgstr[1] "Related data sources/datasets"
+
+msgctxt "Resource"
+msgid "relatedResource.description"
+msgstr "Other data sources or datasets, that are somehow related to the resource described"
+
 msgctxt "BibliographicResource"
 msgid "repositoryURL.singular"
 msgstr "Repository URL"

@@ -902,6 +902,16 @@ msgid "qualityInformation.description"
 msgstr ""
 "Angaben zu Genauigkeit, Zuverlässigkeit und Validität der Daten"
 
+msgctxt "Resource"
+msgid "relatedResource.singular"
+msgid_plural "relatedResource.plural"
+msgstr[0] "Zusammenhängender Datenbestand/Datensatz"
+msgstr[1] "Zusammenhängende Datenbestände/Datensätze"
+
+msgctxt "Resource"
+msgid "relatedResource.description"
+msgstr "Andere Datenbestände/Datensätze, die mit dem beschriebenen Datensatz in Zusammenhang stehen"
+
 msgctxt "BibliographicResource"
 msgid "repositoryURL.singular"
 msgstr "Repository-URL"
