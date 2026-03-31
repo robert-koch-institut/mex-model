@@ -61,10 +61,10 @@
             "default": [],
             "description": "An analytics distribution of the dataset.",
             "items": {
-                "$ref": "/mex/model/entities/merged-distribution#/identifier"            
+                "$ref": "/mex/model/entities/merged-distribution#/identifier"
             },
             "sameAs": [
-                "http://healthdataportal.eu/ns/health#healthdcatapanalytics"
+                "http://healthdataportal.eu/ns/health#analytics"
             ],
             "type": "array"
         },
@@ -256,7 +256,7 @@
                 {
                     "$comment": "year_month_day",
                     "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
-                    "type": "string"  
+                    "type": "string"
                 },
                 {
                     "$comment": "year_month",
@@ -268,12 +268,14 @@
                     "pattern": "^[0-9]{4}$",
                     "type": "string"
                 },
-                {"type": "null"}
+                {
+                    "type": "null"
+                }
             ],
             "default": null,
             "description": "End date of the temporal coverage of the resource.",
             "sameAs": [
-                    "http://www.w3.org/ns/dcat#endDate"
+                "http://www.w3.org/ns/dcat#endDate"
             ]
         },
         "externalPartner": {
@@ -301,7 +303,7 @@
                 "$ref": "/mex/model/fields/text"
             },
             "sameAs": [
-                "http://healthdataportal.eu/ns/health#healthdcataphasCodeValues"
+                "http://healthdataportal.eu/ns/health#hasCodeValues"
             ],
             "type": "array"
         },
@@ -580,8 +582,6 @@
             ]
         },
         "numberOfRecords": {
-            "default": null,
-            "description": "Size of the dataset in terms of the number of records.",
             "anyOf": [
                 {
                     "type": "integer"
@@ -590,13 +590,13 @@
                     "type": "null"
                 }
             ],
+            "default": null,
+            "description": "Size of the dataset in terms of the number of records.",
             "subPropertyOf": [
                 "http://healthdataportal.eu/ns/health#numberOfRecords"
             ]
         },
         "numberOfUniqueIndividuals": {
-            "default": null,
-            "description": "Number of records for unique individuals.",
             "anyOf": [
                 {
                     "type": "integer"
@@ -605,6 +605,8 @@
                     "type": "null"
                 }
             ],
+            "default": null,
+            "description": "Number of records for unique individuals.",
             "subPropertyOf": [
                 "http://healthdataportal.eu/ns/health#numberOfUniqueIndividuals"
             ]
@@ -783,7 +785,7 @@
                 {
                     "$comment": "year_month_day",
                     "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
-                    "type": "string"  
+                    "type": "string"
                 },
                 {
                     "$comment": "year_month",
@@ -795,12 +797,14 @@
                     "pattern": "^[0-9]{4}$",
                     "type": "string"
                 },
-                {"type": "null"}
+                {
+                    "type": "null"
+                }
             ],
             "default": null,
             "description": "Start date of the temporal coverage of the resource.",
             "sameAs": [
-                    "http://www.w3.org/ns/dcat#startDate"
+                "http://www.w3.org/ns/dcat#startDate"
             ]
         },
         "stateOfDataProcessing": {
