@@ -6,6 +6,10 @@
                 "en": "EHRS"
             }
         ],
+        "definition": {
+            "de": "Elektronische Gesundheitsakten",
+            "en": "Electronic Health Data from EHRs"
+        },
         "exactMatch": "http://13.81.34.152:1101/resource/authority/healthcategories/EHRS",
         "identifier": "https://mex.rki.de/item/health-category-1",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -21,12 +25,16 @@
                 "en": "MRMR"
             }
         ],
+        "definition": {
+            "de": "Daten aus medizinischen Registern und Sterberegistern",
+            "en": "Data from medical registries and mortality registries"
+        },
         "exactMatch": "http://13.81.34.152:1101/resource/authority/healthcategories/MRMR",
         "identifier": "https://mex.rki.de/item/health-category-2",
         "inScheme": "https://mex.rki.de/item/health-category",
         "prefLabel": {
-            "de": "Daten aus medizinischen Registern und Sterberegistern",
-            "en": "Data from medical registries and mortality registries"
+            "de": "Registerdaten",
+            "en": "Registry data"
         }
     },
     {
@@ -36,12 +44,16 @@
                 "en": "HPML"
             }
         ],
+        "definition": {
+            "de": "Andere menschliche molekulare Daten wie proteomische, transkriptomische, metabolomische, lipidomische und andere omische Daten",
+            "en": "Other human molecular data such as proteomic, transcriptomic, metabolomic, lipidomic and other omic data"
+        },
         "exactMatch": "http://13.81.34.152:1101/resource/authority/healthcategories/HPML",
         "identifier": "https://mex.rki.de/item/health-category-3",
         "inScheme": "https://mex.rki.de/item/health-category",
         "prefLabel": {
-            "de": "Andere menschliche molekulare Daten wie proteomische, transkriptomische, metabolomische, lipidomische und andere omische Daten",
-            "en": "Other human molecular data such as proteomic, transcriptomic, metabolomic, lipidomic and other omic data"
+            "de": "Andere menschliche molekulare Daten",
+            "en": "Other human molecular data"
         }
     },
     {
