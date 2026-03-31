@@ -298,7 +298,7 @@
         },
         "hasCodeValues": {
             "default": [],
-            "description": "A free-text description of any health classification, terminology, ontology, thesaurus, or coding system used in the dataset.",
+            "description": "The code values of the respective coding systems that are applied to the dataset, for example code value 'U07.1' as used in the coding system 'ICD-10'.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
@@ -350,7 +350,7 @@
             "type": "array"
         },
         "healthCategory": {
-            "description": "The health category to which this resource belongs as described in the Commission Regulation on the European Health Data Space laying down a list of categories of electronic data for secondary use, Art.51.",
+            "description": "The category of electronic data for secondary use to which this resource belongs, as described in Article 51 of the Commission Regulation on the European Health Data Space.",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
                 "useScheme": "https://mex.rki.de/item/health-category"
@@ -591,7 +591,7 @@
                 }
             ],
             "default": null,
-            "description": "Size of the dataset in terms of the number of records.",
+            "description": "The total number of records in the dataset. The number reflects the total data entries (e.g., consultations, prescriptions, lab results, hospital admissions) according to the dataset's content.",
             "subPropertyOf": [
                 "http://healthdataportal.eu/ns/health#numberOfRecords"
             ]
@@ -606,7 +606,7 @@
                 }
             ],
             "default": null,
-            "description": "Number of records for unique individuals.",
+            "description": "The number of records for unique individuals represented in the dataset.",
             "subPropertyOf": [
                 "http://healthdataportal.eu/ns/health#numberOfUniqueIndividuals"
             ]
@@ -727,7 +727,7 @@
         },
         "sample": {
             "default": [],
-            "description": "A sample distribution of the resource.",
+            "description": "A sample distribution of the dataset, which can be anonymized or synthetic data, or the data dictionary.",
             "items": {
                 "$ref": "/mex/model/entities/merged-distribution#/identifier"
             },
