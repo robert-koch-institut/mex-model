@@ -274,6 +274,7 @@
             ],
             "default": null,
             "description": "End date of the temporal coverage of the resource.",
+            "maxItems": 1,
             "sameAs": [
                 "http://www.w3.org/ns/dcat#endDate"
             ]
@@ -927,6 +928,7 @@
         "accessRestriction",
         "contact",
         "hadPrimarySource",
+        "healthCategory",
         "identifier",
         "identifierInPrimarySource",
         "stableTargetId",
