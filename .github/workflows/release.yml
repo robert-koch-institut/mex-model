@@ -115,12 +115,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create ${{ needs.release.outputs.tag }} \
-          --generate-notes --latest --verify-tag
           uv build --out-dir dist
-          for filename in dist/*; do
-            gh release upload ${{ needs.release.outputs.tag }} ${filename};
-          done
+          gh release create ${{ needs.release.outputs.tag }} \
+          --generate-notes --latest --verify-tag dist/*
 
       - name: Publish distribution to PyPI
         uses: pypa/gh-action-pypi-publish@ed0c53931b1dc9bd32cbe73a98c7f6766f8a527e # v1.13.0

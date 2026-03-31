@@ -4,7 +4,7 @@ version = "4.10.0"
 description = "JSON schema files defining the MEx metadata model."
 authors = [{ name = "MEx Team", email = "mex@rki.de" }]
 readme = { file = "README.md", content-type = "text/markdown" }
-license = { file = "LICENSE" }
+license = "MIT"
 urls = { Repository = "https://github.com/robert-koch-institut/mex-model" }
 requires-python = ">=3.11,<3.15"
 dependencies = []
