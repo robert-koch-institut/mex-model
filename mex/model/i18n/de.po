@@ -378,11 +378,11 @@ msgid "end.description"
 msgstr "(Geplantes) Ende"
 
 msgctxt "Resource"
-msgid "endDate.singular"
+msgid "end.singular"
 msgstr "Ende"
 
 msgctxt "Resource"
-msgid "endDate.description"
+msgid "end.description"
 msgstr "Ende des Zeitraumes, den die Daten abdecken"
 
 msgctxt "AccessPlatform"
@@ -1124,11 +1124,11 @@ msgid "start.description"
 msgstr "Start des Projekts/Vorhabens"
 
 msgctxt "Resource"
-msgid "startDate.singular"
+msgid "start.singular"
 msgstr "Beginn"
 
 msgctxt "Resource"
-msgid "startDate.description"
+msgid "start.description"
 msgstr "Beginn des Zeitraumes, den die Daten abdecken"
 
 msgctxt "Resource"
@@ -1345,4 +1345,3 @@ msgstr "Variable"
 
 msgid "VariableGroup"
 msgstr "Variablengruppe"
-

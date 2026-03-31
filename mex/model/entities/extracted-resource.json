@@ -246,7 +246,7 @@
             "default": null,
             "description": "The Digital Object Identifier (DOI) of the resource."
         },
-        "endDate": {
+        "end": {
             "anyOf": [
                 {
                     "$comment": "year_month_day_time",
@@ -775,7 +775,7 @@
             "description": "The identifier of the merged item that this extracted item belongs to.",
             "readOnly": true
         },
-        "startDate": {
+        "start": {
             "anyOf": [
                 {
                     "$comment": "year_month_day_time",

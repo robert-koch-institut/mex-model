@@ -376,12 +376,12 @@ msgid "end.description"
 msgstr "(Planned) end"
 
 msgctxt "Resource"
-msgid "endDate.singular"
+msgid "end.singular"
 msgstr "End"
 
 msgctxt "Resource"
-msgid "endDate.description"
-msgstr "The end of the period covered by the data"
+msgid "end.description"
+msgstr "The end of the time period covered by the data"
 
 msgctxt "AccessPlatform"
 msgid "endpointDescription.singular"
@@ -1097,12 +1097,12 @@ msgid "start.description"
 msgstr "Start of project/endeavor"
 
 msgctxt "Resource"
-msgid "startDate.singular"
+msgid "start.singular"
 msgstr "Start"
 
 msgctxt "Resource"
-msgid "startDate.description"
-msgstr "The start of the period covered by the data"
+msgid "start.description"
+msgstr "The start of the time period covered by the data"
 
 msgctxt "Resource"
 msgid "stateOfDataProcessing.singular"
