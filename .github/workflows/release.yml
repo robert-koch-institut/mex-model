@@ -82,21 +82,19 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     needs: release
-    environment:
-      name: pypi
-      url: https://pypi.org/p/mex-model
     permissions:
-      id-token: write  # IMPORTANT: mandatory for trusted publishing
+      contents: write
+
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           fetch-depth: 1
           ref: ${{ needs.release.outputs.tag }}
           persist-credentials: false
 
       - name: Cache requirements
-        uses: actions/cache@v5
+        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
         env:
           cache-name: cache-requirements
         with:
@@ -124,5 +122,5 @@ jobs:
             gh release upload ${{ needs.release.outputs.tag }} ${filename};
           done
 
-      - name: Publish distribution 📦 to PyPI
+      - name: Publish distribution to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
