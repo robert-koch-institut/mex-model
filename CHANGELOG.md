@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- fix missing pypi environment vars
+
 ### Security
 
 ## [4.10.2] - 2026-04-01
