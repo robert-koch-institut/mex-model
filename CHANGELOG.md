@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - compare dict lookup lengths against file counts, not static values
+- fix pypi-publish permissions
 
 ## [4.10.0] - 2026-02-12
 
