@@ -45,7 +45,6 @@
             "minimumReleaseAge": "0 days"
         }
     ],
-    "platformCommit": "enabled",
     "prFooter": "",
     "vulnerabilityAlerts": {
         "enabled": true

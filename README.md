@@ -6,7 +6,7 @@ JSON schema files defining the MEx metadata model.
 [![cve-scan](https://github.com/robert-koch-institut/mex-model/actions/workflows/cve-scan.yml/badge.svg)](https://github.com/robert-koch-institut/mex-model/actions/workflows/cve-scan.yml)
 [![documentation](https://github.com/robert-koch-institut/mex-model/actions/workflows/documentation.yml/badge.svg)](https://robert-koch-institut.github.io/mex-model)
 [![linting](https://github.com/robert-koch-institut/mex-model/actions/workflows/linting.yml/badge.svg)](https://github.com/robert-koch-institut/mex-model/actions/workflows/linting.yml)
-[![open-code](https://github.com/robert-koch-institut/mex-model/actions/workflows/open-code.yml/badge.svg)](https://gitlab.opencode.de/robert-koch-institut/mex/mex-model)
+[![opencode](https://github.com/robert-koch-institut/mex-model/actions/workflows/opencode.yml/badge.svg)](https://gitlab.opencode.de/robert-koch-institut/mex/mex-model)
 [![testing](https://github.com/robert-koch-institut/mex-model/actions/workflows/testing.yml/badge.svg)](https://github.com/robert-koch-institut/mex-model/actions/workflows/testing.yml)
 
 ## Project
