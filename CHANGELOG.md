@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [4.10.1] - 2026-04-01
+
+### Changes
+
 - updated template to https://github.com/robert-koch-institut/mex-template/commit/43f715
 - updated template to https://github.com/robert-koch-institut/mex-template/commit/efc70e
 - updated template to https://github.com/robert-koch-institut/mex-template/commit/48ce42
@@ -18,15 +30,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - updated template to https://github.com/robert-koch-institut/mex-template/commit/491e2d
 - updated template to https://github.com/robert-koch-institut/mex-template/commit/0c16a6
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 
 - compare dict lookup lengths against file counts, not static values
-
-### Security
 
 ## [4.10.0] - 2026-02-12
 
