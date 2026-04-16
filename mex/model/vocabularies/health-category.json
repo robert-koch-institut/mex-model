@@ -33,8 +33,8 @@
         "identifier": "https://mex.rki.de/item/health-category-2",
         "inScheme": "https://mex.rki.de/item/health-category",
         "prefLabel": {
-            "de": "Registerdaten",
-            "en": "Registry data"
+            "de": "Medizin- und Sterberegisterdaten",
+            "en": "Medical and mortality registry data"
         }
     },
     {
@@ -52,8 +52,8 @@
         "identifier": "https://mex.rki.de/item/health-category-3",
         "inScheme": "https://mex.rki.de/item/health-category",
         "prefLabel": {
-            "de": "Andere menschliche molekulare Daten",
-            "en": "Other human molecular data"
+            "de": "Andere menschliche molekulare und OMICS-Daten",
+            "en": "Other human molecular and omics data"
         }
     },
     {
@@ -71,8 +71,8 @@
         "identifier": "https://mex.rki.de/item/health-category-4",
         "inScheme": "https://mex.rki.de/item/health-category",
         "prefLabel": {
-            "de": "Daten zum beruflichen Status",
-            "en": "Data on professional status"
+            "de": "Daten zu Gesundheitsfachkräften",
+            "en": "Data on health professionals"
         }
     },
     {
@@ -89,7 +89,6 @@
         "exactMatch": "http://13.81.34.152:1101/resource/authority/healthcategories/RMMD",
         "identifier": "https://mex.rki.de/item/health-category-5",
         "inScheme": "https://mex.rki.de/item/health-category",
-        
         "prefLabel": {
             "de": "Arzneimittel- und Medizinproduktregisterdaten",
             "en": "Medicinal and medical product registry data"
@@ -110,8 +109,8 @@
         "identifier": "https://mex.rki.de/item/health-category-6",
         "inScheme": "https://mex.rki.de/item/health-category",
         "prefLabel": {
-            "de": "Daten zu gesundheitsbeeinflussenden Faktoren",
-            "en": "Data on factors impacting on health"
+            "de": "Daten zu Gesundheitsdeterminanten",
+            "en": "Data on health determinants"
         }
     },
     {
@@ -129,8 +128,8 @@
         "identifier": "https://mex.rki.de/item/health-category-7",
         "inScheme": "https://mex.rki.de/item/health-category",
         "prefLabel": {
-            "de": "Daten nach Erstveröffentlichung",
-            "en": "Data after first publication"
+            "de": "Daten aus Forschungskohorten und Umfragen",
+            "en": "Data from research cohorts and surveys"
         }
     },
     {
@@ -167,8 +166,8 @@
         "identifier": "https://mex.rki.de/item/health-category-9",
         "inScheme": "https://mex.rki.de/item/health-category",
         "prefLabel": {
-            "de": "Daten aus klinischer regulierter Forschung",
-            "en": "Data from clinical regulated research"
+            "de": "Daten aus regulierter klinischer Forschung",
+            "en": "Data from regulated clinical research"
         }
     },
     {
