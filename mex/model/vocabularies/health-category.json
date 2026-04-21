@@ -299,7 +299,7 @@
         "identifier": "https://mex.rki.de/item/health-category-16",
         "inScheme": "https://mex.rki.de/item/health-category",
         "prefLabel": {
-            "de": "Bevölkerungsbezogene Gesundheitsdatenregisterdaten",
+            "de": "Bevölkerungsbezogene Gesundheitsregisterdaten",
             "en": "Data from population-based health data registries"
         }
     },
