@@ -351,12 +351,12 @@
             "type": "array"
         },
         "healthCategory": {
+            "default": [],
             "description": "The category of electronic data for secondary use to which this resource belongs, as described in Article 51 of the Commission Regulation on the European Health Data Space.",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
                 "useScheme": "https://mex.rki.de/item/health-category"
             },
-            "minItems": 1,
             "sameAs": [
                 "http://healthdataportal.eu/ns/health#healthCategory"
             ],
@@ -928,7 +928,6 @@
         "accessRestriction",
         "contact",
         "hadPrimarySource",
-        "healthCategory",
         "identifier",
         "identifierInPrimarySource",
         "stableTargetId",
