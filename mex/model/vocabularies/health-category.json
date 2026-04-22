@@ -159,8 +159,8 @@
             }
         ],
         "definition": {
-            "de": "Daten aus klinischen Prüfungen, klinischen Studien und klinischen Untersuchungen, die der Verordnung (EU) 536/2014, der Verordnung [SOHO], der Verordnung (EU) 2017/745 und der Verordnung (EU) 2017/746 unterliegen",
-            "en": "Data from clinical trials, clinical studies, clinical investigations and performance studies subject to Regulation (EU) No 536/2014, Regulation (EU) 2024/1938 of the European Parliament and of the Council34, Regulation (EU) 2017/745 and Regulation (EU) 2017/746"
+            "de": "Daten aus klinischen Prüfungen, klinischen Studien und klinischen Untersuchungen, die der Verordnung (EU) 536/2014, der Verordnung (EU) 2024/1938, der Verordnung (EU) 2017/745 und der Verordnung (EU) 2017/746 unterliegen",
+            "en": "Data from clinical trials, clinical studies, clinical investigations and performance studies subject to Regulation (EU) No 536/2014, Regulation (EU) 2024/1938 of the European Parliament and of the Council, Regulation (EU) 2017/745 and Regulation (EU) 2017/746"
         },
         "exactMatch": "http://13.81.34.152:1101/resource/authority/healthcategories/EHCT",
         "identifier": "https://mex.rki.de/item/health-category-9",
