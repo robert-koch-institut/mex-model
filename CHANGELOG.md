@@ -34,11 +34,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - source (RKIMEX-18)
 - start (RKIMEX-87)
 
-#### Added properties to mex/model/entities/extracted-activity.json
+#### Added properties to mex/model/entities/extracted-activity.json and mex/model/entities/merged-activity.json
 
 - relatedActivity (RKIMEX-69)
 
-#### Added properties to mex/model/entities/extracted-primary-source.json
+#### Added properties to mex/model/entities/extracted-primary-source.json and mex/model/entities/merged-primary-source.json
 
 - contributor (RKIMEX-77)
 
