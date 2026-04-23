@@ -13,14 +13,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - mex/model/vocabularies/health-category.json (RKIMEX-62)
 
-### Changes
-
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/efc70e
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/48ce42
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/172aac
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/491e2d
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/0c16a6
-
 #### Added properties to mex/model/entities/extracted-resource.json and mex/model/entities/merged-resource.json
 
 - analytics (RKIMEX-12)
@@ -42,7 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - contributor (RKIMEX-77)
 
-#### Changed files
+### Changes
 
 - Changed files by adding translation entries for entities named in added: en.po, de.po
 - Changed file by adding vocabulary reference: concept-schemes.json
@@ -53,9 +45,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- compare dict lookup lengths against file counts, not static values
+- fix missing pypi environment vars
 
 ### Security
+
+## [4.10.2] - 2026-04-01
+
+## [4.10.1] - 2026-04-01
+
+### Changes
+
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/43f715
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/efc70e
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/48ce42
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/172aac
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/491e2d
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/0c16a6
+
+### Fixed
+
+- compare dict lookup lengths against file counts, not static values
+- fix pypi-publish permissions
 
 ## [4.10.0] - 2026-02-12
 
