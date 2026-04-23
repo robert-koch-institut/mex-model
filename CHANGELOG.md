@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 #### Added Vocabulary file
+
 - mex/model/vocabularies/health-category.json (RKIMEX-62)
 
 ### Changes
@@ -20,22 +21,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - updated template to https://github.com/robert-koch-institut/mex-template/commit/491e2d
 - updated template to https://github.com/robert-koch-institut/mex-template/commit/0c16a6
 
-#### Added properties to mex/model/entities/extracted-resource.json
+#### Added properties to mex/model/entities/extracted-resource.json and mex/model/entities/merged-resource.json
+
 - analytics (RKIMEX-12)
-- source (RKIMEX-18)
-- sample (RKIMEX-28)
+- end (RKIMEX-87)
 - hasCodeValues (RKIMEX-30)
 - healthCategory (RKIMEX-46)
 - numberOfRecords (RKIMEX-55)
 - numberOfUniqueIndividuals (RKIMEX-55)
 - relatedResource (RKIMEX-70)
-- startDate (RKIMEX-87)
-- endDate (RKIMEX-87)
+- sample (RKIMEX-28)
+- source (RKIMEX-18)
+- start (RKIMEX-87)
 
 #### Added properties to mex/model/entities/extracted-activity.json
+
 - relatedActivity (RKIMEX-69)
 
 #### Added properties to mex/model/entities/extracted-primary-source.json
+
 - contributor (RKIMEX-77)
 
 #### Changed files
