@@ -9,7 +9,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### Added Vocabulary file
+
+- mex/model/vocabularies/health-category.json (RKIMEX-62)
+
+#### Added properties to mex/model/entities/extracted-resource.json and mex/model/entities/merged-resource.json
+
+- analytics (RKIMEX-12)
+- end (RKIMEX-87)
+- hasCodeValues (RKIMEX-30)
+- healthCategory (RKIMEX-46)
+- numberOfRecords (RKIMEX-55)
+- numberOfUniqueIndividuals (RKIMEX-55)
+- relatedResource (RKIMEX-70)
+- sample (RKIMEX-28)
+- source (RKIMEX-18)
+- start (RKIMEX-87)
+
+#### Added properties to mex/model/entities/extracted-activity.json and mex/model/entities/merged-activity.json
+
+- relatedActivity (RKIMEX-69)
+
+#### Added properties to mex/model/entities/extracted-primary-source.json and mex/model/entities/merged-primary-source.json
+
+- contributor (RKIMEX-77)
+
 ### Changes
+
+- Changed files by adding translation entries for entities named in added: en.po, de.po
+- Changed file by adding vocabulary reference: concept-schemes.json
 
 ### Deprecated
 
