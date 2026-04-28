@@ -17,7 +17,7 @@ dev = [
     "pytest-random-order>=1",
     "pytest-xdist>=3",
     "pytest>=8",
-    "ruff>=0.14",
+    "ruff>=0.15",
     "sphinx-jsonschema>=1.19",
     "sphinx<9",
 ]
