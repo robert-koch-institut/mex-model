@@ -912,14 +912,11 @@
         },
         "version": {
             "description": "The version indicator (name or identifier) of a resource.",
-            "items": {
-                "type": "string"
-            },
             "maxLength": 100,
+            "type": "string",
             "closeMatch": [
                 "https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version"
-            ],
-            "type": "array"
+            ]
         },
         "wasGeneratedBy": {
             "anyOf": [
