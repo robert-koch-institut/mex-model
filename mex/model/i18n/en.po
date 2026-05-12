@@ -1210,6 +1210,14 @@ msgctxt "PrimarySource"
 msgid "version.description"
 msgstr "Version of the original data storage (primary source)"
 
+msgctxt "Resource"
+msgid "version.singular"
+msgstr "version"
+
+msgctxt "Resource"
+msgid "version.description"
+msgstr "The version of the data source/dataset"
+
 msgctxt "Organization"
 msgid "viafId.singular"
 msgstr "VIAF"
