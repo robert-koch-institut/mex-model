@@ -910,6 +910,17 @@
             ],
             "type": "array"
         },
+        "version": {
+            "description": "The version indicator (name or identifier) of a resource.",
+            "items": {
+                "type": "string"
+            },
+            "maxLength": 100,
+            "closeMatch": [
+                "https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version"
+            ],
+            "type": "array"
+        },
         "wasGeneratedBy": {
             "anyOf": [
                 {
