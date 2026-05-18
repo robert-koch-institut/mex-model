@@ -420,6 +420,17 @@
             ],
             "type": "array"
         },
+        "landingPage": {
+            "default": [],
+            "description": "A web page that provides access to the resource, its distributions and/or additional information.",
+            "items": {
+                "$ref": "/mex/model/fields/link"
+            },
+            "closeMatch": [
+                "https://www.w3.org/TR/vocab-dcat-3/#Property:resource_landing_page"
+            ],
+            "type": "array"
+        },
         "language": {
             "default": [],
             "description": "A language of the resource.",
