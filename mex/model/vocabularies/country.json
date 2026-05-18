@@ -1,0 +1,1970 @@
+[
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/1A0",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Kosovo",
+            "en": "Kosovo"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/AFG",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Afghanistan",
+            "en": "Afghanistan"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/AFI",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Französisches Afar- und Issagebiet",
+            "en": "French Afar and Issas"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/AGO",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Angola",
+            "en": "Angola"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ALB",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Albanien",
+            "en": "Albania"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/AND",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Andorra",
+            "en": "Andorra"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ARE",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Vereinigte Arabische Emirate",
+            "en": "United Arab Emirates"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ARG",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Argentinien",
+            "en": "Argentina"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ARM",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Armenien",
+            "en": "Armenia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ATA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Antarktis",
+            "en": "Antarctica"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ATG",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Antigua und Barbuda",
+            "en": "Antigua and Barbuda"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ATN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Königin-Maud-Land",
+            "en": "Dronning Maud Land"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/AUS",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Australien",
+            "en": "Australia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/AUT",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Österreich",
+            "en": "Austria"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/AZE",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Aserbaidschan",
+            "en": "Azerbaijan"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BDI",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Burundi",
+            "en": "Burundi"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BEL",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Belgien",
+            "en": "Belgium"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BEN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Benin",
+            "en": "Benin"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BFA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Burkina Faso",
+            "en": "Burkina Faso"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BGD",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Bangladesch",
+            "en": "Bangladesh"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BGR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Bulgarien",
+            "en": "Bulgaria"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BGR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Bulgarien",
+            "en": "Bulgaria"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BHR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Bahrain",
+            "en": "Bahrain"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BHS",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Bahamas",
+            "en": "Bahamas"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BIH",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Bosnien und Herzegowina",
+            "en": "Bosnia and Herzegovina"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BLR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Belarus",
+            "en": "Belarus"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BLZ",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Belize",
+            "en": "Belize"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BOL",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Bolivien",
+            "en": "Bolivia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BRA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Brasilien",
+            "en": "Brazil"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BRB",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Barbados",
+            "en": "Barbados"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BRN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Brunei",
+            "en": "Brunei"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BTN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Bhutan",
+            "en": "Bhutan"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BUR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Birma",
+            "en": "Burma"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BWA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Botsuana",
+            "en": "Botswana"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/BYS",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Weißrussland",
+            "en": "Belarus"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/CAF",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Zentralafrikanische Republik",
+            "en": "Central African Republic"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/CAN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Kanada",
+            "en": "Canada"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/CHE",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Schweiz",
+            "en": "Switzerland"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/CHL",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Chile",
+            "en": "Chile"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/CHN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "China",
+            "en": "China"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/CIV",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Côte d’Ivoire",
+            "en": "Côte d’Ivoire"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/CMR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Kamerun",
+            "en": "Cameroon"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/COD",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Demokratische Republik Kongo",
+            "en": "Democratic Republic of the Congo"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/COG",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Kongo",
+            "en": "Congo"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/COL",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Kolumbien",
+            "en": "Colombia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/COM",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Komoren",
+            "en": "Comoros"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/CPV",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Cabo Verde",
+            "en": "Cabo Verde"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/CRI",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Costa Rica",
+            "en": "Costa Rica"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/CSK",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Tschechoslowakei",
+            "en": "Czechoslovakia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/CTE",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Canton- und Enderbury-Inseln",
+            "en": "Canton and Enderbury Islands"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/CUB",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Kuba",
+            "en": "Cuba"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/CYP",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Zypern",
+            "en": "Cyprus"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/CZE",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Tschechien",
+            "en": "Czechia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/DDR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Deutsche Demokratische Republik",
+            "en": "German Democratic Republic"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/DEU",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Deutschland",
+            "en": "Germany"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/DEU",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Deutschland",
+            "en": "Germany"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/DHY",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Dahome",
+            "en": "Dahomey"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/DJI",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Dschibuti",
+            "en": "Djibouti"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/DMA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Dominica",
+            "en": "Dominica"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/DNK",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Dänemark",
+            "en": "Denmark"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/DOM",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Dominikanische Republik",
+            "en": "Dominican Republic"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/DZA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Algerien",
+            "en": "Algeria"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ECU",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Ecuador",
+            "en": "Ecuador"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/EGY",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Ägypten",
+            "en": "Egypt"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ERI",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Eritrea",
+            "en": "Eritrea"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ESP",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Spanien",
+            "en": "Spain"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/EST",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Estland",
+            "en": "Estonia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ETH",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Äthiopien",
+            "en": "Ethiopia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/EUR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Europäische Union",
+            "en": "European Union"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/FIN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Finnland",
+            "en": "Finland"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/FJI",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Fidschi",
+            "en": "Fiji"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/FRA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Frankreich",
+            "en": "France"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/FSM",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Mikronesien",
+            "en": "Micronesia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/FXX",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Frankreich (Mutterland)",
+            "en": "Metropolitan France"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/GAB",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Gabun",
+            "en": "Gabon"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/GBR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Vereinigtes Königreich",
+            "en": "United Kingdom"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/GEL",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Gilbert- und Ellice-Inseln",
+            "en": "Gilbert and Ellice Islands"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/GEO",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Georgien",
+            "en": "Georgia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/GGY",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Guernsey",
+            "en": "Guernsey"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/GHA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Ghana",
+            "en": "Ghana"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/GIN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Guinea",
+            "en": "Guinea"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/GMB",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Gambia",
+            "en": "The Gambia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/GNB",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Guinea-Bissau",
+            "en": "Guinea-Bissau"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/GNQ",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Äquatorialguinea",
+            "en": "Equatorial Guinea"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/GRC",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Griechenland",
+            "en": "Greece"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/GRC",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Griechenland",
+            "en": "Greece"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/GRD",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Grenada",
+            "en": "Grenada"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/GTM",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Guatemala",
+            "en": "Guatemala"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/GUY",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Guyana",
+            "en": "Guyana"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/HKG",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Hongkong",
+            "en": "Hong Kong"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/HND",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Honduras",
+            "en": "Honduras"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/HRV",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Kroatien",
+            "en": "Croatia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/HTI",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Haiti",
+            "en": "Haiti"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/HUN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Ungarn",
+            "en": "Hungary"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/HVO",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Obervolta",
+            "en": "Upper Volta"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/IDN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Indonesien",
+            "en": "Indonesia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/IMN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Insel Man",
+            "en": "Isle of Man"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/IND",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Indien",
+            "en": "India"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/IRL",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Irland",
+            "en": "Ireland"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/IRN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Iran",
+            "en": "Iran"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/IRQ",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Irak",
+            "en": "Iraq"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ISL",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Island",
+            "en": "Iceland"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ISR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Israel",
+            "en": "Israel"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ITA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Italien",
+            "en": "Italy"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/JAM",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Jamaika",
+            "en": "Jamaica"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/JEY",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Jersey",
+            "en": "Jersey"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/JOR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Jordanien",
+            "en": "Jordan"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/JPN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Japan",
+            "en": "Japan"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/JTN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Johnston-Insel",
+            "en": "Johnston Island"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/KAZ",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Kasachstan",
+            "en": "Kazakhstan"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/KEN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Kenia",
+            "en": "Kenya"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/KGZ",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Kirgisistan",
+            "en": "Kyrgyzstan"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/KHM",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Kambodscha",
+            "en": "Cambodia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/KIR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Kiribati",
+            "en": "Kiribati"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/KNA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "St. Kitts und Nevis",
+            "en": "Saint Kitts and Nevis"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/KOR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Südkorea",
+            "en": "South Korea"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/KWT",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Kuwait",
+            "en": "Kuwait"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/LAO",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Laos",
+            "en": "Laos"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/LBN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Libanon",
+            "en": "Lebanon"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/LBR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Liberia",
+            "en": "Liberia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/LBY",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Libyen",
+            "en": "Libya"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/LCA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "St. Lucia",
+            "en": "Saint Lucia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/LIE",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Liechtenstein",
+            "en": "Liechtenstein"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/LKA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Sri Lanka",
+            "en": "Sri Lanka"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/LSO",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Lesotho",
+            "en": "Lesotho"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/LTU",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Litauen",
+            "en": "Lithuania"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/LUX",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Luxemburg",
+            "en": "Luxembourg"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/LVA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Lettland",
+            "en": "Latvia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MAC",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Macau",
+            "en": "Macao"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MAC",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Macau",
+            "en": "Macau"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MAR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Marokko",
+            "en": "Morocco"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MCO",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Monaco",
+            "en": "Monaco"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MDA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Moldau",
+            "en": "Moldova"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MDG",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Madagaskar",
+            "en": "Madagascar"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MDV",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Malediven",
+            "en": "Maldives"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MEX",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Mexiko",
+            "en": "Mexico"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MHL",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Marshallinseln",
+            "en": "Marshall Islands"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MID",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Midway-Inseln",
+            "en": "Midway Islands"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MKD",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Nordmazedonien",
+            "en": "North Macedonia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MLI",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Mali",
+            "en": "Mali"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MLT",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Malta",
+            "en": "Malta"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MMR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Myanmar",
+            "en": "Myanmar"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MMR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Myanmar/Birma",
+            "en": "Myanmar/Burma"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MNE",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Montenegro",
+            "en": "Montenegro"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MNG",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Mongolei",
+            "en": "Mongolia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MOZ",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Mosambik",
+            "en": "Mozambique"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MRT",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Mauretanien",
+            "en": "Mauritania"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MUS",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Mauritius",
+            "en": "Mauritius"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MWI",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Malawi",
+            "en": "Malawi"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/MYS",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Malaysia",
+            "en": "Malaysia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/NAM",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Namibia",
+            "en": "Namibia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/NER",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Niger",
+            "en": "Niger"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/NGA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Nigeria",
+            "en": "Nigeria"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/NHB",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Neue Hebriden",
+            "en": "New Hebrides"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/NIC",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Nicaragua",
+            "en": "Nicaragua"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/NLD",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Niederlande",
+            "en": "Netherlands"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/NOR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Norwegen",
+            "en": "Norway"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/NPL",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Nepal",
+            "en": "Nepal"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/NRU",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Nauru",
+            "en": "Nauru"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/NTZ",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Neutrale Zone",
+            "en": "Neutral Zone"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/NZL",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Neuseeland",
+            "en": "New Zealand"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/OMN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Oman",
+            "en": "Oman"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/PAK",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Pakistan",
+            "en": "Pakistan"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/PAN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Panama",
+            "en": "Panama"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/PCZ",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Panama, Kanal-Zone",
+            "en": "Panama Canal Zone"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/PER",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Peru",
+            "en": "Peru"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/PHL",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Philippinen",
+            "en": "Philippines"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/PLW",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Palau",
+            "en": "Palau"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/PNG",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Papua-Neuguinea",
+            "en": "Papua New Guinea"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/POL",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Polen",
+            "en": "Poland"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/POL",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Polen",
+            "en": "Poland"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/PRK",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Nordkorea",
+            "en": "North Korea"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/PRT",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Portugal",
+            "en": "Portugal"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/PRY",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Paraguay",
+            "en": "Paraguay"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/PSE",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Palästina*",
+            "en": "Palestine*"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/PUS",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Vereinigte Staaten Sonstiges Pazifische Inseln",
+            "en": "US Miscellaneous Pacific Islands"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/QAT",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Katar",
+            "en": "Qatar"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/RHO",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Südrhodesien",
+            "en": "Southern Rhodesia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ROU",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Rumänien",
+            "en": "Romania"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ROU",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Rumänien",
+            "en": "Romania"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/RUS",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Russland",
+            "en": "Russia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/RWA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Ruanda",
+            "en": "Rwanda"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SAU",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Saudi-Arabien",
+            "en": "Saudi Arabia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SCG",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Serbien und Montenegro",
+            "en": "Serbia and Montenegro"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SDN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Sudan",
+            "en": "Sudan"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SEN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Senegal",
+            "en": "Senegal"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SGP",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Singapur",
+            "en": "Singapore"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SKM",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Sikkim",
+            "en": "Sikkim"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SLB",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Salomonen",
+            "en": "Solomon Islands"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SLE",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Sierra Leone",
+            "en": "Sierra Leone"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SLV",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "El Salvador",
+            "en": "El Salvador"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SMR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "San Marino",
+            "en": "San Marino"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SOM",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Somalia",
+            "en": "Somalia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SRB",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Serbien",
+            "en": "Serbia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SSD",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Südsudan",
+            "en": "South Sudan"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/STP",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "São Tomé und Príncipe",
+            "en": "São Tomé and Príncipe"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SUN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Sowjetunion",
+            "en": "Soviet Union"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SUR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Suriname",
+            "en": "Suriname"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SVK",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Slowakei",
+            "en": "Slovakia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SVN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Slowenien",
+            "en": "Slovenia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SWE",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Schweden",
+            "en": "Sweden"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SWZ",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Eswatini",
+            "en": "Eswatini"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SYC",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Seychellen",
+            "en": "Seychelles"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/SYR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Syrien",
+            "en": "Syria"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/TCD",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Tschad",
+            "en": "Chad"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/TGO",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Togo",
+            "en": "Togo"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/THA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Thailand",
+            "en": "Thailand"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/TJK",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Tadschikistan",
+            "en": "Tajikistan"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/TKM",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Turkmenistan",
+            "en": "Turkmenistan"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/TLS",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Timor-Leste",
+            "en": "Timor-Leste"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/TMP",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Osttimor",
+            "en": "East Timor"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/TON",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Tonga",
+            "en": "Tonga"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/TTO",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Trinidad und Tobago",
+            "en": "Trinidad and Tobago"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/TUN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Tunesien",
+            "en": "Tunisia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/TUR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Türkei",
+            "en": "Türkiye"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/TUV",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Tuvalu",
+            "en": "Tuvalu"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/TWN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Taiwan",
+            "en": "Taiwan"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/TZA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Tansania",
+            "en": "Tanzania"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/UGA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Uganda",
+            "en": "Uganda"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/UKR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Ukraine",
+            "en": "Ukraine"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/URY",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Uruguay",
+            "en": "Uruguay"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/USA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Vereinigte Staaten",
+            "en": "United States"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/UZB",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Usbekistan",
+            "en": "Uzbekistan"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/VAT",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Heiliger Stuhl",
+            "en": "Holy See"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/VCT",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "St. Vincent und die Grenadinen",
+            "en": "Saint Vincent and the Grenadines"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/VDR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Demokratische Republik Vietnam",
+            "en": "Democratic Republic of Vietnam"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/VEN",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Venezuela",
+            "en": "Venezuela"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/VNM",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Vietnam",
+            "en": "Viet Nam"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/VUT",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Vanuatu",
+            "en": "Vanuatu"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/WAK",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Wake",
+            "en": "Wake Island"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/WSM",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Samoa",
+            "en": "Samoa"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/XBI",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Biafra",
+            "en": "Biafra"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/XDST",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Umstrittenes Gebiet",
+            "en": "Disputed region"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/XKA",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Demokratisches Kampuchea",
+            "en": "Democratic Kampuchea"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/XKM",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Volksrepublik Kampuchea",
+            "en": "People’s Republic of Kampuchea"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/XKX",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Kosovo*",
+            "en": "Kosovo*"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/XMAZ",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Meeresgebiet",
+            "en": "Marine zone"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/XUCT",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Unbeanspruchtes Gebiet",
+            "en": "Unclaimed territory"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/YEM",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Jemen",
+            "en": "Yemen"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/YMD",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Nordjemen",
+            "en": "North Yemen"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/YUG",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Jugoslawien",
+            "en": "Yugoslavia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ZAF",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Südafrika",
+            "en": "South Africa"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ZAR",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Zaire",
+            "en": "Zaire"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ZMB",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Sambia",
+            "en": "Zambia"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ZR0",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Zaire",
+            "en": "Zaire"
+        }
+    },
+    {
+        "exactMatch": "http://publications.europa.eu/resource/authority/country/ZWE",
+        "inScheme": "https://mex.rki.de/item/country",
+        "prefLabel": {
+            "de": "Simbabwe",
+            "en": "Zimbabwe"
+        }
+    }
+]
