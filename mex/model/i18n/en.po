@@ -232,6 +232,14 @@ msgctxt "Resource"
 msgid "contributingUnit.description"
 msgstr "Organizational unit(s) contributing to the data"
 
+msgctxt "Organization"
+msgid "country.singular"
+msgstr "Country"
+
+msgctxt "Organization"
+msgid "country.description"
+msgstr "List of names of countries and territories in form of controlled vocabulary"
+
 msgctxt "Resource"
 msgid "created.singular"
 msgstr "Created"

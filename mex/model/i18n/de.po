@@ -235,6 +235,14 @@ msgid "contributingUnit.description"
 msgstr "An den Daten mitwirkende(s) Fachgebiet(e)"
 
 msgctxt "Resource"
+msgid "country.singular"
+msgstr "Land"
+
+msgctxt "Resource"
+msgid "country.description"
+msgstr "Auflistung von Namen von Ländern und Gebieten als kontrolliertes Vokabular"
+
+msgctxt "Resource"
 msgid "created.singular"
 msgstr "Erstellt"
 
@@ -257,7 +265,6 @@ msgstr "Verfasser*in der Publikation"
 msgctxt "Resource"
 msgid "creator.description"
 msgstr "Person, die die Daten zusammengestellt/erstellt hat"
-
 
 msgctxt "Variable"
 msgid "dataType.singular"
