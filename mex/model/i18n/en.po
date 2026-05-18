@@ -561,6 +561,14 @@ msgstr ""
 "system)"
 
 msgctxt "Resource"
+msgid "inSeries.singular"
+msgstr "Dataset series"
+
+msgctxt "Resource"
+msgid "inSeries.description"
+msgstr "Kollektion von Datensätzen, der der Datensatz angehört"
+
+msgctxt "Resource"
 msgid "instrumentToolOrApparatus.singular"
 msgid_plural "usedInstrumentToolOrApparatus.plural"
 msgstr[0] "Tool"
@@ -1316,6 +1324,9 @@ msgstr "Primary source"
 
 msgid "Resource"
 msgstr "Data Source/Dataset"
+
+msgid "Resource Series"
+msgstr "Collection of Data sources/Datasets"
 
 msgid "Variable"
 msgstr "Variable"

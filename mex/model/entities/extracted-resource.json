@@ -398,6 +398,17 @@
             },
             "type": "array"
         },
+        "inSeries": {
+            "default": [],
+            "description": "A resource series of which the resource is part.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource-series#/identifier"
+            },
+            "closeMatch": [
+                "https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series"
+            ],
+            "type": "array"
+        },
         "isPartOf": {
             "default": [],
             "description": "A related resource, in which the described resource is physically or logically included.",
