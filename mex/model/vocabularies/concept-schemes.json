@@ -85,6 +85,10 @@
         "label": "Personal Data"
     },
     {
+        "identifier": "https://mex.rki.de/item/purpose",
+        "label": "Purpose vocabulary"
+    },
+    {
         "identifier": "https://mex.rki.de/item/resource-creation-method",
         "label": "Resource creation method vocabulary"
     },

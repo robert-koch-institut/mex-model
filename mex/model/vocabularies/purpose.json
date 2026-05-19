@@ -1,0 +1,114 @@
+[
+    {
+        "identifier": "https://mex.rki.de/item/purpose-1",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Monitoring & Surveillance",
+            "en": "Monitoring & Surveillance"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/data-processing-state-1",
+        "identifier": "https://mex.rki.de/item/purpose-2",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Erkennen von Trends",
+            "en": "Identifying Trends"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/data-processing-state-1",
+        "identifier": "https://mex.rki.de/item/purpose-3",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Erkennen von ungewöhnlichen Ereignissen und Frühwarnung",
+            "en": "Detection of unusual events and early warning"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/data-processing-state-1",
+        "identifier": "https://mex.rki.de/item/purpose-4",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Abschätzen der Krankheitslast",
+            "en": "Estimating the burden of disease"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/purpose-5",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Information",
+            "en": "Information"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/data-processing-state-5",
+        "identifier": "https://mex.rki.de/item/purpose-6",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Information der Fachöffentlichkeit",
+            "en": "Information for the professional community"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/data-processing-state-5",
+        "identifier": "https://mex.rki.de/item/purpose-7",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Information von Entscheidungsträgern",
+            "en": "Information for decision makers"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/data-processing-state-5",
+        "identifier": "https://mex.rki.de/item/purpose-8",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Information von Entscheidungsträgern",
+            "en": "Information for decision makers"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/purpose-9",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Maßnahmen",
+            "en": "Measures"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/data-processing-state-9",
+        "identifier": "https://mex.rki.de/item/purpose-10",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Ableiten von Empfehlungen für Präventionsmaßnahmen",
+            "en": "Deriving recommendations for preventive measures"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/data-processing-state-9",
+        "identifier": "https://mex.rki.de/item/purpose-11",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Evaluierung von Maßnahmen",
+            "en": "Evaluation of measures"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/purpose-12",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Forschung",
+            "en": "Research"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/purpose-13",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Sonstiges",
+            "en": "Other"
+        }
+    }
+]
