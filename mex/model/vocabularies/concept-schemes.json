@@ -20,6 +20,10 @@
         "label": "Bibliographic resource type vocabulary"
     },
     {
+        "identifier": "https://mex.rki.de/item/coding-system",
+        "label": "Coding systems vocabulary"
+    },
+    {
         "description": {
             "de": "Dieses Vokabular basiert auf dem W3C Standard DPV, Data Privacy Vocabulary, verfügbar unter https://w3c.github.io/dpv/2.0/dpv/. Insbesondere auf der Klasse dpv:ConsentStatus und deren Subklassen.",
             "en": "This vocabulary is based of the W3C Standard DPV, Data Privacy Vocabulary, available at https://w3c.github.io/dpv/2.0/dpv/. Specifically dpv:ConsentStatus and its subclasses."
@@ -37,7 +41,7 @@
     },
     {
         "description": {
-            "de": "Länder und Gebiete ist ein kontrolliertes Vokabulare, das Namen von Ländern und Gebieten als Concepts auflistet. Verfügbar unter https://op.europa.eu/de/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country. Es wurden nur aktuell gültige Einträge aufgenommen.",
+            "de": "Länder und Gebiete ist ein kontrolliertes Vokabular, das Namen von Ländern und Gebieten als Concepts auflistet. Verfügbar unter https://op.europa.eu/de/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country. Es wurden nur aktuell gültige Einträge aufgenommen.",
             "en": "Countries and territories is a controlled vocabulary that lists concepts associated with names of countries and territories. Available at https://op.europa.eu/de/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country. Only currently valid items were used."
         },
         "identifier": "https://mex.rki.de/item/country",
