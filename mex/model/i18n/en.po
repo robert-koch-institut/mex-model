@@ -505,6 +505,26 @@ msgstr[0] "Code value"
 msgstr[1] "Code values"
 
 msgctxt "Resource"
+msgid "hasCodingSystem.description"
+msgstr "Specification of coding system in use"
+
+msgctxt "Variable"
+msgid "hasCodingSystem.description"
+msgstr "Specification of coding system in use"
+
+msgctxt "Resource"
+msgid "hasCodingSystem.singular"
+msgid_plural "hasCodingSystem.plural"
+msgstr[0] "Coding system in use"
+msgstr[1] "Coding systems in use"
+
+msgctxt "Variable"
+msgid "hasCodingSystem.singular"
+msgid_plural "hasCodingSystem.plural"
+msgstr[0] "Coding system in use"
+msgstr[1] "Coding systems in use"
+
+msgctxt "Resource"
 msgid "hasCodeValues.description"
 msgstr "Values deriving from standardised coding systems"
 

@@ -509,6 +509,26 @@ msgstr[0] "Kodierter Wert"
 msgstr[1] "Kodierte Werte"
 
 msgctxt "Resource"
+msgid "hasCodingSystem.description"
+msgstr "Spezifizierung des verwendeten Kodiersystems"
+
+msgctxt "Variable"
+msgid "hasCodingSystem.description"
+msgstr "Spezifizierung des verwendeten Kodiersystems"
+
+msgctxt "Resource"
+msgid "hasCodingSystem.singular"
+msgid_plural "hasCodingSystem.plural"
+msgstr[0] "Verwendetes Kodiersystem"
+msgstr[1] "Verwendete Kodiersysteme"
+
+msgctxt "Variable"
+msgid "hasCodingSystem.singular"
+msgid_plural "hasCodingSystem.plural"
+msgstr[0] "Verwendetes Kodiersystem"
+msgstr[1] "Verwendete Kodiersysteme"
+
+msgctxt "Resource"
 msgid "hasCodeValues.description"
 msgstr "Wert(e) aus standardisierten Kodiersystemen"
 
