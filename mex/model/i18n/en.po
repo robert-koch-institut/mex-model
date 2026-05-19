@@ -535,6 +535,11 @@ msgstr ""
 "personal data"
 
 msgctxt "Resource"
+msgid "hasPurposeDescription.singular"
+msgstr ""
+"A detailed description of purpose for which the data was originally collected"
+
+msgctxt "Resource"
 msgid "healthCategory.singular"
 msgid_plural "healthCategory.plural"
 msgstr[0] "EHDS category"

@@ -541,6 +541,11 @@ msgstr ""
 "Personenbezug"
 
 msgctxt "Resource"
+msgid "hasPurposeDescription.singular"
+msgstr ""
+"Detaillierte Beschreibung des Zwecks der ursprünglichen Datenerhebung"
+
+msgctxt "Resource"
 msgid "healthCategory.singular"
 msgid_plural "healthCategory.plural"
 msgstr[0] "Kategorie nach EHDS"
