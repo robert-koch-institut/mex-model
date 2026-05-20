@@ -40,7 +40,7 @@
         "inScheme": "https://mex.rki.de/item/coding-system",
         "prefLabel": {
             "de": "SNOMED CT",
-            "en": "SNOMED-CT"
+            "en": "SNOMED CT"
         },
         "exactMatch": [
             "https://www.wikidata.org/wiki/Q1753883",
