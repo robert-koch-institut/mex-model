@@ -57,6 +57,12 @@
                 "http://www.w3.org/ns/csvw#datatype"
             ]
         },
+        "dataTypeInPrimarySource": {
+            "type": "string",
+            "default": null,
+            "description": "Data type of the variable, as defined in the original primary source system.",
+            "maxItems": 1
+        },
         "dataTypeStandardized": {
             "description": "Standardized data types used in the variable, as defined in the controlled vocabulary.",
             "items": {
