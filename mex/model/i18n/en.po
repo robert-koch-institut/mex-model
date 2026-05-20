@@ -272,6 +272,14 @@ msgctxt "Variable"
 msgid "dataType.description"
 msgstr "Defined data type of the variable"
 
+msgctxt "Variable"
+msgid "dataTypeStandardized.singular"
+msgstr "Data type"
+
+msgctxt "Variable"
+msgid "dataTypeStandardized.description"
+msgstr "Data type of the variable (standardized)"
+
 msgid "description.singular"
 msgstr "Description"
 

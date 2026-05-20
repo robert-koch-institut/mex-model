@@ -57,6 +57,21 @@
                 "http://www.w3.org/ns/csvw#datatype"
             ]
         },
+        "dataTypeStandardized": {
+            "description": "Standardized data types used in the variable, as defined in the controlled vocabulary.",
+            "items": {
+                "$ref": "/mex/model/entities/concept#/identifier",
+                "examples": [
+                    "https://mex.rki.de/item/datatype-standardized-1"
+                ],
+                "useScheme": "https://mex.rki.de/item/datatype-standardized"
+            },
+            "closeMatch": [
+                "https://www.w3.org/ns/csvw#datatype"
+            ],
+            "type": "array",
+            "maxItems": 1
+        },
         "description": {
             "default": [],
             "description": "A description of the variable. How the variable is defined in the primary source.",
@@ -159,6 +174,7 @@
         }
     },
     "required": [
+        "dataTypeStandardized",
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
