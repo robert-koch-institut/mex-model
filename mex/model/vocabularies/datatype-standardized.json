@@ -400,6 +400,14 @@
             "de": "Zeit",
             "en": "Time"
         }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-19",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "prefLabel": {
+            "de": "Nicht genauer spezifiziert",
+            "en": "Not specified"
+        }
     }
 ]
 
