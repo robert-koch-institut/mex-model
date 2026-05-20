@@ -1253,7 +1253,7 @@ msgstr "Version of the original data storage (primary source)"
 
 msgctxt "Resource"
 msgid "version.singular"
-msgstr "version"
+msgstr "Version"
 
 msgctxt "Resource"
 msgid "version.description"
