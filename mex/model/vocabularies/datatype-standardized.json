@@ -1,0 +1,405 @@
+[
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-1",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "prefLabel": {
+            "de": "URI",
+            "en": "URI"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-2",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#base64Binary",
+        "prefLabel": {
+            "de": "base64Binary",
+            "en": "base64Binary"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-3",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#boolean",
+        "prefLabel": {
+            "de": "Boolean",
+            "en": "Boolean"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-4",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#date",
+        "prefLabel": {
+            "de": "Datum",
+            "en": "Date"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-5",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "prefLabel": {
+            "de": "dateTime",
+            "en": "dateTime"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-51",
+        "broader": "https://mex.rki.de/item/datatype-standardized-5",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+        "prefLabel": {
+            "de": "dateTimeStamp",
+            "en": "dateTimeStamp"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-6",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#decimal",
+        "prefLabel": {
+            "de": "Decimal",
+            "en": "Decimal"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-61",
+        "broader": "https://mex.rki.de/item/datatype-standardized-6",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#integer",
+        "prefLabel": {
+            "de": "Integer",
+            "en": "Integer"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-611",
+        "broader": "https://mex.rki.de/item/datatype-standardized-61",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#long",
+        "prefLabel": {
+            "de": "Long",
+            "en": "Long"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-6111",
+        "broader": "https://mex.rki.de/item/datatype-standardized-611",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#int",
+        "prefLabel": {
+            "de": "Int",
+            "en": "Int"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-61111",
+        "broader": "https://mex.rki.de/item/datatype-standardized-6111",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#short",
+        "prefLabel": {
+            "de": "Short",
+            "en": "Short"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-611111",
+        "broader": "https://mex.rki.de/item/datatype-standardized-61111",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#byte",
+        "prefLabel": {
+            "de": "Byte",
+            "en": "Byte"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-62",
+        "broader": "https://mex.rki.de/item/datatype-standardized-6",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "prefLabel": {
+            "de": "nonNegativeInteger",
+            "en": "nonNegativeInteger"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-621",
+        "broader": "https://mex.rki.de/item/datatype-standardized-62",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#positiveInteger",
+        "prefLabel": {
+            "de": "positiveInteger",
+            "en": "positiveInteger"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-622",
+        "broader": "https://mex.rki.de/item/datatype-standardized-62",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#unsignedLong",
+        "prefLabel": {
+            "de": "unsignedLong",
+            "en": "unsignedLong"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-6221",
+        "broader": "https://mex.rki.de/item/datatype-standardized-622",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#unsignedInt",
+        "prefLabel": {
+            "de": "unsignedInt",
+            "en": "unsignedInt"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-62211",
+        "broader": "https://mex.rki.de/item/datatype-standardized-6221",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#unsignedShort",
+        "prefLabel": {
+            "de": "unsignedShort",
+            "en": "unsignedShort"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-622111",
+        "broader": "https://mex.rki.de/item/datatype-standardized-62211",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#unsignedByte",
+        "prefLabel": {
+            "de": "unsignedByte",
+            "en": "unsignedByte"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-63",
+        "broader": "https://mex.rki.de/item/datatype-standardized-6",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#nonPositiveInteger",
+        "prefLabel": {
+            "de": "nonPositiveInteger",
+            "en": "nonPositiveInteger"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-631",
+        "broader": "https://mex.rki.de/item/datatype-standardized-63",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#negativeInteger",
+        "prefLabel": {
+            "de": "negativeInteger",
+            "en": "negativeInteger"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-7",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#double",
+        "prefLabel": {
+            "de": "Double",
+            "en": "Double"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-8",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#duration",
+        "prefLabel": {
+            "de": "Dauer",
+            "en": "Duration"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-81",
+        "broader": "https://mex.rki.de/item/datatype-standardized-8",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#dayTimeDuration",
+        "prefLabel": {
+            "de": "dayTimeDuration",
+            "en": "dayTimeDuration"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-82",
+        "broader": "https://mex.rki.de/item/datatype-standardized-8",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#yearMonthDuration",
+        "prefLabel": {
+            "de": "yearMonthDuration",
+            "en": "yearMonthDuration"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-9",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#float",
+        "prefLabel": {
+            "de": "Gleitkommazahl",
+            "en": "Float"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-10",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#gDay",
+        "prefLabel": {
+            "de": "gDay",
+            "en": "gDay"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-11",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#gMonth",
+        "prefLabel": {
+            "de": "gMonth",
+            "en": "gMonth"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-12",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#gMonthDay",
+        "prefLabel": {
+            "de": "gMonthDay",
+            "en": "gMonthDay"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-13",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#gYear",
+        "prefLabel": {
+            "de": "gYear",
+            "en": "gYear"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-14",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#duration",
+        "prefLabel": {
+            "de": "gYearMonth",
+            "en": "gYearMonth"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-15",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#hexBinary",
+        "prefLabel": {
+            "de": "hexBinary",
+            "en": "hexBinary"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-16",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#QName",
+        "prefLabel": {
+            "de": "QName",
+            "en": "QName"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-17",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#string",
+        "prefLabel": {
+            "de": "String",
+            "en": "String"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-171",
+        "broader": "https://mex.rki.de/item/datatype-standardized-17",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#normalizedString",
+        "prefLabel": {
+            "de": "normalizedString",
+            "en": "normalizedString"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-1711",
+        "broader": "https://mex.rki.de/item/datatype-standardized-171",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#token",
+        "prefLabel": {
+            "de": "Token",
+            "en": "Token"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-17111",
+        "broader": "https://mex.rki.de/item/datatype-standardized-1711",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#language",
+        "prefLabel": {
+            "de": "Language",
+            "en": "Language"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-17112",
+        "broader": "https://mex.rki.de/item/datatype-standardized-1711",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#Name",
+        "prefLabel": {
+            "de": "Name",
+            "en": "Name"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-17113",
+        "broader": "https://mex.rki.de/item/datatype-standardized-1711",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#NMToken",
+        "prefLabel": {
+            "de": "NMToken",
+            "en": "NMToken"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-172",
+        "broader": "https://mex.rki.de/item/datatype-standardized-17",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "prefLabel": {
+            "de": "XML",
+            "en": "XML"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-173",
+        "broader": "https://mex.rki.de/item/datatype-standardized-17",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
+        "prefLabel": {
+            "de": "HTML",
+            "en": "HTML"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-174",
+        "broader": "https://mex.rki.de/item/datatype-standardized-17",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/ns/csvw#JSON",
+        "prefLabel": {
+            "de": "JSON",
+            "en": "JSON"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/datatype-standardized-18",
+        "inScheme": "https://mex.rki.de/item/datatype-standardized",
+        "exactMatch": "http://www.w3.org/2001/XMLSchema#time",
+        "prefLabel": {
+            "de": "Zeit",
+            "en": "Time"
+        }
+    }
+]
+
