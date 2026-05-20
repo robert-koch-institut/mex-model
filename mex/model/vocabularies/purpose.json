@@ -8,8 +8,8 @@
         }
     },
     {
-        "broader": "https://mex.rki.de/item/data-processing-state-1",
-        "identifier": "https://mex.rki.de/item/purpose-2",
+        "broader": "https://mex.rki.de/item/purpose-1",
+        "identifier": "https://mex.rki.de/item/purpose-11",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
             "de": "Erkennen von Trends",
@@ -17,8 +17,8 @@
         }
     },
     {
-        "broader": "https://mex.rki.de/item/data-processing-state-1",
-        "identifier": "https://mex.rki.de/item/purpose-3",
+        "broader": "https://mex.rki.de/item/purpose-1",
+        "identifier": "https://mex.rki.de/item/purpose-12",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
             "de": "Erkennen von ungewöhnlichen Ereignissen und Frühwarnung",
@@ -26,8 +26,8 @@
         }
     },
     {
-        "broader": "https://mex.rki.de/item/data-processing-state-1",
-        "identifier": "https://mex.rki.de/item/purpose-4",
+        "broader": "https://mex.rki.de/item/purpose-1",
+        "identifier": "https://mex.rki.de/item/purpose-13",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
             "de": "Abschätzen der Krankheitslast",
@@ -35,7 +35,7 @@
         }
     },
     {
-        "identifier": "https://mex.rki.de/item/purpose-5",
+        "identifier": "https://mex.rki.de/item/purpose-2",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
             "de": "Information",
@@ -43,8 +43,8 @@
         }
     },
     {
-        "broader": "https://mex.rki.de/item/data-processing-state-5",
-        "identifier": "https://mex.rki.de/item/purpose-6",
+        "broader": "https://mex.rki.de/item/purpose-2",
+        "identifier": "https://mex.rki.de/item/purpose-21",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
             "de": "Information der Fachöffentlichkeit",
@@ -52,8 +52,8 @@
         }
     },
     {
-        "broader": "https://mex.rki.de/item/data-processing-state-5",
-        "identifier": "https://mex.rki.de/item/purpose-7",
+        "broader": "https://mex.rki.de/item/purpose-2",
+        "identifier": "https://mex.rki.de/item/purpose-22",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
             "de": "Information von Entscheidungsträgern",
@@ -61,8 +61,8 @@
         }
     },
     {
-        "broader": "https://mex.rki.de/item/data-processing-state-5",
-        "identifier": "https://mex.rki.de/item/purpose-8",
+        "broader": "https://mex.rki.de/item/purpose-2",
+        "identifier": "https://mex.rki.de/item/purpose-23",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
             "de": "Information von Entscheidungsträgern",
@@ -70,7 +70,7 @@
         }
     },
     {
-        "identifier": "https://mex.rki.de/item/purpose-9",
+        "identifier": "https://mex.rki.de/item/purpose-3",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
             "de": "Maßnahmen",
@@ -78,8 +78,8 @@
         }
     },
     {
-        "broader": "https://mex.rki.de/item/data-processing-state-9",
-        "identifier": "https://mex.rki.de/item/purpose-10",
+        "broader": "https://mex.rki.de/item/purpose-3",
+        "identifier": "https://mex.rki.de/item/purpose-31",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
             "de": "Ableiten von Empfehlungen für Präventionsmaßnahmen",
@@ -87,8 +87,8 @@
         }
     },
     {
-        "broader": "https://mex.rki.de/item/data-processing-state-9",
-        "identifier": "https://mex.rki.de/item/purpose-11",
+        "broader": "https://mex.rki.de/item/purpose-3",
+        "identifier": "https://mex.rki.de/item/purpose-32",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
             "de": "Evaluierung von Maßnahmen",
@@ -96,7 +96,7 @@
         }
     },
     {
-        "identifier": "https://mex.rki.de/item/purpose-12",
+        "identifier": "https://mex.rki.de/item/purpose-4",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
             "de": "Forschung",
@@ -104,7 +104,7 @@
         }
     },
     {
-        "identifier": "https://mex.rki.de/item/purpose-13",
+        "identifier": "https://mex.rki.de/item/purpose-5",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
             "de": "Sonstiges",
