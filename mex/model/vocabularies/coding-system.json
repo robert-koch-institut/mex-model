@@ -39,7 +39,7 @@
         "identifier": "https://mex.rki.de/item/coding-system-4",
         "inScheme": "https://mex.rki.de/item/coding-system",
         "prefLabel": {
-            "de": "SNOMED-CT",
+            "de": "SNOMED CT",
             "en": "SNOMED-CT"
         },
         "exactMatch": [
