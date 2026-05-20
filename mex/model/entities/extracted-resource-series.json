@@ -16,17 +16,6 @@
             ],
             "type": "array"
         },
-        "alternativeTitle": {
-            "default": [],
-            "description": "An alternative name for the resource series.",
-            "items": {
-                "$ref": "/mex/model/fields/text"
-            },
-            "closeMatch": [
-                "http://purl.org/dc/terms/alternative"
-            ],
-            "type": "array"
-        },
         "accrualPeriodicity": {
             "anyOf": [
                 {
@@ -45,6 +34,17 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/accrualPeriodicity"
             ]
+        },
+        "alternativeTitle": {
+            "default": [],
+            "description": "An alternative name for the resource series.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "closeMatch": [
+                "http://purl.org/dc/terms/alternative"
+            ],
+            "type": "array"
         },
         "contact": {
             "description": "An agent that serves as a contact for the resource series.",
