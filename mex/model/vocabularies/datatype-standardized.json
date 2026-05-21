@@ -22,8 +22,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#boolean",
         "prefLabel": {
-            "de": "Boolean",
-            "en": "Boolean"
+            "de": "boolean",
+            "en": "boolean"
         }
     },
     {
@@ -31,8 +31,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#date",
         "prefLabel": {
-            "de": "Datum",
-            "en": "Date"
+            "de": "date",
+            "en": "date"
         }
     },
     {
@@ -59,8 +59,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#decimal",
         "prefLabel": {
-            "de": "Decimal",
-            "en": "Decimal"
+            "de": "decimal",
+            "en": "decimal"
         }
     },
     {
@@ -69,8 +69,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#integer",
         "prefLabel": {
-            "de": "Integer",
-            "en": "Integer"
+            "de": "integer",
+            "en": "integer"
         }
     },
     {
@@ -79,8 +79,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#long",
         "prefLabel": {
-            "de": "Long",
-            "en": "Long"
+            "de": "long",
+            "en": "long"
         }
     },
     {
@@ -89,8 +89,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#int",
         "prefLabel": {
-            "de": "Int",
-            "en": "Int"
+            "de": "int",
+            "en": "int"
         }
     },
     {
@@ -99,8 +99,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#short",
         "prefLabel": {
-            "de": "Short",
-            "en": "Short"
+            "de": "short",
+            "en": "short"
         }
     },
     {
@@ -109,8 +109,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#byte",
         "prefLabel": {
-            "de": "Byte",
-            "en": "Byte"
+            "de": "byte",
+            "en": "byte"
         }
     },
     {
@@ -198,8 +198,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#double",
         "prefLabel": {
-            "de": "Double",
-            "en": "Double"
+            "de": "double",
+            "en": "double"
         }
     },
     {
@@ -207,8 +207,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#duration",
         "prefLabel": {
-            "de": "Dauer",
-            "en": "Duration"
+            "de": "duration",
+            "en": "duration"
         }
     },
     {
@@ -236,8 +236,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#float",
         "prefLabel": {
-            "de": "Gleitkommazahl",
-            "en": "Float"
+            "de": "float",
+            "en": "float"
         }
     },
     {
@@ -308,8 +308,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#string",
         "prefLabel": {
-            "de": "String",
-            "en": "String"
+            "de": "string",
+            "en": "string"
         }
     },
     {
@@ -328,8 +328,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#token",
         "prefLabel": {
-            "de": "Token",
-            "en": "Token"
+            "de": "token",
+            "en": "token"
         }
     },
     {
@@ -338,8 +338,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#language",
         "prefLabel": {
-            "de": "Language",
-            "en": "Language"
+            "de": "language",
+            "en": "language"
         }
     },
     {
@@ -348,8 +348,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#Name",
         "prefLabel": {
-            "de": "Name",
-            "en": "Name"
+            "de": "name",
+            "en": "name"
         }
     },
     {
@@ -358,8 +358,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#NMToken",
         "prefLabel": {
-            "de": "NMToken",
-            "en": "NMToken"
+            "de": "NMTOKEN",
+            "en": "NMTOKEN"
         }
     },
     {
@@ -368,8 +368,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
         "prefLabel": {
-            "de": "XML",
-            "en": "XML"
+            "de": "xml",
+            "en": "xml"
         }
     },
     {
@@ -378,8 +378,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
         "prefLabel": {
-            "de": "HTML",
-            "en": "HTML"
+            "de": "html",
+            "en": "html"
         }
     },
     {
@@ -388,8 +388,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/ns/csvw#JSON",
         "prefLabel": {
-            "de": "JSON",
-            "en": "JSON"
+            "de": "json",
+            "en": "json"
         }
     },
     {
@@ -397,8 +397,8 @@
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
         "exactMatch": "http://www.w3.org/2001/XMLSchema#time",
         "prefLabel": {
-            "de": "Zeit",
-            "en": "Time"
+            "de": "time",
+            "en": "time"
         }
     },
     {
