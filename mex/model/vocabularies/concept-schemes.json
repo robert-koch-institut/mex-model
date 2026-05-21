@@ -52,7 +52,10 @@
         "label": "Data processing state vocabulary"
     },
     {
-        "description": "This vocabulary replicates Column Data Types as defined in https://w3c.github.io/csvw/metadata/#datatypes.",
+        "description": {
+            "de": "Dieses Vokabular definiert Datentypen gemäß https://w3c.github.io/csvw/metadata/#datatypes.",
+            "en": "This vocabulary replicates Data Types as defined in https://w3c.github.io/csvw/metadata/#datatypes."
+        },
         "identifier": "https://mex.rki.de/item/datatype-standardized",
         "label": "Data type vocabulary"
     },
