@@ -152,7 +152,6 @@
             "useScheme": "https://mex.rki.de/item/technical-accessibility"
         },
         "title": {
-            "default": [],
             "description": "The name of the access platform.",
             "items": {
                 "$ref": "/mex/model/fields/text"
@@ -160,7 +159,8 @@
             "sameAs": [
                 "http://purl.org/dc/terms/title"
             ],
-            "type": "array"
+            "type": "array",
+            "minItems": 1
         },
         "unitInCharge": {
             "default": [],
@@ -179,7 +179,8 @@
         "identifier",
         "identifierInPrimarySource",
         "stableTargetId",
-        "technicalAccessibility"
+        "technicalAccessibility",
+        "title"
     ],
     "sameAs": [
         "http://www.w3.org/ns/dcat#DataService"
