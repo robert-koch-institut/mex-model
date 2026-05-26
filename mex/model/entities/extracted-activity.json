@@ -114,14 +114,7 @@
             "default": [],
             "description": "An external institution or person, that is associated with the activity.",
             "items": {
-                "anyOf": [
-                    {
-                        "$ref": "/mex/model/entities/merged-organization#/identifier"
-                    },
-                    {
-                        "$ref": "/mex/model/entities/merged-person#/identifier"
-                    }
-                ]
+                "$ref": "/mex/model/entities/merged-organization#/identifier"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/contributor"
