@@ -9,7 +9,7 @@
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "sameAs": [
+            "closeMatch": [
                 "http://www.w3.org/2004/02/skos/core#altLabel"
             ],
             "type": "array"
@@ -19,7 +19,7 @@
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier"
             },
-            "sameAs": [
+            "closeMatch": [
                 "http://www.w3.org/2004/02/skos/core#broader"
             ],
             "type": "array"
@@ -29,7 +29,7 @@
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "sameAs": [
+            "closeMatch": [
                 "http://www.w3.org/2004/02/skos/core#definition"
             ],
             "type": "array"
@@ -40,7 +40,7 @@
                 "format": "uri",
                 "type": "string"
             },
-            "sameAs": [
+            "closeMatch": [
                 "http://www.w3.org/2004/02/skos/core#exactMatch"
             ],
             "type": "array"
@@ -53,14 +53,14 @@
             "format": "uri",
             "pattern": "^https://mex\\.rki\\.de/item/[-A-Za-z0-9]{1,512}$",
             "readOnly": true,
-            "sameAs": [
+            "closeMatch": [
                 "http://purl.org/dc/elements/1.1/identifier"
             ],
             "type": "string"
         },
         "inScheme": {
             "$ref": "/mex/model/entities/concept-scheme#/identifier",
-            "sameAs": [
+            "closeMatch": [
                 "http://www.w3.org/2004/02/skos/core#inScheme"
             ]
         },
@@ -77,7 +77,7 @@
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "sameAs": [
+            "closeMatch": [
                 "http://www.w3.org/2004/02/skos/core#note"
             ],
             "type": "array"
@@ -87,7 +87,7 @@
                 "$ref": "/mex/model/fields/text"
             },
             "minItems": 1,
-            "sameAs": [
+            "closeMatch": [
                 "http://www.w3.org/2004/02/skos/core#prefLabel"
             ],
             "type": "array"
@@ -98,7 +98,7 @@
         "inScheme",
         "prefLabel"
     ],
-    "sameAs": [
+    "closeMatch": [
         "http://www.w3.org/2004/02/skos/core#Concept"
     ],
     "title": "Concept",
