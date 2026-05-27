@@ -11,7 +11,7 @@
             "items": {
                 "$ref": "/mex/model/entities/merged-organization#/identifier"
             },
-            "sameAs": [
+            "closeMatch": [
                 "https://schema.org/affiliation",
                 "http://www.wikidata.org/entity/P1416"
             ],
@@ -28,7 +28,7 @@
                 "pattern": "^[^@ \\t\\r\\n]+@[^@ \\t\\r\\n]+\\.[^@ \\t\\r\\n]+$",
                 "type": "string"
             },
-            "sameAs": [
+            "closeMatch": [
                 "http://www.w3.org/2006/vcard/ns#hasEmail",
                 "https://schema.org/email"
             ],
@@ -45,7 +45,7 @@
                 ],
                 "type": "string"
             },
-            "sameAs": [
+            "closeMatch": [
                 "http://xmlns.com/foaf/0.1/familyName",
                 "https://schema.org/familyName"
             ],
@@ -61,7 +61,7 @@
                 ],
                 "type": "string"
             },
-            "sameAs": [
+            "closeMatch": [
                 "http://xmlns.com/foaf/0.1/name"
             ],
             "minItems": 1,
@@ -78,7 +78,7 @@
                 ],
                 "type": "string"
             },
-            "sameAs": [
+            "closeMatch": [
                 "http://xmlns.com/foaf/0.1/givenName",
                 "https://schema.org/givenName"
             ],
@@ -87,7 +87,7 @@
         "hadPrimarySource": {
             "$ref": "/mex/model/entities/merged-primary-source#/identifier",
             "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30 ](http://www.w3.org/TR/2013/REC-prov-o-20130430/)).",
-            "sameAs": [
+            "closeMatch": [
                 "http://www.w3.org/ns/prov#hadPrimarySource"
             ]
         },
@@ -95,7 +95,7 @@
             "$ref": "/mex/model/fields/identifier",
             "description": "An unambiguous reference to the resource within a given context. Persistent identifiers should be provided as HTTP URIs ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
             "readOnly": true,
-            "sameAs": [
+            "closeMatch": [
                 "http://purl.org/dc/elements/1.1/identifier"
             ]
         },
@@ -124,7 +124,7 @@
                 "pattern": "^https://isni\\.org/isni/[X0-9]{16}$",
                 "type": "string"
             },
-            "sameAs": [
+            "closeMatch": [
                 "http://www.wikidata.org/entity/P213"
             ],
             "type": "array"
@@ -135,7 +135,7 @@
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
             },
-            "sameAs": [
+            "closeMatch": [
                 "http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of"
             ],
             "type": "array"
@@ -153,7 +153,7 @@
                 "pattern": "^https://orcid\\.org/[-X0-9]{9,21}$",
                 "type": "string"
             },
-            "sameAs": [
+            "closeMatch": [
                 "http://www.wikidata.org/entity/P496"
             ],
             "type": "array"
@@ -171,7 +171,7 @@
         "identifierInPrimarySource",
         "stableTargetId"
     ],
-    "sameAs": [
+    "closeMatch": [
         "http://www.cidoc-crm.org/cidoc-crm/E21_Person",
         "http://xmlns.com/foaf/0.1/Person",
         "http://www.w3.org/2006/vcard/ns#Individual"
