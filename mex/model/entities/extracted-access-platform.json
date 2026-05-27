@@ -78,7 +78,7 @@
             ],
             "default": null,
             "description": "The type of endpoint, e.g. REST.",
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/type"
             ]
         },
@@ -146,7 +146,7 @@
             "examples": [
                 "https://mex.rki.de/item/technical-accessibility-1"
             ],
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/type"
             ],
             "useScheme": "https://mex.rki.de/item/technical-accessibility"

@@ -65,7 +65,7 @@
             "items": {
                 "$ref": "/mex/model/fields/link"
             },
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/isReferencedBy"
             ],
             "type": "array"

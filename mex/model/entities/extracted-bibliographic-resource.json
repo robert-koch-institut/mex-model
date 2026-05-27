@@ -59,7 +59,7 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/bibliographic-resource-type"
             },
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/type"
             ],
             "type": "array"
@@ -70,7 +70,7 @@
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
             },
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/contributor"
             ],
             "type": "array"
@@ -423,7 +423,7 @@
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/title"
             ],
             "type": "array"
@@ -445,7 +445,7 @@
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/title"
             ],
             "type": "array"
@@ -456,7 +456,7 @@
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/title"
             ],
             "type": "array"

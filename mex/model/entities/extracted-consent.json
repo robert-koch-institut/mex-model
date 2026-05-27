@@ -41,7 +41,7 @@
             ],
             "default": null,
             "description": "The type of consent.",
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/type"
             ]
         },

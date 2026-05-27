@@ -124,7 +124,7 @@
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
             },
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/contributor"
             ],
             "type": "array"
@@ -135,7 +135,7 @@
             "items": {
                 "$ref": "/mex/model/entities/merged-person#/identifier"
             },
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/contributor"
             ],
             "type": "array"
@@ -220,7 +220,7 @@
             "items": {
                 "$ref": "/mex/model/fields/link"
             },
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/isReferencedBy"
             ],
             "type": "array"
@@ -571,7 +571,7 @@
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/description"
             ],
             "type": "array"
@@ -648,7 +648,7 @@
             ],
             "default": null,
             "description": "The total number of records in the dataset. The number reflects the total data entries (e.g., consultations, prescriptions, lab results, hospital admissions) according to the dataset's content.",
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://healthdataportal.eu/ns/health#numberOfRecords"
             ]
         },
@@ -663,7 +663,7 @@
             ],
             "default": null,
             "description": "The number of records for unique individuals represented in the dataset.",
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://healthdataportal.eu/ns/health#numberOfUniqueIndividuals"
             ]
         },
@@ -724,7 +724,7 @@
             "items": {
                 "$ref": "/mex/model/entities/merged-resource#/identifier"
             },
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/relation"
             ],
             "type": "array"
@@ -739,7 +739,7 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/resource-creation-method"
             },
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/type"
             ],
             "type": "array"
@@ -754,7 +754,7 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/resource-type-general"
             },
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/type"
             ],
             "type": "array"
@@ -765,7 +765,7 @@
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/type"
             ],
             "type": "array"

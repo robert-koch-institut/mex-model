@@ -11,7 +11,7 @@
                 "$ref": "/mex/model/entities/merged-resource#/identifier"
             },
             "minItems": 1,
-            "subPropertyOf": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/isPartOf"
             ],
             "type": "array"
