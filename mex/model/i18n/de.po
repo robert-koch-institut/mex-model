@@ -1018,12 +1018,13 @@ msgstr ""
 
 msgctxt "Resource"
 msgid "qualityInformation.singular"
-msgstr "Qualitätsinformationen"
+msgstr "Zusatzinformationen"
 
 msgctxt "Resource"
 msgid "qualityInformation.description"
 msgstr ""
-"Angaben zu Genauigkeit, Zuverlässigkeit und Validität der Daten"
+"Jegliche Art von relevanten Informationen, die über den Datenbestand "
+"den Datensatz bekannt sind und noch nicht durch die anderen Felder abgedeckt sind"
 
 msgctxt "Activity"
 msgid "relatedActivity.singular"

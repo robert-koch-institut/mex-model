@@ -995,11 +995,13 @@ msgstr "Responsible party for making available/providing the data"
 
 msgctxt "Resource"
 msgid "qualityInformation.singular"
-msgstr "Quality information"
+msgstr "Additional information"
 
 msgctxt "Resource"
 msgid "qualityInformation.description"
-msgstr "Information on the accuracy, reliability and validity of the data"
+msgstr ""
+"Any kind of relevant information regarding the data source/dataset "
+"that is not covered by the other fields"
 
 msgctxt "Activity"
 msgid "relatedActivity.singular"

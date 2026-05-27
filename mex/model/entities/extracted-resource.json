@@ -709,12 +709,12 @@
         },
         "qualityInformation": {
             "default": [],
-            "description": "Some information about the quality of the resource.",
+            "description": "Any additional information about the resource",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
             "closeMatch": [
-                "http://www.w3.org/ns/dqv#hasQualityAnnotation"
+                "http://www.w3.org/2004/02/skos/core#note"
             ],
             "type": "array"
         },
