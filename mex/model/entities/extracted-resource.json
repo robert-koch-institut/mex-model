@@ -526,7 +526,6 @@
             "type": "array"
         },
         "maxTypicalAge": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
             "anyOf": [
                 {
                     "examples": [
@@ -538,6 +537,9 @@
                 {
                     "type": "null"
                 }
+            ],
+            "closeMatch": [
+                "https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-7/#Dataset.maxtypicalage"
             ],
             "default": null,
             "description": "Specifies the maximum age of the population within the data collection, expressed in years."
@@ -577,7 +579,6 @@
             "type": "array"
         },
         "minTypicalAge": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
             "anyOf": [
                 {
                     "examples": [
@@ -589,6 +590,9 @@
                 {
                     "type": "null"
                 }
+            ],
+            "closeMatch":[
+                "https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-7/#Dataset.mintypicalage"
             ],
             "default": null,
             "description": "Specifies the minimum age of the population within the data collection, expressed in years."
@@ -668,23 +672,25 @@
             ]
         },
         "populationCoverage": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
             "default": [],
             "description": "The type of population common to all subjects of the data collection.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
+            "closeMatch": [
+                "https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-7/#Dataset.populationcoverage"
+            ],
             "type": "array"
         },
         "provenance": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
             "default": [],
             "description": "A statement about the lineage of a Dataset. Information about how the data was collected, including methodologies, tools, and protocols used.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
             "closeMatch": [
-                "http://purl.org/dc/terms/provenance"
+                "http://purl.org/dc/terms/provenance",
+                "https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-7/#Dataset.provenance"
             ],
             "type": "array"
         },
