@@ -566,9 +566,7 @@ msgstr "Purpose of data processing"
 
 msgctxt "Resource"
 msgid "hasPurpose.description"
-msgstr ""
-"Description of the purpose of the data processing, in particular for "
-"personal data"
+msgstr "The purpose for which the data was originally collected"
 
 msgctxt "Resource"
 msgid "hasPurposeDescription.singular"

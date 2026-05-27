@@ -568,13 +568,11 @@ msgstr "Gibt an, ob die Daten einen Personenbezug aufweisen"
 
 msgctxt "Resource"
 msgid "hasPurpose.singular"
-msgstr "Zweck der Datenverarbeitung"
+msgstr "Zweck der Datenerhebung"
 
 msgctxt "Resource"
 msgid "hasPurpose.description"
-msgstr ""
-"Beschreibung des Zweckes der Datenverarbeitung, insbesondere bei Daten mit "
-"Personenbezug"
+msgstr "Auswahl aus möglichen Zwecken der ursprünglichen Datenerhebung"
 
 msgctxt "Resource"
 msgid "hasPurposeDescription.singular"
