@@ -9,6 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+### Changes
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [5.0.0] - 2026-06-02
+
 #### Added Vocabulary file
 
 - mex/model/vocabularies/health-category.json (RKIMEX-62)
@@ -42,15 +54,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - updated template to https://github.com/robert-koch-institut/mex-template/commit/dd987e
 - dependency update(2026-06-01)
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 
 - fix missing pypi environment vars
-
-### Security
 
 ## [4.10.2] - 2026-04-01
 
