@@ -57,6 +57,17 @@
             ],
             "type": "array"
         },
+        "analytics": {
+            "default": [],
+            "description": "An analytics distribution of the dataset.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-distribution#/identifier"
+            },
+            "sameAs": [
+                "http://healthdataportal.eu/ns/health#analytics"
+            ],
+            "type": "array"
+        },
         "anonymizationPseudonymization": {
             "default": [],
             "description": "Indicates whether the data has been anonymized and/or pseudonymized.",
@@ -235,6 +246,39 @@
             "default": null,
             "description": "The Digital Object Identifier (DOI) of the resource."
         },
+        "end": {
+            "anyOf": [
+                {
+                    "$comment": "year_month_day_time",
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])T(?:[0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]Z$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year_month_day",
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year_month",
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year",
+                    "pattern": "^[0-9]{4}$",
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "End date of the temporal coverage of the resource.",
+            "maxItems": 1,
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#endDate"
+            ]
+        },
         "externalPartner": {
             "default": [],
             "description": "An external organization that is somehow involved in the creation of the resource.",
@@ -243,6 +287,17 @@
             },
             "sameAs": [
                 "http://purl.org/dc/terms/contributor"
+            ],
+            "type": "array"
+        },
+        "hasCodeValues": {
+            "default": [],
+            "description": "The code values of the respective coding systems that are applied to the dataset, for example code value 'U07.1' as used in the coding system 'ICD-10'.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "sameAs": [
+                "http://healthdataportal.eu/ns/health#hasCodeValues"
             ],
             "type": "array"
         },
@@ -285,6 +340,18 @@
             },
             "sameAs": [
                 "https://w3id.org/dpv#hasPurpose"
+            ],
+            "type": "array"
+        },
+        "healthCategory": {
+            "default": [],
+            "description": "The category of electronic data for secondary use to which this resource belongs, as described in Article 51 of the Commission Regulation on the European Health Data Space.",
+            "items": {
+                "$ref": "/mex/model/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/health-category"
+            },
+            "sameAs": [
+                "http://healthdataportal.eu/ns/health#healthCategory"
             ],
             "type": "array"
         },
@@ -496,6 +563,36 @@
                 "http://purl.org/dc/terms/modified"
             ]
         },
+        "numberOfRecords": {
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "The total number of records in the dataset. The number reflects the total data entries (e.g., consultations, prescriptions, lab results, hospital admissions) according to the dataset's content.",
+            "subPropertyOf": [
+                "http://healthdataportal.eu/ns/health#numberOfRecords"
+            ]
+        },
+        "numberOfUniqueIndividuals": {
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "The number of records for unique individuals represented in the dataset.",
+            "subPropertyOf": [
+                "http://healthdataportal.eu/ns/health#numberOfUniqueIndividuals"
+            ]
+        },
         "populationCoverage": {
             "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
             "default": [],
@@ -544,6 +641,17 @@
             },
             "sameAs": [
                 "http://www.w3.org/ns/dqv#hasQualityAnnotation"
+            ],
+            "type": "array"
+        },
+        "relatedResource": {
+            "default": [],
+            "description": "A related Resource.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/relation"
             ],
             "type": "array"
         },
@@ -599,6 +707,17 @@
             ],
             "type": "array"
         },
+        "sample": {
+            "default": [],
+            "description": "A sample distribution of the dataset, which can be anonymized or synthetic data, or the data dictionary.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-distribution#/identifier"
+            },
+            "sameAs": [
+                "http://www.w3.org/ns/adms/sample"
+            ],
+            "type": "array"
+        },
         "sizeOfDataBasis": {
             "anyOf": [
                 {
@@ -611,6 +730,17 @@
             "default": null,
             "description": "The size of the underlying data basis, e.g. for studies: the size of the sample."
         },
+        "source": {
+            "default": [],
+            "description": "A related Resource from which the described Resource is derived.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
+            },
+            "sameAs": [
+                "http://purl.org/dc/terms/source"
+            ],
+            "type": "array"
+        },
         "spatial": {
             "default": [],
             "description": "Spatial coverage of the resource.",
@@ -621,6 +751,38 @@
                 "http://purl.org/dc/terms/spatial"
             ],
             "type": "array"
+        },
+        "start": {
+            "anyOf": [
+                {
+                    "$comment": "year_month_day_time",
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])T(?:[0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]Z$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year_month_day",
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year_month",
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year",
+                    "pattern": "^[0-9]{4}$",
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Start date of the temporal coverage of the resource.",
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#startDate"
+            ]
         },
         "stateOfDataProcessing": {
             "default": [],

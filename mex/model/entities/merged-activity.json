@@ -198,6 +198,17 @@
             ],
             "type": "array"
         },
+        "relatedActivity": {
+            "default": [],
+            "description": "A related Activity.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-activity#/identifier"
+            },
+            "subPropertyOf": [
+                "http://purl.org/dc/terms/relation"
+            ],
+            "type": "array"
+        },
         "responsibleUnit": {
             "description": "A unit, that is responsible for the activity.",
             "items": {
