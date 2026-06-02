@@ -38,6 +38,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed files by adding translation entries for entities named in added: en.po, de.po
 - Changed file by adding vocabulary reference: concept-schemes.json
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/57105a
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/dd987e
+- dependency update(2026-06-01)
 
 ### Deprecated
 

@@ -44,7 +44,7 @@ jobs:
           persist-credentials: false
 
       - name: Cache requirements
-        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         env:
           cache-name: cache-requirements
         with:
@@ -98,7 +98,7 @@ jobs:
           persist-credentials: false
 
       - name: Cache requirements
-        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         env:
           cache-name: cache-requirements
         with:
@@ -124,4 +124,4 @@ jobs:
           --generate-notes --latest --verify-tag dist/*
 
       - name: Publish distribution to PyPI
-        uses: pypa/gh-action-pypi-publish@ed0c53931b1dc9bd32cbe73a98c7f6766f8a527e # v1.13.0
+        uses: pypa/gh-action-pypi-publish@cef221092ed1bacb1cc03d23a2d87d1d172e277b # v1.14.0
