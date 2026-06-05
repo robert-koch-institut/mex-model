@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- add examples and XXYY to new properties of Resources for model update v5.0
+- add examples to new properties of Resources for model update v5.0
 
 ### Changes
 
