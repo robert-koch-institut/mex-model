@@ -8,11 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- add examples to new properties of Resources for model update v5.0
 
 ### Changes
-
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/26afa8
 
 ### Deprecated
 
@@ -21,6 +18,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+## [5.0.1] - 2026-06-05
+
+### Added
+- add examples to new properties of Resources for model update v5.0
+
+### Changes
+
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/26afa8
 
 ## [5.0.0] - 2026-06-02
 
