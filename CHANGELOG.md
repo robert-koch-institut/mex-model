@@ -34,6 +34,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - contributor (RKIMEX-77)
 
+#### Added properties to mex/model/entities/extracted-variable.json and mex/model/entities/merged-variable.json
+
+- datatypeInPrimarySource (RKIMEX-85 as required)
+- datatypeStandardized (RKIMEX-84 as optional)
+
 ### Changes
 
 - Changed files by adding translation entries for entities named in added: en.po, de.po
