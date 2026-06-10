@@ -30,6 +30,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - relatedActivity (RKIMEX-69)
 
+#### Added properties to mex/model/entities/extracted-organization.json and mex/model/entities/merged-organization.json
+
+- country (RKIMEX-73)
+
 #### Added properties to mex/model/entities/extracted-primary-source.json and mex/model/entities/merged-primary-source.json
 
 - contributor (RKIMEX-77)
