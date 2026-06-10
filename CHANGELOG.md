@@ -13,6 +13,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - mex/model/vocabularies/health-category.json (RKIMEX-62)
 
+#### Added mex/model/entities/extracted-resource-series.json and mex/model/entities/merged-resource-series.json
+
+A new entity type, including the following properties (RKIMEX-14):
+
+- accessPlatform
+- accrualPeriodicity
+- alternativeTitle
+- contact
+- description (required)
+- documentation
+- end
+- hasLegalBasis
+- keyword
+- publisher
+- spatial
+- start
+- theme
+- title (required)
+
 #### Added properties to mex/model/entities/extracted-resource.json and mex/model/entities/merged-resource.json
 
 - analytics (RKIMEX-12)

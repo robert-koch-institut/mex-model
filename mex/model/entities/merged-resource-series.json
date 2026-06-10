@@ -1,0 +1,233 @@
+{
+    "$$target": "/mex/model/entities/merged-resource-series#/identifier",
+    "$id": "https://mex.rki.de/mex/model/entities/extracted-resource-series",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "closeMatch": [
+        "https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-7/#DatasetSeries"
+    ],
+    "description": "A collection of resources that are published separately, but share some characteristics that group them.",
+    "properties": {
+        "accessPlatform": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#accessService"
+            ],
+            "default": [],
+            "description": "A platform from which the resource series can be accessed.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-access-platform#/identifier"
+            },
+            "type": "array"
+        },
+        "accrualPeriodicity": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/concept#/identifier",
+                    "examples": [
+                        "https://mex.rki.de/item/frequency-1"
+                    ],
+                    "useScheme": "https://mex.rki.de/item/frequency"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "closeMatch": [
+                "http://purl.org/dc/terms/accrualPeriodicity"
+            ],
+            "default": null,
+            "description": "The frequency with which items are added to a collection."
+        },
+        "alternativeTitle": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/alternative"
+            ],
+            "default": [],
+            "description": "An alternative name for the resource series.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
+        "contact": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#contactPoint"
+            ],
+            "description": "An agent that serves as a contact for the resource series.",
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
+                    },
+                    {
+                        "$ref": "/mex/model/entities/merged-person#/identifier"
+                    },
+                    {
+                        "$ref": "/mex/model/entities/merged-contact-point#/identifier"
+                    }
+                ]
+            },
+            "minItems": 1,
+            "type": "array"
+        },
+        "description": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/description"
+            ],
+            "default": [],
+            "description": "A text describing the nature of the resource series.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
+        "documentation": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/isReferencedBy"
+            ],
+            "default": [],
+            "description": "A link to a document documenting the resource series.",
+            "items": {
+                "$ref": "/mex/model/fields/link"
+            },
+            "type": "array"
+        },
+        "end": {
+            "anyOf": [
+                {
+                    "$comment": "year_month_day_time",
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])T(?:[0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]Z$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year_month_day",
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year_month",
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year",
+                    "pattern": "^[0-9]{4}$",
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#endDate"
+            ],
+            "default": null,
+            "description": "End date of the temporal coverage of the resource series.",
+            "maxItems": 1
+        },
+        "hasLegalBasis": {
+            "closeMatch": [
+                "https://w3id.org/dpv#hasLegalBasis"
+            ],
+            "default": [],
+            "description": "The legal basis used to justify processing of personal data. Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions which can be represented using dpv:hasJurisdiction or dpv:hasLaw. Legal basis can be used without such declarations, e.g. 'Consent', however their interpretation will require association with a law, e.g. 'EU GDPR'.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
+        "keyword": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#keyword"
+            ],
+            "default": [],
+            "description": "A keyword or tag describing the resource series.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
+        "publisher": {
+            "default": [],
+            "description": "The entity responsible for making the item available.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-organization#/identifier"
+            },
+            "type": "array"
+        },
+        "spatial": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/spatial"
+            ],
+            "default": [],
+            "description": "Spatial coverage of the resource series.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
+        "start": {
+            "anyOf": [
+                {
+                    "$comment": "year_month_day_time",
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])T(?:[0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]Z$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year_month_day",
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year_month",
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year",
+                    "pattern": "^[0-9]{4}$",
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#startDate"
+            ],
+            "default": null,
+            "description": "Start date of the temporal coverage of the resource series."
+        },
+        "theme": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#theme"
+            ],
+            "description": "A main category of the resource series. A resource series can have multiple themes.",
+            "items": {
+                "$ref": "/mex/model/entities/concept#/identifier",
+                "examples": [
+                    "https://mex.rki.de/item/theme-1"
+                ],
+                "useScheme": "https://mex.rki.de/item/theme"
+            },
+            "minItems": 1,
+            "type": "array"
+        },
+        "title": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/title"
+            ],
+            "description": "The name of the resource series.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "minItems": 1,
+            "type": "array"
+        }
+    },
+    "required": [
+        "identifier"
+    ],
+    "title": "Merged Resource Series",
+    "type": "object"
+}
