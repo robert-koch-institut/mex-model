@@ -17,6 +17,9 @@
             "type": "array"
         },
         "country": {
+            "closeMatch": [
+                "https://www.wikidata.org/wiki/Property:P17"
+            ],
             "description": "Country or territory that this organization is in.",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
@@ -25,10 +28,6 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/country"
             },
-            "closeMatch": [
-                "https://www.wikidata.org/wiki/Property:P17"
-            ],
-            "maxItems": 1,
             "type": "array"
         },
         "geprisId": {
