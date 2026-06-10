@@ -57,12 +57,32 @@
                 "http://www.w3.org/ns/csvw#datatype"
             ]
         },
-        "dataTypeInPrimarySource": {
-            "type": "string",
+        "datatypeInPrimarySource": {
+            "anyOf": [
+                {
+                    "examples": [
+                        "integer",
+                        "string",
+                        "image",
+                        "int55",
+                        "number"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
             "default": null,
-            "description": "Data type of the variable, as defined in the original primary source system."
+            "description": "Data type of the variable, as defined in the original primary source system.",
+            "maxLength": 1000,
+            "minLength": 1
         },
-        "dataTypeStandardized": {
+        "datatypeStandardized": {
+            "closeMatch": [
+                "https://www.w3.org/ns/csvw#datatype"
+            ],
+            "default": [],
             "description": "Standardized data types used in the variable, as defined in the controlled vocabulary.",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
@@ -71,11 +91,7 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/datatype-standardized"
             },
-            "closeMatch": [
-                "https://www.w3.org/ns/csvw#datatype"
-            ],
-            "type": "array",
-            "maxItems": 1
+            "type": "array"
         },
         "description": {
             "default": [],
@@ -96,6 +112,9 @@
             ]
         },
         "hasCodingSystem": {
+            "closeMatch": [
+                "https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-7/#Dataset.codingSystem"
+            ],
             "default": [],
             "description": "Coding systems in use (i.e. ICD-10, SNOMED-CT).",
             "items": {
@@ -105,9 +124,6 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/coding-system"
             },
-            "closeMatch": [
-                "https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-7/#Dataset.codingSystem"
-            ],
             "type": "array"
         },
         "identifier": {
@@ -179,7 +195,7 @@
         }
     },
     "required": [
-        "dataTypeStandardized",
+        "datatypeInPrimarySource",
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
