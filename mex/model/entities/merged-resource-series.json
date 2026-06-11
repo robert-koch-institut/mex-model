@@ -202,6 +202,18 @@
             "default": null,
             "description": "Start date of the temporal coverage of the resource series."
         },
+        "supersededBy": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/merged-resource-series#/identifier"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "A merged item which is the preferred duplicate, because it replaces, consolidates or otherwise makes the current merged item obsolete."
+        },
         "theme": {
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#theme"
