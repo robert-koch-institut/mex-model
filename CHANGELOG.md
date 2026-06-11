@@ -39,6 +39,9 @@ A new entity type, including the following properties (RKIMEX-14):
 
 #### Added properties to mex/model/entities/extracted-resource.json and mex/model/entities/merged-resource.json
 
+- hasPurposeDescription (RKIMEX-106)
+- inSeries (RKIMEX-13)
+- landingPage (RKIMEX-27)
 - version (RKIMEX-111)
 
 #### Added properties to mex/model/entities/extracted-organization.json and mex/model/entities/merged-organization.json
