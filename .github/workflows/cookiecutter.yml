@@ -37,7 +37,7 @@ jobs:
           persist-credentials: false
 
       - name: Cache requirements
-        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         env:
           cache-name: cache-requirements
         with:
@@ -95,7 +95,7 @@ jobs:
       - name: Push branch
         if: steps.update.outputs.template_ref
         env:
-          GH_TOKEN: ${{ secrets.MEX_CONTENT_WRITE_TOKEN }}
+          GH_TOKEN: ${{ secrets.MEX_COOKIECUTTER_TOKEN }}
           template_ref: ${{ steps.update.outputs.template_ref }}
         run: |
           git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"

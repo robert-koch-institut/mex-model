@@ -9,9 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- linter for po files
+
 #### Added Vocabulary file
 
-- mex/model/vocabularies/health-category.json (RKIMEX-62)
 - mex/model/vocabularies/coding-system.json (RKIMEX-25)
 - mex/model/vocabularies/country.json (RKIMEX-103)
 - mex/model/vocabularies/datatype-standardized.json (RKIMEX-84)
@@ -38,28 +39,11 @@ A new entity type, including the following properties (RKIMEX-14):
 
 #### Added properties to mex/model/entities/extracted-resource.json and mex/model/entities/merged-resource.json
 
-- analytics (RKIMEX-12)
-- end (RKIMEX-87)
-- hasCodeValues (RKIMEX-30)
-- healthCategory (RKIMEX-46)
-- numberOfRecords (RKIMEX-55)
-- numberOfUniqueIndividuals (RKIMEX-55)
-- relatedResource (RKIMEX-70)
-- sample (RKIMEX-28)
-- source (RKIMEX-18)
-- start (RKIMEX-87)
-
-#### Added properties to mex/model/entities/extracted-activity.json and mex/model/entities/merged-activity.json
-
-- relatedActivity (RKIMEX-69)
+- version (RKIMEX-111)
 
 #### Added properties to mex/model/entities/extracted-organization.json and mex/model/entities/merged-organization.json
 
 - country (RKIMEX-73)
-
-#### Added properties to mex/model/entities/extracted-primary-source.json and mex/model/entities/merged-primary-source.json
-
-- contributor (RKIMEX-77)
 
 #### Added properties to mex/model/entities/extracted-variable.json and mex/model/entities/merged-variable.json
 
@@ -76,10 +60,57 @@ A new entity type, including the following properties (RKIMEX-14):
 ### Removed
 
 ### Fixed
-
-- fix missing pypi environment vars
+- replaced " with “ in po files
 
 ### Security
+
+## [5.0.1] - 2026-06-05
+
+### Added
+- add examples to new properties of Resources for model update v5.0
+
+### Changes
+
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/26afa8
+
+## [5.0.0] - 2026-06-02
+
+#### Added Vocabulary file
+
+- mex/model/vocabularies/health-category.json (RKIMEX-62)
+
+#### Added properties to mex/model/entities/extracted-resource.json and mex/model/entities/merged-resource.json
+
+- analytics (RKIMEX-12)
+- end (RKIMEX-87)
+- hasCodeValues (RKIMEX-30)
+- healthCategory (RKIMEX-46)
+- numberOfRecords (RKIMEX-55)
+- numberOfUniqueIndividuals (RKIMEX-55)
+- relatedResource (RKIMEX-70)
+- sample (RKIMEX-28)
+- source (RKIMEX-18)
+- start (RKIMEX-87)
+
+#### Added properties to mex/model/entities/extracted-activity.json and mex/model/entities/merged-activity.json
+
+- relatedActivity (RKIMEX-69)
+
+#### Added properties to mex/model/entities/extracted-primary-source.json and mex/model/entities/merged-primary-source.json
+
+- contributor (RKIMEX-77)
+
+### Changes
+
+- Changed files by adding translation entries for entities named in added: en.po, de.po
+- Changed file by adding vocabulary reference: concept-schemes.json
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/57105a
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/dd987e
+- dependency update(2026-06-01)
+
+### Fixed
+
+- fix missing pypi environment vars
 
 ## [4.10.2] - 2026-04-01
 
