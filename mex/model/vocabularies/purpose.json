@@ -38,8 +38,8 @@
         "identifier": "https://mex.rki.de/item/purpose-2",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
-            "de": "Information",
-            "en": "Information"
+            "de": "Information & Berichterstattung ",
+            "en": "Information & Reporting"
         }
     },
     {
@@ -73,8 +73,8 @@
         "identifier": "https://mex.rki.de/item/purpose-3",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
-            "de": "Maßnahmen",
-            "en": "Measures"
+            "de": "Maßnahmen & Qualitätskontrolle",
+            "en": "Measures & Quality control"
         }
     },
     {
@@ -96,6 +96,15 @@
         }
     },
     {
+        "broader": "https://mex.rki.de/item/purpose-3",
+        "identifier": "https://mex.rki.de/item/purpose-33",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Steuerung der Gesundheitsversorgung",
+            "en": "Healthcare governance"
+        }
+    },
+    {
         "identifier": "https://mex.rki.de/item/purpose-4",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
@@ -105,6 +114,14 @@
     },
     {
         "identifier": "https://mex.rki.de/item/purpose-5",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Diagnostik von Erregern",
+            "en": "Pathogen diagnosis"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/purpose-6",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
             "de": "Sonstiges",
