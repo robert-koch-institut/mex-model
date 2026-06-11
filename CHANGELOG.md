@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Added Vocabulary file
 
 - mex/model/vocabularies/health-category.json (RKIMEX-62)
+- mex/model/vocabularies/coding-system.json (RKIMEX-25)
+- mex/model/vocabularies/country.json (RKIMEX-103)
+- mex/model/vocabularies/datatype-standardized.json (RKIMEX-84)
+- mex/model/vocabularies/purpose.json (RKIMEX-98)
 
 #### Added mex/model/entities/extracted-resource-series.json and mex/model/entities/merged-resource-series.json
 
