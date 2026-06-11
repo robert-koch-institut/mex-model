@@ -240,7 +240,7 @@ msgstr "Land"
 
 msgctxt "Organization"
 msgid "country.description"
-msgstr "Auflistung von Namen von Ländern und Gebieten als kontrolliertes Vokabular"
+msgstr "Staat, in dem die Organisation ansässig ist"
 
 msgctxt "Resource"
 msgid "created.singular"
