@@ -24,6 +24,14 @@ repos:
         name: whitespaces
       - id: fix-byte-order-marker
         name: byte-order
+  - repo: local
+    hooks:
+      - id: dennis-lint
+        name: po
+        language: python
+        entry: dennis-cmd lint --errorsonly
+        additional_dependencies: [dennis]
+        files: \.po$
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.11.8
     hooks:
