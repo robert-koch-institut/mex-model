@@ -76,6 +76,7 @@
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
+            "minItems": 1,
             "type": "array"
         },
         "documentation": {
@@ -218,6 +219,7 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#theme"
             ],
+            "default": [],
             "description": "A main category of the resource series. A resource series can have multiple themes.",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
@@ -226,7 +228,6 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/theme"
             },
-            "minItems": 1,
             "type": "array"
         },
         "title": {
@@ -242,7 +243,9 @@
         }
     },
     "required": [
-        "identifier"
+        "description",
+        "identifier",
+        "title"
     ],
     "title": "Merged Resource Series",
     "type": "object"
