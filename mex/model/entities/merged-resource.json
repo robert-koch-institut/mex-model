@@ -924,6 +924,15 @@
             ],
             "type": "array"
         },
+        "version": {
+            "closeMatch": [
+                "https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version"
+            ],
+            "default": null,
+            "description": "The version indicator (name or identifier) of a resource.",
+            "maxLength": 100,
+            "type": "string"
+        },
         "wasGeneratedBy": {
             "anyOf": [
                 {
