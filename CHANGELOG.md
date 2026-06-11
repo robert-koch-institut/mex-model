@@ -37,6 +37,11 @@ A new entity type, including the following properties (RKIMEX-14):
 - theme
 - title (required)
 
+#### Added properties to mex/model/extension/definition.json
+
+- closeMatch (RKIMEX-116)
+- exactMatch (RKIMEX-116)
+
 #### Added properties to mex/model/entities/extracted-resource.json and mex/model/entities/merged-resource.json
 
 - hasPurposeDescription (RKIMEX-106)
