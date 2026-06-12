@@ -356,7 +356,7 @@
         },
         "hasPurposeDescription": {
             "closeMatch": [
-                "https://w3c.github.io/dpv/2.0/dpv/modules/purposes.html#hasPurpose"
+                "https://w3id.org/dpv#hasPurpose"
             ],
             "default": [],
             "description": "A free text statement of the purpose of the processing of data or personal data.",
