@@ -232,6 +232,14 @@ msgctxt "Resource"
 msgid "contributingUnit.description"
 msgstr "Organizational unit(s) contributing to the data"
 
+msgctxt "Organization"
+msgid "country.singular"
+msgstr "Country"
+
+msgctxt "Organization"
+msgid "country.description"
+msgstr "Country, in which the organization is based"
+
 msgctxt "Resource"
 msgid "created.singular"
 msgstr "Created"
@@ -263,6 +271,22 @@ msgstr "Data type"
 msgctxt "Variable"
 msgid "dataType.description"
 msgstr "Defined data type of the variable"
+
+msgctxt "Variable"
+msgid "dataTypeStandardized.singular"
+msgstr "Data type"
+
+msgctxt "Variable"
+msgid "dataTypeStandardized.description"
+msgstr "Data type of the variable (standardized)"
+
+msgctxt "Variable"
+msgid "dataTypeInPrimarySource.singular"
+msgstr "Original data type"
+
+msgctxt "Variable"
+msgid "dataTypeInPrimarySource.description"
+msgstr "Data type of the variable as defined in the original primary source system"
 
 msgid "description.singular"
 msgstr "Description"
@@ -497,6 +521,26 @@ msgstr[0] "Code value"
 msgstr[1] "Code values"
 
 msgctxt "Resource"
+msgid "hasCodingSystem.description"
+msgstr "Specification of coding system in use"
+
+msgctxt "Variable"
+msgid "hasCodingSystem.description"
+msgstr "Specification of coding system in use"
+
+msgctxt "Resource"
+msgid "hasCodingSystem.singular"
+msgid_plural "hasCodingSystem.plural"
+msgstr[0] "Coding system in use"
+msgstr[1] "Coding systems in use"
+
+msgctxt "Variable"
+msgid "hasCodingSystem.singular"
+msgid_plural "hasCodingSystem.plural"
+msgstr[0] "Coding system in use"
+msgstr[1] "Coding systems in use"
+
+msgctxt "Resource"
 msgid "hasCodeValues.description"
 msgstr "Values deriving from standardised coding systems"
 
@@ -522,9 +566,22 @@ msgstr "Purpose of data processing"
 
 msgctxt "Resource"
 msgid "hasPurpose.description"
+msgstr "The purpose for which the data was originally collected"
+
+msgctxt "Resource"
+msgid "hasPurposeDescription.singular"
 msgstr ""
-"Description of the purpose of the data processing, in particular for "
-"personal data"
+"A detailed description of purpose for which the data was originally collected"
+
+msgctxt "Resource"
+msgid "healthCategory.singular"
+msgid_plural "healthCategory.plural"
+msgstr[0] "EHDS category"
+msgstr[1] "EHDS categories"
+
+msgctxt "Resource"
+msgid "healthCategory.description"
+msgstr "Category of health data pursuant to Article 51 of the EHDS Regulation"
 
 msgctxt "Resource"
 msgid "healthCategory.singular"
@@ -559,6 +616,14 @@ msgid "identifierInPrimarySource.description"
 msgstr ""
 "Used to identify the metadata object in the original data storage (primary "
 "system)"
+
+msgctxt "Resource"
+msgid "inSeries.singular"
+msgstr "Dataset series"
+
+msgctxt "Resource"
+msgid "inSeries.description"
+msgstr "Collection of datasets, this dataset belongs to"
 
 msgctxt "Resource"
 msgid "instrumentToolOrApparatus.singular"
@@ -938,11 +1003,13 @@ msgstr "Responsible party for making available/providing the data"
 
 msgctxt "Resource"
 msgid "qualityInformation.singular"
-msgstr "Quality information"
+msgstr "Additional information"
 
 msgctxt "Resource"
 msgid "qualityInformation.description"
-msgstr "Information on the accuracy, reliability and validity of the data"
+msgstr ""
+"Any kind of relevant information regarding the data source/dataset "
+"that is not covered by the other fields"
 
 msgctxt "Activity"
 msgid "relatedActivity.singular"
@@ -1210,6 +1277,14 @@ msgctxt "PrimarySource"
 msgid "version.description"
 msgstr "Version of the original data storage (primary source)"
 
+msgctxt "Resource"
+msgid "version.singular"
+msgstr "Version"
+
+msgctxt "Resource"
+msgid "version.description"
+msgstr "The version of the data source/dataset"
+
 msgctxt "Organization"
 msgid "viafId.singular"
 msgstr "VIAF"
@@ -1308,6 +1383,9 @@ msgstr "Primary source"
 
 msgid "Resource"
 msgstr "Data Source/Dataset"
+
+msgid "Resource Series"
+msgstr "Collection of Data sources/Datasets"
 
 msgid "Variable"
 msgstr "Variable"
