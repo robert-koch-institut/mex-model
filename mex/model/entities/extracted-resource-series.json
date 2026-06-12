@@ -4,7 +4,7 @@
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
     "closeMatch": [
-        "https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-7/#DatasetSeries"
+        "http://healthdataportal.eu/ns/health#DatasetSeries"
     ],
     "description": "A collection of resources that are published separately, but share some characteristics that group them.",
     "properties": {

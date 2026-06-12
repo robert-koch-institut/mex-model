@@ -113,7 +113,7 @@
         },
         "hasCodingSystem": {
             "closeMatch": [
-                "https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-7/#Dataset.codingSystem"
+                "http://healthdataportal.eu/ns/health#hasCodingSystem"
             ],
             "default": [],
             "description": "Coding systems in use (i.e. ICD-10, SNOMED-CT).",
