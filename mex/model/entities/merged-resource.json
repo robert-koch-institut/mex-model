@@ -250,21 +250,33 @@
             "anyOf": [
                 {
                     "$comment": "year_month_day_time",
+                    "examples": [
+                        "2022-09-30T20:48:35Z"
+                    ],
                     "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])T(?:[0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]Z$",
                     "type": "string"
                 },
                 {
                     "$comment": "year_month_day",
+                    "examples": [
+                        "2014-08-24"
+                    ],
                     "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
                     "type": "string"
                 },
                 {
                     "$comment": "year_month",
+                    "examples": [
+                        "2019-03"
+                    ],
                     "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
                     "type": "string"
                 },
                 {
                     "$comment": "year",
+                    "examples": [
+                        "2024"
+                    ],
                     "pattern": "^[0-9]{4}$",
                     "type": "string"
                 },
@@ -274,7 +286,6 @@
             ],
             "default": null,
             "description": "End date of the temporal coverage of the resource.",
-            "maxItems": 1,
             "sameAs": [
                 "http://www.w3.org/ns/dcat#endDate"
             ]
@@ -343,11 +354,25 @@
             ],
             "type": "array"
         },
+        "hasPurposeDescription": {
+            "closeMatch": [
+                "https://w3id.org/dpv#hasPurpose"
+            ],
+            "default": [],
+            "description": "A free text statement of the purpose of the processing of data or personal data.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
         "healthCategory": {
             "default": [],
             "description": "The category of electronic data for secondary use to which this resource belongs, as described in Article 51 of the Commission Regulation on the European Health Data Space.",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
+                "examples": [
+                    "https://mex.rki.de/item/health-category-1"
+                ],
                 "useScheme": "https://mex.rki.de/item/health-category"
             },
             "sameAs": [
@@ -370,6 +395,17 @@
             "sameAs": [
                 "http://purl.org/dc/elements/1.1/identifier"
             ]
+        },
+        "inSeries": {
+            "closeMatch": [
+                "https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series"
+            ],
+            "default": [],
+            "description": "A resource series of which the resource is part.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource-series#/identifier"
+            },
+            "type": "array"
         },
         "instrumentToolOrApparatus": {
             "default": [],
@@ -399,6 +435,17 @@
             "sameAs": [
                 "http://www.w3.org/ns/dcat#keyword"
             ],
+            "type": "array"
+        },
+        "landingPage": {
+            "closeMatch": [
+                "https://www.w3.org/TR/vocab-dcat-3/#Property:resource_landing_page"
+            ],
+            "default": [],
+            "description": "A web page that provides access to the resource, its distributions and/or additional information.",
+            "items": {
+                "$ref": "/mex/model/fields/link"
+            },
             "type": "array"
         },
         "language": {
@@ -756,21 +803,33 @@
             "anyOf": [
                 {
                     "$comment": "year_month_day_time",
+                    "examples": [
+                        "2022-09-30T20:48:35Z"
+                    ],
                     "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])T(?:[0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]Z$",
                     "type": "string"
                 },
                 {
                     "$comment": "year_month_day",
+                    "examples": [
+                        "2014-08-24"
+                    ],
                     "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
                     "type": "string"
                 },
                 {
                     "$comment": "year_month",
+                    "examples": [
+                        "2019-03"
+                    ],
                     "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
                     "type": "string"
                 },
                 {
                     "$comment": "year",
+                    "examples": [
+                        "2024"
+                    ],
                     "pattern": "^[0-9]{4}$",
                     "type": "string"
                 },
@@ -897,6 +956,15 @@
                 "http://dcat-ap.de/def/dcatde/maintainer"
             ],
             "type": "array"
+        },
+        "version": {
+            "closeMatch": [
+                "https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version"
+            ],
+            "default": null,
+            "description": "The version indicator (name or identifier) of a resource.",
+            "maxLength": 100,
+            "type": "string"
         },
         "wasGeneratedBy": {
             "anyOf": [

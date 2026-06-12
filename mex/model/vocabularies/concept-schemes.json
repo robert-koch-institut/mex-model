@@ -20,6 +20,10 @@
         "label": "Bibliographic resource type vocabulary"
     },
     {
+        "description": {
+            "de": "Dieses kontrollierte Vokabular definiert die für die beschriebene Ressource verwendeten Kodierungssysteme.",
+            "en": "This controlled vocabulary defines the coding systems in use for the described resource."
+        },
         "identifier": "https://mex.rki.de/item/coding-system",
         "label": "Coding systems vocabulary"
     },
