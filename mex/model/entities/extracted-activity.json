@@ -3,20 +3,28 @@
     "$id": "https://mex.rki.de/mex/model/entities/extracted-activity",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "closeMatch": [
+        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+        "http://purl.org/dc/terms/Activity",
+        "http://www.w3.org/ns/prov#Activity"
+    ],
     "description": "An activity carried out by RKI. This may be a research activity, such as a funded project, or a task that RKI performs under federal law. Activities provide useful context information for resources.",
     "properties": {
         "abstract": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/abstract"
+            ],
             "default": [],
             "description": "A short text describing the activity.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "closeMatch": [
-                "http://purl.org/dc/terms/abstract"
-            ],
             "type": "array"
         },
         "activityType": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/type"
+            ],
             "default": [],
             "description": "The type of the activity.",
             "items": {
@@ -26,23 +34,23 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/activity-type"
             },
-            "closeMatch": [
-                "http://purl.org/dc/terms/type"
-            ],
             "type": "array"
         },
         "alternativeTitle": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/alternative"
+            ],
             "default": [],
             "description": "Another name for the activity.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "closeMatch": [
-                "http://purl.org/dc/terms/alternative"
-            ],
             "type": "array"
         },
         "contact": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#contactPoint"
+            ],
             "description": "An agent serving as a contact for the activity.",
             "items": {
                 "anyOf": [
@@ -58,23 +66,23 @@
                 ]
             },
             "minItems": 1,
-            "closeMatch": [
-                "http://www.w3.org/ns/dcat#contactPoint"
-            ],
             "type": "array"
         },
         "documentation": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/isReferencedBy"
+            ],
             "default": [],
             "description": "A link to a document, that contains the documentation of the activity.",
             "items": {
                 "$ref": "/mex/model/fields/link"
             },
-            "closeMatch": [
-                "http://purl.org/dc/terms/isReferencedBy"
-            ],
             "type": "array"
         },
         "end": {
+            "closeMatch": [
+                "http://www.wikidata.org/entity/P582"
+            ],
             "default": [],
             "description": "(Planned) end of the activity.",
             "items": {
@@ -105,29 +113,26 @@
                     }
                 ]
             },
-            "closeMatch": [
-                "http://www.wikidata.org/entity/P582"
-            ],
             "type": "array"
         },
         "externalAssociate": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/contributor"
+            ],
             "default": [],
             "description": "An external institution or person, that is associated with the activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organization#/identifier"
             },
-            "closeMatch": [
-                "http://purl.org/dc/terms/contributor"
-            ],
             "type": "array"
         },
         "funderOrCommissioner": {
+            "closeMatch": "http://www.wikidata.org/entity/P8324",
             "default": [],
             "description": "An agent, that has either funded or commissioned the activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organization#/identifier"
             },
-            "closeMatch": "http://www.wikidata.org/entity/P8324",
             "type": "array"
         },
         "fundingProgram": {
@@ -140,18 +145,18 @@
         },
         "hadPrimarySource": {
             "$ref": "/mex/model/entities/merged-primary-source#/identifier",
-            "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30 ](http://www.w3.org/TR/2013/REC-prov-o-20130430/)).",
             "closeMatch": [
                 "http://www.w3.org/ns/prov#hadPrimarySource"
-            ]
+            ],
+            "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30 ](http://www.w3.org/TR/2013/REC-prov-o-20130430/))."
         },
         "identifier": {
             "$ref": "/mex/model/fields/identifier",
-            "description": "An unambiguous reference to the resource within a given context. Persistent identifiers should be provided as HTTP URIs ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
-            "readOnly": true,
             "closeMatch": [
                 "http://purl.org/dc/elements/1.1/identifier"
-            ]
+            ],
+            "description": "An unambiguous reference to the resource within a given context. Persistent identifiers should be provided as HTTP URIs ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
+            "readOnly": true
         },
         "identifierInPrimarySource": {
             "description": "The identifier of the item used in the primary source.",
@@ -166,79 +171,79 @@
             "type": "string"
         },
         "involvedPerson": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/contributor"
+            ],
             "default": [],
             "description": "A person involved in the activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-person#/identifier"
             },
-            "closeMatch": [
-                "http://purl.org/dc/terms/contributor"
-            ],
             "type": "array"
         },
         "involvedUnit": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/contributor"
+            ],
             "default": [],
             "description": "An organizational unit that is involved in the activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
             },
-            "closeMatch": [
-                "http://purl.org/dc/terms/contributor"
-            ],
             "type": "array"
         },
         "isPartOfActivity": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/isPartOf",
+                "http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of"
+            ],
             "default": [],
             "description": "Another activity, this activity is part of.",
             "items": {
                 "$ref": "/mex/model/entities/merged-activity#/identifier"
             },
-            "closeMatch": [
-                "http://purl.org/dc/terms/isPartOf",
-                "http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of"
-            ],
             "type": "array"
         },
         "publication": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/isReferencedBy"
+            ],
             "default": [],
             "description": "A publication related to the activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-bibliographic-resource#/identifier"
             },
-            "closeMatch": [
-                "http://purl.org/dc/terms/isReferencedBy"
-            ],
             "type": "array"
         },
         "relatedActivity": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/relation"
+            ],
             "default": [],
             "description": "A related Activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-activity#/identifier"
             },
-            "closeMatch": [
-                "http://purl.org/dc/terms/relation"
-            ],
             "type": "array"
         },
         "responsibleUnit": {
+            "closeMatch": "http.//dcat-ap.de/def/dcatde/maintainer",
             "description": "A unit, that is responsible for the activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
             },
             "minItems": 1,
-            "closeMatch": "http.//dcat-ap.de/def/dcatde/maintainer",
             "type": "array"
         },
         "shortName": {
+            "closeMatch": [
+                "http://www.wikidata.org/entity/P1813"
+            ],
             "default": [],
             "description": "A short name for, or an abbreviated title of, the activity.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "closeMatch": [
-                "http://www.wikidata.org/entity/P1813"
-            ],
             "type": "array"
         },
         "stableTargetId": {
@@ -247,6 +252,9 @@
             "readOnly": true
         },
         "start": {
+            "closeMatch": [
+                "http://www.wikidata.org/entity/P580"
+            ],
             "default": [],
             "description": "The start of the activity.",
             "items": {
@@ -277,23 +285,23 @@
                     }
                 ]
             },
-            "closeMatch": [
-                "http://www.wikidata.org/entity/P580"
-            ],
             "type": "array"
         },
         "succeeds": {
+            "closeMatch": [
+                "http://www.cidoc-crm.org/cidoc-crm/P173_start_before_or_with_the_end_of"
+            ],
             "default": [],
             "description": "Another activity, that ended with the start of the described activity. A follow-up activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-activity#/identifier"
             },
-            "closeMatch": [
-                "http://www.cidoc-crm.org/cidoc-crm/P173_start_before_or_with_the_end_of"
-            ],
             "type": "array"
         },
         "theme": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#theme"
+            ],
             "default": [],
             "description": "The main theme or subject of the activity.",
             "items": {
@@ -303,32 +311,29 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/theme"
             },
-            "closeMatch": [
-                "http://www.w3.org/ns/dcat#theme"
-            ],
             "type": "array"
         },
         "title": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/title"
+            ],
             "description": "The official title of the activity.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
             "minItems": 1,
-            "closeMatch": [
-                "http://purl.org/dc/terms/title"
-            ],
             "type": "array"
         },
         "website": {
+            "closeMatch": [
+                "http://www.wikidata.org/entity/P856",
+                "http://xmlns.com/foaf/0.1/homepage"
+            ],
             "default": [],
             "description": "A web presentation of the activity, e.g. on the RKI homepage.",
             "items": {
                 "$ref": "/mex/model/fields/link"
             },
-            "closeMatch": [
-                "http://www.wikidata.org/entity/P856",
-                "http://xmlns.com/foaf/0.1/homepage"
-            ],
             "type": "array"
         }
     },
@@ -340,11 +345,6 @@
         "responsibleUnit",
         "stableTargetId",
         "title"
-    ],
-    "closeMatch": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-        "http://purl.org/dc/terms/Activity",
-        "http://www.w3.org/ns/prov#Activity"
     ],
     "title": "Extracted Activity",
     "type": "object"

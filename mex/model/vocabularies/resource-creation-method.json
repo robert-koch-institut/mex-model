@@ -16,78 +16,78 @@
         }
     },
     {
+        "broader": "https://mex.rki.de/item/resource-creation-method-2",
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/HEALTH_SURVEY",
         "identifier": "https://mex.rki.de/item/resource-creation-method-21",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
-        "broader": "https://mex.rki.de/item/resource-creation-method-2",
-        "exactMatch":"https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/HEALTH_SURVEY",
         "prefLabel": {
             "de": "Gesundheitserhebung",
             "en": "Health survey"
         }
     },
     {
+        "broader": "https://mex.rki.de/item/resource-creation-method-2",
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/OBSERVATIONAL_DATA",
         "identifier": "https://mex.rki.de/item/resource-creation-method-22",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
-        "broader": "https://mex.rki.de/item/resource-creation-method-2",
-        "exactMatch":"https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/OBSERVATIONAL_DATA",
         "prefLabel": {
             "de": "Beobachtungsdaten",
             "en": "Observational data"
         }
     },
     {
-        "identifier": "https://mex.rki.de/item/resource-creation-method-23",
-        "inScheme": "https://mex.rki.de/item/resource-creation-method",
         "broader": "https://mex.rki.de/item/resource-creation-method-2",
         "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/COHORT",
+        "identifier": "https://mex.rki.de/item/resource-creation-method-23",
+        "inScheme": "https://mex.rki.de/item/resource-creation-method",
         "prefLabel": {
             "de": "Kohorte",
             "en": "Cohort"
         }
     },
     {
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/SURVEILLANCE",
         "identifier": "https://mex.rki.de/item/resource-creation-method-3",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/SURVEILLANCE",
         "prefLabel": {
             "de": "Surveillance",
             "en": "Surveillance"
         }
     },
     {
-        "identifier": "https://mex.rki.de/item/resource-creation-method-31",
-        "inScheme": "https://mex.rki.de/item/resource-creation-method",
         "broader": "https://mex.rki.de/item/resource-creation-method-3",
         "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/HEALTH_SURVEILLANCE",
+        "identifier": "https://mex.rki.de/item/resource-creation-method-31",
+        "inScheme": "https://mex.rki.de/item/resource-creation-method",
         "prefLabel": {
             "de": "Überwachung der öffentlichen Gesundheit",
             "en": "Health surveillance"
         }
     },
     {
-        "identifier": "https://mex.rki.de/item/resource-creation-method-32",
-        "inScheme": "https://mex.rki.de/item/resource-creation-method",
         "broader": "https://mex.rki.de/item/resource-creation-method-3",
         "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/DISEASE_MONITORING",
+        "identifier": "https://mex.rki.de/item/resource-creation-method-32",
+        "inScheme": "https://mex.rki.de/item/resource-creation-method",
         "prefLabel": {
             "de": "Überwachung von Infektionskrankheiten",
             "en": "Disease monitoring"
         }
     },
     {
-        "identifier": "https://mex.rki.de/item/resource-creation-method-33",
-        "inScheme": "https://mex.rki.de/item/resource-creation-method",
         "broader": "https://mex.rki.de/item/resource-creation-method-3",
         "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/GEOSPATIAL_MONITORING",
+        "identifier": "https://mex.rki.de/item/resource-creation-method-33",
+        "inScheme": "https://mex.rki.de/item/resource-creation-method",
         "prefLabel": {
             "de": "Geospatiale Überwachung",
             "en": "Geospatial monitoring"
         }
     },
     {
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/LABORATORY_TESTS",
         "identifier": "https://mex.rki.de/item/resource-creation-method-4",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/LABORATORY_TESTS",
         "prefLabel": {
             "de": "Labortests",
             "en": "Laboratory tests"
@@ -102,47 +102,47 @@
         }
     },
     {
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/HEALTH_REGISTRIES",
         "identifier": "https://mex.rki.de/item/resource-creation-method-6",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/HEALTH_REGISTRIES",
         "prefLabel": {
             "de": "Register",
             "en": "Registry"
         }
     },
     {
-        "identifier": "https://mex.rki.de/item/resource-creation-method-61",
-        "inScheme": "https://mex.rki.de/item/resource-creation-method",
         "broader": "https://mex.rki.de/item/resource-creation-method-6",
         "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/QUALITY_REGISTRIES",
+        "identifier": "https://mex.rki.de/item/resource-creation-method-61",
+        "inScheme": "https://mex.rki.de/item/resource-creation-method",
         "prefLabel": {
             "de": "Nationale medizinische Qualitätsregister",
             "en": "Quality registries"
         }
     },
     {
-        "identifier": "https://mex.rki.de/item/resource-creation-method-62",
-        "inScheme": "https://mex.rki.de/item/resource-creation-method",
         "broader": "https://mex.rki.de/item/resource-creation-method-6",
         "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/MEDICAL_REGISTRY",
+        "identifier": "https://mex.rki.de/item/resource-creation-method-62",
+        "inScheme": "https://mex.rki.de/item/resource-creation-method",
         "prefLabel": {
             "de": "Medizinisches Register",
             "en": "Medical registry"
         }
     },
     {
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/MODELS_SIMULATION",
         "identifier": "https://mex.rki.de/item/resource-creation-method-7",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/MODELS_SIMULATION",
         "prefLabel": {
             "de": "Modelle und Simulationen",
             "en": "Models and simulations"
         }
     },
     {
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/INSURANCE_CLAIMS",
         "identifier": "https://mex.rki.de/item/resource-creation-method-8",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/INSURANCE_CLAIMS",
         "prefLabel": {
             "de": "Versicherungen und Kostenerstattung",
             "en": "Insurance claims"
@@ -157,38 +157,38 @@
         }
     },
     {
-        "identifier": "https://mex.rki.de/item/resource-creation-method-91",
-        "inScheme": "https://mex.rki.de/item/resource-creation-method",
         "broader": "https://mex.rki.de/item/resource-creation-method-9",
         "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/SAMPLE_COLLECTIONS",
+        "identifier": "https://mex.rki.de/item/resource-creation-method-91",
+        "inScheme": "https://mex.rki.de/item/resource-creation-method",
         "prefLabel": {
             "de": "Mustersammlungen",
             "en": "Sample Collections"
         }
     },
     {
-        "identifier": "https://mex.rki.de/item/resource-creation-method-92",
-        "inScheme": "https://mex.rki.de/item/resource-creation-method",
         "broader": "https://mex.rki.de/item/resource-creation-method-9",
         "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/BIOBANK_COLLECTION",
+        "identifier": "https://mex.rki.de/item/resource-creation-method-92",
+        "inScheme": "https://mex.rki.de/item/resource-creation-method",
         "prefLabel": {
             "de": "Biobank/ Probensammlung",
             "en": "Biobank collection"
         }
     },
     {
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/RESEARCH_PROJECT",
         "identifier": "https://mex.rki.de/item/resource-creation-method-10",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/RESEARCH_PROJECT",
         "prefLabel": {
             "de": "Forschungsprojekt",
             "en": "Research project"
         }
     },
     {
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/MEASUREMENTS",
         "identifier": "https://mex.rki.de/item/resource-creation-method-11",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/MEASUREMENTS",
         "prefLabel": {
             "de": "Messungen",
             "en": "Measurements"
