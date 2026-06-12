@@ -20,7 +20,7 @@
         "label": "Bibliographic resource type vocabulary"
     },
     {
-        "description":{
+        "description": {
             "de": "Dieses kontrollierte Vokabular definiert die für die beschriebene Ressource verwendeten Kodierungssysteme.",
             "en": "This controlled vocabulary defines the coding systems in use for the described resource."
         },
