@@ -8,7 +8,7 @@
     ],
     "properties": {
         "altLabel": {
-            "closeMatch": [
+            "exactMatch": [
                 "http://www.w3.org/2004/02/skos/core#altLabel"
             ],
             "default": [],
@@ -18,7 +18,7 @@
             "type": "array"
         },
         "broader": {
-            "closeMatch": [
+            "exactMatch": [
                 "http://www.w3.org/2004/02/skos/core#broader"
             ],
             "default": [],
@@ -28,7 +28,7 @@
             "type": "array"
         },
         "definition": {
-            "closeMatch": [
+            "exactMatch": [
                 "http://www.w3.org/2004/02/skos/core#definition"
             ],
             "default": [],
@@ -38,7 +38,7 @@
             "type": "array"
         },
         "exactMatch": {
-            "closeMatch": [
+            "exactMatch": [
                 "http://www.w3.org/2004/02/skos/core#exactMatch"
             ],
             "default": [],
@@ -49,7 +49,7 @@
             "type": "array"
         },
         "identifier": {
-            "closeMatch": [
+            "exactMatch": [
                 "http://purl.org/dc/elements/1.1/identifier"
             ],
             "description": "An unambiguous reference to the resource within a given context. Persistent identifiers should be provided as HTTP URIs ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
@@ -63,7 +63,7 @@
         },
         "inScheme": {
             "$ref": "/mex/model/entities/concept-scheme#/identifier",
-            "closeMatch": [
+            "exactMatch": [
                 "http://www.w3.org/2004/02/skos/core#inScheme"
             ]
         },
@@ -76,7 +76,7 @@
             "type": "string"
         },
         "note": {
-            "closeMatch": [
+            "exactMatch": [
                 "http://www.w3.org/2004/02/skos/core#note"
             ],
             "default": [],
@@ -86,7 +86,7 @@
             "type": "array"
         },
         "prefLabel": {
-            "closeMatch": [
+            "exactMatch": [
                 "http://www.w3.org/2004/02/skos/core#prefLabel"
             ],
             "items": {
