@@ -101,10 +101,18 @@
         "label": "Personal Data"
     },
     {
+        "description": {
+            "de": "Dieses Vokabular stellt RKI-spezifische Zwecke der Datenerhebung/-erzeugung zusammen.",
+            "en": "This vocabulary compiles RKI-specific purposes of data collection and creation."
+        },
         "identifier": "https://mex.rki.de/item/purpose",
         "label": "Purpose vocabulary"
     },
     {
+        "description": {
+            "de": "Dieses Vokabular stellt RKI-spezifische Methoden der Sammlung und Generierung von Daten zusammen. Es ist erweitert mit Termen aus dem Health Activity Vokabular der EU, wie es im Kontext von HealthDCAT-AP Anwendung findet.",
+            "en": "This vocabulary compiles RKI-specific methods of data collection and creation. It is extended by the Health Activity Vocabulary provided by the EU in context of HealthDCAT-AP."
+        },
         "identifier": "https://mex.rki.de/item/resource-creation-method",
         "label": "Resource creation method vocabulary"
     },
