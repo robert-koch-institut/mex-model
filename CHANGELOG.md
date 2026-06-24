@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+### Changes
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [5.0.2] - 2026-06-24
+
+### Added
+
 - linter for po files
 
 ### Changes
@@ -20,15 +34,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - dependencies update (2026-06-16)
 - updated template to https://github.com/robert-koch-institut/mex-template/commit/1d816d
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 
 - replaced " with “ in po files
-
-### Security
 
 ## [5.0.1] - 2026-06-05
 
