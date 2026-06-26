@@ -574,6 +574,16 @@ msgstr ""
 "A detailed description of purpose for which the data was originally collected"
 
 msgctxt "Resource"
+msgid "hasVersion.description"
+msgstr "A related dataset that is a version, edition, or adaptation of the described dataset"
+
+msgctxt "Resource"
+msgid "hasVersion.singular"
+msgid_plural "hasVersion.plural"
+msgstr[0] "Version of the described dataset"
+msgstr[1] "Versions of the described dataset"
+
+msgctxt "Resource"
 msgid "healthCategory.singular"
 msgid_plural "healthCategory.plural"
 msgstr[0] "EHDS category"

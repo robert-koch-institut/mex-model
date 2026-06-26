@@ -580,6 +580,17 @@ msgstr ""
 "Detaillierte Beschreibung des Zwecks der ursprünglichen Datenerhebung"
 
 msgctxt "Resource"
+msgid "hasVersion.description"
+msgstr "Ein verwandter Datensatz, bei dem es sich um eine Version, "
+"eine Ausgabe oder eine Adaption des beschriebenen Datensatzes handelt"
+
+msgctxt "Resource"
+msgid "hasVersion.singular"
+msgid_plural "hasVersion.plural"
+msgstr[0] "Version des beschriebenen Datensatzes"
+msgstr[1] "Versionen des beschriebenen Datensatzes"
+
+msgctxt "Resource"
 msgid "healthCategory.singular"
 msgid_plural "healthCategory.plural"
 msgstr[0] "Kategorie nach EHDS"

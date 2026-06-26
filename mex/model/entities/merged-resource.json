@@ -365,6 +365,17 @@
             },
             "type": "array"
         },
+        "hasVersion": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#hasVersion"
+            ],
+            "description": "A related Resource that is a version, edition, or adaptation of the described Resource.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
+            },
+            "default": [],
+            "type": "array"
+        },
         "healthCategory": {
             "default": [],
             "description": "The category of electronic data for secondary use to which this resource belongs, as described in Article 51 of the Commission Regulation on the European Health Data Space.",
