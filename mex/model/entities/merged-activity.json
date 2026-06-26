@@ -117,9 +117,6 @@
                 "anyOf": [
                     {
                         "$ref": "/mex/model/entities/merged-organization#/identifier"
-                    },
-                    {
-                        "$ref": "/mex/model/entities/merged-person#/identifier"
                     }
                 ]
             },
