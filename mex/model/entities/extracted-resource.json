@@ -1041,6 +1041,7 @@
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
+        "resourceCreationMethod",
         "stableTargetId",
         "theme",
         "title",

@@ -369,11 +369,11 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#hasVersion"
             ],
+            "default": [],
             "description": "A related Resource that is a version, edition, or adaptation of the described Resource.",
             "items": {
                 "$ref": "/mex/model/entities/merged-resource#/identifier"
             },
-            "default": [],
             "type": "array"
         },
         "healthCategory": {
@@ -995,6 +995,7 @@
         "accessRestriction",
         "contact",
         "identifier",
+        "resourceCreationMethod",
         "theme",
         "title",
         "unitInCharge"
