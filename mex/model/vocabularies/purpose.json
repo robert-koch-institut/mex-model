@@ -65,8 +65,8 @@
         "identifier": "https://mex.rki.de/item/purpose-23",
         "inScheme": "https://mex.rki.de/item/purpose",
         "prefLabel": {
-            "de": "Information von Entscheidungsträgern",
-            "en": "Information for decision makers"
+            "de": "Information der Bevölkerung",
+            "en": "Information for the public"
         }
     },
     {
