@@ -18,6 +18,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - mex/model/vocabularies/datatype-standardized.json (RKIMEX-84)
 - mex/model/vocabularies/purpose.json (RKIMEX-100)
 
+#### Added mex/model/entities/extracted-location.json and mex/model/entities/merged-location.json
+
+A new entitity type, including the following properties (RKIMEX-126):
+
+- officialName (required)
+- wikidataID
+- geonamesID
+- identifier (required)
+
 #### Added mex/model/entities/extracted-resource-series.json and mex/model/entities/merged-resource-series.json
 
 A new entity type, including the following properties (RKIMEX-14):
