@@ -1,0 +1,63 @@
+{
+    "$$target": "/mex/model/entities/merged-location#/identifier",
+    "$id": "https://mex.rki.de/mex/model/entities/merged-location",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "description": "A spatial region or named place.",
+    "title": "MergedLocation",
+    "type": "object",
+    "properties": {
+        "officialName": {
+            "description": "Official name of the location.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
+        "wikidataId": {
+            "default": [],
+            "description": "Identifier from Wikidata.",
+            "items": {
+                "examples": [
+                    "http://www.wikidata.org/entity/Q679041",
+                    "http://www.wikidata.org/entity/Q918501",
+                    "http://www.wikidata.org/entity/Q491566"
+            
+                ],
+                "format": "uri",
+                "pattern": "^http://www\\.wikidata\\.org/entity/[PQ0-9]{2,64}$",
+                "type": "string"
+                },
+            "type": "array"
+        },
+        "geonamesId": {
+            "default": [],
+            "description": "Identifier in the GeoNames geographical database.",
+            "exactMatch": [
+                "https://www.wikidata.org/wiki/Property:P1566"
+            ],
+            "items": {
+                "format": "uri",
+                "pattern": "^http://www\\.geonames\\.org/[0-9]{7}$",
+                "type": "string"
+                },
+            "type": "array"
+        },
+        "supersededBy": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/merged-location#/identifier"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "A merged item which is the preferred duplicate, because it replaces, consolidates or otherwise makes the current merged item obsolete."
+        }
+  },
+  "required": [
+    "officialName",
+    "identifier"
+]
+}

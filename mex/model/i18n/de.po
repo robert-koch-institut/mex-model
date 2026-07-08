@@ -487,6 +487,14 @@ msgctxt "Activity"
 msgid "fundingProgram.description"
 msgstr "Das Programm, in dem das Projekt gefördert wird, z. B. Horizont Europa"
 
+msgctxt "Location"
+msgid "geonamesId.singular"
+msgstr "GeoNames ID"
+
+msgctxt "Location"
+msgid "geonamesId.description"
+msgstr "Geonames ist eine freie Internet-Datenbank und findet breite Anwendung als Normdatensatz für geografische Entitäten"
+
 msgctxt "Organization"
 msgid "geprisId.singular"
 msgstr "GEPRIS"
@@ -879,9 +887,19 @@ msgctxt "Organization"
 msgid "officialName.singular"
 msgstr "Name"
 
+msgctxt "Location"
+msgid "officialName.singular"
+msgid_plural "officialName.plural"
+msgstr[0] "Name"
+msgstr[1] "Namen"
+
 msgctxt "Organization"
 msgid "officialName.description"
 msgstr "Offizieller Name der Institution"
+
+msgctxt "Location"
+msgid "officialName.description"
+msgstr "Offizielle Bezeichnung des Ortes"
 
 msgctxt "OrganizationalUnit"
 msgid "alternativeName.singular"
@@ -1356,6 +1374,18 @@ msgstr "Website(s) mit weiteren Informationen"
 msgctxt "Organization"
 msgid "wikidataId.singular"
 msgstr "Wikidata Concept URI"
+
+msgctxt "Location"
+msgid "wikidataId.singular"
+msgstr "Wikidata Concept URI"
+
+msgctxt "Location"
+msgid "wikidataId.description"
+msgstr ""
+"Wikidata ist eine freie, gemeinsame, mehrsprachige und sekundäre Datenbank "
+"zur Sammlung strukturierter Daten zur Unterstützung von Wikipedia und wird "
+"auch als Referenzdatenbank für die Identifikation von Dingen (im Sinne von "
+"Linked Data) genutzt"
 
 msgctxt "Organization"
 msgid "wikidataId.description"
