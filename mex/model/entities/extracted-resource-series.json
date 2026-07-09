@@ -135,6 +135,21 @@
             "description": "End date of the temporal coverage of the resource series.",
             "maxItems": 1
         },
+        "first": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/merged-resource#/identifier"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "closeMatch": [
+                "https://www.w3.org/ns/dcat#first"
+            ],
+            "default": null,
+            "description": "The first resource in an ordered collection or series of resources."
+        },
         "hadPrimarySource": {
             "$ref": "/mex/model/entities/merged-primary-source#/identifier",
             "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30 ](http://www.w3.org/TR/2013/REC-prov-o-20130430/)).",
@@ -190,6 +205,21 @@
                 "$ref": "/mex/model/fields/text"
             },
             "type": "array"
+        },
+        "last": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/merged-resource#/identifier"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "closeMatch": [
+                "https://www.w3.org/ns/dcat#last"
+            ],
+            "default": null,
+            "description": "The last resource in an ordered collection or series of resources."
         },
         "publisher": {
             "default": [],
@@ -258,21 +288,6 @@
             ],
             "default": null,
             "description": "Start date of the temporal coverage of the resource series."
-        },
-        "theme": {
-            "closeMatch": [
-                "http://www.w3.org/ns/dcat#theme"
-            ],
-            "default": [],
-            "description": "A main category of the resource series. A resource series can have multiple themes.",
-            "items": {
-                "$ref": "/mex/model/entities/concept#/identifier",
-                "examples": [
-                    "https://mex.rki.de/item/theme-1"
-                ],
-                "useScheme": "https://mex.rki.de/item/theme"
-            },
-            "type": "array"
         },
         "title": {
             "closeMatch": [

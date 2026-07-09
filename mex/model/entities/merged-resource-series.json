@@ -135,6 +135,21 @@
             "description": "End date of the temporal coverage of the resource series.",
             "maxItems": 1
         },
+        "first": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/merged-resource#/identifier"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "closeMatch": [
+                "https://www.w3.org/ns/dcat#first"
+            ],
+            "default": null,
+            "description": "The first resource in an ordered collection or series of resources."
+        },
         "hasLegalBasis": {
             "closeMatch": [
                 "https://w3id.org/dpv#hasLegalBasis"
@@ -163,6 +178,21 @@
                 "$ref": "/mex/model/fields/text"
             },
             "type": "array"
+        },
+        "last": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/merged-resource#/identifier"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "closeMatch": [
+                "https://www.w3.org/ns/dcat#last"
+            ],
+            "default": null,
+            "description": "The last resource in an ordered collection or series of resources."
         },
         "publisher": {
             "default": [],
@@ -238,21 +268,6 @@
             ],
             "default": null,
             "description": "A merged item which is the preferred duplicate, because it replaces, consolidates or otherwise makes the current merged item obsolete."
-        },
-        "theme": {
-            "closeMatch": [
-                "http://www.w3.org/ns/dcat#theme"
-            ],
-            "default": [],
-            "description": "A main category of the resource series. A resource series can have multiple themes.",
-            "items": {
-                "$ref": "/mex/model/entities/concept#/identifier",
-                "examples": [
-                    "https://mex.rki.de/item/theme-1"
-                ],
-                "useScheme": "https://mex.rki.de/item/theme"
-            },
-            "type": "array"
         },
         "title": {
             "closeMatch": [
