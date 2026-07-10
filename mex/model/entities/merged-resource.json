@@ -82,15 +82,13 @@
         },
         "conformsTo": {
             "default": [],
-            "description": "Standards used in the creation, analysis or transmission of the resource.",
+            "description": "Standards used in the creation, analysis or transmission of the resource. The Health Standards controlled vocabulary must be used.",
             "items": {
+                "$ref": "/mex/model/entities/concept#/identifier",
                 "examples": [
-                    "FHIR",
-                    "LOINC",
-                    "SNOMED",
-                    "ICD-10"
+                    "https://mex.rki.de/item/standard-1"
                 ],
-                "type": "string"
+                "useScheme": "https://mex.rki.de/item/standard"
             },
             "sameAs": [
                 "http://purl.org/dc/terms/conformsTo"
