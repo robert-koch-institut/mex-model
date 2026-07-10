@@ -199,12 +199,12 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/description"
             ],
-            "default": [],
             "description": "A text describing the nature of the resource.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "type": "array"
+            "type": "array",
+            "minItems": 1
         },
         "distribution": {
             "default": [],
@@ -1042,6 +1042,7 @@
     "required": [
         "accessRestriction",
         "contact",
+        "description",
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
