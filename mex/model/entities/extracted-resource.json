@@ -300,6 +300,18 @@
             },
             "type": "array"
         },
+        "geopoliticalResolution": {
+            "default": [],
+            "description": "Geopoliticial resolution or administrativel level of the location information of the dataset.",
+            "items": {
+                "$ref": "/mex/model/entities/concept#/identifier",
+                "examples": [
+                    "https://mex.rki.de/item/geopolitical-resolution-1"
+                ],
+                "useScheme": "https://mex.rki.de/item/geopolitical-resolution"
+            },
+            "type": "array"
+        },
         "hadPrimarySource": {
             "$ref": "/mex/model/entities/merged-primary-source#/identifier",
             "closeMatch": [

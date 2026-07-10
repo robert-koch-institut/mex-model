@@ -495,6 +495,14 @@ msgctxt "Location"
 msgid "geonamesId.description"
 msgstr "Geonames ist eine freie Internet-Datenbank und findet breite Anwendung als Normdatensatz für geografische Entitäten"
 
+msgctxt "Resource"
+msgid "geopoliticalResolution.singular"
+msgstr "geopolitische Auflösung"
+
+msgctxt "Resource"
+msgid "geopoliticalResolution.description"
+msgstr "Angabe der geopolitischen/ verwaltungspolitischen Auflösung der Ortsangabe des Datensatzes"
+
 msgctxt "Organization"
 msgid "geprisId.singular"
 msgstr "GEPRIS"
