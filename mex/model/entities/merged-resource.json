@@ -105,9 +105,6 @@
                         "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
                     },
                     {
-                        "$ref": "/mex/model/entities/merged-person#/identifier"
-                    },
-                    {
                         "$ref": "/mex/model/entities/merged-contact-point#/identifier"
                     }
                 ]

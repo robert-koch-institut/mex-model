@@ -185,7 +185,7 @@ msgstr "Kontakt für das Projekt/Vorhaben"
 
 msgid "contact.description"
 msgstr ""
-"Person oder Fachgruppe, die weiß, wie man auf die Plattform zugreift, "
+"Kontakt oder Fachgruppe, der*die weiß, wie man auf die Plattform zugreift, "
 "Probleme behebt oder anderweitig Probleme im Zusammenhang mit der Plattform "
 "löst"
 

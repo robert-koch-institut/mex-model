@@ -184,7 +184,7 @@ msgstr "Contact for the project/endeavor"
 
 msgid "contact.description"
 msgstr ""
-"Person or unit that can help with accessing, troubleshooting, or otherwise "
+"Contact or unit that can help with accessing, troubleshooting, or otherwise "
 "resolve issues related to the platform"
 
 msgctxt "Resource"
