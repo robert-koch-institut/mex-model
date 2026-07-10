@@ -129,6 +129,14 @@
         "label": "General resource type vocabulary"
     },
     {
+        "description": {
+            "de": "Dieses Vokular definiert Gesundheitsdatenstandards, die in den beschriebenen Datensätzen genutzt werden.",
+            "en": "This controlled vocabulary defines the standards in use for the described resources."
+        },
+        "identifier": "https://mex.rki.de/item/standard",
+        "label": "Health standards controlled vocabulary"
+    },
+    {
         "identifier": "https://mex.rki.de/item/technical-accessbility",
         "label": "Technical accessibility vocabulary"
     },

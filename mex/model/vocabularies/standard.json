@@ -1,0 +1,171 @@
+[
+    {
+        "definition": {
+            "de": "IHE-Profil für den unternehmensübergreifenden Dokumentenaustausch.",
+            "en": "IHE Cross-Enterprise Document Sharing profile."
+        },
+        "identifier": "https://mex.rki.de/item/standard-1",
+        "inScheme": "https://mex.rki.de/item/standard",
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/IHE-XDS.b",
+        "prefLabel": {
+            "de": "IHE-XDS.b",
+            "en": "IHE-XDS.b"
+        }
+    },
+    {
+        "definition": {
+            "de": "HL7 Fast Healthcare Interoperability Resources Standard.",
+            "en": "HL7 Fast Healthcare Interoperability Resources standard."
+        },
+        "identifier": "https://mex.rki.de/item/standard-2",
+        "inScheme": "https://mex.rki.de/item/standard",
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/FHIR",
+        "prefLabel": {
+            "de": "FHIR",
+            "en": "FHIR"
+        }
+    },
+    {
+        "definition": {
+            "de": "OpenEHR EHR Spezifikationen (Modelle, Archetypen, APIs, usw.).",
+            "en": "OpenEHR EHR specifications (models, archetypes, APIs, etc.)."
+        },
+        "identifier": "https://mex.rki.de/item/standard-3",
+        "inScheme": "https://mex.rki.de/item/standard",
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/OPENEHR",
+        "prefLabel": {
+            "de": "openEHR",
+            "en": "openEHR"
+        }
+    },
+    {
+        "definition": {
+            "de": "HL7-Nachrichtenstandard Version 3.",
+            "en": "HL7 Version 3 messaging standard."
+        },
+        "identifier": "https://mex.rki.de/item/standard-4",
+        "inScheme": "https://mex.rki.de/item/standard",
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/HL7-V3",
+        "prefLabel": {
+            "de": "HL7-V3",
+            "en": "HL7-V3"
+        }
+    },
+    {
+        "definition": {
+            "de": "Standard für digitale Bildgebung und Kommunikation in der Medizin.",
+            "en": "Digital Imaging and Communications in Medicine standard."
+        },
+        "identifier": "https://mex.rki.de/item/standard-5",
+        "inScheme": "https://mex.rki.de/item/standard",
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/DICOM",
+        "prefLabel": {
+            "de": "DICOM",
+            "en": "DICOM"
+        }
+    },
+    {
+        "definition": {
+            "de": "HL7 Standard für die Architektur klinischer Dokumente.",
+            "en": "HL7 Clinical Document Architecture standard."
+        },
+        "identifier": "https://mex.rki.de/item/standard-6",
+        "inScheme": "https://mex.rki.de/item/standard",
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/CDA",
+        "prefLabel": {
+            "de": "CDA",
+            "en": "CDA"
+        }
+    },
+    {
+        "definition": {
+            "de": "Standard der HL7-Arbeitsgruppe „Clinical Context Object“.",
+            "en": "HL7 Clinical Context Object Workgroup standard."
+        },
+        "identifier": "https://mex.rki.de/item/standard-7",
+        "inScheme": "https://mex.rki.de/item/standard",
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/HL7-CCOW",
+        "prefLabel": {
+            "de": "HL7-CCOW",
+            "en": "HL7-CCOW"
+        }
+    },
+    {
+        "definition": {
+            "de": "IEEE-Standard für serviceorientierte Geräteanbindung.",
+            "en": "IEEE standard for Service-oriented Device Connectivity (SDC)."
+        },
+        "identifier": "https://mex.rki.de/item/standard-8",
+        "inScheme": "https://mex.rki.de/item/standard",
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/IEEE-11073-20702",
+        "prefLabel": {
+            "de": "IEEE-11073-20702",
+            "en": "IEEE-11073-20702"
+        }
+    },
+    {
+        "definition": {
+            "de": "HL7-Nachrichtenstandard Version 2.",
+            "en": "HL7 Version 2 messaging standard."
+        },
+        "identifier": "https://mex.rki.de/item/standard-9",
+        "inScheme": "https://mex.rki.de/item/standard",
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/HL7-V2",
+        "prefLabel": {
+            "de": "HL7-V2",
+            "en": "HL7-V2"
+        }
+    },
+    {
+        "definition": {
+            "de": "Kommunikation elektronischer Patientenakten (Referenzmodell).",
+            "en": "Electronic health record communication (reference model)."
+        },
+        "identifier": "https://mex.rki.de/item/standard-10",
+        "inScheme": "https://mex.rki.de/item/standard",
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/ISO-13606-1",
+        "prefLabel": {
+            "de": "ISO-13606-1",
+            "en": "ISO-13606-1"
+        }
+    },
+    {
+        "definition": {
+            "de": "Specifikation für OHDSI OMOP Common Data Model.",
+            "en": "OHDSI OMOP Common Data Model specification."
+        },
+        "identifier": "https://mex.rki.de/item/standard-11",
+        "inScheme": "https://mex.rki.de/item/standard",
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/OMOP-CDM",
+        "prefLabel": {
+            "de": "OMOP-CDM",
+            "en": "OMOP-CDM"
+        }
+    },
+    {
+        "definition": {
+            "de": "CDISC Tabulierungsmodell für Studiendaten.",
+            "en": "CDISC Study Data Tabulation Model."
+        },
+        "identifier": "https://mex.rki.de/item/standard-12",
+        "inScheme": "https://mex.rki.de/item/standard",
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/CDISC-SDTM",
+        "prefLabel": {
+            "de": "CDISC-SDTM",
+            "en": "CDISC-SDTM"
+        }
+    },
+    {
+        "definition": {
+            "de": "Konzeptsystem zur Gewährleistung der Versorgungskontinuität.",
+            "en": "System of concepts to support continuity of care."
+        },
+        "identifier": "https://mex.rki.de/item/standard-13",
+        "inScheme": "https://mex.rki.de/item/standard",
+        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/ISO-13940",
+        "prefLabel": {
+            "de": "ISO-13940",
+            "en": "ISO-13940"
+        }
+    }
+]
