@@ -121,6 +121,14 @@
         "label": "General resource type vocabulary"
     },
     {
+        "description": {
+            "de": "Dieses Vokabular dient der Darstellung der geopolitischen/ verwaltungspolitischen Auflösung der Ortsangabe des Datensatzes.",
+            "en": "This vocabulary may be used to describe the geopoliticial resolution or administrativel level of the location information of the dataset."
+        },
+        "identifier": "https://mex.rki.de/item/spatial-resolution",
+        "label": "Spatial resolution vocabulary"
+    },
+    {
         "identifier": "https://mex.rki.de/item/technical-accessbility",
         "label": "Technical accessibility vocabulary"
     },
