@@ -855,9 +855,9 @@
                 "http://purl.org/dc/terms/spatial"
             ],
             "default": [],
-            "description": "Spatial coverage of the resource.",
+            "description": "Location or geographic region covered by the dataset.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "$ref": "/mex/model/entities/merged-location#/identifier"
             },
             "type": "array"
         },

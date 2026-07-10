@@ -1169,11 +1169,11 @@ msgstr "One or more datasets that were used as sources for the dataset described
 
 msgctxt "Resource"
 msgid "spatial.singular"
-msgstr "Geographical coverage"
+msgstr "Location or geographic region"
 
 msgctxt "Resource"
 msgid "spatial.description"
-msgstr "Geographical coverage of the data"
+msgstr "Location or geographic region covered by the dataset"
 
 msgid "stableTargetId.singular"
 msgstr "Stable target id"

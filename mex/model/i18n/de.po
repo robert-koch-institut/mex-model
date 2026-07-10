@@ -1186,11 +1186,11 @@ msgstr "Ein Datensatz oder mehrere Datensätze, die als Quelle für den beschrie
 
 msgctxt "Resource"
 msgid "spatial.singular"
-msgstr "Räumlicher Bezug"
+msgstr "Ort oder geographische Region"
 
 msgctxt "Resource"
 msgid "spatial.description"
-msgstr "Geografische Abdeckung der Daten"
+msgstr "Ort oder geographische Region, die von dem Datensatz abgedeckt werden"
 
 msgid "stableTargetId.singular"
 msgstr "Stabiler Identifikator"

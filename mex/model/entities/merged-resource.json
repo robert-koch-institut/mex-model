@@ -815,14 +815,14 @@
             "type": "array"
         },
         "spatial": {
-            "default": [],
-            "description": "Spatial coverage of the resource.",
-            "items": {
-                "$ref": "/mex/model/fields/text"
-            },
-            "sameAs": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/spatial"
             ],
+            "default": [],
+            "description": "Location or geographic region covered by the dataset.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-location#/identifier"
+            },
             "type": "array"
         },
         "start": {
