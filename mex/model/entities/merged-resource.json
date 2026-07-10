@@ -453,14 +453,21 @@
             "type": "array"
         },
         "keyword": {
-            "default": [],
-            "description": "A keyword or tag describing the resource.",
-            "items": {
-                "$ref": "/mex/model/fields/text"
-            },
-            "sameAs": [
+            "closeMatch": [
                 "http://www.w3.org/ns/dcat#keyword"
             ],
+            "description": "A keyword or tag describing the resource.",
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "/mex/model/fields/text"
+                    },
+                    {
+                        "$ref": "/mex/model/fields/link"
+                    }
+                ]
+            },
+            "minItems": 1,
             "type": "array"
         },
         "landingPage": {
@@ -1010,6 +1017,7 @@
         "accessRestriction",
         "contact",
         "identifier",
+        "keyword",
         "resourceCreationMethod",
         "theme",
         "title",

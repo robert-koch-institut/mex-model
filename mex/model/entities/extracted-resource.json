@@ -486,11 +486,18 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#keyword"
             ],
-            "default": [],
             "description": "A keyword or tag describing the resource.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "anyOf": [
+                    {
+                        "$ref": "/mex/model/fields/text"
+                    },
+                    {
+                        "$ref": "/mex/model/fields/link"
+                    }
+                ]
             },
+            "minItems": 1,
             "type": "array"
         },
         "landingPage": {
@@ -1041,6 +1048,7 @@
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
+        "keyword",
         "resourceCreationMethod",
         "stableTargetId",
         "theme",
