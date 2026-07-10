@@ -72,6 +72,14 @@
         "label": "Frequency vocabulary"
     },
     {
+        "description": {
+            "de": "Dieses Vokabular dient der Darstellung der geopolitischen/ verwaltungspolitischen Auflösung der Ortsangabe des Datensatzes.",
+            "en": "This vocabulary may be used to describe the geopoliticial resolution or administrativel level of the location information of the dataset."
+        },
+        "identifier": "https://mex.rki.de/item/geopolitical-resolution",
+        "label": "Geopolitical resolution vocabulary"
+    },
+    {
         "description": "The controlled vocabulary for the health category property within HealthDCAT-AP is a standardized set of terms that defines the specific categories of electronic health data as outlined in Article 51 of the EHDS Regulation. This vocabulary ensures consistent classification and tagging of datasets, facilitating accurate identification and interoperability across different health data systems. Each term within this controlled vocabulary corresponds to one of the 17 defined health data categories, allowing for clear, precise categorization of health datasets in compliance with regulatory requirements.",
         "identifier": "https://mex.rki.de/item/health-category",
         "label": "Health category vocabulary"
@@ -119,14 +127,6 @@
     {
         "identifier": "https://mex.rki.de/item/resource-type-general",
         "label": "General resource type vocabulary"
-    },
-    {
-        "description": {
-            "de": "Dieses Vokabular dient der Darstellung der geopolitischen/ verwaltungspolitischen Auflösung der Ortsangabe des Datensatzes.",
-            "en": "This vocabulary may be used to describe the geopoliticial resolution or administrativel level of the location information of the dataset."
-        },
-        "identifier": "https://mex.rki.de/item/spatial-resolution",
-        "label": "Spatial resolution vocabulary"
     },
     {
         "identifier": "https://mex.rki.de/item/technical-accessbility",
