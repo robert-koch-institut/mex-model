@@ -128,12 +128,11 @@
                     "type": "null"
                 }
             ],
-            "closeMatch": [
-                "http://www.w3.org/ns/dcat#endDate"
-            ],
             "default": null,
             "description": "End date of the temporal coverage of the resource series.",
-            "maxItems": 1
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#endDate"
+            ]
         },
         "first": {
             "anyOf": [
@@ -251,11 +250,11 @@
                     "type": "null"
                 }
             ],
-            "closeMatch": [
-                "http://www.w3.org/ns/dcat#startDate"
-            ],
             "default": null,
-            "description": "Start date of the temporal coverage of the resource series."
+            "description": "Start date of the temporal coverage of the resource series.",
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#startDate"
+            ]
         },
         "supersededBy": {
             "anyOf": [
