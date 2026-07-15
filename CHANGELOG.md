@@ -71,9 +71,33 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Fixed
 
-- replaced " with “ in po files
-
 ### Security
+
+## [5.0.3] - 2026-07-15
+
+### Changes
+
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/192830
+- change propertes `start` and `end` in extracted-resource.json and merged-resource.json to be of type `array` and align them to `Activity.start`and `Activity.end`.
+
+## [5.0.2] - 2026-06-24
+
+### Added
+
+- linter for po files
+
+### Changes
+
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/11612b
+
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/52887e
+
+- dependencies update (2026-06-16)
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/1d816d
+
+### Fixed
+
+- replaced " with “ in po files
 
 ## [5.0.1] - 2026-06-05
 
