@@ -11,9 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/192830
-- change propertes `start` and `end` in extracted-resource.json and merged-resource.json to be of type `array` and align them to `Activity.start`and `Activity.end`.
-
 ### Deprecated
 
 ### Removed
@@ -21,6 +18,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+## [5.0.3] - 2026-07-15
+
+### Changes
+
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/192830
+- change propertes `start` and `end` in extracted-resource.json and merged-resource.json to be of type `array` and align them to `Activity.start`and `Activity.end`.
 
 ## [5.0.2] - 2026-06-24
 
