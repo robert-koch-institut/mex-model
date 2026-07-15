@@ -286,7 +286,7 @@
                 ]
             },
             "sameAs": [
-                "http://www.w3.org/ns/dcat#startDate"
+                "http://www.w3.org/ns/dcat#endDate"
             ],
             "type": "array"
         },
