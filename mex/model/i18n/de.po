@@ -275,14 +275,6 @@ msgid "dataType.description"
 msgstr "Definierter Datentyp der Variable"
 
 msgctxt "Variable"
-msgid "dataTypeStandardized.singular"
-msgstr "Datentyp"
-
-msgctxt "Variable"
-msgid "dataTypeStandardized.description"
-msgstr "Datentyp der Variable (standardisiert)"
-
-msgctxt "Variable"
 msgid "dataTypeInPrimarySource.singular"
 msgstr "Originaler Datentyp"
 
@@ -528,17 +520,7 @@ msgctxt "Resource"
 msgid "hasCodingSystem.description"
 msgstr "Spezifizierung des verwendeten Kodiersystems"
 
-msgctxt "Variable"
-msgid "hasCodingSystem.description"
-msgstr "Spezifizierung des verwendeten Kodiersystems"
-
 msgctxt "Resource"
-msgid "hasCodingSystem.singular"
-msgid_plural "hasCodingSystem.plural"
-msgstr[0] "Verwendetes Kodiersystem"
-msgstr[1] "Verwendete Kodiersysteme"
-
-msgctxt "Variable"
 msgid "hasCodingSystem.singular"
 msgid_plural "hasCodingSystem.plural"
 msgstr[0] "Verwendetes Kodiersystem"
