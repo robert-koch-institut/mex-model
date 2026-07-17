@@ -57,40 +57,6 @@
                 "http://www.w3.org/ns/csvw#datatype"
             ]
         },
-        "datatypeInPrimarySource": {
-            "anyOf": [
-                {
-                    "examples": [
-                        "integer",
-                        "string",
-                        "image",
-                        "int55",
-                        "number"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "Data type of the variable, as defined in the original primary source system."
-        },
-        "datatypeStandardized": {
-            "closeMatch": [
-                "https://www.w3.org/ns/csvw#datatype"
-            ],
-            "default": [],
-            "description": "Standardized data types used in the variable, as defined in the controlled vocabulary.",
-            "items": {
-                "$ref": "/mex/model/entities/concept#/identifier",
-                "examples": [
-                    "https://mex.rki.de/item/datatype-standardized-1"
-                ],
-                "useScheme": "https://mex.rki.de/item/datatype-standardized"
-            },
-            "type": "array"
-        },
         "description": {
             "default": [],
             "description": "A description of the variable. How the variable is defined in the primary source.",
@@ -100,21 +66,6 @@
             "sameAs": [
                 "http://purl.org/dc/terms/description"
             ],
-            "type": "array"
-        },
-        "hasCodingSystem": {
-            "closeMatch": [
-                "http://healthdataportal.eu/ns/health#hasCodingSystem"
-            ],
-            "default": [],
-            "description": "Coding systems in use (i.e. ICD-10, SNOMED-CT).",
-            "items": {
-                "$ref": "/mex/model/entities/concept#/identifier",
-                "examples": [
-                    "https://mex.rki.de/item/coding-system-1"
-                ],
-                "useScheme": "https://mex.rki.de/item/coding-system"
-            },
             "type": "array"
         },
         "identifier": {

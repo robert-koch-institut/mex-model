@@ -57,42 +57,6 @@
             "default": null,
             "description": "The defined data type of the variable."
         },
-        "datatypeInPrimarySource": {
-            "anyOf": [
-                {
-                    "examples": [
-                        "integer",
-                        "string",
-                        "image",
-                        "int55",
-                        "number"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "Data type of the variable, as defined in the original primary source system.",
-            "maxLength": 1000,
-            "minLength": 1
-        },
-        "datatypeStandardized": {
-            "closeMatch": [
-                "https://www.w3.org/ns/csvw#datatype"
-            ],
-            "default": [],
-            "description": "Standardized data types used in the variable, as defined in the controlled vocabulary.",
-            "items": {
-                "$ref": "/mex/model/entities/concept#/identifier",
-                "examples": [
-                    "https://mex.rki.de/item/datatype-standardized-1"
-                ],
-                "useScheme": "https://mex.rki.de/item/datatype-standardized"
-            },
-            "type": "array"
-        },
         "description": {
             "closeMatch": [
                 "http://purl.org/dc/terms/description"
@@ -110,21 +74,6 @@
                 "http://www.w3.org/ns/prov#hadPrimarySource"
             ],
             "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30 ](http://www.w3.org/TR/2013/REC-prov-o-20130430/))."
-        },
-        "hasCodingSystem": {
-            "closeMatch": [
-                "http://healthdataportal.eu/ns/health#hasCodingSystem"
-            ],
-            "default": [],
-            "description": "Coding systems in use (i.e. ICD-10, SNOMED-CT).",
-            "items": {
-                "$ref": "/mex/model/entities/concept#/identifier",
-                "examples": [
-                    "https://mex.rki.de/item/coding-system-1"
-                ],
-                "useScheme": "https://mex.rki.de/item/coding-system"
-            },
-            "type": "array"
         },
         "identifier": {
             "$ref": "/mex/model/fields/identifier",
@@ -195,7 +144,6 @@
         }
     },
     "required": [
-        "datatypeInPrimarySource",
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",

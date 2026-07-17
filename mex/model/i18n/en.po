@@ -272,22 +272,6 @@ msgctxt "Variable"
 msgid "dataType.description"
 msgstr "Defined data type of the variable"
 
-msgctxt "Variable"
-msgid "dataTypeStandardized.singular"
-msgstr "Data type"
-
-msgctxt "Variable"
-msgid "dataTypeStandardized.description"
-msgstr "Data type of the variable (standardized)"
-
-msgctxt "Variable"
-msgid "dataTypeInPrimarySource.singular"
-msgstr "Original data type"
-
-msgctxt "Variable"
-msgid "dataTypeInPrimarySource.description"
-msgstr "Data type of the variable as defined in the original primary source system"
-
 msgid "description.singular"
 msgstr "Description"
 
@@ -532,17 +516,7 @@ msgctxt "Resource"
 msgid "hasCodingSystem.description"
 msgstr "Specification of coding system in use"
 
-msgctxt "Variable"
-msgid "hasCodingSystem.description"
-msgstr "Specification of coding system in use"
-
 msgctxt "Resource"
-msgid "hasCodingSystem.singular"
-msgid_plural "hasCodingSystem.plural"
-msgstr[0] "Coding system in use"
-msgstr[1] "Coding systems in use"
-
-msgctxt "Variable"
 msgid "hasCodingSystem.singular"
 msgid_plural "hasCodingSystem.plural"
 msgstr[0] "Coding system in use"

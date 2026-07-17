@@ -15,7 +15,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - mex/model/vocabularies/coding-system.json (RKIMEX-25)
 - mex/model/vocabularies/country.json (RKIMEX-103)
-- mex/model/vocabularies/datatype-standardized.json (RKIMEX-84)
 - mex/model/vocabularies/purpose.json (RKIMEX-100)
 
 #### Added mex/model/entities/extracted-location.json and mex/model/entities/merged-location.json
@@ -63,16 +62,9 @@ A new entity type, including the following properties (RKIMEX-14):
 
 - country (RKIMEX-73)
 
-#### Added properties to mex/model/entities/extracted-variable.json and mex/model/entities/merged-variable.json
-
-- datatypeInPrimarySource (RKIMEX-85 as required)
-- datatypeStandardized (RKIMEX-84 as optional)
-- hasCodingSystem (RKIMEX-25)
-
 ### Changes
 
 - Changed files by adding translation entries for entities named in added: en.po, de.po
-- Changed file by adding vocabulary reference: concept-schemes.json
 
 ### Deprecated
 
