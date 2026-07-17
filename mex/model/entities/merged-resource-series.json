@@ -202,6 +202,17 @@
             },
             "type": "array"
         },
+        "relatedActivity": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/relation"
+            ],
+            "default": [],
+            "description": "An activity that is related to the Resource.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-activity#/identifier"
+            },
+            "type": "array"
+        },
         "spatial": {
             "closeMatch": [
                 "http://purl.org/dc/terms/spatial"

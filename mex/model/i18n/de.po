@@ -1067,9 +1067,29 @@ msgid_plural "relatedActivity.plural"
 msgstr[0] "Zusammenhängendes Projekt"
 msgstr[1] "Zusammenhängende Projekte"
 
+msgctxt "Resource"
+msgid "relatedActivity.singular"
+msgid_plural "relatedActivity.plural"
+msgstr[0] "Verknüpftes Projekt"
+msgstr[1] "Verknüpfte Projekte"
+
+msgctxt "ResourceSeries"
+msgid "relatedActivity.singular"
+msgid_plural "relatedActivity.plural"
+msgstr[0] "Verknüpftes Projekt"
+msgstr[1] "Verknüpfte Projekte"
+
 msgctxt "Activity"
 msgid "relatedActivity.description"
 msgstr "Andere(s) Projekt(e), die mit dem beschriebenen in Zusammenhang stehen"
+
+msgctxt "Resource"
+msgid "relatedActivity.description"
+msgstr "Projekt(e) in Verbindung mit dem Datenbestand/ dem Datensatz"
+
+msgctxt "Resource"
+msgid "relatedActivity.description"
+msgstr "Projekt(e) in Verbindung mit der Datensatzserie"
 
 msgctxt "Resource"
 msgid "relatedResource.singular"
