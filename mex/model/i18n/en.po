@@ -272,14 +272,6 @@ msgctxt "Variable"
 msgid "dataType.description"
 msgstr "Defined data type of the variable"
 
-msgctxt "Variable"
-msgid "dataTypeInPrimarySource.singular"
-msgstr "Original data type"
-
-msgctxt "Variable"
-msgid "dataTypeInPrimarySource.description"
-msgstr "Data type of the variable as defined in the original primary source system"
-
 msgid "description.singular"
 msgstr "Description"
 

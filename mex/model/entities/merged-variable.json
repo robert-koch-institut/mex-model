@@ -57,25 +57,6 @@
                 "http://www.w3.org/ns/csvw#datatype"
             ]
         },
-        "datatypeInPrimarySource": {
-            "anyOf": [
-                {
-                    "examples": [
-                        "integer",
-                        "string",
-                        "image",
-                        "int55",
-                        "number"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "Data type of the variable, as defined in the original primary source system."
-        },
         "description": {
             "default": [],
             "description": "A description of the variable. How the variable is defined in the primary source.",
