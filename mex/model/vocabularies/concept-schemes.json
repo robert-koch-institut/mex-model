@@ -57,14 +57,6 @@
     },
     {
         "description": {
-            "de": "Dieses Vokabular definiert Datentypen gemäß https://w3c.github.io/csvw/metadata/#datatypes.",
-            "en": "This vocabulary replicates Data Types as defined in https://w3c.github.io/csvw/metadata/#datatypes."
-        },
-        "identifier": "https://mex.rki.de/item/datatype-standardized",
-        "label": "Data type vocabulary"
-    },
-    {
-        "description": {
             "de": "Dieses Vokabular basiert auf dem Dublin Core Collection Description Frequency Vokabular, verfügbar unter https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/.",
             "en": "This vocabulary is based on the Dublin Core Collection Description Frequency Vocabulary, available at https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/."
         },
