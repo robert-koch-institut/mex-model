@@ -472,11 +472,11 @@ msgid "fundingProgram.description"
 msgstr "Das Programm, in dem das Projekt gefördert wird, z. B. Horizont Europa"
 
 msgctxt "Location"
-msgid "geonamesId.singular"
+msgid "geoNamesId.singular"
 msgstr "GeoNames ID"
 
 msgctxt "Location"
-msgid "geonamesId.description"
+msgid "geoNamesId.description"
 msgstr "Geonames ist eine freie Internet-Datenbank und findet breite Anwendung als Normdatensatz für geografische Entitäten"
 
 msgctxt "Organization"

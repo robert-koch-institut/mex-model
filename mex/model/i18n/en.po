@@ -469,11 +469,11 @@ msgid "fundingProgram.description"
 msgstr "Funding program, e.g. Horizon Europe"
 
 msgctxt "Location"
-msgid "geonamesId.singular"
+msgid "geoNamesId.singular"
 msgstr "GeoNames ID"
 
 msgctxt "Location"
-msgid "geonamesId.description"
+msgid "geoNamesId.description"
 msgstr "Geonames is a free online database and is widely used as a standard dataset for geographic entities"
 
 msgctxt "Organization"

@@ -5,7 +5,7 @@
     "additionalProperties": false,
     "description": "A spatial region or named place.",
     "properties": {
-        "geonamesId": {
+        "geoNamesId": {
             "default": [],
             "description": "Identifier in the GeoNames geographical database.",
             "exactMatch": [

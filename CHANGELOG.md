@@ -23,7 +23,7 @@ A new entitity type, including the following properties (RKIMEX-126):
 
 - officialName (required)
 - wikidataID
-- geonamesID
+- geoNamesID
 - identifier (required)
 
 #### Added mex/model/entities/extracted-resource-series.json and mex/model/entities/merged-resource-series.json
