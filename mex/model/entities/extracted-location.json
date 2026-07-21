@@ -38,11 +38,15 @@
             "pattern": "^[^\\n\\r]+$",
             "type": "string"
         },
-        "officialName": {
-            "description": "Official name of the location.",
+        "name": {
+            "closeMatch": [
+                "https://schema.org/name"
+            ],
+            "description": "Name of the location.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
+            "minItems": 1,
             "type": "array"
         },
         "stableTargetId": {
@@ -67,7 +71,7 @@
         }
     },
     "required": [
-        "officialName",
+        "name",
         "identifier",
         "identifierInPrimarySource",
         "stableTargetId"
