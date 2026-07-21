@@ -736,7 +736,6 @@
             "type": "array"
         },
         "resourceCreationMethod": {
-            "default": [],
             "description": "Method how the resource was created.",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
@@ -745,6 +744,7 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/resource-creation-method"
             },
+            "minItems": 1,
             "subPropertyOf": [
                 "http://purl.org/dc/terms/type"
             ],
