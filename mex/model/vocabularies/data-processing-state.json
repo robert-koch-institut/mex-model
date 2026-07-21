@@ -32,7 +32,9 @@
         }
     },
     {
-        "broader": "https://mex.rki.de/item/data-processing-state-2",
+        "broader": [
+            "https://mex.rki.de/item/data-processing-state-2"
+        ],
         "identifier": "https://mex.rki.de/item/data-processing-state-3",
         "inScheme": "https://mex.rki.de/item/data-processing-state",
         "notation": "2.1",
@@ -42,7 +44,9 @@
         }
     },
     {
-        "broader": "https://mex.rki.de/item/data-processing-state-2",
+        "broader": [
+            "https://mex.rki.de/item/data-processing-state-2"
+        ],
         "identifier": "https://mex.rki.de/item/data-processing-state-4",
         "inScheme": "https://mex.rki.de/item/data-processing-state",
         "notation": "2.2",
@@ -52,7 +56,9 @@
         }
     },
     {
-        "broader": "https://mex.rki.de/item/data-processing-state-2",
+        "broader": [
+            "https://mex.rki.de/item/data-processing-state-2"
+        ],
         "identifier": "https://mex.rki.de/item/data-processing-state-5",
         "inScheme": "https://mex.rki.de/item/data-processing-state",
         "notation": "2.2",

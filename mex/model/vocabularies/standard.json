@@ -6,7 +6,9 @@
         },
         "identifier": "https://mex.rki.de/item/standard-1",
         "inScheme": "https://mex.rki.de/item/standard",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/IHE-XDS.b",
+        "exactMatch": [
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/IHE-XDS.b"
+        ],
         "prefLabel": {
             "de": "IHE-XDS.b",
             "en": "IHE-XDS.b"
@@ -19,7 +21,9 @@
         },
         "identifier": "https://mex.rki.de/item/standard-2",
         "inScheme": "https://mex.rki.de/item/standard",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/FHIR",
+        "exactMatch": [
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/FHIR"
+        ],
         "prefLabel": {
             "de": "FHIR",
             "en": "FHIR"
@@ -32,7 +36,9 @@
         },
         "identifier": "https://mex.rki.de/item/standard-3",
         "inScheme": "https://mex.rki.de/item/standard",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/OPENEHR",
+        "exactMatch": [
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/OPENEHR"
+        ],
         "prefLabel": {
             "de": "openEHR",
             "en": "openEHR"
@@ -45,7 +51,9 @@
         },
         "identifier": "https://mex.rki.de/item/standard-4",
         "inScheme": "https://mex.rki.de/item/standard",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/HL7-V3",
+        "exactMatch": [
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/HL7-V3"
+        ],
         "prefLabel": {
             "de": "HL7-V3",
             "en": "HL7-V3"
@@ -58,7 +66,9 @@
         },
         "identifier": "https://mex.rki.de/item/standard-5",
         "inScheme": "https://mex.rki.de/item/standard",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/DICOM",
+        "exactMatch": [
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/DICOM"
+        ],
         "prefLabel": {
             "de": "DICOM",
             "en": "DICOM"
@@ -71,7 +81,9 @@
         },
         "identifier": "https://mex.rki.de/item/standard-6",
         "inScheme": "https://mex.rki.de/item/standard",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/CDA",
+        "exactMatch": [
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/CDA"
+        ],
         "prefLabel": {
             "de": "CDA",
             "en": "CDA"
@@ -84,7 +96,9 @@
         },
         "identifier": "https://mex.rki.de/item/standard-7",
         "inScheme": "https://mex.rki.de/item/standard",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/HL7-CCOW",
+        "exactMatch": [
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/HL7-CCOW"
+        ],
         "prefLabel": {
             "de": "HL7-CCOW",
             "en": "HL7-CCOW"
@@ -97,7 +111,9 @@
         },
         "identifier": "https://mex.rki.de/item/standard-8",
         "inScheme": "https://mex.rki.de/item/standard",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/IEEE-11073-20702",
+        "exactMatch": [
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/IEEE-11073-20702"
+        ],
         "prefLabel": {
             "de": "IEEE-11073-20702",
             "en": "IEEE-11073-20702"
@@ -110,7 +126,9 @@
         },
         "identifier": "https://mex.rki.de/item/standard-9",
         "inScheme": "https://mex.rki.de/item/standard",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/HL7-V2",
+        "exactMatch": [
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/HL7-V2"
+        ],
         "prefLabel": {
             "de": "HL7-V2",
             "en": "HL7-V2"
@@ -123,7 +141,9 @@
         },
         "identifier": "https://mex.rki.de/item/standard-10",
         "inScheme": "https://mex.rki.de/item/standard",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/ISO-13606-1",
+        "exactMatch": [
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/ISO-13606-1"
+        ],
         "prefLabel": {
             "de": "ISO-13606-1",
             "en": "ISO-13606-1"
@@ -136,7 +156,9 @@
         },
         "identifier": "https://mex.rki.de/item/standard-11",
         "inScheme": "https://mex.rki.de/item/standard",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/OMOP-CDM",
+        "exactMatch": [
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/OMOP-CDM"
+        ],
         "prefLabel": {
             "de": "OMOP-CDM",
             "en": "OMOP-CDM"
@@ -149,7 +171,9 @@
         },
         "identifier": "https://mex.rki.de/item/standard-12",
         "inScheme": "https://mex.rki.de/item/standard",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/CDISC-SDTM",
+        "exactMatch": [
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/CDISC-SDTM"
+        ],
         "prefLabel": {
             "de": "CDISC-SDTM",
             "en": "CDISC-SDTM"
@@ -162,7 +186,9 @@
         },
         "identifier": "https://mex.rki.de/item/standard-13",
         "inScheme": "https://mex.rki.de/item/standard",
-        "exactMatch": "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/ISO-13940",
+        "exactMatch": [
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/ISO-13940"
+        ],
         "prefLabel": {
             "de": "ISO-13940",
             "en": "ISO-13940"
