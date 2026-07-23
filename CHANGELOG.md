@@ -97,10 +97,6 @@ A new entity type, including the following properties (RKIMEX-14):
 
 - add examples to new properties of Resources for model update v5.0
 
-### Changes
-
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/26afa8>
-
 ## [5.0.0] - 2026-06-02
 
 #### Added Vocabulary file
