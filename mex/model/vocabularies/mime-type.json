@@ -158,9 +158,11 @@
                 "en": "fastq"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "en": "FASTQ format is a text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores. Both the sequence letter and quality score are each encoded with a single ASCII character for brevity. "
-        },
+            }
+        ],
         "exactMatch": [
             "http://maq.sourceforge.net/fastq.shtml"
         ],

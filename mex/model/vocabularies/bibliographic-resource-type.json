@@ -6,10 +6,12 @@
                 "en": "Monograph"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Eine Monographie.",
             "en": "A monograph."
-        },
+            }
+        ],
         "exactMatch": [
             "https://schema.org/Book",
             "http://www.wikidata.org/entity/Q571",
@@ -28,10 +30,12 @@
                 "en": "Book section"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Ein Teil eines Buches.",
             "en": "One of the sections into which a book is divided."
-        },
+            }
+        ],
         "exactMatch": [
             "https://schema.org/Chapter",
             "http://www.wikidata.org/entity/Q1980247",
@@ -45,10 +49,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Ein Beitrag, der im Rahmen einer akademischen Konferenz veröffentlicht wurde.",
             "en": "A document published as part of the proceedings of an academic conference."
-        },
+            }
+        ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q23927052"
         ],
@@ -69,10 +75,12 @@
         "closeMatch": [
             "http://purl.org/ontology/bibo/Thesis"
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Wissenschaftliche Arbeit zur Erlangung des Doktorgrades an einer Universität",
             "en": "Document submitted in support of candidature for a doctorate."
-        },
+            }
+        ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q187685"
         ],
@@ -93,10 +101,12 @@
         "closeMatch": [
             "http://purl.org/ontology/bibo/Thesis"
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Höchstrangige Hochschulprüfung zur Erlangung der Lehrberechtigung an einer Universitätin Deutschland.",
             "en": "Type of thesis necessary for teaching in German universities."
-        },
+            }
+        ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q1414362"
         ],
@@ -113,10 +123,12 @@
                 "de": "Wissenschaftliche Fachzeitschrift"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Zeitschrift, die regelmäßig wissenschaftliche Forschungsergebnisse veröffentlicht.",
             "en": "Periodical journal publishing scientific research."
-        },
+            }
+        ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q5633421"
         ],
@@ -134,10 +146,12 @@
                 "en": "Paper"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Beitrag, der in einer wissenschaftlichen Zeitschrift veröffentlicht wurde.",
             "en": "Article published in an academic journal."
-        },
+            }
+        ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q18918145"
         ],
@@ -149,10 +163,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Andere Art von bibliografischem Typ, der in diesem Vokabular nicht aufgeführt ist.",
             "en": "Other type of bibliographic resource, that is not described here in this vocabulary."
-        },
+            }
+        ],
         "identifier": "https://mex.rki.de/item/bibliographic-resource-type-8",
         "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
@@ -166,10 +182,12 @@
                 "de": "Plakat"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Eine Plakat mit ein Thema auf einer wissenschaftlichen Veranstaltung vermittelt wird.",
             "en": "A type of graphical image created to promote a topic on a scientific event."
-        },
+            }
+        ],
         "exactMatch": [
             "https://schema.org/Poster",
             "http://www.wikidata.org/entity/Q429785"
@@ -182,10 +200,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Version einer wissenschaftlichen Arbeit, die der Veröffentlichung in einer von Fachleuten geprüften wissenschaftlichen Zeitschrift vorausgeht.",
             "en": "Version of a scholarly or scientific paper that precedes publication in a peer-reviewed scholarly or scientific journal."
-        },
+            }
+        ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q580922"
         ],
@@ -203,10 +223,12 @@
                 "en": "Talk"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Vortrag über ein Thema in begrenzter Zeit.",
             "en": "Process of presenting a topic to an audience."
-        },
+            }
+        ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q604733"
         ],
@@ -218,10 +240,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Text, der detailliert Informationen in formeller Form wiedergibt.",
             "en": "Informational, formal, and detailed text."
-        },
+            }
+        ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q10870555"
         ],
@@ -233,10 +257,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Wissenschaftliche Arbeit, die im Rahmen eines Studiums erstellt wird.",
             "en": "Academic paper produced as part of a degree programme."
-        },
+            }
+        ],
         "identifier": "https://mex.rki.de/item/bibliographic-resource-type-13",
         "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
@@ -251,10 +277,12 @@
                 "en": "Academic thesis"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Schriftliche Abschlussarbeit eines Studiengangs an einer Hochschule oder Berufsakademie",
             "en": "General term for a document submitted in support of candidature for an academic degree."
-        },
+            }
+        ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q1266946",
             "http://purl.org/ontology/bibo/Thesis"

@@ -6,10 +6,12 @@
                 "en": "EHRS"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Elektronische Gesundheitsakten",
             "en": "Electronic Health Data from EHRs"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/EHRS"
         ],
@@ -27,10 +29,12 @@
                 "en": "MRMR"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Daten aus medizinischen Registern und Sterberegistern",
             "en": "Data from medical registries and mortality registries"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/MRMR"
         ],
@@ -48,10 +52,12 @@
                 "en": "HPML"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Andere menschliche molekulare Daten wie proteomische, transkriptomische, metabolomische, lipidomische und andere omische Daten",
             "en": "Other human molecular data such as proteomic, transcriptomic, metabolomic, lipidomic and other omic data"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/HPML"
         ],
@@ -69,10 +75,12 @@
                 "en": "IDHP"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Daten zum beruflichen Status, zur Spezialisierung und zur Einrichtung von Gesundheitsfachkräften, die an der Behandlung einer natürlichen Person beteiligt sind",
             "en": "Data on professional status, and on the specialisation and institution of health professionals involved in the treatment of a natural person"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/IDHP"
         ],
@@ -90,10 +98,12 @@
                 "en": "RMMD"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Daten aus Registern für Arzneimittel und Medizinprodukte",
             "en": "Data from registries for medicinal products and medical devices"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/RMMD"
         ],
@@ -111,10 +121,12 @@
                 "en": "DIOH"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Daten zu gesundheitsbeeinflussenden Faktoren, einschließlich sozioökonomischer, umweltbedingter und verhaltensbezogener Determinanten der Gesundheit",
             "en": "Data on factors impacting on health, including socio-economic, environmental and behavioural determinants of health"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/DIOH"
         ],
@@ -132,10 +144,12 @@
                 "en": "RQSH"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Daten aus Forschungskohorten, Fragebögen und Umfragen im Zusammenhang mit Gesundheit, nach der ersten Veröffentlichung der Ergebnisse",
             "en": "Data from research cohorts, questionnaires and surveys related to health, after the first publication of the related results"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/RQSH"
         ],
@@ -153,10 +167,12 @@
                 "en": "EMRD"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Andere Gesundheitsdaten von Medizinprodukten",
             "en": "Other health data from medical devices"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/EMRD"
         ],
@@ -174,10 +190,12 @@
                 "en": "EHCT"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Daten aus klinischen Prüfungen, klinischen Studien und klinischen Untersuchungen, die der Verordnung (EU) 536/2014, der Verordnung (EU) 2024/1938, der Verordnung (EU) 2017/745 und der Verordnung (EU) 2017/746 unterliegen",
             "en": "Data from clinical trials, clinical studies, clinical investigations and performance studies subject to Regulation (EU) No 536/2014, Regulation (EU) 2024/1938 of the European Parliament and of the Council, Regulation (EU) 2017/745 and Regulation (EU) 2017/746"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/EHCT"
         ],
@@ -195,10 +213,12 @@
                 "en": "NRPE"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Aggregierte Daten zu Gesundheitsbedürfnissen, den für die Gesundheitsversorgung zugewiesenen Ressourcen, der Bereitstellung und dem Zugang zur Gesundheitsversorgung, den Gesundheitsausgaben und der Gesundheitsfinanzierung",
             "en": "Aggregated data on healthcare needs, resources allocated to healthcare, the provision of and access to healthcare, healthcare expenditure and financing"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/NRPE"
         ],
@@ -216,10 +236,12 @@
                 "en": "PGEH"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Automatisch generierte persönliche elektronische Gesundheitsdaten durch medizinische Geräte",
             "en": "Personal electronic health data automatically generated through medical devices"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/PGEH"
         ],
@@ -237,10 +259,12 @@
                 "en": "HGPD"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Menschliche genetische, epigenomische und genomische Daten",
             "en": "Human genetic, epigenomic and genomic data"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/HGPD"
         ],
@@ -258,10 +282,12 @@
                 "en": "HRAD"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Verwaltungsdaten im Zusammenhang mit dem Gesundheitswesen, einschließlich Daten zur Abgabe, zu Ansprüchen und zur Erstattung",
             "en": "Healthcare-related administrative data, including on dispensations, reimbursement claims and reimbursements"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/HRAD"
         ],
@@ -279,10 +305,12 @@
                 "en": "RPDG"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Pathogendaten mit Auswirkungen auf die menschliche Gesundheit",
             "en": "Data on pathogens that impact human health"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/RPDG"
         ],
@@ -300,10 +328,12 @@
                 "en": "EINS"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Gesundheitsdaten aus Biobanken und zugehörigen Datenbanken",
             "en": "Health data from biobanks and associated databases"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/EINS"
         ],
@@ -321,10 +351,12 @@
                 "en": "PHDR"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Bevölkerungsbezogene Gesundheitsdatenregisterdaten (Register der öffentlichen Gesundheit)",
             "en": "Data from population-based health data registries such as public health registries"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/PHDR"
         ],
@@ -342,10 +374,12 @@
                 "en": "WELA"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Daten aus Wellness-Anwendungen",
             "en": "Data from wellness applications"
-        },
+            }
+        ],
         "exactMatch": [
             "http://13.81.34.152:1101/resource/authority/healthcategories/WELA"
         ],

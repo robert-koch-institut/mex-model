@@ -1,9 +1,11 @@
 [
     {
-        "definition": {
+        "definition": [
+            {
             "de": "IHE-Profil für den unternehmensübergreifenden Dokumentenaustausch.",
             "en": "IHE Cross-Enterprise Document Sharing profile."
-        },
+            }
+        ],
         "identifier": "https://mex.rki.de/item/standard-1",
         "inScheme": "https://mex.rki.de/item/standard",
         "exactMatch": [
@@ -15,10 +17,12 @@
         }
     },
     {
-        "definition": {
+         "definition": [
+            {
             "de": "HL7 Fast Healthcare Interoperability Resources Standard.",
             "en": "HL7 Fast Healthcare Interoperability Resources standard."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/standard-2",
         "inScheme": "https://mex.rki.de/item/standard",
         "exactMatch": [
@@ -30,10 +34,12 @@
         }
     },
     {
-        "definition": {
+         "definition": [
+            {
             "de": "OpenEHR EHR Spezifikationen (Modelle, Archetypen, APIs, usw.).",
             "en": "OpenEHR EHR specifications (models, archetypes, APIs, etc.)."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/standard-3",
         "inScheme": "https://mex.rki.de/item/standard",
         "exactMatch": [
@@ -45,10 +51,12 @@
         }
     },
     {
-        "definition": {
+         "definition": [
+            {
             "de": "HL7-Nachrichtenstandard Version 3.",
             "en": "HL7 Version 3 messaging standard."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/standard-4",
         "inScheme": "https://mex.rki.de/item/standard",
         "exactMatch": [
@@ -60,10 +68,12 @@
         }
     },
     {
-        "definition": {
+         "definition": [
+            {
             "de": "Standard für digitale Bildgebung und Kommunikation in der Medizin.",
             "en": "Digital Imaging and Communications in Medicine standard."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/standard-5",
         "inScheme": "https://mex.rki.de/item/standard",
         "exactMatch": [
@@ -75,10 +85,12 @@
         }
     },
     {
-        "definition": {
+         "definition": [
+            {
             "de": "HL7 Standard für die Architektur klinischer Dokumente.",
             "en": "HL7 Clinical Document Architecture standard."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/standard-6",
         "inScheme": "https://mex.rki.de/item/standard",
         "exactMatch": [
@@ -90,10 +102,12 @@
         }
     },
     {
-        "definition": {
+         "definition": [
+            {
             "de": "Standard der HL7-Arbeitsgruppe „Clinical Context Object“.",
             "en": "HL7 Clinical Context Object Workgroup standard."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/standard-7",
         "inScheme": "https://mex.rki.de/item/standard",
         "exactMatch": [
@@ -105,10 +119,12 @@
         }
     },
     {
-        "definition": {
+         "definition": [
+            {
             "de": "IEEE-Standard für serviceorientierte Geräteanbindung.",
             "en": "IEEE standard for Service-oriented Device Connectivity (SDC)."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/standard-8",
         "inScheme": "https://mex.rki.de/item/standard",
         "exactMatch": [
@@ -120,10 +136,12 @@
         }
     },
     {
-        "definition": {
+         "definition": [
+            {
             "de": "HL7-Nachrichtenstandard Version 2.",
             "en": "HL7 Version 2 messaging standard."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/standard-9",
         "inScheme": "https://mex.rki.de/item/standard",
         "exactMatch": [
@@ -135,10 +153,12 @@
         }
     },
     {
-        "definition": {
+         "definition": [
+            {
             "de": "Kommunikation elektronischer Patientenakten (Referenzmodell).",
             "en": "Electronic health record communication (reference model)."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/standard-10",
         "inScheme": "https://mex.rki.de/item/standard",
         "exactMatch": [
@@ -150,10 +170,12 @@
         }
     },
     {
-        "definition": {
+         "definition": [
+            {
             "de": "Specifikation für OHDSI OMOP Common Data Model.",
             "en": "OHDSI OMOP Common Data Model specification."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/standard-11",
         "inScheme": "https://mex.rki.de/item/standard",
         "exactMatch": [
@@ -165,10 +187,12 @@
         }
     },
     {
-        "definition": {
+         "definition": [
+            {
             "de": "CDISC Tabulierungsmodell für Studiendaten.",
             "en": "CDISC Study Data Tabulation Model."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/standard-12",
         "inScheme": "https://mex.rki.de/item/standard",
         "exactMatch": [
@@ -180,10 +204,12 @@
         }
     },
     {
-        "definition": {
+         "definition": [
+            {
             "de": "Konzeptsystem zur Gewährleistung der Versorgungskontinuität.",
             "en": "System of concepts to support continuity of care."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/standard-13",
         "inScheme": "https://mex.rki.de/item/standard",
         "exactMatch": [

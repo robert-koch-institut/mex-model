@@ -1,9 +1,11 @@
 [
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Internationale Klassifikation der Krankheiten, 10. Revision",
             "en": "International Classification of Diseases, 10th Revision"
-        },
+            }
+        ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q45127",
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICD-10"
@@ -16,10 +18,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Internationale Klassifikation der Krankheiten, 11. Revision",
             "en": "International Classification of Diseases, 11th Revision"
-        },
+            }
+        ],
         "exactMatch": [
             "https://www.wikidata.org/wiki/Q55695727",
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICD-11"
@@ -32,10 +36,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Internationaler Standard zur Kennzeichnung von Laborbefunden, klinischen Messwerten und diagnostischen Befunden",
             "en": "International standard for identifying laboratory observations, clinical measurements, and diagnostic reports"
-        },
+            }
+        ],
         "exactMatch": [
             "https://www.wikidata.org/wiki/Q502480",
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/LOINC"
@@ -48,10 +54,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Umfassende klinische Gesundheitswesensterminologie",
             "en": "Comprehensive clinical healthcare terminology"
-        },
+            }
+        ],
         "exactMatch": [
             "https://www.wikidata.org/wiki/Q1753883",
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/SNOMED-CT"
@@ -64,10 +72,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Standardterminologie für pharmazeutische Darreichungsformen, Verabreichungswege und -methoden, Verpackungen sowie damit verbundene Produkteigenschaften",
             "en": "Standard terminology for pharmaceutical dose forms, routes and methods of administration, packaging, and related product characteristics"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/EDQM"
         ],
@@ -79,10 +89,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "WHO-Klassifikation zur Dokumentation und Berichterstattung über Gesundheitsmaßnahmen",
             "en": "WHO classification for documenting and reporting health interventions"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICHI"
         ],
@@ -94,10 +106,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Internationale medizinische Terminologie für regulatorische Kommunikation, Kodierung und Sicherheitsberichtserstattung",
             "en": "International medical terminology used for regulatory communication, coding, and safety reporting"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/MEDDRA"
         ],
@@ -109,10 +123,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Kontrollierte Terminologie für die Identifizierung und Kodierung seltener Krankheiten",
             "en": "Controlled terminology for the identification and coding of rare diseases"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ORPHACODE"
         ],
@@ -124,10 +140,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Standardnomenklatur für Medizinprodukte",
             "en": "Standard nomenclature for medical devices"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/GMDN"
         ],
@@ -139,10 +157,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Symbole des HUGO Gene Nomenclature Committee",
             "en": "Approved gene symbols and names"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/HGNC"
         ],
@@ -154,10 +174,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Deutsche Operations- und Prozedurenschlüssel",
             "en": "German procedure coding system"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/OPS"
         ],
@@ -169,10 +191,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Einheitliche Kodierung für Maßeinheiten",
             "en": "Standardized coding for measurement units"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/UCUM"
         ],
@@ -184,10 +208,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Normalisierte Nomenklatur für Arzneimittel ",
             "en": "Normalized naming system for clinical drugs"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/RXNORM"
         ],
@@ -199,10 +225,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "WHO-Klassifikation für Arzneimittel nach Organ oder System und deren therapeutischen, pharmakologischen und chemischen Eigenschaften",
             "en": "WHO classification system for medicines according to the organ or system they act on and their therapeutic, pharmacological, and chemical properties"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ATC"
         ],
@@ -214,10 +242,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Metathesaurus für die Integration multipler biomedizinischer Vokabulare",
             "en": "Metathesaurus integrating multiple biomedical vocabularies"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/UMLS"
         ],
@@ -229,10 +259,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Klinische Anpassung der ICD-9 für die Diagnosekodierung",
             "en": "Clinical modification of ICD-9 used for diagnosis coding"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICD-9-CM"
         ],
@@ -244,10 +276,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Klassifizierung der Morphologie und Topografie in der Onkologie",
             "en": "Oncology morphology and topography classification"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICD-O-3"
         ],
@@ -259,10 +293,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "WHO-Rahmenwerk für Gesundheit und Behinderung",
             "en": "WHO framework for health and disability"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICF"
         ],
@@ -274,10 +310,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Internationale Klassifikation der Primärversorgung, 3. Ausgabe",
             "en": "Primary care classification system, 3rd Edition"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICPC-3"
         ],
@@ -289,10 +327,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Internationale Klassifikation der Primärversorgung, 2. Ausgabe",
             "en": "Primary care classification system, 2nd Edition"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICPC-2"
         ],
@@ -304,10 +344,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Kontrolliertes Vokabular für biomedizinische Literatur",
             "en": "Controlled vocabulary for biomedical literature"
-        },
+            }
+        ],
         "exactMatch": [
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/MESH"
         ],

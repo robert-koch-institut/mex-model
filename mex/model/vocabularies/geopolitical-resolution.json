@@ -1,9 +1,11 @@
 [
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Den gesamten Staat betreffend, z. B. Bundesrepublik Deutschland.",
             "en": "Relating to the entire state, e.g., the Federal Republic of Germany."
-        },
+            }
+        ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-1",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
         "prefLabel": {
@@ -12,10 +14,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Ein Land (auch Bundesland genannt) ist nach der föderalen Verfassungs­ordnung der Bundesrepublik Deutschland einer ihrer teilsouveränen Gliedstaaten.",
             "en": "Under the federal constitutional system of the Federal Republic of Germany, a state (also known as a federal state) is one of its partially sovereign constituent states."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-2",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
         "exactMatch": [
@@ -27,10 +31,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "In vier Bundesländern Deutschlands ist ein Regierungsbezirk der Bezirk einer allgemeinen Landesmittelbehörde, in der ressortverschiedene Aufgaben gebündelt werden.",
             "en": "In four of Germany's federal states, an administrative district is the jurisdiction of a general state-level authority that consolidates tasks from various departments."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-3",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
         "exactMatch": [
@@ -42,10 +48,12 @@
         }
     },
     {
-        "definition":{
+        "definition": [
+            {
             "de": "Ein Landkreis oder Kreis ist nach deutschem Kommunalrecht ein Gemeindeverband und eine Gebietskörperschaft und eine der unteren Ebenen der Verwaltungsgliederung Deutschlands.",
             "en": "Under German local government law, a Landkreis or Kreis is an association of municipalities, a local government entity, and one of the lower levels of Germany's administrative structure."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-4",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
         "exactMatch": [
@@ -57,10 +65,12 @@
         }
     },
     {
-        "definition":{
+        "definition": [
+            {
             "de": "Der Begriff Gemeinde, genauer politische Gemeinde (auch Kommune), bezeichnet Gebietskörperschaften (territoriale und hoheitliche Körperschaft des öffentlichen Rechts), die im öffentlich-verwaltungsmäßigen Aufbau von Staaten meistens die kleinste räumlich-administrative, also politisch-geografische Verwaltungseinheit darstellen.",
             "en": "The term “municipality,” or more precisely “political municipality” (also “local government”), refers to local authorities (territorial and sovereign bodies under public law) that, within the public administrative structure of states, usually constitute the smallest spatial-administrative, that is, political-geographical, administrative unit."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-5",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
         "exactMatch": [
@@ -72,10 +82,12 @@
         }
     },
     {
-         "definition":{
+         "definition": [
+            {
             "de": "Eine kreisfreie Stadt (in Baden-Württemberg als Stadtkreis bezeichnet) ist eine kommunale Gebietskörperschaft. Sie gehört keinem Landkreis an, sondern erfüllt dessen Aufgaben selbst.",
             "en": "An independent city (known as a “Stadtkreis” in Baden-Württemberg) is a local government entity. It does not belong to any county but performs the county’s functions itself."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-6",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
         "exactMatch": [
@@ -87,10 +99,12 @@
         }
     },
     {
-        "definition":{
+        "definition": [
+            {
             "de": "Die fünfstellige Postleitzahl ist eine Ziffernkombination innerhalb von Postadressen auf Briefen, Paketen oder Päckchen, die den Zustellort eingrenzt.",
             "en": "The five-digit postal code is a combination of numbers included in postal addresses on letters, packages, or small parcels that specifies the delivery location."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-7",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
         "exactMatch": [
@@ -102,10 +116,12 @@
         }
     },
     {
-        "definition":{
+        "definition": [
+            {
             "de": "Die ersten drei Ziffern der eigentlich 5-stelligen Postleitzahl.",
             "en": "First three digits of the five digit postal code."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-8",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
         "closeMatch": [
@@ -117,10 +133,12 @@
         }
     },
     {
-         "definition":{
+         "definition": [
+            {
             "de": "Exakte geografische Position auf der Erdoberfläche.",
             "en": "Exact geographical position on the Earth's surface."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-9",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
         "exactMatch": [
@@ -132,10 +150,12 @@
         }
     },
     {
-        "definition":{
+        "definition": [
+            {
             "de": "Region oder Gebiet, das nicht einer der anderen geopolitischen Einordnungskategorien zugeordnet werden kann.",
             "en": "A region or area that cannot be classified under any of the other geopolitical categories."
-        },
+        }
+        ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-10",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
         "prefLabel": {

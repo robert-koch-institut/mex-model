@@ -6,10 +6,12 @@
                 "en": "RESTful API"
             }
         ],
-        "definition": {
+        "definition": [
+            {
             "de": "Representational State Transfer: Softwarearchitektur verteilter Systemen, insbesondere für Webservices.",
             "en": "Representational State Transfer: Software architectural style for decoupled components, especially web services."
-        },
+            }
+        ],
         "identifier": "https://mex.rki.de/item/api-type-1",
         "inScheme": "https://mex.rki.de/item/api-type",
         "prefLabel": {
@@ -18,10 +20,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Simple Object Access Protocol: Netzwerkprotokoll, mit dessen Hilfe Daten zwischen Systemen ausgetauscht werden können.",
             "en": "Simple Object Access Protocol: Messaging protocol specification for exchanging data in the implementation of web services in computer networks."
-        },
+            }
+        ],
         "identifier": "https://mex.rki.de/item/api-type-2",
         "inScheme": "https://mex.rki.de/item/api-type",
         "prefLabel": {
@@ -30,10 +34,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Schnittstelle für SPARQL zur Abfrage und Manipulation von Daten im RDF format.",
             "en": "Interface for SPARQL to retrieve and manipulate data in RDF format."
-        },
+            }
+        ],
         "identifier": "https://mex.rki.de/item/api-type-3",
         "inScheme": "https://mex.rki.de/item/api-type",
         "prefLabel": {
@@ -42,10 +48,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Nicht standardisierte Schnittstelle.",
             "en": "Non-standardized interface."
-        },
+            }
+        ],
         "identifier": "https://mex.rki.de/item/api-type-4",
         "inScheme": "https://mex.rki.de/item/api-type",
         "prefLabel": {
@@ -54,10 +62,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Remote Procedure Call: Client-Server Interaktionstechnik zur Realisierung von Interprozesskommunikation.",
             "en": "Remote Procedure Call: Form of client-server interaction, typically implemented via a request-response message-passing system."
-        },
+            }
+        ],
         "identifier": "https://mex.rki.de/item/api-type-5",
         "inScheme": "https://mex.rki.de/item/api-type",
         "prefLabel": {
@@ -66,10 +76,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Open-Source-Datenabfrage- und Manipulationssprache und Laufzeitsystem zum Beantworten von Abfragen mit vorhandenen Daten.",
             "en": "Open-source data query and manipulation language for APIs, and runtime for fulfilling queries with existing data."
-        },
+            }
+        ],
         "identifier": "https://mex.rki.de/item/api-type-6",
         "inScheme": "https://mex.rki.de/item/api-type",
         "prefLabel": {
@@ -78,10 +90,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Nicht näher definierter oder unbekannter API-Typ.",
             "en": "Undefined or unknown API type."
-        },
+            }
+        ],
         "identifier": "https://mex.rki.de/item/api-type-7",
         "inScheme": "https://mex.rki.de/item/api-type",
         "prefLabel": {

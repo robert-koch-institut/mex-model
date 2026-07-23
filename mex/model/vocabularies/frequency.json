@@ -1,9 +1,11 @@
 [
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet alle drei Jahre statt.",
             "en": "The event occurs every three years."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/triennial",
             "http://publications.europa.eu/resource/authority/frequency/TRIENNIAL"
@@ -16,10 +18,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet alle zwei Jahre statt.",
             "en": "The event occurs every two years."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/biennial",
             "http://publications.europa.eu/resource/authority/frequency/BIENNIAL"
@@ -32,10 +36,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet einmal im Jahr statt.",
             "en": "The event occurs once a year."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/annual",
             "http://publications.europa.eu/resource/authority/frequency/ANNUAL"
@@ -48,10 +54,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet zweimal im Jahr statt.",
             "en": "The event occurs twice a year."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/semiannual",
             "https://publications.europa.eu/resource/authority/frequency/ANNUAL_2"
@@ -64,10 +72,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet dreimal im Jahr statt.",
             "en": "The event occurs three times a year."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/threeTimesAYear",
             "https://publications.europa.eu/resource/authority/frequency/ANNUAL_3"
@@ -80,10 +90,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet alle drei Monate statt.",
             "en": "The event occurs every three months."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/quarterly",
             "http://publications.europa.eu/resource/authority/frequency/QUARTERLY"
@@ -96,10 +108,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet alle zwei Monate statt.",
             "en": "The event occurs every two months."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/bimonthly",
             "http://publications.europa.eu/resource/authority/frequency/BIMONTHLY"
@@ -112,10 +126,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet einmal im Monat statt.",
             "en": "The event occurs once a month."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/monthly",
             "http://publications.europa.eu/resource/authority/frequency/MONTHLY"
@@ -128,10 +144,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet zweimal im Monat statt.",
             "en": "The event occurs twice a month."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/semimonthly",
             "http://publications.europa.eu/resource/authority/frequency/MONTHLY_2"
@@ -144,10 +162,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet alle zwei Wochen statt.",
             "en": "The event occurs every two weeks."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/biweekly",
             "http://publications.europa.eu/resource/authority/frequency/BIWEEKLY"
@@ -160,10 +180,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet dreimal im Monat statt.",
             "en": "The event occurs three times a month."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/threeTimesAMonth",
             "http://publications.europa.eu/resource/authority/frequency/MONTHLY_3"
@@ -176,10 +198,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet einmal in der Woche statt.",
             "en": "The event occurs once a week."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/weekly",
             "http://publications.europa.eu/resource/authority/frequency/WEEKLY"
@@ -192,10 +216,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet zweimal in der Woche statt.",
             "en": "The event occurs twice a week."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/semiweekly",
             "http://publications.europa.eu/resource/authority/frequency/WEEKLY_2"
@@ -208,10 +234,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet dreimal in der Woche statt.",
             "en": "The event occurs three times a week."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/threeTimesAWeek",
             "http://publications.europa.eu/resource/authority/frequency/WEEKLY_3"
@@ -224,10 +252,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet einmal am Tag statt.",
             "en": "The event occurs once a day."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/daily",
             "http://publications.europa.eu/resource/authority/frequency/DAILY"
@@ -240,10 +270,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis wiederholt sich ununterbrochen.",
             "en": "The event repeats without interruption."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/continuous",
             "http://publications.europa.eu/resource/authority/frequency/CONT"
@@ -256,10 +288,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet unregelmäßig statt.",
             "en": "The event occurs at uneven intervals."
-        },
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/irregular",
             "http://publications.europa.eu/resource/authority/frequency/IRREG"
@@ -272,10 +306,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet in Abständen von jeweils einer Minute statt.",
             "en": "The event occurs at intervals of every minute."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/1MIN"
         ],
@@ -287,10 +323,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet in Abständen von fünf Minuten statt.",
             "en": "The event occurs at intervals of five minutes."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/5MIN"
         ],
@@ -302,10 +340,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet in Abständen von zehn Minuten statt.",
             "en": "The event occurs at intervals of ten minutes."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/10MIN"
         ],
@@ -317,10 +357,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet in Abständen von fünfzehn Minuten statt.",
             "en": "The event occurs at intervals of fifteen minutes."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/15MIN"
         ],
@@ -332,10 +374,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet in Abständen von dreißig Minuten statt.",
             "en": "The event occurs at intervals of thirty minutes."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/30MIN"
         ],
@@ -347,10 +391,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet stündlich statt.",
             "en": "The event occurs hourly."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/HOURLY"
         ],
@@ -362,10 +408,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet alle zwei Stunden statt.",
             "en": "The event occurs bihourly."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/BIHOURLY"
         ],
@@ -377,10 +425,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet alle drei Stunden statt.",
             "en": "The event occurs trihourly."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/TRIHOURLY"
         ],
@@ -392,10 +442,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet alle zwölf Stunden statt.",
             "en": "The event occurs every twelve hours."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/12HRS"
         ],
@@ -407,10 +459,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet zwei Mal täglich statt.",
             "en": "The event occurs twice a day."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/DAILY_2"
         ],
@@ -422,10 +476,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet fünf Mal pro Woche statt.",
             "en": "The event occurs five times a week."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/WEEKLY_5"
         ],
@@ -437,10 +493,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet alle vier Jahre statt.",
             "en": "The event occurs every four years."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/QUADRENNIAL"
         ],
@@ -452,10 +510,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet alle fünf Jahre statt.",
             "en": "The event occurs every five years."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/QUINQUENNIAL"
         ],
@@ -467,10 +527,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet alle sechs Jahre statt.",
             "en": "The event occurs every six years."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/SEXENNIAL"
         ],
@@ -482,10 +544,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet alle zehn Jahre statt.",
             "en": "The event occurs every ten years."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/DECENNIAL"
         ],
@@ -497,10 +561,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet alle zwanzig Jahre statt.",
             "en": "The event occurs every twenty years."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/BIDECENNIAL"
         ],
@@ -512,10 +578,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet alle dreißig Jahre statt.",
             "en": "The event occurs every thirty years."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/TRIDECENNIAL"
         ],
@@ -527,10 +595,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet im Bedarfsfall statt.",
             "en": "The event occurs as needed."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/AS_NEEDED"
         ],
@@ -542,10 +612,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis wird laufend aktualisiert.",
             "en": "The event is updated continuously."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT"
         ],
@@ -557,10 +629,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis findet nie statt.",
             "en": "The event never occurs."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/NEVER"
         ],
@@ -572,10 +646,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Es gibt keine Pläne, das Ereignis zu aktualisieren.",
             "en": "There are no plans to update the event."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/NOT_PLANNED"
         ],
@@ -587,10 +663,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis tritt mit einer anderen Art von Regelmäßigkeit auf (zum Beispiel jedes Schaltjahr).",
             "en": "The event occurs with another type of regularity (for instance, every leap year)."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/OTHER"
         ],
@@ -602,10 +680,12 @@
         }
     },
     {
-        "definition": {
+        "definition": [
+            {
             "de": "Das Ereignis tritt in unbekannten Abständen auf.",
             "en": "The event occurs with unknown regularity."
-        },
+            }
+        ],
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/UNKNOWN"
         ],
