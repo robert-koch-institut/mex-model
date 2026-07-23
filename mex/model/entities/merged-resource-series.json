@@ -134,21 +134,6 @@
                 "http://www.w3.org/ns/dcat#endDate"
             ]
         },
-        "first": {
-            "anyOf": [
-                {
-                    "$ref": "/mex/model/entities/merged-resource#/identifier"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "closeMatch": [
-                "https://www.w3.org/ns/dcat#first"
-            ],
-            "default": null,
-            "description": "The first resource in an ordered collection or series of resources."
-        },
         "hasLegalBasis": {
             "closeMatch": [
                 "https://w3id.org/dpv#hasLegalBasis"
@@ -177,21 +162,6 @@
                 "$ref": "/mex/model/fields/text"
             },
             "type": "array"
-        },
-        "last": {
-            "anyOf": [
-                {
-                    "$ref": "/mex/model/entities/merged-resource#/identifier"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "closeMatch": [
-                "https://www.w3.org/ns/dcat#last"
-            ],
-            "default": null,
-            "description": "The last resource in an ordered collection or series of resources."
         },
         "publisher": {
             "default": [],

@@ -422,6 +422,28 @@
             },
             "type": "array"
         },
+        "inSeriesFirstResource": {
+            "closeMatch": [
+                "https://www.w3.org/ns/dcat#first"
+            ],
+            "default": [],
+            "description": "The first resource in an ordered collection or series of resources.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource-series#/identifier"
+            },
+            "type": "array"
+        },
+        "inSeriesLastResource": {
+            "closeMatch": [
+                "https://www.w3.org/ns/dcat#last"
+            ],
+            "default": [],
+            "description": "The last resource in an ordered collection or series of resources.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource-series#/identifier"
+            },
+            "type": "array"
+        },
         "instrumentToolOrApparatus": {
             "default": [],
             "description": "Instrument, tool, or apparatus used in the research, analysis, observation, or processing of the object that is the subject of this resource.",
