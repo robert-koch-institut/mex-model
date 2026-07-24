@@ -12,11 +12,11 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#accessService"
             ],
-            "default": [],
             "description": "A platform from which the resource series can be accessed.",
             "items": {
                 "$ref": "/mex/model/entities/merged-access-platform#/identifier"
             },
+            "minItems": 1,
             "type": "array"
         },
         "accrualPeriodicity": {
