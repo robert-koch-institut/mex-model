@@ -1007,13 +1007,25 @@
             "type": "array"
         },
         "version": {
+            "anyOf": [
+                {
+                    "examples": [
+                        "v1",
+                        "2023-01-16",
+                        "Schema 9"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
             "closeMatch": [
                 "https://www.w3.org/ns/dcat#version"
             ],
             "default": null,
             "description": "The version indicator (name or identifier) of a resource.",
-            "maxLength": 100,
-            "type": "string"
+            "maxLength": 100
         },
         "wasGeneratedBy": {
             "anyOf": [
