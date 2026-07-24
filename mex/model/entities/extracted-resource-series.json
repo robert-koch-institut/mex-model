@@ -61,6 +61,9 @@
                     },
                     {
                         "$ref": "/mex/model/entities/merged-contact-point#/identifier"
+                    },
+                    {
+                        "$ref": "/mex/model/entities/merged-person#/identifier"
                     }
                 ]
             },
@@ -71,7 +74,6 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/description"
             ],
-            "default": [],
             "description": "A text describing the nature of the resource series.",
             "items": {
                 "$ref": "/mex/model/fields/text"
@@ -149,14 +151,7 @@
             "default": [],
             "description": "The legal basis used to justify processing of personal data. Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions which can be represented using dpv:hasJurisdiction or dpv:hasLaw. Legal basis can be used without such declarations, e.g. 'Consent', however their interpretation will require association with a law, e.g. 'EU GDPR'.",
             "items": {
-                "anyOf": [
-                    {
-                        "$ref": "/mex/model/fields/text"
-                    },
-                    {
-                        "$ref": "/mex/model/fields/link"
-                    }
-                ]
+                "$ref": "/mex/model/fields/text"
             },
             "type": "array"
         },
@@ -272,6 +267,7 @@
         }
     },
     "required": [
+        "contact",
         "description",
         "hadPrimarySource",
         "identifier",
