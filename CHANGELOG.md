@@ -14,7 +14,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Added Vocabulary file
 
 - mex/model/vocabularies/coding-system.json (RKIMEX-25)
-- mex/model/vocabularies/country.json (RKIMEX-103)
 - mex/model/vocabularies/purpose.json (RKIMEX-100)
 
 #### Added mex/model/entities/extracted-resource-series.json and mex/model/entities/merged-resource-series.json
@@ -48,10 +47,6 @@ A new entity type, including the following properties (RKIMEX-14):
 - landingPage (RKIMEX-27)
 - version (RKIMEX-111)
 - hasCodingSystem (RKIMEX-25)
-
-#### Added properties to mex/model/entities/extracted-organization.json and mex/model/entities/merged-organization.json
-
-- country (RKIMEX-73)
 
 ### Changes
 
