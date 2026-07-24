@@ -21,6 +21,14 @@
     },
     {
         "description": {
+            "de": "Dieses kontrollierte Vokabular definiert die für die beschriebene Ressource verwendeten Kodierungssysteme.",
+            "en": "This controlled vocabulary defines the coding systems in use for the described resource."
+        },
+        "identifier": "https://mex.rki.de/item/coding-system",
+        "label": "Coding systems vocabulary"
+    },
+    {
+        "description": {
             "de": "Dieses Vokabular basiert auf dem W3C Standard DPV, Data Privacy Vocabulary, verfügbar unter https://w3c.github.io/dpv/2.0/dpv/. Insbesondere auf der Klasse dpv:ConsentStatus und deren Subklassen.",
             "en": "This vocabulary is based of the W3C Standard DPV, Data Privacy Vocabulary, available at https://w3c.github.io/dpv/2.0/dpv/. Specifically dpv:ConsentStatus and its subclasses."
         },
@@ -75,6 +83,10 @@
     {
         "identifier": "https://mex.rki.de/item/personal-data",
         "label": "Personal Data"
+    },
+    {
+        "identifier": "https://mex.rki.de/item/purpose",
+        "label": "Purpose vocabulary"
     },
     {
         "identifier": "https://mex.rki.de/item/resource-creation-method",

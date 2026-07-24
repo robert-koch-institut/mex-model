@@ -312,6 +312,21 @@
             ],
             "type": "array"
         },
+        "hasCodingSystem": {
+            "closeMatch": [
+                "http://healthdataportal.eu/ns/health#hasCodingSystem"
+            ],
+            "default": [],
+            "description": "Coding systems in use (i.e. ICD-10, SNOMED-CT).",
+            "items": {
+                "$ref": "/mex/model/entities/concept#/identifier",
+                "examples": [
+                    "https://mex.rki.de/item/coding-system-1"
+                ],
+                "useScheme": "https://mex.rki.de/item/coding-system"
+            },
+            "type": "array"
+        },
         "hasLegalBasis": {
             "default": [],
             "description": "The legal basis used to justify processing of personal data. Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions which can be represented using dpv:hasJurisdiction or dpv:hasLaw. Legal basis can be used without such declarations, e.g. 'Consent', however their interpretation will require association with a law, e.g. 'EU GDPR'.",
@@ -354,6 +369,17 @@
             ],
             "type": "array"
         },
+        "hasPurposeDescription": {
+            "closeMatch": [
+                "https://w3id.org/dpv#hasPurpose"
+            ],
+            "default": [],
+            "description": "A free text statement of the purpose of the processing of data or personal data.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
         "healthCategory": {
             "default": [],
             "description": "The category of electronic data for secondary use to which this resource belongs, as described in Article 51 of the Commission Regulation on the European Health Data Space.",
@@ -385,6 +411,39 @@
                 "http://purl.org/dc/elements/1.1/identifier"
             ]
         },
+        "inSeries": {
+            "closeMatch": [
+                "https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series"
+            ],
+            "default": [],
+            "description": "A resource series of which the resource is part.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource-series#/identifier"
+            },
+            "type": "array"
+        },
+        "inSeriesFirstResource": {
+            "closeMatch": [
+                "https://www.w3.org/ns/dcat#first"
+            ],
+            "default": [],
+            "description": "The first resource in an ordered collection or series of resources.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource-series#/identifier"
+            },
+            "type": "array"
+        },
+        "inSeriesLastResource": {
+            "closeMatch": [
+                "https://www.w3.org/ns/dcat#last"
+            ],
+            "default": [],
+            "description": "The last resource in an ordered collection or series of resources.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource-series#/identifier"
+            },
+            "type": "array"
+        },
         "instrumentToolOrApparatus": {
             "default": [],
             "description": "Instrument, tool, or apparatus used in the research, analysis, observation, or processing of the object that is the subject of this resource.",
@@ -413,6 +472,17 @@
             "sameAs": [
                 "http://www.w3.org/ns/dcat#keyword"
             ],
+            "type": "array"
+        },
+        "landingPage": {
+            "closeMatch": [
+                "https://www.w3.org/TR/vocab-dcat-3/#Property:resource_landing_page"
+            ],
+            "default": [],
+            "description": "A web page that provides access to the resource, its distributions and/or additional information.",
+            "items": {
+                "$ref": "/mex/model/fields/link"
+            },
             "type": "array"
         },
         "language": {
@@ -923,6 +993,15 @@
                 "http://dcat-ap.de/def/dcatde/maintainer"
             ],
             "type": "array"
+        },
+        "version": {
+            "closeMatch": [
+                "https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version"
+            ],
+            "default": null,
+            "description": "The version indicator (name or identifier) of a resource.",
+            "maxLength": 100,
+            "type": "string"
         },
         "wasGeneratedBy": {
             "anyOf": [
