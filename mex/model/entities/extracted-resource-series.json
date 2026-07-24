@@ -1,0 +1,314 @@
+{
+    "$$target": "/mex/model/entities/extracted-resource-series#/identifier",
+    "$id": "https://mex.rki.de/mex/model/entities/extracted-resource-series",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "closeMatch": [
+        "http://healthdataportal.eu/ns/health#DatasetSeries"
+    ],
+    "description": "A collection of resources that are published separately, but share some characteristics that group them.",
+    "properties": {
+        "accessPlatform": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#accessService"
+            ],
+            "default": [],
+            "description": "A platform from which the resource series can be accessed.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-access-platform#/identifier"
+            },
+            "type": "array"
+        },
+        "accrualPeriodicity": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/concept#/identifier",
+                    "examples": [
+                        "https://mex.rki.de/item/frequency-1"
+                    ],
+                    "useScheme": "https://mex.rki.de/item/frequency"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "closeMatch": [
+                "http://purl.org/dc/terms/accrualPeriodicity"
+            ],
+            "default": null,
+            "description": "The frequency with which items are added to a collection."
+        },
+        "alternativeTitle": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/alternative"
+            ],
+            "default": [],
+            "description": "An alternative name for the resource series.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
+        "contact": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#contactPoint"
+            ],
+            "description": "An agent that serves as a contact for the resource series.",
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
+                    },
+                    {
+                        "$ref": "/mex/model/entities/merged-contact-point#/identifier"
+                    }
+                ]
+            },
+            "minItems": 1,
+            "type": "array"
+        },
+        "description": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/description"
+            ],
+            "default": [],
+            "description": "A text describing the nature of the resource series.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "minItems": 1,
+            "type": "array"
+        },
+        "documentation": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/isReferencedBy"
+            ],
+            "default": [],
+            "description": "A link to a document documenting the resource series.",
+            "items": {
+                "$ref": "/mex/model/fields/link"
+            },
+            "type": "array"
+        },
+        "end": {
+            "anyOf": [
+                {
+                    "$comment": "year_month_day_time",
+                    "examples": [
+                        "2022-09-30T20:48:35Z"
+                    ],
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])T(?:[0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]Z$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year_month_day",
+                    "examples": [
+                        "2014-08-24"
+                    ],
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year_month",
+                    "examples": [
+                        "2019-03"
+                    ],
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year",
+                    "examples": [
+                        "2024"
+                    ],
+                    "pattern": "^[0-9]{4}$",
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#endDate"
+            ],
+            "default": null,
+            "description": "End date of the temporal coverage of the resource series.",
+            "maxItems": 1
+        },
+        "first": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/merged-resource#/identifier"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "closeMatch": [
+                "https://www.w3.org/ns/dcat#first"
+            ],
+            "default": null,
+            "description": "The first resource in an ordered collection or series of resources."
+        },
+        "hadPrimarySource": {
+            "$ref": "/mex/model/entities/merged-primary-source#/identifier",
+            "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30 ](http://www.w3.org/TR/2013/REC-prov-o-20130430/)).",
+            "sameAs": [
+                "http://www.w3.org/ns/prov#hadPrimarySource"
+            ]
+        },
+        "hasLegalBasis": {
+            "closeMatch": [
+                "https://w3id.org/dpv#hasLegalBasis"
+            ],
+            "default": [],
+            "description": "The legal basis used to justify processing of personal data. Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions which can be represented using dpv:hasJurisdiction or dpv:hasLaw. Legal basis can be used without such declarations, e.g. 'Consent', however their interpretation will require association with a law, e.g. 'EU GDPR'.",
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "/mex/model/fields/text"
+                    },
+                    {
+                        "$ref": "/mex/model/fields/link"
+                    }
+                ]
+            },
+            "type": "array"
+        },
+        "identifier": {
+            "$ref": "/mex/model/fields/identifier",
+            "description": "An unambiguous reference to the resource within a given context. Persistent identifiers should be provided as HTTP URIs ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
+            "readOnly": true,
+            "sameAs": [
+                "http://purl.org/dc/elements/1.1/identifier"
+            ]
+        },
+        "identifierInPrimarySource": {
+            "description": "The identifier of the item used in the primary source.",
+            "examples": [
+                "123456",
+                "item-501",
+                "D7/x4/zz.final3"
+            ],
+            "maxLength": 1000,
+            "minLength": 1,
+            "pattern": "^[^\\n\\r]+$",
+            "type": "string"
+        },
+        "keyword": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#keyword"
+            ],
+            "default": [],
+            "description": "A keyword or tag describing the resource series.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
+        "last": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/merged-resource#/identifier"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "closeMatch": [
+                "https://www.w3.org/ns/dcat#last"
+            ],
+            "default": null,
+            "description": "The last resource in an ordered collection or series of resources."
+        },
+        "publisher": {
+            "default": [],
+            "description": "The entity responsible for making the item available.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-organization#/identifier"
+            },
+            "type": "array"
+        },
+        "spatial": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/spatial"
+            ],
+            "default": [],
+            "description": "Spatial coverage of the resource series.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
+        "stableTargetId": {
+            "$ref": "/mex/model/entities/merged-resource-series#/identifier",
+            "description": "The identifier of the merged item that this extracted item belongs to.",
+            "readOnly": true
+        },
+        "start": {
+            "anyOf": [
+                {
+                    "$comment": "year_month_day_time",
+                    "examples": [
+                        "2022-09-30T20:48:35Z"
+                    ],
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])T(?:[0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]Z$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year_month_day",
+                    "examples": [
+                        "2014-08-24"
+                    ],
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year_month",
+                    "examples": [
+                        "2019-03"
+                    ],
+                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+                    "type": "string"
+                },
+                {
+                    "$comment": "year",
+                    "examples": [
+                        "2024"
+                    ],
+                    "pattern": "^[0-9]{4}$",
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#startDate"
+            ],
+            "default": null,
+            "description": "Start date of the temporal coverage of the resource series."
+        },
+        "title": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/title"
+            ],
+            "description": "The name of the resource series.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "minItems": 1,
+            "type": "array"
+        }
+    },
+    "required": [
+        "description",
+        "hadPrimarySource",
+        "identifier",
+        "identifierInPrimarySource",
+        "stableTargetId",
+        "title"
+    ],
+    "title": "Extracted Resource Series",
+    "type": "object"
+}

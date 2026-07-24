@@ -21,6 +21,14 @@
     },
     {
         "description": {
+            "de": "Dieses kontrollierte Vokabular definiert die für die beschriebene Ressource verwendeten Kodierungssysteme.",
+            "en": "This controlled vocabulary defines the coding systems in use for the described resource."
+        },
+        "identifier": "https://mex.rki.de/item/coding-system",
+        "label": "Coding systems vocabulary"
+    },
+    {
+        "description": {
             "de": "Dieses Vokabular basiert auf dem W3C Standard DPV, Data Privacy Vocabulary, verfügbar unter https://w3c.github.io/dpv/2.0/dpv/. Insbesondere auf der Klasse dpv:ConsentStatus und deren Subklassen.",
             "en": "This vocabulary is based of the W3C Standard DPV, Data Privacy Vocabulary, available at https://w3c.github.io/dpv/2.0/dpv/. Specifically dpv:ConsentStatus and its subclasses."
         },
@@ -77,6 +85,18 @@
         "label": "Personal Data"
     },
     {
+        "description": {
+            "de": "Dieses Vokabular stellt RKI-spezifische Zwecke der Datenerhebung/-erzeugung zusammen.",
+            "en": "This vocabulary compiles RKI-specific purposes of data collection and creation."
+        },
+        "identifier": "https://mex.rki.de/item/purpose",
+        "label": "Purpose vocabulary"
+    },
+    {
+        "description": {
+            "de": "Dieses Vokabular stellt RKI-spezifische Methoden der Sammlung und Generierung von Daten zusammen. Es ist erweitert mit Termen aus dem Health Activity Vokabular der EU, wie es im Kontext von HealthDCAT-AP Anwendung findet.",
+            "en": "This vocabulary compiles RKI-specific methods of data collection and creation. It is extended by the Health Activity Vocabulary provided by the EU in context of HealthDCAT-AP."
+        },
         "identifier": "https://mex.rki.de/item/resource-creation-method",
         "label": "Resource creation method vocabulary"
     },

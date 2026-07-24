@@ -1,0 +1,131 @@
+[
+    {
+        "identifier": "https://mex.rki.de/item/purpose-1",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Monitoring & Surveillance",
+            "en": "Monitoring & Surveillance"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/purpose-1",
+        "identifier": "https://mex.rki.de/item/purpose-11",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Erkennen von Trends",
+            "en": "Identifying Trends"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/purpose-1",
+        "identifier": "https://mex.rki.de/item/purpose-12",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Erkennen von ungewöhnlichen Ereignissen und Frühwarnung",
+            "en": "Detection of unusual events and early warning"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/purpose-1",
+        "identifier": "https://mex.rki.de/item/purpose-13",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Abschätzen der Krankheitslast",
+            "en": "Estimating the burden of disease"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/purpose-2",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Information & Berichterstattung ",
+            "en": "Information & Reporting"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/purpose-2",
+        "identifier": "https://mex.rki.de/item/purpose-21",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Information der Fachöffentlichkeit",
+            "en": "Information for the professional community"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/purpose-2",
+        "identifier": "https://mex.rki.de/item/purpose-22",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Information von Entscheidungsträgern",
+            "en": "Information for decision makers"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/purpose-2",
+        "identifier": "https://mex.rki.de/item/purpose-23",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Information der Bevölkerung",
+            "en": "Information for the public"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/purpose-3",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Maßnahmen & Qualitätskontrolle",
+            "en": "Measures & Quality control"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/purpose-3",
+        "identifier": "https://mex.rki.de/item/purpose-31",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Ableiten von Empfehlungen für Präventionsmaßnahmen",
+            "en": "Deriving recommendations for preventive measures"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/purpose-3",
+        "identifier": "https://mex.rki.de/item/purpose-32",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Evaluierung von Maßnahmen",
+            "en": "Evaluation of measures"
+        }
+    },
+    {
+        "broader": "https://mex.rki.de/item/purpose-3",
+        "identifier": "https://mex.rki.de/item/purpose-33",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Steuerung der Gesundheitsversorgung",
+            "en": "Healthcare governance"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/purpose-4",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Forschung",
+            "en": "Research"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/purpose-5",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Diagnostik von Erregern",
+            "en": "Pathogen diagnosis"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/purpose-6",
+        "inScheme": "https://mex.rki.de/item/purpose",
+        "prefLabel": {
+            "de": "Sonstiges",
+            "en": "Other"
+        }
+    }
+]

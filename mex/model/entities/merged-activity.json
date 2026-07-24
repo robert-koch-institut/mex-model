@@ -112,14 +112,11 @@
         },
         "externalAssociate": {
             "default": [],
-            "description": "An external institution or person, that is associated with the activity.",
+            "description": "An external institution that is associated with the activity.",
             "items": {
                 "anyOf": [
                     {
                         "$ref": "/mex/model/entities/merged-organization#/identifier"
-                    },
-                    {
-                        "$ref": "/mex/model/entities/merged-person#/identifier"
                     }
                 ]
             },

@@ -247,6 +247,9 @@
             "description": "The Digital Object Identifier (DOI) of the resource."
         },
         "end": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#endDate"
+            ],
             "default": [],
             "description": "End date of the temporal coverage of the resource.",
             "items": {
@@ -285,9 +288,6 @@
                     }
                 ]
             },
-            "sameAs": [
-                "http://www.w3.org/ns/dcat#endDate"
-            ],
             "type": "array"
         },
         "externalPartner": {
@@ -312,15 +312,37 @@
             ],
             "type": "array"
         },
+        "hasCodingSystem": {
+            "closeMatch": [
+                "http://healthdataportal.eu/ns/health#hasCodingSystem"
+            ],
+            "default": [],
+            "description": "Coding systems in use (i.e. ICD-10, SNOMED-CT).",
+            "items": {
+                "$ref": "/mex/model/entities/concept#/identifier",
+                "examples": [
+                    "https://mex.rki.de/item/coding-system-1"
+                ],
+                "useScheme": "https://mex.rki.de/item/coding-system"
+            },
+            "type": "array"
+        },
         "hasLegalBasis": {
+            "closeMatch": [
+                "https://w3id.org/dpv#hasLegalBasis"
+            ],
             "default": [],
             "description": "The legal basis used to justify processing of personal data. Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions which can be represented using dpv:hasJurisdiction or dpv:hasLaw. Legal basis can be used without such declarations, e.g. 'Consent', however their interpretation will require association with a law, e.g. 'EU GDPR'.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "anyOf": [
+                    {
+                        "$ref": "/mex/model/fields/text"
+                    },
+                    {
+                        "$ref": "/mex/model/fields/link"
+                    }
+                ]
             },
-            "sameAs": [
-                "https://w3id.org/dpv#hasLegalBasis"
-            ],
             "type": "array"
         },
         "hasPersonalData": {
@@ -343,15 +365,37 @@
             ]
         },
         "hasPurpose": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
+            "closeMatch": [
+                "https://w3id.org/dpv#hasPurpose"
+            ],
+            "default": [],
+            "description": "A controlled list of types of purposes for which the data was originally collected.",
+            "items": {
+                "$ref": "/mex/model/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/purpose"
+            },
+            "type": "array"
+        },
+        "hasPurposeDescription": {
+            "closeMatch": [
+                "https://w3id.org/dpv#hasPurpose"
+            ],
             "default": [],
             "description": "A free text statement of the purpose of the processing of data or personal data.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "sameAs": [
-                "https://w3id.org/dpv#hasPurpose"
+            "type": "array"
+        },
+        "hasVersion": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#hasVersion"
             ],
+            "default": [],
+            "description": "A related Resource that is a version, edition, or adaptation of the described Resource.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
+            },
             "type": "array"
         },
         "healthCategory": {
@@ -385,6 +429,17 @@
                 "http://purl.org/dc/elements/1.1/identifier"
             ]
         },
+        "inSeries": {
+            "closeMatch": [
+                "https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_in_series"
+            ],
+            "default": [],
+            "description": "A resource series of which the resource is part.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource-series#/identifier"
+            },
+            "type": "array"
+        },
         "instrumentToolOrApparatus": {
             "default": [],
             "description": "Instrument, tool, or apparatus used in the research, analysis, observation, or processing of the object that is the subject of this resource.",
@@ -413,6 +468,17 @@
             "sameAs": [
                 "http://www.w3.org/ns/dcat#keyword"
             ],
+            "type": "array"
+        },
+        "landingPage": {
+            "closeMatch": [
+                "https://www.w3.org/TR/vocab-dcat-3/#Property:resource_landing_page"
+            ],
+            "default": [],
+            "description": "A web page that provides access to the resource, its distributions and/or additional information.",
+            "items": {
+                "$ref": "/mex/model/fields/link"
+            },
             "type": "array"
         },
         "language": {
@@ -670,7 +736,6 @@
             "type": "array"
         },
         "resourceCreationMethod": {
-            "default": [],
             "description": "Method how the resource was created.",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
@@ -679,6 +744,7 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/resource-creation-method"
             },
+            "minItems": 1,
             "subPropertyOf": [
                 "http://purl.org/dc/terms/type"
             ],
@@ -767,6 +833,9 @@
             "type": "array"
         },
         "start": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#startDate"
+            ],
             "default": [],
             "description": "Start date of the temporal coverage of the resource.",
             "items": {
@@ -805,9 +874,6 @@
                     }
                 ]
             },
-            "sameAs": [
-                "http://www.w3.org/ns/dcat#startDate"
-            ],
             "type": "array"
         },
         "stateOfDataProcessing": {
@@ -924,6 +990,15 @@
             ],
             "type": "array"
         },
+        "version": {
+            "closeMatch": [
+                "https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version"
+            ],
+            "default": null,
+            "description": "The version indicator (name or identifier) of a resource.",
+            "maxLength": 100,
+            "type": "string"
+        },
         "wasGeneratedBy": {
             "anyOf": [
                 {
@@ -942,6 +1017,7 @@
         "accessRestriction",
         "contact",
         "identifier",
+        "resourceCreationMethod",
         "theme",
         "title",
         "unitInCharge"

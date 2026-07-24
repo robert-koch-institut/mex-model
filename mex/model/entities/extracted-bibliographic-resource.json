@@ -3,53 +3,59 @@
     "$id": "https://mex.rki.de/mex/model/entities/extracted-bibliographic-resource",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "closeMatch": [
+        "http://purl.org/dc/terms/BibliographicResource"
+    ],
     "description": "A book, article, or other documentary resource.",
     "properties": {
         "abstract": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/abstract"
+            ],
             "default": [],
             "description": "An account of the publication.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "sameAs": [
-                "http://purl.org/dc/terms/abstract"
-            ],
             "type": "array"
         },
         "accessRestriction": {
             "$ref": "/mex/model/entities/concept#/identifier",
+            "closeMatch": [
+                "http://purl.org/dc/terms/accessRights"
+            ],
             "description": "Indicates how access to the publication is restricted.",
             "examples": [
                 "https://mex.rki.de/item/access-restriction-1"
             ],
-            "sameAs": [
-                "http://purl.org/dc/terms/accessRights"
-            ],
             "useScheme": "https://mex.rki.de/item/access-restriction"
         },
         "alternateIdentifier": {
+            "closeMatch": [
+                "http://datacite.org/schema/kernel-4/alternateIdentifier"
+            ],
             "default": [],
             "description": "Another identifier used for the reference.",
             "items": {
                 "type": "string"
             },
-            "sameAs": [
-                "http://datacite.org/schema/kernel-4/alternateIdentifier"
-            ],
             "type": "array"
         },
         "alternativeTitle": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/alternative"
+            ],
             "default": [],
             "description": "Another title for the publication.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "sameAs": [
-                "http://purl.org/dc/terms/alternative"
-            ],
             "type": "array"
         },
         "bibliographicResourceType": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/type"
+            ],
             "default": [],
             "description": "The type of bibliographic resource.",
             "items": {
@@ -59,31 +65,28 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/bibliographic-resource-type"
             },
-            "subPropertyOf": [
-                "http://purl.org/dc/terms/type"
-            ],
             "type": "array"
         },
         "contributingUnit": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/contributor"
+            ],
             "default": [],
             "description": "An organizational unit of RKI, that is contributing to the publication.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
             },
-            "subPropertyOf": [
-                "http://purl.org/dc/terms/contributor"
-            ],
             "type": "array"
         },
         "creator": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/creator"
+            ],
             "description": "The author of the publication.",
             "items": {
                 "$ref": "/mex/model/entities/merged-person#/identifier"
             },
             "minItems": 1,
-            "sameAs": [
-                "http://purl.org/dc/terms/creator"
-            ],
             "type": "array"
         },
         "distribution": {
@@ -133,41 +136,41 @@
             "description": "The edition of the publication."
         },
         "editor": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/contributor"
+            ],
             "default": [],
             "description": "The editor of the publication.",
             "items": {
                 "$ref": "/mex/model/entities/merged-person#/identifier"
             },
-            "sameAs": [
-                "http://purl.org/dc/terms/contributor"
-            ],
             "type": "array"
         },
         "editorOfSeries": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/contributor"
+            ],
             "default": [],
             "description": "The editor of the series.",
             "items": {
                 "$ref": "/mex/model/entities/merged-person#/identifier"
             },
-            "sameAs": [
-                "http://purl.org/dc/terms/contributor"
-            ],
             "type": "array"
         },
         "hadPrimarySource": {
             "$ref": "/mex/model/entities/merged-primary-source#/identifier",
-            "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30 ](http://www.w3.org/TR/2013/REC-prov-o-20130430/)).",
-            "sameAs": [
+            "closeMatch": [
                 "http://www.w3.org/ns/prov#hadPrimarySource"
-            ]
+            ],
+            "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30 ](http://www.w3.org/TR/2013/REC-prov-o-20130430/))."
         },
         "identifier": {
             "$ref": "/mex/model/fields/identifier",
-            "description": "An unambiguous reference to the resource within a given context. Persistent identifiers should be provided as HTTP URIs ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
-            "readOnly": true,
-            "sameAs": [
+            "closeMatch": [
                 "http://purl.org/dc/elements/1.1/identifier"
-            ]
+            ],
+            "description": "An unambiguous reference to the resource within a given context. Persistent identifiers should be provided as HTTP URIs ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
+            "readOnly": true
         },
         "identifierInPrimarySource": {
             "description": "The identifier of the item used in the primary source.",
@@ -182,6 +185,9 @@
             "type": "string"
         },
         "isbnIssn": {
+            "closeMatch": [
+                "http://datacite.org/schema/kernel-4/alternateIdentifier"
+            ],
             "default": [],
             "description": "Either the ISBN (for books) or ISSN (for periodicals) of the publication.",
             "items": {
@@ -199,9 +205,6 @@
                 ],
                 "type": "string"
             },
-            "sameAs": [
-                "http://datacite.org/schema/kernel-4/alternateIdentifier"
-            ],
             "type": "array"
         },
         "issue": {
@@ -260,11 +263,11 @@
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Date of formal issuance of the publication ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
-            "sameAs": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/created"
-            ]
+            ],
+            "default": null,
+            "description": "Date of formal issuance of the publication ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/))."
         },
         "journal": {
             "default": [],
@@ -275,17 +278,20 @@
             "type": "array"
         },
         "keyword": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#keyword"
+            ],
             "default": [],
             "description": "A keyword or tag describing the resource ([DCAT, 2020-02-04](https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/)).",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "sameAs": [
-                "http://www.w3.org/ns/dcat#keyword"
-            ],
             "type": "array"
         },
         "language": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/language"
+            ],
             "default": [],
             "description": "The language in which the publication was written.",
             "items": {
@@ -295,9 +301,6 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/language"
             },
-            "sameAs": [
-                "http://purl.org/dc/terms/language"
-            ],
             "type": "array"
         },
         "license": {
@@ -313,11 +316,11 @@
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "A legal document giving official permission to do something with the publication ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
-            "sameAs": [
+            "closeMatch": [
                 "http://purl.org/dc/terms/license"
-            ]
+            ],
+            "default": null,
+            "description": "A legal document giving official permission to do something with the publication ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/))."
         },
         "pages": {
             "anyOf": [
@@ -371,17 +374,17 @@
                     "type": "null"
                 }
             ],
+            "closeMatch": "http://datacite.org/schema/kernel-4/publicationYear",
             "default": null,
-            "description": "The year in which the publication was issued.",
-            "sameAs": "http://datacite.org/schema/kernel-4/publicationYear"
+            "description": "The year in which the publication was issued."
         },
         "publisher": {
+            "closeMatch": "http://purl.org/dc/terms/publisher",
             "default": [],
             "description": "An entity responsible for making the publication available ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
             "items": {
                 "$ref": "/mex/model/entities/merged-organization#/identifier"
             },
-            "sameAs": "http://purl.org/dc/terms/publisher",
             "type": "array"
         },
         "repositoryURL": {
@@ -418,47 +421,47 @@
             "readOnly": true
         },
         "subtitle": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/title"
+            ],
             "default": [],
             "description": "The subtitle of the publication.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "subPropertyOf": [
-                "http://purl.org/dc/terms/title"
-            ],
             "type": "array"
         },
         "title": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/title"
+            ],
             "description": "The full title of the publication.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
             "minItems": 1,
-            "sameAs": [
-                "http://purl.org/dc/terms/title"
-            ],
             "type": "array"
         },
         "titleOfBook": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/title"
+            ],
             "default": [],
             "description": "The title of the book in which the book section is published.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "subPropertyOf": [
-                "http://purl.org/dc/terms/title"
-            ],
             "type": "array"
         },
         "titleOfSeries": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/title"
+            ],
             "default": [],
             "description": "The title of the book series, the book belongs to.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "subPropertyOf": [
-                "http://purl.org/dc/terms/title"
-            ],
             "type": "array"
         },
         "volume": {
@@ -506,9 +509,6 @@
         "identifierInPrimarySource",
         "stableTargetId",
         "title"
-    ],
-    "sameAs": [
-        "http://purl.org/dc/terms/BibliographicResource"
     ],
     "title": "Extracted Bibliographic Resource",
     "type": "object"
