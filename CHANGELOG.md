@@ -14,7 +14,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Added Vocabulary file
 
 - mex/model/vocabularies/coding-system.json (RKIMEX-25)
-- mex/model/vocabularies/country.json (RKIMEX-103)
 - mex/model/vocabularies/purpose.json (RKIMEX-100)
 
 #### Added mex/model/entities/extracted-location.json and mex/model/entities/merged-location.json
