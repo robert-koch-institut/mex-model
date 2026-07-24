@@ -16,20 +16,6 @@
             ],
             "type": "array"
         },
-        "country": {
-            "closeMatch": [
-                "https://www.wikidata.org/wiki/Property:P17"
-            ],
-            "description": "Country or territory that this organization is in.",
-            "items": {
-                "$ref": "/mex/model/entities/concept#/identifier",
-                "examples": [
-                    "https://mex.rki.de/item/country-1"
-                ],
-                "useScheme": "https://mex.rki.de/item/country"
-            },
-            "type": "array"
-        },
         "geprisId": {
             "default": [],
             "description": "Identifier from GEPRIS authority file.",
