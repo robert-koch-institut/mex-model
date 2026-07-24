@@ -53,6 +53,7 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#contactPoint"
             ],
+            "default": [],
             "description": "An agent that serves as a contact for the resource series.",
             "items": {
                 "anyOf": [
@@ -67,7 +68,6 @@
                     }
                 ]
             },
-            "minItems": 1,
             "type": "array"
         },
         "description": {
@@ -267,7 +267,6 @@
         }
     },
     "required": [
-        "contact",
         "description",
         "hadPrimarySource",
         "identifier",
