@@ -85,6 +85,10 @@
         "label": "Personal Data"
     },
     {
+        "description": {
+            "de": "Dieses Vokabular umfasst die bekanntesten Zwecke der Datenverarbeitung beim RKI.",
+            "en": "This vocabulary compiles the most common known purposes of processing data at RKI."
+        },
         "identifier": "https://mex.rki.de/item/purpose",
         "label": "Purpose vocabulary"
     },
