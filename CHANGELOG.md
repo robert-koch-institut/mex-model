@@ -57,10 +57,6 @@ A new entity type, including the following properties (RKIMEX-14):
 - version (RKIMEX-111)
 - hasCodingSystem (RKIMEX-25)
 
-#### Added properties to mex/model/entities/extracted-organization.json and mex/model/entities/merged-organization.json
-
-- country (RKIMEX-73)
-
 ### Changes
 
 - Changed files by adding translation entries for entities named in added: en.po, de.po
@@ -104,10 +100,6 @@ A new entity type, including the following properties (RKIMEX-14):
 ### Added
 
 - add examples to new properties of Resources for model update v5.0
-
-### Changes
-
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/26afa8>
 
 ## [5.0.0] - 2026-06-02
 

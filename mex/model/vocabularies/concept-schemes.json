@@ -86,8 +86,8 @@
     },
     {
         "description": {
-            "de": "Dieses Vokabular stellt RKI-spezifische Zwecke der Datenerhebung/-erzeugung zusammen.",
-            "en": "This vocabulary compiles RKI-specific purposes of data collection and creation."
+            "de": "Dieses Vokabular umfasst die bekanntesten Zwecke der Datenverarbeitung beim RKI.",
+            "en": "This vocabulary compiles the most common known purposes of processing data at RKI."
         },
         "identifier": "https://mex.rki.de/item/purpose",
         "label": "Purpose vocabulary"

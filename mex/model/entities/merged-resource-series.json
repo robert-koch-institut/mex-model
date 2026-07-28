@@ -12,11 +12,11 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#accessService"
             ],
-            "default": [],
             "description": "A platform from which the resource series can be accessed.",
             "items": {
                 "$ref": "/mex/model/entities/merged-access-platform#/identifier"
             },
+            "minItems": 1,
             "type": "array"
         },
         "accrualPeriodicity": {
@@ -53,6 +53,7 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#contactPoint"
             ],
+            "default": [],
             "description": "An agent that serves as a contact for the resource series.",
             "items": {
                 "anyOf": [
@@ -61,10 +62,12 @@
                     },
                     {
                         "$ref": "/mex/model/entities/merged-contact-point#/identifier"
+                    },
+                    {
+                        "$ref": "/mex/model/entities/merged-person#/identifier"
                     }
                 ]
             },
-            "minItems": 1,
             "type": "array"
         },
         "description": {
@@ -134,21 +137,6 @@
                 "http://www.w3.org/ns/dcat#endDate"
             ]
         },
-        "first": {
-            "anyOf": [
-                {
-                    "$ref": "/mex/model/entities/merged-resource#/identifier"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "closeMatch": [
-                "https://www.w3.org/ns/dcat#first"
-            ],
-            "default": null,
-            "description": "The first resource in an ordered collection or series of resources."
-        },
         "hasLegalBasis": {
             "closeMatch": [
                 "https://w3id.org/dpv#hasLegalBasis"
@@ -156,14 +144,7 @@
             "default": [],
             "description": "The legal basis used to justify processing of personal data. Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions which can be represented using dpv:hasJurisdiction or dpv:hasLaw. Legal basis can be used without such declarations, e.g. 'Consent', however their interpretation will require association with a law, e.g. 'EU GDPR'.",
             "items": {
-                "anyOf": [
-                    {
-                        "$ref": "/mex/model/fields/text"
-                    },
-                    {
-                        "$ref": "/mex/model/fields/link"
-                    }
-                ]
+                "$ref": "/mex/model/fields/text"
             },
             "type": "array"
         },
@@ -177,21 +158,6 @@
                 "$ref": "/mex/model/fields/text"
             },
             "type": "array"
-        },
-        "last": {
-            "anyOf": [
-                {
-                    "$ref": "/mex/model/entities/merged-resource#/identifier"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "closeMatch": [
-                "https://www.w3.org/ns/dcat#last"
-            ],
-            "default": null,
-            "description": "The last resource in an ordered collection or series of resources."
         },
         "publisher": {
             "default": [],

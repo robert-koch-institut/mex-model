@@ -440,6 +440,28 @@
             },
             "type": "array"
         },
+        "inSeriesFirstResource": {
+            "closeMatch": [
+                "https://www.w3.org/ns/dcat#first"
+            ],
+            "default": [],
+            "description": "The first resource in an ordered collection or series of resources.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource-series#/identifier"
+            },
+            "type": "array"
+        },
+        "inSeriesLastResource": {
+            "closeMatch": [
+                "https://www.w3.org/ns/dcat#last"
+            ],
+            "default": [],
+            "description": "The last resource in an ordered collection or series of resources.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource-series#/identifier"
+            },
+            "type": "array"
+        },
         "instrumentToolOrApparatus": {
             "default": [],
             "description": "Instrument, tool, or apparatus used in the research, analysis, observation, or processing of the object that is the subject of this resource.",
@@ -991,13 +1013,25 @@
             "type": "array"
         },
         "version": {
+            "anyOf": [
+                {
+                    "examples": [
+                        "v1",
+                        "2023-01-16",
+                        "Schema 9"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
             "closeMatch": [
-                "https://www.w3.org/TR/vocab-dcat-3/#Property:resource_version"
+                "https://www.w3.org/ns/dcat#version"
             ],
             "default": null,
             "description": "The version indicator (name or identifier) of a resource.",
-            "maxLength": 100,
-            "type": "string"
+            "maxLength": 100
         },
         "wasGeneratedBy": {
             "anyOf": [
