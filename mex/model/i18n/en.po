@@ -474,7 +474,7 @@ msgstr "GeoNames ID"
 
 msgctxt "Location"
 msgid "geoNamesId.description"
-msgstr "Geonames is a free online database and is widely used as a standard dataset for geographic entities"
+msgstr "GeoNames is a online database of places worldwide. It helps standardize place names and ensures they are recorded consistently"
 
 msgctxt "Organization"
 msgid "geprisId.singular"
