@@ -52,7 +52,9 @@
             "type": "array"
         },
         "fullName": {
-            "default": [],
+            "closeMatch": [
+                "http://xmlns.com/foaf/0.1/name"
+            ],
             "description": "The full name of a person. Also used if the naming schema (given name and family name) does not apply to the name.",
             "items": {
                 "examples": [
@@ -62,9 +64,7 @@
                 ],
                 "type": "string"
             },
-            "sameAs": [
-                "http://xmlns.com/foaf/0.1/name"
-            ],
+            "minItems": 1,
             "type": "array"
         },
         "givenName": {
@@ -153,6 +153,7 @@
         }
     },
     "required": [
+        "fullName",
         "identifier"
     ],
     "sameAs": [

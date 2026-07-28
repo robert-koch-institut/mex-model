@@ -16,6 +16,17 @@
             ],
             "type": "array"
         },
+        "country": {
+            "closeMatch": [
+                "https://www.wikidata.org/wiki/Property:P17"
+            ],
+            "default": [],
+            "description": "Country or territory that this organization is in.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-location#/identifier"
+            },
+            "type": "array"
+        },
         "geprisId": {
             "default": [],
             "description": "Identifier from GEPRIS authority file.",
