@@ -228,8 +228,8 @@
         "identifier": "https://mex.rki.de/item/bibliographic-resource-type-12",
         "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
         "prefLabel": {
-            "de": "Report",
-            "en": "Bericht"
+            "de": "Bericht",
+            "en": "Report"
         }
     },
     {

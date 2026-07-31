@@ -3,6 +3,22 @@
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "description": "Extensions to the json schema with custom properties.",
     "properties": {
+        "closeMatch": {
+            "description": "Property as defined by http://www.w3.org/2004/02/skos/core#closeMatch.",
+            "items": {
+                "format": "uri",
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "exactMatch": {
+            "description": "Property as defined by http://www.w3.org/2004/02/skos/core#exactMatch.",
+            "items": {
+                "format": "uri",
+                "type": "string"
+            },
+            "type": "array"
+        },
         "sameAs": {
             "description": "Property as defined by http://www.w3.org/2002/07/owl#sameAs.",
             "items": {

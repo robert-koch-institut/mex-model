@@ -9,7 +9,48 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- linter for po files
+
+#### Added Vocabulary file
+
+- mex/model/vocabularies/coding-system.json (RKIMEX-25)
+- mex/model/vocabularies/purpose.json (RKIMEX-100)
+
+#### Added mex/model/entities/extracted-resource-series.json and mex/model/entities/merged-resource-series.json
+
+A new entity type, including the following properties (RKIMEX-14):
+
+- accessPlatform
+- accrualPeriodicity
+- alternativeTitle
+- contact
+- description (required)
+- documentation
+- end
+- hasLegalBasis
+- keyword
+- publisher
+- spatial
+- start
+- theme
+- title (required)
+
+#### Added properties to mex/model/extension/definition.json
+
+- closeMatch (RKIMEX-116)
+- exactMatch (RKIMEX-116)
+
+#### Added properties to mex/model/entities/extracted-resource.json and mex/model/entities/merged-resource.json
+
+- hasPurposeDescription (RKIMEX-106)
+- inSeries (RKIMEX-13)
+- landingPage (RKIMEX-27)
+- version (RKIMEX-111)
+- hasCodingSystem (RKIMEX-25)
+
 ### Changes
+
+- Changed files by adding translation entries for entities named in added: en.po, de.po
 
 ### Deprecated
 
@@ -48,11 +89,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [5.0.1] - 2026-06-05
 
 ### Added
+
 - add examples to new properties of Resources for model update v5.0
-
-### Changes
-
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/26afa8
 
 ## [5.0.0] - 2026-06-02
 
@@ -85,8 +123,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed files by adding translation entries for entities named in added: en.po, de.po
 - Changed file by adding vocabulary reference: concept-schemes.json
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/57105a
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/dd987e
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/57105a>
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/dd987e>
 - dependency update(2026-06-01)
 
 ### Fixed
@@ -99,12 +137,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/43f715
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/efc70e
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/48ce42
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/172aac
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/491e2d
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/0c16a6
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/43f715>
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/efc70e>
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/48ce42>
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/172aac>
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/491e2d>
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/0c16a6>
 
 ### Fixed
 
@@ -120,14 +158,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changes
 
 - add translations for contact point and organizational unit (alternativeName, name) in po files
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/81bc5b
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/81bc5b>
 
 ## [4.9.1] - 2026-01-23
 
 ### Changes
 
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/33ca3a
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/ad26e4
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/33ca3a>
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/ad26e4>
 
 ## [4.9.0] - 2026-01-22
 
@@ -137,7 +175,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/8c253f
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/8c253f>
 - lock file maintenance (2026-01-12)
 - switch package manager from pdm to uv
 
@@ -149,8 +187,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/203934
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/c5ff3e
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/203934>
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/c5ff3e>
 - lock file maintenance (2026-01-05)
 - Update actions/cache action to v5
 
@@ -180,9 +218,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/7c3e75
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/7c3e75>
 - split extracted item and merged item schemas
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/a67c71
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/a67c71>
 - lock file maintenance (2025-11-24)
 - narrow python version to 3.11 to prevent dependency issues
 
@@ -204,8 +242,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changes
 
 - Removed .mo conversion from release action due to runtime conversion in mex-editor
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/6009e2
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/3c389d
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/6009e2>
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/3c389d>
 
 ## [4.4.0] - 2025-10-22
 
