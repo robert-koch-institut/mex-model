@@ -43,6 +43,7 @@ Extracted
 .. jsonschema:: ../mex/model/entities/extracted-person.json
     :encoding: utf8
 .. jsonschema:: ../mex/model/entities/extracted-primary-source.json
+.. jsonschema:: ../mex/model/entities/extracted-resource-series.json
 .. jsonschema:: ../mex/model/entities/extracted-resource.json
 .. jsonschema:: ../mex/model/entities/extracted-variable-group.json
 .. jsonschema:: ../mex/model/entities/extracted-variable.json
@@ -61,6 +62,7 @@ Merged
 .. jsonschema:: ../mex/model/entities/merged-person.json
     :encoding: utf8
 .. jsonschema:: ../mex/model/entities/merged-primary-source.json
+.. jsonschema:: ../mex/model/entities/merged-resource-series.json
 .. jsonschema:: ../mex/model/entities/merged-resource.json
 .. jsonschema:: ../mex/model/entities/merged-variable-group.json
 .. jsonschema:: ../mex/model/entities/merged-variable.json
