@@ -1,7 +1,7 @@
 fail_fast: false
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.0
+    rev: v0.16.1
     hooks:
       - id: ruff-check
         name: ruff-check
@@ -33,7 +33,7 @@ repos:
         additional_dependencies: [dennis]
         files: \.po$
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.12.0
+    rev: 0.12.1
     hooks:
       - id: uv-lock
         name: uv
