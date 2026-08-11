@@ -53,7 +53,8 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#contactPoint"
             ],
-            "description": "An agent that serves as a contact for the resource.",
+            "default": [],
+            "description": "An agent that serves as a contact for the resource series.",
             "items": {
                 "anyOf": [
                     {
@@ -67,18 +68,17 @@
                     }
                 ]
             },
-            "minItems": 1,
             "type": "array"
         },
         "description": {
             "closeMatch": [
                 "http://purl.org/dc/terms/description"
             ],
-            "default": [],
             "description": "A text describing the nature of the resource series.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
+            "minItems": 1,
             "type": "array"
         },
         "documentation": {
@@ -266,7 +266,7 @@
         }
     },
     "required": [
-        "contact",
+        "description",
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
