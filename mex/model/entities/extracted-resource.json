@@ -92,9 +92,9 @@
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
                 "examples": [
-                    "https://mex.rki.de/item/standard-1"
+                    "https://mex.rki.de/item/health-standard-1"
                 ],
-                "useScheme": "https://mex.rki.de/item/standard"
+                "useScheme": "https://mex.rki.de/item/health-standard"
             },
             "type": "array"
         },
