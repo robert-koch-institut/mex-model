@@ -24,7 +24,7 @@
         },
         "country": {
             "closeMatch": [
-                "https://www.wikidata.org/wiki/Property:P17"
+                "http://www.wikidata.org/entity/P17"
             ],
             "description": "Country or territory that this organization is in.",
             "items": {
