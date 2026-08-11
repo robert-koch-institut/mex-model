@@ -2,8 +2,8 @@
     {
         "definition": [
             {
-            "de": "Enthält personenbezogenen Daten nach GDPR Art.4-1 für 'personal data' und ISO/IEC 2700 für 'personally identifiable information (PII)'. In Deutschland bekannt als Datenschutzgrundverordnung (DSGVO).",
-            "en": "Contains personal data according to GDPR Art.4-1 for 'personal data' and ISO/IEC 2700 for 'personally identifiable information (PII)'. In Germany the GDPR is known as the 'Datenschutzgrundverordnung' (DSGVO)."
+                "de": "Enthält personenbezogenen Daten nach GDPR Art.4-1 für 'personal data' und ISO/IEC 2700 für 'personally identifiable information (PII)'. In Deutschland bekannt als Datenschutzgrundverordnung (DSGVO).",
+                "en": "Contains personal data according to GDPR Art.4-1 for 'personal data' and ISO/IEC 2700 for 'personally identifiable information (PII)'. In Germany the GDPR is known as the 'Datenschutzgrundverordnung' (DSGVO)."
             }
         ],
         "identifier": "https://mex.rki.de/item/personal-data-1",
@@ -16,8 +16,8 @@
     {
         "definition": [
             {
-            "de": "Enthält keine persönliche Daten nach GDPR Art.4-1 für 'personal data' und ISO/IEC 2700 für 'personally identifiable information (PII)'. In Deutschland bekannt als Datenschutzgrundverordnung (DSGVO).",
-            "en": "Contains no personal data according to GDPR Art.4-1 for 'personal data' and ISO/IEC 2700 for 'personally identifiable information (PII)'. In Germany the GDPR is known as the 'Datenschutzgrundverordnung' (DSGVO)."
+                "de": "Enthält keine persönliche Daten nach GDPR Art.4-1 für 'personal data' und ISO/IEC 2700 für 'personally identifiable information (PII)'. In Deutschland bekannt als Datenschutzgrundverordnung (DSGVO).",
+                "en": "Contains no personal data according to GDPR Art.4-1 for 'personal data' and ISO/IEC 2700 for 'personally identifiable information (PII)'. In Germany the GDPR is known as the 'Datenschutzgrundverordnung' (DSGVO)."
             }
         ],
         "identifier": "https://mex.rki.de/item/personal-data-2",

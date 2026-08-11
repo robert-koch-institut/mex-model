@@ -8,8 +8,8 @@
         ],
         "definition": [
             {
-            "de": "Elektronische Gesundheitsakten",
-            "en": "Electronic Health Data from EHRs"
+                "de": "Elektronische Gesundheitsakten",
+                "en": "Electronic Health Data from EHRs"
             }
         ],
         "exactMatch": [
@@ -31,8 +31,8 @@
         ],
         "definition": [
             {
-            "de": "Daten aus medizinischen Registern und Sterberegistern",
-            "en": "Data from medical registries and mortality registries"
+                "de": "Daten aus medizinischen Registern und Sterberegistern",
+                "en": "Data from medical registries and mortality registries"
             }
         ],
         "exactMatch": [
@@ -54,8 +54,8 @@
         ],
         "definition": [
             {
-            "de": "Andere menschliche molekulare Daten wie proteomische, transkriptomische, metabolomische, lipidomische und andere omische Daten",
-            "en": "Other human molecular data such as proteomic, transcriptomic, metabolomic, lipidomic and other omic data"
+                "de": "Andere menschliche molekulare Daten wie proteomische, transkriptomische, metabolomische, lipidomische und andere omische Daten",
+                "en": "Other human molecular data such as proteomic, transcriptomic, metabolomic, lipidomic and other omic data"
             }
         ],
         "exactMatch": [
@@ -77,8 +77,8 @@
         ],
         "definition": [
             {
-            "de": "Daten zum beruflichen Status, zur Spezialisierung und zur Einrichtung von Gesundheitsfachkräften, die an der Behandlung einer natürlichen Person beteiligt sind",
-            "en": "Data on professional status, and on the specialisation and institution of health professionals involved in the treatment of a natural person"
+                "de": "Daten zum beruflichen Status, zur Spezialisierung und zur Einrichtung von Gesundheitsfachkräften, die an der Behandlung einer natürlichen Person beteiligt sind",
+                "en": "Data on professional status, and on the specialisation and institution of health professionals involved in the treatment of a natural person"
             }
         ],
         "exactMatch": [
@@ -100,8 +100,8 @@
         ],
         "definition": [
             {
-            "de": "Daten aus Registern für Arzneimittel und Medizinprodukte",
-            "en": "Data from registries for medicinal products and medical devices"
+                "de": "Daten aus Registern für Arzneimittel und Medizinprodukte",
+                "en": "Data from registries for medicinal products and medical devices"
             }
         ],
         "exactMatch": [
@@ -123,8 +123,8 @@
         ],
         "definition": [
             {
-            "de": "Daten zu gesundheitsbeeinflussenden Faktoren, einschließlich sozioökonomischer, umweltbedingter und verhaltensbezogener Determinanten der Gesundheit",
-            "en": "Data on factors impacting on health, including socio-economic, environmental and behavioural determinants of health"
+                "de": "Daten zu gesundheitsbeeinflussenden Faktoren, einschließlich sozioökonomischer, umweltbedingter und verhaltensbezogener Determinanten der Gesundheit",
+                "en": "Data on factors impacting on health, including socio-economic, environmental and behavioural determinants of health"
             }
         ],
         "exactMatch": [
@@ -146,8 +146,8 @@
         ],
         "definition": [
             {
-            "de": "Daten aus Forschungskohorten, Fragebögen und Umfragen im Zusammenhang mit Gesundheit, nach der ersten Veröffentlichung der Ergebnisse",
-            "en": "Data from research cohorts, questionnaires and surveys related to health, after the first publication of the related results"
+                "de": "Daten aus Forschungskohorten, Fragebögen und Umfragen im Zusammenhang mit Gesundheit, nach der ersten Veröffentlichung der Ergebnisse",
+                "en": "Data from research cohorts, questionnaires and surveys related to health, after the first publication of the related results"
             }
         ],
         "exactMatch": [
@@ -169,8 +169,8 @@
         ],
         "definition": [
             {
-            "de": "Andere Gesundheitsdaten von Medizinprodukten",
-            "en": "Other health data from medical devices"
+                "de": "Andere Gesundheitsdaten von Medizinprodukten",
+                "en": "Other health data from medical devices"
             }
         ],
         "exactMatch": [
@@ -192,8 +192,8 @@
         ],
         "definition": [
             {
-            "de": "Daten aus klinischen Prüfungen, klinischen Studien und klinischen Untersuchungen, die der Verordnung (EU) 536/2014, der Verordnung (EU) 2024/1938, der Verordnung (EU) 2017/745 und der Verordnung (EU) 2017/746 unterliegen",
-            "en": "Data from clinical trials, clinical studies, clinical investigations and performance studies subject to Regulation (EU) No 536/2014, Regulation (EU) 2024/1938 of the European Parliament and of the Council, Regulation (EU) 2017/745 and Regulation (EU) 2017/746"
+                "de": "Daten aus klinischen Prüfungen, klinischen Studien und klinischen Untersuchungen, die der Verordnung (EU) 536/2014, der Verordnung (EU) 2024/1938, der Verordnung (EU) 2017/745 und der Verordnung (EU) 2017/746 unterliegen",
+                "en": "Data from clinical trials, clinical studies, clinical investigations and performance studies subject to Regulation (EU) No 536/2014, Regulation (EU) 2024/1938 of the European Parliament and of the Council, Regulation (EU) 2017/745 and Regulation (EU) 2017/746"
             }
         ],
         "exactMatch": [
@@ -215,8 +215,8 @@
         ],
         "definition": [
             {
-            "de": "Aggregierte Daten zu Gesundheitsbedürfnissen, den für die Gesundheitsversorgung zugewiesenen Ressourcen, der Bereitstellung und dem Zugang zur Gesundheitsversorgung, den Gesundheitsausgaben und der Gesundheitsfinanzierung",
-            "en": "Aggregated data on healthcare needs, resources allocated to healthcare, the provision of and access to healthcare, healthcare expenditure and financing"
+                "de": "Aggregierte Daten zu Gesundheitsbedürfnissen, den für die Gesundheitsversorgung zugewiesenen Ressourcen, der Bereitstellung und dem Zugang zur Gesundheitsversorgung, den Gesundheitsausgaben und der Gesundheitsfinanzierung",
+                "en": "Aggregated data on healthcare needs, resources allocated to healthcare, the provision of and access to healthcare, healthcare expenditure and financing"
             }
         ],
         "exactMatch": [
@@ -238,8 +238,8 @@
         ],
         "definition": [
             {
-            "de": "Automatisch generierte persönliche elektronische Gesundheitsdaten durch medizinische Geräte",
-            "en": "Personal electronic health data automatically generated through medical devices"
+                "de": "Automatisch generierte persönliche elektronische Gesundheitsdaten durch medizinische Geräte",
+                "en": "Personal electronic health data automatically generated through medical devices"
             }
         ],
         "exactMatch": [
@@ -261,8 +261,8 @@
         ],
         "definition": [
             {
-            "de": "Menschliche genetische, epigenomische und genomische Daten",
-            "en": "Human genetic, epigenomic and genomic data"
+                "de": "Menschliche genetische, epigenomische und genomische Daten",
+                "en": "Human genetic, epigenomic and genomic data"
             }
         ],
         "exactMatch": [
@@ -284,8 +284,8 @@
         ],
         "definition": [
             {
-            "de": "Verwaltungsdaten im Zusammenhang mit dem Gesundheitswesen, einschließlich Daten zur Abgabe, zu Ansprüchen und zur Erstattung",
-            "en": "Healthcare-related administrative data, including on dispensations, reimbursement claims and reimbursements"
+                "de": "Verwaltungsdaten im Zusammenhang mit dem Gesundheitswesen, einschließlich Daten zur Abgabe, zu Ansprüchen und zur Erstattung",
+                "en": "Healthcare-related administrative data, including on dispensations, reimbursement claims and reimbursements"
             }
         ],
         "exactMatch": [
@@ -307,8 +307,8 @@
         ],
         "definition": [
             {
-            "de": "Pathogendaten mit Auswirkungen auf die menschliche Gesundheit",
-            "en": "Data on pathogens that impact human health"
+                "de": "Pathogendaten mit Auswirkungen auf die menschliche Gesundheit",
+                "en": "Data on pathogens that impact human health"
             }
         ],
         "exactMatch": [
@@ -330,8 +330,8 @@
         ],
         "definition": [
             {
-            "de": "Gesundheitsdaten aus Biobanken und zugehörigen Datenbanken",
-            "en": "Health data from biobanks and associated databases"
+                "de": "Gesundheitsdaten aus Biobanken und zugehörigen Datenbanken",
+                "en": "Health data from biobanks and associated databases"
             }
         ],
         "exactMatch": [
@@ -353,8 +353,8 @@
         ],
         "definition": [
             {
-            "de": "Bevölkerungsbezogene Gesundheitsdatenregisterdaten (Register der öffentlichen Gesundheit)",
-            "en": "Data from population-based health data registries such as public health registries"
+                "de": "Bevölkerungsbezogene Gesundheitsdatenregisterdaten (Register der öffentlichen Gesundheit)",
+                "en": "Data from population-based health data registries such as public health registries"
             }
         ],
         "exactMatch": [
@@ -376,8 +376,8 @@
         ],
         "definition": [
             {
-            "de": "Daten aus Wellness-Anwendungen",
-            "en": "Data from wellness applications"
+                "de": "Daten aus Wellness-Anwendungen",
+                "en": "Data from wellness applications"
             }
         ],
         "exactMatch": [

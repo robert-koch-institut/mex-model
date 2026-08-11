@@ -2,8 +2,8 @@
     {
         "definition": [
             {
-            "de": "Der Status besagt, dass die Daten nicht prozessiert werden dürfen.",
-            "en": "States of consent that cannot be used as valid justifications for processing data."
+                "de": "Der Status besagt, dass die Daten nicht prozessiert werden dürfen.",
+                "en": "States of consent that cannot be used as valid justifications for processing data."
             }
         ],
         "exactMatch": [
@@ -23,8 +23,8 @@
     {
         "definition": [
             {
-            "de": "Der Status besagt, dass die Daten prozessiert werden dürfen.",
-            "en": "States of consent that can be used as valid justifications for processing data."
+                "de": "Der Status besagt, dass die Daten prozessiert werden dürfen.",
+                "en": "States of consent that can be used as valid justifications for processing data."
             }
         ],
         "exactMatch": [

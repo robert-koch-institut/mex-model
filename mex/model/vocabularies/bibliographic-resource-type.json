@@ -8,8 +8,8 @@
         ],
         "definition": [
             {
-            "de": "Eine Monographie.",
-            "en": "A monograph."
+                "de": "Eine Monographie.",
+                "en": "A monograph."
             }
         ],
         "exactMatch": [
@@ -32,8 +32,8 @@
         ],
         "definition": [
             {
-            "de": "Ein Teil eines Buches.",
-            "en": "One of the sections into which a book is divided."
+                "de": "Ein Teil eines Buches.",
+                "en": "One of the sections into which a book is divided."
             }
         ],
         "exactMatch": [
@@ -51,8 +51,8 @@
     {
         "definition": [
             {
-            "de": "Ein Beitrag, der im Rahmen einer akademischen Konferenz veröffentlicht wurde.",
-            "en": "A document published as part of the proceedings of an academic conference."
+                "de": "Ein Beitrag, der im Rahmen einer akademischen Konferenz veröffentlicht wurde.",
+                "en": "A document published as part of the proceedings of an academic conference."
             }
         ],
         "exactMatch": [
@@ -77,8 +77,8 @@
         ],
         "definition": [
             {
-            "de": "Wissenschaftliche Arbeit zur Erlangung des Doktorgrades an einer Universität",
-            "en": "Document submitted in support of candidature for a doctorate."
+                "de": "Wissenschaftliche Arbeit zur Erlangung des Doktorgrades an einer Universität",
+                "en": "Document submitted in support of candidature for a doctorate."
             }
         ],
         "exactMatch": [
@@ -103,8 +103,8 @@
         ],
         "definition": [
             {
-            "de": "Höchstrangige Hochschulprüfung zur Erlangung der Lehrberechtigung an einer Universitätin Deutschland.",
-            "en": "Type of thesis necessary for teaching in German universities."
+                "de": "Höchstrangige Hochschulprüfung zur Erlangung der Lehrberechtigung an einer Universitätin Deutschland.",
+                "en": "Type of thesis necessary for teaching in German universities."
             }
         ],
         "exactMatch": [
@@ -125,8 +125,8 @@
         ],
         "definition": [
             {
-            "de": "Zeitschrift, die regelmäßig wissenschaftliche Forschungsergebnisse veröffentlicht.",
-            "en": "Periodical journal publishing scientific research."
+                "de": "Zeitschrift, die regelmäßig wissenschaftliche Forschungsergebnisse veröffentlicht.",
+                "en": "Periodical journal publishing scientific research."
             }
         ],
         "exactMatch": [
@@ -148,8 +148,8 @@
         ],
         "definition": [
             {
-            "de": "Beitrag, der in einer wissenschaftlichen Zeitschrift veröffentlicht wurde.",
-            "en": "Article published in an academic journal."
+                "de": "Beitrag, der in einer wissenschaftlichen Zeitschrift veröffentlicht wurde.",
+                "en": "Article published in an academic journal."
             }
         ],
         "exactMatch": [
@@ -165,8 +165,8 @@
     {
         "definition": [
             {
-            "de": "Andere Art von bibliografischem Typ, der in diesem Vokabular nicht aufgeführt ist.",
-            "en": "Other type of bibliographic resource, that is not described here in this vocabulary."
+                "de": "Andere Art von bibliografischem Typ, der in diesem Vokabular nicht aufgeführt ist.",
+                "en": "Other type of bibliographic resource, that is not described here in this vocabulary."
             }
         ],
         "identifier": "https://mex.rki.de/item/bibliographic-resource-type-8",
@@ -184,8 +184,8 @@
         ],
         "definition": [
             {
-            "de": "Eine Plakat mit ein Thema auf einer wissenschaftlichen Veranstaltung vermittelt wird.",
-            "en": "A type of graphical image created to promote a topic on a scientific event."
+                "de": "Eine Plakat mit ein Thema auf einer wissenschaftlichen Veranstaltung vermittelt wird.",
+                "en": "A type of graphical image created to promote a topic on a scientific event."
             }
         ],
         "exactMatch": [
@@ -202,8 +202,8 @@
     {
         "definition": [
             {
-            "de": "Version einer wissenschaftlichen Arbeit, die der Veröffentlichung in einer von Fachleuten geprüften wissenschaftlichen Zeitschrift vorausgeht.",
-            "en": "Version of a scholarly or scientific paper that precedes publication in a peer-reviewed scholarly or scientific journal."
+                "de": "Version einer wissenschaftlichen Arbeit, die der Veröffentlichung in einer von Fachleuten geprüften wissenschaftlichen Zeitschrift vorausgeht.",
+                "en": "Version of a scholarly or scientific paper that precedes publication in a peer-reviewed scholarly or scientific journal."
             }
         ],
         "exactMatch": [
@@ -225,8 +225,8 @@
         ],
         "definition": [
             {
-            "de": "Vortrag über ein Thema in begrenzter Zeit.",
-            "en": "Process of presenting a topic to an audience."
+                "de": "Vortrag über ein Thema in begrenzter Zeit.",
+                "en": "Process of presenting a topic to an audience."
             }
         ],
         "exactMatch": [
@@ -242,8 +242,8 @@
     {
         "definition": [
             {
-            "de": "Text, der detailliert Informationen in formeller Form wiedergibt.",
-            "en": "Informational, formal, and detailed text."
+                "de": "Text, der detailliert Informationen in formeller Form wiedergibt.",
+                "en": "Informational, formal, and detailed text."
             }
         ],
         "exactMatch": [
@@ -259,8 +259,8 @@
     {
         "definition": [
             {
-            "de": "Wissenschaftliche Arbeit, die im Rahmen eines Studiums erstellt wird.",
-            "en": "Academic paper produced as part of a degree programme."
+                "de": "Wissenschaftliche Arbeit, die im Rahmen eines Studiums erstellt wird.",
+                "en": "Academic paper produced as part of a degree programme."
             }
         ],
         "identifier": "https://mex.rki.de/item/bibliographic-resource-type-13",
@@ -279,8 +279,8 @@
         ],
         "definition": [
             {
-            "de": "Schriftliche Abschlussarbeit eines Studiengangs an einer Hochschule oder Berufsakademie",
-            "en": "General term for a document submitted in support of candidature for an academic degree."
+                "de": "Schriftliche Abschlussarbeit eines Studiengangs an einer Hochschule oder Berufsakademie",
+                "en": "General term for a document submitted in support of candidature for an academic degree."
             }
         ],
         "exactMatch": [

@@ -2,8 +2,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet alle drei Jahre statt.",
-            "en": "The event occurs every three years."
+                "de": "Das Ereignis findet alle drei Jahre statt.",
+                "en": "The event occurs every three years."
             }
         ],
         "exactMatch": [
@@ -20,8 +20,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet alle zwei Jahre statt.",
-            "en": "The event occurs every two years."
+                "de": "Das Ereignis findet alle zwei Jahre statt.",
+                "en": "The event occurs every two years."
             }
         ],
         "exactMatch": [
@@ -38,8 +38,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet einmal im Jahr statt.",
-            "en": "The event occurs once a year."
+                "de": "Das Ereignis findet einmal im Jahr statt.",
+                "en": "The event occurs once a year."
             }
         ],
         "exactMatch": [
@@ -56,8 +56,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet zweimal im Jahr statt.",
-            "en": "The event occurs twice a year."
+                "de": "Das Ereignis findet zweimal im Jahr statt.",
+                "en": "The event occurs twice a year."
             }
         ],
         "exactMatch": [
@@ -74,8 +74,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet dreimal im Jahr statt.",
-            "en": "The event occurs three times a year."
+                "de": "Das Ereignis findet dreimal im Jahr statt.",
+                "en": "The event occurs three times a year."
             }
         ],
         "exactMatch": [
@@ -92,8 +92,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet alle drei Monate statt.",
-            "en": "The event occurs every three months."
+                "de": "Das Ereignis findet alle drei Monate statt.",
+                "en": "The event occurs every three months."
             }
         ],
         "exactMatch": [
@@ -110,8 +110,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet alle zwei Monate statt.",
-            "en": "The event occurs every two months."
+                "de": "Das Ereignis findet alle zwei Monate statt.",
+                "en": "The event occurs every two months."
             }
         ],
         "exactMatch": [
@@ -128,8 +128,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet einmal im Monat statt.",
-            "en": "The event occurs once a month."
+                "de": "Das Ereignis findet einmal im Monat statt.",
+                "en": "The event occurs once a month."
             }
         ],
         "exactMatch": [
@@ -146,8 +146,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet zweimal im Monat statt.",
-            "en": "The event occurs twice a month."
+                "de": "Das Ereignis findet zweimal im Monat statt.",
+                "en": "The event occurs twice a month."
             }
         ],
         "exactMatch": [
@@ -164,8 +164,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet alle zwei Wochen statt.",
-            "en": "The event occurs every two weeks."
+                "de": "Das Ereignis findet alle zwei Wochen statt.",
+                "en": "The event occurs every two weeks."
             }
         ],
         "exactMatch": [
@@ -182,8 +182,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet dreimal im Monat statt.",
-            "en": "The event occurs three times a month."
+                "de": "Das Ereignis findet dreimal im Monat statt.",
+                "en": "The event occurs three times a month."
             }
         ],
         "exactMatch": [
@@ -200,8 +200,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet einmal in der Woche statt.",
-            "en": "The event occurs once a week."
+                "de": "Das Ereignis findet einmal in der Woche statt.",
+                "en": "The event occurs once a week."
             }
         ],
         "exactMatch": [
@@ -218,8 +218,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet zweimal in der Woche statt.",
-            "en": "The event occurs twice a week."
+                "de": "Das Ereignis findet zweimal in der Woche statt.",
+                "en": "The event occurs twice a week."
             }
         ],
         "exactMatch": [
@@ -236,8 +236,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet dreimal in der Woche statt.",
-            "en": "The event occurs three times a week."
+                "de": "Das Ereignis findet dreimal in der Woche statt.",
+                "en": "The event occurs three times a week."
             }
         ],
         "exactMatch": [
@@ -254,8 +254,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet einmal am Tag statt.",
-            "en": "The event occurs once a day."
+                "de": "Das Ereignis findet einmal am Tag statt.",
+                "en": "The event occurs once a day."
             }
         ],
         "exactMatch": [
@@ -272,8 +272,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis wiederholt sich ununterbrochen.",
-            "en": "The event repeats without interruption."
+                "de": "Das Ereignis wiederholt sich ununterbrochen.",
+                "en": "The event repeats without interruption."
             }
         ],
         "exactMatch": [
@@ -290,8 +290,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet unregelmäßig statt.",
-            "en": "The event occurs at uneven intervals."
+                "de": "Das Ereignis findet unregelmäßig statt.",
+                "en": "The event occurs at uneven intervals."
             }
         ],
         "exactMatch": [
@@ -308,8 +308,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet in Abständen von jeweils einer Minute statt.",
-            "en": "The event occurs at intervals of every minute."
+                "de": "Das Ereignis findet in Abständen von jeweils einer Minute statt.",
+                "en": "The event occurs at intervals of every minute."
             }
         ],
         "exactMatch": [
@@ -325,8 +325,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet in Abständen von fünf Minuten statt.",
-            "en": "The event occurs at intervals of five minutes."
+                "de": "Das Ereignis findet in Abständen von fünf Minuten statt.",
+                "en": "The event occurs at intervals of five minutes."
             }
         ],
         "exactMatch": [
@@ -342,8 +342,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet in Abständen von zehn Minuten statt.",
-            "en": "The event occurs at intervals of ten minutes."
+                "de": "Das Ereignis findet in Abständen von zehn Minuten statt.",
+                "en": "The event occurs at intervals of ten minutes."
             }
         ],
         "exactMatch": [
@@ -359,8 +359,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet in Abständen von fünfzehn Minuten statt.",
-            "en": "The event occurs at intervals of fifteen minutes."
+                "de": "Das Ereignis findet in Abständen von fünfzehn Minuten statt.",
+                "en": "The event occurs at intervals of fifteen minutes."
             }
         ],
         "exactMatch": [
@@ -376,8 +376,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet in Abständen von dreißig Minuten statt.",
-            "en": "The event occurs at intervals of thirty minutes."
+                "de": "Das Ereignis findet in Abständen von dreißig Minuten statt.",
+                "en": "The event occurs at intervals of thirty minutes."
             }
         ],
         "exactMatch": [
@@ -393,8 +393,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet stündlich statt.",
-            "en": "The event occurs hourly."
+                "de": "Das Ereignis findet stündlich statt.",
+                "en": "The event occurs hourly."
             }
         ],
         "exactMatch": [
@@ -410,8 +410,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet alle zwei Stunden statt.",
-            "en": "The event occurs bihourly."
+                "de": "Das Ereignis findet alle zwei Stunden statt.",
+                "en": "The event occurs bihourly."
             }
         ],
         "exactMatch": [
@@ -427,8 +427,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet alle drei Stunden statt.",
-            "en": "The event occurs trihourly."
+                "de": "Das Ereignis findet alle drei Stunden statt.",
+                "en": "The event occurs trihourly."
             }
         ],
         "exactMatch": [
@@ -444,8 +444,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet alle zwölf Stunden statt.",
-            "en": "The event occurs every twelve hours."
+                "de": "Das Ereignis findet alle zwölf Stunden statt.",
+                "en": "The event occurs every twelve hours."
             }
         ],
         "exactMatch": [
@@ -461,8 +461,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet zwei Mal täglich statt.",
-            "en": "The event occurs twice a day."
+                "de": "Das Ereignis findet zwei Mal täglich statt.",
+                "en": "The event occurs twice a day."
             }
         ],
         "exactMatch": [
@@ -478,8 +478,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet fünf Mal pro Woche statt.",
-            "en": "The event occurs five times a week."
+                "de": "Das Ereignis findet fünf Mal pro Woche statt.",
+                "en": "The event occurs five times a week."
             }
         ],
         "exactMatch": [
@@ -495,8 +495,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet alle vier Jahre statt.",
-            "en": "The event occurs every four years."
+                "de": "Das Ereignis findet alle vier Jahre statt.",
+                "en": "The event occurs every four years."
             }
         ],
         "exactMatch": [
@@ -512,8 +512,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet alle fünf Jahre statt.",
-            "en": "The event occurs every five years."
+                "de": "Das Ereignis findet alle fünf Jahre statt.",
+                "en": "The event occurs every five years."
             }
         ],
         "exactMatch": [
@@ -529,8 +529,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet alle sechs Jahre statt.",
-            "en": "The event occurs every six years."
+                "de": "Das Ereignis findet alle sechs Jahre statt.",
+                "en": "The event occurs every six years."
             }
         ],
         "exactMatch": [
@@ -546,8 +546,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet alle zehn Jahre statt.",
-            "en": "The event occurs every ten years."
+                "de": "Das Ereignis findet alle zehn Jahre statt.",
+                "en": "The event occurs every ten years."
             }
         ],
         "exactMatch": [
@@ -563,8 +563,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet alle zwanzig Jahre statt.",
-            "en": "The event occurs every twenty years."
+                "de": "Das Ereignis findet alle zwanzig Jahre statt.",
+                "en": "The event occurs every twenty years."
             }
         ],
         "exactMatch": [
@@ -580,8 +580,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet alle dreißig Jahre statt.",
-            "en": "The event occurs every thirty years."
+                "de": "Das Ereignis findet alle dreißig Jahre statt.",
+                "en": "The event occurs every thirty years."
             }
         ],
         "exactMatch": [
@@ -597,8 +597,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet im Bedarfsfall statt.",
-            "en": "The event occurs as needed."
+                "de": "Das Ereignis findet im Bedarfsfall statt.",
+                "en": "The event occurs as needed."
             }
         ],
         "exactMatch": [
@@ -614,8 +614,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis wird laufend aktualisiert.",
-            "en": "The event is updated continuously."
+                "de": "Das Ereignis wird laufend aktualisiert.",
+                "en": "The event is updated continuously."
             }
         ],
         "exactMatch": [
@@ -631,8 +631,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis findet nie statt.",
-            "en": "The event never occurs."
+                "de": "Das Ereignis findet nie statt.",
+                "en": "The event never occurs."
             }
         ],
         "exactMatch": [
@@ -648,8 +648,8 @@
     {
         "definition": [
             {
-            "de": "Es gibt keine Pläne, das Ereignis zu aktualisieren.",
-            "en": "There are no plans to update the event."
+                "de": "Es gibt keine Pläne, das Ereignis zu aktualisieren.",
+                "en": "There are no plans to update the event."
             }
         ],
         "exactMatch": [
@@ -665,8 +665,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis tritt mit einer anderen Art von Regelmäßigkeit auf (zum Beispiel jedes Schaltjahr).",
-            "en": "The event occurs with another type of regularity (for instance, every leap year)."
+                "de": "Das Ereignis tritt mit einer anderen Art von Regelmäßigkeit auf (zum Beispiel jedes Schaltjahr).",
+                "en": "The event occurs with another type of regularity (for instance, every leap year)."
             }
         ],
         "exactMatch": [
@@ -682,8 +682,8 @@
     {
         "definition": [
             {
-            "de": "Das Ereignis tritt in unbekannten Abständen auf.",
-            "en": "The event occurs with unknown regularity."
+                "de": "Das Ereignis tritt in unbekannten Abständen auf.",
+                "en": "The event occurs with unknown regularity."
             }
         ],
         "exactMatch": [

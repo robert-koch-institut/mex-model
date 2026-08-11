@@ -2,8 +2,8 @@
     {
         "definition": [
             {
-            "de": "Nur innerhalb des RKI-Netzwerks zugängliche Plattform.",
-            "en": "Platform only accessible within RKI network."
+                "de": "Nur innerhalb des RKI-Netzwerks zugängliche Plattform.",
+                "en": "Platform only accessible within RKI network."
             }
         ],
         "identifier": "https://mex.rki.de/item/technical-accessibility-1",
@@ -16,8 +16,8 @@
     {
         "definition": [
             {
-            "de": "Öffentlich zugängliche Plattform.",
-            "en": "Openly accessible platform."
+                "de": "Öffentlich zugängliche Plattform.",
+                "en": "Openly accessible platform."
             }
         ],
         "identifier": "https://mex.rki.de/item/technical-accessibility-2",
