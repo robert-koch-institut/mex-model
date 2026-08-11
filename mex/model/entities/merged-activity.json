@@ -67,7 +67,7 @@
                 "$ref": "/mex/model/fields/link"
             },
             "subPropertyOf": [
-                "http://purl.org/dc/terms/isReferencedBy"
+                "http://xmlns.com/foaf/0.1/page"
             ],
             "type": "array"
         },
