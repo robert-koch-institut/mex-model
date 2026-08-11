@@ -61,11 +61,11 @@
             "type": "array"
         },
         "analytics": {
-            "closeMatch": [
-                "http://healthdataportal.eu/ns/health#analytics"
-            ],
             "default": [],
             "description": "An analytics distribution of the dataset.",
+            "exactMatch": [
+                "http://healthdataportal.eu/ns/health#analytics"
+            ],
             "items": {
                 "$ref": "/mex/model/entities/merged-distribution#/identifier"
             },
