@@ -245,6 +245,9 @@
             "description": "The Digital Object Identifier (DOI) of the resource."
         },
         "end": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#endDate"
+            ],
             "default": [],
             "description": "End date of the temporal coverage of the resource.",
             "items": {
@@ -283,9 +286,6 @@
                     }
                 ]
             },
-            "sameAs": [
-                "http://www.w3.org/ns/dcat#endDate"
-            ],
             "type": "array"
         },
         "externalPartner": {
@@ -327,9 +327,6 @@
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "sameAs": [
-                "http://healthdataportal.eu/ns/health#hasCodeValues"
-            ],
             "type": "array"
         },
         "hasCodingSystem": {
@@ -920,6 +917,9 @@
             "readOnly": true
         },
         "start": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#startDate"
+            ],
             "default": [],
             "description": "Start date of the temporal coverage of the resource.",
             "items": {
@@ -958,9 +958,6 @@
                     }
                 ]
             },
-            "sameAs": [
-                "http://www.w3.org/ns/dcat#startDate"
-            ],
             "type": "array"
         },
         "stateOfDataProcessing": {
