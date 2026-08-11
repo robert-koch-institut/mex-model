@@ -520,7 +520,17 @@
             "default": [],
             "description": "A keyword or tag describing the resource.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "anyOf": [
+                    {
+                        "$ref": "/mex/model/fields/text"
+                    },
+                    {
+                        "$ref": "/mex/model/fields/link"
+                    },
+                    {
+                        "type": "null"
+                    }
+                ]
             },
             "minItems": 1,
             "type": "array"
