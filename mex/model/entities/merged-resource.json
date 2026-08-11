@@ -81,6 +81,9 @@
             "type": "array"
         },
         "conformsTo": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/conformsTo"
+            ],
             "default": [],
             "description": "Standards used in the creation, analysis or transmission of the resource. The Health Standards controlled vocabulary must be used.",
             "items": {
@@ -90,9 +93,6 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/standard"
             },
-            "sameAs": [
-                "http://purl.org/dc/terms/conformsTo"
-            ],
             "type": "array"
         },
         "contact": {
