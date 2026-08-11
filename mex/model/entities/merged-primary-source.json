@@ -132,7 +132,8 @@
                 }
             ],
             "default": null,
-            "description": "The version of the primary source, e.g. the date of the last modification."
+            "description": "The version of the primary source, e.g. the date of the last modification.",
+            "maxLength": 100
         }
     },
     "required": [

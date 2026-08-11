@@ -12,7 +12,6 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#accessService"
             ],
-            "default": [],
             "description": "A platform from which the resource series can be accessed.",
             "items": {
                 "$ref": "/mex/model/entities/merged-access-platform#/identifier"
@@ -53,6 +52,7 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#contactPoint"
             ],
+            "default": [],
             "description": "An agent that serves as a contact for the resource series.",
             "items": {
                 "anyOf": [
@@ -61,10 +61,12 @@
                     },
                     {
                         "$ref": "/mex/model/entities/merged-contact-point#/identifier"
+                    },
+                    {
+                        "$ref": "/mex/model/entities/merged-person#/identifier"
                     }
                 ]
             },
-            "minItems": 1,
             "type": "array"
         },
         "description": {
@@ -128,27 +130,11 @@
                     "type": "null"
                 }
             ],
-            "closeMatch": [
-                "http://www.w3.org/ns/dcat#endDate"
-            ],
             "default": null,
             "description": "End date of the temporal coverage of the resource series.",
-            "maxItems": 1
-        },
-        "first": {
-            "anyOf": [
-                {
-                    "$ref": "/mex/model/entities/merged-resource#/identifier"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "closeMatch": [
-                "https://www.w3.org/ns/dcat#first"
-            ],
-            "default": null,
-            "description": "The first resource in an ordered collection or series of resources."
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#endDate"
+            ]
         },
         "hasLegalBasis": {
             "closeMatch": [
@@ -157,14 +143,7 @@
             "default": [],
             "description": "The legal basis used to justify processing of personal data. Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions which can be represented using dpv:hasJurisdiction or dpv:hasLaw. Legal basis can be used without such declarations, e.g. 'Consent', however their interpretation will require association with a law, e.g. 'EU GDPR'.",
             "items": {
-                "anyOf": [
-                    {
-                        "$ref": "/mex/model/fields/text"
-                    },
-                    {
-                        "$ref": "/mex/model/fields/link"
-                    }
-                ]
+                "$ref": "/mex/model/fields/text"
             },
             "type": "array"
         },
@@ -179,37 +158,11 @@
             },
             "type": "array"
         },
-        "last": {
-            "anyOf": [
-                {
-                    "$ref": "/mex/model/entities/merged-resource#/identifier"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "closeMatch": [
-                "https://www.w3.org/ns/dcat#last"
-            ],
-            "default": null,
-            "description": "The last resource in an ordered collection or series of resources."
-        },
         "publisher": {
             "default": [],
             "description": "The entity responsible for making the item available.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organization#/identifier"
-            },
-            "type": "array"
-        },
-        "relatedActivity": {
-            "closeMatch": [
-                "http://purl.org/dc/terms/relation"
-            ],
-            "default": [],
-            "description": "An activity that is related to the Resource.",
-            "items": {
-                "$ref": "/mex/model/entities/merged-activity#/identifier"
             },
             "type": "array"
         },
@@ -262,11 +215,11 @@
                     "type": "null"
                 }
             ],
-            "closeMatch": [
-                "http://www.w3.org/ns/dcat#startDate"
-            ],
             "default": null,
-            "description": "Start date of the temporal coverage of the resource series."
+            "description": "Start date of the temporal coverage of the resource series.",
+            "sameAs": [
+                "http://www.w3.org/ns/dcat#startDate"
+            ]
         },
         "supersededBy": {
             "anyOf": [

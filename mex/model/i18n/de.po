@@ -242,6 +242,14 @@ msgctxt "Organization"
 msgid "country.description"
 msgstr "Staat, in dem die Organisation ansässig ist"
 
+msgctxt "Organization"
+msgid "country.singular"
+msgstr "Land"
+
+msgctxt "Organization"
+msgid "country.description"
+msgstr "Staat, in dem die Organisation ansässig ist"
+
 msgctxt "Resource"
 msgid "created.singular"
 msgstr "Erstellt"
@@ -544,17 +552,7 @@ msgctxt "Resource"
 msgid "hasCodingSystem.description"
 msgstr "Spezifizierung des verwendeten Kodiersystems"
 
-msgctxt "Variable"
-msgid "hasCodingSystem.description"
-msgstr "Spezifizierung des verwendeten Kodiersystems"
-
 msgctxt "Resource"
-msgid "hasCodingSystem.singular"
-msgid_plural "hasCodingSystem.plural"
-msgstr[0] "Verwendetes Kodiersystem"
-msgstr[1] "Verwendete Kodiersysteme"
-
-msgctxt "Variable"
 msgid "hasCodingSystem.singular"
 msgid_plural "hasCodingSystem.plural"
 msgstr[0] "Verwendetes Kodiersystem"

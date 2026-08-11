@@ -14,18 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Added Vocabulary file
 
 - mex/model/vocabularies/coding-system.json (RKIMEX-25)
-- mex/model/vocabularies/country.json (RKIMEX-103)
-- mex/model/vocabularies/datatype-standardized.json (RKIMEX-84)
 - mex/model/vocabularies/purpose.json (RKIMEX-100)
-
-#### Added mex/model/entities/extracted-location.json and mex/model/entities/merged-location.json
-
-A new entitity type, including the following properties (RKIMEX-126):
-
-- officialName (required)
-- wikidataID
-- geonamesID
-- identifier (required)
 
 #### Added mex/model/entities/extracted-resource-series.json and mex/model/entities/merged-resource-series.json
 
@@ -59,20 +48,10 @@ A new entity type, including the following properties (RKIMEX-14):
 - version (RKIMEX-111)
 - hasCodingSystem (RKIMEX-25)
 
-#### Added properties to mex/model/entities/extracted-organization.json and mex/model/entities/merged-organization.json
-
-- country (RKIMEX-73)
-
-#### Added properties to mex/model/entities/extracted-variable.json and mex/model/entities/merged-variable.json
-
-- datatypeInPrimarySource (RKIMEX-85 as required)
-- datatypeStandardized (RKIMEX-84 as optional)
-- hasCodingSystem (RKIMEX-25)
-
 ### Changes
 
+- new template https://github.com/robert-koch-institut/mex-template/releases/tag/1.5.0
 - Changed files by adding translation entries for entities named in added: en.po, de.po
-- Changed file by adding vocabulary reference: concept-schemes.json
 
 ### Deprecated
 
@@ -80,9 +59,33 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Fixed
 
-- replaced " with “ in po files
-
 ### Security
+
+## [5.0.3] - 2026-07-15
+
+### Changes
+
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/192830
+- change propertes `start` and `end` in extracted-resource.json and merged-resource.json to be of type `array` and align them to `Activity.start`and `Activity.end`.
+
+## [5.0.2] - 2026-06-24
+
+### Added
+
+- linter for po files
+
+### Changes
+
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/11612b
+
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/52887e
+
+- dependencies update (2026-06-16)
+- updated template to https://github.com/robert-koch-institut/mex-template/commit/1d816d
+
+### Fixed
+
+- replaced " with “ in po files
 
 ## [5.0.1] - 2026-06-05
 
