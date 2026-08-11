@@ -57,6 +57,45 @@ A new entity type, including the following properties (RKIMEX-14):
 - version (RKIMEX-111)
 - hasCodingSystem (RKIMEX-25)
 
+- linter for po files
+
+#### Added Vocabulary file
+
+- mex/model/vocabularies/coding-system.json (RKIMEX-25)
+- mex/model/vocabularies/purpose.json (RKIMEX-100)
+
+#### Added mex/model/entities/extracted-resource-series.json and mex/model/entities/merged-resource-series.json
+
+A new entity type, including the following properties (RKIMEX-14):
+
+- accessPlatform
+- accrualPeriodicity
+- alternativeTitle
+- contact
+- description (required)
+- documentation
+- end
+- hasLegalBasis
+- keyword
+- publisher
+- spatial
+- start
+- theme
+- title (required)
+
+#### Added properties to mex/model/extension/definition.json
+
+- closeMatch (RKIMEX-116)
+- exactMatch (RKIMEX-116)
+
+#### Added properties to mex/model/entities/extracted-resource.json and mex/model/entities/merged-resource.json
+
+- hasPurposeDescription (RKIMEX-106)
+- inSeries (RKIMEX-13)
+- landingPage (RKIMEX-27)
+- version (RKIMEX-111)
+- hasCodingSystem (RKIMEX-25)
+
 ### Changes
 
 - Changed files by adding translation entries for entities named in added: en.po, de.po
@@ -66,6 +105,8 @@ A new entity type, including the following properties (RKIMEX-14):
 ### Removed
 
 ### Fixed
+
+- resource series model
 
 ### Security
 
