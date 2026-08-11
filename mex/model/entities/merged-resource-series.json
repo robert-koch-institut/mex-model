@@ -12,11 +12,11 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#accessService"
             ],
+            "default": [],
             "description": "A platform from which the resource series can be accessed.",
             "items": {
                 "$ref": "/mex/model/entities/merged-access-platform#/identifier"
             },
-            "minItems": 1,
             "type": "array"
         },
         "accrualPeriodicity": {
@@ -53,7 +53,6 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#contactPoint"
             ],
-            "default": [],
             "description": "An agent that serves as a contact for the resource series.",
             "items": {
                 "anyOf": [
@@ -61,13 +60,14 @@
                         "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
                     },
                     {
-                        "$ref": "/mex/model/entities/merged-contact-point#/identifier"
+                        "$ref": "/mex/model/entities/merged-person#/identifier"
                     },
                     {
-                        "$ref": "/mex/model/entities/merged-person#/identifier"
+                        "$ref": "/mex/model/entities/merged-contact-point#/identifier"
                     }
                 ]
             },
+            "minItems": 1,
             "type": "array"
         },
         "description": {
@@ -79,7 +79,6 @@
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "minItems": 1,
             "type": "array"
         },
         "documentation": {
@@ -94,48 +93,48 @@
             "type": "array"
         },
         "end": {
-            "anyOf": [
-                {
-                    "$comment": "year_month_day_time",
-                    "examples": [
-                        "2022-09-30T20:48:35Z"
-                    ],
-                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])T(?:[0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]Z$",
-                    "type": "string"
-                },
-                {
-                    "$comment": "year_month_day",
-                    "examples": [
-                        "2014-08-24"
-                    ],
-                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
-                    "type": "string"
-                },
-                {
-                    "$comment": "year_month",
-                    "examples": [
-                        "2019-03"
-                    ],
-                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
-                    "type": "string"
-                },
-                {
-                    "$comment": "year",
-                    "examples": [
-                        "2024"
-                    ],
-                    "pattern": "^[0-9]{4}$",
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "End date of the temporal coverage of the resource series.",
-            "sameAs": [
+            "closeMatch": [
                 "http://www.w3.org/ns/dcat#endDate"
-            ]
+            ],
+            "default": [],
+            "description": "End date of the temporal coverage of the resource series.",
+            "items": {
+                "anyOf": [
+                    {
+                        "$comment": "year_month_day_time",
+                        "examples": [
+                            "2022-09-30T20:48:35Z"
+                        ],
+                        "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])T(?:[0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]Z$",
+                        "type": "string"
+                    },
+                    {
+                        "$comment": "year_month_day",
+                        "examples": [
+                            "2014-08-24"
+                        ],
+                        "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
+                        "type": "string"
+                    },
+                    {
+                        "$comment": "year_month",
+                        "examples": [
+                            "2019-03"
+                        ],
+                        "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+                        "type": "string"
+                    },
+                    {
+                        "$comment": "year",
+                        "examples": [
+                            "2024"
+                        ],
+                        "pattern": "^[0-9]{4}$",
+                        "type": "string"
+                    }
+                ]
+            },
+            "type": "array"
         },
         "hasLegalBasis": {
             "closeMatch": [
@@ -179,48 +178,48 @@
             "type": "array"
         },
         "start": {
-            "anyOf": [
-                {
-                    "$comment": "year_month_day_time",
-                    "examples": [
-                        "2022-09-30T20:48:35Z"
-                    ],
-                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])T(?:[0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]Z$",
-                    "type": "string"
-                },
-                {
-                    "$comment": "year_month_day",
-                    "examples": [
-                        "2014-08-24"
-                    ],
-                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
-                    "type": "string"
-                },
-                {
-                    "$comment": "year_month",
-                    "examples": [
-                        "2019-03"
-                    ],
-                    "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
-                    "type": "string"
-                },
-                {
-                    "$comment": "year",
-                    "examples": [
-                        "2024"
-                    ],
-                    "pattern": "^[0-9]{4}$",
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "Start date of the temporal coverage of the resource series.",
-            "sameAs": [
+            "closeMatch": [
                 "http://www.w3.org/ns/dcat#startDate"
-            ]
+            ],
+            "default": [],
+            "description": "Start date of the temporal coverage of the resource series.",
+            "items": {
+                "anyOf": [
+                    {
+                        "$comment": "year_month_day_time",
+                        "examples": [
+                            "2022-09-30T20:48:35Z"
+                        ],
+                        "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])T(?:[0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]Z$",
+                        "type": "string"
+                    },
+                    {
+                        "$comment": "year_month_day",
+                        "examples": [
+                            "2014-08-24"
+                        ],
+                        "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$",
+                        "type": "string"
+                    },
+                    {
+                        "$comment": "year_month",
+                        "examples": [
+                            "2019-03"
+                        ],
+                        "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+                        "type": "string"
+                    },
+                    {
+                        "$comment": "year",
+                        "examples": [
+                            "2024"
+                        ],
+                        "pattern": "^[0-9]{4}$",
+                        "type": "string"
+                    }
+                ]
+            },
+            "type": "array"
         },
         "supersededBy": {
             "anyOf": [
@@ -247,7 +246,7 @@
         }
     },
     "required": [
-        "description",
+        "contact",
         "identifier",
         "title"
     ],
