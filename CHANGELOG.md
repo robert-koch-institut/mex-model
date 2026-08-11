@@ -59,6 +59,8 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Fixed
 
+- resource series model
+
 ### Security
 
 ## [5.0.3] - 2026-07-15
