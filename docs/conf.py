@@ -1,8 +1,18 @@
 # sphinx configuration
 
 import importlib
+import sys
+from pathlib import Path
 
-extensions = ["sphinx-jsonschema"]
+sys.path.insert(0, str(Path(__file__).parent))
+
+from vocabularies import load_vocabularies
+
+VOCABULARIES = load_vocabularies(
+    Path(__file__).parent.parent / "mex" / "model" / "vocabularies"
+)
+
+extensions = ["sphinx-jsonschema", "vocabularies"]
 html_theme = "alabaster"
 html_theme_options = {
     "extra_nav_links": {
@@ -21,6 +31,7 @@ html_theme_options = {
         "• ExtractedOrganizationalUnit": "#extracted-organizational-unit",
         "• ExtractedPerson": "#extracted-person",
         "• ExtractedPrimarySource": "#extracted-primary-source",
+        "• ExtractedResourceSeries": "#extracted-resource-series",
         "• ExtractedResource": "#extracted-resource",
         "• ExtractedVariableGroup": "#extracted-variable-group",
         "• ExtractedVariable": "#extracted-variable",
@@ -35,6 +46,7 @@ html_theme_options = {
         "• MergedOrganizationalUnit": "#merged-organizational-unit",
         "• MergedPerson": "#merged-person",
         "• MergedPrimarySource": "#merged-primary-source",
+        "• MergedResourceSeries": "#merged-resource-series",
         "• MergedResource": "#merged-resource",
         "• MergedVariableGroup": "#merged-variable-group",
         "• MergedVariable": "#merged-variable",
@@ -42,13 +54,20 @@ html_theme_options = {
         "• ConceptScheme": "#concept-scheme",
         "• Concept": "#concept",
         "• Vocabularies": "#vocabularies",
+        **{
+            f"◦ {vocabulary.nav_title}": f"#{vocabulary.anchor}"
+            for vocabulary in VOCABULARIES
+        },
     },
-    "page_width": "100%",
+    "page_width": "80%",
+    "body_max_width": "100%",
     "fixed_sidebar": "true",
     "sidebar_width": "300px",
 }
 project = "mex-model"
 templates_path = ["."]
+html_static_path = ["_static"]
+html_css_files = ["custom.css"]
 
 
 # Customizing json-schema conversion
@@ -60,7 +79,12 @@ def _patched_sphinx_jsonschema_simpletype(self, schema):  # noqa: ANN001, ANN202
     rows = _original_sphinx_jsonschema_simpletype(self, schema)
     if "useScheme" in schema:
         scheme = schema.pop("useScheme")
-        rows.append(self._line(self._cell("useScheme"), self._cell(scheme)))
+        rows.append(
+            self._line(
+                self._cell("useScheme"),
+                self._cell(f":ref:`{scheme} <{scheme}>`"),
+            )
+        )
     return rows
 
 

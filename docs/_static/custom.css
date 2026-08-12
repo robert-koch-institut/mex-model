@@ -1,0 +1,13 @@
+/* Contain wide tables.
+
+The schema tables grow one column per nesting level and the vocabulary tables
+carry long definitions, so they easily get wider than the content column and
+would otherwise stretch the whole page beyond the viewport. Scroll them
+horizontally instead, while narrow tables keep hugging their content. */
+
+table.docutils {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    overflow-x: auto;
+}

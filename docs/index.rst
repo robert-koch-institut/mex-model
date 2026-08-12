@@ -76,5 +76,4 @@ Concepts
 Vocabularies
 ^^^^^^^^^^^^
 
-Available concepts (aka vocabularies) are coming soon. In the meantime, see
-`mex/model/vocabularies <https://github.com/robert-koch-institut/mex-model/tree/main/mex/model/vocabularies>`_.
+.. mexvocabularies:: ../mex/model/vocabularies
