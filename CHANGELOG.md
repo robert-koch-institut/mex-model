@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- introduce I18N_PO_DATA_BY_LANGUAGE to get raw gettext data
+
 ### Changes
 
 ### Deprecated
@@ -16,6 +18,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 ### Fixed
+
+- BREAKING: remove `concept-schemes.json` from VOCABULARY_JSON_BY_NAME
 
 ### Security
 
