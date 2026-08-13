@@ -21,7 +21,7 @@
             "en": "International Classification of Diseases, 11th Revision"
         },
         "exactMatch": [
-            "https://www.wikidata.org/wiki/Q55695727",
+            "http://www.wikidata.org/entity/Q55695727",
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICD-11"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-2",
@@ -37,7 +37,7 @@
             "en": "International standard for identifying laboratory observations, clinical measurements, and diagnostic reports"
         },
         "exactMatch": [
-            "https://www.wikidata.org/wiki/Q502480",
+            "http://www.wikidata.org/entity/Q502480",
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/LOINC"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-3",
@@ -53,7 +53,7 @@
             "en": "Comprehensive clinical healthcare terminology"
         },
         "exactMatch": [
-            "https://www.wikidata.org/wiki/Q1753883",
+            "http://www.wikidata.org/entity/Q1753883",
             "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/SNOMED-CT"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-4",
