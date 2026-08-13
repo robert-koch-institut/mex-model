@@ -3,7 +3,7 @@
     "$id": "https://mex.rki.de/mex/model/entities/extracted-resource",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
-    "description": "A defined piece of information or collection of information on Public Health, that has been generated as part of a (research) activity at the RKI or to comply with a (federal) law or regulation that applies to the RKI.",
+    "description": "A defined piece of information or collection of information on Public Health that has been generated as part of a (research) activity at the RKI or to comply with a (federal) law or regulation that applies to the RKI.",
     "properties": {
         "accessPlatform": {
             "default": [],
@@ -120,7 +120,7 @@
         },
         "contributingUnit": {
             "default": [],
-            "description": "An organizational unit of RKI, that is contributing to the resource.",
+            "description": "An organizational unit of RKI that is contributing to the resource.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
             },
@@ -179,7 +179,7 @@
                 }
             ],
             "default": null,
-            "description": "Date of creation of the resource",
+            "description": "Date of creation of the resource.",
             "sameAs": [
                 "http://purl.org/dc/terms/created"
             ]
@@ -208,7 +208,7 @@
         },
         "distribution": {
             "default": [],
-            "description": "An available distribution of the resource",
+            "description": "An available distribution of the resource.",
             "items": {
                 "$ref": "/mex/model/entities/merged-distribution#/identifier"
             },
@@ -303,7 +303,7 @@
         },
         "hadPrimarySource": {
             "$ref": "/mex/model/entities/merged-primary-source#/identifier",
-            "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30 ](http://www.w3.org/TR/2013/REC-prov-o-20130430/)).",
+            "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30](http://www.w3.org/TR/2013/REC-prov-o-20130430/)).",
             "sameAs": [
                 "http://www.w3.org/ns/prov#hadPrimarySource"
             ]
@@ -324,7 +324,7 @@
                 "http://healthdataportal.eu/ns/health#hasCodingSystem"
             ],
             "default": [],
-            "description": "Coding systems in use (i.e. ICD-10, SNOMED-CT).",
+            "description": "Coding systems in use (e.g. ICD-10, SNOMED-CT).",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
                 "examples": [
@@ -588,7 +588,7 @@
         },
         "method": {
             "default": [],
-            "description": "Method used in the research, analysis, observation or processing of the object that is subject to the resource.",
+            "description": "Method used in the research, analysis, observation or processing of the object that is the subject of the resource.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
@@ -596,7 +596,7 @@
         },
         "methodDescription": {
             "default": [],
-            "description": "The description of the method, that was used to research, analysis, observation or processing of the object that was subject to the resource.",
+            "description": "The description of the method that was used for the research, analysis, observation or processing of the object that was the subject of the resource.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
@@ -719,7 +719,7 @@
         },
         "publication": {
             "default": [],
-            "description": "A publication that deals with the research, analysis, observation or processing of the object that was subject to the resource, e.g. a research paper.",
+            "description": "A publication that deals with the research, analysis, observation or processing of the object that was the subject of the resource, e.g. a research paper.",
             "items": {
                 "$ref": "/mex/model/entities/merged-bibliographic-resource#/identifier"
             },

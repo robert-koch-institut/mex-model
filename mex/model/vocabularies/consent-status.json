@@ -10,7 +10,7 @@
         "identifier": "https://mex.rki.de/item/consent-status-1",
         "inScheme": "https://mex.rki.de/item/consent-status",
         "note": {
-            "de": "Der Status ist assoziert mit Formen der (nicht gegebenen) Einwilligung, die eine Prozessierung untersagen.",
+            "de": "Der Status ist assoziiert mit Formen der (nicht gegebenen) Einwilligung, die eine Prozessierung untersagen.",
             "en": "This identifies the stages associated with consent that should not be used to process data."
         },
         "prefLabel": {
@@ -29,7 +29,7 @@
         "identifier": "https://mex.rki.de/item/consent-status-2",
         "inScheme": "https://mex.rki.de/item/consent-status",
         "note": {
-            "de": "In der Praxis ist die einzige Form eines zulässigen Prozessierungsstatus, eine gegebene Einwilligung.'",
+            "de": "In der Praxis ist die einzige Form eines zulässigen Prozessierungsstatus, eine gegebene Einwilligung.",
             "en": "Practically, given consent is the only valid state for processing."
         },
         "prefLabel": {

@@ -92,7 +92,7 @@
                 }
             ],
             "default": null,
-            "description": "The root location or primary endpoint of the service (a Web-resolvable IRI)",
+            "description": "The root location or primary endpoint of the service (a Web-resolvable IRI).",
             "sameAs": [
                 "http://www.w3.org/ns/dcat#endpointURL"
             ]
@@ -130,7 +130,7 @@
         },
         "technicalAccessibility": {
             "$ref": "/mex/model/entities/concept#/identifier",
-            "description": "Indicates form if the platform can be accessed only within RKI network (internally) or if the platform is accessible publicly (externally).",
+            "description": "Indicates if the platform can be accessed only within RKI network (internally) or if the platform is accessible publicly (externally).",
             "examples": [
                 "https://mex.rki.de/item/technical-accessibility-1"
             ],
