@@ -4,6 +4,7 @@ from mex.model import (
     ENTITY_JSON_BY_NAME,
     EXTRACTED_MODEL_JSON_BY_NAME,
     FIELD_JSON_BY_NAME,
+    I18N_PO_DATA_BY_LANGUAGE,
     MERGED_MODEL_JSON_BY_NAME,
     VOCABULARY_JSON_BY_NAME,
 )
@@ -50,13 +51,23 @@ def test_field_json_by_name() -> None:
 
 def test_vocabulary_json_by_name() -> None:
     # sanity check on count
-    expected = len(list((MODEL_ROOT / "vocabularies").glob("*.json")))
+    expected = len(list((MODEL_ROOT / "vocabularies").glob("*.json"))) - 1
     assert len(VOCABULARY_JSON_BY_NAME) == expected
+    # concept-schemes is not a vocabulary and is excluded
+    assert "concept_schemes" not in VOCABULARY_JSON_BY_NAME
     # spot check on content
     assert (
         VOCABULARY_JSON_BY_NAME["api_type"][0]["identifier"]
         == "https://mex.rki.de/item/api-type-1"
     )
+
+
+def test_i18n_po_data_by_language() -> None:
+    # sanity check on count
+    expected = len(list((MODEL_ROOT / "i18n").glob("*.po")))
+    assert len(I18N_PO_DATA_BY_LANGUAGE) == expected
+    # spot check on content
+    assert '"Language: de\\n"' in I18N_PO_DATA_BY_LANGUAGE["de"]
 
 
 def test_entity_json_by_name() -> None:
