@@ -8,6 +8,7 @@ __all__ = (
     "ENTITY_JSON_BY_NAME",
     "EXTRACTED_MODEL_JSON_BY_NAME",
     "FIELD_JSON_BY_NAME",
+    "I18N_PO_DATA_BY_LANGUAGE",
     "MERGED_MODEL_JSON_BY_NAME",
     "VOCABULARY_JSON_BY_NAME",
 )
@@ -28,6 +29,13 @@ def _load_json_resources(
             yield _normalize_name(file.name), json.loads(file.read_text("utf-8"))
 
 
+def _load_po_resources(package_name: str) -> Generator[tuple[str, str]]:
+    """Load the raw contents of gettext portable object files from a package."""
+    for file in files(package_name).iterdir():
+        if file.name.endswith(".po"):
+            yield file.name.removesuffix(".po"), file.read_text("utf-8")
+
+
 # Load all JSON resources with appropriate filters
 EXTRACTED_MODEL_JSON_BY_NAME = {
     name.removeprefix("extracted_"): schema
@@ -45,7 +53,15 @@ MERGED_MODEL_JSON_BY_NAME = {
 
 FIELD_JSON_BY_NAME = dict(_load_json_resources("mex.model.fields"))
 
-VOCABULARY_JSON_BY_NAME = dict(_load_json_resources("mex.model.vocabularies"))
+VOCABULARY_JSON_BY_NAME = dict(
+    _load_json_resources(
+        # concept-schemes is a scheme registry, not a vocabulary
+        "mex.model.vocabularies",
+        lambda name: name != "concept-schemes.json",
+    )
+)
+
+I18N_PO_DATA_BY_LANGUAGE = dict(_load_po_resources("mex.model.i18n"))
 
 # BW-compat for mex-invenio, can be removed after that is migrated
 ENTITY_JSON_BY_NAME = deepcopy(EXTRACTED_MODEL_JSON_BY_NAME)
