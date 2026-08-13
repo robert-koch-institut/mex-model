@@ -125,14 +125,14 @@
             "type": "string"
         },
         "landingPage": {
+            "closeMatch": [
+                "https://www.w3.org/ns/dcat#landingPage"
+            ],
             "default": [],
             "description": "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.",
             "items": {
                 "$ref": "/mex/model/fields/link"
             },
-            "sameAs": [
-                "http://www.w3.org/ns/dcat#landingPage"
-            ],
             "type": "array"
         },
         "stableTargetId": {
