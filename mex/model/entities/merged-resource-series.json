@@ -4,7 +4,7 @@
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
     "closeMatch": [
-        "http://healthdataportal.eu/ns/health#DatasetSeries#DatasetSeries"
+        "http://healthdataportal.eu/ns/health#DatasetSeries"
     ],
     "description": "A collection of resources that are published separately, but share some characteristics that group them.",
     "properties": {
@@ -61,10 +61,10 @@
                         "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
                     },
                     {
-                        "$ref": "/mex/model/entities/merged-contact-point#/identifier"
+                        "$ref": "/mex/model/entities/merged-person#/identifier"
                     },
                     {
-                        "$ref": "/mex/model/entities/merged-person#/identifier"
+                        "$ref": "/mex/model/entities/merged-contact-point#/identifier"
                     }
                 ]
             },
@@ -246,6 +246,7 @@
         }
     },
     "required": [
+        "accessPlatform",
         "description",
         "identifier",
         "title"

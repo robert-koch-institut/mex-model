@@ -140,6 +140,7 @@
                         "2023-01-16",
                         "Schema 9"
                     ],
+                    "maxLength": 100,
                     "type": "string"
                 },
                 {
@@ -147,8 +148,7 @@
                 }
             ],
             "default": null,
-            "description": "The version of the primary source, e.g. the date of the last modification.",
-            "maxLength": 100
+            "description": "The version of the primary source, e.g. the date of the last modification."
         }
     },
     "required": [

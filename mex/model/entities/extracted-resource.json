@@ -1014,6 +1014,7 @@
                         "2023-01-16",
                         "Schema 9"
                     ],
+                    "maxLength": 100,
                     "type": "string"
                 },
                 {
@@ -1024,8 +1025,7 @@
                 "https://www.w3.org/ns/dcat#version"
             ],
             "default": null,
-            "description": "The version indicator (name or identifier) of a resource.",
-            "maxLength": 100
+            "description": "The version indicator (name or identifier) of a resource."
         },
         "wasGeneratedBy": {
             "anyOf": [
