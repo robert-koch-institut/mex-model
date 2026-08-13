@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - mex/model/vocabularies/coding-system.json (RKIMEX-25)
 - mex/model/vocabularies/purpose.json (RKIMEX-100)
+- mex/model/vocabularies/country.json (RKIMEX-103)
 
 #### Added mex/model/entities/extracted-resource-series.json and mex/model/entities/merged-resource-series.json
 
