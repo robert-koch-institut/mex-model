@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - BREAKING: fixed copy-pasta in merged-resource-series identifier
 - fixed typos and grammar in descriptions: comma before "that", punctuation, whitespaces
 - fixed issues in entity jsons
+- fixed namespaces
 
 ### Security
 
