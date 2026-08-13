@@ -16,7 +16,7 @@
                 "http://purl.org/dc/terms/alternative"
             ],
             "default": [],
-            "description": "An alternative name for the organization",
+            "description": "An alternative name for the organization.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },

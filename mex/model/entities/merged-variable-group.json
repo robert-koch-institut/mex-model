@@ -6,10 +6,7 @@
     "description": "The grouping of variables according to a certain aspect, e.g. how the information is modelled in the primary source.",
     "properties": {
         "containedBy": {
-            "closeMatch": [
-                "http://purl.org/dc/terms/isPartOf"
-            ],
-            "description": "The resource, the variable group is contained by. Used to connect a variable group to its resource.",
+            "description": "The resource that the variable group is contained by. Used to connect a variable group to its resource.",
             "items": {
                 "$ref": "/mex/model/entities/merged-resource#/identifier"
             },

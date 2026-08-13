@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- BREAKING: fixed typo in the technical accessibility concept scheme identifier
+- BREAKING: fixed copy-pasta in merged-resource-series identifier
+- fixed typos and grammar in descriptions: comma before "that", punctuation, whitespaces
+
 ### Security
 
 ## [5.1.0] - 2026-08-11

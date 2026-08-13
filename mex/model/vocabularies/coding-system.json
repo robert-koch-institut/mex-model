@@ -95,7 +95,7 @@
     },
     {
         "definition": {
-            "de": "Internationale medizinische Terminologie für regulatorische Kommunikation, Kodierung und Sicherheitsberichtserstattung",
+            "de": "Internationale medizinische Terminologie für regulatorische Kommunikation, Kodierung und Sicherheitsberichterstattung",
             "en": "International medical terminology used for regulatory communication, coding, and safety reporting"
         },
         "exactMatch": [
@@ -155,7 +155,7 @@
     },
     {
         "definition": {
-            "de": "Deutsche Operations- und Prozedurenschlüssel",
+            "de": "Deutscher Operationen- und Prozedurenschlüssel",
             "en": "German procedure coding system"
         },
         "exactMatch": [
@@ -185,7 +185,7 @@
     },
     {
         "definition": {
-            "de": "Normalisierte Nomenklatur für Arzneimittel ",
+            "de": "Normalisierte Nomenklatur für Arzneimittel",
             "en": "Normalized naming system for clinical drugs"
         },
         "exactMatch": [

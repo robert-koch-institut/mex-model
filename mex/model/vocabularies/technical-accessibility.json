@@ -5,7 +5,7 @@
             "en": "Platform only accessible within RKI network."
         },
         "identifier": "https://mex.rki.de/item/technical-accessibility-1",
-        "inScheme": "https://mex.rki.de/item/technical-accessbility",
+        "inScheme": "https://mex.rki.de/item/technical-accessibility",
         "prefLabel": {
             "de": "intern",
             "en": "internal"
@@ -17,7 +17,7 @@
             "en": "Openly accessible platform."
         },
         "identifier": "https://mex.rki.de/item/technical-accessibility-2",
-        "inScheme": "https://mex.rki.de/item/technical-accessbility",
+        "inScheme": "https://mex.rki.de/item/technical-accessibility",
         "prefLabel": {
             "de": "extern",
             "en": "external"

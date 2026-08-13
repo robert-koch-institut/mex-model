@@ -3,18 +3,14 @@
     "$id": "https://mex.rki.de/mex/model/entities/extracted-primary-source",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
-    "closeMatch": [
-        "http://www.w3.org/ns/dcat#Catalog",
-        "http://www.w3.org/ns/prov#PrimarySource"
-    ],
-    "description": "A collection of information, that is managed and curated by an RKI unit and lists activities and/or resources.",
+    "description": "A collection of information that is managed and curated by an RKI unit and lists activities and/or resources.",
     "properties": {
         "alternativeTitle": {
             "closeMatch": [
                 "http://purl.org/dc/terms/alternative"
             ],
             "default": [],
-            "description": "An alternative name for the primary source",
+            "description": "An alternative name for the primary source.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
