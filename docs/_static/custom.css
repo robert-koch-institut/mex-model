@@ -1,13 +1,46 @@
+/* Let the navigation scroll past its last entry.
+
+The fixed sidebar is its own scroll container, so the last entry would end up
+flush against the bottom edge of the window. Pad the scrolled content instead
+of the container, because only the padding of the content counts towards the
+scrollable height. */
+
+div.sphinxsidebar div.sphinxsidebarwrapper {
+    padding-bottom: 300px;
+}
+
+/* Truncate long navigation entries.
+
+Some vocabulary titles are longer than the sidebar is wide and would wrap into
+a second line, which breaks the rhythm of the bullet list. Cut them off with an
+ellipsis instead, keeping the links inline, so that their dotted underline
+still hugs the label rather than spanning the whole sidebar. */
+
+div.sphinxsidebar ul li.toctree-l1 > a {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+
 /* Contain wide tables.
 
 The schema tables grow one column per nesting level and the vocabulary tables
 carry long definitions, so they easily get wider than the content column and
 would otherwise stretch the whole page beyond the viewport. Scroll them
-horizontally instead, while narrow tables keep hugging their content. */
+horizontally instead, while narrow tables keep hugging their content.
+
+Since narrow tables do not fill the content column, the auto margins that
+sphinx applies to `align-default` tables would center them. Align them with
+the headings and paragraphs around them instead. */
 
 table.docutils {
     display: block;
     width: max-content;
     max-width: 100%;
     overflow-x: auto;
+    margin-left: 0;
+    margin-right: auto;
 }
