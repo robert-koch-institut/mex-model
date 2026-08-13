@@ -3,6 +3,11 @@
     "$id": "https://mex.rki.de/mex/model/entities/extracted-activity",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "closeMatch": [
+        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+        "http://purl.org/dc/terms/Activity",
+        "http://www.w3.org/ns/prov#Activity"
+    ],
     "description": "An activity carried out by RKI. This may be a research activity, such as a funded project, or a task that RKI performs under federal law. Activities provide useful context information for resources.",
     "properties": {
         "abstract": {
