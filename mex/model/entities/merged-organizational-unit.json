@@ -64,7 +64,7 @@
         },
         "shortName": {
             "default": [],
-            "description": "A short name or abbreviation of the organization unit.",
+            "description": "A short name or abbreviation of the organizational unit.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },

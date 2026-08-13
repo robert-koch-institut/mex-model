@@ -66,7 +66,7 @@
         },
         "contributingUnit": {
             "default": [],
-            "description": "An organizational unit of RKI, that is contributing to the publication.",
+            "description": "An organizational unit of RKI that is contributing to the publication.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
             },
@@ -88,7 +88,7 @@
         },
         "distribution": {
             "default": [],
-            "description": "An available distribution of the publication ([DCAT, 2020-02-04](https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/))",
+            "description": "An available distribution of the publication ([DCAT, 2020-02-04](https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/)).",
             "items": {
                 "$ref": "/mex/model/entities/merged-distribution#/identifier"
             },
@@ -325,7 +325,7 @@
                 {
                     "examples": [
                         "Berlin",
-                        "Chigago",
+                        "Chicago",
                         "NYC/NY",
                         "Tampa, FL"
                     ],
@@ -391,7 +391,7 @@
                 }
             ],
             "default": null,
-            "description": "The name of the chapter of the publication, the book section belongs to."
+            "description": "The name of the chapter of the publication that the book section belongs to."
         },
         "subtitle": {
             "default": [],
@@ -440,7 +440,7 @@
         },
         "titleOfSeries": {
             "default": [],
-            "description": "The title of the book series, the book belongs to.",
+            "description": "The title of the book series that the book belongs to.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
