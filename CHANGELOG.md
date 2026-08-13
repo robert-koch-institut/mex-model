@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+### Changes
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [5.1.1] - 2026-08-13
+
+### Added
+
 - added custom rendering for vocabularies on the schema docs page
 - introduce I18N_PO_DATA_BY_LANGUAGE to get raw gettext data
 
@@ -16,10 +30,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - render whole directories of schemas on the docs page with a new `mexschemas` directive
 - derive the docs navigation sidebar from the sections and directives of the docs index
-
-### Deprecated
-
-### Removed
 
 ### Fixed
 
@@ -29,8 +39,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fixed typos and grammar in descriptions: comma before "that", punctuation, whitespaces
 - fixed issues in entity jsons
 - fixed namespaces
-
-### Security
 
 ## [5.1.0] - 2026-08-11
 
