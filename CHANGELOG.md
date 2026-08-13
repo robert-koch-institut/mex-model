@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+### Changes
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [5.1.0] - 2026-08-11
+
+### Added
+
 - linter for po files
 
 #### Added Vocabulary file
@@ -100,15 +114,9 @@ A new entity type, including the following properties (RKIMEX-14):
 
 - Changed files by adding translation entries for entities named in added: en.po, de.po
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 
 - resource series model
-
-### Security
 
 ## [5.0.3] - 2026-07-15
 
