@@ -476,7 +476,7 @@
         },
         "landingPage": {
             "closeMatch": [
-                "https://www.w3.org/TR/vocab-dcat-3/#Property:resource_landing_page"
+                "https://www.w3.org/ns/dcat#landingPage"
             ],
             "default": [],
             "description": "A web page that provides access to the resource, its distributions and/or additional information.",
