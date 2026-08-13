@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
+- render whole directories of schemas on the docs page with a new `mexschemas` directive
+- derive the docs navigation sidebar from the sections and directives of the docs index
+
 ### Deprecated
 
 ### Removed

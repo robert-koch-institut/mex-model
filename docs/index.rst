@@ -25,53 +25,22 @@ departments. To model this, we rely on the W3C recommendations
 Fields
 ------
 
-.. jsonschema:: ../mex/model/fields/identifier.json
-.. jsonschema:: ../mex/model/fields/link.json
-.. jsonschema:: ../mex/model/fields/text.json
+.. mexschemas:: ../mex/model/fields
 
 Extracted
 ---------
 
-.. jsonschema:: ../mex/model/entities/extracted-access-platform.json
-.. jsonschema:: ../mex/model/entities/extracted-activity.json
-.. jsonschema:: ../mex/model/entities/extracted-bibliographic-resource.json
-.. jsonschema:: ../mex/model/entities/extracted-consent.json
-.. jsonschema:: ../mex/model/entities/extracted-contact-point.json
-.. jsonschema:: ../mex/model/entities/extracted-distribution.json
-.. jsonschema:: ../mex/model/entities/extracted-organization.json
-.. jsonschema:: ../mex/model/entities/extracted-organizational-unit.json
-.. jsonschema:: ../mex/model/entities/extracted-person.json
-    :encoding: utf8
-.. jsonschema:: ../mex/model/entities/extracted-primary-source.json
-.. jsonschema:: ../mex/model/entities/extracted-resource-series.json
-.. jsonschema:: ../mex/model/entities/extracted-resource.json
-.. jsonschema:: ../mex/model/entities/extracted-variable-group.json
-.. jsonschema:: ../mex/model/entities/extracted-variable.json
+.. mexschemas:: ../mex/model/entities extracted-*.json
 
 Merged
 ------
 
-.. jsonschema:: ../mex/model/entities/merged-access-platform.json
-.. jsonschema:: ../mex/model/entities/merged-activity.json
-.. jsonschema:: ../mex/model/entities/merged-bibliographic-resource.json
-.. jsonschema:: ../mex/model/entities/merged-consent.json
-.. jsonschema:: ../mex/model/entities/merged-contact-point.json
-.. jsonschema:: ../mex/model/entities/merged-distribution.json
-.. jsonschema:: ../mex/model/entities/merged-organization.json
-.. jsonschema:: ../mex/model/entities/merged-organizational-unit.json
-.. jsonschema:: ../mex/model/entities/merged-person.json
-    :encoding: utf8
-.. jsonschema:: ../mex/model/entities/merged-primary-source.json
-.. jsonschema:: ../mex/model/entities/merged-resource-series.json
-.. jsonschema:: ../mex/model/entities/merged-resource.json
-.. jsonschema:: ../mex/model/entities/merged-variable-group.json
-.. jsonschema:: ../mex/model/entities/merged-variable.json
+.. mexschemas:: ../mex/model/entities merged-*.json
 
 Concepts
 --------
 
-.. jsonschema:: ../mex/model/entities/concept-scheme.json
-.. jsonschema:: ../mex/model/entities/concept.json
+.. mexschemas:: ../mex/model/entities concept*.json
 
 Vocabularies
 ^^^^^^^^^^^^

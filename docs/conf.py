@@ -6,59 +6,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from vocabularies import load_vocabularies
+from navigation import build_nav_links
 
-VOCABULARIES = load_vocabularies(
-    Path(__file__).parent.parent / "mex" / "model" / "vocabularies"
-)
-
-extensions = ["sphinx-jsonschema", "vocabularies"]
+extensions = ["sphinx-jsonschema", "schemas", "vocabularies"]
 html_theme = "alabaster"
 html_theme_options = {
-    "extra_nav_links": {
-        "Fields": "#fields",
-        "• Identifier": "#identifier",
-        "• Link": "#link",
-        "• Text": "#text",
-        "Extracted": "#extracted",
-        "• ExtractedAccessPlatform": "#extracted-access-platform",
-        "• ExtractedActivity": "#extracted-activity",
-        "• ExtractedBibliographicResource": "#extracted-bibliographic-resource",
-        "• ExtractedConsent": "#extracted-consent",
-        "• ExtractedContactPoint": "#extracted-contact-point",
-        "• ExtractedDistribution": "#extracted-distribution",
-        "• ExtractedOrganization": "#extracted-organization",
-        "• ExtractedOrganizationalUnit": "#extracted-organizational-unit",
-        "• ExtractedPerson": "#extracted-person",
-        "• ExtractedPrimarySource": "#extracted-primary-source",
-        "• ExtractedResourceSeries": "#extracted-resource-series",
-        "• ExtractedResource": "#extracted-resource",
-        "• ExtractedVariableGroup": "#extracted-variable-group",
-        "• ExtractedVariable": "#extracted-variable",
-        "Merged": "#merged",
-        "• MergedAccessPlatform": "#merged-access-platform",
-        "• MergedActivity": "#merged-activity",
-        "• MergedBibliographicResource": "#merged-bibliographic-resource",
-        "• MergedConsent": "#merged-consent",
-        "• MergedContactPoint": "#merged-contact-point",
-        "• MergedDistribution": "#merged-distribution",
-        "• MergedOrganization": "#merged-organization",
-        "• MergedOrganizationalUnit": "#merged-organizational-unit",
-        "• MergedPerson": "#merged-person",
-        "• MergedPrimarySource": "#merged-primary-source",
-        "• MergedResourceSeries": "#merged-resource-series",
-        "• MergedResource": "#merged-resource",
-        "• MergedVariableGroup": "#merged-variable-group",
-        "• MergedVariable": "#merged-variable",
-        "Concepts": "#concepts",
-        "• ConceptScheme": "#concept-scheme",
-        "• Concept": "#concept",
-        "• Vocabularies": "#vocabularies",
-        **{
-            f"◦ {vocabulary.nav_title}": f"#{vocabulary.anchor}"
-            for vocabulary in VOCABULARIES
-        },
-    },
+    "extra_nav_links": build_nav_links(Path(__file__).parent / "index.rst"),
     "page_width": "80%",
     "body_max_width": "100%",
     "fixed_sidebar": "true",
