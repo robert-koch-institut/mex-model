@@ -3,11 +3,6 @@
     "$id": "https://mex.rki.de/mex/model/entities/extracted-activity",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
-    "closeMatch": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-        "http://purl.org/dc/terms/Activity",
-        "http://www.w3.org/ns/prov#Activity"
-    ],
     "description": "An activity carried out by RKI. This may be a research activity, such as a funded project, or a task that RKI performs under federal law. Activities provide useful context information for resources.",
     "properties": {
         "abstract": {
@@ -148,7 +143,7 @@
             "closeMatch": [
                 "http://www.w3.org/ns/prov#hadPrimarySource"
             ],
-            "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30 ](http://www.w3.org/TR/2013/REC-prov-o-20130430/))."
+            "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30](http://www.w3.org/TR/2013/REC-prov-o-20130430/))."
         },
         "identifier": {
             "$ref": "/mex/model/fields/identifier",
@@ -227,6 +222,7 @@
             "type": "array"
         },
         "responsibleUnit": {
+            "closeMatch": "http.//dcat-ap.de/def/dcatde/maintainer",
             "description": "A unit that is responsible for the activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"

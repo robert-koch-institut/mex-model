@@ -3,6 +3,9 @@
     "$id": "https://mex.rki.de/mex/model/entities/merged-contact-point",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "closeMatch": [
+        "https://schema.org/ContactPoint"
+    ],
     "description": "A mail address to which a group of people has access.",
     "properties": {
         "email": {

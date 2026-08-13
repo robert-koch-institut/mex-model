@@ -212,6 +212,7 @@
             "type": "array"
         },
         "responsibleUnit": {
+            "closeMatch": "http.//dcat-ap.de/def/dcatde/maintainer",
             "description": "A unit that is responsible for the activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"

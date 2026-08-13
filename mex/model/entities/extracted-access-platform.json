@@ -145,6 +145,9 @@
         },
         "technicalAccessibility": {
             "$ref": "/mex/model/entities/concept#/identifier",
+            "closeMatch": [
+                "http://purl.org/dc/terms/type"
+            ],
             "description": "Indicates if the platform can be accessed only within RKI network (internally) or if the platform is accessible publicly (externally).",
             "examples": [
                 "https://mex.rki.de/item/technical-accessibility-1"
@@ -155,6 +158,7 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/title"
             ],
+            "default": [],
             "description": "The name of the access platform.",
             "items": {
                 "$ref": "/mex/model/fields/text"

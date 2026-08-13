@@ -8,6 +8,9 @@
     ],
     "properties": {
         "altLabel": {
+            "closeMatch": [
+                "http://www.w3.org/2004/02/skos/core#altLabel"
+            ],
             "default": [],
             "exactMatch": [
                 "http://www.w3.org/2004/02/skos/core#altLabel"
@@ -18,6 +21,9 @@
             "type": "array"
         },
         "broader": {
+            "closeMatch": [
+                "http://www.w3.org/2004/02/skos/core#broader"
+            ],
             "default": [],
             "exactMatch": [
                 "http://www.w3.org/2004/02/skos/core#broader"
@@ -28,6 +34,9 @@
             "type": "array"
         },
         "definition": {
+            "closeMatch": [
+                "http://www.w3.org/2004/02/skos/core#definition"
+            ],
             "default": [],
             "exactMatch": [
                 "http://www.w3.org/2004/02/skos/core#definition"
@@ -38,6 +47,9 @@
             "type": "array"
         },
         "exactMatch": {
+            "closeMatch": [
+                "http://www.w3.org/2004/02/skos/core#exactMatch"
+            ],
             "default": [],
             "exactMatch": [
                 "http://www.w3.org/2004/02/skos/core#exactMatch"
@@ -49,6 +61,9 @@
             "type": "array"
         },
         "identifier": {
+            "closeMatch": [
+                "http://purl.org/dc/elements/1.1/identifier"
+            ],
             "description": "An unambiguous reference to the resource within a given context. Persistent identifiers should be provided as HTTP URIs ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
             "exactMatch": [
                 "http://purl.org/dc/elements/1.1/identifier"
@@ -76,6 +91,9 @@
             "type": "string"
         },
         "note": {
+            "closeMatch": [
+                "http://www.w3.org/2004/02/skos/core#note"
+            ],
             "default": [],
             "exactMatch": [
                 "http://www.w3.org/2004/02/skos/core#note"
