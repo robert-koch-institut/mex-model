@@ -2,7 +2,7 @@
     {
         "altLabel": [
             {
-                "de": "Word Dokument",
+                "de": "Word-Dokument",
                 "en": "Word document"
             }
         ],
@@ -30,8 +30,8 @@
     {
         "altLabel": [
             {
-                "de": "Powerpoint Präsentation",
-                "en": "Powerpoint presentation"
+                "de": "PowerPoint-Präsentation",
+                "en": "PowerPoint presentation"
             }
         ],
         "exactMatch": [
@@ -159,7 +159,7 @@
             }
         ],
         "definition": {
-            "en": "FASTQ format is a text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores. Both the sequence letter and quality score are each encoded with a single ASCII character for brevity. "
+            "en": "FASTQ format is a text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores. Both the sequence letter and quality score are each encoded with a single ASCII character for brevity."
         },
         "exactMatch": [
             "http://maq.sourceforge.net/fastq.shtml"
@@ -193,8 +193,8 @@
     {
         "altLabel": [
             {
-                "de": "Powerpoint Präsentation",
-                "en": "Powerpoint presentation"
+                "de": "PowerPoint-Präsentation",
+                "en": "PowerPoint presentation"
             }
         ],
         "exactMatch": [
@@ -233,7 +233,7 @@
                 "en": "ZIP"
             },
             {
-                "de": "ZIP Datei",
+                "de": "ZIP-Datei",
                 "en": "ZIP file"
             }
         ],

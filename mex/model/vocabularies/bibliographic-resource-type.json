@@ -70,7 +70,7 @@
             "http://purl.org/ontology/bibo/Thesis"
         ],
         "definition": {
-            "de": "Wissenschaftliche Arbeit zur Erlangung des Doktorgrades an einer Universität",
+            "de": "Wissenschaftliche Arbeit zur Erlangung des Doktorgrades an einer Universität.",
             "en": "Document submitted in support of candidature for a doctorate."
         },
         "exactMatch": [
@@ -94,7 +94,7 @@
             "http://purl.org/ontology/bibo/Thesis"
         ],
         "definition": {
-            "de": "Höchstrangige Hochschulprüfung zur Erlangung der Lehrberechtigung an einer Universitätin Deutschland.",
+            "de": "Höchstrangige Hochschulprüfung zur Erlangung der Lehrberechtigung an einer Universität in Deutschland.",
             "en": "Type of thesis necessary for teaching in German universities."
         },
         "exactMatch": [
@@ -167,7 +167,7 @@
             }
         ],
         "definition": {
-            "de": "Eine Plakat mit ein Thema auf einer wissenschaftlichen Veranstaltung vermittelt wird.",
+            "de": "Ein Plakat, mit dem ein Thema auf einer wissenschaftlichen Veranstaltung vermittelt wird.",
             "en": "A type of graphical image created to promote a topic on a scientific event."
         },
         "exactMatch": [
@@ -252,7 +252,7 @@
             }
         ],
         "definition": {
-            "de": "Schriftliche Abschlussarbeit eines Studiengangs an einer Hochschule oder Berufsakademie",
+            "de": "Schriftliche Abschlussarbeit eines Studiengangs an einer Hochschule oder Berufsakademie.",
             "en": "General term for a document submitted in support of candidature for an academic degree."
         },
         "exactMatch": [
