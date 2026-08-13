@@ -9,9 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- added custom rendering for vocabularies on the schema docs page
 - introduce I18N_PO_DATA_BY_LANGUAGE to get raw gettext data
 
 ### Changes
+
+- render whole directories of schemas on the docs page with a new `mexschemas` directive
+- derive the docs navigation sidebar from the sections and directives of the docs index
 
 ### Deprecated
 

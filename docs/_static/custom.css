@@ -1,0 +1,27 @@
+/* Let the navigation scroll past its last entry. */
+
+div.sphinxsidebar div.sphinxsidebarwrapper {
+    padding-bottom: 300px;
+}
+
+/* Truncate long navigation entries. */
+
+div.sphinxsidebar ul li.toctree-l1 > a {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+
+/* Contain wide tables. */
+
+table.docutils {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    overflow-x: auto;
+    margin-left: 0;
+    margin-right: auto;
+}
