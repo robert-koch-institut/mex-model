@@ -34,7 +34,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Added Vocabulary file
 
 - mex/model/vocabularies/coding-system.json (RKIMEX-25)
+- mex/model/vocabularies/country.json (RKIMEX-103)
 - mex/model/vocabularies/purpose.json (RKIMEX-100)
+
+- add vocabularies to concept-schemes.json
 
 #### Added mex/model/entities/extracted-resource-series.json and mex/model/entities/merged-resource-series.json
 
@@ -60,10 +63,16 @@ A new entity type, including the following properties (RKIMEX-14):
 - closeMatch (RKIMEX-116)
 - exactMatch (RKIMEX-116)
 
+#### Added properties to mex/model/entities/extracted-organization.json and mex/model/entities/merged-organization.json
+
+- country (RKIMEX-73)
+
 #### Added properties to mex/model/entities/extracted-resource.json and mex/model/entities/merged-resource.json
 
 - hasPurposeDescription (RKIMEX-106)
 - inSeries (RKIMEX-13)
+- inSeriesFirstResource
+- inSeriesLastResource
 - landingPage (RKIMEX-27)
 - version (RKIMEX-111)
 - hasCodingSystem (RKIMEX-25)
@@ -72,10 +81,12 @@ A new entity type, including the following properties (RKIMEX-14):
 
 - new template https://github.com/robert-koch-institut/mex-template/releases/tag/1.5.0
 - Changed files by adding translation entries for entities named in added: en.po, de.po
+- change annotation properties sameAs and subPropertyOf to closeMatch. delete sameAs and subPropertyOf from extension/definition.json
 
 ### Fixed
 
 - resource series model
+- property identifier in merged-resource-series.json
 
 ## [5.0.3] - 2026-07-15
 
