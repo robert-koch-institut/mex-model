@@ -65,7 +65,7 @@
         },
         "documentation": {
             "default": [],
-            "description": "A link to a document, that contains the documentation of the activity.",
+            "description": "A link to a document that contains the documentation of the activity.",
             "items": {
                 "$ref": "/mex/model/fields/link"
             },
@@ -112,7 +112,7 @@
         },
         "externalAssociate": {
             "default": [],
-            "description": "An external institution or person, that is associated with the activity.",
+            "description": "An external institution or person that is associated with the activity.",
             "items": {
                 "anyOf": [
                     {
@@ -130,7 +130,7 @@
         },
         "funderOrCommissioner": {
             "default": [],
-            "description": "An agent, that has either funded or commissioned the activity.",
+            "description": "An agent that has either funded or commissioned the activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organization#/identifier"
             },
@@ -147,7 +147,7 @@
         },
         "hadPrimarySource": {
             "$ref": "/mex/model/entities/merged-primary-source#/identifier",
-            "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30 ](http://www.w3.org/TR/2013/REC-prov-o-20130430/)).",
+            "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30](http://www.w3.org/TR/2013/REC-prov-o-20130430/)).",
             "sameAs": [
                 "http://www.w3.org/ns/prov#hadPrimarySource"
             ]
@@ -196,7 +196,7 @@
         },
         "isPartOfActivity": {
             "default": [],
-            "description": "Another activity, this activity is part of.",
+            "description": "Another activity of which this activity is part.",
             "items": {
                 "$ref": "/mex/model/entities/merged-activity#/identifier"
             },
@@ -229,7 +229,7 @@
             "type": "array"
         },
         "responsibleUnit": {
-            "description": "A unit, that is responsible for the activity.",
+            "description": "A unit that is responsible for the activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
             },
@@ -291,7 +291,7 @@
         },
         "succeeds": {
             "default": [],
-            "description": "Another activity, that ended with the start of the described activity. A follow-up activity.",
+            "description": "Another activity that ended with the start of the described activity. A follow-up activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-activity#/identifier"
             },

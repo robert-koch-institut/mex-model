@@ -7,7 +7,7 @@
             }
         ],
         "definition": {
-            "de": "Representational State Transfer: Softwarearchitektur verteilter Systemen, insbesondere für Webservices.",
+            "de": "Representational State Transfer: Softwarearchitektur verteilter Systeme, insbesondere für Webservices.",
             "en": "Representational State Transfer: Software architectural style for decoupled components, especially web services."
         },
         "identifier": "https://mex.rki.de/item/api-type-1",
@@ -31,7 +31,7 @@
     },
     {
         "definition": {
-            "de": "Schnittstelle für SPARQL zur Abfrage und Manipulation von Daten im RDF format.",
+            "de": "Schnittstelle für SPARQL zur Abfrage und Manipulation von Daten im RDF-Format.",
             "en": "Interface for SPARQL to retrieve and manipulate data in RDF format."
         },
         "identifier": "https://mex.rki.de/item/api-type-3",
