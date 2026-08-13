@@ -79,6 +79,7 @@ A new entity type, including the following properties (RKIMEX-14):
 
 - new template https://github.com/robert-koch-institut/mex-template/releases/tag/1.5.0
 - Changed files by adding translation entries for entities named in added: en.po, de.po
+- change annotation properties sameAs and subPropertyOf to closeMatch. delete sameAs and subPropertyOf from extension/definition.json
 
 ### Fixed
 
