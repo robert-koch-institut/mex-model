@@ -304,7 +304,7 @@
         },
         "geopoliticalResolution": {
             "default": [],
-            "description": "Geopoliticial resolution or administrative level of the location information of the dataset.",
+            "description": "Geopolitical resolution or administrative level of the location information of the resource.",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
                 "examples": [
