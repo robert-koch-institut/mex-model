@@ -17,11 +17,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+### Security
+
+## [5.1.1] - 2026-08-13
+
+### Added
+
+- added custom rendering for vocabularies on the schema docs page
+- introduce I18N_PO_DATA_BY_LANGUAGE to get raw gettext data
+
+### Changes
+
+- render whole directories of schemas on the docs page with a new `mexschemas` directive
+- derive the docs navigation sidebar from the sections and directives of the docs index
+
+### Fixed
+
+- BREAKING: remove `concept-schemes.json` from VOCABULARY_JSON_BY_NAME
 - BREAKING: fixed typo in the technical accessibility concept scheme identifier
 - BREAKING: fixed copy-pasta in merged-resource-series identifier
 - fixed typos and grammar in descriptions: comma before "that", punctuation, whitespaces
-
-### Security
+- fixed issues in entity jsons
+- fixed namespaces
 
 ## [5.1.0] - 2026-08-11
 

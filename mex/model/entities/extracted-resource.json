@@ -453,7 +453,7 @@
         },
         "inSeries": {
             "closeMatch": [
-                "https://www.w3.org/ns/dcat#inSeries"
+                "http://www.w3.org/ns/dcat#inSeries"
             ],
             "default": [],
             "description": "A resource series of which the resource is part.",
@@ -464,7 +464,7 @@
         },
         "inSeriesFirstResource": {
             "closeMatch": [
-                "https://www.w3.org/ns/dcat#first"
+                "http://www.w3.org/ns/dcat#first"
             ],
             "default": [],
             "description": "The first resource in an ordered collection or series of resources.",
@@ -475,7 +475,7 @@
         },
         "inSeriesLastResource": {
             "closeMatch": [
-                "https://www.w3.org/ns/dcat#last"
+                "http://www.w3.org/ns/dcat#last"
             ],
             "default": [],
             "description": "The last resource in an ordered collection or series of resources.",
@@ -516,7 +516,7 @@
         },
         "landingPage": {
             "closeMatch": [
-                "https://www.w3.org/ns/dcat#landingPage"
+                "http://www.w3.org/ns/dcat#landingPage"
             ],
             "default": [],
             "description": "A web page that provides access to the resource, its distributions and/or additional information.",
@@ -1041,6 +1041,7 @@
                         "2023-01-16",
                         "Schema 9"
                     ],
+                    "maxLength": 100,
                     "type": "string"
                 },
                 {
@@ -1048,11 +1049,10 @@
                 }
             ],
             "closeMatch": [
-                "https://www.w3.org/ns/dcat#version"
+                "http://www.w3.org/ns/dcat#version"
             ],
             "default": null,
-            "description": "The version indicator (name or identifier) of a resource.",
-            "maxLength": 100
+            "description": "The version indicator (name or identifier) of a resource."
         },
         "wasGeneratedBy": {
             "anyOf": [
