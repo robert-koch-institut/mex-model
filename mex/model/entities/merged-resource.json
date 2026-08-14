@@ -491,7 +491,6 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#keyword"
             ],
-            "default": [],
             "description": "A keyword or tag describing the resource.",
             "items": {
                 "anyOf": [
@@ -500,9 +499,6 @@
                     },
                     {
                         "$ref": "/mex/model/fields/link"
-                    },
-                    {
-                        "type": "null"
                     }
                 ]
             },
