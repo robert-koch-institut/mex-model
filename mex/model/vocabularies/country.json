@@ -2366,7 +2366,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/SHN",
-            "https://www.wikidata.org/wiki/Q192184"
+            "http://www.wikidata.org/entity/Q192184"
         ],
         "identifier": "https://mex.rki.de/item/country-198",
         "inScheme": "https://mex.rki.de/item/country",
@@ -2954,7 +2954,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XBH",
-            "https://www.wikidata.org/wiki/Q61698"
+            "http://www.wikidata.org/entity/Q61698"
         ],
         "identifier": "https://mex.rki.de/item/country-247",
         "inScheme": "https://mex.rki.de/item/country",
@@ -2966,7 +2966,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XCI",
-            "https://www.wikidata.org/wiki/Q244207"
+            "http://www.wikidata.org/entity/Q244207"
         ],
         "identifier": "https://mex.rki.de/item/country-248",
         "inScheme": "https://mex.rki.de/item/country",
@@ -3038,7 +3038,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XLI",
-            "https://www.wikidata.org/wiki/Q40871"
+            "http://www.wikidata.org/entity/Q40871"
         ],
         "identifier": "https://mex.rki.de/item/country-254",
         "inScheme": "https://mex.rki.de/item/country",
@@ -3050,7 +3050,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XMA",
-            "https://www.wikidata.org/wiki/Q780149"
+            "http://www.wikidata.org/entity/Q780149"
         ],
         "identifier": "https://mex.rki.de/item/country-255",
         "inScheme": "https://mex.rki.de/item/country",
@@ -3062,7 +3062,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XME",
-            "https://www.wikidata.org/wiki/Q37394"
+            "http://www.wikidata.org/entity/Q37394"
         ],
         "identifier": "https://mex.rki.de/item/country-256",
         "inScheme": "https://mex.rki.de/item/country",
@@ -3122,7 +3122,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XSM",
-            "https://www.wikidata.org/wiki/Q5831"
+            "http://www.wikidata.org/entity/Q5831"
         ],
         "identifier": "https://mex.rki.de/item/country-261",
         "inScheme": "https://mex.rki.de/item/country",
@@ -3134,7 +3134,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XXA",
-            "https://www.wikidata.org/wiki/Q274388"
+            "http://www.wikidata.org/entity/Q274388"
         ],
         "identifier": "https://mex.rki.de/item/country-262",
         "inScheme": "https://mex.rki.de/item/country",
@@ -3146,7 +3146,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XXB",
-            "https://www.wikidata.org/wiki/Q215664"
+            "http://www.wikidata.org/entity/Q215664"
         ],
         "identifier": "https://mex.rki.de/item/country-263",
         "inScheme": "https://mex.rki.de/item/country",
@@ -3182,7 +3182,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XXF",
-            "https://www.wikidata.org/wiki/Q796684"
+            "http://www.wikidata.org/entity/Q796684"
         ],
         "identifier": "https://mex.rki.de/item/country-266",
         "inScheme": "https://mex.rki.de/item/country",
@@ -3194,7 +3194,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XXG",
-            "https://www.wikidata.org/wiki/Q973527"
+            "http://www.wikidata.org/entity/Q973527"
         ],
         "identifier": "https://mex.rki.de/item/country-267",
         "inScheme": "https://mex.rki.de/item/country",
@@ -3206,7 +3206,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XXH",
-            "https://www.wikidata.org/wiki/Q66278313"
+            "http://www.wikidata.org/entity/Q66278313"
         ],
         "identifier": "https://mex.rki.de/item/country-268",
         "inScheme": "https://mex.rki.de/item/country",
@@ -3230,7 +3230,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XXJ",
-            "https://www.wikidata.org/wiki/Q20317"
+            "http://www.wikidata.org/entity/Q20317"
         ],
         "identifier": "https://mex.rki.de/item/country-270",
         "inScheme": "https://mex.rki.de/item/country",
@@ -3242,7 +3242,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XXL",
-            "https://www.wikidata.org/wiki/Q25359"
+            "http://www.wikidata.org/entity/Q25359"
         ],
         "identifier": "https://mex.rki.de/item/country-271",
         "inScheme": "https://mex.rki.de/item/country",
@@ -3254,7 +3254,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XXM",
-            "https://www.wikidata.org/wiki/Q628716"
+            "http://www.wikidata.org/entity/Q628716"
         ],
         "identifier": "https://mex.rki.de/item/country-272",
         "inScheme": "https://mex.rki.de/item/country",
@@ -3266,7 +3266,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XXN",
-            "https://www.wikidata.org/wiki/Q29460"
+            "http://www.wikidata.org/entity/Q29460"
         ],
         "identifier": "https://mex.rki.de/item/country-273",
         "inScheme": "https://mex.rki.de/item/country",
@@ -3278,7 +3278,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XXS",
-            "https://www.wikidata.org/wiki/Q192188"
+            "http://www.wikidata.org/entity/Q192188"
         ],
         "identifier": "https://mex.rki.de/item/country-274",
         "inScheme": "https://mex.rki.de/item/country",
@@ -3290,7 +3290,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XXT",
-            "https://www.wikidata.org/wiki/Q766270"
+            "http://www.wikidata.org/entity/Q766270"
         ],
         "identifier": "https://mex.rki.de/item/country-275",
         "inScheme": "https://mex.rki.de/item/country",
@@ -3302,7 +3302,7 @@
     {
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/country/XXU",
-            "https://www.wikidata.org/wiki/Q336494"
+            "http://www.wikidata.org/entity/Q336494"
         ],
         "identifier": "https://mex.rki.de/item/country-276",
         "inScheme": "https://mex.rki.de/item/country",
