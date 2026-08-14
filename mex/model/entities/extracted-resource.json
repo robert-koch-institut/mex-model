@@ -796,7 +796,7 @@
                 "http://purl.org/dc/terms/relation"
             ],
             "default": [],
-            "description": "An activity that is related to the Resource.",
+            "description": "An Activity that is related to the Resource.",
             "items": {
                 "$ref": "/mex/model/entities/merged-activity#/identifier"
             },
