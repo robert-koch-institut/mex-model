@@ -5,30 +5,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgctxt "Activity"
 msgid "abstract.singular"
-msgstr "Abstract"
+msgstr "Kurzbeschreibung"
 
 msgctxt "Activity"
 msgid "abstract.description"
 msgstr ""
-"Brief description of the context in which the "
-"data was processed"
+"Brief description of the project"
 
-msgctxt "Resource"
+msgctxt "BibliographicResource"
+msgid "abstract.singular"
+msgstr "Abstract"
+
+msgctxt "BibliographicResource"
+msgid "abstract.description"
+msgstr "Short summary of the content"
+
 msgid "accessPlatform.singular"
 msgid_plural "accessPlatform.plural"
 msgstr[0] "Access platform"
 msgstr[1] "Access platforms"
 
-msgctxt "Resource"
 msgid "accessPlatform.description"
 msgstr "Access platform for the data"
-
-msgid "accessRestriction.singular"
-msgstr "Access restriction"
-
-msgid "accessRestriction.description"
-msgstr "Description of the access restriction"
 
 msgctxt "BibliographicResource"
 msgid "accessRestriction.description"
@@ -41,6 +41,14 @@ msgid "accessRestriction.description"
 msgstr ""
 "Description of whether the file is accessible to everyone (open) or has "
 "restricted access (restricted)"
+
+msgctxt "ResourceSeries"
+msgid "accrualPeriodicity.singular"
+msgstr "Update frequency"
+
+msgctxt "ResourceSeries"
+msgid "accrualPeriodicity.description"
+msgstr "The frequency with which the data series is updated"
 
 msgctxt "Resource"
 msgid "accessRestriction.description"
@@ -166,22 +174,26 @@ msgstr ""
 msgctxt "Resource"
 msgid "conformsTo.singular"
 msgid_plural "conformsTo.plural"
-msgstr[0] "Standard"
-msgstr[1] "Standards"
+msgstr[0] "Health standard"
+msgstr[1] "Health standards"
 
 msgctxt "Resource"
 msgid "conformsTo.description"
-msgstr "Established standard to which the described data conforms to"
+msgstr "Established health standard to which the described data conforms to"
 
 msgid "contact.singular"
 msgid_plural "contact.plural"
 msgstr[0] "Contact"
 msgstr[1] "Contacts"
 
+msgid "contact.description"
+msgstr "Contact option"
+
 msgctxt "Activity"
 msgid "contact.description"
 msgstr "Contact for the project/endeavor"
 
+msgctxt "AccessPlatform"
 msgid "contact.description"
 msgstr ""
 "Contact or unit that can help with accessing, troubleshooting, or otherwise "
@@ -240,14 +252,6 @@ msgctxt "Organization"
 msgid "country.description"
 msgstr "Country, in which the organization is based"
 
-msgctxt "Organization"
-msgid "country.singular"
-msgstr "Country"
-
-msgctxt "Organization"
-msgid "country.description"
-msgstr "Country, in which the organization is based"
-
 msgctxt "Resource"
 msgid "created.singular"
 msgstr "Created"
@@ -280,22 +284,6 @@ msgctxt "Variable"
 msgid "dataType.description"
 msgstr "Defined data type of the variable"
 
-msgctxt "Variable"
-msgid "dataTypeStandardized.singular"
-msgstr "Data type"
-
-msgctxt "Variable"
-msgid "dataTypeStandardized.description"
-msgstr "Data type of the variable (standardized)"
-
-msgctxt "Variable"
-msgid "dataTypeInPrimarySource.singular"
-msgstr "Original data type"
-
-msgctxt "Variable"
-msgid "dataTypeInPrimarySource.description"
-msgstr "Data type of the variable as defined in the original primary source system"
-
 msgid "description.singular"
 msgstr "Description"
 
@@ -303,6 +291,12 @@ msgctxt "Resource"
 msgid "description.description"
 msgstr ""
 "Brief description of the data, its components, and the context of how the "
+"data was created"
+
+msgctxt "ResourceSeries"
+msgid "description.description"
+msgstr ""
+"Brief description of the data series, its components, and the context of how the "
 "data was created"
 
 msgctxt "AccessPlatform"
@@ -339,6 +333,10 @@ msgstr "URL leading to further documentation of the project/endeavor"
 msgctxt "Resource"
 msgid "documentation.description"
 msgstr "Further information about the data"
+
+msgctxt "ResourceSeries"
+msgid "documentation.description"
+msgstr "Further information about the data series"
 
 msgctxt "PrimarySource"
 msgid "documentation.description"
@@ -411,9 +409,17 @@ msgctxt "Resource"
 msgid "end.singular"
 msgstr "End"
 
+msgctxt "ResourceSeries"
+msgid "end.singular"
+msgstr "End"
+
 msgctxt "Resource"
 msgid "end.description"
 msgstr "The end of the time period covered by the data"
+
+msgctxt "ResourceSeries"
+msgid "end.description"
+msgstr "The end of the time period covered by the data series"
 
 msgctxt "AccessPlatform"
 msgid "endpointDescription.singular"
@@ -545,8 +551,8 @@ msgstr[0] "Code value"
 msgstr[1] "Code values"
 
 msgctxt "Resource"
-msgid "hasCodingSystem.description"
-msgstr "Specification of coding system in use"
+msgid "hasCodeValues.description"
+msgstr "Values deriving from standardised coding systems"
 
 msgctxt "Resource"
 msgid "hasCodingSystem.singular"
@@ -555,14 +561,12 @@ msgstr[0] "Coding system in use"
 msgstr[1] "Coding systems in use"
 
 msgctxt "Resource"
-msgid "hasCodeValues.description"
-msgstr "Values deriving from standardised coding systems"
+msgid "hasCodingSystem.description"
+msgstr "Specification of coding system in use"
 
-msgctxt "Resource"
 msgid "hasLegalBasis.singular"
 msgstr "Legal basis"
 
-msgctxt "Resource"
 msgid "hasLegalBasis.description"
 msgstr "Laws and regulations that are the basis on which data is collected"
 
@@ -648,6 +652,22 @@ msgstr "Dataset series"
 msgctxt "Resource"
 msgid "inSeries.description"
 msgstr "Collection of datasets, this dataset belongs to"
+
+msgctxt "Resource"
+msgid "inSeriesFirstResource.singular"
+msgstr "First dataset"
+
+msgctxt "Resource"
+msgid "inSeriesFirstResource.description"
+msgstr "This dataset is the first dataset in the linked data series"
+
+msgctxt "Resource"
+msgid "inSeriesLastResource.singular"
+msgstr "Last dataset"
+
+msgctxt "Resource"
+msgid "inSeriesLastResource.description"
+msgstr "This dataset is the last dataset in the linked data series"
 
 msgctxt "Resource"
 msgid "instrumentToolOrApparatus.singular"
@@ -1035,6 +1055,16 @@ msgctxt "Resource"
 msgid "publisher.description"
 msgstr "Responsible party for making available/providing the data"
 
+msgctxt "ResourceSeries"
+msgid "publisher.singular"
+msgid_plural "publisher.plural"
+msgstr[0] "Publishing institution"
+msgstr[1] "Publishing institutions"
+
+msgctxt "ResourceSeries"
+msgid "publisher.description"
+msgstr "Responsible party for making available/providing the data series"
+
 msgctxt "Resource"
 msgid "qualityInformation.singular"
 msgstr "Additional information"
@@ -1183,13 +1213,11 @@ msgctxt "Resource"
 msgid "source.description"
 msgstr "One or more datasets that were used as sources for the dataset described"
 
-msgctxt "Resource"
 msgid "spatial.singular"
 msgstr "Location or geographic region"
 
-msgctxt "Resource"
 msgid "spatial.description"
-msgstr "Location or geographic region covered by the dataset"
+msgstr "Location or geographic region covered by the data"
 
 msgid "stableTargetId.singular"
 msgstr "Stable target id"
@@ -1214,6 +1242,14 @@ msgstr "Start"
 msgctxt "Resource"
 msgid "start.description"
 msgstr "The start of the time period covered by the data"
+
+msgctxt "ResourceSeries"
+msgid "start.singular"
+msgstr "Start"
+
+msgctxt "ResourceSeries"
+msgid "start.description"
+msgstr "The start of the time period covered by the data series"
 
 msgctxt "Resource"
 msgid "stateOfDataProcessing.singular"
@@ -1440,7 +1476,7 @@ msgstr "Primary source"
 msgid "Resource"
 msgstr "Data Source/Dataset"
 
-msgid "Resource Series"
+msgid "ResourceSeries"
 msgstr "Collection of Data sources/Datasets"
 
 msgid "Variable"
