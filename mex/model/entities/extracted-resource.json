@@ -6,7 +6,7 @@
     "closeMatch": [
         "http://www.w3.org/ns/dcat#Dataset"
     ],
-    "description": "A defined piece of information or collection of information on Public Health, that has been generated as part of a (research) activity at the RKI or to comply with a (federal) law or regulation that applies to the RKI.",
+    "description": "A defined piece of information or collection of information on Public Health that has been generated as part of a (research) activity at the RKI or to comply with a (federal) law or regulation that applies to the RKI.",
     "properties": {
         "accessPlatform": {
             "closeMatch": [
@@ -61,6 +61,9 @@
             "type": "array"
         },
         "analytics": {
+            "closeMatch": [
+                "http://healthdataportal.eu/ns/health#analytics"
+            ],
             "default": [],
             "description": "An analytics distribution of the dataset.",
             "exactMatch": [
@@ -121,7 +124,7 @@
                 "http://purl.org/dc/terms/contributor"
             ],
             "default": [],
-            "description": "An organizational unit of RKI, that is contributing to the resource.",
+            "description": "An organizational unit of RKI that is contributing to the resource.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
             },
@@ -180,7 +183,7 @@
                 "http://purl.org/dc/terms/created"
             ],
             "default": null,
-            "description": "Date of creation of the resource"
+            "description": "Date of creation of the resource."
         },
         "creator": {
             "closeMatch": [
@@ -206,7 +209,7 @@
         },
         "distribution": {
             "default": [],
-            "description": "An available distribution of the resource",
+            "description": "An available distribution of the resource.",
             "items": {
                 "$ref": "/mex/model/entities/merged-distribution#/identifier"
             },
@@ -316,7 +319,7 @@
             "closeMatch": [
                 "http://www.w3.org/ns/prov#hadPrimarySource"
             ],
-            "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30 ](http://www.w3.org/TR/2013/REC-prov-o-20130430/))."
+            "description": "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight. Because of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated. A primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain ([PROV-O, 2013-04-30](http://www.w3.org/TR/2013/REC-prov-o-20130430/))."
         },
         "hasCodeValues": {
             "closeMatch": [
@@ -334,7 +337,7 @@
                 "http://healthdataportal.eu/ns/health#hasCodingSystem"
             ],
             "default": [],
-            "description": "Coding systems in use (i.e. ICD-10, SNOMED-CT).",
+            "description": "Coding systems in use (e.g. ICD-10, SNOMED-CT).",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
                 "examples": [
@@ -460,7 +463,7 @@
         },
         "inSeries": {
             "closeMatch": [
-                "https://www.w3.org/ns/dcat#inSeries"
+                "http://www.w3.org/ns/dcat#inSeries"
             ],
             "default": [],
             "description": "A resource series of which the resource is part.",
@@ -471,7 +474,7 @@
         },
         "inSeriesFirstResource": {
             "closeMatch": [
-                "https://www.w3.org/ns/dcat#first"
+                "http://www.w3.org/ns/dcat#first"
             ],
             "default": [],
             "description": "The first resource in an ordered collection or series of resources.",
@@ -482,7 +485,7 @@
         },
         "inSeriesLastResource": {
             "closeMatch": [
-                "https://www.w3.org/ns/dcat#last"
+                "http://www.w3.org/ns/dcat#last"
             ],
             "default": [],
             "description": "The last resource in an ordered collection or series of resources.",
@@ -534,7 +537,7 @@
         },
         "landingPage": {
             "closeMatch": [
-                "https://www.w3.org/ns/dcat#landingPage"
+                "http://www.w3.org/ns/dcat#landingPage"
             ],
             "default": [],
             "description": "A web page that provides access to the resource, its distributions and/or additional information.",
@@ -629,7 +632,7 @@
         },
         "method": {
             "default": [],
-            "description": "Method used in the research, analysis, observation or processing of the object that is subject to the resource.",
+            "description": "Method used in the research, analysis, observation or processing of the object that is the subject of the resource.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
@@ -640,7 +643,7 @@
                 "http://purl.org/dc/terms/description"
             ],
             "default": [],
-            "description": "The description of the method, that was used to research, analysis, observation or processing of the object that was subject to the resource.",
+            "description": "The description of the method that was used for the research, analysis, observation or processing of the object that was the subject of the resource.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
@@ -767,7 +770,7 @@
                 "http://purl.org/dc/terms/isReferencedBy"
             ],
             "default": [],
-            "description": "A publication that deals with the research, analysis, observation or processing of the object that was subject to the resource, e.g. a research paper.",
+            "description": "A publication that deals with the research, analysis, observation or processing of the object that was the subject of the resource, e.g. a research paper.",
             "items": {
                 "$ref": "/mex/model/entities/merged-bibliographic-resource#/identifier"
             },
@@ -1070,6 +1073,7 @@
                         "2023-01-16",
                         "Schema 9"
                     ],
+                    "maxLength": 100,
                     "type": "string"
                 },
                 {
@@ -1077,11 +1081,10 @@
                 }
             ],
             "closeMatch": [
-                "https://www.w3.org/ns/dcat#version"
+                "http://www.w3.org/ns/dcat#version"
             ],
             "default": null,
-            "description": "The version indicator (name or identifier) of a resource.",
-            "maxLength": 100
+            "description": "The version indicator (name or identifier) of a resource."
         },
         "wasGeneratedBy": {
             "anyOf": [

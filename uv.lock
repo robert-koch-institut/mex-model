@@ -589,7 +589,7 @@ wheels = [
 
 [[package]]
 name = "mex-model"
-version = "5.0.3"
+version = "5.1.1"
 source = { editable = "." }
 
 [package.dev-dependencies]

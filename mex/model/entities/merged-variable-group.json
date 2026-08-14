@@ -9,7 +9,7 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/isPartOf"
             ],
-            "description": "The resource, the variable group is contained by. Used to connect a variable group to its resource.",
+            "description": "The resource that the variable group is contained by. Used to connect a variable group to its resource.",
             "items": {
                 "$ref": "/mex/model/entities/merged-resource#/identifier"
             },

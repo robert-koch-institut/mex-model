@@ -9,12 +9,50 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+### Changes
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [5.1.1] - 2026-08-13
+
+### Added
+
+- added custom rendering for vocabularies on the schema docs page
+- introduce I18N_PO_DATA_BY_LANGUAGE to get raw gettext data
+
+### Changes
+
+- render whole directories of schemas on the docs page with a new `mexschemas` directive
+- derive the docs navigation sidebar from the sections and directives of the docs index
+
+### Fixed
+
+- BREAKING: remove `concept-schemes.json` from VOCABULARY_JSON_BY_NAME
+- BREAKING: fixed typo in the technical accessibility concept scheme identifier
+- BREAKING: fixed copy-pasta in merged-resource-series identifier
+- fixed typos and grammar in descriptions: comma before "that", punctuation, whitespaces
+- fixed issues in entity jsons
+- fixed namespaces
+
+## [5.1.0] - 2026-08-11
+
+### Added
+
 - linter for po files
 
 #### Added Vocabulary file
 
 - mex/model/vocabularies/coding-system.json (RKIMEX-25)
+- mex/model/vocabularies/country.json (RKIMEX-103)
 - mex/model/vocabularies/purpose.json (RKIMEX-100)
+
+- add vocabularies to concept-schemes.json
 
 #### Added mex/model/entities/extracted-resource-series.json and mex/model/entities/merged-resource-series.json
 
@@ -40,10 +78,16 @@ A new entity type, including the following properties (RKIMEX-14):
 - closeMatch (RKIMEX-116)
 - exactMatch (RKIMEX-116)
 
+#### Added properties to mex/model/entities/extracted-organization.json and mex/model/entities/merged-organization.json
+
+- country (RKIMEX-73)
+
 #### Added properties to mex/model/entities/extracted-resource.json and mex/model/entities/merged-resource.json
 
 - hasPurposeDescription (RKIMEX-106)
 - inSeries (RKIMEX-13)
+- inSeriesFirstResource
+- inSeriesLastResource
 - landingPage (RKIMEX-27)
 - version (RKIMEX-111)
 - hasCodingSystem (RKIMEX-25)
@@ -52,16 +96,12 @@ A new entity type, including the following properties (RKIMEX-14):
 
 - new template https://github.com/robert-koch-institut/mex-template/releases/tag/1.5.0
 - Changed files by adding translation entries for entities named in added: en.po, de.po
-
-### Deprecated
-
-### Removed
+- change annotation properties sameAs and subPropertyOf to closeMatch. delete sameAs and subPropertyOf from extension/definition.json
 
 ### Fixed
 
 - resource series model
-
-### Security
+- property identifier in merged-resource-series.json
 
 ## [5.0.3] - 2026-07-15
 

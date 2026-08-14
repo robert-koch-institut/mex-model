@@ -2,7 +2,7 @@
     {
         "altLabel": [
             {
-                "de": "Word Dokument",
+                "de": "Word-Dokument",
                 "en": "Word document"
             }
         ],
@@ -30,8 +30,8 @@
     {
         "altLabel": [
             {
-                "de": "Powerpoint Präsentation",
-                "en": "Powerpoint presentation"
+                "de": "PowerPoint-Präsentation",
+                "en": "PowerPoint presentation"
             }
         ],
         "exactMatch": [
@@ -195,8 +195,8 @@
     {
         "altLabel": [
             {
-                "de": "Powerpoint Präsentation",
-                "en": "Powerpoint presentation"
+                "de": "PowerPoint-Präsentation",
+                "en": "PowerPoint presentation"
             }
         ],
         "exactMatch": [
@@ -235,7 +235,7 @@
                 "en": "ZIP"
             },
             {
-                "de": "ZIP Datei",
+                "de": "ZIP-Datei",
                 "en": "ZIP file"
             }
         ],

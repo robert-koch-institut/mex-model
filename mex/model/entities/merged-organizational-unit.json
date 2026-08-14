@@ -72,7 +72,7 @@
                 "http://www.wikidata.org/entity/P1813"
             ],
             "default": [],
-            "description": "A short name or abbreviation of the organization unit.",
+            "description": "A short name or abbreviation of the organizational unit.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },

@@ -1,6 +1,6 @@
 [project]
 name = "mex-model"
-version = "5.0.3"
+version = "5.1.1"
 description = "JSON schema files defining the MEx metadata model."
 authors = [{ name = "MEx Team", email = "mex@rki.de" }]
 readme = { file = "README.md", content-type = "text/markdown" }
@@ -22,6 +22,12 @@ dev = [
     "sphinx<9",
 ]
 
+[tool.coverage.run]
+omit = [
+    # imported by the navigation helper, but has no tests of its own yet
+    "docs/vocabularies.py",
+]
+
 [tool.cruft]
 template = "https://github.com/robert-koch-institut/mex-template"
 skip = ["CHANGELOG.md", "mex", "tests"]
@@ -32,6 +38,11 @@ context = 5
 [tool.mypy]
 show_error_codes = true
 strict = true
+
+# the sphinx extensions in `docs` are not part of the package and not type-checked
+[[tool.mypy.overrides]]
+module = ["navigation", "schemas"]
+ignore_missing_imports = true
 
 [tool.pydantic-mypy]
 warn_untyped_fields = true

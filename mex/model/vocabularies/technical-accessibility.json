@@ -7,7 +7,7 @@
             }
         ],
         "identifier": "https://mex.rki.de/item/technical-accessibility-1",
-        "inScheme": "https://mex.rki.de/item/technical-accessbility",
+        "inScheme": "https://mex.rki.de/item/technical-accessibility",
         "prefLabel": {
             "de": "intern",
             "en": "internal"
@@ -21,7 +21,7 @@
             }
         ],
         "identifier": "https://mex.rki.de/item/technical-accessibility-2",
-        "inScheme": "https://mex.rki.de/item/technical-accessbility",
+        "inScheme": "https://mex.rki.de/item/technical-accessibility",
         "prefLabel": {
             "de": "extern",
             "en": "external"

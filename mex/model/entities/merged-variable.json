@@ -10,7 +10,7 @@
                 "http://purl.org/dc/terms/isPartOf"
             ],
             "default": [],
-            "description": "The variable group, the described variable is part of. Used to group variables together, depending on how they are structured in the primary source.",
+            "description": "The variable group that the described variable is part of. Used to group variables together, depending on how they are structured in the primary source.",
             "items": {
                 "$ref": "/mex/model/entities/merged-variable-group#/identifier"
             },
@@ -110,7 +110,7 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/isPartOf"
             ],
-            "description": "The resource, the variable is used in.",
+            "description": "The resource that the variable is used in.",
             "items": {
                 "$ref": "/mex/model/entities/merged-resource#/identifier"
             },

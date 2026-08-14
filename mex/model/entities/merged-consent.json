@@ -10,7 +10,7 @@
     "description": "Consent of the Data Subject for specified process or activity.",
     "properties": {
         "hasConsentStatus": {
-            "$comment": "Used to indicate if personal details are allowed to publish or not.",
+            "$comment": "Used to indicate if personal details are allowed to be published or not.",
             "$ref": "/mex/model/entities/concept#/identifier",
             "closeMatch": [
                 "https://w3id.org/dpv#hasConsentStatus"
