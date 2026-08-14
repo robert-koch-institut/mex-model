@@ -904,7 +904,7 @@
                 "http://purl.org/dc/terms/spatial"
             ],
             "default": [],
-            "description": "Location or geographic region covered by the dataset.",
+            "description": "Location or geographic region covered by the resource.",
             "items": {
                 "$ref": "/mex/model/entities/merged-location#/identifier"
             },
