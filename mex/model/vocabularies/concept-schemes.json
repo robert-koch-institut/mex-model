@@ -82,7 +82,7 @@
     {
         "description": {
             "de": "Dieser Begriff wird verwendet, um die geopolitische Auflösung bzw. die Verwaltungsebene der Standortinformationen der Ressource zu beschreiben.",
-            "en": "This vocabulary may be used to describe the geopoliticial resolution or administrative level of the location information of the resource."
+            "en": "This vocabulary may be used to describe the geopolitical resolution or administrative level of the location information of the resource."
         },
         "identifier": "https://mex.rki.de/item/geopolitical-resolution",
         "label": "Geopolitical resolution vocabulary"
