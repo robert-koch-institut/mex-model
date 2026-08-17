@@ -33,7 +33,7 @@ repos:
         additional_dependencies: [dennis]
         files: \.po$
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.12.2
+    rev: 0.12.3
     hooks:
       - id: uv-lock
         name: uv
