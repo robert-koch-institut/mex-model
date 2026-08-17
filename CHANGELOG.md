@@ -11,8 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- added `default` to property `country` in extracted- and merged-organization.json
-
 ### Deprecated
 
 ### Removed
@@ -20,6 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+## [5.1.2] - 2026-08-17
+
+### Changes
+
+- added `default` to property `country` in extracted- and merged-organization.json
 
 ## [5.1.1] - 2026-08-13
 
