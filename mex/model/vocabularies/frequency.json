@@ -74,24 +74,6 @@
     {
         "definition": [
             {
-                "de": "Das Ereignis findet dreimal im Jahr statt.",
-                "en": "The event occurs three times a year."
-            }
-        ],
-        "exactMatch": [
-            "http://purl.org/cld/freq/threeTimesAYear",
-            "https://publications.europa.eu/resource/authority/frequency/ANNUAL_3"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-5",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "dreimal im Jahr",
-            "en": "three times a year"
-        }
-    },
-    {
-        "definition": [
-            {
                 "de": "Das Ereignis findet alle drei Monate statt.",
                 "en": "The event occurs every three months."
             }
@@ -146,24 +128,6 @@
     {
         "definition": [
             {
-                "de": "Das Ereignis findet zweimal im Monat statt.",
-                "en": "The event occurs twice a month."
-            }
-        ],
-        "exactMatch": [
-            "http://purl.org/cld/freq/semimonthly",
-            "http://publications.europa.eu/resource/authority/frequency/MONTHLY_2"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-9",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "halbmonatlich",
-            "en": "semimonthly"
-        }
-    },
-    {
-        "definition": [
-            {
                 "de": "Das Ereignis findet alle zwei Wochen statt.",
                 "en": "The event occurs every two weeks."
             }
@@ -177,24 +141,6 @@
         "prefLabel": {
             "de": "zweiwöchentlich",
             "en": "biweekly"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis findet dreimal im Monat statt.",
-                "en": "The event occurs three times a month."
-            }
-        ],
-        "exactMatch": [
-            "http://purl.org/cld/freq/threeTimesAMonth",
-            "http://publications.europa.eu/resource/authority/frequency/MONTHLY_3"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-11",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "dreimal im Monat",
-            "en": "three times a month"
         }
     },
     {
@@ -231,24 +177,6 @@
         "prefLabel": {
             "de": "halbwöchentlich",
             "en": "semiweekly"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis findet dreimal in der Woche statt.",
-                "en": "The event occurs three times a week."
-            }
-        ],
-        "exactMatch": [
-            "http://purl.org/cld/freq/threeTimesAWeek",
-            "http://publications.europa.eu/resource/authority/frequency/WEEKLY_3"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-14",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "dreimal in der Woche",
-            "en": "three times a week"
         }
     },
     {
@@ -308,210 +236,6 @@
     {
         "definition": [
             {
-                "de": "Das Ereignis findet in Abständen von jeweils einer Minute statt.",
-                "en": "The event occurs at intervals of every minute."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/1MIN"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-18",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "minütlich",
-            "en": "every minute"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis findet in Abständen von fünf Minuten statt.",
-                "en": "The event occurs at intervals of five minutes."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/5MIN"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-19",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "alle 5 Minuten",
-            "en": "every 5 minutes"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis findet in Abständen von zehn Minuten statt.",
-                "en": "The event occurs at intervals of ten minutes."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/10MIN"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-20",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "alle 10 Minuten",
-            "en": "every 10 minutes"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis findet in Abständen von fünfzehn Minuten statt.",
-                "en": "The event occurs at intervals of fifteen minutes."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/15MIN"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-21",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "alle 15 Minuten",
-            "en": "every 15 minutes"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis findet in Abständen von dreißig Minuten statt.",
-                "en": "The event occurs at intervals of thirty minutes."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/30MIN"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-22",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "alle 30 Minuten",
-            "en": "every 30 minutes"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis findet stündlich statt.",
-                "en": "The event occurs hourly."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/HOURLY"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-23",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "stündlich",
-            "en": "hourly"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis findet alle zwei Stunden statt.",
-                "en": "The event occurs bihourly."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/BIHOURLY"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-24",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "alle zwei Stunden",
-            "en": "bihourly"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis findet alle drei Stunden statt.",
-                "en": "The event occurs trihourly."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/TRIHOURLY"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-25",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "alle drei Stunden",
-            "en": "trihourly"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis findet alle zwölf Stunden statt.",
-                "en": "The event occurs every twelve hours."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/12HRS"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-26",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "alle 12 Stunden",
-            "en": "every twelve hours"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis findet zwei Mal täglich statt.",
-                "en": "The event occurs twice a day."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/DAILY_2"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-27",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "zwei Mal täglich",
-            "en": "twice a day"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis findet fünf Mal pro Woche statt.",
-                "en": "The event occurs five times a week."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/WEEKLY_5"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-28",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "5 Mal pro Woche",
-            "en": "five times a week"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis findet alle vier Jahre statt.",
-                "en": "The event occurs every four years."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/QUADRENNIAL"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-29",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "alle 4 Jahre",
-            "en": "every 4 years"
-        }
-    },
-    {
-        "definition": [
-            {
                 "de": "Das Ereignis findet alle fünf Jahre statt.",
                 "en": "The event occurs every five years."
             }
@@ -519,28 +243,11 @@
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/QUINQUENNIAL"
         ],
-        "identifier": "https://mex.rki.de/item/frequency-30",
+        "identifier": "https://mex.rki.de/item/frequency-18",
         "inScheme": "https://mex.rki.de/item/frequency",
         "prefLabel": {
             "de": "alle 5 Jahre",
             "en": "every 5 years"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis findet alle sechs Jahre statt.",
-                "en": "The event occurs every six years."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/SEXENNIAL"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-31",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "alle 6 Jahre",
-            "en": "every 6 years"
         }
     },
     {
@@ -553,45 +260,11 @@
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/DECENNIAL"
         ],
-        "identifier": "https://mex.rki.de/item/frequency-32",
+        "identifier": "https://mex.rki.de/item/frequency-19",
         "inScheme": "https://mex.rki.de/item/frequency",
         "prefLabel": {
             "de": "alle 10 Jahre",
             "en": "every 10 years"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis findet alle zwanzig Jahre statt.",
-                "en": "The event occurs every twenty years."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/BIDECENNIAL"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-33",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "alle 20 Jahre",
-            "en": "every 20 years"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis findet alle dreißig Jahre statt.",
-                "en": "The event occurs every thirty years."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/TRIDECENNIAL"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-34",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "alle 30 Jahre",
-            "en": "every 30 years"
         }
     },
     {
@@ -604,28 +277,11 @@
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/AS_NEEDED"
         ],
-        "identifier": "https://mex.rki.de/item/frequency-35",
+        "identifier": "https://mex.rki.de/item/frequency-20",
         "inScheme": "https://mex.rki.de/item/frequency",
         "prefLabel": {
             "de": "im Bedarfsfall",
             "en": "as needed"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis wird laufend aktualisiert.",
-                "en": "The event is updated continuously."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-36",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "laufend aktualisiert",
-            "en": "continuously updated "
         }
     },
     {
@@ -638,28 +294,11 @@
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/NEVER"
         ],
-        "identifier": "https://mex.rki.de/item/frequency-37",
+        "identifier": "https://mex.rki.de/item/frequency-21",
         "inScheme": "https://mex.rki.de/item/frequency",
         "prefLabel": {
             "de": "nie",
             "en": "never"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Es gibt keine Pläne, das Ereignis zu aktualisieren.",
-                "en": "There are no plans to update the event."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/NOT_PLANNED"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-38",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "nicht geplant",
-            "en": "not planned"
         }
     },
     {
@@ -672,28 +311,11 @@
         "exactMatch": [
             "http://publications.europa.eu/resource/authority/frequency/OTHER"
         ],
-        "identifier": "https://mex.rki.de/item/frequency-39",
+        "identifier": "https://mex.rki.de/item/frequency-22",
         "inScheme": "https://mex.rki.de/item/frequency",
         "prefLabel": {
             "de": "sonstiges",
             "en": "other"
-        }
-    },
-    {
-        "definition": [
-            {
-                "de": "Das Ereignis tritt in unbekannten Abständen auf.",
-                "en": "The event occurs with unknown regularity."
-            }
-        ],
-        "exactMatch": [
-            "http://publications.europa.eu/resource/authority/frequency/UNKNOWN"
-        ],
-        "identifier": "https://mex.rki.de/item/frequency-40",
-        "inScheme": "https://mex.rki.de/item/frequency",
-        "prefLabel": {
-            "de": "unbekannt",
-            "en": "unknown"
         }
     }
 ]
