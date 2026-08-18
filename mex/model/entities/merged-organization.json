@@ -26,6 +26,7 @@
             "closeMatch": [
                 "http://www.wikidata.org/entity/P17"
             ],
+            "default": [],
             "description": "Country or territory that this organization is in.",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
