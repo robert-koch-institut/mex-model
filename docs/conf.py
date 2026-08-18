@@ -1,47 +1,62 @@
-# sphinx configuration
+"""Sphinx configuration for MEx model specification."""
 
 import importlib
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent))
+# Make the _ext directory importable
+sys.path.insert(0, str(Path(__file__).parent / "_ext"))
 
-from navigation import build_nav_links
+# --- Extensions -----------------------------------------------------------
 
-extensions = ["sphinx-jsonschema", "schemas", "vocabularies"]
+extensions = [
+    "myst_parser",        # parse .md files
+    "sphinx-jsonschema",  # render JSON schemas as tables
+    "schemas",            # existing: .. mexschemas:: directive
+    "vocabularies",       # existing: .. mexvocabularies:: directive
+    "mex_schema",         # custom directives: {mex-entity}, {mex-field}
+]
+
+# --- MyST-Parser settings -------------------------------------------------
+
+myst_enable_extensions = [
+    "colon_fence",   # ::: directive syntax
+    "fieldlist",     # field lists in MD
+    "deflist",       # definition lists in MD
+]
+
+# Allow .md and .rst source files
+source_suffix = {
+    ".rst": "restructuredtext",
+    ".md": "markdown",
+}
+
+# --- Project metadata ------------------------------------------------------
+
+project = "mex-model"
+
+# --- HTML output settings --------------------------------------------------
+
 html_theme = "alabaster"
 html_theme_options = {
-    "extra_nav_links": build_nav_links(Path(__file__).parent / "index.rst"),
-    "page_width": "80%",
-    "body_max_width": "100%",
+    "page_width": "100%",
     "fixed_sidebar": "true",
     "sidebar_width": "300px",
 }
-project = "mex-model"
 templates_path = ["."]
-html_static_path = ["_static"]
-html_css_files = ["custom.css"]
 
+# --- sphinx-jsonschema monkey-patches (kept from original conf.py) ---------
 
-# Customizing json-schema conversion
-# see https://sphinx-jsonschema.readthedocs.io/en/latest/extensions.html
-
-
-def _patched_sphinx_jsonschema_simpletype(self, schema):  # noqa: ANN001, ANN202
+def _patched_sphinx_jsonschema_simpletype(self, schema):
     """Render the `useScheme` schema properties for every vocabulary type."""
     rows = _original_sphinx_jsonschema_simpletype(self, schema)
     if "useScheme" in schema:
         scheme = schema.pop("useScheme")
-        rows.append(
-            self._line(
-                self._cell("useScheme"),
-                self._cell(f":ref:`{scheme} <{scheme}>`"),
-            )
-        )
+        rows.append(self._line(self._cell("useScheme"), self._cell(scheme)))
     return rows
 
 
-def _patched_sphinx_jsonschema_kvpairs(self, schema, keys):  # noqa: ANN001, ANN202
+def _patched_sphinx_jsonschema_kvpairs(self, schema, keys):
     """Render `default` and `pattern` schema properties as inline code-blocks."""
     for k in keys:
         if k in schema:
