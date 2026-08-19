@@ -13,6 +13,7 @@ dependencies = []
 dev = [
     "ipdb>=0.13",
     "mypy>=1",
+    "myst-parser>=3",
     "pytest-cov>=6",
     "pytest-random-order>=1",
     "pytest-xdist>=3",
