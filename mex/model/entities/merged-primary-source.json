@@ -144,7 +144,8 @@
         }
     },
     "required": [
-        "identifier"
+        "identifier",
+        "title"
     ],
     "title": "Merged Primary Source",
     "type": "object"

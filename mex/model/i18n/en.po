@@ -468,6 +468,14 @@ msgctxt "Activity"
 msgid "fundingProgram.description"
 msgstr "Funding program, e.g. Horizon Europe"
 
+msgctxt "Location"
+msgid "geoNamesId.singular"
+msgstr "GeoNames ID"
+
+msgctxt "Location"
+msgid "geoNamesId.description"
+msgstr "GeoNames is a online database of places worldwide. It helps standardize place names and ensures they are recorded consistently"
+
 msgctxt "Organization"
 msgid "geprisId.singular"
 msgstr "GEPRIS"
@@ -540,9 +548,32 @@ msgstr "Purpose of data processing"
 
 msgctxt "Resource"
 msgid "hasPurpose.description"
+msgstr "The purpose for which the data was originally collected"
+
+msgctxt "Resource"
+msgid "hasPurposeDescription.singular"
 msgstr ""
-"Description of the purpose of the data processing, in particular for "
-"personal data"
+"A detailed description of purpose for which the data was originally collected"
+
+msgctxt "Resource"
+msgid "hasVersion.description"
+msgstr "A related dataset that is a version, edition, or adaptation of the described dataset"
+
+msgctxt "Resource"
+msgid "hasVersion.singular"
+msgid_plural "hasVersion.plural"
+msgstr[0] "Version of the described dataset"
+msgstr[1] "Versions of the described dataset"
+
+msgctxt "Resource"
+msgid "healthCategory.singular"
+msgid_plural "healthCategory.plural"
+msgstr[0] "EHDS category"
+msgstr[1] "EHDS categories"
+
+msgctxt "Resource"
+msgid "healthCategory.description"
+msgstr "Category of health data pursuant to Article 51 of the EHDS Regulation"
 
 msgctxt "Resource"
 msgid "hasPurposeDescription.singular"
@@ -881,6 +912,16 @@ msgctxt "OrganizationalUnit"
 msgid "name.singular"
 msgstr "Name"
 
+msgctxt "Location"
+msgid "officialName.singular"
+msgid_plural "officialName.plural"
+msgstr[0] "Name"
+msgstr[1] "Names"
+
+msgctxt "Location"
+msgid "officialName.description"
+msgstr "Official name of the location"
+
 msgctxt "Person"
 msgid "orcidId.singular"
 msgstr "ORCID"
@@ -979,11 +1020,13 @@ msgstr "Responsible party for making available/providing the data"
 
 msgctxt "Resource"
 msgid "qualityInformation.singular"
-msgstr "Quality information"
+msgstr "Additional information"
 
 msgctxt "Resource"
 msgid "qualityInformation.description"
-msgstr "Information on the accuracy, reliability and validity of the data"
+msgstr ""
+"Any kind of relevant information regarding the data source/dataset "
+"that is not covered by the other fields"
 
 msgctxt "Activity"
 msgid "relatedActivity.singular"
@@ -1294,6 +1337,18 @@ msgstr[1] "Websites"
 
 msgid "website.description"
 msgstr "Website(s) providing further information"
+
+msgctxt "Location"
+msgid "wikidataId.singular"
+msgstr "Wikidata Concept URI"
+
+msgctxt "Location"
+msgid "wikidataId.description"
+msgstr ""
+"Wikidata is a free, collaborative, multilingual, and secondary database "
+"for collecting structured data to support Wikipedia, and is "
+"also used as a reference database for identifying things (in the sense of "
+"Linked Data)"
 
 msgctxt "Organization"
 msgid "wikidataId.singular"
