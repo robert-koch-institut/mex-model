@@ -58,9 +58,6 @@
                         "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
                     },
                     {
-                        "$ref": "/mex/model/entities/merged-person#/identifier"
-                    },
-                    {
                         "$ref": "/mex/model/entities/merged-contact-point#/identifier"
                     }
                 ]
@@ -70,7 +67,7 @@
         },
         "documentation": {
             "closeMatch": [
-                "http://purl.org/dc/terms/isReferencedBy"
+                "http://xmlns.com/foaf/0.1/page"
             ],
             "default": [],
             "description": "A link to a document that contains the documentation of the activity.",
@@ -122,14 +119,7 @@
             "default": [],
             "description": "An external institution or person that is associated with the activity.",
             "items": {
-                "anyOf": [
-                    {
-                        "$ref": "/mex/model/entities/merged-organization#/identifier"
-                    },
-                    {
-                        "$ref": "/mex/model/entities/merged-person#/identifier"
-                    }
-                ]
+                "$ref": "/mex/model/entities/merged-organization#/identifier"
             },
             "type": "array"
         },
@@ -234,7 +224,7 @@
             "type": "array"
         },
         "responsibleUnit": {
-            "closeMatch": "http.//dcat-ap.de/def/dcatde/maintainer",
+            "closeMatch": "http://dcat-ap.de/def/dcatde/maintainer",
             "description": "A unit that is responsible for the activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"

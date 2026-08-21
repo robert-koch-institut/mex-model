@@ -3,7 +3,7 @@
     "$id": "https://mex.rki.de/mex/model/entities/concept-scheme",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
-    "closeMatch": [
+    "exactMatch": [
         "http://www.w3.org/2004/02/skos/core#ConceptScheme"
     ],
     "properties": {

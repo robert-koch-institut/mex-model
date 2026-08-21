@@ -66,6 +66,9 @@
             ],
             "default": [],
             "description": "An analytics distribution of the dataset.",
+            "exactMatch": [
+                "http://healthdataportal.eu/ns/health#analytics"
+            ],
             "items": {
                 "$ref": "/mex/model/entities/merged-distribution#/identifier"
             },
@@ -88,15 +91,13 @@
                 "http://purl.org/dc/terms/conformsTo"
             ],
             "default": [],
-            "description": "Standards used in the creation, analysis or transmission of the resource.",
+            "description": "Standards used in the creation, analysis or transmission of the resource. The Health Standards controlled vocabulary must be used.",
             "items": {
+                "$ref": "/mex/model/entities/concept#/identifier",
                 "examples": [
-                    "FHIR",
-                    "LOINC",
-                    "SNOMED",
-                    "ICD-10"
+                    "https://mex.rki.de/item/health-standard-1"
                 ],
-                "type": "string"
+                "useScheme": "https://mex.rki.de/item/health-standard"
             },
             "type": "array"
         },
@@ -109,9 +110,6 @@
                 "anyOf": [
                     {
                         "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
-                    },
-                    {
-                        "$ref": "/mex/model/entities/merged-person#/identifier"
                     },
                     {
                         "$ref": "/mex/model/entities/merged-contact-point#/identifier"
@@ -202,11 +200,11 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/description"
             ],
-            "default": [],
             "description": "A text describing the nature of the resource.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
+            "minItems": 1,
             "type": "array"
         },
         "distribution": {
@@ -219,7 +217,7 @@
         },
         "documentation": {
             "closeMatch": [
-                "http://purl.org/dc/terms/isReferencedBy"
+                "http://xmlns.com/foaf/0.1/page"
             ],
             "default": [],
             "description": "A link to a document documenting the resource.",
@@ -304,6 +302,18 @@
             },
             "type": "array"
         },
+        "geopoliticalResolution": {
+            "default": [],
+            "description": "Geopolitical resolution or administrative level of the location information of the resource.",
+            "items": {
+                "$ref": "/mex/model/entities/concept#/identifier",
+                "examples": [
+                    "https://mex.rki.de/item/geopolitical-resolution-1"
+                ],
+                "useScheme": "https://mex.rki.de/item/geopolitical-resolution"
+            },
+            "type": "array"
+        },
         "hadPrimarySource": {
             "$ref": "/mex/model/entities/merged-primary-source#/identifier",
             "closeMatch": [
@@ -344,7 +354,14 @@
             "default": [],
             "description": "The legal basis used to justify processing of personal data. Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions which can be represented using dpv:hasJurisdiction or dpv:hasLaw. Legal basis can be used without such declarations, e.g. 'Consent', however their interpretation will require association with a law, e.g. 'EU GDPR'.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "anyOf": [
+                    {
+                        "$ref": "/mex/model/fields/text"
+                    },
+                    {
+                        "$ref": "/mex/model/fields/link"
+                    }
+                ]
             },
             "type": "array"
         },
@@ -368,14 +385,14 @@
             "description": "Indicates, if a resource contains data directly or indirectly associated or related to an individual."
         },
         "hasPurpose": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
             "closeMatch": [
                 "https://w3id.org/dpv#hasPurpose"
             ],
             "default": [],
-            "description": "A free text statement of the purpose of the processing of data or personal data.",
+            "description": "A controlled list of types of purposes for which the data was originally collected.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "$ref": "/mex/model/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/purpose"
             },
             "type": "array"
         },
@@ -387,6 +404,17 @@
             "description": "A free text statement of the purpose of the processing of data or personal data.",
             "items": {
                 "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
+        "hasVersion": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#hasVersion"
+            ],
+            "default": [],
+            "description": "A related Resource that is a version, edition, or adaptation of the described Resource.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
             },
             "type": "array"
         },
@@ -489,11 +517,18 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#keyword"
             ],
-            "default": [],
             "description": "A keyword or tag describing the resource.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "anyOf": [
+                    {
+                        "$ref": "/mex/model/fields/text"
+                    },
+                    {
+                        "$ref": "/mex/model/fields/link"
+                    }
+                ]
             },
+            "minItems": 1,
             "type": "array"
         },
         "landingPage": {
@@ -558,7 +593,6 @@
             "type": "array"
         },
         "maxTypicalAge": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
             "anyOf": [
                 {
                     "examples": [
@@ -570,6 +604,9 @@
                 {
                     "type": "null"
                 }
+            ],
+            "closeMatch": [
+                "http://healthdataportal.eu/ns/health#maxtypicalage"
             ],
             "default": null,
             "description": "Specifies the maximum age of the population within the data collection, expressed in years."
@@ -609,7 +646,6 @@
             "type": "array"
         },
         "minTypicalAge": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
             "anyOf": [
                 {
                     "examples": [
@@ -621,6 +657,9 @@
                 {
                     "type": "null"
                 }
+            ],
+            "closeMatch": [
+                "http://healthdataportal.eu/ns/health#mintypicalage"
             ],
             "default": null,
             "description": "Specifies the minimum age of the population within the data collection, expressed in years."
@@ -700,7 +739,9 @@
             "description": "The number of records for unique individuals represented in the dataset."
         },
         "populationCoverage": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
+            "closeMatch": [
+                "http://healthdataportal.eu/ns/health#populationcoverage"
+            ],
             "default": [],
             "description": "The type of population common to all subjects of the data collection.",
             "items": {
@@ -709,9 +750,9 @@
             "type": "array"
         },
         "provenance": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
             "closeMatch": [
-                "http://purl.org/dc/terms/provenance"
+                "http://purl.org/dc/terms/provenance",
+                "http://healthdataportal.eu/ns/health#provenance"
             ],
             "default": [],
             "description": "A statement about the lineage of a Dataset. Information about how the data was collected, including methodologies, tools, and protocols used.",
@@ -741,12 +782,23 @@
         },
         "qualityInformation": {
             "closeMatch": [
-                "http://www.w3.org/ns/dqv#hasQualityAnnotation"
+                "http://www.w3.org/2004/02/skos/core#note"
             ],
             "default": [],
-            "description": "Some information about the quality of the resource.",
+            "description": "Any additional information about the resource",
             "items": {
                 "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
+        "relatedActivity": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/relation"
+            ],
+            "default": [],
+            "description": "An Activity that is related to the Resource.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-activity#/identifier"
             },
             "type": "array"
         },
@@ -852,9 +904,9 @@
                 "http://purl.org/dc/terms/spatial"
             ],
             "default": [],
-            "description": "Spatial coverage of the resource.",
+            "description": "Location or geographic region covered by the resource.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "$ref": "/mex/model/entities/merged-location#/identifier"
             },
             "type": "array"
         },
@@ -1047,9 +1099,12 @@
     "required": [
         "accessRestriction",
         "contact",
+        "description",
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
+        "keyword",
+        "resourceCreationMethod",
         "stableTargetId",
         "theme",
         "title",

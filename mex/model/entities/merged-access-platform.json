@@ -31,9 +31,6 @@
                         "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
                     },
                     {
-                        "$ref": "/mex/model/entities/merged-person#/identifier"
-                    },
-                    {
                         "$ref": "/mex/model/entities/merged-contact-point#/identifier"
                     }
                 ]
@@ -110,7 +107,7 @@
         },
         "landingPage": {
             "closeMatch": [
-                "https://www.w3.org/ns/dcat#landingPage"
+                "http://www.w3.org/ns/dcat#landingPage"
             ],
             "default": [],
             "description": "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.",
@@ -167,7 +164,8 @@
     },
     "required": [
         "identifier",
-        "technicalAccessibility"
+        "technicalAccessibility",
+        "title"
     ],
     "title": "Merged Access Platform",
     "type": "object"
