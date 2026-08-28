@@ -160,7 +160,7 @@ def _normalize_field_definition(node: object) -> object:
         }
         any_of = normalized.get("anyOf")
         if isinstance(any_of, list):
-            # strip null type because it will differ between required and optional fields
+            # strip null type since it will differ between required and optional fields
             normalized["anyOf"] = [
                 option
                 for option in any_of
