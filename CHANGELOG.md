@@ -30,6 +30,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [5.1.3] - 2026-08-28
+
+### Fixed
+
+- added missing BibliographicResource.volumeOfSeries to po files
+
 ## [5.1.2] - 2026-08-17
 
 ### Changes

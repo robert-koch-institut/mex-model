@@ -1277,6 +1277,14 @@ msgctxt "BibliographicResource"
 msgid "volume.description"
 msgstr "Volume of the journal"
 
+msgctxt "BibliographicResource"
+msgid "volumeOfSeries.singular"
+msgstr "Series volume"
+
+msgctxt "BibliographicResource"
+msgid "volumeOfSeries.description"
+msgstr "Volume of the series"
+
 msgctxt "Resource"
 msgid "wasGeneratedBy.singular"
 msgid_plural "wasGeneratedBy.plural"
