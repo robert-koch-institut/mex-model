@@ -602,6 +602,22 @@ msgid "inSeries.description"
 msgstr "Collection of datasets, this dataset belongs to"
 
 msgctxt "Resource"
+msgid "inSeriesFirstResource.singular"
+msgstr "First resource in series"
+
+msgctxt "Resource"
+msgid "inSeriesFirstResource.description"
+msgstr "The first resource in the collection this dataset belongs to"
+
+msgctxt "Resource"
+msgid "inSeriesLastResource.singular"
+msgstr "Last resource in series"
+
+msgctxt "Resource"
+msgid "inSeriesLastResource.description"
+msgstr "The last resource in the collection this dataset belongs to"
+
+msgctxt "Resource"
 msgid "instrumentToolOrApparatus.singular"
 msgid_plural "usedInstrumentToolOrApparatus.plural"
 msgstr[0] "Tool"
@@ -641,6 +657,14 @@ msgid "isbnIssn.description"
 msgstr ""
 "International Standard Book Number (ISBN) or International Standard Serial "
 "Number (ISSN) for journals"
+
+msgctxt "Consent"
+msgid "isIndicatedAtTime.singular"
+msgstr "Date of consent"
+
+msgctxt "Consent"
+msgid "isIndicatedAtTime.description"
+msgstr "Date and time when the data subject indicated their consent"
 
 msgid "isniId.singular"
 msgstr "ISNI"
