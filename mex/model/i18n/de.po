@@ -603,19 +603,19 @@ msgstr "Kollektion von Datensätzen, der der Datensatz angehört"
 
 msgctxt "Resource"
 msgid "inSeriesFirstResource.singular"
-msgstr "Erste Ressource der Kollektion"
+msgstr "Erster Datensatz"
 
 msgctxt "Resource"
 msgid "inSeriesFirstResource.description"
-msgstr "Die erste Ressource der Kollektion, der dieser Datensatz angehört"
+msgstr "Der vorliegende Datensatz ist der erste Datensatz in der verknüpften Datensatzkollektion"
 
 msgctxt "Resource"
 msgid "inSeriesLastResource.singular"
-msgstr "Letzte Ressource der Kollektion"
+msgstr "Letzter Datensatz"
 
 msgctxt "Resource"
 msgid "inSeriesLastResource.description"
-msgstr "Die letzte Ressource der Kollektion, der dieser Datensatz angehört"
+msgstr "Der vorliegende Datensatz ist der letzte Datensatz in der verknüpften Datensatzkollektion"
 
 msgctxt "Resource"
 msgid "instrumentToolOrApparatus.singular"

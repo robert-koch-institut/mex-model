@@ -603,19 +603,19 @@ msgstr "Collection of datasets, this dataset belongs to"
 
 msgctxt "Resource"
 msgid "inSeriesFirstResource.singular"
-msgstr "First resource in series"
+msgstr "First dataset"
 
 msgctxt "Resource"
 msgid "inSeriesFirstResource.description"
-msgstr "The first resource in the collection this dataset belongs to"
+msgstr "This dataset is the first dataset in the linked data series"
 
 msgctxt "Resource"
 msgid "inSeriesLastResource.singular"
-msgstr "Last resource in series"
+msgstr "Last dataset"
 
 msgctxt "Resource"
 msgid "inSeriesLastResource.description"
-msgstr "The last resource in the collection this dataset belongs to"
+msgstr "This dataset is the last dataset in the linked data series"
 
 msgctxt "Resource"
 msgid "instrumentToolOrApparatus.singular"
