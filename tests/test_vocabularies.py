@@ -1,4 +1,3 @@
-from collections.abc import Iterator
 from typing import Any
 
 import pytest
@@ -8,52 +7,79 @@ from check_schemas import (
     find_duplicate_concept_id_violations,
     find_unregistered_vocabulary_violations,
     find_unresolved_example_violations,
+    find_unresolved_use_scheme_violations,
 )
 
-from mex.model import (
-    EXTRACTED_MODEL_JSON_BY_NAME,
-    MERGED_MODEL_JSON_BY_NAME,
-    VOCABULARY_JSON_BY_NAME,
-)
-
-
-def _iter_use_schemes(node: object) -> Iterator[str]:
-    """Yield all `useScheme` values found anywhere in the given json structure."""
-    if isinstance(node, dict):
-        for key, value in node.items():
-            if key == "useScheme":
-                yield str(value)
-            else:
-                yield from _iter_use_schemes(value)
-    elif isinstance(node, list):
-        for item in node:
-            yield from _iter_use_schemes(item)
+from mex.model import VOCABULARY_JSON_BY_NAME
 
 
 def test_use_schemes_resolve_to_vocabularies() -> None:
-    use_schemes = {
-        use_scheme
-        for schema in (
-            *EXTRACTED_MODEL_JSON_BY_NAME.values(),
-            *MERGED_MODEL_JSON_BY_NAME.values(),
-        )
-        for use_scheme in _iter_use_schemes(schema)
-    }
-    known_schemes = {
-        # note that `inScheme` and the filename do not always agree,
-        # so a vocabulary is documented under either spelling
-        f"https://mex.rki.de/item/{name.replace('_', '-')}"
-        for name in VOCABULARY_JSON_BY_NAME
-    } | {
-        str(concept["inScheme"])
-        for concepts in VOCABULARY_JSON_BY_NAME.values()
-        for concept in concepts
-        if "inScheme" in concept
-    }
-    # sanity check that we are actually comparing something
-    assert "https://mex.rki.de/item/theme" in use_schemes
-    # every scheme referenced by an entity must have a vocabulary
-    assert sorted(use_schemes - known_schemes) == []
+    violations = find_unresolved_use_scheme_violations(
+        _all_entity_schemas_by_file_stem(), VOCABULARY_JSON_BY_NAME
+    )
+    assert violations == []
+
+
+@pytest.mark.parametrize(
+    ("all_schemas_by_name", "vocabularies_by_name", "expected"),
+    [
+        pytest.param(
+            {
+                "dummy": {
+                    "properties": {
+                        "x": {"useScheme": "https://mex.rki.de/item/missing"}
+                    }
+                }
+            },
+            {"theme": [{"identifier": "https://mex.rki.de/item/theme-1"}]},
+            [
+                (
+                    "dummy: useScheme 'https://mex.rki.de/item/missing' has no "
+                    "matching vocabulary"
+                )
+            ],
+            id="use-scheme-has-no-vocabulary",
+        ),
+        pytest.param(
+            {
+                "dummy": {
+                    "properties": {"x": {"useScheme": "https://mex.rki.de/item/theme"}}
+                }
+            },
+            {"theme": [{"identifier": "https://mex.rki.de/item/theme-1"}]},
+            [],
+            id="use-scheme-matches-filename",
+        ),
+        pytest.param(
+            {
+                "dummy": {
+                    "properties": {
+                        "x": {"useScheme": "https://mex.rki.de/item/alt-name"}
+                    }
+                }
+            },
+            {
+                "theme": [
+                    {
+                        "identifier": "https://mex.rki.de/item/theme-1",
+                        "inScheme": "https://mex.rki.de/item/alt-name",
+                    }
+                ]
+            },
+            [],
+            id="use-scheme-matches-in-scheme",
+        ),
+    ],
+)
+def test_unresolved_use_scheme_violations_are_detected(
+    all_schemas_by_name: dict[str, dict[str, Any]],
+    vocabularies_by_name: dict[str, list[dict[str, Any]]],
+    expected: list[str],
+) -> None:
+    violations = find_unresolved_use_scheme_violations(
+        all_schemas_by_name, vocabularies_by_name
+    )
+    assert violations == expected
 
 
 def test_vocabularies_are_registered_in_concept_schemes() -> None:

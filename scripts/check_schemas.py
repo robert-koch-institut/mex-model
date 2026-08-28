@@ -41,6 +41,19 @@ def _iter_use_scheme_examples(node: object) -> Iterator[tuple[str, list[str]]]:
             yield from _iter_use_scheme_examples(item)
 
 
+def _iter_use_schemes(node: object) -> Iterator[str]:
+    """Yield all `useScheme` values found anywhere in a json structure."""
+    if isinstance(node, dict):
+        for key, value in node.items():
+            if key == "useScheme":
+                yield str(value)
+            else:
+                yield from _iter_use_schemes(value)
+    elif isinstance(node, list):
+        for item in node:
+            yield from _iter_use_schemes(item)
+
+
 def _iter_refs(node: object) -> Iterator[str]:
     """Yield all `$ref` values found anywhere in a json structure."""
     if isinstance(node, dict):
@@ -196,6 +209,35 @@ def find_unresolved_example_violations(
     return violations
 
 
+def find_unresolved_use_scheme_violations(
+    all_schemas_by_name: dict[str, dict[str, Any]],
+    vocabularies_by_name: dict[str, list[dict[str, Any]]],
+) -> list[str]:
+    """Check that every useScheme reference resolves to a known vocabulary.
+
+    A vocabulary matches either by its filename-derived identifier or by the
+    `inScheme` value of any of its concepts, since the two do not always
+    agree.
+    """
+    known_schemes = {
+        f"https://mex.rki.de/item/{name.replace('_', '-')}"
+        for name in vocabularies_by_name
+    } | {
+        str(concept["inScheme"])
+        for concepts in vocabularies_by_name.values()
+        for concept in concepts
+        if "inScheme" in concept
+    }
+    violations: list[str] = []
+    for schema_name, schema in sorted(all_schemas_by_name.items()):
+        violations.extend(
+            f"{schema_name}: useScheme {use_scheme!r} has no matching vocabulary"
+            for use_scheme in sorted(set(_iter_use_schemes(schema)))
+            if use_scheme not in known_schemes
+        )
+    return violations
+
+
 def find_meta_schema_violations(schema_name: str, schema: dict[str, Any]) -> list[str]:
     """Check a schema document is valid against the JSON Schema 2020-12 meta-schema."""
     try:
@@ -324,6 +366,9 @@ def _collect_violations() -> list[str]:
     )
     violations += find_duplicate_concept_id_violations(VOCABULARY_JSON_BY_NAME)
     violations += find_unresolved_example_violations(
+        all_entities, VOCABULARY_JSON_BY_NAME
+    )
+    violations += find_unresolved_use_scheme_violations(
         all_entities, VOCABULARY_JSON_BY_NAME
     )
     violations += find_orphaned_field_violations(FIELD_JSON_BY_NAME, all_entities)
