@@ -13,8 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `schema-checks` pre-commit hook: field validation shape, extracted/merged field
   parity, vocabulary registration, duplicate concept identifiers, unresolved
   `examples`/`useScheme` references, orphaned shared fields, annotation URI
-  well-formedness, JSON Schema meta-validation, and `$id`/`$$target` path
-  consistency
+  well-formedness, JSON Schema meta-validation, `$id`/`$$target` path
+  consistency, and i18n translation coverage (every entity field must have a
+  `de.po`/`en.po` label)
 
 ### Changes
 

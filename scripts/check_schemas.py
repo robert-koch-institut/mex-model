@@ -7,6 +7,7 @@ fixture-based self-tests.
 """
 
 import json
+import re
 import sys
 from collections.abc import Iterable, Iterator
 from importlib.resources import files
@@ -19,6 +20,7 @@ from jsonschema.exceptions import SchemaError
 from mex.model import (
     EXTRACTED_MODEL_JSON_BY_NAME,
     FIELD_JSON_BY_NAME,
+    I18N_PO_DATA_BY_LANGUAGE,
     MERGED_MODEL_JSON_BY_NAME,
     VOCABULARY_JSON_BY_NAME,
 )
@@ -27,6 +29,7 @@ EXCLUDED_PROVENANCE_FIELDS = frozenset(
     {"hadPrimarySource", "identifierInPrimarySource", "stableTargetId"}
 )
 ANNOTATION_URI_KEYS = ("closeMatch", "exactMatch", "sameAs", "subPropertyOf")
+MSGID_PATTERN = re.compile(r'^msgid "((?:[^"\\]|\\.)*)"', re.MULTILINE)
 
 
 def _iter_use_scheme_nodes(node: object) -> Iterator[dict[str, Any]]:
@@ -232,6 +235,32 @@ def find_unresolved_use_scheme_violations(
     return violations
 
 
+def _extract_msgids(po_text: str) -> set[str]:
+    """Extract all `msgid` values from a raw .po file's text."""
+    return set(MSGID_PATTERN.findall(po_text))
+
+
+def find_missing_translation_violations(
+    field_names: Iterable[str], po_data_by_language: dict[str, str]
+) -> list[str]:
+    """Check that every field has a translated label in each i18n .po file.
+
+    A field matches either an exact `msgid` (e.g. `supersededBy`) or one
+    prefixed with the field name followed by a dot (e.g.
+    `abstract.singular`, `abstract.description`).
+    """
+    violations: list[str] = []
+    for language, po_text in sorted(po_data_by_language.items()):
+        msgids = _extract_msgids(po_text)
+        violations.extend(
+            f"{language}: no translation found for field {field!r}"
+            for field in sorted(set(field_names))
+            if field not in msgids
+            and not any(msgid.startswith(f"{field}.") for msgid in msgids)
+        )
+    return violations
+
+
 def find_meta_schema_violations(schema_name: str, schema: dict[str, Any]) -> list[str]:
     """Check a schema document is valid against the JSON Schema 2020-12 meta-schema."""
     try:
@@ -366,6 +395,14 @@ def _collect_violations() -> list[str]:
         all_entities, VOCABULARY_JSON_BY_NAME
     )
     violations += find_orphaned_field_violations(FIELD_JSON_BY_NAME, all_entities)
+    all_field_names = {
+        name
+        for schema in all_entities.values()
+        for name in schema.get("properties", {})
+    }
+    violations += find_missing_translation_violations(
+        all_field_names, I18N_PO_DATA_BY_LANGUAGE
+    )
     for name, schema in sorted(all_entities.items()):
         violations += find_meta_schema_violations(name, schema)
         violations += find_id_path_violations(name, "entities", schema)
