@@ -1299,6 +1299,14 @@ msgctxt "BibliographicResource"
 msgid "volume.description"
 msgstr "Band der Zeitschrift"
 
+msgctxt "BibliographicResource"
+msgid "volumeOfSeries.singular"
+msgstr "Band der Reihe"
+
+msgctxt "BibliographicResource"
+msgid "volumeOfSeries.description"
+msgstr "Band der Schriftenreihe"
+
 msgctxt "Resource"
 msgid "wasGeneratedBy.singular"
 msgid_plural "wasGeneratedBy.plural"
