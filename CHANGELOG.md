@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- add automated schema-correctness checks (`scripts/check_schemas.py`), run via a
+  `schema-checks` pre-commit hook: field validation shape, extracted/merged field
+  parity, vocabulary registration, duplicate concept identifiers, unresolved
+  `examples`/`useScheme` references, orphaned shared fields, annotation URI
+  well-formedness, JSON Schema meta-validation, and `$id`/`$$target` path
+  consistency
+
 ### Changes
 
 ### Deprecated
@@ -16,6 +23,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 ### Fixed
+
+- fixed malformed `closeMatch` URI (`http.//` instead of `http://`) on
+  `responsibleUnit` in extracted- and merged-activity.json
 
 ### Security
 
