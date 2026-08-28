@@ -29,29 +29,16 @@ EXCLUDED_PROVENANCE_FIELDS = frozenset(
 ANNOTATION_URI_KEYS = ("closeMatch", "exactMatch", "sameAs", "subPropertyOf")
 
 
-def _iter_use_scheme_examples(node: object) -> Iterator[tuple[str, list[str]]]:
-    """Yield (useScheme, examples) pairs found anywhere in a json structure."""
+def _iter_use_scheme_nodes(node: object) -> Iterator[dict[str, Any]]:
+    """Yield every dict with a `useScheme` key found anywhere in a json structure."""
     if isinstance(node, dict):
-        if "useScheme" in node and "examples" in node:
-            yield str(node["useScheme"]), list(node["examples"])
+        if "useScheme" in node:
+            yield node
         for value in node.values():
-            yield from _iter_use_scheme_examples(value)
+            yield from _iter_use_scheme_nodes(value)
     elif isinstance(node, list):
         for item in node:
-            yield from _iter_use_scheme_examples(item)
-
-
-def _iter_use_schemes(node: object) -> Iterator[str]:
-    """Yield all `useScheme` values found anywhere in a json structure."""
-    if isinstance(node, dict):
-        for key, value in node.items():
-            if key == "useScheme":
-                yield str(value)
-            else:
-                yield from _iter_use_schemes(value)
-    elif isinstance(node, list):
-        for item in node:
-            yield from _iter_use_schemes(item)
+            yield from _iter_use_scheme_nodes(item)
 
 
 def _iter_refs(node: object) -> Iterator[str]:
@@ -190,7 +177,11 @@ def find_unresolved_example_violations(
     """Check that entity field examples resolve to real vocabulary concepts."""
     violations = []
     for schema_name, schema in sorted(all_schemas_by_name.items()):
-        for use_scheme, examples in _iter_use_scheme_examples(schema):
+        for use_scheme_node in _iter_use_scheme_nodes(schema):
+            if "examples" not in use_scheme_node:
+                continue
+            use_scheme = str(use_scheme_node["useScheme"])
+            examples = list(use_scheme_node["examples"])
             vocabulary_name = use_scheme.rsplit("/", 1)[-1].replace("-", "_")
             concepts = vocabularies_by_name.get(vocabulary_name)
             if concepts is None:
@@ -230,9 +221,12 @@ def find_unresolved_use_scheme_violations(
     }
     violations: list[str] = []
     for schema_name, schema in sorted(all_schemas_by_name.items()):
+        use_schemes = {
+            str(node["useScheme"]) for node in _iter_use_scheme_nodes(schema)
+        }
         violations.extend(
             f"{schema_name}: useScheme {use_scheme!r} has no matching vocabulary"
-            for use_scheme in sorted(set(_iter_use_schemes(schema)))
+            for use_scheme in sorted(use_schemes)
             if use_scheme not in known_schemes
         )
     return violations

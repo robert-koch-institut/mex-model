@@ -215,6 +215,16 @@ def test_entity_examples_resolve_to_vocabulary_concepts() -> None:
             [],
             id="example-resolves",
         ),
+        pytest.param(
+            {
+                "dummy": {
+                    "properties": {"x": {"useScheme": "https://mex.rki.de/item/theme"}}
+                }
+            },
+            {"theme": [{"identifier": "https://mex.rki.de/item/theme-1"}]},
+            [],
+            id="use-scheme-without-examples-is-ignored",
+        ),
     ],
 )
 def test_unresolved_example_violations_are_detected(
