@@ -144,6 +144,67 @@ def find_extracted_merged_parity_violations(
     return violations
 
 
+FIELD_IDENTITY_EXCLUDED_KEYS = frozenset(
+    {"$comment", "description", "examples", "default", "minItems", *ANNOTATION_URI_KEYS}
+)
+FIELD_IDENTITY_EXCLUDED_FIELDS = EXCLUDED_PROVENANCE_FIELDS | {"supersededBy"}
+
+
+def _normalize_field_definition(node: object) -> object:
+    """Strip annotation, example, and required-ness-derived keys for comparison."""
+    if isinstance(node, dict):
+        normalized = {
+            key: _normalize_field_definition(value)
+            for key, value in node.items()
+            if key not in FIELD_IDENTITY_EXCLUDED_KEYS
+        }
+        any_of = normalized.get("anyOf")
+        if isinstance(any_of, list):
+            # strip null type because it will differ between required and optional fields
+            normalized["anyOf"] = [
+                option
+                for option in any_of
+                if not (isinstance(option, dict) and option.get("type") == "null")
+            ]
+        return normalized
+    if isinstance(node, list):
+        return [_normalize_field_definition(item) for item in node]
+    return node
+
+
+def find_field_identity_violations(
+    all_schemas_by_name: dict[str, dict[str, Any]],
+) -> list[str]:
+    """Check that fields with the same name have the same shape everywhere.
+
+    Self-referential provenance fields (`stableTargetId`, `supersededBy`,
+    etc.) are excluded since they intentionally point at a different,
+    entity-specific type on every schema.
+    """
+    shapes_by_field: dict[str, dict[str, list[str]]] = {}
+    for schema_name, schema in sorted(all_schemas_by_name.items()):
+        for field_name, definition in schema.get("properties", {}).items():
+            if field_name in FIELD_IDENTITY_EXCLUDED_FIELDS:
+                continue
+            key = json.dumps(_normalize_field_definition(definition), sort_keys=True)
+            shapes_by_field.setdefault(field_name, {}).setdefault(key, []).append(
+                schema_name
+            )
+
+    violations: list[str] = []
+    for field_name, shapes in sorted(shapes_by_field.items()):
+        if len(shapes) <= 1:
+            continue
+        groups = sorted(shapes.values(), key=lambda names: (-len(names), names[0]))
+        majority = groups[0]
+        violations.extend(
+            f"{field_name}: {sorted(minority)} declared differently than "
+            f"{sorted(majority)}"
+            for minority in groups[1:]
+        )
+    return violations
+
+
 def find_unregistered_vocabulary_violations(
     vocabulary_names: Iterable[str], concept_scheme_identifiers: set[str]
 ) -> list[str]:
@@ -384,6 +445,7 @@ def _collect_violations() -> list[str]:
     violations += find_extracted_merged_parity_violations(
         EXTRACTED_MODEL_JSON_BY_NAME, MERGED_MODEL_JSON_BY_NAME
     )
+    violations += find_field_identity_violations(all_entities)
     violations += find_unregistered_vocabulary_violations(
         VOCABULARY_JSON_BY_NAME, concept_scheme_identifiers
     )
