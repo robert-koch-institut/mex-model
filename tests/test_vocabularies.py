@@ -2,22 +2,11 @@ from typing import Any
 
 import pytest
 from check_schemas import (
-    _all_entity_schemas_by_file_stem,
-    _load_concept_scheme_identifiers,
     find_duplicate_concept_id_violations,
     find_unregistered_vocabulary_violations,
     find_unresolved_example_violations,
     find_unresolved_use_scheme_violations,
 )
-
-from mex.model import VOCABULARY_JSON_BY_NAME
-
-
-def test_use_schemes_resolve_to_vocabularies() -> None:
-    violations = find_unresolved_use_scheme_violations(
-        _all_entity_schemas_by_file_stem(), VOCABULARY_JSON_BY_NAME
-    )
-    assert violations == []
 
 
 @pytest.mark.parametrize(
@@ -82,13 +71,6 @@ def test_unresolved_use_scheme_violations_are_detected(
     assert violations == expected
 
 
-def test_vocabularies_are_registered_in_concept_schemes() -> None:
-    violations = find_unregistered_vocabulary_violations(
-        VOCABULARY_JSON_BY_NAME, _load_concept_scheme_identifiers()
-    )
-    assert violations == []
-
-
 @pytest.mark.parametrize(
     ("vocabulary_names", "concept_scheme_identifiers", "expected"),
     [
@@ -123,11 +105,6 @@ def test_unregistered_vocabulary_violations_are_detected(
     assert violations == expected
 
 
-def test_vocabulary_identifiers_are_unique() -> None:
-    violations = find_duplicate_concept_id_violations(VOCABULARY_JSON_BY_NAME)
-    assert violations == []
-
-
 @pytest.mark.parametrize(
     ("vocabularies_by_name", "expected"),
     [
@@ -148,13 +125,6 @@ def test_duplicate_concept_id_violations_are_detected(
 ) -> None:
     violations = find_duplicate_concept_id_violations(vocabularies_by_name)
     assert violations == expected
-
-
-def test_entity_examples_resolve_to_vocabulary_concepts() -> None:
-    violations = find_unresolved_example_violations(
-        _all_entity_schemas_by_file_stem(), VOCABULARY_JSON_BY_NAME
-    )
-    assert violations == []
 
 
 @pytest.mark.parametrize(

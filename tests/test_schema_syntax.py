@@ -1,33 +1,59 @@
+import re
+from collections.abc import Callable
 from typing import Any
 
+import check_schemas
 import pytest
 from check_schemas import (
-    _all_entity_schemas_by_file_stem,
     _collect_violations,
-    _load_extension_definition,
     find_id_path_violations,
     find_meta_schema_violations,
 )
 
-from mex.model import FIELD_JSON_BY_NAME
+CHECK_FUNCTION_NAME_PATTERN = re.compile(r"^find_.*_violations$")
+
+
+def test_collect_violations_calls_every_check_function(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    """Every `find_*_violations` function must be wired into `_collect_violations`.
+
+    Check functions are discovered by name convention rather than a hand-kept
+    list, so adding a new check and forgetting to call it from
+    `_collect_violations` fails here instead of silently never running against
+    real data.
+    """
+    check_names = [
+        name
+        for name, value in vars(check_schemas).items()
+        if CHECK_FUNCTION_NAME_PATTERN.match(name) and callable(value)
+    ]
+    assert check_names  # sanity check the discovery mechanism finds something
+
+    call_counts = dict.fromkeys(check_names, 0)
+    for name in check_names:
+        original: Callable[..., list[str]] = getattr(check_schemas, name)
+
+        def spy(
+            *args: object,
+            _original: Callable[..., list[str]] = original,
+            _name: str = name,
+            **kwargs: object,
+        ) -> list[str]:
+            call_counts[_name] += 1
+            return _original(*args, **kwargs)
+
+        monkeypatch.setattr(check_schemas, name, spy)
+
+    check_schemas._collect_violations()
+
+    uncalled = [name for name, count in call_counts.items() if count == 0]
+    assert uncalled == []
 
 
 def test_collect_violations_finds_nothing_for_real_schemas() -> None:
     """Exercises the same aggregation used by the schema-checks pre-commit hook."""
     assert _collect_violations() == []
-
-
-def test_schemas_are_valid_json_schema_documents() -> None:
-    all_entities = _all_entity_schemas_by_file_stem()
-    violations = [
-        violation
-        for name, schema in {**all_entities, **FIELD_JSON_BY_NAME}.items()
-        for violation in find_meta_schema_violations(name, schema)
-    ]
-    violations += find_meta_schema_violations(
-        "extension/definition", _load_extension_definition()
-    )
-    assert violations == []
 
 
 @pytest.mark.parametrize(
@@ -50,18 +76,6 @@ def test_meta_schema_violations_are_detected(
 
 def test_meta_schema_violations_are_not_raised_for_valid_schema() -> None:
     assert find_meta_schema_violations("dummy", {"type": "string"}) == []
-
-
-def test_schema_ids_match_their_file_paths() -> None:
-    violations = []
-    for name, schema in _all_entity_schemas_by_file_stem().items():
-        violations += find_id_path_violations(name, "entities", schema)
-    for name, schema in FIELD_JSON_BY_NAME.items():
-        violations += find_id_path_violations(name, "fields", schema)
-    violations += find_id_path_violations(
-        "definition", "extension", _load_extension_definition()
-    )
-    assert violations == []
 
 
 @pytest.mark.parametrize(

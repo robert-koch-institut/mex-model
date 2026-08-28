@@ -3,15 +3,6 @@ from typing import Any
 import pytest
 from check_schemas import find_extracted_merged_parity_violations
 
-from mex.model import EXTRACTED_MODEL_JSON_BY_NAME, MERGED_MODEL_JSON_BY_NAME
-
-
-def test_extracted_merged_field_parity_for_real_schemas() -> None:
-    violations = find_extracted_merged_parity_violations(
-        EXTRACTED_MODEL_JSON_BY_NAME, MERGED_MODEL_JSON_BY_NAME
-    )
-    assert violations == []
-
 
 @pytest.mark.parametrize(
     ("extracted_by_name", "merged_by_name", "expected"),

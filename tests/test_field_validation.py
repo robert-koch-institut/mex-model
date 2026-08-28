@@ -2,22 +2,10 @@ from typing import Any
 
 import pytest
 from check_schemas import (
-    _all_entity_schemas_by_file_stem,
     find_annotation_uri_violations,
     find_field_validation_violations,
     find_orphaned_field_violations,
 )
-
-from mex.model import FIELD_JSON_BY_NAME
-
-
-def test_field_validation_passes_for_real_schemas() -> None:
-    violations = [
-        violation
-        for name, schema in _all_entity_schemas_by_file_stem().items()
-        for violation in find_field_validation_violations(name, schema)
-    ]
-    assert violations == []
 
 
 @pytest.mark.parametrize(
@@ -93,19 +81,17 @@ def test_field_validation_passes_for_real_schemas() -> None:
             ["dummy.foo: listed in required but missing from properties"],
             id="required-references-missing-property",
         ),
+        pytest.param(
+            {"properties": {"foo": {"type": "string"}}, "required": ["foo"]},
+            [],
+            id="valid-required-scalar",
+        ),
     ],
 )
 def test_field_validation_violations_are_detected(
     schema: dict[str, Any], expected: list[str]
 ) -> None:
     assert find_field_validation_violations("dummy", schema) == expected
-
-
-def test_all_shared_fields_are_referenced_by_some_entity() -> None:
-    violations = find_orphaned_field_violations(
-        FIELD_JSON_BY_NAME, _all_entity_schemas_by_file_stem()
-    )
-    assert violations == []
 
 
 @pytest.mark.parametrize(
@@ -123,21 +109,24 @@ def test_all_shared_fields_are_referenced_by_some_entity() -> None:
             [],
             id="referenced-field",
         ),
+        pytest.param(
+            {"identifier"},
+            {
+                "dummy": {
+                    "properties": {
+                        "id": {"anyOf": [{"$ref": "/mex/model/fields/identifier"}]}
+                    }
+                }
+            },
+            [],
+            id="referenced-field-nested-in-list",
+        ),
     ],
 )
 def test_orphaned_field_violations_are_detected(
     field_names: set[str], schemas: dict[str, dict[str, Any]], expected: list[str]
 ) -> None:
     assert find_orphaned_field_violations(field_names, schemas) == expected
-
-
-def test_annotation_uris_are_well_formed_for_real_schemas() -> None:
-    violations = [
-        violation
-        for name, schema in _all_entity_schemas_by_file_stem().items()
-        for violation in find_annotation_uri_violations(name, schema)
-    ]
-    assert violations == []
 
 
 @pytest.mark.parametrize(
