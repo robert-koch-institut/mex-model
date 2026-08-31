@@ -6,7 +6,7 @@
                 "en": "de"
             }
         ],
-        "exactMatch": "",
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/DEU",
         "identifier": "https://mex.rki.de/item/language-1",
         "inScheme": "https://mex.rki.de/item/language",
         "prefLabel": {
@@ -21,7 +21,7 @@
                 "en": "en"
             }
         ],
-        "exactMatch": "",
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/ENG",
         "identifier": "https://mex.rki.de/item/language-2",
         "inScheme": "https://mex.rki.de/item/language",
         "prefLabel": {
@@ -36,7 +36,7 @@
                 "en": "fr"
             }
         ],
-        "exactMatch": "",
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/FRA",
         "identifier": "https://mex.rki.de/item/language-3",
         "inScheme": "https://mex.rki.de/item/language",
         "prefLabel": {
@@ -51,7 +51,7 @@
                 "en": "es"
             }
         ],
-        "exactMatch": "",
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/SPA",
         "identifier": "https://mex.rki.de/item/language-4",
         "inScheme": "https://mex.rki.de/item/language",
         "prefLabel": {
@@ -66,12 +66,372 @@
                 "en": "ru"
             }
         ],
-        "exactMatch": "",
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/RUS",
         "identifier": "https://mex.rki.de/item/language-5",
         "inScheme": "https://mex.rki.de/item/language",
         "prefLabel": {
             "de": "Russisch",
             "en": "Russian"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "bg",
+                "en": "bg"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/BUL",
+        "identifier": "https://mex.rki.de/item/language-6",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Bulgarisch",
+            "en": "Bulgarian"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "da",
+                "en": "da"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/DAN",
+        "identifier": "https://mex.rki.de/item/language-7",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Dänisch",
+            "en": "Danish"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "et",
+                "en": "et"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/EST",
+        "identifier": "https://mex.rki.de/item/language-8",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Estnisch",
+            "en": "Estonian"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "fi",
+                "en": "fi"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/FIN",
+        "identifier": "https://mex.rki.de/item/language-9",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Finnisch",
+            "en": "Finnish"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "el",
+                "en": "el"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/ELL",
+        "identifier": "https://mex.rki.de/item/language-10",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Griechisch",
+            "en": "Greek"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "ga",
+                "en": "ga"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/GLE",
+        "identifier": "https://mex.rki.de/item/language-11",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Irisch",
+            "en": "Irish"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "it",
+                "en": "it"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/ITA",
+        "identifier": "https://mex.rki.de/item/language-12",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Italienisch",
+            "en": "Italian"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "hr",
+                "en": "hr"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/HRV",
+        "identifier": "https://mex.rki.de/item/language-13",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Kroatisch",
+            "en": "Croatian"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "lv",
+                "en": "lv"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/LAV",
+        "identifier": "https://mex.rki.de/item/language-14",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Lettisch",
+            "en": "Latvian"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "lt",
+                "en": "lt"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/LIT",
+        "identifier": "https://mex.rki.de/item/language-15",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Litauisch",
+            "en": "Lithuanian"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "mt",
+                "en": "mt"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/MLT",
+        "identifier": "https://mex.rki.de/item/language-16",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Maltesisch",
+            "en": "Maltese"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "nl",
+                "en": "nl"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/NLD",
+        "identifier": "https://mex.rki.de/item/language-17",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Niederländisch",
+            "en": "Dutch"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "pl",
+                "en": "pl"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/POL",
+        "identifier": "https://mex.rki.de/item/language-18",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Polnisch",
+            "en": "Polish"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "pt",
+                "en": "pt"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/POR",
+        "identifier": "https://mex.rki.de/item/language-19",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Portugiesisch",
+            "en": "Portuguese"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "ro",
+                "en": "ro"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/RON",
+        "identifier": "https://mex.rki.de/item/language-20",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Rumänisch",
+            "en": "Romanian"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "sv",
+                "en": "sv"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/SWE",
+        "identifier": "https://mex.rki.de/item/language-21",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Schwedisch",
+            "en": "Swedish"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "sk",
+                "en": "sk"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/SLK",
+        "identifier": "https://mex.rki.de/item/language-22",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Slovakisch",
+            "en": "Slovak"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "sl",
+                "en": "sl"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/SLV",
+        "identifier": "https://mex.rki.de/item/language-23",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Slowenisch",
+            "en": "Slovene"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "cs",
+                "en": "cs"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/CES",
+        "identifier": "https://mex.rki.de/item/language-24",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Tschechisch",
+            "en": "Czech"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "hu",
+                "en": "hu"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/HUN",
+        "identifier": "https://mex.rki.de/item/language-25",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Ungarisch",
+            "en": "Hungarian"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "zh",
+                "en": "zh"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/ZHO",
+        "identifier": "https://mex.rki.de/item/language-26",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Chinesisch",
+            "en": "Chinese"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "ar",
+                "en": "ar"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/ARA",
+        "identifier": "https://mex.rki.de/item/language-27",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Arabisch",
+            "en": "Arabic"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "ja",
+                "en": "ja"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/JPN",
+        "identifier": "https://mex.rki.de/item/language-28",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Japanisch",
+            "en": "Japanese"
+        }
+    },
+    {
+        "altLabel": [
+            {
+                "de": "tr",
+                "en": "tr"
+            }
+        ],
+        "exactMatch": "http://publications.europa.eu/resource/authority/language/TUR",
+        "identifier": "https://mex.rki.de/item/language-29",
+        "inScheme": "https://mex.rki.de/item/language",
+        "prefLabel": {
+            "de": "Türkisch",
+            "en": "Turkish"
         }
     }
 ]

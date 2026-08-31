@@ -337,7 +337,14 @@
             "default": [],
             "description": "The legal basis used to justify processing of personal data. Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions which can be represented using dpv:hasJurisdiction or dpv:hasLaw. Legal basis can be used without such declarations, e.g. 'Consent', however their interpretation will require association with a law, e.g. 'EU GDPR'.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "anyOf": [
+                    {
+                        "$ref": "/mex/model/fields/text"
+                    },
+                    {
+                        "$ref": "/mex/model/fields/link"
+                    }
+                ]
             },
             "type": "array"
         },
@@ -361,14 +368,14 @@
             "description": "Indicates, if a resource contains data directly or indirectly associated or related to an individual."
         },
         "hasPurpose": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
             "closeMatch": [
                 "https://w3id.org/dpv#hasPurpose"
             ],
             "default": [],
-            "description": "A free text statement of the purpose of the processing of data or personal data.",
+            "description": "A controlled list of types of purposes for which the data was originally collected.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "$ref": "/mex/model/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/purpose"
             },
             "type": "array"
         },
@@ -380,6 +387,17 @@
             "description": "A free text statement of the purpose of the processing of data or personal data.",
             "items": {
                 "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
+        "hasVersion": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#hasVersion"
+            ],
+            "default": [],
+            "description": "A related Resource that is a version, edition, or adaptation of the described Resource.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
             },
             "type": "array"
         },
@@ -746,7 +764,6 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/type"
             ],
-            "default": [],
             "description": "Method how the resource was created.",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
@@ -755,6 +772,7 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/resource-creation-method"
             },
+            "minItems": 1,
             "type": "array"
         },
         "resourceTypeGeneral": {
@@ -1036,6 +1054,7 @@
         "accessRestriction",
         "contact",
         "identifier",
+        "resourceCreationMethod",
         "theme",
         "title",
         "unitInCharge"

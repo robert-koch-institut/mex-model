@@ -61,7 +61,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Added Vocabulary file
 
 - mex/model/vocabularies/coding-system.json (RKIMEX-25)
-- mex/model/vocabularies/country.json (RKIMEX-103)
 - mex/model/vocabularies/purpose.json (RKIMEX-100)
 
 - add vocabularies to concept-schemes.json
@@ -106,7 +105,6 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Changes
 
-- new template https://github.com/robert-koch-institut/mex-template/releases/tag/1.5.0
 - Changed files by adding translation entries for entities named in added: en.po, de.po
 - change annotation properties sameAs and subPropertyOf to closeMatch. delete sameAs and subPropertyOf from extension/definition.json
 
