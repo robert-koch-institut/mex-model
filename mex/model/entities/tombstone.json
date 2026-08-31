@@ -1,0 +1,24 @@
+{
+    "$$target": "/mex/model/entities/tombstone",
+    "$id": "https://mex.rki.de/mex/model/entities/tombstone",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "description": "Shared shape for any merged item that has been superseded by another merged item of the same type. A tombstoned item holds only its own identifier and the identifier of the item that replaces it - no other field from the original entity is retained.",
+    "properties": {
+        "identifier": {
+            "$ref": "/mex/model/fields/identifier",
+            "description": "An unambiguous reference to the resource within a given context.",
+            "readOnly": true
+        },
+        "supersededBy": {
+            "$ref": "/mex/model/fields/identifier",
+            "description": "The identifier of the merged item that replaces this one."
+        }
+    },
+    "required": [
+        "identifier",
+        "supersededBy"
+    ],
+    "title": "Tombstone",
+    "type": "object"
+}
