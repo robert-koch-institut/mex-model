@@ -155,6 +155,18 @@
             "minItems": 1,
             "type": "array"
         },
+        "propertyURL": {
+            "description": "A URI template used to define the RDF predicate associated with the values in the column, relative to each row. The propertyUrl may point to standard, controlled vocabularies, or ontologies that define the semantic meaning of the column.",
+            "exactMatch": [
+                "https://www.w3.org/ns/csvw#propertyUrl"
+            ],
+            "examples": [
+                "https://hello-world.org",
+                "http://purl.bioontology.org/ontology/ICD10"
+            ],
+            "pattern": "^(?:(?:[^:/?#]+):)?(?://(?:[^/?#]*))?(?:[^?#]*)(?:\\?(?:[^#]*))?(?:#(?:.*))?$",
+            "type": "string"
+        },
         "supersededBy": {
             "anyOf": [
                 {
@@ -166,6 +178,14 @@
             ],
             "default": null,
             "description": "A merged item which is the preferred duplicate, because it replaces, consolidates or otherwise makes the current merged item obsolete."
+        },
+        "surveyInstrument": {
+            "default": [],
+            "description": "The survey instrument the variable derives from.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
         },
         "usedIn": {
             "closeMatch": [
