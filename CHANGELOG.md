@@ -61,7 +61,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Added Vocabulary file
 
 - mex/model/vocabularies/coding-system.json (RKIMEX-25)
-- mex/model/vocabularies/country.json (RKIMEX-103)
 - mex/model/vocabularies/purpose.json (RKIMEX-100)
 
 - add vocabularies to concept-schemes.json
@@ -146,6 +145,10 @@ A new entity type, including the following properties (RKIMEX-14):
 ### Added
 
 - add examples to new properties of Resources for model update v5.0
+
+### Changes
+
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/26afa8>
 
 ## [5.0.0] - 2026-06-02
 
