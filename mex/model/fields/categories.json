@@ -1,0 +1,38 @@
+{
+    "$$target": "/mex/model/fields/categories",
+    "$id": "https://mex.rki.de/mex/model/fields/categories",
+    "$schema": "http://json-schema.org/draft/2020-12/schema",
+    "exactMatch": [
+        "https://datapackage.org/standard/table-schema/#categories"
+    ],
+    "properties": {
+        "label": {
+            "description": "The label of the encoded value, e.g. the variable value '-88' has the variable label 'Don't know'.",
+            "examples": [
+                "Yes",
+                "Don't know",
+                "Akute Rhinopharyngitis",
+                "Myocardial infarction",
+                "Macrocytes [Presence] in Blood by Light microscopy"
+            ],
+            "type": "string"
+        },
+        "value": {
+            "description": "The value of the variable.",
+            "examples": [
+                "1",
+                "-88",
+                "J00",
+                "M-74000",
+                "738-5"
+            ],
+            "minLength": 1,
+            "type": "string"
+        }
+    },
+    "required": [
+        "value"
+    ],
+    "title": "Categories",
+    "type": "object"
+}
