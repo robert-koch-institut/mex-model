@@ -3,6 +3,10 @@
     "$id": "https://mex.rki.de/mex/model/entities/extracted-variable-group",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "closeMatch": [
+        "http://www.w3.org/ns/csvw#Table",
+        "https://datapackage.org/profiles/2.0/tableschema.json"
+    ],
     "description": "The grouping of variables according to a certain aspect, e.g. how the information is modelled in the primary source.",
     "properties": {
         "containedBy": {
