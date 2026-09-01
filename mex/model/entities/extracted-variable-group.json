@@ -43,6 +43,17 @@
             "pattern": "^[^\\n\\r]+$",
             "type": "string"
         },
+        "keyword": {
+            "default": [],
+            "description": "A keyword or tag describing the variable group.",
+            "exactMatch": [
+                "http://www.w3.org/ns/dcat#keyword"
+            ],
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
         "label": {
             "closeMatch": [
                 "http://www.w3.org/2000/01/rdf-schema#label"
@@ -58,6 +69,17 @@
             "$ref": "/mex/model/entities/merged-variable-group#/identifier",
             "description": "The identifier of the merged item that this extracted item belongs to.",
             "readOnly": true
+        },
+        "title": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/title"
+            ],
+            "description": "The name of the variable group.",
+            "items": {
+                "$ref": "/mex/model/fields/text"
+            },
+            "minItems": 1,
+            "type": "array"
         }
     },
     "required": [
@@ -66,7 +88,8 @@
         "identifier",
         "identifierInPrimarySource",
         "label",
-        "stableTargetId"
+        "stableTargetId",
+        "title"
     ],
     "title": "Extracted Variable Group",
     "type": "object"
