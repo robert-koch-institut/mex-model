@@ -16,6 +16,34 @@
             },
             "type": "array"
         },
+        "categories": {
+            "closeMatch": [
+                "https://datapackage.org/standard/table-schema/#categories"
+            ],
+            "default": [],
+            "description": "A set of predefined categories that serve as possible values for the variable.",
+            "items": {
+                "$ref": "/mex/model/fields/categories",
+                "examples": [
+                    {
+                        "value": "3"
+                    },
+                    {
+                        "label": "Akute Rhinopharyngitis",
+                        "value": "J00"
+                    },
+                    {
+                        "label": "Yes",
+                        "value": "1"
+                    },
+                    {
+                        "label": "No",
+                        "value": "2"
+                    }
+                ]
+            },
+            "type": "array"
+        },
         "codingSystem": {
             "anyOf": [
                 {

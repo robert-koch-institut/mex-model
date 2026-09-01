@@ -3,6 +3,10 @@
     "$id": "https://mex.rki.de/mex/model/entities/extracted-variable",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "closeMatch": [
+        "http://www.w3.org/ns/csvw#Column",
+        "https://datapackage.org/standard/table-schema/#field"
+    ],
     "description": "Variables are defined for the data-based evaluation of investigations (e.g. studies). A variable is characterized by its data type (e.g. integer, string, date) and value range. The variable can be either quantitative or qualitative, i.e. the value range can take numerical or categorical values.",
     "properties": {
         "belongsTo": {
@@ -13,6 +17,34 @@
             "description": "The variable group that the described variable is part of. Used to group variables together, depending on how they are structured in the primary source.",
             "items": {
                 "$ref": "/mex/model/entities/merged-variable-group#/identifier"
+            },
+            "type": "array"
+        },
+        "categories": {
+            "closeMatch": [
+                "https://datapackage.org/standard/table-schema/#categories"
+            ],
+            "default": [],
+            "description": "A set of predefined categories that serve as possible values for the variable.",
+            "items": {
+                "$ref": "/mex/model/fields/categories",
+                "examples": [
+                    {
+                        "value": "3"
+                    },
+                    {
+                        "label": "Akute Rhinopharyngitis",
+                        "value": "J00"
+                    },
+                    {
+                        "label": "Yes",
+                        "value": "1"
+                    },
+                    {
+                        "label": "No",
+                        "value": "2"
+                    }
+                ]
             },
             "type": "array"
         },
