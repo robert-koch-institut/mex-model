@@ -203,6 +203,47 @@
             },
             "type": "array"
         },
+        "technicalLabel": {
+            "description": "A technical name given to the variable.",
+            "exactMatch": [
+                "http://www.w3.org/ns/csvw#name"
+            ],
+            "examples": [
+                "date_of_sampling",
+                "KHEfehlb",
+                "Koerpergroesse_in_cm",
+                "StateId"
+            ],
+            "maxLength": 1000,
+            "minLength": 1,
+            "type": "string"
+        },
+        "title": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/fields/text",
+                    "examples": [
+                        {
+                            "language": "de",
+                            "value": "Mehrere Treppenabsätze steigen"
+                        },
+                        {
+                            "language": "en",
+                            "value": "Climb several flights of stairs"
+                        }
+                    ]
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": [],
+            "description": "The human readable name given to the variable.",
+            "exactMatch": [
+                "http://www.w3.org/ns/csvw#titles"
+            ],
+            "type": "array"
+        },
         "usedIn": {
             "closeMatch": [
                 "http://purl.org/dc/terms/isPartOf"
@@ -235,6 +276,7 @@
         "identifierInPrimarySource",
         "label",
         "stableTargetId",
+        "technicalLabel",
         "usedIn"
     ],
     "title": "Extracted Variable",
