@@ -9,7 +9,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- add to mex/model/fields:
+  - categories.json
+- add to mex/model/vocabularies:
+  - datatype-standardized.json
+
 ### Changes
+
+- add properties to extracted- and merged-variable-group.json:
+  - `keyword`
+  - `title`
+- delete properties from extracted- and merged-variable-group.json:
+  - `label` (required)
+
+- add properties to extracted- and merged-variable.json:
+  - `categories`
+  - `datatypeInPrimarySource` (required)
+  - `datatypeStandardized`
+  - `propertyURL`
+  - `surveyInstrument`
+  - `technicalLabel` (required)
+  - `title`
+
+- delete properties from extracted- and merged-variable.json:
+  - `codingSystem`
+  - `dataType`
+  - `label` (required)
+  - `valueSet`
 
 ### Deprecated
 
