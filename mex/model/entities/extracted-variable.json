@@ -89,6 +89,39 @@
             "default": null,
             "description": "The defined data type of the variable."
         },
+        "datatypeInPrimarySource": {
+            "description": "Datatype of the variable, as defined in the original primary source system.",
+            "examples": [
+                "image",
+                "int55",
+                "integer",
+                "note",
+                "number",
+                "select_one",
+                "Text"
+            ],
+            "maxLength": 1000,
+            "minLength": 1,
+            "type": "string"
+        },
+        "datatypeStandardized": {
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/concept#/identifier",
+                    "examples": [
+                        "https://mex.rki.de/item/datatype-standardized-1"
+                    ],
+                    "useScheme": "https://mex.rki.de/item/datatype-standardized"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "description": "Standardized datatype of the variable, as defined in the controlled vocabulary.",
+            "exactMatch": [
+                "https://www.w3.org/ns/csvw#datatype"
+            ]
+        },
         "description": {
             "closeMatch": [
                 "http://purl.org/dc/terms/description"
@@ -176,6 +209,7 @@
         }
     },
     "required": [
+        "datatypeInPrimarySource",
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
