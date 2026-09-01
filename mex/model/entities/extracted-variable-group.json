@@ -54,17 +54,6 @@
             },
             "type": "array"
         },
-        "label": {
-            "closeMatch": [
-                "http://www.w3.org/2000/01/rdf-schema#label"
-            ],
-            "description": "The name of the variable group.",
-            "items": {
-                "$ref": "/mex/model/fields/text"
-            },
-            "minItems": 1,
-            "type": "array"
-        },
         "stableTargetId": {
             "$ref": "/mex/model/entities/merged-variable-group#/identifier",
             "description": "The identifier of the merged item that this extracted item belongs to.",
@@ -87,7 +76,6 @@
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
-        "label",
         "stableTargetId",
         "title"
     ],
