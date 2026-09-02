@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
+- made `email` conditionally required on `merged-contact-point.json`: only enforced via `if`/`then` when `supersededBy` is unset, as a proof of concept for validating superseded merged items
+
 ### Deprecated
 
 ### Removed

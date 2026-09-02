@@ -3,6 +3,27 @@
     "$id": "https://mex.rki.de/mex/model/entities/merged-contact-point",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "allOf": [
+        {
+            "if": {
+                "properties": {
+                    "supersededBy": {
+                        "type": "null"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "email": {
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "email"
+                ]
+            }
+        }
+    ],
     "closeMatch": [
         "https://schema.org/ContactPoint"
     ],
@@ -13,6 +34,7 @@
                 "http://www.w3.org/2006/vcard/ns#hasEmail",
                 "https://schema.org/email"
             ],
+            "default": [],
             "description": "The email address associated to the contact point.",
             "items": {
                 "examples": [
@@ -22,7 +44,6 @@
                 "pattern": "^[^@ \\t\\r\\n]+@[^@ \\t\\r\\n]+\\.[^@ \\t\\r\\n]+$",
                 "type": "string"
             },
-            "minItems": 1,
             "type": "array"
         },
         "identifier": {
@@ -47,7 +68,6 @@
         }
     },
     "required": [
-        "email",
         "identifier"
     ],
     "title": "Merged Contact Point",
