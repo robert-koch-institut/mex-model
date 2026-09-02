@@ -2,35 +2,35 @@ from typing import Any
 
 import pytest
 from jsonschema import Draft202012Validator
-from validate_superseded_contact_point import build_contact_point_validator
+from validate_contact_point import build_contact_point_validator
 
-ACTIVE_VALID = {
+ACTIVE_VALID: dict[str, Any] = {
     "identifier": "gglGQVGwZNJtqYDkW4N8jL",
     "email": ["info@rki.de"],
     "supersededBy": None,
 }
 
-ACTIVE_MISSING_EMAIL = {
+ACTIVE_MISSING_EMAIL: dict[str, Any] = {
     "identifier": "gglGQVGwZNJtqYDkW4N8jL",
     "supersededBy": None,
 }
 
-ACTIVE_EMPTY_EMAIL = {
+ACTIVE_EMPTY_EMAIL: dict[str, Any] = {
     "identifier": "gglGQVGwZNJtqYDkW4N8jL",
     "email": [],
     "supersededBy": None,
 }
 
-TOMBSTONE_VALID = {
+TOMBSTONE_VALID: dict[str, Any] = {
     "identifier": "gglGQVGwZNJtqYDkW4N8jL",
     "supersededBy": "dYb6qKqjdpocTAUEPPTTj2",
 }
 
-TOMBSTONE_MISSING_IDENTIFIER = {
+TOMBSTONE_MISSING_IDENTIFIER: dict[str, Any] = {
     "supersededBy": "dYb6qKqjdpocTAUEPPTTj2",
 }
 
-TOMBSTONE_EMPTY_EMAIL_ALLOWED = {
+TOMBSTONE_EMPTY_EMAIL_ALLOWED: dict[str, Any] = {
     "identifier": "gglGQVGwZNJtqYDkW4N8jL",
     "email": [],
     "supersededBy": "dYb6qKqjdpocTAUEPPTTj2",

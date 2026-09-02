@@ -7,6 +7,13 @@
         "https://schema.org/ContactPoint"
     ],
     "description": "A mail address to which a group of people has access.",
+    "if": {
+        "properties": {
+            "supersededBy": {
+                "type": "null"
+            }
+        }
+    },
     "properties": {
         "email": {
             "closeMatch": [
@@ -49,13 +56,6 @@
     "required": [
         "identifier"
     ],
-    "if": {
-        "properties": {
-            "supersededBy": {
-                "type": "null"
-            }
-        }
-    },
     "then": {
         "properties": {
             "email": {

@@ -12,14 +12,17 @@ dependencies = []
 [dependency-groups]
 dev = [
     "ipdb>=0.13",
+    "jsonschema>=4.26.0",
     "mypy>=1",
     "pytest-cov>=6",
     "pytest-random-order>=1",
     "pytest-xdist>=3",
     "pytest>=8",
+    "referencing>=0.37.0",
     "ruff>=0.15",
     "sphinx-jsonschema>=1.19",
     "sphinx<9",
+    "types-jsonschema>=4.26.0.20260518",
 ]
 
 [tool.coverage.run]
