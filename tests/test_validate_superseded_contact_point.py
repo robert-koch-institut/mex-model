@@ -2,28 +2,22 @@ from typing import Any
 
 import pytest
 from jsonschema import Draft202012Validator
-from validate_superseded_activity import build_activity_validator
+from validate_superseded_contact_point import build_contact_point_validator
 
 ACTIVE_VALID = {
     "identifier": "gglGQVGwZNJtqYDkW4N8jL",
-    "contact": ["fKJE3RzeJ6ntHtqsXOOQR8"],
-    "responsibleUnit": ["fKJE3RzeJ6ntHtqsXOOQR8"],
-    "title": [{"value": "An active activity"}],
+    "email": ["info@rki.de"],
     "supersededBy": None,
 }
 
-ACTIVE_MISSING_CONTACT = {
+ACTIVE_MISSING_EMAIL = {
     "identifier": "gglGQVGwZNJtqYDkW4N8jL",
-    "responsibleUnit": ["fKJE3RzeJ6ntHtqsXOOQR8"],
-    "title": [{"value": "An active activity missing contact"}],
     "supersededBy": None,
 }
 
-ACTIVE_EMPTY_CONTACT = {
+ACTIVE_EMPTY_EMAIL = {
     "identifier": "gglGQVGwZNJtqYDkW4N8jL",
-    "contact": [],
-    "responsibleUnit": ["fKJE3RzeJ6ntHtqsXOOQR8"],
-    "title": [{"value": "Present but empty contact list"}],
+    "email": [],
     "supersededBy": None,
 }
 
@@ -36,16 +30,16 @@ TOMBSTONE_MISSING_IDENTIFIER = {
     "supersededBy": "dYb6qKqjdpocTAUEPPTTj2",
 }
 
-TOMBSTONE_EMPTY_CONTACT_ALLOWED = {
+TOMBSTONE_EMPTY_EMAIL_ALLOWED = {
     "identifier": "gglGQVGwZNJtqYDkW4N8jL",
-    "contact": [],
+    "email": [],
     "supersededBy": "dYb6qKqjdpocTAUEPPTTj2",
 }
 
 
 @pytest.fixture(scope="module")
 def validator() -> Draft202012Validator:
-    return build_activity_validator()
+    return build_contact_point_validator()
 
 
 @pytest.mark.parametrize(
@@ -53,16 +47,16 @@ def validator() -> Draft202012Validator:
     [
         pytest.param(ACTIVE_VALID, True, None, id="active-all-required-fields-set"),
         pytest.param(
-            ACTIVE_MISSING_CONTACT,
+            ACTIVE_MISSING_EMAIL,
             False,
             "required",
-            id="active-missing-contact",
+            id="active-missing-email",
         ),
         pytest.param(
-            ACTIVE_EMPTY_CONTACT,
+            ACTIVE_EMPTY_EMAIL,
             False,
             "minItems",
-            id="active-contact-present-but-empty",
+            id="active-email-present-but-empty",
         ),
         pytest.param(
             TOMBSTONE_VALID,
@@ -77,14 +71,14 @@ def validator() -> Draft202012Validator:
             id="tombstone-missing-identifier",
         ),
         pytest.param(
-            TOMBSTONE_EMPTY_CONTACT_ALLOWED,
+            TOMBSTONE_EMPTY_EMAIL_ALLOWED,
             True,
             None,
-            id="tombstone-empty-contact-is-fine",
+            id="tombstone-empty-email-is-fine",
         ),
     ],
 )
-def test_merged_activity_conditional_validation(
+def test_merged_contact_point_conditional_validation(
     validator: Draft202012Validator,
     instance: dict[str, Any],
     expected_valid: bool,  # noqa: FBT001

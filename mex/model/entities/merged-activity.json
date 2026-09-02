@@ -51,7 +51,6 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#contactPoint"
             ],
-            "default": [],
             "description": "An agent serving as a contact for the activity.",
             "items": {
                 "anyOf": [
@@ -66,6 +65,7 @@
                     }
                 ]
             },
+            "minItems": 1,
             "type": "array"
         },
         "documentation": {
@@ -216,11 +216,11 @@
         },
         "responsibleUnit": {
             "closeMatch": "http.//dcat-ap.de/def/dcatde/maintainer",
-            "default": [],
             "description": "A unit that is responsible for the activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
             },
+            "minItems": 1,
             "type": "array"
         },
         "shortName": {
@@ -312,11 +312,11 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/title"
             ],
-            "default": [],
             "description": "The official title of the activity.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
+            "minItems": 1,
             "type": "array"
         },
         "website": {
@@ -333,33 +333,11 @@
         }
     },
     "required": [
-        "identifier"
+        "contact",
+        "identifier",
+        "responsibleUnit",
+        "title"
     ],
-    "if": {
-        "properties": {
-            "supersededBy": {
-                "type": "null"
-            }
-        }
-    },
-    "then": {
-        "properties": {
-            "contact": {
-                "minItems": 1
-            },
-            "responsibleUnit": {
-                "minItems": 1
-            },
-            "title": {
-                "minItems": 1
-            }
-        },
-        "required": [
-            "contact",
-            "responsibleUnit",
-            "title"
-        ]
-    },
     "title": "Merged Activity",
     "type": "object"
 }

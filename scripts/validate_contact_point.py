@@ -1,13 +1,11 @@
-"""Build a real jsonschema validator for merged-activity's if/then conditional.
+"""Build a real jsonschema validator for merged-contact-point's if/then conditional.
 
-mex-model has never run instance-level JSON Schema validation anywhere -
-`check_schemas.py`-style checks only validate the schema *documents*
-themselves, not example data. These helpers build a `referencing.Registry`
+These helpers build a `referencing.Registry`
 that resolves mex-model's cross-file `$ref`s, including the non-standard
 `#/identifier` fragment convention documented by each schema's `$$target`,
-so that `merged-activity.json`'s if/then conditional (full fields required
-when active, only identifier+supersededBy when superseded) can actually be
-exercised with real data. Imported by tests/test_validate_superseded_activity.py.
+so that `merged-contact-point.json`'s if/then conditional (full fields
+required when active, only identifier+supersededBy when superseded) can
+actually be exercised with real data.
 """
 
 from copy import deepcopy
@@ -53,8 +51,10 @@ def build_registry() -> Registry:
     )
 
 
-def build_activity_validator() -> Draft202012Validator:
-    """Build a validator for merged-activity.json's if/then conditional schema."""
+def build_contact_point_validator() -> Draft202012Validator:
+    """Build a validator for merged-contact-point.json's schema."""
     registry = build_registry()
-    schema = with_synthetic_identifier_pointer(MERGED_MODEL_JSON_BY_NAME["activity"])
+    schema = with_synthetic_identifier_pointer(
+        MERGED_MODEL_JSON_BY_NAME["contact_point"]
+    )
     return Draft202012Validator(schema, registry=registry)
