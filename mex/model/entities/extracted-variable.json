@@ -9,23 +9,12 @@
     ],
     "description": "Variables are defined for the data-based evaluation of investigations (e.g. studies). A variable is characterized by its data type (e.g. integer, string, date) and value range. The variable can be either quantitative or qualitative, i.e. the value range can take numerical or categorical values.",
     "properties": {
-        "belongsTo": {
-            "closeMatch": [
-                "http://purl.org/dc/terms/isPartOf"
-            ],
-            "default": [],
-            "description": "The variable group that the described variable is part of. Used to group variables together, depending on how they are structured in the primary source.",
-            "items": {
-                "$ref": "/mex/model/entities/merged-variable-group#/identifier"
-            },
-            "type": "array"
-        },
         "categories": {
-            "closeMatch": [
-                "https://datapackage.org/profiles/2.0/tableschema.json#categories"
-            ],
             "default": [],
             "description": "A set of predefined categories that serve as possible values for the variable.",
+            "exactMatch": [
+                "https://datapackage.org/profiles/2.0/tableschema.json#categories"
+            ],
             "items": {
                 "$ref": "/mex/model/fields/categories",
                 "examples": [
@@ -120,16 +109,32 @@
             "type": "string"
         },
         "propertyURL": {
+            "anyOf": [
+                {
+                    "examples": [
+                        "https://hello-world.org",
+                        "http://purl.bioontology.org/ontology/ICD10"
+                    ],
+                    "pattern": "^(?:(?:[^:/?#]+):)?(?://(?:[^/?#]*))?(?:[^?#]*)(?:\\?(?:[^#]*))?(?:#(?:.*))?$",
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
             "description": "A URI template used to define the RDF predicate associated with the values in the column, relative to each row. The propertyUrl may point to standard, controlled vocabularies, or ontologies that define the semantic meaning of the column.",
             "exactMatch": [
                 "https://www.w3.org/ns/csvw#propertyUrl"
-            ],
-            "examples": [
-                "https://hello-world.org",
-                "http://purl.bioontology.org/ontology/ICD10"
-            ],
-            "pattern": "^(?:(?:[^:/?#]+):)?(?://(?:[^/?#]*))?(?:[^?#]*)(?:\\?(?:[^#]*))?(?:#(?:.*))?$",
-            "type": "string"
+            ]
+        },
+        "resource": {
+            "description": "The resource that the variable is used in.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
+            },
+            "minItems": 1,
+            "type": "array"
         },
         "stableTargetId": {
             "$ref": "/mex/model/entities/merged-variable#/identifier",
@@ -144,7 +149,7 @@
             },
             "type": "array"
         },
-        "technicalLabel": {
+        "technicalName": {
             "description": "A technical name given to the variable.",
             "exactMatch": [
                 "http://www.w3.org/ns/csvw#name"
@@ -185,15 +190,13 @@
             ],
             "type": "array"
         },
-        "usedIn": {
-            "closeMatch": [
-                "http://purl.org/dc/terms/isPartOf"
-            ],
-            "description": "The resource that the variable is used in.",
+        "variableGroup": {
+            "$comment": "This property can be regarded as inverse property of csvw:column. While csvw:column points from the table to the column, mex:variableGroup points from the variable (column) to the variable group (table).",
+            "default": [],
+            "description": "The variable group that the described variable is part of. Used to group variables together, depending on how they are structured in the primary source.",
             "items": {
-                "$ref": "/mex/model/entities/merged-resource#/identifier"
+                "$ref": "/mex/model/entities/merged-variable-group#/identifier"
             },
-            "minItems": 1,
             "type": "array"
         }
     },
@@ -202,9 +205,9 @@
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
+        "resource",
         "stableTargetId",
-        "technicalLabel",
-        "usedIn"
+        "technicalName"
     ],
     "title": "Extracted Variable",
     "type": "object"

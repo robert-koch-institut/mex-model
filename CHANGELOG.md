@@ -16,26 +16,42 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- add properties to extracted- and merged-variable-group.json:
-  - `keyword`
-  - `title`
-- delete properties from extracted- and merged-variable-group.json:
-  - `label` (required)
+#### extracted- and merged-variable-group.json
 
-- add properties to extracted- and merged-variable.json:
+- add properties:
+  - `keyword`
+  - `title` *required*
+
+- delete properties:
+  - `label` *required*
+
+- rename properties:
+  - `containedBy` (old) to `resource` (new) *required*
+
+#### extracted- and merged-variable.json
+
+- add properties:
   - `categories`
-  - `datatypeInPrimarySource` (required)
+  - `datatypeInPrimarySource` *required*
   - `datatypeStandardized`
   - `propertyURL`
   - `surveyInstrument`
-  - `technicalLabel` (required)
+  - `technicalName` *required*
   - `title`
 
-- delete properties from extracted- and merged-variable.json:
+- delete properties:
   - `codingSystem`
   - `dataType`
   - `label` (required)
   - `valueSet`
+
+- rename properties:
+  - `belongsTo` (old) to `variableGroup` (new)
+  - `usedIn` (old) to `resource` (new) *required*
+
+#### po files
+
+- adapted translations according to the declared changes made in mex/model/entities
 
 ### Deprecated
 

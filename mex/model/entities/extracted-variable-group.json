@@ -9,17 +9,6 @@
     ],
     "description": "The grouping of variables according to a certain aspect, e.g. how the information is modelled in the primary source.",
     "properties": {
-        "containedBy": {
-            "closeMatch": [
-                "http://purl.org/dc/terms/isPartOf"
-            ],
-            "description": "The resource that the variable group is contained by. Used to connect a variable group to its resource.",
-            "items": {
-                "$ref": "/mex/model/entities/merged-resource#/identifier"
-            },
-            "minItems": 1,
-            "type": "array"
-        },
         "hadPrimarySource": {
             "$ref": "/mex/model/entities/merged-primary-source#/identifier",
             "closeMatch": [
@@ -58,6 +47,15 @@
             },
             "type": "array"
         },
+        "resource": {
+            "$comment": "This can be loosely regarded as the inverse property of healthdcatap:hasVariables, which relates the dataset to its variables (a table group). MEx models this in the other direction, where the variable group (table) is related to the resource using mex:resource. There can be multiple tables, but MEx does not model csvw:TableGroup, instead the tables are linked directly to their resource.",
+            "description": "The resource that the variable group is contained by. Used to connect a variable group to its resource.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
+            },
+            "minItems": 1,
+            "type": "array"
+        },
         "stableTargetId": {
             "$ref": "/mex/model/entities/merged-variable-group#/identifier",
             "description": "The identifier of the merged item that this extracted item belongs to.",
@@ -76,10 +74,10 @@
         }
     },
     "required": [
-        "containedBy",
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
+        "resource",
         "stableTargetId",
         "title"
     ],
