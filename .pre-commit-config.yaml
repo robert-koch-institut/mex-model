@@ -42,8 +42,14 @@ repos:
     hooks:
     - id: mypy
       name: mypy
-      entry: uv run dmypy run --timeout 7200 -- mex tests
-      files: ^(mex|tests)/|pyproject\.toml$
+      entry: uv run dmypy run --timeout 7200 -- mex tests scripts
+      files: ^(mex|tests|scripts)/|pyproject\.toml$
       language: system
       pass_filenames: false
       types: [python]
+    - id: schema-checks
+      name: schema checks
+      entry: uv run python scripts/check_schemas.py
+      language: system
+      files: ^mex/model/(entities|fields|vocabularies|extension)/.*\.json$
+      pass_filenames: false
