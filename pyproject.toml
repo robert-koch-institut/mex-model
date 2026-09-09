@@ -60,7 +60,9 @@ addopts = [
     "--pdbcls=IPython.terminal.debugger:TerminalPdb",
     "--random-order-bucket=global",
 ]
-markers = "integration: mark a test as integration test"
+markers = [
+    "integration: mark a test as integration test",
+]
 
 [tool.ruff]
 fix = true
