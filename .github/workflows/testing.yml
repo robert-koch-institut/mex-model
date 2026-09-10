@@ -38,9 +38,6 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Start containers
-        run: docker compose up --detach placeholder
-
       - name: Cache requirements
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         env:
@@ -71,16 +68,5 @@ jobs:
           echo ${{ matrix.python-version }} > .python-version
           make install
 
-      - name: Wait for container readiness
-        run: docker compose up --wait --wait-timeout 500 placeholder
-
       - name: Run test suite
         run: make test
-
-      - name: Show container logs
-        if: failure()
-        run: docker compose logs --no-color --timestamps
-
-      - name: Cleanup containers
-        if: always()
-        run: docker compose down --volumes --remove-orphans
