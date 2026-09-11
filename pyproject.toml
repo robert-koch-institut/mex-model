@@ -14,21 +14,18 @@ dev = [
     "ipdb>=0.13",
     "jsonschema>=4",
     "mypy>=1",
-    "pytest-cov>=6",
+    "pytest-cov>=7",
     "pytest-random-order>=1",
     "pytest-xdist>=3",
-    "pytest>=8",
-    "ruff>=0.15",
+    "pytest>=9",
+    "ruff>=0.16",
     "sphinx-jsonschema>=1.19",
     "sphinx<9",
     "types-jsonschema>=4",
 ]
 
 [tool.coverage.run]
-omit = [
-    # imported by the navigation helper, but has no tests of its own yet
-    "docs/vocabularies.py",
-]
+omit = ["docs/*"]
 
 [tool.cruft]
 template = "https://github.com/robert-koch-institut/mex-template"
@@ -60,7 +57,9 @@ addopts = [
     "--pdbcls=IPython.terminal.debugger:TerminalPdb",
     "--random-order-bucket=global",
 ]
-markers = "integration: mark a test as integration test"
+markers = [
+    "integration: mark a test as integration test",
+]
 
 [tool.ruff]
 fix = true
