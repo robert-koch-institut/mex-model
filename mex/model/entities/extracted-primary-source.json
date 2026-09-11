@@ -159,7 +159,8 @@
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
-        "stableTargetId"
+        "stableTargetId",
+        "title"
     ],
     "title": "Extracted Primary Source",
     "type": "object"

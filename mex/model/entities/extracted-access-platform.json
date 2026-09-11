@@ -129,7 +129,7 @@
         },
         "landingPage": {
             "closeMatch": [
-                "https://www.w3.org/ns/dcat#landingPage"
+                "http://www.w3.org/ns/dcat#landingPage"
             ],
             "default": [],
             "description": "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.",
@@ -163,6 +163,7 @@
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
+            "minItems": 1,
             "type": "array"
         },
         "unitInCharge": {
@@ -182,7 +183,8 @@
         "identifier",
         "identifierInPrimarySource",
         "stableTargetId",
-        "technicalAccessibility"
+        "technicalAccessibility",
+        "title"
     ],
     "title": "Extracted Access Platform",
     "type": "object"

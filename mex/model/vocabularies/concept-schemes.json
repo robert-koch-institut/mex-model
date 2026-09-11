@@ -44,14 +44,6 @@
         "label": "Consent type vocabulary"
     },
     {
-        "description": {
-            "de": "Länder und Gebiete ist ein kontrolliertes Vokabular, das Namen von Ländern und Gebieten als Concepts auflistet. Verfügbar unter https://op.europa.eu/de/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country. Es wurden nur aktuell gültige Einträge aufgenommen.",
-            "en": "Countries and territories is a controlled vocabulary that lists concepts associated with names of countries and territories. Available at https://op.europa.eu/de/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/country. Only currently valid items were used."
-        },
-        "identifier": "https://mex.rki.de/item/country",
-        "label": "Country and territories vocabulary"
-    },
-    {
         "identifier": "https://mex.rki.de/item/data-processing-state",
         "label": "Data processing state vocabulary"
     },
