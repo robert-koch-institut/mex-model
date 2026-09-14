@@ -9,7 +9,7 @@ fixture-based self-tests.
 import json
 import re
 import sys
-from collections.abc import Iterable, Iterator
+from collections.abc import Iterable, Iterator, Mapping
 from importlib.resources import files
 from typing import Any
 from urllib.parse import urlparse
@@ -29,7 +29,8 @@ EXCLUDED_PROVENANCE_FIELDS = frozenset(
     {"hadPrimarySource", "identifierInPrimarySource", "stableTargetId"}
 )
 ANNOTATION_URI_KEYS = ("closeMatch", "exactMatch", "sameAs", "subPropertyOf")
-MSGID_PATTERN = re.compile(r'^msgid "((?:[^"\\]|\\.)*)"', re.MULTILINE)
+MSGID_PATTERN = re.compile(r'^msgid "((?:[^"\\]|\\.)*)"')
+MSGCTXT_PATTERN = re.compile(r'^msgctxt "((?:[^"\\]|\\.)*)"')
 
 
 def _iter_use_scheme_nodes(node: object) -> Iterator[dict[str, Any]]:
@@ -296,28 +297,71 @@ def find_unresolved_use_scheme_violations(
     return violations
 
 
-def _extract_msgids(po_text: str) -> set[str]:
-    """Extract all `msgid` values from a raw .po file's text."""
-    return set(MSGID_PATTERN.findall(po_text))
+def _extract_msgids(po_text: str) -> set[tuple[str | None, str]]:
+    """Extract all `(msgctxt, msgid)` pairs from a raw .po file's text.
+
+    Entries without an `msgctxt` yield a `None` context; those act as the
+    fallback that applies to every entity.
+    """
+    msgids: set[tuple[str | None, str]] = set()
+    context: str | None = None
+    for line in po_text.splitlines():
+        if match := MSGCTXT_PATTERN.match(line):
+            context = match.group(1)
+        elif match := MSGID_PATTERN.match(line):
+            msgids.add((context, match.group(1)))
+        elif not line.strip():
+            context = None
+    return msgids
+
+
+def _has_translation(
+    msgids: set[tuple[str | None, str]], entity_name: str, field: str
+) -> bool:
+    """Check whether one entity's field is covered by any msgid in a .po file."""
+    return any(
+        context in (None, entity_name)
+        and (msgid == field or msgid.startswith(f"{field}."))
+        for context, msgid in msgids
+    )
 
 
 def find_missing_translation_violations(
-    field_names: Iterable[str], po_data_by_language: dict[str, str]
+    field_names_by_entity: Mapping[str, Iterable[str]],
+    po_data_by_language: dict[str, str],
 ) -> list[str]:
     """Check that every field has a translated label in each i18n .po file.
 
     A field matches either an exact `msgid` (e.g. `supersededBy`) or one
     prefixed with the field name followed by a dot (e.g.
-    `abstract.singular`, `abstract.description`).
+    `abstract.singular`, `abstract.description`). The matching msgid must
+    either carry the entity's own `msgctxt` or no `msgctxt` at all, because a
+    msgid scoped to a different entity is not found when the label is looked
+    up for this one and the UI falls back to the raw msgid.
     """
     violations: list[str] = []
     for language, po_text in sorted(po_data_by_language.items()):
         msgids = _extract_msgids(po_text)
         violations.extend(
-            f"{language}: no translation found for field {field!r}"
+            f"{language}: no translation found for field {entity_name}.{field}"
+            for entity_name, field_names in sorted(field_names_by_entity.items())
             for field in sorted(set(field_names))
-            if field not in msgids
-            and not any(msgid.startswith(f"{field}.") for msgid in msgids)
+            if not _has_translation(msgids, entity_name, field)
+        )
+    return violations
+
+
+def find_missing_entity_label_violations(
+    entity_names: Iterable[str], po_data_by_language: dict[str, str]
+) -> list[str]:
+    """Check that every entity name has a context-free label in each .po file."""
+    violations: list[str] = []
+    for language, po_text in sorted(po_data_by_language.items()):
+        msgids = _extract_msgids(po_text)
+        violations.extend(
+            f"{language}: no translation found for entity {entity_name!r}"
+            for entity_name in sorted(set(entity_names))
+            if (None, entity_name) not in msgids
         )
     return violations
 
@@ -413,6 +457,16 @@ def _load_extension_definition() -> dict[str, Any]:
     return definition
 
 
+def _entity_name_from_file_stem(stem: str) -> str:
+    """Derive the entity name used for i18n lookups from a schema file stem.
+
+    E.g. "merged-resource_series" -> "ResourceSeries", matching both the
+    `msgctxt` of the field labels and the bare entity-label `msgid`.
+    """
+    _, _, bare = stem.partition("-")
+    return "".join(part.capitalize() for part in re.split(r"[-_]", bare))
+
+
 def _all_entity_schemas_by_file_stem() -> dict[str, dict[str, Any]]:
     """Combine extracted and merged schemas keyed by their actual file stem.
 
@@ -457,13 +511,16 @@ def _collect_violations() -> list[str]:
         all_entities, VOCABULARY_JSON_BY_NAME
     )
     violations += find_orphaned_field_violations(FIELD_JSON_BY_NAME, all_entities)
-    all_field_names = {
-        name
-        for schema in all_entities.values()
-        for name in schema.get("properties", {})
-    }
+    field_names_by_entity: dict[str, set[str]] = {}
+    for stem, schema in all_entities.items():
+        field_names_by_entity.setdefault(
+            _entity_name_from_file_stem(stem), set()
+        ).update(schema.get("properties", {}))
+    violations += find_missing_entity_label_violations(
+        field_names_by_entity, I18N_PO_DATA_BY_LANGUAGE
+    )
     violations += find_missing_translation_violations(
-        all_field_names, I18N_PO_DATA_BY_LANGUAGE
+        field_names_by_entity, I18N_PO_DATA_BY_LANGUAGE
     )
     for name, schema in sorted(all_entities.items()):
         violations += find_meta_schema_violations(name, schema)

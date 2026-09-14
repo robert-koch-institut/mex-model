@@ -17,7 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   duplicate concept identifiers, unresolved `examples`/`useScheme` references,
   orphaned shared fields, annotation URI well-formedness, JSON Schema
   meta-validation, `$id`/`$$target` path consistency, and i18n translation
-  coverage (every entity field must have a `de.po`/`en.po` label)
+  coverage (every entity name and every entity field must have a `de.po`/`en.po`
+  label that is either context-free or scoped to that entity's own `msgctxt`)
 
 ### Changes
 
@@ -32,6 +33,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `responsibleUnit` in extracted- and merged-activity.json
 - added missing `year_month_day_time` variant to `Activity.start`/`end` in
   extracted- and merged-activity.json, matching `Resource`/`ResourceSeries`
+- fixed `ResourceSeries` entity label, which was keyed as `Resource Series`
+  (with a space) and therefore never matched
+- added missing labels for fields whose only translation was scoped to another
+  entity's `msgctxt`: seven `ResourceSeries` fields (`accessPlatform`,
+  `accrualPeriodicity`, `end`, `hasLegalBasis`, `publisher`, `spatial`,
+  `start`), `BibliographicResource.distribution`, and
+  `Organization.alternativeName`
+- fixed English `Resource.distribution` plural forms (`Files`/`FIles`)
 
 ### Security
 

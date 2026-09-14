@@ -24,6 +24,16 @@ msgctxt "Resource"
 msgid "accessPlatform.description"
 msgstr "Access platform for the data"
 
+msgctxt "ResourceSeries"
+msgid "accessPlatform.singular"
+msgid_plural "accessPlatform.plural"
+msgstr[0] "Access platform"
+msgstr[1] "Access platforms"
+
+msgctxt "ResourceSeries"
+msgid "accessPlatform.description"
+msgstr "Access platform for the collection"
+
 msgid "accessRestriction.singular"
 msgstr "Access restriction"
 
@@ -75,6 +85,14 @@ msgstr "Update frequency"
 msgctxt "Resource"
 msgid "accrualPeriodicity.description"
 msgstr "Rate/frequency with which data is updated"
+
+msgctxt "ResourceSeries"
+msgid "accrualPeriodicity.singular"
+msgstr "Update frequency"
+
+msgctxt "ResourceSeries"
+msgid "accrualPeriodicity.description"
+msgstr "Rate/frequency with which items are added to the collection"
 
 msgctxt "Activity"
 msgid "activityType.singular"
@@ -293,11 +311,21 @@ msgctxt "Variable"
 msgid "description.description"
 msgstr "Domain-specific description of the variable"
 
+msgctxt "BibliographicResource"
+msgid "distribution.singular"
+msgid_plural "distribution.plural"
+msgstr[0] "File"
+msgstr[1] "Files"
+
+msgctxt "BibliographicResource"
+msgid "distribution.description"
+msgstr "Files belonging to the publication"
+
 msgctxt "Resource"
 msgid "distribution.singular"
 msgid_plural "distribution.plural"
-msgstr[0] "Files"
-msgstr[1] "FIles"
+msgstr[0] "File"
+msgstr[1] "Files"
 
 msgctxt "Resource"
 msgid "distribution.description"
@@ -390,6 +418,14 @@ msgstr "End"
 msgctxt "Resource"
 msgid "end.description"
 msgstr "The end of the time period covered by the data"
+
+msgctxt "ResourceSeries"
+msgid "end.singular"
+msgstr "End"
+
+msgctxt "ResourceSeries"
+msgid "end.description"
+msgstr "The end of the time period covered by the collection"
 
 msgctxt "AccessPlatform"
 msgid "endpointDescription.singular"
@@ -523,6 +559,14 @@ msgid "hasLegalBasis.singular"
 msgstr "Legal basis"
 
 msgctxt "Resource"
+msgid "hasLegalBasis.description"
+msgstr "Laws and regulations that are the basis on which data is collected"
+
+msgctxt "ResourceSeries"
+msgid "hasLegalBasis.singular"
+msgstr "Legal basis"
+
+msgctxt "ResourceSeries"
 msgid "hasLegalBasis.description"
 msgstr "Laws and regulations that are the basis on which data is collected"
 
@@ -895,6 +939,16 @@ msgctxt "Organization"
 msgid "officialName.description"
 msgstr "Official name of the institution"
 
+msgctxt "Organization"
+msgid "alternativeName.singular"
+msgid_plural "alternativeName.plural"
+msgstr[0] "Other name"
+msgstr[1] "Other names"
+
+msgctxt "Organization"
+msgid "alternativeName.description"
+msgstr "Other name of the institution"
+
 msgctxt "OrganizationalUnit"
 msgid "alternativeName.singular"
 msgid_plural "alternativeName.plural"
@@ -1000,6 +1054,16 @@ msgstr[1] "Publishing institutions"
 msgctxt "Resource"
 msgid "publisher.description"
 msgstr "Responsible party for making available/providing the data"
+
+msgctxt "ResourceSeries"
+msgid "publisher.singular"
+msgid_plural "publisher.plural"
+msgstr[0] "Publishing institution"
+msgstr[1] "Publishing institutions"
+
+msgctxt "ResourceSeries"
+msgid "publisher.description"
+msgstr "Responsible party for making available/providing the collection"
 
 msgctxt "Resource"
 msgid "qualityInformation.singular"
@@ -1145,6 +1209,14 @@ msgctxt "Resource"
 msgid "spatial.description"
 msgstr "Geographical coverage of the data"
 
+msgctxt "ResourceSeries"
+msgid "spatial.singular"
+msgstr "Geographical coverage"
+
+msgctxt "ResourceSeries"
+msgid "spatial.description"
+msgstr "Geographical coverage of the collection"
+
 msgid "stableTargetId.singular"
 msgstr "Stable target id"
 
@@ -1168,6 +1240,14 @@ msgstr "Start"
 msgctxt "Resource"
 msgid "start.description"
 msgstr "The start of the time period covered by the data"
+
+msgctxt "ResourceSeries"
+msgid "start.singular"
+msgstr "Start"
+
+msgctxt "ResourceSeries"
+msgid "start.description"
+msgstr "The start of the time period covered by the collection"
 
 msgctxt "Resource"
 msgid "stateOfDataProcessing.singular"
@@ -1390,7 +1470,7 @@ msgstr "Primary source"
 msgid "Resource"
 msgstr "Data Source/Dataset"
 
-msgid "Resource Series"
+msgid "ResourceSeries"
 msgstr "Collection of Data sources/Datasets"
 
 msgid "Variable"
