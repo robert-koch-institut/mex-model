@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+### Changes
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [5.1.4] - 2026-09-14
+
+### Added
+
 - add automated schema-correctness checks (`scripts/check_schemas.py`), run via a
   `schema-checks` pre-commit hook: field validation shape, extracted/merged field
   parity, cross-entity field identity (same field name must have the same shape
@@ -23,10 +37,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changes
 
 - new template https://github.com/robert-koch-institut/mex-template/releases/tag/2.0.0
-### Deprecated
-
-### Removed
-
 ### Fixed
 
 - fixed malformed `closeMatch` URI (`http.//` instead of `http://`) on
@@ -41,8 +51,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `start`), `BibliographicResource.distribution`, and
   `Organization.alternativeName`
 - fixed English `Resource.distribution` plural forms (`Files`/`FIles`)
-
-### Security
 
 ## [5.1.3] - 2026-08-28
 
