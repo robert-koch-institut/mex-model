@@ -60,7 +60,6 @@
             "closeMatch": [
                 "http://xmlns.com/foaf/0.1/name"
             ],
-            "default": [],
             "description": "The full name of a person. Also used if the naming schema (given name and family name) does not apply to the name.",
             "items": {
                 "examples": [
@@ -70,6 +69,7 @@
                 ],
                 "type": "string"
             },
+            "minItems": 1,
             "type": "array"
         },
         "givenName": {
@@ -170,6 +170,7 @@
         }
     },
     "required": [
+        "fullName",
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",

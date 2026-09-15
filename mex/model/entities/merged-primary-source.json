@@ -111,6 +111,7 @@
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
+            "minItems": 1,
             "type": "array"
         },
         "unitInCharge": {
@@ -144,7 +145,8 @@
         }
     },
     "required": [
-        "identifier"
+        "identifier",
+        "title"
     ],
     "title": "Merged Primary Source",
     "type": "object"
