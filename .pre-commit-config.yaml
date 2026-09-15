@@ -1,7 +1,7 @@
 fail_fast: false
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.4
+    rev: v0.16.6
     hooks:
       - id: ruff-check
         name: ruff-check
@@ -24,6 +24,11 @@ repos:
         name: whitespaces
       - id: fix-byte-order-marker
         name: byte-order
+  - repo: https://github.com/renovatebot/pre-commit-hooks
+    rev: 44.66.1
+    hooks:
+      - id: renovate-config-validator
+        name: renovate
   - repo: local
     hooks:
       - id: dennis-lint
@@ -33,7 +38,7 @@ repos:
         additional_dependencies: [dennis]
         files: \.po$
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.12.5
+    rev: 0.12.10
     hooks:
       - id: uv-lock
         name: uv
@@ -42,8 +47,14 @@ repos:
     hooks:
     - id: mypy
       name: mypy
-      entry: uv run dmypy run --timeout 7200 -- mex tests
-      files: ^(mex|tests)/|pyproject\.toml$
+      entry: uv run dmypy run --timeout 7200 -- mex tests scripts
+      files: ^(mex|tests|scripts)/|pyproject\.toml$
       language: system
       pass_filenames: false
       types: [python]
+    - id: schema-checks
+      name: schema checks
+      entry: uv run python scripts/check_schemas.py
+      language: system
+      files: ^mex/model/(entities|fields|vocabularies|extension)/.*\.json$
+      pass_filenames: false

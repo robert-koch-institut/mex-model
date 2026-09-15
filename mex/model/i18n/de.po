@@ -22,6 +22,16 @@ msgctxt "Resource"
 msgid "accessPlatform.description"
 msgstr "Zugriffsplattform für die Daten"
 
+msgctxt "ResourceSeries"
+msgid "accessPlatform.singular"
+msgid_plural "accessPlatform.plural"
+msgstr[0] "Zugriffsplattform"
+msgstr[1] "Zugriffsplattformen"
+
+msgctxt "ResourceSeries"
+msgid "accessPlatform.description"
+msgstr "Zugriffsplattform für die Kollektion"
+
 msgid "accessRestriction.singular"
 msgstr "Zugriffsbeschränkung"
 
@@ -73,6 +83,14 @@ msgstr "Aktualisierungsfrequenz"
 msgctxt "Resource"
 msgid "accrualPeriodicity.description"
 msgstr "Die Häufigkeit/Frequenz, mit der Daten aktualisiert werden"
+
+msgctxt "ResourceSeries"
+msgid "accrualPeriodicity.singular"
+msgstr "Aktualisierungsfrequenz"
+
+msgctxt "ResourceSeries"
+msgid "accrualPeriodicity.description"
+msgstr "Die Häufigkeit/Frequenz, mit der die Kollektion ergänzt wird"
 
 msgctxt "Activity"
 msgid "activityType.singular"
@@ -303,6 +321,16 @@ msgctxt "Variable"
 msgid "description.description"
 msgstr "Fachliche Beschreibung der Variable"
 
+msgctxt "BibliographicResource"
+msgid "distribution.singular"
+msgid_plural "distribution.plural"
+msgstr[0] "Datei"
+msgstr[1] "Dateien"
+
+msgctxt "BibliographicResource"
+msgid "distribution.description"
+msgstr "Zur Publikation dazugehörige Dateien"
+
 msgctxt "Resource"
 msgid "distribution.singular"
 msgid_plural "distribution.plural"
@@ -399,6 +427,14 @@ msgstr "Ende"
 msgctxt "Resource"
 msgid "end.description"
 msgstr "Ende des Zeitraumes, den die Daten abdecken"
+
+msgctxt "ResourceSeries"
+msgid "end.singular"
+msgstr "Ende"
+
+msgctxt "ResourceSeries"
+msgid "end.description"
+msgstr "Ende des Zeitraumes, den die Kollektion abdeckt"
 
 msgctxt "AccessPlatform"
 msgid "endpointDescription.singular"
@@ -540,6 +576,16 @@ msgstr ""
 "Rechtliche Grundlagen werden durch Gesetze und Vorschriften definiert, auf "
 "deren Basis die Daten erhoben werden"
 
+msgctxt "ResourceSeries"
+msgid "hasLegalBasis.singular"
+msgstr "Rechtliche Grundlage"
+
+msgctxt "ResourceSeries"
+msgid "hasLegalBasis.description"
+msgstr ""
+"Rechtliche Grundlagen werden durch Gesetze und Vorschriften definiert, auf "
+"deren Basis die Daten erhoben werden"
+
 msgctxt "Resource"
 msgid "hasPersonalData.singular"
 msgstr "Personenbezogene Daten"
@@ -610,6 +656,22 @@ msgid "inSeries.description"
 msgstr "Kollektion von Datensätzen, der der Datensatz angehört"
 
 msgctxt "Resource"
+msgid "inSeriesFirstResource.singular"
+msgstr "Erster Datensatz"
+
+msgctxt "Resource"
+msgid "inSeriesFirstResource.description"
+msgstr "Der vorliegende Datensatz ist der erste Datensatz in der verknüpften Datensatzkollektion"
+
+msgctxt "Resource"
+msgid "inSeriesLastResource.singular"
+msgstr "Letzter Datensatz"
+
+msgctxt "Resource"
+msgid "inSeriesLastResource.description"
+msgstr "Der vorliegende Datensatz ist der letzte Datensatz in der verknüpften Datensatzkollektion"
+
+msgctxt "Resource"
 msgid "instrumentToolOrApparatus.singular"
 msgid_plural "usedInstrumentToolOrApparatus.plural"
 msgstr[0] "Tool"
@@ -650,6 +712,14 @@ msgid "isbnIssn.description"
 msgstr ""
 "Internationale Standardbuchnummer (ISBN) oder Internationale Standardnummer "
 "für fortlaufende Sammelwerke (ISSN) für Zeitschriften"
+
+msgctxt "Consent"
+msgid "isIndicatedAtTime.singular"
+msgstr "Datum der Einwilligung"
+
+msgctxt "Consent"
+msgid "isIndicatedAtTime.description"
+msgstr "Datum und Uhrzeit, zu der die betroffene Person ihre Einwilligung erteilt hat"
 
 msgid "isniId.singular"
 msgstr "ISNI"
@@ -852,6 +922,16 @@ msgctxt "Organization"
 msgid "officialName.description"
 msgstr "Offizieller Name der Institution"
 
+msgctxt "Organization"
+msgid "alternativeName.singular"
+msgid_plural "alternativeName.plural"
+msgstr[0] "Anderer Name"
+msgstr[1] "Andere Namen"
+
+msgctxt "Organization"
+msgid "alternativeName.description"
+msgstr "Anderer Name der Institution"
+
 msgctxt "OrganizationalUnit"
 msgid "alternativeName.singular"
 msgid_plural "alternativeName.plural"
@@ -1002,6 +1082,17 @@ msgid "publisher.description"
 msgstr ""
 "Verantwortliche(r) für die Verfügbarmachung/Bereitstellung der Daten"
 
+msgctxt "ResourceSeries"
+msgid "publisher.singular"
+msgid_plural "publisher.plural"
+msgstr[0] "Herausgebende Institution"
+msgstr[1] "Herausgebende Institutionen"
+
+msgctxt "ResourceSeries"
+msgid "publisher.description"
+msgstr ""
+"Verantwortliche(r) für die Verfügbarmachung/Bereitstellung der Kollektion"
+
 msgctxt "Resource"
 msgid "qualityInformation.singular"
 msgstr "Qualitätsinformationen"
@@ -1150,6 +1241,14 @@ msgctxt "Resource"
 msgid "spatial.description"
 msgstr "Geografische Abdeckung der Daten"
 
+msgctxt "ResourceSeries"
+msgid "spatial.singular"
+msgstr "Räumlicher Bezug"
+
+msgctxt "ResourceSeries"
+msgid "spatial.description"
+msgstr "Geografische Abdeckung der Kollektion"
+
 msgid "stableTargetId.singular"
 msgstr "Stabiler Identifikator"
 
@@ -1174,6 +1273,14 @@ msgstr "Beginn"
 msgctxt "Resource"
 msgid "start.description"
 msgstr "Beginn des Zeitraumes, den die Daten abdecken"
+
+msgctxt "ResourceSeries"
+msgid "start.singular"
+msgstr "Beginn"
+
+msgctxt "ResourceSeries"
+msgid "start.description"
+msgstr "Beginn des Zeitraumes, den die Kollektion abdeckt"
 
 msgctxt "Resource"
 msgid "stateOfDataProcessing.singular"
@@ -1412,7 +1519,7 @@ msgstr "Primärsystem"
 msgid "Resource"
 msgstr "Datenbestand/Datensatz"
 
-msgid "Resource Series"
+msgid "ResourceSeries"
 msgstr "Kollektion von Datenbeständen/Datensätzen"
 
 msgid "Variable"
