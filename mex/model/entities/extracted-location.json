@@ -38,8 +38,8 @@
             "pattern": "^[^\\n\\r]+$",
             "type": "string"
         },
-        "officialName": {
-            "description": "Official name of the location.",
+        "name": {
+            "description": "Name of the location.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
@@ -68,9 +68,9 @@
         }
     },
     "required": [
-        "officialName",
         "identifier",
         "identifierInPrimarySource",
+        "name",
         "stableTargetId"
     ],
     "title": "ExtractedLocation",

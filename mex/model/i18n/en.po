@@ -30,6 +30,22 @@ msgstr[1] "Access platforms"
 msgid "accessPlatform.description"
 msgstr "Access platform for the data"
 
+msgctxt "ResourceSeries"
+msgid "accessPlatform.singular"
+msgid_plural "accessPlatform.plural"
+msgstr[0] "Access platform"
+msgstr[1] "Access platforms"
+
+msgctxt "ResourceSeries"
+msgid "accessPlatform.description"
+msgstr "Access platform for the collection"
+
+msgid "accessRestriction.singular"
+msgstr "Access restriction"
+
+msgid "accessRestriction.description"
+msgstr "Description of the access restriction"
+
 msgctxt "BibliographicResource"
 msgid "accessRestriction.description"
 msgstr ""
@@ -83,6 +99,14 @@ msgstr "Update frequency"
 msgctxt "Resource"
 msgid "accrualPeriodicity.description"
 msgstr "Rate/frequency with which data is updated"
+
+msgctxt "ResourceSeries"
+msgid "accrualPeriodicity.singular"
+msgstr "Update frequency"
+
+msgctxt "ResourceSeries"
+msgid "accrualPeriodicity.description"
+msgstr "Rate/frequency with which items are added to the collection"
 
 msgctxt "Activity"
 msgid "activityType.singular"
@@ -311,11 +335,21 @@ msgctxt "Variable"
 msgid "description.description"
 msgstr "Domain-specific description of the variable"
 
+msgctxt "BibliographicResource"
+msgid "distribution.singular"
+msgid_plural "distribution.plural"
+msgstr[0] "File"
+msgstr[1] "Files"
+
+msgctxt "BibliographicResource"
+msgid "distribution.description"
+msgstr "Files belonging to the publication"
+
 msgctxt "Resource"
 msgid "distribution.singular"
 msgid_plural "distribution.plural"
-msgstr[0] "Files"
-msgstr[1] "FIles"
+msgstr[0] "File"
+msgstr[1] "Files"
 
 msgctxt "Resource"
 msgid "distribution.description"
@@ -418,8 +452,12 @@ msgid "end.description"
 msgstr "The end of the time period covered by the data"
 
 msgctxt "ResourceSeries"
+msgid "end.singular"
+msgstr "End"
+
+msgctxt "ResourceSeries"
 msgid "end.description"
-msgstr "The end of the time period covered by the data series"
+msgstr "The end of the time period covered by the collection"
 
 msgctxt "AccessPlatform"
 msgid "endpointDescription.singular"
@@ -499,11 +537,11 @@ msgid "fundingProgram.description"
 msgstr "Funding program, e.g. Horizon Europe"
 
 msgctxt "Location"
-msgid "geonamesId.singular"
+msgid "geoNamesId.singular"
 msgstr "GeoNames ID"
 
 msgctxt "Location"
-msgid "geonamesId.description"
+msgid "geoNamesId.description"
 msgstr "Geonames is a free online database and is widely used as a standard dataset for geographic entities"
 
 msgctxt "Resource"
@@ -567,6 +605,15 @@ msgstr "Specification of coding system in use"
 msgid "hasLegalBasis.singular"
 msgstr "Legal basis"
 
+msgctxt "Resource"
+msgid "hasLegalBasis.description"
+msgstr "Laws and regulations that are the basis on which data is collected"
+
+msgctxt "ResourceSeries"
+msgid "hasLegalBasis.singular"
+msgstr "Legal basis"
+
+msgctxt "ResourceSeries"
 msgid "hasLegalBasis.description"
 msgstr "Laws and regulations that are the basis on which data is collected"
 
@@ -709,6 +756,14 @@ msgid "isbnIssn.description"
 msgstr ""
 "International Standard Book Number (ISBN) or International Standard Serial "
 "Number (ISSN) for journals"
+
+msgctxt "Consent"
+msgid "isIndicatedAtTime.singular"
+msgstr "Date of consent"
+
+msgctxt "Consent"
+msgid "isIndicatedAtTime.description"
+msgstr "Date and time when the data subject indicated their consent"
 
 msgid "isniId.singular"
 msgstr "ISNI"
@@ -939,6 +994,16 @@ msgctxt "Organization"
 msgid "officialName.description"
 msgstr "Official name of the institution"
 
+msgctxt "Organization"
+msgid "alternativeName.singular"
+msgid_plural "alternativeName.plural"
+msgstr[0] "Other name"
+msgstr[1] "Other names"
+
+msgctxt "Organization"
+msgid "alternativeName.description"
+msgstr "Other name of the institution"
+
 msgctxt "OrganizationalUnit"
 msgid "alternativeName.singular"
 msgid_plural "alternativeName.plural"
@@ -950,14 +1015,14 @@ msgid "name.singular"
 msgstr "Name"
 
 msgctxt "Location"
-msgid "officialName.singular"
-msgid_plural "officialName.plural"
+msgid "name.singular"
+msgid_plural "name.plural"
 msgstr[0] "Name"
 msgstr[1] "Names"
 
 msgctxt "Location"
-msgid "officialName.description"
-msgstr "Official name of the location"
+msgid "name.description"
+msgstr "Name of the location"
 
 msgctxt "Person"
 msgid "orcidId.singular"
@@ -1063,7 +1128,7 @@ msgstr[1] "Publishing institutions"
 
 msgctxt "ResourceSeries"
 msgid "publisher.description"
-msgstr "Responsible party for making available/providing the data series"
+msgstr "Responsible party for making available/providing the collection"
 
 msgctxt "Resource"
 msgid "qualityInformation.singular"
@@ -1217,7 +1282,15 @@ msgid "spatial.singular"
 msgstr "Location or geographic region"
 
 msgid "spatial.description"
-msgstr "Location or geographic region covered by the data"
+msgstr "Geographical coverage of the data"
+
+msgctxt "ResourceSeries"
+msgid "spatial.singular"
+msgstr "Geographical coverage"
+
+msgctxt "ResourceSeries"
+msgid "spatial.description"
+msgstr "Geographical coverage of the collection"
 
 msgid "stableTargetId.singular"
 msgstr "Stable target id"
@@ -1249,7 +1322,7 @@ msgstr "Start"
 
 msgctxt "ResourceSeries"
 msgid "start.description"
-msgstr "The start of the time period covered by the data series"
+msgstr "The start of the time period covered by the collection"
 
 msgctxt "Resource"
 msgid "stateOfDataProcessing.singular"
@@ -1383,6 +1456,14 @@ msgctxt "BibliographicResource"
 msgid "volume.description"
 msgstr "Volume of the journal"
 
+msgctxt "BibliographicResource"
+msgid "volumeOfSeries.singular"
+msgstr "Series volume"
+
+msgctxt "BibliographicResource"
+msgid "volumeOfSeries.description"
+msgstr "Volume of the series"
+
 msgctxt "Resource"
 msgid "wasGeneratedBy.singular"
 msgid_plural "wasGeneratedBy.plural"
@@ -1460,6 +1541,9 @@ msgstr "Consent"
 
 msgid "Distribution"
 msgstr "File"
+
+msgid "Location"
+msgstr "Location"
 
 msgid "Organization"
 msgstr "Organization"

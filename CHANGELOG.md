@@ -19,6 +19,45 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [5.1.4] - 2026-09-14
+
+### Added
+
+- add automated schema-correctness checks (`scripts/check_schemas.py`), run via a
+  `schema-checks` pre-commit hook: field validation shape, extracted/merged field
+  parity, cross-entity field identity (same field name must have the same shape
+  everywhere, ignoring annotation properties, `$comment`/`description`,
+  `examples`, and required-ness-derived differences), vocabulary registration,
+  duplicate concept identifiers, unresolved `examples`/`useScheme` references,
+  orphaned shared fields, annotation URI well-formedness, JSON Schema
+  meta-validation, `$id`/`$$target` path consistency, and i18n translation
+  coverage (every entity name and every entity field must have a `de.po`/`en.po`
+  label that is either context-free or scoped to that entity's own `msgctxt`)
+
+### Changes
+
+- new template https://github.com/robert-koch-institut/mex-template/releases/tag/2.0.0
+### Fixed
+
+- fixed malformed `closeMatch` URI (`http.//` instead of `http://`) on
+  `responsibleUnit` in extracted- and merged-activity.json
+- added missing `year_month_day_time` variant to `Activity.start`/`end` in
+  extracted- and merged-activity.json, matching `Resource`/`ResourceSeries`
+- fixed `ResourceSeries` entity label, which was keyed as `Resource Series`
+  (with a space) and therefore never matched
+- added missing labels for fields whose only translation was scoped to another
+  entity's `msgctxt`: seven `ResourceSeries` fields (`accessPlatform`,
+  `accrualPeriodicity`, `end`, `hasLegalBasis`, `publisher`, `spatial`,
+  `start`), `BibliographicResource.distribution`, and
+  `Organization.alternativeName`
+- fixed English `Resource.distribution` plural forms (`Files`/`FIles`)
+
+## [5.1.3] - 2026-08-28
+
+### Fixed
+
+- added missing BibliographicResource.volumeOfSeries to po files
+
 ## [5.1.2] - 2026-08-17
 
 ### Changes

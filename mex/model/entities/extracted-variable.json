@@ -144,7 +144,6 @@
         }
     },
     "required": [
-        "datatypeInPrimarySource",
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",

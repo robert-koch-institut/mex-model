@@ -1,6 +1,6 @@
 [project]
 name = "mex-model"
-version = "5.1.2"
+version = "5.1.4"
 description = "JSON schema files defining the MEx metadata model."
 authors = [{ name = "MEx Team", email = "mex@rki.de" }]
 readme = { file = "README.md", content-type = "text/markdown" }
@@ -12,21 +12,20 @@ dependencies = []
 [dependency-groups]
 dev = [
     "ipdb>=0.13",
+    "jsonschema>=4",
     "mypy>=1",
-    "pytest-cov>=6",
+    "pytest-cov>=7",
     "pytest-random-order>=1",
     "pytest-xdist>=3",
-    "pytest>=8",
-    "ruff>=0.15",
+    "pytest>=9",
+    "ruff>=0.16",
     "sphinx-jsonschema>=1.19",
     "sphinx<9",
+    "types-jsonschema>=4",
 ]
 
 [tool.coverage.run]
-omit = [
-    # imported by the navigation helper, but has no tests of its own yet
-    "docs/vocabularies.py",
-]
+omit = ["docs/*"]
 
 [tool.cruft]
 template = "https://github.com/robert-koch-institut/mex-template"
@@ -53,12 +52,14 @@ addopts = [
     "--cov",
     "--no-cov-on-fail",
     "--cov-report=term-missing:skip-covered",
-    "--cov-fail-under=95",
+    "--cov-fail-under=99",
     "--cov-branch",
     "--pdbcls=IPython.terminal.debugger:TerminalPdb",
     "--random-order-bucket=global",
 ]
-markers = "integration: mark a test as integration test"
+markers = [
+    "integration: mark a test as integration test",
+]
 
 [tool.ruff]
 fix = true
