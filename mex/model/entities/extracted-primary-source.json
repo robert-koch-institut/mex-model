@@ -123,6 +123,7 @@
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
+            "minItems": 1,
             "type": "array"
         },
         "unitInCharge": {
