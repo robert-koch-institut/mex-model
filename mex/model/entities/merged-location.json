@@ -9,7 +9,7 @@
             "default": [],
             "description": "Identifier in the GeoNames geographical database.",
             "exactMatch": [
-                "https://www.wikidata.org/wiki/Property:P1566"
+                "http://www.wikidata.org/entity/P1566"
             ],
             "items": {
                 "format": "uri",
