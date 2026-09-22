@@ -1,7 +1,7 @@
 {
   "template": "https://github.com/robert-koch-institut/mex-template",
-  "commit": "8e8aa524d2fab5b44801d266ea70094941d6dadd",
-  "checkout": "2.0.0",
+  "commit": "a69d69ab02ed1ed7cb7554fb32a1877b9d437dc2",
+  "checkout": "2.0.1",
   "context": {
     "cookiecutter": {
       "project_name": "model",
@@ -12,7 +12,7 @@
       "python_version_min": "3.11",
       "python_version_max": "3.14",
       "_template": "https://github.com/robert-koch-institut/mex-template",
-      "_commit": "8e8aa524d2fab5b44801d266ea70094941d6dadd"
+      "_commit": "a69d69ab02ed1ed7cb7554fb32a1877b9d437dc2"
     }
   },
   "directory": null
