@@ -344,7 +344,14 @@
             "default": [],
             "description": "The legal basis used to justify processing of personal data. Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions which can be represented using dpv:hasJurisdiction or dpv:hasLaw. Legal basis can be used without such declarations, e.g. 'Consent', however their interpretation will require association with a law, e.g. 'EU GDPR'.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "anyOf": [
+                    {
+                        "$ref": "/mex/model/fields/text"
+                    },
+                    {
+                        "$ref": "/mex/model/fields/link"
+                    }
+                ]
             },
             "type": "array"
         },
@@ -368,14 +375,14 @@
             "description": "Indicates, if a resource contains data directly or indirectly associated or related to an individual."
         },
         "hasPurpose": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
             "closeMatch": [
                 "https://w3id.org/dpv#hasPurpose"
             ],
             "default": [],
-            "description": "A free text statement of the purpose of the processing of data or personal data.",
+            "description": "A controlled list of types of purposes for which the data was originally collected.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "$ref": "/mex/model/entities/concept#/identifier",
+                "useScheme": "https://mex.rki.de/item/purpose"
             },
             "type": "array"
         },
@@ -387,6 +394,17 @@
             "description": "A free text statement of the purpose of the processing of data or personal data.",
             "items": {
                 "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
+        "hasVersion": {
+            "closeMatch": [
+                "http://www.w3.org/ns/dcat#hasVersion"
+            ],
+            "default": [],
+            "description": "A related Resource that is a version, edition, or adaptation of the described Resource.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
             },
             "type": "array"
         },
@@ -558,7 +576,6 @@
             "type": "array"
         },
         "maxTypicalAge": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
             "anyOf": [
                 {
                     "examples": [
@@ -570,6 +587,9 @@
                 {
                     "type": "null"
                 }
+            ],
+            "closeMatch": [
+                "http://healthdataportal.eu/ns/health#maxtypicalage"
             ],
             "default": null,
             "description": "Specifies the maximum age of the population within the data collection, expressed in years."
@@ -609,7 +629,6 @@
             "type": "array"
         },
         "minTypicalAge": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
             "anyOf": [
                 {
                     "examples": [
@@ -621,6 +640,9 @@
                 {
                     "type": "null"
                 }
+            ],
+            "closeMatch": [
+                "http://healthdataportal.eu/ns/health#mintypicalage"
             ],
             "default": null,
             "description": "Specifies the minimum age of the population within the data collection, expressed in years."
@@ -700,7 +722,9 @@
             "description": "The number of records for unique individuals represented in the dataset."
         },
         "populationCoverage": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
+            "closeMatch": [
+                "http://healthdataportal.eu/ns/health#populationcoverage"
+            ],
             "default": [],
             "description": "The type of population common to all subjects of the data collection.",
             "items": {
@@ -709,9 +733,9 @@
             "type": "array"
         },
         "provenance": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
             "closeMatch": [
-                "http://purl.org/dc/terms/provenance"
+                "http://purl.org/dc/terms/provenance",
+                "http://healthdataportal.eu/ns/health#provenance"
             ],
             "default": [],
             "description": "A statement about the lineage of a Dataset. Information about how the data was collected, including methodologies, tools, and protocols used.",
@@ -741,10 +765,10 @@
         },
         "qualityInformation": {
             "closeMatch": [
-                "http://www.w3.org/ns/dqv#hasQualityAnnotation"
+                "http://www.w3.org/2004/02/skos/core#note"
             ],
             "default": [],
-            "description": "Some information about the quality of the resource.",
+            "description": "Any additional information about the resource",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
@@ -765,7 +789,6 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/type"
             ],
-            "default": [],
             "description": "Method how the resource was created.",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
@@ -774,6 +797,7 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/resource-creation-method"
             },
+            "minItems": 1,
             "type": "array"
         },
         "resourceTypeGeneral": {
@@ -1050,6 +1074,7 @@
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
+        "resourceCreationMethod",
         "stableTargetId",
         "theme",
         "title",

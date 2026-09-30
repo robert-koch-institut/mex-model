@@ -507,6 +507,14 @@ msgctxt "Activity"
 msgid "fundingProgram.description"
 msgstr "Das Programm, in dem das Projekt gefördert wird, z. B. Horizont Europa"
 
+msgctxt "Location"
+msgid "geoNamesId.singular"
+msgstr "GeoNames ID"
+
+msgctxt "Location"
+msgid "geoNamesId.description"
+msgstr "GeoNames ist eine Online-Datenbank mit geografischen Orten weltweit. Sie hilft dabei, Ortsnamen einheitlich zu erfassen."
+
 msgctxt "Organization"
 msgid "geprisId.singular"
 msgstr "GEPRIS"
@@ -588,13 +596,27 @@ msgstr "Gibt an, ob die Daten einen Personenbezug aufweisen"
 
 msgctxt "Resource"
 msgid "hasPurpose.singular"
-msgstr "Zweck der Datenverarbeitung"
+msgstr "Zweck der Datenerhebung"
 
 msgctxt "Resource"
 msgid "hasPurpose.description"
+msgstr "Auswahl aus möglichen Zwecken der ursprünglichen Datenerhebung"
+
+msgctxt "Resource"
+msgid "hasPurposeDescription.singular"
 msgstr ""
-"Beschreibung des Zweckes der Datenverarbeitung, insbesondere bei Daten mit "
-"Personenbezug"
+"Detaillierte Beschreibung des Zwecks der ursprünglichen Datenerhebung"
+
+msgctxt "Resource"
+msgid "hasVersion.description"
+msgstr "Ein verwandter Datensatz, bei dem es sich um eine Version, "
+"eine Ausgabe oder eine Adaption des beschriebenen Datensatzes handelt"
+
+msgctxt "Resource"
+msgid "hasVersion.singular"
+msgid_plural "hasVersion.plural"
+msgstr[0] "Version des beschriebenen Datensatzes"
+msgstr[1] "Versionen des beschriebenen Datensatzes"
 
 msgctxt "Resource"
 msgid "hasPurposeDescription.singular"
@@ -910,6 +932,16 @@ msgstr "Letzte Änderung"
 msgid "modified.description"
 msgstr "Datum, an dem die Daten zuletzt verändert worden sind"
 
+msgctxt "Location"
+msgid "name.singular"
+msgid_plural "officialName.plural"
+msgstr[0] "Name"
+msgstr[1] "Namen"
+
+msgctxt "Location"
+msgid "name.description"
+msgstr "Bezeichnung des Ortes"
+
 msgctxt "Organization"
 msgid "officialName.singular"
 msgstr "Name"
@@ -1083,12 +1115,13 @@ msgstr ""
 
 msgctxt "Resource"
 msgid "qualityInformation.singular"
-msgstr "Qualitätsinformationen"
+msgstr "Zusatzinformationen"
 
 msgctxt "Resource"
 msgid "qualityInformation.description"
 msgstr ""
-"Angaben zu Genauigkeit, Zuverlässigkeit und Validität der Daten"
+"Jegliche Art von relevanten Informationen, die über den Datenbestand/Datensatz "
+"bekannt sind und noch nicht durch die anderen Felder abgedeckt sind"
 
 msgctxt "Activity"
 msgid "relatedActivity.singular"
@@ -1436,6 +1469,18 @@ msgctxt "Organization"
 msgid "wikidataId.singular"
 msgstr "Wikidata Concept URI"
 
+msgctxt "Location"
+msgid "wikidataId.singular"
+msgstr "Wikidata Concept URI"
+
+msgctxt "Location"
+msgid "wikidataId.description"
+msgstr ""
+"Wikidata ist eine freie, gemeinsame, mehrsprachige und sekundäre Datenbank "
+"zur Sammlung strukturierter Daten zur Unterstützung von Wikipedia und wird "
+"auch als Referenzdatenbank für die Identifikation von Dingen (im Sinne von "
+"Linked Data) genutzt"
+
 msgctxt "Organization"
 msgid "wikidataId.description"
 msgstr ""
@@ -1479,6 +1524,9 @@ msgstr "Einwilligung"
 
 msgid "Distribution"
 msgstr "Datei"
+
+msgid "Location"
+msgstr "Ort"
 
 msgid "Organization"
 msgstr "Organisation"
