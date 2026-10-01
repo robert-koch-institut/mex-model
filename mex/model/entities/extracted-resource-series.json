@@ -61,9 +61,6 @@
                         "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
                     },
                     {
-                        "$ref": "/mex/model/entities/merged-person#/identifier"
-                    },
-                    {
                         "$ref": "/mex/model/entities/merged-contact-point#/identifier"
                     }
                 ]
@@ -83,7 +80,7 @@
         },
         "documentation": {
             "closeMatch": [
-                "http://purl.org/dc/terms/isReferencedBy"
+                "http://xmlns.com/foaf/0.1/page"
             ],
             "default": [],
             "description": "A link to a document documenting the resource series.",
@@ -150,7 +147,14 @@
             "default": [],
             "description": "The legal basis used to justify processing of personal data. Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions which can be represented using dpv:hasJurisdiction or dpv:hasLaw. Legal basis can be used without such declarations, e.g. 'Consent', however their interpretation will require association with a law, e.g. 'EU GDPR'.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "anyOf": [
+                    {
+                        "$ref": "/mex/model/fields/text"
+                    },
+                    {
+                        "$ref": "/mex/model/fields/link"
+                    }
+                ]
             },
             "type": "array"
         },
@@ -181,7 +185,17 @@
             "default": [],
             "description": "A keyword or tag describing the resource series.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "anyOf": [
+                    {
+                        "$ref": "/mex/model/fields/text"
+                    },
+                    {
+                        "$ref": "/mex/model/fields/link"
+                    },
+                    {
+                        "type": "null"
+                    }
+                ]
             },
             "type": "array"
         },
@@ -200,7 +214,7 @@
             "default": [],
             "description": "Spatial coverage of the resource series.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "$ref": "/mex/model/entities/merged-location#/identifier"
             },
             "type": "array"
         },
