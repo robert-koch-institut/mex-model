@@ -13,7 +13,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/EHRS"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/EHRS"
         ],
         "identifier": "https://mex.rki.de/item/health-category-1",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -36,7 +36,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/MRMR"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/MRMR"
         ],
         "identifier": "https://mex.rki.de/item/health-category-2",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -59,7 +59,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/HPML"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/HPML"
         ],
         "identifier": "https://mex.rki.de/item/health-category-3",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -82,7 +82,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/IDHP"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/IDHP"
         ],
         "identifier": "https://mex.rki.de/item/health-category-4",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -105,7 +105,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/RMMD"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/RMMD"
         ],
         "identifier": "https://mex.rki.de/item/health-category-5",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -128,7 +128,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/DIOH"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/DIOH"
         ],
         "identifier": "https://mex.rki.de/item/health-category-6",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -151,7 +151,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/RQSH"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/RQSH"
         ],
         "identifier": "https://mex.rki.de/item/health-category-7",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -174,7 +174,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/EMRD"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/EMRD"
         ],
         "identifier": "https://mex.rki.de/item/health-category-8",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -197,7 +197,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/EHCT"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/EHCT"
         ],
         "identifier": "https://mex.rki.de/item/health-category-9",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -220,7 +220,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/NRPE"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/NRPE"
         ],
         "identifier": "https://mex.rki.de/item/health-category-10",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -243,7 +243,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/PGEH"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/PGEH"
         ],
         "identifier": "https://mex.rki.de/item/health-category-11",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -266,7 +266,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/HGPD"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/HGPD"
         ],
         "identifier": "https://mex.rki.de/item/health-category-12",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -289,7 +289,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/HRAD"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/HRAD"
         ],
         "identifier": "https://mex.rki.de/item/health-category-13",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -312,7 +312,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/RPDG"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/RPDG"
         ],
         "identifier": "https://mex.rki.de/item/health-category-14",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -335,7 +335,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/EINS"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/EINS"
         ],
         "identifier": "https://mex.rki.de/item/health-category-15",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -358,7 +358,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/PHDR"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/PHDR"
         ],
         "identifier": "https://mex.rki.de/item/health-category-16",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -381,7 +381,7 @@
             }
         ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/WELA"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/healthcategories/WELA"
         ],
         "identifier": "https://mex.rki.de/item/health-category-17",
         "inScheme": "https://mex.rki.de/item/health-category",
