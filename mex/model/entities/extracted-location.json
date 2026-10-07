@@ -78,12 +78,12 @@
         }
     },
     "required": [
-        "name",
+        "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
-        "hadPrimarySource",
+        "name",
         "stableTargetId"
     ],
-    "title": "ExtractedLocation",
+    "title": "Extracted Location",
     "type": "object"
 }

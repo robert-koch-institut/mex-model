@@ -66,9 +66,9 @@
         }
     },
     "required": [
-        "name",
-        "identifier"
+        "identifier",
+        "name"
     ],
-    "title": "MergedLocation",
+    "title": "Merged Location",
     "type": "object"
 }

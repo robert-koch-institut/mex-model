@@ -382,6 +382,9 @@
             "description": "A controlled list of types of purposes for which the data was originally collected.",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
+                "examples": [
+                    "https://mex.rki.de/item/purpose-1"
+                ],
                 "useScheme": "https://mex.rki.de/item/purpose"
             },
             "type": "array"

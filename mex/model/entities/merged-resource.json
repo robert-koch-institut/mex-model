@@ -375,6 +375,9 @@
             "description": "A controlled list of types of purposes for which the data was originally collected.",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
+                "examples": [
+                    "https://mex.rki.de/item/purpose-1"
+                ],
                 "useScheme": "https://mex.rki.de/item/purpose"
             },
             "type": "array"
@@ -570,6 +573,9 @@
                     "type": "null"
                 }
             ],
+            "closeMatch": [
+                "http://healthdataportal.eu/ns/health#maxtypicalage"
+            ],
             "default": null,
             "description": "Specifies the maximum age of the population within the data collection, expressed in years."
         },
@@ -620,6 +626,9 @@
                 {
                     "type": "null"
                 }
+            ],
+            "closeMatch": [
+                "http://healthdataportal.eu/ns/health#mintypicalage"
             ],
             "default": null,
             "description": "Specifies the minimum age of the population within the data collection, expressed in years."
@@ -699,7 +708,9 @@
             "description": "The number of records for unique individuals represented in the dataset."
         },
         "populationCoverage": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
+            "closeMatch": [
+                "http://healthdataportal.eu/ns/health#populationcoverage"
+            ],
             "default": [],
             "description": "The type of population common to all subjects of the data collection.",
             "items": {
@@ -708,9 +719,9 @@
             "type": "array"
         },
         "provenance": {
-            "$comment": "Source: Draft of HealthDCAT-AP published on 31st Jan 2024 (Milestone M6.2 Technical working group on the transition from existing metadata templates to HealthDCAT-AP).",
             "closeMatch": [
-                "http://purl.org/dc/terms/provenance"
+                "http://purl.org/dc/terms/provenance",
+                "http://healthdataportal.eu/ns/health#provenance"
             ],
             "default": [],
             "description": "A statement about the lineage of a Dataset. Information about how the data was collected, including methodologies, tools, and protocols used.",
@@ -740,10 +751,10 @@
         },
         "qualityInformation": {
             "closeMatch": [
-                "http://www.w3.org/ns/dqv#hasQualityAnnotation"
+                "http://www.w3.org/2004/02/skos/core#note"
             ],
             "default": [],
-            "description": "Some information about the quality of the resource.",
+            "description": "Any additional information about the resource",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
