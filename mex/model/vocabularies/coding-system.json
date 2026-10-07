@@ -8,7 +8,7 @@
         ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q45127",
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICD-10"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICD-10"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-1",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -26,7 +26,7 @@
         ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q55695727",
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICD-11"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICD-11"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-2",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -44,7 +44,7 @@
         ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q502480",
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/LOINC"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/LOINC"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-3",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -62,7 +62,7 @@
         ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q1753883",
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/SNOMED-CT"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/SNOMED-CT"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-4",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -79,7 +79,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/EDQM"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/EDQM"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-5",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -96,7 +96,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICHI"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICHI"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-6",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -113,7 +113,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/MEDDRA"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/MEDDRA"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-7",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -130,7 +130,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ORPHACODE"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ORPHACODE"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-8",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -147,7 +147,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/GMDN"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/GMDN"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-9",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -164,7 +164,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/HGNC"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/HGNC"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-10",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -181,7 +181,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/OPS"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/OPS"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-11",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -198,7 +198,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/UCUM"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/UCUM"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-12",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -215,7 +215,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/RXNORM"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/RXNORM"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-13",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -232,7 +232,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ATC"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ATC"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-14",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -249,7 +249,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/UMLS"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/UMLS"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-15",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -266,7 +266,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICD-9-CM"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICD-9-CM"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-16",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -283,7 +283,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICD-O-3"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICD-O-3"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-17",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -300,7 +300,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICF"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICF"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-18",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -317,7 +317,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICPC-3"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICPC-3"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-19",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -334,7 +334,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICPC-2"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICPC-2"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-20",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -351,13 +351,200 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/MESH"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/MESH"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-21",
         "inScheme": "https://mex.rki.de/item/coding-system",
         "prefLabel": {
             "de": "MESH",
             "en": "MESH"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Nationale Prozedurenkodes",
+                "en": "National procedure codes"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/PROC-CODES-NAT"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-22",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "PROC-CODES-NAT",
+            "en": "PROC-CODES-NAT"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Europäische Nomenklatur für Medizinprodukte",
+                "en": "European Medical Device Nomenclature"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/EMDN"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-23",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "EMDN",
+            "en": "EMDN"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Nationale ICD-10-Varianten",
+                "en": "National ICD-10 variants"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICD-10-NAT"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-24",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "ICD-10-NAT",
+            "en": "ICD-10-NAT"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Orphanet-Ontologie für seltene Krankheiten",
+                "en": "Orphanet Rare Disease Ontology"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ORDO"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-25",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "ORDO",
+            "en": "ORDO"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "OHDSI-standardisierte Vokabulare",
+                "en": "OHDSI Standardized Vocabularies"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/OHDSI-VOCAB"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-26",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "OHDSI-VOCAB",
+            "en": "OHDSI-VOCAB"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Substanzen, Produkte, Organisationen und Referenzen der Europäischen Arzneimittel-Agentur",
+                "en": "European Medicines Agency Substances, Products, Organisations and Referentials"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/EMA-SPOR"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-27",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "EMA-SPOR",
+            "en": "EMA-SPOR"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Kontrollierte Terminologie für digitale Bildgebung und Kommunikation in der Medizin",
+                "en": "Digital Imaging and Communications in Medicine Controlled Terminology"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/DICOM-CT"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-28",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "DICOM-CT",
+            "en": "DICOM-CT"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "WHODrug Global",
+                "en": "WHODrug Global"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/WHODRUG"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-29",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "WHODRUG",
+            "en": "WHODRUG"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Thesaurus des National Cancer Institute",
+                "en": "National Cancer Institute Thesaurus"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/NCIT"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-30",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "NCIT",
+            "en": "NCIT"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Ontologie des menschlichen Phänotyps",
+                "en": "Human Phenotype Ontology"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/HPO"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-31",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "HPO",
+            "en": "HPO"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Nomenklatur für Eigenschaften und Einheiten",
+                "en": "Nomenclature for Properties and Units"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/NPU"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-32",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "NPU",
+            "en": "NPU"
         }
     },
     {
