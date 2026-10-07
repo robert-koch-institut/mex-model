@@ -57,6 +57,14 @@
     },
     {
         "description": {
+            "de": "Dieses Vokabular basiert auf des XSD Datentypen: http://www.w3.org/2001/XMLSchema.",
+            "en": "This vocabulary is based on the XSD Datatype Vocabulary, available at http://www.w3.org/2001/XMLSchema."
+        },
+        "identifier": "https://mex.rki.de/item/datatype-standardized",
+        "label": "Standardized datatype vocabulary"
+    },
+    {
+        "description": {
             "de": "Dieses Vokabular basiert auf dem Dublin Core Collection Description Frequency Vokabular, verfügbar unter https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/.",
             "en": "This vocabulary is based on the Dublin Core Collection Description Frequency Vocabulary, available at https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/."
         },
