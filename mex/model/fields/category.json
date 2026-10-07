@@ -1,6 +1,6 @@
 {
-    "$$target": "/mex/model/fields/categories",
-    "$id": "https://mex.rki.de/mex/model/fields/categories",
+    "$$target": "/mex/model/fields/category",
+    "$id": "https://mex.rki.de/mex/model/fields/category",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "exactMatch": [
         "https://datapackage.org/profiles/2.0/tableschema.json#categories"
@@ -33,6 +33,6 @@
     "required": [
         "value"
     ],
-    "title": "Categories",
+    "title": "Category",
     "type": "object"
 }

@@ -16,7 +16,7 @@
                 "https://datapackage.org/profiles/2.0/tableschema.json#categories"
             ],
             "items": {
-                "$ref": "/mex/model/fields/categories",
+                "$ref": "/mex/model/fields/category",
                 "examples": [
                     {
                         "value": "3"
@@ -65,6 +65,7 @@
                     "type": "null"
                 }
             ],
+            "default": null,
             "description": "Standardized datatype of the variable, as defined in the controlled vocabulary.",
             "exactMatch": [
                 "https://www.w3.org/ns/csvw#datatype"
@@ -165,29 +166,24 @@
             "type": "string"
         },
         "title": {
-            "anyOf": [
-                {
-                    "$ref": "/mex/model/fields/text",
-                    "examples": [
-                        {
-                            "language": "de",
-                            "value": "Mehrere Treppenabsätze steigen"
-                        },
-                        {
-                            "language": "en",
-                            "value": "Climb several flights of stairs"
-                        }
-                    ]
-                },
-                {
-                    "type": "null"
-                }
-            ],
             "default": [],
             "description": "The human readable name given to the variable.",
             "exactMatch": [
                 "http://www.w3.org/ns/csvw#titles"
             ],
+            "items": {
+                "$ref": "/mex/model/fields/text",
+                "examples": [
+                    {
+                        "language": "de",
+                        "value": "Mehrere Treppenabsätze steigen"
+                    },
+                    {
+                        "language": "en",
+                        "value": "Climb several flights of stairs"
+                    }
+                ]
+            },
             "type": "array"
         },
         "variableGroup": {
