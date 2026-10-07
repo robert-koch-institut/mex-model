@@ -9,6 +9,15 @@
     ],
     "description": "Variables are defined for the data-based evaluation of investigations (e.g. studies). A variable is characterized by its data type (e.g. integer, string, date) and value range. The variable can be either quantitative or qualitative, i.e. the value range can take numerical or categorical values.",
     "properties": {
+        "belongsTo": {
+            "$comment": "This property can be regarded as inverse property of csvw:column. While csvw:column points from the table to the column, mex:belongsTo points from the variable (column) to the variable group (table).",
+            "default": [],
+            "description": "The variable group that the described variable is part of. Used to group variables together, depending on how they are structured in the primary source.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-variable-group#/identifier"
+            },
+            "type": "array"
+        },
         "categories": {
             "closeMatch": [
                 "https://datapackage.org/profiles/2.0/tableschema.json#categories"
@@ -110,14 +119,6 @@
                 "https://www.w3.org/ns/csvw#propertyUrl"
             ]
         },
-        "resource": {
-            "description": "The resource that the variable is used in.",
-            "items": {
-                "$ref": "/mex/model/entities/merged-resource#/identifier"
-            },
-            "minItems": 1,
-            "type": "array"
-        },
         "supersededBy": {
             "anyOf": [
                 {
@@ -174,21 +175,20 @@
             },
             "type": "array"
         },
-        "variableGroup": {
-            "$comment": "This property can be regarded as inverse property of csvw:column. While csvw:column points from the table to the column, mex:belongsTo points from the variable (column) to the variable group (table).",
-            "default": [],
-            "description": "The variable group that the described variable is part of. Used to group variables together, depending on how they are structured in the primary source.",
+        "usedIn": {
+            "description": "The resource that the variable is used in.",
             "items": {
-                "$ref": "/mex/model/entities/merged-variable-group#/identifier"
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
             },
+            "minItems": 1,
             "type": "array"
         }
     },
     "required": [
         "datatypeInPrimarySource",
         "identifier",
-        "resource",
-        "technicalName"
+        "technicalName",
+        "usedIn"
     ],
     "title": "Merged Variable",
     "type": "object"

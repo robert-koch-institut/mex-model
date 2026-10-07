@@ -28,15 +28,6 @@
             },
             "type": "array"
         },
-        "resource": {
-            "$comment": "This can be loosely regarded as the inverse property of healthdcatap:hasVariables, which relates the dataset to its variables (a table group). MEx models this in the other direction, where the variable group (table) is related to the resource using mex:resource. There can be multiple tables, but MEx does not model csvw:TableGroup, instead the tables are linked directly to their resource.",
-            "description": "The resource that the variable group is contained by. Used to connect a variable group to its resource.",
-            "items": {
-                "$ref": "/mex/model/entities/merged-resource#/identifier"
-            },
-            "minItems": 1,
-            "type": "array"
-        },
         "supersededBy": {
             "anyOf": [
                 {
@@ -59,12 +50,21 @@
             },
             "minItems": 1,
             "type": "array"
+        },
+        "usedIn": {
+            "$comment": "This can be loosely regarded as the inverse property of healthdcatap:hasVariables, which relates the dataset to its variables (a table group). MEx models this in the other direction, where the variable group (table) is related to the resource using mex:resource. There can be multiple tables, but MEx does not model csvw:TableGroup, instead the tables are linked directly to their resource.",
+            "description": "The resource that the variable group is used in. Used to connect a variable group to its resource.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
+            },
+            "minItems": 1,
+            "type": "array"
         }
     },
     "required": [
         "identifier",
-        "resource",
-        "title"
+        "title",
+        "usedIn"
     ],
     "title": "Merged Variable Group",
     "type": "object"

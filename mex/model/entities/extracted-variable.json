@@ -9,6 +9,15 @@
     ],
     "description": "Variables are defined for the data-based evaluation of investigations (e.g. studies). A variable is characterized by its data type (e.g. integer, string, date) and value range. The variable can be either quantitative or qualitative, i.e. the value range can take numerical or categorical values.",
     "properties": {
+        "belongsTo": {
+            "$comment": "This property can be regarded as inverse property of csvw:column. While csvw:column points from the table to the column, mex:variableGroup points from the variable (column) to the variable group (table).",
+            "default": [],
+            "description": "The variable group that the described variable is part of. Used to group variables together, depending on how they are structured in the primary source.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-variable-group#/identifier"
+            },
+            "type": "array"
+        },
         "categories": {
             "default": [],
             "description": "A set of predefined categories that serve as possible values for the variable.",
@@ -129,14 +138,6 @@
                 "https://www.w3.org/ns/csvw#propertyUrl"
             ]
         },
-        "resource": {
-            "description": "The resource that the variable is used in.",
-            "items": {
-                "$ref": "/mex/model/entities/merged-resource#/identifier"
-            },
-            "minItems": 1,
-            "type": "array"
-        },
         "stableTargetId": {
             "$ref": "/mex/model/entities/merged-variable#/identifier",
             "description": "The identifier of the merged item that this extracted item belongs to.",
@@ -186,13 +187,12 @@
             },
             "type": "array"
         },
-        "variableGroup": {
-            "$comment": "This property can be regarded as inverse property of csvw:column. While csvw:column points from the table to the column, mex:variableGroup points from the variable (column) to the variable group (table).",
-            "default": [],
-            "description": "The variable group that the described variable is part of. Used to group variables together, depending on how they are structured in the primary source.",
+        "usedIn": {
+            "description": "The resource that the variable is used in.",
             "items": {
-                "$ref": "/mex/model/entities/merged-variable-group#/identifier"
+                "$ref": "/mex/model/entities/merged-resource#/identifier"
             },
+            "minItems": 1,
             "type": "array"
         }
     },
@@ -201,9 +201,9 @@
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
-        "resource",
         "stableTargetId",
-        "technicalName"
+        "technicalName",
+        "usedIn"
     ],
     "title": "Extracted Variable",
     "type": "object"
