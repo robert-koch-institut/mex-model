@@ -7,7 +7,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/IHE-XDS.b"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/standard/IHE-XDS.b"
         ],
         "identifier": "https://mex.rki.de/item/health-standard-1",
         "inScheme": "https://mex.rki.de/item/health-standard",
@@ -24,7 +24,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/FHIR"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/standard/FHIR"
         ],
         "identifier": "https://mex.rki.de/item/health-standard-2",
         "inScheme": "https://mex.rki.de/item/health-standard",
@@ -41,7 +41,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/OPENEHR"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/standard/OPENEHR"
         ],
         "identifier": "https://mex.rki.de/item/health-standard-3",
         "inScheme": "https://mex.rki.de/item/health-standard",
@@ -58,7 +58,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/HL7-V3"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/standard/HL7-V3"
         ],
         "identifier": "https://mex.rki.de/item/health-standard-4",
         "inScheme": "https://mex.rki.de/item/health-standard",
@@ -75,7 +75,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/DICOM"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/standard/DICOM"
         ],
         "identifier": "https://mex.rki.de/item/health-standard-5",
         "inScheme": "https://mex.rki.de/item/health-standard",
@@ -92,7 +92,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/CDA"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/standard/CDA"
         ],
         "identifier": "https://mex.rki.de/item/health-standard-6",
         "inScheme": "https://mex.rki.de/item/health-standard",
@@ -109,7 +109,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/HL7-CCOW"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/standard/HL7-CCOW"
         ],
         "identifier": "https://mex.rki.de/item/health-standard-7",
         "inScheme": "https://mex.rki.de/item/health-standard",
@@ -126,7 +126,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/IEEE-11073-20702"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/standard/IEEE-11073-20702"
         ],
         "identifier": "https://mex.rki.de/item/health-standard-8",
         "inScheme": "https://mex.rki.de/item/health-standard",
@@ -143,7 +143,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/HL7-V2"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/standard/HL7-V2"
         ],
         "identifier": "https://mex.rki.de/item/health-standard-9",
         "inScheme": "https://mex.rki.de/item/health-standard",
@@ -160,7 +160,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/ISO-13606-1"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/standard/ISO-13606-1"
         ],
         "identifier": "https://mex.rki.de/item/health-standard-10",
         "inScheme": "https://mex.rki.de/item/health-standard",
@@ -177,7 +177,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/OMOP-CDM"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/standard/OMOP-CDM"
         ],
         "identifier": "https://mex.rki.de/item/health-standard-11",
         "inScheme": "https://mex.rki.de/item/health-standard",
@@ -194,7 +194,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/CDISC-SDTM"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/standard/CDISC-SDTM"
         ],
         "identifier": "https://mex.rki.de/item/health-standard-12",
         "inScheme": "https://mex.rki.de/item/health-standard",
@@ -211,7 +211,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/standard/ISO-13940"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/standard/ISO-13940"
         ],
         "identifier": "https://mex.rki.de/item/health-standard-13",
         "inScheme": "https://mex.rki.de/item/health-standard",

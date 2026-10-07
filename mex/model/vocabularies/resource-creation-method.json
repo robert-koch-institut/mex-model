@@ -15,7 +15,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/HEALTH_SURVEY"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity/HEALTH_SURVEY"
         ],
         "identifier": "https://mex.rki.de/item/resource-creation-method-2",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
@@ -26,7 +26,7 @@
     },
     {
         "closeMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/OBSERVATIONAL_DATA"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity/OBSERVATIONAL_DATA"
         ],
         "definition": [
             {
@@ -49,7 +49,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/COHORT"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity/COHORT"
         ],
         "identifier": "https://mex.rki.de/item/resource-creation-method-22",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
@@ -80,7 +80,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/PROBABILITY_SURVEY"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity/PROBABILITY_SURVEY"
         ],
         "identifier": "https://mex.rki.de/item/resource-creation-method-24",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
@@ -97,7 +97,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/SURVEILLANCE"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity/SURVEILLANCE"
         ],
         "identifier": "https://mex.rki.de/item/resource-creation-method-3",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
@@ -114,7 +114,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/DISEASE_MONITORING"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity/DISEASE_MONITORING"
         ],
         "identifier": "https://mex.rki.de/item/resource-creation-method-31",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
@@ -131,7 +131,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/LABORATORY_TESTS"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity/LABORATORY_TESTS"
         ],
         "identifier": "https://mex.rki.de/item/resource-creation-method-4",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
@@ -142,7 +142,7 @@
     },
     {
         "closeMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/LABORATORY_TESTS"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity/LABORATORY_TESTS"
         ],
         "definition": [
             {
@@ -165,7 +165,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/HEALTH_REGISTRIES"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity/HEALTH_REGISTRIES"
         ],
         "identifier": "https://mex.rki.de/item/resource-creation-method-6",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
@@ -182,7 +182,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/MODELS_SIMULATION"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity/MODELS_SIMULATION"
         ],
         "identifier": "https://mex.rki.de/item/resource-creation-method-7",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
@@ -199,7 +199,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/SAMPLE_COLLECTIONS"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity/SAMPLE_COLLECTIONS"
         ],
         "identifier": "https://mex.rki.de/item/resource-creation-method-8",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
@@ -216,7 +216,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/BIOBANK_COLLECTION"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity/BIOBANK_COLLECTION"
         ],
         "identifier": "https://mex.rki.de/item/resource-creation-method-9",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
@@ -233,7 +233,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/GEOSPATIAL_MONITORING"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity/GEOSPATIAL_MONITORING"
         ],
         "identifier": "https://mex.rki.de/item/resource-creation-method-10",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
@@ -250,7 +250,7 @@
             }
         ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/CENSUS_DATA"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity/CENSUS_DATA"
         ],
         "identifier": "https://mex.rki.de/item/resource-creation-method-11",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",
