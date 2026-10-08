@@ -596,6 +596,10 @@ msgstr "The purpose for which the data was originally collected"
 
 msgctxt "Resource"
 msgid "hasPurposeDescription.singular"
+msgstr "Purpose description"
+
+msgctxt "Resource"
+msgid "hasPurposeDescription.description"
 msgstr ""
 "A detailed description of purpose for which the data was originally collected"
 
@@ -618,11 +622,6 @@ msgstr[1] "EHDS categories"
 msgctxt "Resource"
 msgid "healthCategory.description"
 msgstr "Category of health data pursuant to Article 51 of the EHDS Regulation"
-
-msgctxt "Resource"
-msgid "hasPurposeDescription.singular"
-msgstr ""
-"A detailed description of purpose for which the data was originally collected"
 
 msgctxt "Resource"
 msgid "icd10code.singular"
