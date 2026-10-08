@@ -548,7 +548,7 @@
         }
     },
     {
-        "identifier": "https://mex.rki.de/item/coding-system-22",
+        "identifier": "https://mex.rki.de/item/coding-system-33",
         "inScheme": "https://mex.rki.de/item/coding-system",
         "prefLabel": {
             "de": "Sonstiges",
