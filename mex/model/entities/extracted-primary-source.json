@@ -118,11 +118,11 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/title"
             ],
-            "default": [],
             "description": "The name of the primary source.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
+            "minItems": 1,
             "type": "array"
         },
         "unitInCharge": {
@@ -159,7 +159,8 @@
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
-        "stableTargetId"
+        "stableTargetId",
+        "title"
     ],
     "title": "Extracted Primary Source",
     "type": "object"
