@@ -67,6 +67,8 @@ def _find_array_shape_violations(
     has_default = "default" in definition
     if has_min_items and name not in required:
         violations.append(f"{entity_name}.{name}: has minItems but is not in required")
+    if has_min_items and has_default:
+        violations.append(f"{entity_name}.{name}: has minItems but also has a default")
     if not has_min_items and name in required:
         violations.append(f"{entity_name}.{name}: is required but has no minItems")
     if not has_min_items and not has_default:
