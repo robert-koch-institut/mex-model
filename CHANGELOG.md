@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- extend `schema-checks` array validation: flag an array property that has
+  both `minItems` and a `default` set
+
 ### Changes
 
 ### Deprecated
