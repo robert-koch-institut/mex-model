@@ -536,7 +536,7 @@ msgstr "GeoNames ID"
 
 msgctxt "Location"
 msgid "geoNamesId.description"
-msgstr "Geonames ist eine freie Internet-Datenbank und findet breite Anwendung als Normdatensatz für geografische Entitäten"
+msgstr "GeoNames ist eine Online-Datenbank mit geografischen Orten weltweit. Sie hilft dabei, Ortsnamen einheitlich zu erfassen."
 
 msgctxt "Resource"
 msgid "geopoliticalResolution.singular"
@@ -634,6 +634,10 @@ msgstr "Auswahl aus möglichen Zwecken der ursprünglichen Datenerhebung"
 
 msgctxt "Resource"
 msgid "hasPurposeDescription.singular"
+msgstr "Beschreibung des Zwecks"
+
+msgctxt "Resource"
+msgid "hasPurposeDescription.description"
 msgstr ""
 "Detaillierte Beschreibung des Zwecks der ursprünglichen Datenerhebung"
 
@@ -952,6 +956,16 @@ msgstr "Letzte Änderung"
 msgid "modified.description"
 msgstr "Datum, an dem die Daten zuletzt verändert worden sind"
 
+msgctxt "Location"
+msgid "name.singular"
+msgid_plural "officialName.plural"
+msgstr[0] "Name"
+msgstr[1] "Namen"
+
+msgctxt "Location"
+msgid "name.description"
+msgstr "Bezeichnung des Ortes"
+
 msgctxt "Organization"
 msgid "officialName.singular"
 msgstr "Name"
@@ -1140,8 +1154,8 @@ msgstr "Zusatzinformationen"
 msgctxt "Resource"
 msgid "qualityInformation.description"
 msgstr ""
-"Jegliche Art von relevanten Informationen, die über den Datenbestand "
-"den Datensatz bekannt sind und noch nicht durch die anderen Felder abgedeckt sind"
+"Jegliche Art von relevanten Informationen, die über den Datenbestand/Datensatz "
+"bekannt sind und noch nicht durch die anderen Felder abgedeckt sind"
 
 msgctxt "Activity"
 msgid "relatedActivity.singular"

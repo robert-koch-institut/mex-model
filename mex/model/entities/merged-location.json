@@ -27,6 +27,9 @@
             "readOnly": true
         },
         "name": {
+            "closeMatch": [
+                "https://schema.org/name"
+            ],
             "description": "Name of the location.",
             "items": {
                 "$ref": "/mex/model/fields/text"
@@ -66,6 +69,6 @@
         "identifier",
         "name"
     ],
-    "title": "MergedLocation",
+    "title": "Merged Location",
     "type": "object"
 }
