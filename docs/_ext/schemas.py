@@ -12,7 +12,6 @@ from pathlib import Path
 from typing import Any
 
 from docutils import nodes
-from docutils.nodes import fully_normalize_name as normalize_name
 from sphinx.application import Sphinx
 from sphinx.util.docutils import SphinxDirective
 
@@ -26,16 +25,6 @@ class Schema:
 
     title: str
     path: Path
-
-    @property
-    def anchor(self) -> str:
-        """Return the html anchor that docutils will assign to this schema."""
-        return nodes.make_id(normalize_name(self.title))
-
-    @property
-    def nav_title(self) -> str:
-        """Return a condensed title for use in the navigation sidebar."""
-        return self.title.replace(" ", "")
 
 
 def load_schemas(directory: Path, pattern: str = DEFAULT_PATTERN) -> list[Schema]:

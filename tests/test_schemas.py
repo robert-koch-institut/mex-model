@@ -5,12 +5,6 @@ from unittest.mock import MagicMock
 from schemas import MExSchemasDirective, Schema, load_schemas, setup
 
 
-def test_schema_titles() -> None:
-    schema = Schema(title="Extracted Access Platform", path=Path("dummy.json"))
-    assert schema.anchor == "extracted-access-platform"
-    assert schema.nav_title == "ExtractedAccessPlatform"
-
-
 def test_load_schemas(tmp_path: Path) -> None:
     (tmp_path / "beta.json").write_text(json.dumps({"title": "Beta"}), "utf-8")
     (tmp_path / "alpha.json").write_text(json.dumps({}), "utf-8")

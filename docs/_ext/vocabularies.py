@@ -46,16 +46,6 @@ class Vocabulary:
         """Return all identifiers this vocabulary should be linkable by."""
         return {self.identifier, self.scheme_identifier}
 
-    @property
-    def anchor(self) -> str:
-        """Return the html anchor that docutils will assign to this vocabulary."""
-        return nodes.make_id(normalize_name(self.title))
-
-    @property
-    def nav_title(self) -> str:
-        """Return a shortened title for use in the navigation sidebar."""
-        return self.title.removesuffix(TITLE_SUFFIX) or self.title
-
 
 def _localized(value: Any, language: str = "en") -> str:  # noqa: ANN401
     """Return the text of the given language from a possibly localized value."""

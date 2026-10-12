@@ -41,7 +41,7 @@ strict = true
 
 # the sphinx extensions in `docs` are not part of the package and not type-checked
 [[tool.mypy.overrides]]
-module = ["navigation", "schemas"]
+module = ["schemas"]
 ignore_missing_imports = true
 
 [tool.pydantic-mypy]

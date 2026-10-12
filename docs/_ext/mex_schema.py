@@ -24,7 +24,7 @@ def _jsonschema_lines(directive: SphinxDirective, path: str) -> list[str]:
     return [f".. jsonschema:: {path}", "   :encoding: utf8", ""]
 
 
-class MexEntityDirective(SphinxDirective):
+class MExEntityDirective(SphinxDirective):
     """Embed schema tables for a named entity.
 
     Usage in MyST markdown::
@@ -72,7 +72,7 @@ class MexEntityDirective(SphinxDirective):
         return "".join(result)
 
 
-class MexFieldDirective(SphinxDirective):
+class MExFieldDirective(SphinxDirective):
     """Embed a single field schema table.
 
     Usage in MyST markdown::
@@ -94,8 +94,8 @@ class MexFieldDirective(SphinxDirective):
 
 def setup(app: Sphinx) -> dict[str, Any]:
     app.setup_extension("sphinx-jsonschema")
-    app.add_directive("mex-entity", MexEntityDirective)
-    app.add_directive("mex-field", MexFieldDirective)
+    app.add_directive("mex-entity", MExEntityDirective)
+    app.add_directive("mex-field", MExFieldDirective)
     return {
         "version": "0.1",
         "parallel_read_safe": True,
