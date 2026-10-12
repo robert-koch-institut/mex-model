@@ -29,11 +29,7 @@
             "default": [],
             "description": "Country or territory that this organization is in.",
             "items": {
-                "$ref": "/mex/model/entities/concept#/identifier",
-                "examples": [
-                    "https://mex.rki.de/item/country-1"
-                ],
-                "useScheme": "https://mex.rki.de/item/country"
+                "$ref": "/mex/model/entities/merged-location#/identifier"
             },
             "type": "array"
         },
