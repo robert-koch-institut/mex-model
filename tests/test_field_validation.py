@@ -44,9 +44,7 @@ from check_schemas import (
         ),
         pytest.param(
             {
-                "properties": {
-                    "foo": {"type": "array", "minItems": 1, "default": []}
-                },
+                "properties": {"foo": {"type": "array", "minItems": 1, "default": []}},
                 "required": ["foo"],
             },
             ["dummy.foo: has minItems but also has a default"],
