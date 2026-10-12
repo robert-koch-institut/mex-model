@@ -129,50 +129,5 @@ MEx's approach to HealthDCAT-AP is selective adoption. Where a HealthDCAT-AP con
 
 :::{admonition} Work in progress
 :class: note
-The HealthDCAT-AP alignment is under active development, as is HealthDCAT-AP itself. The mapping table, gap analysis, and workaround documentation in the following subsections will be populated once the model updates are stabilized. The canonical status of each property is tracked via the branches ingested into MEx.
+The HealthDCAT-AP alignment is under active development, as is HealthDCAT-AP itself. A mapping table, gap analysis, and workaround documentation will be added to this section once the model updates are stabilized. The canonical status of each property is tracked via the branches ingested into MEx.
 :::
-
-### Mapping table
-
-#### Entity-class mapping
-
-| HealthDCAT-AP Class | MEx Entity | Coverage | Notes |
-| --- | --- | --- | --- |
-
-#### Properties required by HealthDCAT-AP already present in MEx
-
-The table below lists HealthDCAT-AP mandatory or recommended properties that MEx already covers, grouped by the HealthDCAT-AP property name. The status column reflects whether the alignment work is complete.
-
-| HealthDCAT-AP Property | MEx Property | MEx Entity | Status |
-| --- | --- | --- | --- |
-
-### Gap analysis
-
-The tables below list HealthDCAT-AP properties and concepts that are not yet fully present in MEx. Each gap is classified into one of three resolution strategies:
-
-* planned for implementation: the property will be added to the MEx model directly
-* will be mapped: the MEx model will not change, the property will be produced at export time from existing MEx data
-* out of scope: the property is not applicable to RKI's current use cases and has no implementation or mapping planned
-
-#### High priority: HealthDCAT-AP mandatory or key recommended properties
-
-| HealthDCAT-AP Property | Class | Gap Description | Resolution | Tickets | Status |
-| --- | --- | --- | --- | --- | --- |
-
-#### Medium priority: recommended properties and structural alignment
-
-| HealthDCAT-AP Property | Class | Gap Description | Resolution | Tickets | Status |
-| --- | --- | --- | --- | --- | --- |
-
-#### Low priority: optional properties, clean-up and out-of-scope items
-
-| HealthDCAT-AP Property | Class | Gap Description | Resolution | Tickets | Status |
-| --- | --- | --- | --- | --- | --- |
-
-#### Summary
-
-The majority of gaps fall into the "planned for implementation" category, which reflect MEx's stated philosophy: adopt into the model whatever benefits MEx directly, map everything else. The "out of scope" items are predominantly clean-up to remove legacy properties that have been superseded by HealthDCAT-AP-aligned replacements.
-
-### Implementation notes
-
-tbd

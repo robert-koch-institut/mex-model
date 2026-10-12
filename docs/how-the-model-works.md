@@ -122,8 +122,9 @@ These keywords are not part of the JSON Schema standard and will be ignored by g
 
 ### Vocabularies
 
-The vocabularies/ directory contains the controlled value lists used by classification properties across entity types. Each vocabulary is a JSON file defining a named set of concepts, where every concept is identified by a URI of the form `https://mex.rki.de/item/...`
-An entity property references a vocabulary through the custom `useScheme` keyword:
+The `vocabularies/` directory contains the controlled value lists used by classification properties across entity types. Each vocabulary is a JSON file defining a named set of concepts, where every concept is identified by a URI of the form `https://mex.rki.de/item/...`.
+
+Within an entity schema, a property is linked to its vocabulary through the custom `useScheme` keyword, defined in `extension/definition.json`. The following example shows how the `accessRestriction` property on a `Resource` declares its vocabulary reference:
 
 ```json
 {
@@ -134,32 +135,17 @@ An entity property references a vocabulary through the custom `useScheme` keywor
 }
 ```
 
-The valid value for such a property is always the URI of a concept within the declared scheme, never a free-text string. This ensures machine-readability, unambiguous classification and mapping to EU-level controlled vocabularies where equivalents exist. More information on this can be found in the following subsection.
+The value of such a property is always the URI of a concept that belongs to the declared concept scheme, never a free-text string. This ensures machine-readability and unambiguous classification, keeps values human-readable through the labels of the concepts, enables automated validation, and allows mapping to EU-level controlled vocabularies where equivalents exist.
 
-#### Internationalization (i18n)
-
-The `i18n/` directory contains JSON files that map property names to human-readable labels in German (`de.json`) and English (`en.json`). These labels are used exclusively by UI components such as the MEx Editor and are not part of schema validation. They are non-normative from the perspective of this specification.
-
-### How are vocabularies used
-
-Controlled vocabularies in MEx serve as fixed reference lists for classification properties across entity types. Rather than accepting free-text input, properties that reference a vocabulary require a value in the form of a Concept URI. This is a stable, machine-readable identifier of the form `https://mex.rki.de/item/...` and ensures unambiguous, consistent classification that is both human-readable through the associated labels and ensures interoperability with external vocabulary systems.
-Within an entity schema, a property is linked to its vocabulary through the custom useScheme keyword, defined in `extension/definition.json`. The following example shows how the accessRestriction property on a Resource declares its vocabulary reference:
-
-```json
-{
-  "accessRestriction": {
-    "useScheme": "https://mex.rki.de/item/access-restriction",
-    "examples": ["https://mex.rki.de/item/access-restriction-1"]
-  }
-}
-```
-
-The value provided for such a property at runtime must be a URI of a Concept that belongs to the declared ConceptScheme. This enables automated validation of the values used.
-Where MEx vocabularies correspond to established EU-level controlled vocabularies, such as EU Data Theme or IANA Media Types, MEx does not reference those external vocabularies directly. Instead, it maintains a local copy within the vocabulary/ directory of the repository, with its own Concept URIs. This is a deliberate design decision, primarily motivated by versioning control. By maintaining its own copy, MEx can update a vocabulary on its own schedule and ensure that the version in use at any given time is explicitly known and documented. A live reference to an external vocabulary, by contrast, would mean that changes made upstream, such as additions, deprecations, or restructuring of concept hierarchies, would take effect immediately and without a corresponding entry in the MEx changelog. This would possibly break existing records silently as validation routines would fail.
+Where MEx vocabularies correspond to established EU-level controlled vocabularies, such as EU Data Theme or IANA Media Types, MEx does not reference those external vocabularies directly. Instead, it maintains a local copy within the `vocabularies/` directory of the repository, with its own Concept URIs. This is a deliberate design decision, primarily motivated by versioning control. By maintaining its own copy, MEx can update a vocabulary on its own schedule and ensure that the version in use at any given time is explicitly known and documented. A live reference to an external vocabulary, by contrast, would mean that changes made upstream, such as additions, deprecations, or restructuring of concept hierarchies, would take effect immediately and without a corresponding entry in the MEx changelog. This would possibly break existing records silently as validation routines would fail.
 
 However, this approach also introduces a maintenance burden. Local copies must be actively kept in sync with their upstream sources, and divergence can accumulate over time. This risk is particularly pronounced for large vocabularies, such as country lists, where upstream changes may be frequent and where outdated values in MEx could lead to incorrect or incomplete classifications. Crucially, this synchronization is only reliable if upstream changes are well-documented in the external vocabulary's own changelog, which cannot always be guaranteed.
 
 Where a MEx vocabulary has an EU equivalent, values should be mappable to that external vocabulary. The relevant mapping is maintained alongside the vocabulary definition in the vocabularies/ directory. A full list of all vocabularies, their URIs, the entity properties that reference them, and their EU equivalents where applicable, is provided in the corresponding chapter.
+
+### Internationalization (i18n)
+
+The `i18n/` directory contains JSON files that map property names to human-readable labels in German (`de.json`) and English (`en.json`). These labels are used exclusively by UI components such as the MEx Editor and are not part of schema validation. They are non-normative from the perspective of this specification.
 
 ## Extracted and Merged properties
 

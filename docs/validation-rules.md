@@ -110,6 +110,7 @@ The specification uses three obligation levels, following standard RFC 2119 lang
 | Level | Meaning | Machine-enforceable? |
 | --- | --- | --- |
 | MUST | The requirement is absolute. Violating it produces an invalid record. | Yes, enforced via required, minItems, pattern, and type constraints in the schema. |
+| SHOULD | The requirement is recommended. Deviating from it needs a specific reason and leaves the record valid but less useful. | No, SHOULD requirements are documented in the entity conventions but not enforced by the schema. |
 | MAY | The requirement is optional. Omitting it has no negative consequences. | No, by definition, optional requirements are not enforced. |
 
 In practice:
