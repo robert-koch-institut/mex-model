@@ -13,6 +13,17 @@ from sphinx.application import Sphinx
 from sphinx.util.docutils import SphinxDirective
 
 
+def _jsonschema_lines(directive: SphinxDirective, path: str) -> list[str]:
+    """Return `jsonschema` directive markup in the syntax of the current document.
+
+    `parse_text_to_nodes` uses the parser of the including document, so markdown
+    pages need MyST fence syntax instead of reStructuredText.
+    """
+    if directive.env.doc2path(directive.env.docname).suffix == ".md":
+        return [f"```{{jsonschema}} {path}", ":encoding: utf8", "```", ""]
+    return [f".. jsonschema:: {path}", "   :encoding: utf8", ""]
+
+
 class MexEntityDirective(SphinxDirective):
     """Embed schema tables for a named entity.
 
@@ -38,21 +49,15 @@ class MexEntityDirective(SphinxDirective):
 
         if variant in ("both", "extracted"):
             filename = f"extracted-{self._to_filename(entity)}.json"
-            lines.append(f".. jsonschema:: ../mex/model/entities/{filename}")
-            lines.append("   :encoding: utf8")
-            lines.append("")
+            lines += _jsonschema_lines(self, f"../mex/model/entities/{filename}")
 
         if variant in ("both", "merged"):
             filename = f"merged-{self._to_filename(entity)}.json"
-            lines.append(f".. jsonschema:: ../mex/model/entities/{filename}")
-            lines.append("   :encoding: utf8")
-            lines.append("")
+            lines += _jsonschema_lines(self, f"../mex/model/entities/{filename}")
 
         if variant == "single":
             filename = f"{self._to_filename(entity)}.json"
-            lines.append(f".. jsonschema:: ../mex/model/entities/{filename}")
-            lines.append("   :encoding: utf8")
-            lines.append("")
+            lines += _jsonschema_lines(self, f"../mex/model/entities/{filename}")
 
         return self.parse_text_to_nodes("\n".join(lines))
 
@@ -83,11 +88,7 @@ class MexFieldDirective(SphinxDirective):
 
     def run(self) -> list[nodes.Node]:
         field = self.arguments[0].strip().lower()
-        lines = [
-            f".. jsonschema:: ../mex/model/fields/{field}.json",
-            "   :encoding: utf8",
-            "",
-        ]
+        lines = _jsonschema_lines(self, f"../mex/model/fields/{field}.json")
         return self.parse_text_to_nodes("\n".join(lines))
 
 

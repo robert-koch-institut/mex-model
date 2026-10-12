@@ -97,9 +97,15 @@ This keeps entity files concise and ensures consistency for structural changes t
 
 ### Field Schema Detail
 
-```{mex-field} identifier```
-```{mex-field} link```
-```{mex-field} text```
+```{mex-field} identifier
+```
+
+```{mex-field} link
+```
+
+```{mex-field} text
+```
+
 
 ### Extension
 
