@@ -12,13 +12,16 @@ import re
 import sys
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, ClassVar
+from typing import TYPE_CHECKING, Any, ClassVar, cast
 
 from docutils import nodes, statemachine
 from docutils.nodes import fully_normalize_name as normalize_name
 from sphinx.application import Sphinx
 from sphinx.util import logging
 from sphinx.util.docutils import SphinxDirective
+
+if TYPE_CHECKING:
+    from docutils.parsers.rst.states import Body
 
 logger = logging.getLogger(__name__)
 
@@ -155,14 +158,15 @@ class MExVocabulariesDirective(SphinxDirective):
             ]
             for concept in vocabulary.concepts
         ]
-        return self.state.build_table((self.column_widths, head, body), self.lineno)
+        state = cast("Body", self.state)  # the table builder lives on the body state
+        return state.build_table((self.column_widths, head, body), self.lineno)
 
     def _cell(self, text: str, *, escape: bool = True) -> Cell:
         """Convert a string into a cell as expected by the docutils table builder."""
         if escape:
             text = ESCAPE_PATTERN.sub(r"\\\1", text)
         lines = statemachine.string2lines(text)
-        source = self.state.document.current_source
+        source = self.state.document.current_source or ""
         items = [(source, self.lineno)] * len(lines)
         return (0, 0, self.lineno, statemachine.StringList(lines, items=items))
 

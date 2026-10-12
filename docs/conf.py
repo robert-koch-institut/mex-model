@@ -54,7 +54,7 @@ def _patched_sphinx_jsonschema_simpletype(
     schema: dict[str, Any],
 ) -> list[Any]:
     """Render the `useScheme` schema properties for every vocabulary type."""
-    rows = _original_sphinx_jsonschema_simpletype(self, schema)
+    rows: list[Any] = _original_sphinx_jsonschema_simpletype(self, schema)
     if "useScheme" in schema:
         scheme = schema.pop("useScheme")
         rows.append(self._line(self._cell("useScheme"), self._cell(scheme)))
@@ -72,7 +72,8 @@ def _patched_sphinx_jsonschema_kvpairs(
             value = schema[k]
             if k in ("default", "pattern"):
                 schema[k] = f"``{value}``"
-    return _original_sphinx_jsonschema_kvpairs(self, schema, keys)
+    rows: list[Any] = _original_sphinx_jsonschema_kvpairs(self, schema, keys)
+    return rows
 
 
 sjs_wide_format = importlib.import_module("sphinx-jsonschema.wide_format")

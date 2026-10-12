@@ -723,6 +723,7 @@ source = { editable = "." }
 
 [package.dev-dependencies]
 dev = [
+    { name = "docutils" },
     { name = "ipdb" },
     { name = "jsonschema" },
     { name = "mypy" },
@@ -734,6 +735,7 @@ dev = [
     { name = "ruff" },
     { name = "sphinx" },
     { name = "sphinx-jsonschema" },
+    { name = "types-docutils" },
     { name = "types-jsonschema" },
 ]
 
@@ -741,6 +743,7 @@ dev = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "docutils", specifier = ">=0.21" },
     { name = "ipdb", specifier = ">=0.13" },
     { name = "jsonschema", specifier = ">=4" },
     { name = "mypy", specifier = ">=1" },
@@ -752,7 +755,8 @@ dev = [
     { name = "ruff", specifier = ">=0.16" },
     { name = "sphinx", specifier = "<9" },
     { name = "sphinx-jsonschema", specifier = ">=1.19" },
-    { name = "types-jsonschema", specifier = ">=4" },
+    { name = "types-docutils" },
+    { name = "types-jsonschema" },
 ]
 
 [[package]]
@@ -1412,6 +1416,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/2c/2e/a7fbfe268c8a3b32546930c0297c101d65a4a14c304ad5790a9f478f0e4e/traitlets-5.16.1.tar.gz", hash = "sha256:ed900c2b631aa3a112811139fa97b8d2c3bad5e989656bba4b7e52c7852c18c1", size = 166137, upload-time = "2026-08-03T08:32:36.848Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/ad/66/0d785f0bc5e4315a96c989bb476d0fc07ea4f85132550c7b156ca2035d52/traitlets-5.16.1-py3-none-any.whl", hash = "sha256:f775618166caa0396c8e337099240f2bd3e5e917d203b2e6fbe21a58d3cb1f6b", size = 86211, upload-time = "2026-08-03T08:32:34.48Z" },
+]
+
+[[package]]
+name = "types-docutils"
+version = "0.23.0.20260923"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/00/ff/e5c4e5383a226703fc81e3e53bb2072526ec4b7e834eeb7146ea674192ed/types_docutils-0.23.0.20260923.tar.gz", hash = "sha256:486d9054ea84410cc201a30c15759077a5f32234247cfc08aa7290ff2509f770", size = 58327, upload-time = "2026-09-23T06:51:56.366Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3b/43/b39c0af29de3b02bcf6194a3d6675685d2d7b8b336a31af4525bc0022c4b/types_docutils-0.23.0.20260923-py3-none-any.whl", hash = "sha256:62851b429db623e36853a4a189ce15a846e0636fe090c135d6dc5dd4f9108ef5", size = 92174, upload-time = "2026-09-23T06:51:54.908Z" },
 ]
 
 [[package]]

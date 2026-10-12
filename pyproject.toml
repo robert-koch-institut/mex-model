@@ -11,6 +11,7 @@ dependencies = []
 
 [dependency-groups]
 dev = [
+    "docutils>=0.21",
     "ipdb>=0.13",
     "jsonschema>=4",
     "mypy>=1",
@@ -22,7 +23,8 @@ dev = [
     "ruff>=0.16",
     "sphinx-jsonschema>=1.19",
     "sphinx<9",
-    "types-jsonschema>=4",
+    "types-docutils",
+    "types-jsonschema",
 ]
 
 [tool.coverage.run]

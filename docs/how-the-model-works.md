@@ -12,7 +12,7 @@ The MEx metadata model is not confined to a single application, but constitutes 
 
 The following process diagram illustrates how these components relate within the overall MEx workflow:
 
-![MEx metadata generation BPMN 2.0 workflow](img/MEx-metadata-generation.png "MEx metadata generation BPMN 2.0 workflow")
+![MEx metadata generation BPMN 2.0 workflow](img/mex-metadata-generation.png "MEx metadata generation BPMN 2.0 workflow")
 
 ## namespaces & prefixes
 
