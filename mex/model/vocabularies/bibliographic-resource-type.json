@@ -66,9 +66,6 @@
                 "en": "Doctoral dissertation"
             }
         ],
-        "closeMatch": [
-            "http://purl.org/ontology/bibo/Thesis"
-        ],
         "definition": {
             "de": "Wissenschaftliche Arbeit zur Erlangung des Doktorgrades an einer Universität.",
             "en": "Document submitted in support of candidature for a doctorate."
@@ -89,9 +86,6 @@
                 "de": "Habilitation",
                 "en": "Postdoctoral thesis"
             }
-        ],
-        "closeMatch": [
-            "http://purl.org/ontology/bibo/Thesis"
         ],
         "definition": {
             "de": "Höchstrangige Hochschulprüfung zur Erlangung der Lehrberechtigung an einer Universität in Deutschland.",

@@ -114,7 +114,7 @@ The `extension/` directory contains a single file, definition.json. This defines
 
 | Custom Keyword | Equivalent | Purpose |
 | --- | --- | --- |
-| useScheme | (MEx-specific) | Links a property to a controlled vocabulary concept scheme, identified by a URI matching `https://mex.rki.de/concept-scheme/...` |
+| useScheme | (MEx-specific) | Links a property to a controlled vocabulary concept scheme, identified by a URI matching `https://mex.rki.de/item/...` |
 | closeMatch | skos:closeMatch | Denotes a close semantic match between the MEx term and a term from an external ontology or data model |
 | exactMatch | skos:exactMatch | Denotes an exact semantic match between the MEx term and a term from an external ontology or data model. This annotation property is used i.e. in matching terms from controlled vocabularies. |
 
