@@ -67,7 +67,7 @@ All other properties are optional.
 ```JSON
 {
   "identifier": "gglGQVGwZNJtqYDkW4N8jL",
-  "technicalAccessibility": "https://mex.rki.de/item/technical-accessibility-1", #internal 
+  "technicalAccessibility": "https://mex.rki.de/item/technical-accessibility-1", #internal
   "title": [{"value": "SurvStat API", "language": "en"}],
   "description": [{"value": "REST API providing access to infectious disease surveillance data.", "language": "en"}],
   "endpointURL": {"url": "https://survstat.rki.de/api/v2"},

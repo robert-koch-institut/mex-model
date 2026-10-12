@@ -213,7 +213,7 @@ The distinction matters because most MEx properties that express responsibility 
 
 ### Expressing Parent/Child relationships
 
-Organisational hierarchy is modelled through the `parentUnit` property on `OrganizationalUnit`. It is a references to `MergedOrganizationalUnit` identifiers, expressing an upward link. 
+Organisational hierarchy is modelled through the `parentUnit` property on `OrganizationalUnit`. It is a references to `MergedOrganizationalUnit` identifiers, expressing an upward link.
 
 An `OrganizationalUnit` is linked to its `Organization` with `unitOf`.
 

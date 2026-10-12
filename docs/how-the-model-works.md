@@ -212,7 +212,7 @@ Identifier are intentionally opaque, they carry no embedded information about th
 
 There are 3 different type of identifiers in use for Extracted Entities:
 
-1. `identifierInPrimarySource`: records the identifier used for the object in the originating primary source system. 
+1. `identifierInPrimarySource`: records the identifier used for the object in the originating primary source system.
 2. `identifier`: identifier of the extracted item, serving as an MEx-internal reference.
 3. `stableTargetId`: the identifier of the corresponding merged item.
 
