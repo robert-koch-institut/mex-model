@@ -1,10 +1,12 @@
-"""Custom directives for embedding individual entity schemas in MyST markdown.
+"""Sphinx extension embedding individual entity and field schemas in MyST markdown.
 
 Provides:
-    {mex-entity} EntityName   - renders extracted + merged schema tables
+    {mex-entity} EntityName   - renders the extracted and merged schema tables, or the
+                                single schema table of entities without that distinction
     {mex-field} fieldname     - renders a single field schema table
 """
 
+import os
 from pathlib import Path
 from typing import Any
 
@@ -12,21 +14,41 @@ from docutils import nodes
 from sphinx.application import Sphinx
 from sphinx.util.docutils import SphinxDirective
 
-
-def _jsonschema_lines(path: str) -> list[str]:
-    """Return MyST markup rendering the given schema with the `jsonschema` directive.
-
-    `parse_text_to_nodes` uses the parser of the including markdown page, so the
-    directive has to be written in MyST fence syntax instead of reStructuredText.
-    """
-    return [f"```{{jsonschema}} {path}", ":encoding: utf8", "```", ""]
+MODEL_DIR = Path(__file__).resolve().parents[2] / "mex" / "model"
+ENCODING = "utf8"
 
 
-class MExEntityDirective(SphinxDirective):
+class _MExSchemaDirective(SphinxDirective):
+    """Base class for directives delegating to the `jsonschema` directive."""
+
+    has_content = False
+    required_arguments = 1
+    optional_arguments = 0
+
+    def _render(self, paths: list[Path]) -> list[nodes.Node]:
+        """Render the given schema files with the `jsonschema` directive.
+
+        `parse_text_to_nodes` uses the parser of the including markdown page, so the
+        directive is written in MyST fence syntax. The paths are made relative to that
+        page, because `jsonschema` resolves them that way and allows no whitespace.
+        """
+        page_dir = self.env.doc2path(self.env.docname).parent
+        lines = []
+        for path in paths:
+            if not path.is_file():
+                msg = f"no schema found for {self.arguments[0]!r} at {path}"
+                raise self.error(msg)
+            lines += [
+                f"```{{jsonschema}} {os.path.relpath(path, page_dir)}",
+                f":encoding: {ENCODING}",
+                "```",
+                "",
+            ]
+        return self.parse_text_to_nodes("\n".join(lines))
+
+
+class MExEntityDirective(_MExSchemaDirective):
     """Embed the schema tables for a named entity.
-
-    Renders the extracted and merged variants, or the single schema of entities
-    without that distinction, like `Concept`.
 
     Usage in MyST markdown::
 
@@ -34,34 +56,19 @@ class MExEntityDirective(SphinxDirective):
         ```
     """
 
-    has_content = False
-    required_arguments = 1
-    optional_arguments = 0
-
     def run(self) -> list[nodes.Node]:
         """Delegate to the `jsonschema` directive for every schema of the entity."""
-        filename = self._to_filename(self.arguments[0].strip())
+        filename = to_filename(self.arguments[0].strip())
+        entities = MODEL_DIR / "entities"
         paths = [
-            f"../mex/model/entities/{prefix}{filename}.json"
-            for prefix in ("extracted-", "merged-")
+            entities / f"{prefix}-{filename}.json" for prefix in ("extracted", "merged")
         ]
-        if not Path(self.env.relfn2path(paths[0])[1]).is_file():
-            paths = [f"../mex/model/entities/{filename}.json"]
-        lines = [line for path in paths for line in _jsonschema_lines(path)]
-        return self.parse_text_to_nodes("\n".join(lines))
-
-    @staticmethod
-    def _to_filename(entity_name: str) -> str:
-        """Convert 'AccessPlatform' to 'access-platform'."""
-        result = []
-        for i, ch in enumerate(entity_name):
-            if ch.isupper() and i > 0:
-                result.append("-")
-            result.append(ch.lower())
-        return "".join(result)
+        if not paths[0].is_file():
+            paths = [entities / f"{filename}.json"]
+        return self._render(paths)
 
 
-class MExFieldDirective(SphinxDirective):
+class MExFieldDirective(_MExSchemaDirective):
     """Embed a single field schema table.
 
     Usage in MyST markdown::
@@ -70,24 +77,25 @@ class MExFieldDirective(SphinxDirective):
         ```
     """
 
-    has_content = False
-    required_arguments = 1
-    optional_arguments = 0
-
     def run(self) -> list[nodes.Node]:
         """Delegate to the `jsonschema` directive for the field schema."""
         field = self.arguments[0].strip().lower()
-        lines = _jsonschema_lines(f"../mex/model/fields/{field}.json")
-        return self.parse_text_to_nodes("\n".join(lines))
+        return self._render([MODEL_DIR / "fields" / f"{field}.json"])
+
+
+def to_filename(entity_name: str) -> str:
+    """Convert 'AccessPlatform' to 'access-platform'."""
+    result = []
+    for i, ch in enumerate(entity_name):
+        if ch.isupper() and i > 0:
+            result.append("-")
+        result.append(ch.lower())
+    return "".join(result)
 
 
 def setup(app: Sphinx) -> dict[str, Any]:
     """Register the entity and field directives."""
-    app.setup_extension("sphinx-jsonschema")
+    app.setup_extension("jsonschema_patches")
     app.add_directive("mex-entity", MExEntityDirective)
     app.add_directive("mex-field", MExFieldDirective)
-    return {
-        "version": "0.1",
-        "parallel_read_safe": True,
-        "parallel_write_safe": True,
-    }
+    return {"parallel_read_safe": True, "parallel_write_safe": True, "version": "1.0"}

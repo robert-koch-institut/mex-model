@@ -28,7 +28,8 @@ dev = [
 ]
 
 [tool.coverage.run]
-omit = ["docs/*"]
+# the docs extensions are covered, only the sphinx configuration is not
+omit = ["docs/conf.py"]
 
 [tool.cruft]
 template = "https://github.com/robert-koch-institut/mex-template"
