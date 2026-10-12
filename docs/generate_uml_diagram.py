@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""
-MEx UML Diagram Generator
-=========================
+# ruff: noqa: E501, T201
+"""MEx UML Diagram Generator.
+
 Reads the JSON schema entity definitions from a local clone of
 https://github.com/robert-koch-institut/mex-model and generates
 a self-contained mex-uml-diagram.html file.
@@ -45,10 +45,10 @@ def kebab_to_pascal(name: str) -> str:
 
 
 def ref_to_entity_id(ref: str) -> str | None:
-    """
-    Extract the entity display-id from a $ref like
-    '/mex/model/entities/merged-person#/identifier'
-    Returns 'Person' or None if it's not an entity reference.
+    """Extract the entity display-id from an entity identifier `$ref`.
+
+    For example, '/mex/model/entities/merged-person#/identifier' yields 'Person'.
+    Returns None if it's not an entity reference.
     """
     m = re.match(r"^/mex/model/entities/merged-([\w-]+)#/identifier$", ref)
     if m:
@@ -57,82 +57,76 @@ def ref_to_entity_id(ref: str) -> str | None:
 
 
 def _field_ref_name(ref: str) -> str:
-    """'/mex/model/fields/text' -> 'Text'"""
+    """Convert '/mex/model/fields/text' -> 'Text'."""
     return ref.rsplit("/", 1)[-1].capitalize()
 
 
 def _comment_to_type(comment: str) -> str:
-    """'year_month_day_time' -> 'YearMonthDayTime'"""
+    """Convert 'year_month_day_time' -> 'YearMonthDayTime'."""
     return "".join(word.capitalize() for word in comment.split("_"))
+
+
+SCALAR_TYPE_MAP = {
+    "string": "str",
+    "integer": "int",
+    "number": "float",
+    "boolean": "bool",
+}
+
+VARIANT_TYPE_MAP = {"string": "str", "integer": "int"}
+
+
+def _resolve_ref(ref: str) -> str:
+    """Resolve a `$ref` to an entity identifier or field type name."""
+    eid = ref_to_entity_id(ref)
+    if eid:
+        return f"Merged{eid}Identifier"
+    return _field_ref_name(ref)
+
+
+def _resolve_variant(variant: dict[str, Any]) -> str:
+    """Resolve a single non-null variant of an `anyOf` union."""
+    if "$ref" in variant:
+        return _resolve_ref(variant["$ref"])
+    if "$comment" in variant:
+        return _comment_to_type(variant["$comment"])
+    t = variant.get("type", "?")
+    return VARIANT_TYPE_MAP.get(t, t)
 
 
 def _resolve_items(items: dict[str, Any]) -> str:
     """Resolve the inner type of an array's 'items'."""
     if "$ref" in items:
-        eid = ref_to_entity_id(items["$ref"])
-        if eid:
-            return f"Merged{eid}Identifier"
-        return _field_ref_name(items["$ref"])
+        return _resolve_ref(items["$ref"])
 
     if "anyOf" in items:
-        parts = []
-        for variant in items["anyOf"]:
-            if variant.get("type") == "null":
-                continue  # skip null inside list items
-            if "$ref" in variant:
-                eid = ref_to_entity_id(variant["$ref"])
-                if eid:
-                    parts.append(f"Merged{eid}Identifier")
-                else:
-                    parts.append(_field_ref_name(variant["$ref"]))
-            elif "$comment" in variant:
-                parts.append(_comment_to_type(variant["$comment"]))
-            elif variant.get("type") == "string":
-                parts.append("str")
-            elif variant.get("type") == "integer":
-                parts.append("int")
-            else:
-                parts.append(variant.get("type", "?"))
+        # skip null inside list items
+        parts = [
+            _resolve_variant(variant)
+            for variant in items["anyOf"]
+            if variant.get("type") != "null"
+        ]
         return " | ".join(parts) if parts else "?"
 
     t = items.get("type", "?")
-    type_map = {"string": "str", "integer": "int", "number": "float", "boolean": "bool"}
-    return type_map.get(t, t)
+    return SCALAR_TYPE_MAP.get(t, t)
 
 
 def resolve_type_string(prop: dict[str, Any]) -> str:
-    """
-    Build a human-readable type string from a JSON-schema property definition,
-    mirroring the style used in the original HTML's RAW data.
+    """Build a human-readable type string from a JSON-schema property definition.
+
+    Mirrors the style used in the original HTML's RAW data.
     """
     # Direct $ref at top level (single value, required)
     if "$ref" in prop and "anyOf" not in prop:
-        eid = ref_to_entity_id(prop["$ref"])
-        if eid:
-            return f"Merged{eid}Identifier"
-        return _field_ref_name(prop["$ref"])
+        return _resolve_ref(prop["$ref"])
 
     # anyOf (nullable single value or union)
     if "anyOf" in prop:
-        parts: list[str] = []
-        for variant in prop["anyOf"]:
-            if variant.get("type") == "null":
-                parts.append("None")
-            elif "$ref" in variant:
-                eid = ref_to_entity_id(variant["$ref"])
-                if eid:
-                    parts.append(f"Merged{eid}Identifier")
-                else:
-                    parts.append(_field_ref_name(variant["$ref"]))
-            elif "$comment" in variant:
-                parts.append(_comment_to_type(variant["$comment"]))
-            elif variant.get("type") == "string":
-                parts.append("str")
-            elif variant.get("type") == "integer":
-                parts.append("int")
-            else:
-                parts.append(variant.get("type", "?"))
-        return " | ".join(parts)
+        return " | ".join(
+            "None" if variant.get("type") == "null" else _resolve_variant(variant)
+            for variant in prop["anyOf"]
+        )
 
     # array
     if prop.get("type") == "array":
@@ -142,19 +136,17 @@ def resolve_type_string(prop: dict[str, Any]) -> str:
 
     # simple scalars
     t = prop.get("type", "?")
-    type_map = {"string": "str", "integer": "int", "number": "float", "boolean": "bool"}
-    return type_map.get(t, t)
+    return SCALAR_TYPE_MAP.get(t, t)
 
 
 def collect_refs(type_str: str) -> list[str]:
+    """Return the entity display-ids referenced in a type string.
+
+    For example, 'list[MergedPersonIdentifier | MergedOrganizationIdentifier]'
+    yields ['Organization', 'Person'].
     """
-    Given a type string like 'list[MergedPersonIdentifier | MergedOrgIdentifier]',
-    return the entity display-ids referenced: ['Person', 'Organization', ...].
-    """
-    refs = []
-    for m in re.finditer(r"Merged(\w+?)Identifier", type_str):
-        refs.append(m.group(1))
-    return sorted(set(refs))
+    refs = {m.group(1) for m in re.finditer(r"Merged(\w+?)Identifier", type_str)}
+    return sorted(refs)
 
 
 # ── Schema parsing ───────────────────────────────────────────────────────────
@@ -162,7 +154,7 @@ def collect_refs(type_str: str) -> list[str]:
 
 def parse_entity(filepath: Path) -> dict[str, Any] | None:
     """Parse one merged-*.json file into our internal representation."""
-    with open(filepath, "r", encoding="utf-8") as f:
+    with filepath.open(encoding="utf-8") as f:
         schema = json.load(f)
 
     stem = filepath.stem  # e.g. 'merged-access-platform'
@@ -214,8 +206,7 @@ def build_id_map(entities: list[dict[str, Any]]) -> dict[str, str]:
 def compute_layout(
     entities: list[dict[str, Any]],
 ) -> tuple[dict[str, int], dict[str, int]]:
-    """
-    Compute a reasonable GRID_COL / GRID_ROW assignment.
+    """Compute a reasonable GRID_COL / GRID_ROW assignment.
 
     Strategy: sort entities by outgoing-reference count (most connected in
     the center), then distribute across columns. The user can always drag
@@ -317,6 +308,7 @@ def build_html(raw_js: str, id_map_js: str, grid_js: str) -> str:
 
 
 def main() -> None:
+    """Parse CLI arguments and write the generated UML diagram HTML."""
     parser = argparse.ArgumentParser(
         description="Generate the MEx UML diagram HTML from mex-model JSON schemas."
     )
@@ -338,7 +330,7 @@ def main() -> None:
     if not entities_dir.is_dir():
         print(f"ERROR: Entities directory not found: {entities_dir}", file=sys.stderr)
         print(
-            f"       Make sure --repo points to your mex-model clone.", file=sys.stderr
+            "       Make sure --repo points to your mex-model clone.", file=sys.stderr
         )
         sys.exit(1)
 

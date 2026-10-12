@@ -3,6 +3,7 @@
 import importlib
 import sys
 from pathlib import Path
+from typing import Any
 
 # Make the _ext directory importable
 sys.path.insert(0, str(Path(__file__).parent / "_ext"))
@@ -48,7 +49,10 @@ templates_path = ["."]
 # --- sphinx-jsonschema monkey-patches (kept from original conf.py) ---------
 
 
-def _patched_sphinx_jsonschema_simpletype(self, schema):
+def _patched_sphinx_jsonschema_simpletype(
+    self: Any,  # noqa: ANN401 - WideFormat lives in a non-importable module
+    schema: dict[str, Any],
+) -> list[Any]:
     """Render the `useScheme` schema properties for every vocabulary type."""
     rows = _original_sphinx_jsonschema_simpletype(self, schema)
     if "useScheme" in schema:
@@ -57,7 +61,11 @@ def _patched_sphinx_jsonschema_simpletype(self, schema):
     return rows
 
 
-def _patched_sphinx_jsonschema_kvpairs(self, schema, keys):
+def _patched_sphinx_jsonschema_kvpairs(
+    self: Any,  # noqa: ANN401 - WideFormat lives in a non-importable module
+    schema: dict[str, Any],
+    keys: list[str],
+) -> list[Any]:
     """Render `default` and `pattern` schema properties as inline code-blocks."""
     for k in keys:
         if k in schema:

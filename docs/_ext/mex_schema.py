@@ -5,7 +5,11 @@ Provides:
     {mex-field} fieldname     - renders a single field schema table
 """
 
+from typing import Any
+
+from docutils import nodes
 from docutils.parsers.rst import directives
+from sphinx.application import Sphinx
 from sphinx.util.docutils import SphinxDirective
 
 
@@ -26,7 +30,7 @@ class MexEntityDirective(SphinxDirective):
         "variant": directives.unchanged,  # "extracted", "merged", "both", "single"
     }
 
-    def run(self):
+    def run(self) -> list[nodes.Node]:
         entity = self.arguments[0].strip()
         variant = self.options.get("variant", "both").strip().lower()
 
@@ -77,7 +81,7 @@ class MexFieldDirective(SphinxDirective):
     optional_arguments = 0
     option_spec = {}
 
-    def run(self):
+    def run(self) -> list[nodes.Node]:
         field = self.arguments[0].strip().lower()
         lines = [
             f".. jsonschema:: ../mex/model/fields/{field}.json",
@@ -87,7 +91,7 @@ class MexFieldDirective(SphinxDirective):
         return self.parse_text_to_nodes("\n".join(lines))
 
 
-def setup(app):
+def setup(app: Sphinx) -> dict[str, Any]:
     app.setup_extension("sphinx-jsonschema")
     app.add_directive("mex-entity", MexEntityDirective)
     app.add_directive("mex-field", MexFieldDirective)
