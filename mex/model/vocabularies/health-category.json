@@ -166,8 +166,8 @@
         "identifier": "https://mex.rki.de/item/health-category-9",
         "inScheme": "https://mex.rki.de/item/health-category",
         "prefLabel": {
-            "de": "Daten aus regulierter klinischer Forschung",
-            "en": "Data from regulated clinical research"
+            "de": "Daten aus klinischen Studien und Prüfungen (EU-reguliert)",
+            "en": "Data from clinical trials and studies (regulated by the EU)"
         }
     },
     {
@@ -185,8 +185,8 @@
         "identifier": "https://mex.rki.de/item/health-category-10",
         "inScheme": "https://mex.rki.de/item/health-category",
         "prefLabel": {
-            "de": "Aggregierte Daten zu Gesundheitsbedürfnissen, -versorgung und -ressourcen",
-            "en": "Aggregated data on healthcare needs, provision and resources"
+            "de": "Daten zu Gesundheitsversorgung, -ressourcen und -finanzierung",
+            "en": "Data on healthcare, healthcare resources and healthcare funding"
         }
     },
     {
@@ -204,8 +204,8 @@
         "identifier": "https://mex.rki.de/item/health-category-11",
         "inScheme": "https://mex.rki.de/item/health-category",
         "prefLabel": {
-            "de": "Automatisch generierte persönliche elektronische Gesundheitsdaten",
-            "en": "Automatically generated personal electronic health data"
+            "de": "Automatisch generierte persönliche Gesundheitsdaten aus Medizingeräten",
+            "en": "Automatically generated personal health data from medical devices"
         }
     },
     {
@@ -242,8 +242,8 @@
         "identifier": "https://mex.rki.de/item/health-category-13",
         "inScheme": "https://mex.rki.de/item/health-category",
         "prefLabel": {
-            "de": "Verwaltungsdaten",
-            "en": "Administrative data"
+            "de": "Verwaltungsdaten des Gesundheitswesens",
+            "en": "Healthcare administrative data"
         }
     },
     {
@@ -318,8 +318,8 @@
         "identifier": "https://mex.rki.de/item/health-category-17",
         "inScheme": "https://mex.rki.de/item/health-category",
         "prefLabel": {
-            "de": "Wellnessanwendungsdaten",
-            "en": "Wellness application data"
+            "de": "Daten aus Wellness-Anwendungen",
+            "en": "Data from wellness applications"
         }
     }
 ]
