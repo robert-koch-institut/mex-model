@@ -1,10 +1,10 @@
-# Controlled Vocabularies
+# Controlled vocabularies
 
 As described in the How the model works section, properties that draw from a fixed set of permissible values reference a controlled vocabulary via the useScheme keyword in the JSON Schema. The property value is always a Concept URI from that vocabulary. This section lists all vocabularies currently defined in the model, describes their alignment with EU-maintained code lists, and outlines how vocabularies are governed.
 
 ## Vocabulary list
 
-The following vocabularies are defined as JSON files in `MEX/MODEL/VOCABULARIES`. The Used by column lists the entity types that reference each vocabulary.
+The following vocabularies are defined as JSON files in `mex/model/vocabularies/`. The Used by column lists the entity types that reference each vocabulary.
 
 | Vocabulary | File | Used by | Concepts |
 | --- | --- | --- | --- |
@@ -41,7 +41,7 @@ Several MEx vocabularies correspond to code lists maintained by the EU Publicati
 | License | [DCAT-AP.de Licenses](https://www.dcat-ap.de/def/licenses/) | under review |
 | MIME Type | [IANA Media Types](https://www.iana.org/assignments/media-types/) | Aligned — values drawn from IANA registry |
 | Resource Type General | [EU Dataset Type](https://op.europa.eu/s/y9RI) | Partial — MEx carries additional values |
-| Consent Status | [DPV Consent Status](https://w3id.org/dpv#ConsentStatus) | Aligned — values modelled after the W3C Data Privacy Vocabulary |
+| Consent Status | [DPV Consent Status](https://w3id.org/dpv#ConsentStatus) | Aligned — values modeled after the W3C Data Privacy Vocabulary |
 | Health Category | HealthDCAT-AP Health Category | Added for HealthDCAT-AP alignment |
 | Resource Creation Method | HealthDCAT-AP wasGeneratedBy | Aligned — vocabulary aligned to HealthDCAT-AP controlled vocabulary "Health Activities" |
 | Personal Data | HealthDCAT-AP Personal Data | Partial — RKI-specific adaptations; vocabulary scheduled for removal from the model (will be mapped at export) |
@@ -83,7 +83,7 @@ The vocabularies themselves are described by two entities based on SKOS. Unlike 
 * `ConceptScheme` corresponds to `skos:ConceptScheme` and represents a vocabulary as a whole. Its `identifier` is the URI that the `useScheme` keyword of a property points to.
 * `Concept` corresponds to `skos:Concept` and represents a single permissible value. Its `identifier` is the URI used as the property value, and `inScheme` references the `ConceptScheme` it belongs to. Every concept requires at least one `prefLabel`, while `altLabel`, `definition`, `broader`, `exactMatch`, `notation` and `note` are optional.
 
-### Schema Detail
+### Schema detail
 
 ```{mex-entity} Concept
 ```
@@ -91,7 +91,7 @@ The vocabularies themselves are described by two entities based on SKOS. Unlike 
 ```{mex-entity} ConceptScheme
 ```
 
-## Vocabulary Detail
+## Vocabulary detail
 
 The tables below are auto-generated from the vocabulary JSON files in the repository. Each table lists all concepts in the vocabulary with their label, identifier, and definition.
 

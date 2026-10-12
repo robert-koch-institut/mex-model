@@ -14,7 +14,7 @@ Every schema sets `additionalProperties: false`. An instance that includes a pro
 
 ### Mandatory vs optional properties
 
-The required array in each schema lists the properties that must be present. For Extracted entities, this always includes the four system-managed fields (`identifier`, `hadPrimarySource`, `identifierInPrimarySource`, `stableTargetId`) plus any content fields that the entity cannot do without. Optional properties have either [] or null.
+The `required` array in each schema lists the properties that must be present. For Extracted entities, this always includes the four system-managed fields (`identifier`, `hadPrimarySource`, `identifierInPrimarySource`, `stableTargetId`) plus any content fields that the entity cannot do without. Optional properties have either [] or null.
 
 ### Field type constraints
 
@@ -23,7 +23,7 @@ The schema enforces types at the property level:
 | Constraint | Example | Enforced by |
 | --- | --- | --- |
 | Identifier format | Alphanumeric, 14–22 characters | pattern: `^[a-zA-Z0-9]{14,22}$` on the identifier field type |
-| Source identifier format | Non-empty, no newlines, max 1000 characters | minLength: 1, maxLength: 1000, pattern: `^[^\\n\\r]+$` on `identifierInPrimarySource` |
+| Source identifier format | Non-empty, no newlines, max 1000 characters | minLength: 1, maxLength: 1000, pattern: `^[^\n\r]+$` on `identifierInPrimarySource` |
 | Date/time values | ISO 8601 strings | format: `date` or format: `date-time` on temporal properties with patterns for the required levels of precision |
 | Text objects | Object with value (string) and optional language (string) | `$ref` to the text field `definition` |
 | Link objects | Object with url (string) and optional metadata | `$ref` to the link field `definition` |
@@ -37,7 +37,7 @@ The schema enforces types at the property level:
 
 Properties that reference a controlled vocabulary declare this via the custom `useScheme` keyword in the schema:
 
-```JSON
+```json
 {
   "technicalAccessibility": {
     "$ref": "/mex/model/entities/concept#/identifier",
@@ -87,7 +87,7 @@ In most cases, the Extracted and Merged variants of an entity enforce the same c
 * Merged entities may have a `supersededBy` property (optional, single-value defaults to null) that does not exist on Extracted entities.
 * Where a property is mandatory on both variants, the cardinality (minItems, single-value requirement) is the same.
 
-## Cross-Entity validation
+## Cross-entity validation
 
 Schema validation operates on a single instance in isolation. It cannot verify that a referenced entity actually exists. Cross-entity validation is performed by the MEx backend and covers two main concerns:
 
@@ -116,4 +116,4 @@ In practice:
 
 * Schema validation covers all MUST requirements. If a record passes schema validation, it satisfies every absolute structural constraint.
 * SHOULD requirements are documented in the entity reference pages and in the usage patterns above. Treat them as mandatory unless you have a specific reason not to. They often reflect upcoming cardinality changes or HealthDCAT-AP alignment requirements.
-* MAY requirements are opportunities for enrichment. Populating optional fields improves discoverability and export quality but is never required for a record to enter the catalogue.
+* MAY requirements are opportunities for enrichment. Populating optional fields improves discoverability and export quality but is never required for a record to enter the catalog.

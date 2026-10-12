@@ -12,11 +12,11 @@ The AccessPlatform entity describes a technical system or service that provides 
 
 Use `AccessPlatform` to describe any technical system, API, or service through which a dataset or distribution can be accessed. For example, a REST API, a file server, a database interface, or a web portal. The entity captures both the technical characteristics of the access mechanism and the organizational responsibility for it.
 
-`AccessPlatform` should not be confused with `Distribution`, which describes a specific representation or download of a dataset. An `AccessPlatform` is the system through which one or more distributions are made available. A `Distribution` is the artefact that is made available through it.
+`AccessPlatform` should not be confused with `Distribution`, which describes a specific representation or download of a dataset. An `AccessPlatform` is the system through which one or more distributions are made available. A `Distribution` is the artifact that is made available through it.
 
 Use `ExtractedAccessPlatform` when ingesting access platform metadata from a primary source system via an ETL pipeline. Each extracted record represents the platform as described by that specific source, carrying the provenance properties that trace it back to its origin.
 
-Use `MergedAccessPlatform` when referencing an access platform from another entity, or when consuming access platform metadata in the catalogue or downstream systems.
+Use `MergedAccessPlatform` when referencing an access platform from another entity, or when consuming access platform metadata in the catalog or downstream systems.
 
 ### Mandatory fields & expected values
 
@@ -32,7 +32,7 @@ The following properties are required on all valid instances:
 
 All other properties are optional.
 
-### Schema Detail
+### Schema detail
 
 ```{mex-entity} AccessPlatform
 ```
@@ -40,14 +40,14 @@ All other properties are optional.
 ### Common pitfalls
 
 * Confusing `AccessPlatform` with `Distribution`: a common mistake is creating an `AccessPlatform` record for each individual file or download rather than for the system that serves them. One `AccessPlatform` may serve multiple `Distribution` entities.
-* Leaving `technicalAccessibility` inconsistent: marking a platform as externally accessible when it is in fact only reachable within the RKI network, or vice versa. This has downstream implications for access control and catalogue visibility.
+* Leaving `technicalAccessibility` inconsistent: marking a platform as externally accessible when it is in fact only reachable within the RKI network, or vice versa. This has downstream implications for access control and catalog visibility.
 * Omitting `unitInCharge`, when `technicalAccessibility` is "internal": while optional, this property is important for operational accountability.
 
-### Example JSON Instances
+### Example JSON instances
 
 #### Extracted AccessPlatform (representative, with commonly used optional fields)
 
-```JSON
+```json
 {
   "identifier": "dYb6qKqjdpocTAUEPPTTj2",
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
@@ -63,7 +63,7 @@ All other properties are optional.
 
 #### Merged AccessPlatform
 
-```JSON
+```json
 {
   "identifier": "gglGQVGwZNJtqYDkW4N8jL",
   "technicalAccessibility": "https://mex.rki.de/item/technical-accessibility-1", // internal
@@ -80,13 +80,13 @@ The `Activity` entity describes any activity carried out by the RKI, whether it 
 
 ### When to use
 
-Use `Activity` to describe a research project, a statutory task performed under federal law, or any other organized activity conducted at the RKI. Activities provide essential context for datasets. A `Resource` can reference the `Activity` that generated it via the wasGeneratedBy property.
+Use `Activity` to describe a research project, a statutory task performed under federal law, or any other organized activity conducted at the RKI. Activities provide essential context for datasets. A `Resource` can reference the `Activity` that generated it via the `wasGeneratedBy` property.
 
 `Activity` should not be confused with `Resource`, which describes the data itself. An `Activity` is the process or project that produced or is associated with data. A `Resource` is the dataset that resulted from or is used within that activity.
 
 Use `ExtractedActivity` when ingesting activity metadata from the primary source system such as a project database or HR system. Each extracted record represents the activity as described by that specific source.
 
-Use `MergedActivity` when referencing an activity from another entity, for example when linking a `Resource` to the project that generated it, when linken an `Activity` to a succeeding activity, or when consuming activity metadata in the catalogue.
+Use `MergedActivity` when referencing an activity from another entity, for example when linking a `Resource` to the project that generated it, when linking an `Activity` to a succeeding activity, or when consuming activity metadata in the catalog.
 
 ### Mandatory fields & expected values
 
@@ -100,7 +100,7 @@ Use `MergedActivity` when referencing an activity from another entity, for examp
 | identifierInPrimarySource | Extracted only | String | ID of this activity in the originating source system |
 | stableTargetId | Extracted only | Identifier | Reference to the corresponding MergedActivity identifier |
 
-### Schema Detail
+### Schema detail
 
 ```{mex-entity} Activity
 ```
@@ -109,14 +109,14 @@ Use `MergedActivity` when referencing an activity from another entity, for examp
 
 * Confusing `contact` and `responsibleUnit`: `contact` is a point of enquiry (unit, or contact point), while `responsibleUnit` specifically denotes organizational accountability. Both are mandatory and should not be used interchangeably.
 * Confusing `involvedPerson` and `contact`: persons involved in carrying out the activity belong in `involvedPerson`, while `contact` is for the unit a user should reach out to with questions.
-* Omitting `start` and `end`: while optional, these are important for catalogue discoverability and for understanding whether an activity is ongoing or concluded.
+* Omitting `start` and `end`: while optional, these are important for catalog discoverability and for understanding whether an activity is ongoing or concluded.
 * Using plain strings for `theme` or `activityType`: these require Concept URIs from their respective vocabularies, not free-text values.
 
 ### Example JSON instances
 
 #### Extracted Activity (representative, with commonly used optional fields)
 
-```JSON
+```json
 {
   "identifier": "abc123DefGhiJkl",
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
@@ -138,7 +138,7 @@ Use `MergedActivity` when referencing an activity from another entity, for examp
 
 #### Merged Activity
 
-```JSON
+```json
 {
   "identifier": "gglGQVGwZNJtqYDkW4N8jL",
   "title": [
@@ -166,7 +166,7 @@ Use `BibliographicResource` to describe any publication associated with RKI rese
 
 Use `ExtractedBibliographicResource` when ingesting publication metadata from a primary source such as a publication database or repository.
 
-Use `MergedBibliographicResource` when referencing a publication from another entity, or when consuming publication metadata in the catalogue.
+Use `MergedBibliographicResource` when referencing a publication from another entity, or when consuming publication metadata in the catalog.
 
 ### Mandatory fields & expected values
 
@@ -179,7 +179,7 @@ Use `MergedBibliographicResource` when referencing a publication from another en
 | hadPrimarySource | Extracted only | Identifier | Reference to a MergedPrimarySource identifier |
 | identifierInPrimarySource | Extracted only | String | ID of this bibliographic resource in the originating source system |
 
-### Schema Detail
+### Schema detail
 
 ```{mex-entity} BibliographicResource
 ```
@@ -193,7 +193,7 @@ Use `MergedBibliographicResource` when referencing a publication from another en
 
 #### Extracted BibliographicResource (representative, with commonly used optional fields)
 
-```JSON
+```json
 {
   "identifier": "pQr7sT2uVwXyZ9AbCdEfGh",
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
@@ -207,7 +207,7 @@ Use `MergedBibliographicResource` when referencing a publication from another en
 
 #### Merged BibliographicResource
 
-```JSON
+```json
 {
   "identifier": "mNoPqRsTuVwXyZ1234AbCd",
   "accessRestriction": "https://mex.rki.de/item/access-restriction-1",
@@ -233,9 +233,9 @@ Use `Consent` to document GDPR-relevant consent records associated with research
 
 Use `ExtractedConsent` when ingesting consent records from a primary source that manages participant consent.
 
-Use `MergedConsent` when referencing a consent record fom another entity or consuming it downstream.
+Use `MergedConsent` when referencing a consent record from another entity or consuming it downstream.
 
-### Mandatory fields & extracted values
+### Mandatory fields & expected values
 
 | Property | Variant | Type | Expected value |
 | --- | --- | --- | --- |
@@ -247,7 +247,7 @@ Use `MergedConsent` when referencing a consent record fom another entity or cons
 | identifierInPrimarySource | Extracted only | String | ID in primary source (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to the corresponding MergedConsent identifier |
 
-### Schema Detail
+### Schema detail
 
 ```{mex-entity} Consent
 ```
@@ -255,13 +255,13 @@ Use `MergedConsent` when referencing a consent record fom another entity or cons
 ### Common pitfalls
 
 * Conflating consent status with access restriction: consent is a GDPR-compliant declaration of a data subject's (an instance of `Person`) declaration. Access restriction on a `BibliographicResource`, `Resource` or `Distribution` indicates an access level of a resource or technical system. These are distinct and should not substitute for one another.
-* Conflicting `Consent` items: For every person item, there is a corresponding consent item. When person items are extracted from various primary source systems, duplicates of person items may occur. These may also have conflicting consent statuses. These items cannot be merged. For detailed information on the concept of GDPR-compliant consents, see Chapter XX. <PLACE CORRECT CHAPTER HERE>
+* Conflicting `Consent` items: For every person item, there is a corresponding consent item. When person items are extracted from various primary source systems, duplicates of person items may occur. These may also have conflicting consent statuses. These items cannot be merged. For detailed information on the concept of GDPR-compliant consents, see *(chapter reference to be added)*.
 
 ### Example JSON instances
 
-#### Extracted Consent (representative, with commonly used optional fields):
+#### Extracted Consent (representative, with commonly used optional fields)
 
-```JSON
+```json
 {
   "identifier": "xYz789AbCdEfGhIjKlMnOp",
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
@@ -275,7 +275,7 @@ Use `MergedConsent` when referencing a consent record fom another entity or cons
 
 #### Merged Consent
 
-```JSON
+```json
 {
   "identifier": "qRsTuVwXyZ1234AbCdEfGh",
   "hasConsentStatus": "https://mex.rki.de/item/consent-status-1",
@@ -308,7 +308,7 @@ Use `MergedContactPoint` when referencing a contact point from another entity su
 | identifierInPrimarySource | Extracted only | String | ID of the contact point in the originating source system (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to MergedContactPoint identifier |
 
-### Schema Detail
+### Schema detail
 
 ```{mex-entity} ContactPoint
 ```
@@ -321,7 +321,7 @@ Use `MergedContactPoint` when referencing a contact point from another entity su
 
 #### Extracted ContactPoint (representative, with commonly used optional fields)
 
-```JSON
+```json
 {
   "identifier": "nOpQrStUvWxYz1234AbCdE",
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
@@ -333,7 +333,7 @@ Use `MergedContactPoint` when referencing a contact point from another entity su
 
 #### Merged ContactPoint
 
-```JSON
+```json
 {
   "identifier": "hJKL9mNoPqRsTuVwXyZ123",
   "email": ["mex@rki.de"]
@@ -348,11 +348,11 @@ The `Distribution` entity describes a specific representation or downloadable fo
 
 Use `Distribution` to describe a specific file, format, or access form of a Resource, for example a CSV file, an API response, or a ZIP archive. A single Resource may have multiple `Distribution` items, one per format or access method.
 
-`Distribution` should not be confused with `AccessPlatform`. A `Distribution` is the artefact, the specific file or data representation. An `AccessPlatform` is the system through which it is served.
+`Distribution` should not be confused with `AccessPlatform`. A `Distribution` is the artifact, the specific file or data representation. An `AccessPlatform` is the system through which it is served.
 
 Use `ExtractedDistribution` when ingesting distribution metadata from a primary source system.
 
-Use `MergedDistribution` when referencing a distribution from a Resource or consuming distribution metadata in the catalogue or downstream systems.
+Use `MergedDistribution` when referencing a distribution from a Resource or consuming distribution metadata in the catalog or downstream systems.
 
 ### Mandatory fields & expected values
 
@@ -366,7 +366,7 @@ Use `MergedDistribution` when referencing a distribution from a Resource or cons
 | identifierInPrimarySource | Extracted only | String | ID of this distribution in the originating source system (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to MergedDistribution identifier |
 
-### Schema Detail
+### Schema detail
 
 ```{mex-entity} Distribution
 ```
@@ -374,13 +374,13 @@ Use `MergedDistribution` when referencing a distribution from a Resource or cons
 ### Common pitfalls
 
 * Creating one `Distribution` per dataset instead of per format: if a dataset is available in three formats, three `Distribution` records should exist, not one.
-* Confusing `accessURL` and `downloadURL`: `accessURL` points to a page where the distribution can be accessed. `downloadURL` points directly to the downloadable file. Both may be present simultaneously
+* Confusing `accessURL` and `downloadURL`: `accessURL` points to a page where the distribution can be accessed. `downloadURL` points directly to the downloadable file. Both may be present simultaneously.
 
 ### Example JSON instances
 
 #### Extracted Distribution (representative, with commonly used optional fields)
 
-```JSON
+```json
 {
   "identifier": "pQrStUvWxYz1234AbCdEfG",
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
@@ -395,7 +395,7 @@ Use `MergedDistribution` when referencing a distribution from a Resource or cons
 
 #### Merged Distribution
 
-```JSON
+```json
 {
   "identifier": "rStUvWxYzA1234AbCdEfGh",
   "accessUrl": ["https://example.org/datasets/abc/distribution.csv"],
@@ -427,7 +427,7 @@ Use `MergedLocation` when referencing a location from another entity such as an 
 | identifierInPrimarySource | Extracted only | String | ID of the location in the originating source system (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to MergedLocation identifier |
 
-### Schema Detail
+### Schema detail
 
 ```{mex-entity} Location
 ```
@@ -440,7 +440,7 @@ Use `MergedLocation` when referencing a location from another entity such as an 
 
 #### Extracted Location (representative, with commonly used optional fields)
 
-```JSON
+```json
 {
   "identifier": "cDeFgHiJkLmNoPqRsTuVwX",
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
@@ -454,7 +454,7 @@ Use `MergedLocation` when referencing a location from another entity such as an 
 
 #### Merged Location
 
-```JSON
+```json
 {
   "identifier": "yZaBcDeFgHiJkLmNoPq123",
   "name": [{"value": "Germany", "language": "en"}, {"value": "Deutschland", "language": "de"}],
@@ -487,21 +487,21 @@ Use `MergedOrganization` when referencing an external organization from another 
 | identifierInPrimarySource | Extracted only | String | ID of this organization in the originating source system (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to MergedOrganization identifier |
 
-### Schema Detail
+### Schema detail
 
 ```{mex-entity} Organization
 ```
 
 ### Common pitfalls
 
-* Using `Organization` for RKI units: internal RKI departments and units must be modelled as `OrganizationalUnit`, not `Organization`
+* Using `Organization` for RKI units: internal RKI departments and units must be modeled as `OrganizationalUnit`, not `Organization`.
 * Duplicating organizations across sources: the same external institution may appear in multiple source systems under slightly different names. Authority file identifiers (ROR, GND) should be used to enable deduplication.
 
 ### Example JSON instances
 
 #### Extracted Organization (representative, with commonly used optional fields)
 
-```JSON
+```json
 {
   "identifier": "mNoPqRsTuVwXyZ1234AbCd",
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
@@ -515,7 +515,7 @@ Use `MergedOrganization` when referencing an external organization from another 
 
 #### Merged Organization
 
-```JSON
+```json
 {
   "identifier": "tUvWxYzA1234AbCdEfGhIj",
   "officialName": ["Robert Koch-Institut"],
@@ -530,7 +530,7 @@ The `OrganizationalUnit` entity represents a department, team, or administrative
 
 ### When to use
 
-Use `OrganizationalUnit` to represent any internal RKI structural unit: a department, a reference centre, a working group, or a project team. Organizational units can be arranged in a hierarchy using the `parentUnit` and `unitOf` properties.
+Use `OrganizationalUnit` to represent any internal RKI structural unit: a department, a reference center, a working group, or a project team. Organizational units can be arranged in a hierarchy using the `parentUnit` and `unitOf` properties.
 
 `OrganizationalUnit` should not be confused with `Organization`, which represents external institutions. If the body is part of the RKI, use `OrganizationalUnit`.
 
@@ -548,7 +548,7 @@ Use `MergedOrganizationalUnit` when referencing an RKI unit from another entity,
 | identifierInPrimarySource | Extracted only | String | ID of this organization in the originating source system (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to MergedOrganizationalUnit identifier |
 
-### Schema Detail
+### Schema detail
 
 ```{mex-entity} OrganizationalUnit
 ```
@@ -556,13 +556,13 @@ Use `MergedOrganizationalUnit` when referencing an RKI unit from another entity,
 ### Common pitfalls
 
 * Confusing `OrganizationalUnit` with `Organization`: a recurring error, particularly for units with close external partnerships. The rule is simple: if it is part of the RKI, it is an `OrganizationalUnit`.
-* Not modelling the hierarchy: `parentUnit` and `unitOf` should be populated where the organizational hierarchy is known, as this is important for catalogue navigation.
+* Not modeling the hierarchy: `parentUnit` and `unitOf` should be populated where the organizational hierarchy is known, as this is important for catalog navigation.
 
 ### Example JSON instances
 
 #### Extracted OrganizationalUnit (representative, with commonly used optional fields)
 
-```JSON
+```json
 {
   "identifier": "aBcDeFgHiJkLmN1234OpQr",
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
@@ -576,7 +576,7 @@ Use `MergedOrganizationalUnit` when referencing an RKI unit from another entity,
 
 #### Merged OrganizationalUnit
 
-```JSON
+```json
 {
   "identifier": "cDeFgHiJkLmN1234OpQrSt",
   "officialName": [{"language": "en", "value": "Center for International Health Protection"}],
@@ -593,7 +593,7 @@ The `Person` entity represents an individual researcher, staff member, or named 
 
 Use `Person` to represent a named individual, for example a person involved in an activity, a dataset contributor, or a publication author. Person records are typically sourced from HR or directory systems and enriched with authority identifiers such as ORCID.
 
-Person should not be confused with `ContactPoint`, which represents a shared functional address rather than an individual. If the contact is role-based or shared, use `ContactPoint`. if it is a specific named person, use `Person`.
+`Person` should not be confused with `ContactPoint`, which represents a shared functional address rather than an individual. If the contact is role-based or shared, use `ContactPoint`. If it is a specific named person, use `Person`.
 
 Use `ExtractedPerson` when ingesting person metadata from a primary source.
 
@@ -608,7 +608,7 @@ Use `MergedPerson` when referencing an individual from another entity, for examp
 | identifierInPrimarySource | Extracted only | String | ID of this person in the originating source system |
 | stableTargetId | Extracted only | Identifier | Reference to the corresponding MergedPerson identifier |
 
-### Schema Detail
+### Schema detail
 
 ```{mex-entity} Person
 ```
@@ -617,13 +617,13 @@ Use `MergedPerson` when referencing an individual from another entity, for examp
 
 * Referencing persons by `name` string instead of `identifier`: all references to persons in other entities must use the `MergedPerson` identifier, not a name string.
 * Creating duplicate person records: the same individual may appear in multiple source systems. Authority identifiers (ORCID) should be used to support deduplication. Take care identifying different persons carrying the same name.
-* Confusing `Person` with `ContactPoint`: see decision guide above
+* Confusing `Person` with `ContactPoint`: see decision guide above.
 
 ### Example JSON instances
 
 #### Extracted Person (representative, with commonly used optional fields)
 
-```JSON
+```json
 {
   "identifier": "dEfGhIjKlMnOpQ1234RsTu",
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
@@ -637,7 +637,7 @@ Use `MergedPerson` when referencing an individual from another entity, for examp
 
 #### Merged Person
 
-```JSON
+```json
 {
   "identifier": "fGhIjKlMnOpQ1234RsTuVw",
   "fullName": ["Dr. Ada Lovelace"],
@@ -669,7 +669,7 @@ Use `MergedPrimarySource` when referencing the origin of an extracted record. Th
 | identifierInPrimarySource | Extracted only | String | ID of this primary source in the originating source system |
 | stableTargetId | Extracted only | Identifier | Reference to the corresponding MergedPrimarySource identifier |
 
-### Schema Detail
+### Schema detail
 
 ```{mex-entity} PrimarySource
 ```
@@ -677,14 +677,14 @@ Use `MergedPrimarySource` when referencing the origin of an extracted record. Th
 ### Common pitfalls
 
 * Confusing `PrimarySource` with the extracted entities it produces: the `PrimarySource` describes the system, not the data it contains.
-* Confusing `PrimarySource` with `AccessPlatform`: Whilst a `PrimarySource` can also be an `AccessPlatform`, an `AccessPlatform` is not necessarily the primary source for MEx metadata. A `PrimarySource` is a specific type of data service for MEx that serves as the sole source for metadata extraction. An `AccessPlatform` is used in conjunction with a user-side data service. It may be the case that the system used to access the data and the primary source for metadata extraction are one and the same, but even in this instance there would be two separate elements: a `PrimarySource` and an `AccessPlatform`.
+* Confusing `PrimarySource` with `AccessPlatform`: While a `PrimarySource` can also be an `AccessPlatform`, an `AccessPlatform` is not necessarily the primary source for MEx metadata. A `PrimarySource` is a specific type of data service for MEx that serves as the sole source for metadata extraction. An `AccessPlatform` is used in conjunction with a user-side data service. It may be the case that the system used to access the data and the primary source for metadata extraction are one and the same, but even in this instance there would be two separate elements: a `PrimarySource` and an `AccessPlatform`.
 * Leaving `hadPrimarySource` self-referential without documentation: the MEx system itself is its own primary source for `PrimarySource` records. This should be clearly documented in pipeline configurations.
 
-### Example JSON Instances
+### Example JSON instances
 
 #### Extracted PrimarySource (representative, with commonly used optional fields)
 
-```JSON
+```json
 {
   "identifier": "gHiJkLmNoPqRsT1234UvWx",
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
@@ -698,7 +698,7 @@ Use `MergedPrimarySource` when referencing the origin of an extracted record. Th
 
 #### Merged PrimarySource
 
-```JSON
+```json
 {
   "identifier": "iJkLmNoPqRsT1234UvWxYz",
   "officialName": ["Pathogen Database"],
@@ -707,19 +707,19 @@ Use `MergedPrimarySource` when referencing the origin of an extracted record. Th
 }
 ```
 
-### Resource
+## Resource
 
 The `Resource` entity is the central entity of the MEx model. It describes a dataset, data collection, or other research data asset. It corresponds to `dcat:Dataset`.
 
 ### When to use
 
-Use `Resource` to describe any research dataset or data collection produced or managed by the RKI, e.g. surveillance data, study data, registry data, or any other structured data asset. Resources are the central objects of discovery in the metadata catalogue.
+Use `Resource` to describe any research dataset or data collection produced or managed by the RKI, e.g. surveillance data, study data, registry data, or any other structured data asset. Resources are the central objects of discovery in the metadata catalog.
 
 A `Resource` describes the dataset as a whole. Its individual access forms or file representations are described as `Distribution` entities. The project or activity that produced it is described as an `Activity` linked via `wasGeneratedBy`. Individual data variables within it may be described as Variable entities.
 
 Use `ExtractedResource` when ingesting dataset metadata from a primary source system such as a data repository or research database.
 
-Use `MergedResource` when referencing a dataset from another entity, or when consuming dataset metadata in the catalogue.
+Use `MergedResource` when referencing a dataset from another entity, or when consuming dataset metadata in the catalog.
 
 ### Mandatory fields & expected values
 
@@ -735,7 +735,7 @@ Use `MergedResource` when referencing a dataset from another entity, or when con
 | identifierInPrimarySource | Extracted only | String | ID of this resource in the originating source system (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to MergedResource identifier |
 
-### Schema Detail
+### Schema detail
 
 ```{mex-entity} Resource
 ```
@@ -743,13 +743,13 @@ Use `MergedResource` when referencing a dataset from another entity, or when con
 ### Common pitfalls
 
 * Confusing `Resource` with `Distribution`: the `Resource` is the abstract dataset. `Distribution` describes its concrete representations. A `Resource` without any `Distribution` is valid but may limit discoverability.
-* Confusing `Resource` with `BibliographicalResource`: a publication about a dataset is a `BibliographicResource`. The dataset itself is a `Resource`.
+* Confusing `Resource` with `BibliographicResource`: a publication about a dataset is a `BibliographicResource`. The dataset itself is a `Resource`.
 
 ### Example JSON instances
 
-#### Extracted Resource (representative, with commonly used optional fields):
+#### Extracted Resource (representative, with commonly used optional fields)
 
-```JSON
+```json
 {
   "identifier": "kLmNoPqRsTuVwX1234YzAb",
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
@@ -765,7 +765,7 @@ Use `MergedResource` when referencing a dataset from another entity, or when con
 
 #### Merged Resource
 
-```JSON
+```json
 {
   "identifier": "mNoPqRsTuVwXyZ1234AbCd",
   "title": ["Surveillance dataset: Example indicators (2021–2024)"],
@@ -788,7 +788,7 @@ Use `ResourceSeries` to represent a named series of related datasets that are re
 
 Use `ExtractedResourceSeries` when ingesting series metadata from a primary source system.
 
-Use `MergedResourceSeries` when referencing a series from another entity or consuming series metadata in the catalogue.
+Use `MergedResourceSeries` when referencing a series from another entity or consuming series metadata in the catalog.
 
 ### Mandatory fields & expected values
 
@@ -803,7 +803,7 @@ Use `MergedResourceSeries` when referencing a series from another entity or cons
 
 All other properties are optional.
 
-### Schema Detail
+### Schema detail
 
 ```{mex-entity} ResourceSeries
 ```
@@ -812,10 +812,10 @@ All other properties are optional.
 
 * Confusing `ResourceSeries` with `Resource`: a `ResourceSeries` never describes data directly, it groups `Resource` entities. If the thing you are describing has distributions, variables, or access restrictions of its own, it is a `Resource`, not a `ResourceSeries`.
 * Not linking Resources to their series: a `ResourceSeries` is only useful if individual `Resource` entities reference it. Ensure the relationship is established from the resource side.
-* Omitting `start`/`end`: while optional, temporal coverage helps catalogue users understand whether the series is ongoing or concluded and what time span it covers.
+* Omitting `start`/`end`: while optional, temporal coverage helps catalog users understand whether the series is ongoing or concluded and what time span it covers.
 * Using `ResourceSeries` for one-off collections: if a group of datasets was released once and will not grow, consider whether a single `Resource` with multiple `Distribution` records is more appropriate.
 
-### Example JSON Instances
+### Example JSON instances
 
 #### Extracted ResourceSeries (representative, with commonly used optional fields)
 
@@ -843,7 +843,7 @@ All other properties are optional.
 }
 ```
 
-#### Merged ResourceSeries:
+#### Merged ResourceSeries
 
 ```json
 {
@@ -878,7 +878,7 @@ Use `Variable` to describe individual fields or variables within a `Resource`, p
 
 Use `ExtractedVariable` when ingesting variable-level metadata from a data dictionary or codebook in a primary source system.
 
-Use `MergedVariable` when referencing a variable from another entity or consuming variable metadata in the catalogue's dedicated variable search view.
+Use `MergedVariable` when referencing a variable from another entity or consuming variable metadata in the catalog's dedicated variable search view.
 
 ### Mandatory fields & expected values
 
@@ -891,7 +891,7 @@ Use `MergedVariable` when referencing a variable from another entity or consumin
 | identifierInPrimarySource | Extracted only | String | ID of this variable in the originating source system (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to MergedVariable identifier |
 
-### Schema Detail
+### Schema detail
 
 ```{mex-entity} Variable
 ```
@@ -899,13 +899,13 @@ Use `MergedVariable` when referencing a variable from another entity or consumin
 ### Common pitfalls
 
 * Confusing `Variable` with `VariableGroup`: individual fields belong in `Variable`. Use `VariableGroup` only to group related variables logically.
-* Not linking variables to their resource: a `Variable` should reference its parent `Resource` to be meaningful in the catalogue context.
+* Not linking variables to their resource: a `Variable` should reference its parent `Resource` to be meaningful in the catalog context.
 
 ### Example JSON instances
 
-#### Extracted Variable (representative, with commonly used optional fields):
+#### Extracted Variable (representative, with commonly used optional fields)
 
-```JSON
+```json
 {
   "identifier": "nOpQrStUvWxYzA1234BcDe",
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
@@ -919,9 +919,9 @@ Use `MergedVariable` when referencing a variable from another entity or consumin
 }
 ```
 
-#### Merged Variable:
+#### Merged Variable
 
-```JSON
+```json
 {
   "identifier": "pQrStUvWxYzA1234BcDeFg",
   "belongsTo": ["mPpRrTuVaWcYzB9145CdBw"],
@@ -944,7 +944,7 @@ Use `VariableGroup` when variables within a `Resource` can be meaningfully organ
 
 Use `ExtractedVariableGroup` when ingesting grouping structure from a data dictionary or codebook in a primary source system.
 
-Use `MergedVariableGroup` when referencing a variable group from another entity or consuming variable group metadata in the catalogue.
+Use `MergedVariableGroup` when referencing a variable group from another entity or consuming variable group metadata in the catalog.
 
 ### Mandatory fields & expected values
 
@@ -957,7 +957,7 @@ Use `MergedVariableGroup` when referencing a variable group from another entity 
 | identifierInPrimarySource | Extracted only | String | ID of this variable in the originating source system (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to MergedVariableGroup identifier |
 
-### Schema Detail
+### Schema detail
 
 ```{mex-entity} VariableGroup
 ```
@@ -969,9 +969,9 @@ Use `MergedVariableGroup` when referencing a variable group from another entity 
 
 ### Example JSON instances
 
-#### Extracted VariableGroup (representative, with commonly used optional fields):
+#### Extracted VariableGroup (representative, with commonly used optional fields)
 
-```JSON
+```json
 {
   "identifier": "qRsTuVwXyZ1234AbCdEfGh",
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
@@ -982,9 +982,9 @@ Use `MergedVariableGroup` when referencing a variable group from another entity 
 }
 ```
 
-#### Merged VariableGroup:
+#### Merged VariableGroup
 
-```JSON
+```json
 {
   "identifier": "sTuVwXyZ1234AbCdEfGhIj",
   "containedBy": ["mNoPqRsTuVwXyZ1234AbCd"],

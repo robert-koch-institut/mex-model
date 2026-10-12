@@ -1,20 +1,20 @@
-# How the Model Works
+# How the model works
 
 ## Where the model is used
 
-The MEx metadata model is not confined to a single application, but constitutes the backbone of multiple interconnected workflows across the MEx metadata management system. All components of the system that produce, process, or consume metadata might either be directly governed by the model or interfaces with a component that is. More precisely, the model is used in the following contexts:
+The MEx metadata model is not confined to a single application, but constitutes the backbone of multiple interconnected workflows across the MEx metadata management system. All components of the system that produce, process, or consume metadata are either directly governed by the model or interface with a component that is. More precisely, the model is used in the following contexts:
 
 * [mex-common](https://github.com/robert-koch-institut/mex-common): pydantic models: MEx is implemented as Python type definitions used by MEx components for validation and serialization
 * mex-assets & [mex-extractors](https://github.com/robert-koch-institut/mex-extractors): primary source mappings: ETL pipelines map source-system data to MEx entities when extracting metadata from primary systems
 * [mex-admin](https://github.com/robert-koch-institut/mex-admin) & [mex-editor](https://github.com/robert-koch-institut/mex-editor): the model defines available, required or optional fields for metadata editing
-* [mex-invenio](https://github.com/robert-koch-institut/mex-invenio): the catalogue renders and exposes metadata records in conformance to the MEx model
+* [mex-invenio](https://github.com/robert-koch-institut/mex-invenio): the catalog renders and exposes metadata records in conformance to the MEx model
 * repositories: usage in data repositories for structured metadata
 
 The following process diagram illustrates how these components relate within the overall MEx workflow:
 
 ![MEx metadata generation BPMN 2.0 workflow](img/mex-metadata-generation.png "MEx metadata generation BPMN 2.0 workflow")
 
-## namespaces & prefixes
+## Namespaces & prefixes
 
 | Prefix | Namespace | Used for |
 | --- | --- | --- |
@@ -35,15 +35,15 @@ The following process diagram illustrates how these components relate within the
 
 ## Repository layout & JSON file types
 
-The MEx metadata model is defined entirely as a set of JSON files, maintained in the [RKI MEx-Model](https://github.com/robert-koch-institut/mex-model) Github repository. This machine-readable form is the authoritative source of truth for the model, with the specification being a derived and expanded subordinate to it.
+The MEx metadata model is defined entirely as a set of JSON files, maintained in the [RKI MEx-Model](https://github.com/robert-koch-institut/mex-model) GitHub repository. This machine-readable form is the authoritative source of truth for the model, with the specification being a derived and expanded subordinate to it.
 
 The directory is divided into five subdirectories, each with a distinct role.
 
-These directories are not independent. Entities reference field types via `$ref`, link to vocabularies via the custom useScheme keyword, and are labelled by the i18n files. The extension/ directory adds display and grouping metadata that the JSON Schema format cannot express natively.
+These directories are not independent. Entities reference field types via `$ref`, link to vocabularies via the custom useScheme keyword, and are labeled by the i18n files. The extension/ directory adds display and grouping metadata that the JSON Schema format cannot express natively.
 
-![MMEx Github layout](img/mex-git-relations.png "MEx Github layout")
+![MEx GitHub layout](img/mex-git-relations.png "MEx GitHub layout")
 
-## Entities, Fields, Extensions, Vocabularies
+## Entities, fields, extensions, vocabularies
 
 ### Entities
 
@@ -90,13 +90,13 @@ The `fields/` directory contains three reusable atomic type definitions that are
 
 | Field | Description | Structure |
 | --- | --- | --- |
-| Identifier | A unique, opaque entity identifier | string matching `^[a-zA-Z0-9]{14,22}$, base62-encoded` |
+| Identifier | A unique, opaque entity identifier | base62-encoded string matching `^[a-zA-Z0-9]{14,22}$` |
 | Link | A URL with optional title and language tag | url (required), title (optional), language (optional) |
 | Text | A multilingual text value | value (required), language (optional) |
 
 This keeps entity files concise and ensures consistency for structural changes to a shared type to all entities using it.
 
-### Field Schema Detail
+### Field schema detail
 
 ```{mex-field} identifier
 ```
@@ -116,16 +116,16 @@ The `extension/` directory contains a single file, definition.json. This defines
 | --- | --- | --- |
 | useScheme | (MEx-specific) | Links a property to a controlled vocabulary concept scheme, identified by a URI matching `https://mex.rki.de/item/...` |
 | closeMatch | skos:closeMatch | Denotes a close semantic match between the MEx term and a term from an external ontology or data model |
-| exactMatch | skos:exactMatch | Denotes an exact semantic match between the MEx term and a term from an external ontology or data model. This annotation property is used i.e. in matching terms from controlled vocabularies. |
+| exactMatch | skos:exactMatch | Denotes an exact semantic match between the MEx term and a term from an external ontology or data model. This annotation property is used, e.g., when matching terms from controlled vocabularies. |
 
 These keywords are not part of the JSON Schema standard and will be ignored by generic JSON Schema validators. However, they are actively used within the MEx toolchain. Most notably, `useScheme` appears in entity schema files to link classification properties to their controlled vocabularies and is therefore integral to the model's behavior.
 
 ### Vocabularies
 
-The vocabularies/ directory contains the controlled value lists used by classification properties across entity types. Each vocabulary is a JSON file defining a named set of concepts, where every concept is identified by a URI of the form `https//mex.rki.de/item/...`
+The vocabularies/ directory contains the controlled value lists used by classification properties across entity types. Each vocabulary is a JSON file defining a named set of concepts, where every concept is identified by a URI of the form `https://mex.rki.de/item/...`
 An entity property references a vocabulary through the custom `useScheme` keyword:
 
-```JSON
+```json
 {
   "accessRestriction": {
     "useScheme": "https://mex.rki.de/item/access-restriction",
@@ -145,7 +145,7 @@ The `i18n/` directory contains JSON files that map property names to human-reada
 Controlled vocabularies in MEx serve as fixed reference lists for classification properties across entity types. Rather than accepting free-text input, properties that reference a vocabulary require a value in the form of a Concept URI. This is a stable, machine-readable identifier of the form `https://mex.rki.de/item/...` and ensures unambiguous, consistent classification that is both human-readable through the associated labels and ensures interoperability with external vocabulary systems.
 Within an entity schema, a property is linked to its vocabulary through the custom useScheme keyword, defined in `extension/definition.json`. The following example shows how the accessRestriction property on a Resource declares its vocabulary reference:
 
-```JSON
+```json
 {
   "accessRestriction": {
     "useScheme": "https://mex.rki.de/item/access-restriction",
@@ -166,9 +166,9 @@ Where a MEx vocabulary has an EU equivalent, values should be mappable to that e
 ### Why two variants exist
 
 Every entity type in MEx that originates from a primary source system exists in two distinct variants: an Extracted and a Merged variant. This is the architectural mechanism through which MEx achieves provenance traceability while simultaneously presenting a clean, consolidated view of metadata to consumers.
-The need the two-variant design addresses is standardization: a real-world object, such as a research activity or a person for example, may be described across multiple primary source systems simultaneously, each with different levels of metadata completeness, different identifiers and potentially conflicting values (e.g. different titles or project durations). Collapsing these descriptions into a single record at ingestion time would destroy the information about where each piece of metadata came from and make it impossible to reconstruct or audit the original source data.
+The two-variant design addresses a basic problem: a real-world object, such as a research activity or a person, may be described in several primary source systems at once, each with different levels of completeness, different identifiers and potentially conflicting values (e.g. different titles or project durations). Collapsing these descriptions into a single record at ingestion time would destroy the information about where each piece of metadata came from and make it impossible to reconstruct or audit the original source data.
 
-Beyond provenance, the two-variants are designed also to ensure addresses a practical the metadata's quality. Metadata as extracted directly from operational systems is frequently incomplete, inconsistently structured, or expressed in terms specific to that system, making it of limited use in a unified discovery context. The Merged variant provides the opportunity to enrich, normalize, and where necessary manually correct that data, producing a consolidated record that is usable across the RKI's metadata infrastructure.
+Beyond provenance, the two-variant design also addresses a practical concern: metadata quality. Metadata as extracted directly from operational systems is frequently incomplete, inconsistently structured, or expressed in terms specific to that system, making it of limited use in a unified discovery context. The Merged variant provides the opportunity to enrich, normalize, and where necessary manually correct that data, producing a consolidated record that is usable across the RKI's metadata infrastructure.
 This has direct implications for FAIR metadata principles. Findability requires consistent, searchable descriptions, which only the Merged layer can reliably provide. Interoperability requires a common structure and controlled vocabulary, enforced through the merging and normalization process. Reusability requires sufficient context and quality, achieved through the enrichment the Merged variant makes possible. Regarding this, the two-variant design is MEx's architectural response to the FAIR challenge at an institutional scale.
 
 ### Lifecycle
@@ -178,7 +178,7 @@ The lifecycle of a MEx entity follows a five-stage process chain:
 1. metadata is identified and mapped from the primary source data structure to the mex-model,
 2. extracted from primary systems and inserted into the standardized schema (mex-model),
 3. edited where necessary (using the MEx Editor),
-4. and finally published to make it findable (in the MEx metadata catalogue).
+4. and finally published to make it findable (in the MEx metadata catalog).
 5. metadata is changed/edited in the primary system and/or the MEx Editor
 
 The diagram above illustrates components involved at each stage.
@@ -189,7 +189,7 @@ The lifecycle begins at the primary source systems. Automated extractors retriev
 
 #### Stage 2: Storage and merging
 
-Extracted entities are written to a neo4j graph database, which serves as the central store for all MEx metadata ([mex-backend](https://github.com/robert-koch-institut/mex-backend)). The merging service consolidates Extracted entities that share a `stableTargetId` into a single Merged entity, applying priority rules per primary source for scalar properties, deduplicating array values, and flagging conflicts for manual resolution. The graph database exposes its contents via a FastAPI-based API, used both by the MEx editor and the metadata catalogue.
+Extracted entities are written to a neo4j graph database, which serves as the central store for all MEx metadata ([mex-backend](https://github.com/robert-koch-institut/mex-backend)). The merging service consolidates Extracted entities that share a `stableTargetId` into a single Merged entity, applying priority rules per primary source for scalar properties, deduplicating array values, and flagging conflicts for manual resolution. The graph database exposes its contents via a FastAPI-based API, used both by the MEx editor and the metadata catalog.
 
 #### Stage 3: Manual curation
 
@@ -197,17 +197,17 @@ The MEx editor connects directly to the graph database and provides a manual cur
 
 #### Stage 4: Publication
 
-Merged, curated metadata is published to the Metadata catalogue, which runs on Invenio. The catalogue exposes metadata via API and provides dedicated landing pages for datasets, projects, publications, and variables, with a dedicated search view for the latter. This is the layer at which metadata becomes findable to internal and, where applicable, external users.
+Merged, curated metadata is published to the Metadata catalog, which runs on Invenio. The catalog exposes metadata via API and provides dedicated landing pages for datasets, projects, publications, and variables, with a dedicated search view for the latter. This is the layer at which metadata becomes findable to internal and, where applicable, external users.
 The entire process chain is overseen by an orchestration and management layer responsible for scheduling, monitoring and controlling pipeline runs.
 
 #### Stage 5: Metadata updates / Stage 3.b
 
 When Metadata changes in the primary system, the changes are caught by the extractors and the updates will be present in the MEx metadata management system the next day. The records are not versioned in the graph database, but changes are tracked by the metadata catalog, where each change creates a new version of the metadata record.
-Metadata can also be edited and changed by using the MEx Editor. The MEx Editor introduces a rule-based editing mechanism, which is necessary to manage metadata provenance. The rules enable to switch on and off values. If a value is switched off, it will not be published to the metadata catalog. It is also possible to prevent the publication of values from the primary system. This causes, that no values from this primary system will be published, even if the values change in the primary system. The rules are enabled on the field-level, so the primary system can be switched off for a specific field.
+Metadata can also be edited and changed by using the MEx Editor. The MEx Editor uses rules to manage metadata provenance. A rule can switch individual values on or off; values that are switched off are not published to the metadata catalog. A rule can also block all values of a primary system for a field, so that none of its values are published, even when they change in the primary system. Rules apply per field.
 
 ### Merging rules and conflict resolution
 
-When the merging service processes Extracted items that share a `stableTargetId`, it combines them into a single Merged item. Merging items is a manual process. When there are conflicting values for a metadata field, a metadata manager decides, which values takes preference in the Merged item.
+When the merging service processes Extracted items that share a `stableTargetId`, it combines them into a single Merged item. Merging items is a manual process. When values for a field conflict, a metadata manager decides which value takes precedence in the Merged item.
 
 ## Identifier system
 
@@ -215,9 +215,9 @@ When the merging service processes Extracted items that share a `stableTargetId`
 
 Every entity in MEx is assigned a unique identifier upon creation. Identifiers follow a fixed format: they are base62-encoded strings of between 14 and 22 characters, drawn from the alphanumeric character set (`a-zA-Z0-9`). This is enforced by the pattern constraint (`^[a-zA-Z0-9]{14,22}$`) defined in `fields/identifier.json`.
 
-Identifier are intentionally opaque, they carry no embedded information about the entity type, origin or creation time. This is a deliberate design choice, an identifier's sole function is to uniquely and persistently reference a single entity within the MEx system.
+Identifiers are intentionally opaque, they carry no embedded information about the entity type, origin or creation time. This is a deliberate design choice, an identifier's sole function is to uniquely and persistently reference a single entity within the MEx system.
 
-There are 3 different type of identifiers in use for Extracted Entities:
+There are three different types of identifiers in use for Extracted entities:
 
 1. `identifierInPrimarySource`: records the identifier used for the object in the originating primary source system.
 2. `identifier`: identifier of the extracted item, serving as an MEx-internal reference.
@@ -230,8 +230,8 @@ Merged Entities only have one `identifier`, which is the `stableTargetId` of the
 Identifiers are generated by the MEx system and must not be constructed manually. Attempting to supply a self-constructed identifier, whether derived from a source system ID, a hash or any other internal input is not permitted and will result in an invalid record.
 The generation of identifiers follows a clear distinction between the two entity variants:
 
-* Extracted items receive a new identifier upon first each extraction. If the same item is extracted again in a subsequent pipeline run, the values are overwritten and the item keeps its identifier. The continuity of the item across runs is enabled by the `identifierInPrimarySource`, which guarantees the identification of the item in the primary system.
-* Each Extracted item carries a `stableTargetId`, that references the corresponding Merged item. The `stableTargetId` corresponds to the identifier of the Merged item. This `identifier` is persistent across pipeline runs and must be used to referencing an entity from another entity, for example when a `Resource` references its responsible `OrganizationalUnit`.
+* Extracted items receive a new identifier upon their first extraction. If the same item is extracted again in a subsequent pipeline run, the values are overwritten and the item keeps its identifier. The continuity of the item across runs is enabled by the `identifierInPrimarySource`, which guarantees the identification of the item in the primary system.
+* Each Extracted item carries a `stableTargetId`, that references the corresponding Merged item. The `stableTargetId` corresponds to the identifier of the Merged item. This `identifier` is persistent across pipeline runs and must be used when referencing an entity from another entity, for example when a `Resource` references its responsible `OrganizationalUnit`.
 
 ### Stability guarantees
 
