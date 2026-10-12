@@ -54,7 +54,7 @@ All other properties are optional.
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
   "identifierInPrimarySource": "platform-001",
   "stableTargetId": "gglGQVGwZNJtqYDkW4N8jL",
-  "technicalAccessibility": "https://mex.rki.de/item/technical-accessibility-1", #internal
+  "technicalAccessibility": "https://mex.rki.de/item/technical-accessibility-1", // internal
   "title": [{"value": "SurvStat API", "language": "en"}],
   "description": [{"value": "REST API providing access to infectious disease surveillance data.", "language": "en"}],
   "endpointURL": {"url": "https://survstat.rki.de/api/v2"},
@@ -67,7 +67,7 @@ All other properties are optional.
 ```JSON
 {
   "identifier": "gglGQVGwZNJtqYDkW4N8jL",
-  "technicalAccessibility": "https://mex.rki.de/item/technical-accessibility-1", #internal
+  "technicalAccessibility": "https://mex.rki.de/item/technical-accessibility-1", // internal
   "title": [{"value": "SurvStat API", "language": "en"}],
   "description": [{"value": "REST API providing access to infectious disease surveillance data.", "language": "en"}],
   "endpointURL": {"url": "https://survstat.rki.de/api/v2"},
@@ -880,10 +880,10 @@ Use `MergedVariable` when referencing a variable from another entity or consumin
 {
   "identifier": "pQrStUvWxYzA1234BcDeFg",
   "belongsTo": ["mPpRrTuVaWcYzB9145CdBw"],
-  "label": ["7-day incidence"],
+  "label": ["7-day incidence"],
   "description": ["Number of reported cases per 100,000 inhabitants over the last 7 days."],
-  "datatype": ["integer"],
-  "isUsedIn": ["mNoPqRsTuVwXyZ1234AbCd"]
+  "datatype": ["integer"],
+  "isUsedIn": ["mNoPqRsTuVwXyZ1234AbCd"]
 }
 ```
 
