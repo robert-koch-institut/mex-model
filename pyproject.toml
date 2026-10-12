@@ -41,11 +41,6 @@ context = 5
 show_error_codes = true
 strict = true
 
-# the sphinx extensions in `docs` are not part of the package and not type-checked
-[[tool.mypy.overrides]]
-module = ["schemas"]
-ignore_missing_imports = true
-
 [tool.pydantic-mypy]
 warn_untyped_fields = true
 

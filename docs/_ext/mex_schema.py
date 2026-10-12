@@ -5,60 +5,49 @@ Provides:
     {mex-field} fieldname     - renders a single field schema table
 """
 
+from pathlib import Path
 from typing import Any
 
 from docutils import nodes
-from docutils.parsers.rst import directives
 from sphinx.application import Sphinx
 from sphinx.util.docutils import SphinxDirective
 
 
-def _jsonschema_lines(directive: SphinxDirective, path: str) -> list[str]:
-    """Return `jsonschema` directive markup in the syntax of the current document.
+def _jsonschema_lines(path: str) -> list[str]:
+    """Return MyST markup rendering the given schema with the `jsonschema` directive.
 
-    `parse_text_to_nodes` uses the parser of the including document, so markdown
-    pages need MyST fence syntax instead of reStructuredText.
+    `parse_text_to_nodes` uses the parser of the including markdown page, so the
+    directive has to be written in MyST fence syntax instead of reStructuredText.
     """
-    if directive.env.doc2path(directive.env.docname).suffix == ".md":
-        return [f"```{{jsonschema}} {path}", ":encoding: utf8", "```", ""]
-    return [f".. jsonschema:: {path}", "   :encoding: utf8", ""]
+    return [f"```{{jsonschema}} {path}", ":encoding: utf8", "```", ""]
 
 
 class MExEntityDirective(SphinxDirective):
-    """Embed schema tables for a named entity.
+    """Embed the schema tables for a named entity.
+
+    Renders the extracted and merged variants, or the single schema of entities
+    without that distinction, like `Concept`.
 
     Usage in MyST markdown::
 
         ```{mex-entity} Resource
-        :variant: both
         ```
     """
 
     has_content = False
     required_arguments = 1
     optional_arguments = 0
-    option_spec = {
-        "variant": directives.unchanged,  # "extracted", "merged", "both", "single"
-    }
 
     def run(self) -> list[nodes.Node]:
-        entity = self.arguments[0].strip()
-        variant = self.options.get("variant", "both").strip().lower()
-
-        lines = []
-
-        if variant in ("both", "extracted"):
-            filename = f"extracted-{self._to_filename(entity)}.json"
-            lines += _jsonschema_lines(self, f"../mex/model/entities/{filename}")
-
-        if variant in ("both", "merged"):
-            filename = f"merged-{self._to_filename(entity)}.json"
-            lines += _jsonschema_lines(self, f"../mex/model/entities/{filename}")
-
-        if variant == "single":
-            filename = f"{self._to_filename(entity)}.json"
-            lines += _jsonschema_lines(self, f"../mex/model/entities/{filename}")
-
+        """Delegate to the `jsonschema` directive for every schema of the entity."""
+        filename = self._to_filename(self.arguments[0].strip())
+        paths = [
+            f"../mex/model/entities/{prefix}{filename}.json"
+            for prefix in ("extracted-", "merged-")
+        ]
+        if not Path(self.env.relfn2path(paths[0])[1]).is_file():
+            paths = [f"../mex/model/entities/{filename}.json"]
+        lines = [line for path in paths for line in _jsonschema_lines(path)]
         return self.parse_text_to_nodes("\n".join(lines))
 
     @staticmethod
@@ -84,15 +73,16 @@ class MExFieldDirective(SphinxDirective):
     has_content = False
     required_arguments = 1
     optional_arguments = 0
-    option_spec = {}
 
     def run(self) -> list[nodes.Node]:
+        """Delegate to the `jsonschema` directive for the field schema."""
         field = self.arguments[0].strip().lower()
-        lines = _jsonschema_lines(self, f"../mex/model/fields/{field}.json")
+        lines = _jsonschema_lines(f"../mex/model/fields/{field}.json")
         return self.parse_text_to_nodes("\n".join(lines))
 
 
 def setup(app: Sphinx) -> dict[str, Any]:
+    """Register the entity and field directives."""
     app.setup_extension("sphinx-jsonschema")
     app.add_directive("mex-entity", MExEntityDirective)
     app.add_directive("mex-field", MExFieldDirective)
