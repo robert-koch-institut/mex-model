@@ -79,6 +79,7 @@ Changes can result from:
 ## Vocabulary Detail
 
 The tables below are auto-generated from the vocabulary JSON files in the repository. Each table lists all concepts in the vocabulary with their label, identifier, and definition.
+
 ```{eval-rst}
 .. mexvocabularies:: ../mex/model/vocabularies
 ```

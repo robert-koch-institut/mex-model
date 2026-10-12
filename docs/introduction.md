@@ -13,7 +13,8 @@ The model exists within a broader standards landscape of DCAT 2.0, PROV-O, and H
 
 ## Structure of the specification
 
-The specification is organised into the following sections:
+The specification is organized into the following sections:
+
 | Section | What it covers | Audience |
 | --- | --- | --- |
 | How the Model Works | The Extracted/Merged entity pattern, the concept model, JSON Schema conventions, and the custom extension keywords (useScheme, sameAs, subPropertyOf). | Everyone. Read this first. |
@@ -22,7 +23,7 @@ The specification is organised into the following sections:
 | Mappings — HealthDCAT-AP | Background on HealthDCAT-AP and EHDS compliance, the current mapping table, gap analysis, and interim workarounds. | Integration developers, project leads. |
 | Controlled Vocabularies | Complete list of vocabularies, EU alignment status, and governance. | Data stewards, extractor developers. |
 | Validation Rules | Schema validation, vocabulary validation, cardinality rules, cross-entity validation, and obligation levels (MUST / SHOULD / MAY). | Extractor developers, Quality Assurance. |
-| Common Usage Patterns | Practical guidance: describing a dataset, linking entities, modelling organisational hierarchy, handling distributions, multilingual text, and change requests. | Data stewards, extractor developers. |
+| Common Usage Patterns | Practical guidance: describing a dataset, linking entities, modelling organizational hierarchy, handling distributions, multilingual text, and change requests. | Data stewards, extractor developers. |
 | Normative Status & Changelog | Version history and change log. | Everyone. |
 
 Sections are designed to be read independently. Cross-references point to related material where context would help, but no section assumes you have read the others. The exception is How the Model works, which introduces concepts used throughout.

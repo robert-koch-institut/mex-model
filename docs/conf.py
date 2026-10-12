@@ -10,19 +10,19 @@ sys.path.insert(0, str(Path(__file__).parent / "_ext"))
 # --- Extensions -----------------------------------------------------------
 
 extensions = [
-    "myst_parser",        # parse .md files
+    "myst_parser",  # parse .md files
     "sphinx-jsonschema",  # render JSON schemas as tables
-    "schemas",            # existing: .. mexschemas:: directive
-    "vocabularies",       # existing: .. mexvocabularies:: directive
-    "mex_schema",         # custom directives: {mex-entity}, {mex-field}
+    "schemas",  # existing: .. mexschemas:: directive
+    "vocabularies",  # existing: .. mexvocabularies:: directive
+    "mex_schema",  # custom directives: {mex-entity}, {mex-field}
 ]
 
 # --- MyST-Parser settings -------------------------------------------------
 
 myst_enable_extensions = [
-    "colon_fence",   # ::: directive syntax
-    "fieldlist",     # field lists in MD
-    "deflist",       # definition lists in MD
+    "colon_fence",  # ::: directive syntax
+    "fieldlist",  # field lists in MD
+    "deflist",  # definition lists in MD
 ]
 
 # Allow .md and .rst source files
@@ -46,6 +46,7 @@ html_theme_options = {
 templates_path = ["."]
 
 # --- sphinx-jsonschema monkey-patches (kept from original conf.py) ---------
+
 
 def _patched_sphinx_jsonschema_simpletype(self, schema):
     """Render the `useScheme` schema properties for every vocabulary type."""

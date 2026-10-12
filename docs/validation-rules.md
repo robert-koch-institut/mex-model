@@ -48,12 +48,12 @@ Properties that reference a controlled vocabulary declare this via the custom `u
 
 This means: the value of `technicalAccessibility` must be a valid Concept URI that belongs to the technical-accessibility vocabulary.
 
-### What validation checks:
+### What validation checks
 
 * The value must be a syntactically valid URL
 * The URI must exist as a concept in the vocabulary identified by the `useScheme` URI
 
-### What validation does not check at the schema level:
+### What validation does not check at the schema level
 
 JSON Schema validators do not natively understand `useScheme`, it is a custom keyword. Structural validation will confirm that the value is a string matching the concept identifier pattern, but verifying that the URI actually exists in the declared vocabulary requires an additional validation step. The MEx backend performs this check, standalone schema validation does not.
 
@@ -99,9 +99,9 @@ Every property that references another entity (e.g. `contact`, `distribution`, `
 
 Every Extracted entity has a `hadPrimarySource` field that must reference an existing `MergedPrimarySource`. This is the foundation of MEx's provenance tracking. If the primary source does not exist, the extracted record's origin cannot be established.
 
-### Behaviour on failure
+### Behavior on failure
 
-Cross-entity validation failures are not silent. The MEx backend rejects records with dangling references. The typical resolution is to ensure that referenced entities are loaded before the entities that reference them: first primary sources, then organisations and units, then resources and distributions.
+Cross-entity validation failures are not silent. The MEx backend rejects records with dangling references. The typical resolution is to ensure that referenced entities are loaded before the entities that reference them: first primary sources, then organizations and units, then resources and distributions.
 
 ## Obligation levels
 

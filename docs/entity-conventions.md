@@ -2,7 +2,7 @@
 
 Both the Extracted and Merged variants share the same set of descriptive properties. The Extracted variant additionally carries the four mandatory provenance properties (`identifier`, `hadPrimarySource`, `identifierInPrimarySource`, `stableTargetId`), while the Merged variant carries only `identifier` alongside descriptive properties. The Merged variant additionally includes `supersededBy`, which allows a deprecated or duplicate Merged entity to point to the preferred replacement.
 
-The Merged variant is the normalised, deduplicated record that consolidates descriptions from one or more primary sources. If a Merged entity has been superseded by another, e.g. following deduplication, the `supersededBy` property will point to the preferred replacement.
+The Merged variant is the normalized, deduplicated record that consolidates descriptions from one or more primary sources. If a Merged entity has been superseded by another, e.g. following deduplication, the `supersededBy` property will point to the preferred replacement.
 
 ## AccessPlatform
 
@@ -10,7 +10,7 @@ The AccessPlatform entity describes a technical system or service that provides 
 
 ### When to use
 
-Use `AccessPlatform` to describe any technical system, API, or service through which a dataset or distribution can be accessed. For example, a REST API, a file server, a database interface, or a web portal. The entity captures both the technical characteristics of the access mechanism and the organisational responsibility for it.
+Use `AccessPlatform` to describe any technical system, API, or service through which a dataset or distribution can be accessed. For example, a REST API, a file server, a database interface, or a web portal. The entity captures both the technical characteristics of the access mechanism and the organizational responsibility for it.
 
 `AccessPlatform` should not be confused with `Distribution`, which describes a specific representation or download of a dataset. An `AccessPlatform` is the system through which one or more distributions are made available. A `Distribution` is the artefact that is made available through it.
 
@@ -46,7 +46,7 @@ All other properties are optional.
 
 ### Example JSON Instances
 
-#### Extracted AccessPlatform (representative, with commonly used optional fields):
+#### Extracted AccessPlatform (representative, with commonly used optional fields)
 
 ```JSON
 {
@@ -62,12 +62,12 @@ All other properties are optional.
 }
 ```
 
-#### Merged AccessPlatform:
+#### Merged AccessPlatform
 
 ```JSON
 {
   "identifier": "gglGQVGwZNJtqYDkW4N8jL",
-  "technicalAccessibility": "https://mex.rki.de/item/technical-accessibility-1", #internal 
+  "technicalAccessibility": "https://mex.rki.de/item/technical-accessibility-1", #internal
   "title": [{"value": "SurvStat API", "language": "en"}],
   "description": [{"value": "REST API providing access to infectious disease surveillance data.", "language": "en"}],
   "endpointURL": {"url": "https://survstat.rki.de/api/v2"},
@@ -77,11 +77,11 @@ All other properties are optional.
 
 ## Activity
 
-The `Activity` entity describes any activity carried out by the RKI, whether it is a funded research project, a statutory surveillance task, or any other organised undertaking. It corresponds to `prov:Activity` and serves primarily to provide contextual information for `Resource` entities.
+The `Activity` entity describes any activity carried out by the RKI, whether it is a funded research project, a statutory surveillance task, or any other organized undertaking. It corresponds to `prov:Activity` and serves primarily to provide contextual information for `Resource` entities.
 
 ### When to use
 
-Use `Activity` to describe a research project, a statutory task performed under federal law, or any other organised activity conducted at the RKI. Activities provide essential context for datasets. A `Resource` can reference the `Activity` that generated it via the wasGeneratedBy property.
+Use `Activity` to describe a research project, a statutory task performed under federal law, or any other organized activity conducted at the RKI. Activities provide essential context for datasets. A `Resource` can reference the `Activity` that generated it via the wasGeneratedBy property.
 
 `Activity` should not be confused with `Resource`, which describes the data itself. An `Activity` is the process or project that produced or is associated with data. A `Resource` is the dataset that resulted from or is used within that activity.
 
@@ -109,14 +109,14 @@ Use `MergedActivity` when referencing an activity from another entity, for examp
 
 ### Common pitfalls
 
-* Confusing `contact` and `responsibleUnit`: `contact` is a point of enquiry (unit, or contact point), while `responsibleUnit` specifically denotes organisational accountability. Both are mandatory and should not be used interchangeably.
+* Confusing `contact` and `responsibleUnit`: `contact` is a point of enquiry (unit, or contact point), while `responsibleUnit` specifically denotes organizational accountability. Both are mandatory and should not be used interchangeably.
 * Confusing `involvedPerson` and `contact`: persons involved in carrying out the activity belong in `involvedPerson`, while `contact` is for the unit a user should reach out to with questions.
 * Omitting `start` and `end`: while optional, these are important for catalogue discoverability and for understanding whether an activity is ongoing or concluded.
 * Using plain strings for `theme` or `activityType`: these require Concept URIs from their respective vocabularies, not free-text values.
 
 ### Example JSON instances
 
-#### Extracted Activity (representative, with commonly used optional fields):
+#### Extracted Activity (representative, with commonly used optional fields)
 
 ```JSON
 {
@@ -138,7 +138,7 @@ Use `MergedActivity` when referencing an activity from another entity, for examp
 }
 ```
 
-#### Merged Activity:
+#### Merged Activity
 
 ```JSON
 {
@@ -194,7 +194,7 @@ Use `MergedBibliographicResource` when referencing a publication from another en
 
 ### Example JSON instances
 
-#### Extracted BibliographicResource (representative, with commonly used optional fields):
+#### Extracted BibliographicResource (representative, with commonly used optional fields)
 
 ```JSON
 {
@@ -208,7 +208,7 @@ Use `MergedBibliographicResource` when referencing a publication from another en
 }
 ```
 
-#### Merged BibliographicResource:
+#### Merged BibliographicResource
 
 ```JSON
 {
@@ -290,7 +290,7 @@ Use `MergedConsent` when referencing a consent record fom another entity or cons
 
 ## ContactPoint
 
-The `ContactPoint` entity represents a shared email address or contact channel for a team or organisational function. It corresponds to `vcard:Kind`.
+The `ContactPoint` entity represents a shared email address or contact channel for a team or organizational function. It corresponds to `vcard:Kind`.
 
 ### When to use
 
@@ -307,7 +307,7 @@ Use `MergedContactPoint` when referencing a contact point from another entity su
 | Property | Variant | Type | Expected value |
 | --- | --- | --- | --- |
 | identifier | Both | Identifier | Generated by MEx. Cannot be set manually. |
-| email | Both | Array of strings | At least one valid email address (minItems: 1)
+| email | Both | Array of strings | At least one valid email address (minItems: 1) |
 | hadPrimarySource | Extracted only | Identifier | Reference to MergedPrimarySource identifier |
 | identifierInPrimarySource | Extracted only | String | ID of the contact point in the originating source system (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to MergedContactPoint identifier |
@@ -324,7 +324,7 @@ Use `MergedContactPoint` when referencing a contact point from another entity su
 
 ### Example JSON instances
 
-#### Extracted ContactPoint (representative, with commonly used optional fields):
+#### Extracted ContactPoint (representative, with commonly used optional fields)
 
 ```JSON
 {
@@ -336,7 +336,7 @@ Use `MergedContactPoint` when referencing a contact point from another entity su
 }
 ```
 
-#### Merged ContactPoint:
+#### Merged ContactPoint
 
 ```JSON
 {
@@ -384,7 +384,7 @@ Use `MergedDistribution` when referencing a distribution from a Resource or cons
 
 ### Example JSON instances
 
-#### Extracted Distribution (representative, with commonly used optional fields):
+#### Extracted Distribution (representative, with commonly used optional fields)
 
 ```JSON
 {
@@ -399,7 +399,7 @@ Use `MergedDistribution` when referencing a distribution from a Resource or cons
 }
 ```
 
-#### Merged Distribution:
+#### Merged Distribution
 
 ```JSON
 {
@@ -417,13 +417,13 @@ The `Organization` entity describes an external institution, a legal or administ
 
 ### When to use
 
-Use `Organization` to represent an external institution, for example a funding body, a cooperating university, or an international partner organisation.
+Use `Organization` to represent an external institution, for example a funding body, a cooperating university, or an international partner organization.
 
 `Organization` should thus not be confused with `OrganizationalUnit`, which represents departments and units within the RKI. If the entity is part of the RKI, use `OrganizationalUnit`. If it is an external body, use `Organization`.
 
-Use `ExtractedOrganization` when ingesting external organisation metadata from a primary source, for example from Wikidata.
+Use `ExtractedOrganization` when ingesting external organization metadata from a primary source, for example from Wikidata.
 
-Use `MergedOrganization` when referencing an external organisation from another entity, such as the `funderOrComissioner` or `externalAssociate` of an `Activity`.
+Use `MergedOrganization` when referencing an external organization from another entity, such as the `funderOrCommissioner` or `externalAssociate` of an `Activity`.
 
 ### Mandatory fields & expected values
 
@@ -444,11 +444,11 @@ Use `MergedOrganization` when referencing an external organisation from another 
 ### Common pitfalls
 
 * Using `Organization` for RKI units: internal RKI departments and units must be modelled as `OrganizationalUnit`, not `Organization`
-* Duplicating organisations across sources: the same external institution may appear in multiple source systems under slightly different names. Authority file identifiers (ROR, GND) should be used to enable deduplication.
+* Duplicating organizations across sources: the same external institution may appear in multiple source systems under slightly different names. Authority file identifiers (ROR, GND) should be used to enable deduplication.
 
 ### Example JSON instances
 
-#### Extracted Organization (representative, with commonly used optional fields):
+#### Extracted Organization (representative, with commonly used optional fields)
 
 ```JSON
 {
@@ -462,7 +462,7 @@ Use `MergedOrganization` when referencing an external organisation from another 
 }
 ```
 
-#### Merged Organization:
+#### Merged Organization
 
 ```JSON
 {
@@ -479,11 +479,11 @@ The `OrganizationalUnit` entity represents a department, team, or administrative
 
 ### When to use
 
-Use `OrganizationalUnit` to represent any internal RKI structural unit: a department, a reference centre, a working group, or a project team. Organisational units can be arranged in a hierarchy using the `parentUnit` and `unitOf` properties.
+Use `OrganizationalUnit` to represent any internal RKI structural unit: a department, a reference centre, a working group, or a project team. Organizational units can be arranged in a hierarchy using the `parentUnit` and `unitOf` properties.
 
 `OrganizationalUnit` should not be confused with `Organization`, which represents external institutions. If the body is part of the RKI, use `OrganizationalUnit`.
 
-Use `ExtractedOrganizationalUnit` when ingesting unit metadata from a primary source such as a database or organisational directory.
+Use `ExtractedOrganizationalUnit` when ingesting unit metadata from a primary source such as a database or organizational directory.
 
 Use `MergedOrganizationalUnit` when referencing an RKI unit from another entity, for example as the `responsibleUnit` of an `Activity` or the `unitInCharge` of an `AccessPlatform`.
 
@@ -506,11 +506,11 @@ Use `MergedOrganizationalUnit` when referencing an RKI unit from another entity,
 ### Common pitfalls
 
 * Confusing `OrganizationalUnit` with `Organization`: a recurring error, particularly for units with close external partnerships. The rule is simple: if it is part of the RKI, it is an `OrganizationalUnit`.
-* Not modelling the hierarchy: `parentUnit` and `unitOf` should be populated where the organisational hierarchy is known, as this is important for catalogue navigation.
+* Not modelling the hierarchy: `parentUnit` and `unitOf` should be populated where the organizational hierarchy is known, as this is important for catalogue navigation.
 
 ### Example JSON instances
 
-#### Extracted OrganizationalUnit (representative, with commonly used optional fields):
+#### Extracted OrganizationalUnit (representative, with commonly used optional fields)
 
 ```JSON
 {
@@ -524,7 +524,7 @@ Use `MergedOrganizationalUnit` when referencing an RKI unit from another entity,
 }
 ```
 
-#### Merged OrganizationalUnit:
+#### Merged OrganizationalUnit
 
 ```JSON
 {
@@ -572,7 +572,7 @@ Use `MergedPerson` when referencing an individual from another entity, for examp
 
 ### Example JSON instances
 
-#### Extracted Person (representative, with commonly used optional fields):
+#### Extracted Person (representative, with commonly used optional fields)
 
 ```JSON
 {
@@ -586,7 +586,7 @@ Use `MergedPerson` when referencing an individual from another entity, for examp
 }
 ```
 
-#### Merged Person:
+#### Merged Person
 
 ```JSON
 {
@@ -634,7 +634,7 @@ Use `MergedPrimarySource` when referencing the origin of an extracted record. Th
 
 ### Example JSON Instances
 
-#### Extracted PrimarySource (representative, with commonly used optional fields):
+#### Extracted PrimarySource (representative, with commonly used optional fields)
 
 ```JSON
 {
@@ -648,7 +648,7 @@ Use `MergedPrimarySource` when referencing the origin of an extracted record. Th
 }
 ```
 
-#### Merged PrimarySource:
+#### Merged PrimarySource
 
 ```JSON
 {
@@ -716,7 +716,7 @@ Use `MergedResource` when referencing a dataset from another entity, or when con
 }
 ```
 
-#### Merged Resource:
+#### Merged Resource
 
 ```JSON
 {
@@ -771,7 +771,7 @@ All other properties are optional.
 
 ### Example JSON Instances
 
-#### Extracted ResourceSeries (representative, with commonly used optional fields):
+#### Extracted ResourceSeries (representative, with commonly used optional fields)
 
 ```json
 {
@@ -828,7 +828,7 @@ The `Variable` entity describes a single data variable within a resource, for ex
 
 Use `Variable` to describe individual fields or variables within a `Resource`, particularly where variable-level documentation is meaningful for data reuse, for example coded variables, measurement units, or variables with complex value ranges.
 
-`Variable` should not be confused with `VariableGroup`, which is a logical grouping of multiple variables. A `Variable` is the individual field. A `VariableGroup` is the container that organises related variables.
+`Variable` should not be confused with `VariableGroup`, which is a logical grouping of multiple variables. A `Variable` is the individual field. A `VariableGroup` is the container that organizes related variables.
 
 Use `ExtractedVariable` when ingesting variable-level metadata from a data dictionary or codebook in a primary source system.
 
@@ -893,7 +893,7 @@ The `VariableGroup` entity represents a logical grouping of `Variable` entities 
 
 ### When to use
 
-Use `VariableGroup` when variables within a `Resource` can be meaningfully organised into named groups, e.g. by instrument section, dataset table, topic, or measurement domain. It is optional and should only be used where grouping genuinely aids understanding of the dataset structure.
+Use `VariableGroup` when variables within a `Resource` can be meaningfully organized into named groups, e.g. by instrument section, dataset table, topic, or measurement domain. It is optional and should only be used where grouping genuinely aids understanding of the dataset structure.
 
 `VariableGroup` should not be confused with `Variable`. A `VariableGroup` is the container. Individual fields belong in `Variable` entities that reference the group.
 

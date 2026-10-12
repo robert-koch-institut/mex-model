@@ -4,7 +4,7 @@
 
 The MEx metadata model is not confined to a single application, but constitutes the backbone of multiple interconnected workflows across the MEx metadata management system. All components of the system that produce, process, or consume metadata might either be directly governed by the model or interfaces with a component that is. More precisely, the model is used in the following contexts:
 
-* [mex-common](https://github.com/robert-koch-institut/mex-common): pydantic models: MEx is implemented as Python type definitions used by MEx components for validation and serialisation
+* [mex-common](https://github.com/robert-koch-institut/mex-common): pydantic models: MEx is implemented as Python type definitions used by MEx components for validation and serialization
 * mex-assets & [mex-extractors](https://github.com/robert-koch-institut/mex-extractors): primary source mappings: ETL pipelines map source-system data to MEx entities when extracting metadata from primary systems
 * [mex-admin](https://github.com/robert-koch-institut/mex-editor) & [mex-editor](https://github.com/robert-koch-institut/mex-editor-ng): the model defines available, required or optional fields for metadata editing
 * [mex-invenio](https://github.com/robert-koch-institut/mex-invenio): the catalogue renders and exposes metadata records in conformance to the MEx model
@@ -81,7 +81,7 @@ The model currently defines these entity types:
 | Variable | Yes | A single data variable within a resource |
 | VariableGroup | Yes | A logical grouping of variables |
 
-For all entity types that carry the extracted/merged distinction, the two variants reflect the two stages of the MEx data lifecycle. Extracted entities contain metadata taken directly from their primary source system, without modification. The Merged entities represent the normalised (and possibly manually corrected) consolidation of that data, potentially drawing from multiple primary sources. `Concept` and `ConceptScheme` do not follow this pattern as they are not sourced from external systems, but define the controlled vocabulary structure used across the model.
+For all entity types that carry the extracted/merged distinction, the two variants reflect the two stages of the MEx data lifecycle. Extracted entities contain metadata taken directly from their primary source system, without modification. The Merged entities represent the normalized (and possibly manually corrected) consolidation of that data, potentially drawing from multiple primary sources. `Concept` and `ConceptScheme` do not follow this pattern as they are not sourced from external systems, but define the controlled vocabulary structure used across the model.
 
 ### Fields
 
@@ -97,9 +97,9 @@ This keeps entity files concise and ensures consistency for structural changes t
 
 ### Field Schema Detail
 
-```{mex-field} identifier  ```
-```{mex-field} link  ```
-```{mex-field} text  ```
+```{mex-field} identifier```
+```{mex-field} link```
+```{mex-field} text```
 
 ### Extension
 
@@ -111,7 +111,7 @@ The `extension/` directory contains a single file, definition.json. This defines
 | closeMatch | skos:closeMatch | Denotes a close semantic match between the MEx term and a term from an external ontology or data model |
 | exactMatch | skos:exactMatch | Denotes an exact semantic match between the MEx term and a term from an external ontology or data model. This annotation property is used i.e. in matching terms from controlled vocabularies. |
 
-These keywords are not part of the JSON Schema standard and will be ignored by generic JSON Schema validators. However, they are actively used within the MEx toolchain. Most notably, `useScheme` appears in entity schema files to link classification properties to their controlled vocabularies and is therefore integral to the model's behaviour.
+These keywords are not part of the JSON Schema standard and will be ignored by generic JSON Schema validators. However, they are actively used within the MEx toolchain. Most notably, `useScheme` appears in entity schema files to link classification properties to their controlled vocabularies and is therefore integral to the model's behavior.
 
 ### Vocabularies
 
@@ -150,7 +150,7 @@ Within an entity schema, a property is linked to its vocabulary through the cust
 The value provided for such a property at runtime must be a URI of a Concept that belongs to the declared ConceptScheme. This enables automated validation of the values used.
 Where MEx vocabularies correspond to established EU-level controlled vocabularies, such as EU Data Theme or IANA Media Types, MEx does not reference those external vocabularies directly. Instead, it maintains a local copy within the vocabulary/ directory of the repository, with its own Concept URIs. This is a deliberate design decision, primarily motivated by versioning control. By maintaining its own copy, MEx can update a vocabulary on its own schedule and ensure that the version in use at any given time is explicitly known and documented. A live reference to an external vocabulary, by contrast, would mean that changes made upstream, such as additions, deprecations, or restructuring of concept hierarchies, would take effect immediately and without a corresponding entry in the MEx changelog. This would possibly break existing records silently as validation routines would fail.
 
-However, this approach also introduces a maintenance burden. Local copies must be actively kept in sync with their upstream sources, and divergence can accumulate over time. This risk is particularly pronounced for large vocabularies, such as country lists, where upstream changes may be frequent and where outdated values in MEx could lead to incorrect or incomplete classifications. Crucially, this synchronisation is only reliable if upstream changes are well-documented in the external vocabulary's own changelog, which cannot always be guaranteed.
+However, this approach also introduces a maintenance burden. Local copies must be actively kept in sync with their upstream sources, and divergence can accumulate over time. This risk is particularly pronounced for large vocabularies, such as country lists, where upstream changes may be frequent and where outdated values in MEx could lead to incorrect or incomplete classifications. Crucially, this synchronization is only reliable if upstream changes are well-documented in the external vocabulary's own changelog, which cannot always be guaranteed.
 
 Where a MEx vocabulary has an EU equivalent, values should be mappable to that external vocabulary. The relevant mapping is maintained alongside the vocabulary definition in the vocabularies/ directory. A full list of all vocabularies, their URIs, the entity properties that reference them, and their EU equivalents where applicable, is provided in the corresponding chapter.
 
@@ -159,17 +159,17 @@ Where a MEx vocabulary has an EU equivalent, values should be mappable to that e
 ### Why two variants exist
 
 Every entity type in MEx that originates from a primary source system exists in two distinct variants: an Extracted and a Merged variant. This is the architectural mechanism through which MEx achieves provenance traceability while simultaneously presenting a clean, consolidated view of metadata to consumers.
-The need the two-variant design addresses is standardisation: a real-world object, such as a research activity or a person for example, may be described across multiple primary source systems simultaneously, each with different levels of metadata completeness, different identifiers and potentially conflicting values (e.g. different titles or project durations). Collapsing these descriptions into a single record at ingestion time would destroy the information about where each piece of metadata came from and make it impossible to reconstruct or audit the original source data.
+The need the two-variant design addresses is standardization: a real-world object, such as a research activity or a person for example, may be described across multiple primary source systems simultaneously, each with different levels of metadata completeness, different identifiers and potentially conflicting values (e.g. different titles or project durations). Collapsing these descriptions into a single record at ingestion time would destroy the information about where each piece of metadata came from and make it impossible to reconstruct or audit the original source data.
 
-Beyond provenance, the two-variants are designed also to ensure addresses a practical the metadata's quality. Metadata as extracted directly from operational systems is frequently incomplete, inconsistently structured, or expressed in terms specific to that system, making it of limited use in a unified discovery context. The Merged variant provides the opportunity to enrich, normalise, and where necessary manually correct that data, producing a consolidated record that is usable across the RKI's metadata infrastructure.
-This has direct implications for FAIR metadata principles. Findability requires consistent, searchable descriptions, which only the Merged layer can reliably provide. Interoperability requires a common structure and controlled vocabulary, enforced through the merging and normalisation process. Reusability requires sufficient context and quality, achieved through the enrichment the Merged variant makes possible. Regarding this, the two-variant design is MEx's architectural response to the FAIR challenge at an institutional scale.
+Beyond provenance, the two-variants are designed also to ensure addresses a practical the metadata's quality. Metadata as extracted directly from operational systems is frequently incomplete, inconsistently structured, or expressed in terms specific to that system, making it of limited use in a unified discovery context. The Merged variant provides the opportunity to enrich, normalize, and where necessary manually correct that data, producing a consolidated record that is usable across the RKI's metadata infrastructure.
+This has direct implications for FAIR metadata principles. Findability requires consistent, searchable descriptions, which only the Merged layer can reliably provide. Interoperability requires a common structure and controlled vocabulary, enforced through the merging and normalization process. Reusability requires sufficient context and quality, achieved through the enrichment the Merged variant makes possible. Regarding this, the two-variant design is MEx's architectural response to the FAIR challenge at an institutional scale.
 
 ### lifecycle
 
 The lifecycle of a MEx entity follows a five-stage process chain:
 
 1. metadata is identified and mapped from the primary source data structure to the mex-model,
-2. extracted from primary systems and inserted into the standardised schema (mex-model),
+2. extracted from primary systems and inserted into the standardized schema (mex-model),
 3. edited where necessary (using the MEx Editor),
 4. and finally published to make it findable (in the MEx metadata catalogue).
 5. metadata is changed/edited in the primary system and/or the MEx Editor
@@ -212,7 +212,7 @@ Identifier are intentionally opaque, they carry no embedded information about th
 
 There are 3 different type of identifiers in use for Extracted Entities:
 
-1. `identifierInPrimarySource`: records the identifier used for the object in the originating primary source system. 
+1. `identifierInPrimarySource`: records the identifier used for the object in the originating primary source system.
 2. `identifier`: identifier of the extracted item, serving as an MEx-internal reference.
 3. `stableTargetId`: the identifier of the corresponding merged item.
 

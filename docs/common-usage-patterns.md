@@ -14,13 +14,13 @@ A valid ExtractedResource requires the system-managed fields (`identifier`, `had
 | --- | --- |
 | accessRestriction | A Concept URI from the Access Restriction vocabulary. |
 | contact | At least one reference to a `MergedContactPoint` or `MergedOrganizationalUnit`. This is who a data consumer should reach out to. |
-|description | Free-text summary of what the dataset contains, how it was collected, and what it covers.  |
+| description | Free-text summary of what the dataset contains, how it was collected, and what it covers. |
 | keyword | Free-text tags, that describe the character/subject of resource. |
-| resourceCreationMethod | At least Concept URI from the Resource Creation Method vocabulary.  |
+| resourceCreationMethod | At least Concept URI from the Resource Creation Method vocabulary. |
 | title | At least one human-readable name. Use a Text object with a `language` tag (`de` or `en`). |
 | unitInCharge | At least one reference to the `MergedOrganizationalUnit` responsible for the dataset. |
 
-This is enough to pass schema validation, but it produces a sparse catalogue entry. A minimal record in this regard is sufficient for dataset discovery purposes, but lacks in-depth information, especially regarding the data's origin and its re-usabilty.
+This is enough to pass schema validation, but it produces a sparse catalogue entry. A minimal record in this regard is sufficient for dataset discovery purposes, but lacks in-depth information, especially regarding the data's origin and its re-usability.
 
 ### Well-Described Record
 
@@ -42,11 +42,11 @@ The following optional properties can be used to enrich the metadata description
 
 | Field | Use case |
 | --- | --- |
-| geopoliticalResolution |  A Concept URI from the Geopolitical Resolution vocabulary. |
+| geopoliticalResolution | A Concept URI from the Geopolitical Resolution vocabulary. |
 | healthCategory | At least one Concept URI from the Health Category vocabulary. The vocabulary compiles the categories of health data as defined by EHDS Article 51. Required for HealthDCAT-AP export. |
 | hasCodeValues | A list of free-text values can be given, which contain codes that derive from standardized coding systems like `ICD`, `SNOMED CT` and `LOINC`. |
 | hasCodingSystem | A Concept URI from the Coding System vocabulary. If the dataset uses `ICD`, `SNOMED CT`, `LOINC`, or other standard terminologies, state them here. |
-| minTypicalAge/maxTypicalAge | A numerical value indicating the minimum/maximun age of the individuals contained in the data. Especially used for population-based data. |
+| minTypicalAge/maxTypicalAge | A numerical value indicating the minimum/maximum age of the individuals contained in the data. Especially used for population-based data. |
 | numberOfRecords, numberOfUniqueIndividuals | Gives users a sense of scale before they request access. |
 | populationCoverage | A free-text description of the population that is covered by the data. Especially used for population-based data. |
 | spatial | A location indicating the geographical coverage of the data. |
@@ -67,7 +67,7 @@ If the dataset was produced by a research project or surveillance activity, link
 
 #### Responsible Unit
 
-`unitInCharge` identifies the organisational unit accountable for the dataset. This is always a reference to a `MergedOrganizationalUnit`, not to a person.
+`unitInCharge` identifies the organizational unit accountable for the dataset. This is always a reference to a `MergedOrganizationalUnit`, not to a person.
 
 ### Examples
 
@@ -123,9 +123,9 @@ If the dataset was produced by a research project or surveillance activity, link
 
 ## Linking entities
 
-MEx entities do not exist in isolation. A dataset has distributions, belongs to an activity, is maintained by an organisational unit, and has contact persons. Getting these cross-references right is essential for a coherent catalogue. This subsection covers the conventions.
+MEx entities do not exist in isolation. A dataset has distributions, belongs to an activity, is maintained by an organizational unit, and has contact persons. Getting these cross-references right is essential for a coherent catalogue. This subsection covers the conventions.
 
-### Golden Rule: Always refrence Merged IDs
+### Golden Rule: Always reference Merged IDs
 
 Every cross-entity reference points to a Merged identifier (`stableTargetId`), never to an Extracted identifier. This applies regardless of whether the referencing entity is itself Extracted or Merged.
 The reason is structural: multiple Extracted records from different source systems may describe the same real-world entity. They all share the same `stableTargetId`, which becomes the Merged record's identifier. By referencing the merged ID, the link survives deduplication. It does not matter which source system produced the target entity, or whether additional sources are added later.
@@ -155,14 +155,14 @@ A typical pattern:
 
 This separation is deliberate: the activity carries project-level metadata (funding, timeline, participants) while the resource carries dataset-level metadata (format, access, content description). A single activity can produce multiple resources, and a resource can potentially relate to more than one activity.
 
-### Linking Persons, Organisational Units, and Contact Points
+### Linking Persons, Organizational Units, and Contact Points
 
 MEx distinguishes three types of "who" entities. Using the right one is important:
 
 | Entity | Represents | Use when\Idots |
 | --- | --- | --- |
 | Person | A named individual | You need to credit someone by name (e.g. `involvedPerson` on an `Activity`, `creator` on a `BibliographicResource`). |
-| OrganizationalUnit | A team, department, or division within an organisation | You need to indicate organisational responsibility (e.g. `unitInCharge`, `responsibleUnit`). |
+| OrganizationalUnit | A team, department, or division within an organization | You need to indicate organizational responsibility (e.g. `unitInCharge`, `responsibleUnit`). |
 | ContactPoint | A reachable communication channel (typically an email address) | You need to tell a data consumer how to get in touch (e.g. `contact` on a `Resource`). |
 
 These are not interchangeable, even though some properties accept more than one type. The key distinctions:
@@ -198,22 +198,22 @@ Reading the references:
 
 No reference uses an Extracted identifier. Every link targets the Merged identifier of the target entity.
 
-## Modelling organisational hierarchy
+## Modelling organizational hierarchy
 
 ### Organization vs OrganizationalUnit
 
-MEx uses two separate entity types to represent organisational structure:
+MEx uses two separate entity types to represent organizational structure:
 
 | Entity | Represents | Examples |
 | --- | --- | --- |
 | Organization | A top-level legal entity | Robert Koch-Institut, Charité, WHO |
-| OrganizationalUnit | A subdivision within an organisation | FG 36, Abteilung 3, ZIG |
+| OrganizationalUnit | A subdivision within an organization | FG 36, Abteilung 3, ZIG |
 
 The distinction matters because most MEx properties that express responsibility (`unitInCharge`, `responsibleUnit`, `involvedUnit`) reference an `OrganizationalUnit`, not an `Organization`. The `Organization` entity appears primarily as a publisher or external associate.
 
 ### Expressing Parent/Child relationships
 
-Organisational hierarchy is modelled through the `parentUnit` property on `OrganizationalUnit`. It is a references to `MergedOrganizationalUnit` identifiers, expressing an upward link. 
+Organizational hierarchy is modelled through the `parentUnit` property on `OrganizationalUnit`. It is a references to `MergedOrganizationalUnit` identifiers, expressing an upward link.
 
 An `OrganizationalUnit` is linked to its `Organization` with `unitOf`.
 
@@ -233,7 +233,7 @@ A few conventions to keep in mind:
 
 ### What not to model
 
-Not every box on an org chart needs a corresponding `OrganizationalUnit` in MEx. Create an organisational unit only if:
+Not every box on an org chart needs a corresponding `OrganizationalUnit` in MEx. Create an organizational unit only if:
 
 * it appears as `unitInCharge`, `responsibleUnit`, or `involvedUnit` on at least one resource or activity, or
 * it is needed as an intermediate node to establish a correct hierarchy path.
