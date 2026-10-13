@@ -1,10 +1,10 @@
 # Common usage patterns
 
-This section collects practical guidance for the most frequent modeling tasks. It is aimed at data stewards and extractor developers who need to produce valid, well-structured MEx records. Where the advice refers to schema rules, the entity reference pages are the authoritative source. The patterns here are meant as shortcuts.
+This section collects practical guidance for the most frequent modelling tasks. It is aimed at data stewards and extractor developers who need to produce valid, well-structured MEx records. Where the advice refers to schema rules, the entity reference pages are the authoritative source. The patterns here are meant as shortcuts.
 
 ## Describing a dataset (Resource)
 
-Creating a Resource record is the most common starting point. A resource represents a single dataset, a data source (the entirety of the data collected for a specific purpose, e.g. surveillance of diseases), or a single sample or a collection of samples (e.g. biobank material) in the MEx catalog. Metadata consumers most likely will encounter the model through this entity first.
+Creating a Resource record is the most common starting point. A resource represents a single dataset, a data source (the entirety of the data collected for a specific purpose, e.g. surveillance of diseases), or a single sample or a collection of samples (e.g. biobank material) in the MEx catalogue. Metadata consumers most likely will encounter the model through this entity first.
 
 ### Minimal viable record
 
@@ -20,11 +20,11 @@ A valid ExtractedResource requires the system-managed fields (`identifier`, `had
 | title | At least one human-readable name. Use a Text object with a `language` tag (`de` or `en`). |
 | unitInCharge | At least one reference to the `MergedOrganizationalUnit` responsible for the dataset. |
 
-This is enough to pass schema validation, but it produces a sparse catalog entry. A minimal record in this regard is sufficient for dataset discovery purposes, but lacks in-depth information, especially regarding the data's origin and its re-usability.
+This is enough to pass schema validation, but it produces a sparse catalogue entry. A minimal record in this regard is sufficient for dataset discovery purposes, but lacks in-depth information, especially regarding the data's origin and its re-usability.
 
 ### Well-described record
 
-A record that is genuinely useful to someone searching the catalog to request access to the data should also include:
+A record that is genuinely useful to someone searching the catalogue to request access to the data should also include:
 
 :::{note}
 This list is still under revision.
@@ -32,8 +32,8 @@ This list is still under revision.
 
 | Field | Why it matters |
 | --- | --- |
-| accessPlatform | Reference to a `MergedAccessPlatform` if the data is available through a service or API. This is given for open data, where the data can be accessed through open data access services, e.g. Zenodo. Access platform can also be RKI internal data services, where access is restricted. These access platforms have their `technicalAccessibility` set to `internal` and will not be published to the public MEx metadata catalog. |
-| distribution | References to one or more `MergedDistribution` records that describe the concrete files or endpoints. Without this, the catalog entry has no actionable download or access link.  |
+| accessPlatform | Reference to a `MergedAccessPlatform` if the data is available through a service or API. This is given for open data, where the data can be accessed through open data access services, e.g. Zenodo. Access platform can also be RKI internal data services, where access is restricted. These access platforms have their `technicalAccessibility` set to `internal` and will not be published to the public MEx metadata catalogue. |
+| distribution | References to one or more `MergedDistribution` records that describe the concrete files or endpoints. Without this, the catalogue entry has no actionable download or access link.  |
 | hasLegalBasis | A free-text statement or a URL reference to the legal text/law that forms the basis for collecting the data. This is an important indicator for re-use options. |
 | hasPurpose |  At least one Concept URI from the Purpose vocabulary. Another important indicator for re-use options. |
 | provenance | A free-text statement describing the context of origin of the resource. This is mandatory in HealthDCAT-AP and therefore required for HealthDCAT-AP export. |
@@ -69,7 +69,7 @@ If the dataset was produced by a research project or surveillance activity, link
 
 #### Responsible unit
 
-`unitInCharge` identifies the organizational unit accountable for the dataset. This is always a reference to a `MergedOrganizationalUnit`, not to a person.
+`unitInCharge` identifies the organisational unit accountable for the dataset. This is always a reference to a `MergedOrganizationalUnit`, not to a person.
 
 ### Examples
 
@@ -125,7 +125,7 @@ If the dataset was produced by a research project or surveillance activity, link
 
 ## Linking entities
 
-MEx entities do not exist in isolation. A dataset has distributions, belongs to an activity, is maintained by an organizational unit, and has contact persons. Getting these cross-references right is essential for a coherent catalog. This subsection covers the conventions.
+MEx entities do not exist in isolation. A dataset has distributions, belongs to an activity, is maintained by an organisational unit, and has contact persons. Getting these cross-references right is essential for a coherent catalogue. This subsection covers the conventions.
 
 ### Golden rule: always reference Merged IDs
 
@@ -142,28 +142,29 @@ The relationship between Resource and Activities is expressed by `relatedActivit
 
 A typical pattern:
 
-* `Activity`: Influenza Surveillance Program 2020-2025
-  * `responsibleUnit` (`MergedOrganizationalUnit`): FG 36
-  * `involvedPerson` (`MergedPerson`): the project lead, e.g. leader of FG 36
-  * `start`: 2020-01-01
-  * `end`: 2025-12-31
-  * `funderOrCommissioner`: Horizon 2020
-* `Resource`: Meldedaten Influenza
-  * (links to the activity above)
-  * `unitInCharge` (`MergedOrganizationalUnit`): FG 36
-  * `contact` (`MergedContactPoint`): team inbox
-  * `distribution` (`MergedDistribution`): CSV export
+| Activity | | | Influenza Surveillance Programme 2020-2025 |
+| --- | --- | --- | --- |
+| | responsibleUnit | MergedOrganizationalUnit | FG 36 |
+| | involvedPerson | MergedPerson | the project lead, e.g. leader of FG 36 |
+| | start | | 2020-01-01 |
+| | end | | 2025-12-31 |
+| | funderOrCommissioner | | Horizon 2020 |
+| Resource | | | Meldedaten Influenza |
+| | (links to activity above) | | |
+| | unitInCharge | MergedOrganizationalUnit | FG 36 |
+| | contact | MergedContactPoint | team inbox |
+| | distribution | MergedDistribution | CSV export |
 
 This separation is deliberate: the activity carries project-level metadata (funding, timeline, participants) while the resource carries dataset-level metadata (format, access, content description). A single activity can produce multiple resources, and a resource can potentially relate to more than one activity.
 
-### Linking persons, organizational units, and contact points
+### Linking persons, organisational units, and contact points
 
 MEx distinguishes three types of "who" entities. Using the right one is important:
 
 | Entity | Represents | Use when… |
 | --- | --- | --- |
 | Person | A named individual | You need to credit someone by name (e.g. `involvedPerson` on an `Activity`, `creator` on a `BibliographicResource`). |
-| OrganizationalUnit | A team, department, or division within an organization | You need to indicate organizational responsibility (e.g. `unitInCharge`, `responsibleUnit`). |
+| OrganizationalUnit | A team, department, or division within an organisation | You need to indicate organisational responsibility (e.g. `unitInCharge`, `responsibleUnit`). |
 | ContactPoint | A reachable communication channel (typically an email address) | You need to tell a data consumer how to get in touch (e.g. `contact` on a `Resource`). |
 
 These are not interchangeable, even though some properties accept more than one type. The key distinctions:
@@ -172,7 +173,7 @@ These are not interchangeable, even though some properties accept more than one 
 * `contact` currently accepts `MergedOrganizationalUnit` and `MergedContactPoint`. The preferred target is a `ContactPoint` (a functional mailbox that survives staff changes).
 * `involvedPerson` accepts only `MergedPerson`. This is for named individuals who contributed to an activity.
 
-A common mistake is pointing contact at a person when a functional mailbox exists. Functional mailboxes are more stable and more appropriate for catalog consumers who want to request access to a dataset.
+A common mistake is pointing contact at a person when a functional mailbox exists. Functional mailboxes are more stable and more appropriate for catalogue consumers who want to request access to a dataset.
 
 #### Example: a fully linked resource set
 
@@ -199,22 +200,22 @@ Reading the references:
 
 No reference uses an Extracted identifier. Every link targets the Merged identifier of the target entity.
 
-## Modeling organizational hierarchy
+## Modelling organisational hierarchy
 
 ### Organization vs OrganizationalUnit
 
-MEx uses two separate entity types to represent organizational structure:
+MEx uses two separate entity types to represent organisational structure:
 
 | Entity | Represents | Examples |
 | --- | --- | --- |
 | Organization | A top-level legal entity | Robert Koch Institute, Charité, WHO |
-| OrganizationalUnit | A subdivision within an organization | FG 36, Abteilung 3, ZIG |
+| OrganizationalUnit | A subdivision within an organisation | FG 36, Abteilung 3, ZIG |
 
 The distinction matters because most MEx properties that express responsibility (`unitInCharge`, `responsibleUnit`, `involvedUnit`) reference an `OrganizationalUnit`, not an `Organization`. The `Organization` entity appears primarily as a publisher or external associate.
 
 ### Expressing parent/child relationships
 
-Organizational hierarchy is modeled through the `parentUnit` property on `OrganizationalUnit`. It is a reference to a `MergedOrganizationalUnit` identifier, expressing an upward link.
+Organisational hierarchy is modelled through the `parentUnit` property on `OrganizationalUnit`. It is a reference to a `MergedOrganizationalUnit` identifier, expressing an upward link.
 
 An `OrganizationalUnit` is linked to its `Organization` with `unitOf`.
 
@@ -234,12 +235,12 @@ A few conventions to keep in mind:
 
 ### What not to model
 
-Not every box on an org chart needs a corresponding `OrganizationalUnit` in MEx. Create an organizational unit only if:
+Not every box on an org chart needs a corresponding `OrganizationalUnit` in MEx. Create an organisational unit only if:
 
 * it appears as `unitInCharge`, `responsibleUnit`, or `involvedUnit` on at least one resource or activity, or
 * it is needed as an intermediate node to establish a correct hierarchy path.
 
-Administrative units that never appear in metadata references (e.g. a facilities management team that does not produce or own any datasets) do not need to exist in the catalog.
+Administrative units that never appear in metadata references (e.g. a facilities management team that does not produce or own any datasets) do not need to exist in the catalogue.
 
 ## Handling multiple distributions
 

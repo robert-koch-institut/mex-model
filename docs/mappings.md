@@ -11,7 +11,7 @@ MEx draws on two W3C Recommendations as its conceptual foundation:
 * DCAT 2.0: the Data Catalog Vocabulary, which provides the core classes Dataset, Distribution and DataService together with a rich set of metadata properties.
 * PROV-O: the Provenance Ontology, from which MEx inherits the notions of Activity and hadPrimarySource.
 
-MEx is not a strict DCAT serialization. It does not produce RDF, it does not mint namespace URIs for its own terms, and its JSON documents are validated with JSON Schema rather than SHACL. What it does instead is use DCAT and PROV-O as a conceptual vocabulary: The entity types and properties in MEx are designed so that a mapping back to DCAT is always possible, even where MEx has renamed a property for JSON convention or added constraints that go beyond the original specification.
+MEx is not a strict DCAT serialisation. It does not produce RDF, it does not mint namespace URIs for its own terms, and its JSON documents are validated with JSON Schema rather than SHACL. What it does instead is use DCAT and PROV-O as a conceptual vocabulary: The entity types and properties in MEx are designed so that a mapping back to DCAT is always possible, even where MEx has renamed a property for JSON convention or added constraints that go beyond the original specification.
 
 To make that relationship precise, every MEx entity class and every property is assigned one of three interoperability levels:
 
@@ -19,9 +19,9 @@ To make that relationship precise, every MEx entity class and every property is 
 | --- | --- | --- |
 | A | Adopted | Semantically identical to the corresponding DCAT or PROV-O term or a term from another standard. The only difference is the property name (JSON camelCase instead of a prefixed RDF URI). A round-trip conversion to DCAT is lossless. |
 | E | Extended | Based on a DCAT or PROV-O concept, but MEx adds constraints, narrows the range, or broadens the semantics beyond what the original standard defines. A conversion to DCAT is possible but may lose MEx-specific detail. |
-| P | Profile-specific | Defined by MEx with no direct counterpart in DCAT or PROV-O. These properties serve RKI-internal requirements — data-privacy tracking, variable-level descriptions, organizational hierarchy — that fall outside the scope of a general-purpose data-catalog vocabulary. |
+| P | Profile-specific | Defined by MEx with no direct counterpart in DCAT or PROV-O. These properties serve RKI-internal requirements — data-privacy tracking, variable-level descriptions, organisational hierarchy — that fall outside the scope of a general-purpose data-catalog vocabulary. |
 
-These levels are recorded in the JSON Schema files themselves via exactMatch (for A and E properties that correspond to an existing RDF predicate) and closeMatch (where a MEx property specializes a broader standard property). The properties exactMatch and closeMatch derive from the standard SKOS and are commonly used for mappings between schemas (see Simple Standard for Sharing Ontological Mappings - SSSOM). The entity reference pages in this specification include the level for every property, making it straightforward to assess how much a given entity can be exported to a standards-compliant DCAT catalog and what will require profile-specific handling.
+These levels are recorded in the JSON Schema files themselves via exactMatch (for A and E properties that correspond to an existing RDF predicate) and closeMatch (where a MEx property specialises a broader standard property). The properties exactMatch and closeMatch derive from the standard SKOS and are commonly used for mappings between schemas (see Simple Standard for Sharing Ontological Mappings - SSSOM). The entity reference pages in this specification include the level for every property, making it straightforward to assess how much a given entity can be exported to a standards-compliant DCAT catalogue and what will require profile-specific handling.
 
 ### Renamed properties
 
@@ -78,34 +78,34 @@ Not every DCAT 2.0 property has a counterpart in the MEx model. Some were omitte
 | dcat:version | Dataset, Distribution | Not yet implemented, planned for model v5.1. Versioning is currently handled outside the metadata model (e.g. at the repository or file-system level). |
 | dcat:versionNotes | Dataset | Omitted together with dcat:version. |
 | dcterms:conformsTo | Dataset, Distribution | planned for model v5 |
-| dcat:qualifiedRelation | Dataset | Not modeled. Inter-dataset relationships are expressed implicitly through shared Activity or PrimarySource references. |
-| dcat:servesDataset | DataService | Not modeled. The link between an AccessPlatform and the resources it exposes is captured from the resource side (accessPlatform on Resource) rather than from the service side. |
-| dcat:catalog | Catalog | MEx does not model a Catalog entity; the MEx system itself acts as the catalog. |
+| dcat:qualifiedRelation | Dataset | Not modelled. Inter-dataset relationships are expressed implicitly through shared Activity or PrimarySource references. |
+| dcat:servesDataset | DataService | Not modelled. The link between an AccessPlatform and the resources it exposes is captured from the resource side (accessPlatform on Resource) rather than from the service side. |
+| dcat:catalog | Catalog | MEx does not model a Catalog entity; the MEx system itself acts as the catalogue. |
 | dcat:record | CatalogRecord | No CatalogRecord entity exists. Record-level audit metadata (timestamps, provenance) is managed by the MEx backend, not exposed in the schema. |
 | foaf:homepage | Organization | Covered by the website property on Organization and PrimarySource, which serves the same purpose under a different name. |
 
 ### MEx-specific extensions beyond DCAT
 
-The properties below have no counterpart in DCAT 2.0 or PROV-O. They exist because the RKI metadata landscape includes concerns such as data-privacy consent, variable-level documentation, internal organizational hierarchy, and source-system traceability, that a general-purpose data-catalog vocabulary was never designed to address.
+The properties below have no counterpart in DCAT 2.0 or PROV-O. They exist because the RKI metadata landscape includes concerns such as data-privacy consent, variable-level documentation, internal organisational hierarchy, and source-system traceability, that a general-purpose data-catalog vocabulary was never designed to address.
 
 | MEx Property | MEx Entity | Description | Why DCAT Does Not Cover This |
 | --- | --- | --- | --- |
 | identifierInPrimarySource | All Extracted | The identifier of the item as it appears in the source system. | DCAT assumes a single catalog-issued identifier. MEx must track the original ID from each feeder system to support deduplication and provenance across dozens of independent sources. |
 | stableTargetId | All Extracted | Reference from an Extracted item to its Merged counterpart. | DCAT has no concept of an extract-then-merge pipeline. This property is the structural glue between the two lifecycle stages. |
 | technicalAccessibility | AccessPlatform | Whether the platform is reachable from inside the RKI network, externally, or both. | DCAT's DataService describes what an endpoint offers, not who can reach it on the network level. RKI needs this to distinguish intranet-only services from public APIs. |
-| activityType | Activity | Classification of the activity (e.g. surveillance, research project, administrative process). | PROV-O's Activity is deliberately type-agnostic. RKI requires a controlled vocabulary to categorize its projects for reporting and discovery. |
-| fundingProgram | Activity | Name of the funding program that finances the activity. | DCAT does not model funding. Research-metadata standards like CERIF or DataCite do, but MEx addresses this with a lightweight text property rather than importing an entire funding ontology. |
-| funderOrCommissioner | Activity | The organization that funds or commissions the activity. | Same rationale as fundingProgram: outside DCAT's scope, handled here with a simple reference rather than a dedicated funding entity. |
-| involvedPerson | Activity | Persons who participate in the activity beyond the responsible unit. | PROV-O offers prov:wasAssociatedWith, but MEx separates responsible unit (organizational accountability) from involved persons (individual contributors). DCAT has no equivalent distinction. |
-| involvedUnit | Activity | Organizational units that participate alongside the responsible unit. | Same distinction as above, at the unit level. |
-| hasConsentStatus | Consent | The GDPR consent status granted by a data subject. | DCAT does not address data-privacy consent. The Consent entity is modeled after the W3C Data Privacy Vocabulary (DPV) but formalized as a first-class MEx entity so that consent metadata travels with the dataset it governs. |
+| activityType | Activity | Classification of the activity (e.g. surveillance, research project, administrative process). | PROV-O's Activity is deliberately type-agnostic. RKI requires a controlled vocabulary to categorise its projects for reporting and discovery. |
+| fundingProgram | Activity | Name of the funding programme that finances the activity. | DCAT does not model funding. Research-metadata standards like CERIF or DataCite do, but MEx addresses this with a lightweight text property rather than importing an entire funding ontology. |
+| funderOrCommissioner | Activity | The organisation that funds or commissions the activity. | Same rationale as fundingProgram: outside DCAT's scope, handled here with a simple reference rather than a dedicated funding entity. |
+| involvedPerson | Activity | Persons who participate in the activity beyond the responsible unit. | PROV-O offers prov:wasAssociatedWith, but MEx separates responsible unit (organisational accountability) from involved persons (individual contributors). DCAT has no equivalent distinction. |
+| involvedUnit | Activity | Organisational units that participate alongside the responsible unit. | Same distinction as above, at the unit level. |
+| hasConsentStatus | Consent | The GDPR consent status granted by a data subject. | DCAT does not address data-privacy consent. The Consent entity is modelled after the W3C Data Privacy Vocabulary (DPV) but formalised as a first-class MEx entity so that consent metadata travels with the dataset it governs. |
 | hasDataSubject | Consent | The person who granted or withdrew consent. | Part of the same privacy-tracking requirement. DCAT's access-rights vocabulary stops at "restricted / public" and does not track individual consent records. |
 | isIndicatedAtTime | Consent | Timestamp at which consent was recorded. | No DCAT property captures the moment a privacy decision was made. |
 | variable | Resource | References to Variable entities that describe the columns or fields in the dataset. | Maps to CSVW in HealthDCAT-AP |
-| variableGroup | Resource | References to VariableGroup entities that organize variables into logical clusters. |  Maps to CSVW Table in HealthDCAT-AP |
+| variableGroup | Resource | References to VariableGroup entities that organise variables into logical clusters. |  Maps to CSVW Table in HealthDCAT-AP |
 | label | VariableGroup | The name of a variable group. | VariableGroup itself has no DCAT equivalent, so its properties are inherently profile-specific. |
 | containedBy | VariableGroup | Back-reference to the Resource the group belongs to. | Inverse navigation link within the MEx-specific variable hierarchy. |
-| isPartOf | OrganizationalUnit | Reference to the parent organization or unit. | While org:subOrganizationOf exists in the W3C Organization Ontology, MEx uses its own reference mechanism (MEx identifiers rather than RDF URIs) and sameAs / subPropertyOf annotations to record the correspondence. The property is classified E at the entity-class level but P in terms of serialization, because a standards-compliant consumer would need MEx-specific logic to resolve the reference. |
+| isPartOf | OrganizationalUnit | Reference to the parent organisation or unit. | While org:subOrganizationOf exists in the W3C Organization Ontology, MEx uses its own reference mechanism (MEx identifiers rather than RDF URIs) and sameAs / subPropertyOf annotations to record the correspondence. The property is classified E at the entity-class level but P in terms of serialisation, because a standards-compliant consumer would need MEx-specific logic to resolve the reference. |
 | doi | BibliographicResource | Digital Object Identifier. | DCAT uses dcterms:identifier as a generic bucket. MEx separates DOI into its own property so that extractors and validators can enforce the DOI syntax without ambiguity. |
 | isbnIssn | BibliographicResource | ISBN or ISSN of the publication. | Same rationale as doi: a typed identifier field that would be lost in DCAT's generic dcterms:identifier. |
 
@@ -115,13 +115,13 @@ The MEx team adds a profile-specific property only when the requirement cannot b
 
 ### Background
 
-HealthDCAT-AP is a domain-specific extension of DCAT-AP, the European application profile of DCAT, designed for health data catalogs. It was developed in the context of the European Health Data Space (EHDS), where it serves as the metadata standard that national health data catalogs are expected to conform to. For RKI, aligning with HealthDCAT-AP is not purely a matter of best practice. It is a regulatory trajectory that affects how German public-health datasets will need to be described and published at the European level.
+HealthDCAT-AP is a domain-specific extension of DCAT-AP, the European application profile of DCAT, designed for health data catalogues. It was developed in the context of the European Health Data Space (EHDS), where it serves as the metadata standard that national health data catalogues are expected to conform to. For RKI, aligning with HealthDCAT-AP is not purely a matter of best practice. It is a regulatory trajectory that affects how German public-health datasets will need to be described and published at the European level.
 
 HealthDCAT-AP builds on DCAT-AP's foundation and adds elements specific to the health domain.
 
 * Sensitivity classification: properties for marking datasets according to their data-protection sensitivity, beyond the generic dcterms:accessRights that DCAT provides.
 * Legal basis: structured fields for recording the legal grounds under which health data may be accessed or reused (e.g. GDPR Article 6 / Article 9 bases, national legislation).
-* Health terminologies: support for referencing domain-standard code systems such as ICD-10/11, SNOMED CT, ATC, LOINC, and others, so that datasets can be described in terms that clinical and epidemiological users recognize.
+* Health terminologies: support for referencing domain-standard code systems such as ICD-10/11, SNOMED CT, ATC, LOINC, and others, so that datasets can be described in terms that clinical and epidemiological users recognise.
 * Quality annotations: mechanisms for attaching data-quality indicators (completeness, timeliness, methodological documentation) to datasets and distributions.
 * Access procedures: metadata describing how a researcher or institution can request access to a dataset, including the expected turnaround, required approvals, and applicable fees.
 
@@ -129,5 +129,5 @@ MEx's approach to HealthDCAT-AP is selective adoption. Where a HealthDCAT-AP con
 
 :::{admonition} Work in progress
 :class: note
-The HealthDCAT-AP alignment is under active development, as is HealthDCAT-AP itself. A mapping table, gap analysis, and workaround documentation will be added to this section once the model updates are stabilized. The canonical status of each property is tracked via the branches ingested into MEx.
+The HealthDCAT-AP alignment is under active development, as is HealthDCAT-AP itself. A mapping table, gap analysis, and workaround documentation will be added to this section once the model updates are stabilised. The canonical status of each property is tracked via the branches ingested into MEx.
 :::

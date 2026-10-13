@@ -99,9 +99,9 @@ Every property that references another entity (e.g. `contact`, `distribution`, `
 
 Every Extracted entity has a `hadPrimarySource` field that must reference an existing `MergedPrimarySource`. This is the foundation of MEx's provenance tracking. If the primary source does not exist, the extracted record's origin cannot be established.
 
-### Behavior on failure
+### Behaviour on failure
 
-Cross-entity validation failures are not silent. The MEx backend rejects records with dangling references. The typical resolution is to ensure that referenced entities are loaded before the entities that reference them: first primary sources, then organizations and units, then resources and distributions.
+Cross-entity validation failures are not silent. The MEx backend rejects records with dangling references. The typical resolution is to ensure that referenced entities are loaded before the entities that reference them: first primary sources, then organisations and units, then resources and distributions.
 
 ## Obligation levels
 
@@ -117,4 +117,4 @@ In practice:
 
 * Schema validation covers all MUST requirements. If a record passes schema validation, it satisfies every absolute structural constraint.
 * SHOULD requirements are documented in the entity reference pages and in the usage patterns above. Treat them as mandatory unless you have a specific reason not to. They often reflect upcoming cardinality changes or HealthDCAT-AP alignment requirements.
-* MAY requirements are opportunities for enrichment. Populating optional fields improves discoverability and export quality but is never required for a record to enter the catalog.
+* MAY requirements are opportunities for enrichment. Populating optional fields improves discoverability and export quality but is never required for a record to enter the catalogue.
