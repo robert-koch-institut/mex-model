@@ -30,7 +30,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `Resource.wasGeneratedBy`
 - wrap single-string `exactMatch` values of concepts in the `language`,
   `health-category` and `resource-creation-method` vocabularies in arrays
-- remove `closeMatch` from concepts, which the concept schema does not allow:
+- move `closeMatch` URIs of concepts, which the concept schema does not allow,
+  into their `exactMatch` arrays to keep the external references:
   `bibliographic-resource-type-4`, `bibliographic-resource-type-5`,
   `resource-creation-method-5` and `resource-creation-method-21`
 - fix the `useScheme` pattern in `extension/definition.json` to match the
