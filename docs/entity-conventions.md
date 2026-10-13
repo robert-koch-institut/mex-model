@@ -36,31 +36,15 @@ Use `AccessPlatform` to describe any technical system, API, or service through w
 
 ### Example JSON Instances
 
-#### Extracted AccessPlatform (representative, with commonly used optional fields):
+#### Merged AccessPlatform
 
 ```JSON
 {
-  "identifier": "dYb6qKqjdpocTAUEPPTTj2",
-  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
-  "identifierInPrimarySource": "platform-001",
-  "stableTargetId": "gglGQVGwZNJtqYDkW4N8jL",
-  "technicalAccessibility": "https://mex.rki.de/item/technical-accessibility-1", #internal
-  "title": [{"value": "SurvStat API", "language": "en"}],
   "description": [{"value": "REST API providing access to infectious disease surveillance data.", "language": "en"}],
   "endpointURL": {"url": "https://survstat.rki.de/api/v2"},
-  "unitInCharge": ["hJKL9mNoPqRsTuVwXyZ123"]
-}
-```
-
-#### Merged AccessPlatform:
-
-```JSON
-{
   "identifier": "gglGQVGwZNJtqYDkW4N8jL",
   "technicalAccessibility": "https://mex.rki.de/item/technical-accessibility-1", #internal
   "title": [{"value": "SurvStat API", "language": "en"}],
-  "description": [{"value": "REST API providing access to infectious disease surveillance data.", "language": "en"}],
-  "endpointURL": {"url": "https://survstat.rki.de/api/v2"},
   "unitInCharge": ["hJKL9mNoPqRsTuVwXyZ123"]
 }
 ```
@@ -90,43 +74,21 @@ Use `Activity` to describe a research project, a statutory task performed under 
 
 ### Example JSON instances
 
-#### Extracted Activity (representative, with commonly used optional fields):
+#### Merged Activity
 
 ```JSON
 {
-  "identifier": "abc123DefGhiJkl",
-  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
-  "identifierInPrimarySource": "PRJ-2024-0042",
-  "stableTargetId": "gglGQVGwZNJtqYDkW4N8jL",
-  "title": [
-    {"value": "COVID-19 Surveillance", "language": "en"},
-    {"value": "COVID-19-Surveillance", "language": "de"}
-  ],
-  "contact": ["cKMPkdHHTky6TF6hqMdbe7"],
-  "responsibleUnit": ["hJKL9mNoPqRsTuVwXyZ123"],
   "activityType": ["https://mex.rki.de/item/activity-type-1"],
-  "theme": ["https://mex.rki.de/item/theme-11"],
-  "start": ["2020-03"],
+  "contact": ["cKMPkdHHTky6TF6hqMdbe7"],
   "end": ["2024-12-31"],
-  "fundingProgram": ["BMBF"]
-}
-```
-
-#### Merged Activity:
-
-```JSON
-{
   "identifier": "gglGQVGwZNJtqYDkW4N8jL",
+
+  "responsibleUnit": ["hJKL9mNoPqRsTuVwXyZ123"],
+  "start": ["2020-03"],
   "title": [
     {"value": "COVID-19 Surveillance", "language": "en"},
     {"value": "COVID-19-Surveillance", "language": "de"}
-  ],
-  "contact": ["cKMPkdHHTky6TF6hqMdbe7"],
-  "responsibleUnit": ["hJKL9mNoPqRsTuVwXyZ123"],
-  "activityType": ["https://mex.rki.de/item/activity-type-1"],
-  "theme": ["https://mex.rki.de/item/theme-11"],
-  "start": ["2020-03"],
-  "end": ["2024-12-31"]
+  ]
 }
 ```
 
@@ -153,21 +115,7 @@ Use `BibliographicResource` to describe any publication associated with RKI rese
 
 ### Example JSON instances
 
-#### Extracted BibliographicResource (representative, with commonly used optional fields):
-
-```JSON
-{
-  "identifier": "pQr7sT2uVwXyZ9AbCdEfGh",
-  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
-  "identifierInPrimarySource": "PUB-2022-0849",
-  "stableTargetId": "mNoPqRsTuVwXyZ1234AbCd",
-  "accessRestriction": "https://mex.rki.de/item/access-restriction-1",
-  "title": [{"value": "Epidemiological characterisation of SARS-CoV-2 variants in Germany", "language": "en"}],
-  "creator": ["cKMPkdHHTky6TF6hqMdbe7"]
-}
-```
-
-#### Merged BibliographicResource:
+#### Merged BibliographicResource
 
 ```JSON
 {
@@ -282,20 +230,6 @@ Use `Consent` to document GDPR-relevant consent records associated with research
 
 ### Example JSON instances
 
-#### Extracted Consent (representative, with commonly used optional fields):
-
-```JSON
-{
-  "identifier": "xYz789AbCdEfGhIjKlMnOp",
-  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
-  "identifierInPrimarySource": "CONSENT-2022-09-30-0001",
-  "stableTargetId": "qRsTuVwXyZ1234AbCdEfGh",
-  "hasConsentStatus": "https://mex.rki.de/item/consent-status-1",
-  "hasDataSubject": "cKMPkdHHTky6TF6hqMdbe7",
-  "isIndicatedAtTime": "2022-09-30T20:48:35Z"
-}
-```
-
 #### Merged Consent
 
 ```JSON
@@ -329,19 +263,7 @@ Use `ContactPoint` when a contact for an entity is a shared functional address, 
 
 ### Example JSON instances
 
-#### Extracted ContactPoint (representative, with commonly used optional fields):
-
-```JSON
-{
-  "identifier": "nOpQrStUvWxYz1234AbCdE",
-  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
-  "identifierInPrimarySource": "CP-TEAM-INBOX-001",
-  "stableTargetId": "hJKL9mNoPqRsTuVwXyZ123",
-  "email": ["mex@rki.de"]
-}
-```
-
-#### Merged ContactPoint:
+#### Merged ContactPoint
 
 ```JSON
 {
@@ -373,22 +295,7 @@ Use `Distribution` to describe a specific file, format, or access form of a Reso
 
 ### Example JSON instances
 
-#### Extracted Distribution (representative, with commonly used optional fields):
-
-```JSON
-{
-  "identifier": "pQrStUvWxYz1234AbCdEfG",
-  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
-  "identifierInPrimarySource": "DIST-OPEN-DATA-CSV-001",
-  "stableTargetId": "rStUvWxYzA1234AbCdEfGh",
-  "accessUrl": ["https://example.org/datasets/abc/distribution.csv"],
-  "downloadUrl": ["https://example.org/datasets/abc/distribution.csv"],
-  "mediaType": ["text/csv"],
-  "format": ["CSV"]
-}
-```
-
-#### Merged Distribution:
+#### Merged Distribution
 
 ```JSON
 {
@@ -424,21 +331,7 @@ Use `Organization` to represent an external institution, for example a funding b
 
 ### Example JSON instances
 
-#### Extracted Organization (representative, with commonly used optional fields):
-
-```JSON
-{
-  "identifier": "mNoPqRsTuVwXyZ1234AbCd",
-  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
-  "identifierInPrimarySource": "http://www.wikidata.org/entity/Q679041",
-  "stableTargetId": "tUvWxYzA1234AbCdEfGhIj",
-  "officialName": ["Robert Koch-Institut"],
-  "shortName": ["RKI"],
-  "website": [{"language": "de", "title": "Offizielle RKI-Website", "url": "https://www.rki.de/"}]
-}
-```
-
-#### Merged Organization:
+#### Merged Organization
 
 ```JSON
 {
@@ -471,20 +364,6 @@ Use `OrganizationalUnit` to represent any internal RKI unit: a department or uni
 * Not modelling the hierarchy: `parentUnit` and `unitOf` should be populated.
 
 ### Example JSON instances
-
-#### Extracted OrganizationalUnit (representative, with commonly used optional fields):
-
-```JSON
-{
-  "identifier": "aBcDeFgHiJkLmN1234OpQr",
-  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
-  "identifierInPrimarySource": "OU-CENTER-IM-001",
-  "stableTargetId": "cDeFgHiJkLmN1234OpQrSt",
-  "officialName": [{"language": "en", "value": "Center for International Health Protection"}],
-  "shortName": ["ZIG"],
-  "isPartOf": ["tUvWxYzA1234AbCdEfGhIj"]
-}
-```
 
 #### Merged OrganizationalUnit:
 
@@ -520,21 +399,7 @@ Person should not be confused with `ContactPoint`, which represents a shared fun
 
 ### Example JSON instances
 
-#### Extracted Person (representative, with commonly used optional fields):
-
-```JSON
-{
-  "identifier": "dEfGhIjKlMnOpQ1234RsTu",
-  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
-  "identifierInPrimarySource": "PERSON-12345",
-  "stableTargetId": "fGhIjKlMnOpQ1234RsTuVw",
-  "fullName": ["Dr. Ada Lovelace"],
-  "email": ["ada.lovelace@example.org"],
-  "affiliation": ["cDeFgHiJkLmN1234OpQrSt"]
-}
-```
-
-#### Merged Person:
+#### Merged Person
 
 ```JSON
 {
@@ -569,21 +434,7 @@ Use `PrimarySource` to describe a system, database, or API that feeds metadata i
 
 ### Example JSON Instances
 
-#### Extracted PrimarySource (representative, with commonly used optional fields):
-
-```JSON
-{
-  "identifier": "gHiJkLmNoPqRsT1234UvWx",
-  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
-  "identifierInPrimarySource": "SRC-Database-001",
-  "stableTargetId": "iJkLmNoPqRsT1234UvWxYz",
-  "officialName": ["Pathogen Database"],
-  "shortName": ["Pathogen DB"],
-  "website": ["https://pathogendb.local.org/"]
-}
-```
-
-#### Merged PrimarySource:
+#### Merged PrimarySource
 
 ```JSON
 {
@@ -618,32 +469,6 @@ Use `ResourceSeries` to represent a named series of related datasets that are re
 * Using `ResourceSeries` for one-off collections: if a group of datasets was released once and will not grow, consider whether a single `Resource` with multiple `Distribution` records is more appropriate.
 
 ### Example JSON Instances
-
-#### Extracted ResourceSeries (representative, with commonly used optional fields):
-
-```json
-{
-  "identifier": "aRsExAmPlE14chars01",
-  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
-  "identifierInPrimarySource": "SERIES-EPI-BULLETIN",
-  "stableTargetId": "mRsExAmPlE14chars01",
-  "title": [
-    {"value": "Epidemiologisches Bulletin", "language": "de"},
-    {"value": "Epidemiological Bulletin", "language": "en"}
-  ],
-  "description": [
-    {"value": "Wöchentliche Veröffentlichungsreihe des RKI zu aktuellen infektionsepidemiologischen Themen.", "language": "de"}
-  ],
-  "keyword": [
-    {"value": "Infektionsepidemiologie", "language": "de"},
-    {"value": "Infectious disease epidemiology", "language": "en"}
-  ],
-  "accrualPeriodicity": "https://mex.rki.de/item/frequency-1",
-  "start": ["2001-01"],
-  "publisher": ["tUvWxYzA1234AbCdEfGhIj"],
-  "contact": ["hJKL9mNoPqRsTuVwXyZ123"]
-}
-```
 
 #### Merged ResourceSeries:
 
@@ -691,23 +516,7 @@ A `Resource` describes the dataset or data source. Its individual file represent
 
 ### Example JSON instances
 
-#### Extracted Resource (representative, with commonly used optional fields):
-
-```JSON
-{
-  "identifier": "kLmNoPqRsTuVwX1234YzAb",
-  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
-  "identifierInPrimarySource": "RES-DATASET-ABC-001",
-  "stableTargetId": "mNoPqRsTuVwXyZ1234AbCd",
-  "title": ["Surveillance dataset: Example indicators (2021–2024)"],
-  "description": ["Surveillance indicators collected and curated for demonstration purposes."],
-  "publisher": ["tUvWxYzA1234AbCdEfGhIj"],
-  "contactPoint": ["hJKL9mNoPqRsTuVwXyZ123"],
-  "distribution": ["rStUvWxYzA1234AbCdEfGh"]
-}
-```
-
-#### Merged Resource:
+#### Merged Resource
 
 ```JSON
 {
@@ -743,19 +552,6 @@ Use `VariableGroup` when variables within a `Resource` can be meaningfully organ
 
 ### Example JSON instances
 
-#### Extracted VariableGroup (representative, with commonly used optional fields):
-
-```JSON
-{
-  "identifier": "qRsTuVwXyZ1234AbCdEfGh",
-  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
-  "identifierInPrimarySource": "VG-PRIMARYSOURCE-001",
-  "stableTargetId": "sTuVwXyZ1234AbCdEfGhIj",
-  "containedBy": ["mNoPqRsTuVwXyZ1234AbCd"],
-  "label": ["Case definitions"]
-}
-```
-
 #### Merged VariableGroup:
 
 ```JSON
@@ -789,23 +585,7 @@ Use `Variable` to describe individual fields or variables within a `Resource`, p
 
 ### Example JSON instances
 
-#### Extracted Variable (representative, with commonly used optional fields):
-
-```JSON
-{
-  "identifier": "nOpQrStUvWxYzA1234BcDe",
-  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
-  "identifierInPrimarySource": "VAR-INCIDENCE-7D-001",
-  "stableTargetId": "pQrStUvWxYzA1234BcDeFg",
-  "belongsTo": ["mPpRrTuVaWcYzB9145CdBw"],
-  "label": ["7-day incidence"],
-  "description": ["Number of reported cases per 100,000 inhabitants over the last 7 days."],
-  "datatype": ["integer"],
-  "isUsedIn": ["mNoPqRsTuVwXyZ1234AbCd"]
-}
-```
-
-#### Merged Variable:
+#### Merged Variable
 
 ```JSON
 {
