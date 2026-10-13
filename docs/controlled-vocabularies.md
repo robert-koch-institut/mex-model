@@ -1,4 +1,4 @@
-# Controlled vocabularies
+# Controlled Vocabularies
 
 As described in the How the model works section, properties that draw from a fixed set of permissible values reference a controlled vocabulary via the useScheme keyword in the JSON Schema. The property value is always a Concept URI from that vocabulary. This section lists all vocabularies currently defined in the model, describes their alignment with EU-maintained code lists, and outlines how vocabularies are governed.
 
@@ -82,7 +82,7 @@ Changes can result from:
 TBD: this section is still to be written.
 :::
 
-### Schema detail
+### Schema Detail
 
 ```{mex-entity} Concept
 ```
@@ -90,7 +90,7 @@ TBD: this section is still to be written.
 ```{mex-entity} ConceptScheme
 ```
 
-## Vocabulary detail
+## Vocabulary Detail
 
 The tables below are auto-generated from the vocabulary JSON files in the repository. Each table lists all concepts in the vocabulary with their label, identifier, and definition.
 

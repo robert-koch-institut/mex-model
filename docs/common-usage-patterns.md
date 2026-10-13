@@ -1,4 +1,4 @@
-# Common usage patterns
+# Common Usage Patterns
 
 This section collects practical guidance for the most frequent modelling tasks. It is aimed at data stewards and extractor developers who need to produce valid, well-structured MEx records. Where the advice refers to schema rules, the entity reference pages are the authoritative source. The patterns here are meant as shortcuts.
 
@@ -6,7 +6,7 @@ This section collects practical guidance for the most frequent modelling tasks. 
 
 Creating a Resource record is the most common starting point. A resource represents a single dataset, a data source (the entirety of the data collected for a specific purpose, e.g. surveillance of diseases), or a single sample or a collection of samples (e.g. biobank material) in the MEx catalogue. Metadata consumers most likely will encounter the model through this entity first.
 
-### Minimal viable record
+### Minimal Viable Record
 
 A valid ExtractedResource requires the system-managed fields (`identifier`, `hadPrimarySource`, `identifierInPrimarySource`, `stableTargetId`) plus the following content fields:
 
@@ -22,7 +22,7 @@ A valid ExtractedResource requires the system-managed fields (`identifier`, `had
 
 This is enough to pass schema validation, but it produces a sparse catalogue entry. A minimal record in this regard is sufficient for dataset discovery purposes, but lacks in-depth information, especially regarding the data's origin and its re-usability.
 
-### Well-described record
+### Well-Described Record
 
 A record that is genuinely useful to someone searching the catalogue to request access to the data should also include:
 
@@ -55,7 +55,7 @@ The following optional properties can be used to enrich the metadata description
 | startDate/endDate | Dates that indicate the temporal coverage of the data. |
 | wasGeneratedBy | An activity, in which the data originated, e.g. a research project. *(under review)* |
 
-### Linking to distributions, activities and responsible units
+### Linking to Distributions, Activities and Responsible Units
 
 A Resource rarely stands alone. The following links place it in context:
 
@@ -67,7 +67,7 @@ Every concrete file format or download endpoint is a separate `Distribution`. Th
 
 If the dataset was produced by a research project or surveillance activity, link the two via the `Activity` entity. The activity's own fields (`responsibleUnit`, `involvedPerson`, `start`/`end`, `fundingProgram`) provide project-level context that does not belong on the resource itself. The connection is typically expressed from the resource side: a resource can reference an activity that generated it.
 
-#### Responsible unit
+#### Responsible Unit
 
 `unitInCharge` identifies the organisational unit accountable for the dataset. This is always a reference to a `MergedOrganizationalUnit`, not to a person.
 
@@ -89,7 +89,7 @@ If the dataset was produced by a research project or surveillance activity, link
 }
 ```
 
-#### Well-described
+#### Well-Described
 
 ```json
 {
@@ -127,7 +127,7 @@ If the dataset was produced by a research project or surveillance activity, link
 
 MEx entities do not exist in isolation. A dataset has distributions, belongs to an activity, is maintained by an organisational unit, and has contact persons. Getting these cross-references right is essential for a coherent catalogue. This subsection covers the conventions.
 
-### Golden rule: always reference Merged IDs
+### Golden Rule: Always reference Merged IDs
 
 Every cross-entity reference points to a Merged identifier (`stableTargetId`), never to an Extracted identifier. This applies regardless of whether the referencing entity is itself Extracted or Merged.
 The reason is structural: multiple Extracted records from different source systems may describe the same real-world entity. They all share the same `stableTargetId`, which becomes the Merged record's identifier. By referencing the merged ID, the link survives deduplication. It does not matter which source system produced the target entity, or whether additional sources are added later.
@@ -136,7 +136,7 @@ The reason is structural: multiple Extracted records from different source syste
 
 When building a record for an Extracted Item, you must know the `stableTargetId` of the entity you want to reference. In most pipelines, this is resolved by looking up the target entity by its `identifierInPrimarySource` and `hadPrimarySource` combination, which deterministically maps to a `stableTargetId`.
 
-#### How activities provide context for resources
+#### How Activities provide context for Resources
 
 The relationship between Resource and Activities is expressed by `relatedActivity`, which means any kind of relationship, e.g. the project in which the data originated or a project that used the data.
 
@@ -157,7 +157,7 @@ A typical pattern:
 
 This separation is deliberate: the activity carries project-level metadata (funding, timeline, participants) while the resource carries dataset-level metadata (format, access, content description). A single activity can produce multiple resources, and a resource can potentially relate to more than one activity.
 
-### Linking persons, organisational units, and contact points
+### Linking Persons, Organisational Units, and Contact Points
 
 MEx distinguishes three types of "who" entities. Using the right one is important:
 
@@ -175,7 +175,7 @@ These are not interchangeable, even though some properties accept more than one 
 
 A common mistake is pointing contact at a person when a functional mailbox exists. Functional mailboxes are more stable and more appropriate for catalogue consumers who want to request access to a dataset.
 
-#### Example: a fully linked resource set
+#### Example: a fully linked Resource Set
 
 The following shows how a minimal set of entities references each other. All identifier values shown are Merged identifiers.
 
@@ -213,7 +213,7 @@ MEx uses two separate entity types to represent organisational structure:
 
 The distinction matters because most MEx properties that express responsibility (`unitInCharge`, `responsibleUnit`, `involvedUnit`) reference an `OrganizationalUnit`, not an `Organization`. The `Organization` entity appears primarily as a publisher or external associate.
 
-### Expressing parent/child relationships
+### Expressing Parent/Child relationships
 
 Organisational hierarchy is modelled through the `parentUnit` property on `OrganizationalUnit`. It is a reference to a `MergedOrganizationalUnit` identifier, expressing an upward link.
 

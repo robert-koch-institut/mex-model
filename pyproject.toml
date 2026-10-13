@@ -28,7 +28,6 @@ dev = [
 ]
 
 [tool.coverage.run]
-# the docs extensions are covered, only the sphinx configuration is not
 omit = ["docs/conf.py"]
 
 [tool.cruft]

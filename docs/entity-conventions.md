@@ -32,7 +32,7 @@ The following properties are required on all valid instances:
 
 All other properties are optional.
 
-### Schema detail
+### Schema Detail
 
 ```{mex-entity} AccessPlatform
 ```
@@ -43,7 +43,7 @@ All other properties are optional.
 * Leaving `technicalAccessibility` inconsistent: marking a platform as externally accessible when it is in fact only reachable within the RKI network, or vice versa. This has downstream implications for access control and catalogue visibility.
 * Omitting `unitInCharge`, when `technicalAccessibility` is "internal": while optional, this property is important for operational accountability.
 
-### Example JSON instances
+### Example JSON Instances
 
 #### Extracted AccessPlatform (representative, with commonly used optional fields)
 
@@ -100,7 +100,7 @@ Use `MergedActivity` when referencing an activity from another entity, for examp
 | identifierInPrimarySource | Extracted only | String | ID of this activity in the originating source system |
 | stableTargetId | Extracted only | Identifier | Reference to the corresponding MergedActivity identifier |
 
-### Schema detail
+### Schema Detail
 
 ```{mex-entity} Activity
 ```
@@ -179,7 +179,7 @@ Use `MergedBibliographicResource` when referencing a publication from another en
 | hadPrimarySource | Extracted only | Identifier | Reference to a MergedPrimarySource identifier |
 | identifierInPrimarySource | Extracted only | String | ID of this bibliographic resource in the originating source system |
 
-### Schema detail
+### Schema Detail
 
 ```{mex-entity} BibliographicResource
 ```
@@ -247,7 +247,7 @@ Use `MergedConsent` when referencing a consent record from another entity or con
 | identifierInPrimarySource | Extracted only | String | ID in primary source (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to the corresponding MergedConsent identifier |
 
-### Schema detail
+### Schema Detail
 
 ```{mex-entity} Consent
 ```
@@ -308,7 +308,7 @@ Use `MergedContactPoint` when referencing a contact point from another entity su
 | identifierInPrimarySource | Extracted only | String | ID of the contact point in the originating source system (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to MergedContactPoint identifier |
 
-### Schema detail
+### Schema Detail
 
 ```{mex-entity} ContactPoint
 ```
@@ -366,7 +366,7 @@ Use `MergedDistribution` when referencing a distribution from a Resource or cons
 | identifierInPrimarySource | Extracted only | String | ID of this distribution in the originating source system (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to MergedDistribution identifier |
 
-### Schema detail
+### Schema Detail
 
 ```{mex-entity} Distribution
 ```
@@ -411,7 +411,7 @@ Use `MergedDistribution` when referencing a distribution from a Resource or cons
 TBD: this section is still to be written.
 :::
 
-### Schema detail
+### Schema Detail
 
 ```{mex-entity} Location
 ```
@@ -440,7 +440,7 @@ Use `MergedOrganization` when referencing an external organisation from another 
 | identifierInPrimarySource | Extracted only | String | ID of this organization in the originating source system (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to MergedOrganization identifier |
 
-### Schema detail
+### Schema Detail
 
 ```{mex-entity} Organization
 ```
@@ -501,7 +501,7 @@ Use `MergedOrganizationalUnit` when referencing an RKI unit from another entity,
 | identifierInPrimarySource | Extracted only | String | ID of this organization in the originating source system (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to MergedOrganizationalUnit identifier |
 
-### Schema detail
+### Schema Detail
 
 ```{mex-entity} OrganizationalUnit
 ```
@@ -561,7 +561,7 @@ Use `MergedPerson` when referencing an individual from another entity, for examp
 | identifierInPrimarySource | Extracted only | String | ID of this person in the originating source system |
 | stableTargetId | Extracted only | Identifier | Reference to the corresponding MergedPerson identifier |
 
-### Schema detail
+### Schema Detail
 
 ```{mex-entity} Person
 ```
@@ -622,7 +622,7 @@ Use `MergedPrimarySource` when referencing the origin of an extracted record. Th
 | identifierInPrimarySource | Extracted only | String | ID of this primary source in the originating source system |
 | stableTargetId | Extracted only | Identifier | Reference to the corresponding MergedPrimarySource identifier |
 
-### Schema detail
+### Schema Detail
 
 ```{mex-entity} PrimarySource
 ```
@@ -633,7 +633,7 @@ Use `MergedPrimarySource` when referencing the origin of an extracted record. Th
 * Confusing `PrimarySource` with `AccessPlatform`: Whilst a `PrimarySource` can also be an `AccessPlatform`, an `AccessPlatform` is not necessarily the primary source for MEx metadata. A `PrimarySource` is a specific type of data service for MEx that serves as the sole source for metadata extraction. An `AccessPlatform` is used in conjunction with a user-side data service. It may be the case that the system used to access the data and the primary source for metadata extraction are one and the same, but even in this instance there would be two separate elements: a `PrimarySource` and an `AccessPlatform`.
 * Leaving `hadPrimarySource` self-referential without documentation: the MEx system itself is its own primary source for `PrimarySource` records. This should be clearly documented in pipeline configurations.
 
-### Example JSON instances
+### Example JSON Instances
 
 #### Extracted PrimarySource (representative, with commonly used optional fields)
 
@@ -688,7 +688,7 @@ Use `MergedResource` when referencing a dataset from another entity, or when con
 | identifierInPrimarySource | Extracted only | String | ID of this resource in the originating source system (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to MergedResource identifier |
 
-### Schema detail
+### Schema Detail
 
 ```{mex-entity} Resource
 ```
@@ -756,7 +756,7 @@ Use `MergedResourceSeries` when referencing a series from another entity or cons
 
 All other properties are optional.
 
-### Schema detail
+### Schema Detail
 
 ```{mex-entity} ResourceSeries
 ```
@@ -768,7 +768,7 @@ All other properties are optional.
 * Omitting `start`/`end`: while optional, temporal coverage helps catalogue users understand whether the series is ongoing or concluded and what time span it covers.
 * Using `ResourceSeries` for one-off collections: if a group of datasets was released once and will not grow, consider whether a single `Resource` with multiple `Distribution` records is more appropriate.
 
-### Example JSON instances
+### Example JSON Instances
 
 #### Extracted ResourceSeries (representative, with commonly used optional fields)
 
@@ -844,7 +844,7 @@ Use `MergedVariable` when referencing a variable from another entity or consumin
 | identifierInPrimarySource | Extracted only | String | ID of this variable in the originating source system (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to MergedVariable identifier |
 
-### Schema detail
+### Schema Detail
 
 ```{mex-entity} Variable
 ```
@@ -910,7 +910,7 @@ Use `MergedVariableGroup` when referencing a variable group from another entity 
 | identifierInPrimarySource | Extracted only | String | ID of this variable in the originating source system (1–1000 chars; no newline) |
 | stableTargetId | Extracted only | Identifier | Reference to MergedVariableGroup identifier |
 
-### Schema detail
+### Schema Detail
 
 ```{mex-entity} VariableGroup
 ```

@@ -1,4 +1,4 @@
-# MEx metadata model specification
+# MEx Metadata Model Specification
 
 ```{toctree}
 :maxdepth: 2

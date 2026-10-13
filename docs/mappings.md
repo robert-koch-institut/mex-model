@@ -111,9 +111,9 @@ The properties below have no counterpart in DCAT 2.0 or PROV-O. They exist becau
 
 The MEx team adds a profile-specific property only when the requirement cannot be met by adopting or constraining an existing DCAT/PROV-O term. Each addition is recorded with a Level: P annotation in the entity reference pages, making it easy to identify which parts of a MEx record will need special handling when exporting to a standards-compliant DCAT-catalog.
 
-## HealthDCAT-AP mapping
+## HealthDCAT-AP Mapping
 
-### Background
+### background
 
 HealthDCAT-AP is a domain-specific extension of DCAT-AP, the European application profile of DCAT, designed for health data catalogues. It was developed in the context of the European Health Data Space (EHDS), where it serves as the metadata standard that national health data catalogues are expected to conform to. For RKI, aligning with HealthDCAT-AP is not purely a matter of best practice. It is a regulatory trajectory that affects how German public-health datasets will need to be described and published at the European level.
 
@@ -131,3 +131,48 @@ MEx's approach to HealthDCAT-AP is selective adoption. Where a HealthDCAT-AP con
 :class: note
 The HealthDCAT-AP alignment is under active development, as is HealthDCAT-AP itself. A mapping table, gap analysis, and workaround documentation will be added to this section once the model updates are stabilised. The canonical status of each property is tracked via the branches ingested into MEx.
 :::
+
+### Mapping Table
+
+#### Entity-Class Mapping
+
+| HealthDCAT-AP Class | MEX Entity | Coverage | Notes |
+| --- | --- | --- | --- |
+
+#### Properties required by HealthDCAT-AP already present in MEx
+
+The table below lists HealthDCAT-AP mandatory or recommended properties that MEx already covers, grouped by the HealthDCAT-AP property name. The status column reflects whether the alignment work is complete.
+
+| HealthDCAT-AP Property | MEx Property | MEx Entity | Status |
+| --- | --- | --- | --- |
+
+### GAP Analysis
+
+The tables below list HealthDCAT-AP properties and concepts that are not yet fully present in MEx. Each gap is classified into one of three resolution strategies:
+
+* planned for implementation: the property will be added to the MEx model directly
+* will be mapped: the MEx model will not change, the property will be produced at export time from existing MEx data
+* out of scope: the property is not applicable to RKI's current use cases and has no implementation or mapping planned
+
+#### High priority: HealthDCAT-AP mandatory or key recommended properties
+
+| HealthDCAT-AP Property | Class | Gap Description | Resolution | Tickets | Status |
+| --- | --- | --- | --- | --- | --- |
+
+#### Medium priority: recommended properties and structural alignment
+
+| HealthDCAT-AP Property | Class | Gap Description | Resolution | Tickets | Status |
+| --- | --- | --- | --- | --- | --- |
+
+#### Low priority: optional properties, clean-up and out-of-scope items
+
+| HealthDCAT-AP Property | Class | Gap Description | Resolution | Tickets | Status |
+| --- | --- | --- | --- | --- | --- |
+
+#### Summary
+
+The majority of gaps fall into the "planned for implementation" category, which reflect MEx's stated philosophy: adopt into the model whatever benefits MEx directly, map everything else. The "out of scope" items are predominantly clean-up to remove legacy properties that have been superseded by HealthDCAT-AP-aligned replacements.
+
+### Implementation Notes
+
+tbd

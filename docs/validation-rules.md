@@ -14,7 +14,7 @@ Every schema sets `additionalProperties: false`. An instance that includes a pro
 
 ### Mandatory vs optional properties
 
-The `required` array in each schema lists the properties that must be present. For Extracted entities, this always includes the four system-managed fields (`identifier`, `hadPrimarySource`, `identifierInPrimarySource`, `stableTargetId`) plus any content fields that the entity cannot do without. Optional properties have either [] or null.
+The required array in each schema lists the properties that must be present. For Extracted entities, this always includes the four system-managed fields (`identifier`, `hadPrimarySource`, `identifierInPrimarySource`, `stableTargetId`) plus any content fields that the entity cannot do without. Optional properties have either [] or null.
 
 ### Field type constraints
 
@@ -87,7 +87,7 @@ In most cases, the Extracted and Merged variants of an entity enforce the same c
 * Merged entities may have a `supersededBy` property (optional, single-value defaults to null) that does not exist on Extracted entities.
 * Where a property is mandatory on both variants, the cardinality (minItems, single-value requirement) is the same.
 
-## Cross-entity validation
+## Cross-Entity validation
 
 Schema validation operates on a single instance in isolation. It cannot verify that a referenced entity actually exists. Cross-entity validation is performed by the MEx backend and covers two main concerns:
 
