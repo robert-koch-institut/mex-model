@@ -119,13 +119,13 @@ The `extension/` directory contains a single file, `definition.json`. This defin
 | --- | --- | --- |
 | useScheme | (MEx-specific) | Links a property to a controlled vocabulary concept scheme, identified by a URI matching `https://mex.rki.de/concept-scheme/...`. This allows to say which vocabulary must be used for the property, whereas `$ref` is used to link the Concept itself.|
 | closeMatch | skos:closeMatch | Denotes a close semantic match between the MEx term and a term from an external ontology or data model |
-| exactMatch | skos:exactMatch | Denotes an exact semantic match between the MEx term and a term from an external ontology or data model. This annotation property is used, e.g., when matching terms from controlled vocabularies. |
+| exactMatch | skos:exactMatch | Denotes an exact semantic match between the MEx term and a term from an external ontology or data model. This annotation property is usedi.e. in matching terms from controlled vocabularies. |
 
 These keywords are not part of the JSON Schema standard and will be ignored by generic JSON Schema validators. However, they are actively used within the MEx toolchain. Most notably, `useScheme` appears in entity schema files to link classification properties to their controlled vocabularies and is therefore integral to the model's behavior.
 
 ### Vocabularies
 
-The `vocabularies/` directory contains the controlled value lists used by classification properties across entity types. Each vocabulary is a JSON file defining a named set of concepts, where every concept is identified by a URI of the form `https//mex.rki.de/item/...`
+The vocabularies/ directory contains the controlled value lists used by classification properties across entity types. Each vocabulary is a JSON file defining a named set of concepts, where every concept is identified by a URI of the form `https//mex.rki.de/item/...`
 An entity property references a vocabulary through the custom `useScheme` keyword:
 
 ```JSON
@@ -137,7 +137,7 @@ An entity property references a vocabulary through the custom `useScheme` keywor
 }
 ```
 
-The valid value for such a property is always the URI of a concept within the declared scheme, never a free-text string. This ensures machine-readability, unambiguous classification and mapping to external controlled vocabularies where equivalents exist. More information on this can be found in the following subsection on [How vocabularies are used](#how-vocabularies-are-used).
+The valid value for such a property is always the URI of a concept within the declared scheme, never a free-text string. This ensures machine-readability, unambiguous classification and mapping to EU-level controlled vocabularies where equivalents exist. More information on this can be found in the following subsection.
 
 #### Internationalization (i18n)
 
@@ -146,7 +146,7 @@ The `i18n/` directory contains JSON files that map property names to human-reada
 ### How vocabularies are used
 
 Controlled vocabularies in MEx serve as fixed reference lists for classification properties across entity types. Rather than accepting free-text input, properties that reference a vocabulary require a value in the form of a Concept URI. This is a stable, machine-readable identifier of the form `https://mex.rki.de/item/...` and ensures unambiguous, consistent classification that is both human-readable through the associated labels and ensures interoperability with external vocabulary systems.
-Within an entity schema, a property is linked to its vocabulary through the custom `useScheme` keyword, defined in `extension/definition.json`. The following example shows how the property `accessRestriction` on a Resource declares its vocabulary reference:
+Within an entity schema, a property is linked to its vocabulary through the custom useScheme keyword, defined in `extension/definition.json`. The following example shows how the accessRestriction property on a Resource declares its vocabulary reference:
 
 ```JSON
 {
