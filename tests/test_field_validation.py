@@ -44,6 +44,14 @@ from check_schemas import (
         ),
         pytest.param(
             {
+                "properties": {"foo": {"type": "array", "minItems": 1, "default": []}},
+                "required": ["foo"],
+            },
+            ["dummy.foo: has minItems but also has a default"],
+            id="required-array-with-default",
+        ),
+        pytest.param(
+            {
                 "properties": {"foo": {"anyOf": [{"type": "string"}], "default": None}},
                 "required": [],
             },
@@ -150,6 +158,19 @@ def test_orphaned_field_violations_are_detected(
             },
             ["dummy.foo.closeMatch: 'https://example.com/a' is duplicated"],
             id="duplicated-uri",
+        ),
+        pytest.param(
+            {"properties": {"foo": {"closeMatch": "https://example.com/a"}}},
+            ["dummy.foo.closeMatch: 'https://example.com/a' is not an array"],
+            id="string-instead-of-array",
+        ),
+        pytest.param(
+            {"properties": {"foo": {"exactMatch": "not-a-uri"}}},
+            [
+                "dummy.foo.exactMatch: 'not-a-uri' is not an array",
+                "dummy.foo.exactMatch: 'not-a-uri' is not a well-formed URI",
+            ],
+            id="malformed-string-instead-of-array",
         ),
         pytest.param(
             {"properties": {"foo": {"closeMatch": ["https://example.com/a"]}}},
