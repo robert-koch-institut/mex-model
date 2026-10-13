@@ -7,6 +7,7 @@ The MEx metadata model did not grow in isolation. Its entity types, property nam
 ### MEx as a DCAT-inspired application profile
 
 MEx draws on two W3C Recommendations as its conceptual foundation:
+
 * DCAT 2.0: the Data Catalog Vocabulary, which provides the core classes Dataset, Distribution and DataService together with a rich set of metadata properties.
 * PROV-O: the Provenance Ontology, from which MEx inherits the notions of Activity and hadPrimarySource.
 

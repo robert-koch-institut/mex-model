@@ -12,7 +12,7 @@ The MEx metadata model is not confined to a single application, but constitutes 
 
 The following process diagram illustrates how these components relate within the overall MEx workflow:
 
-![MEx metadata generation BPMN 2.0 workflow](img/MEx-metadata-generation.png "MEx metadata generation BPMN 2.0 workflow")
+![MEx metadata generation BPMN 2.0 workflow](img/mex-metadata-generation.png "MEx metadata generation BPMN 2.0 workflow")
 
 ## namespaces & prefixes
 
@@ -27,7 +27,7 @@ The following process diagram illustrates how these components relate within the
 | skos: | http://www.w3.org/2004/02/skos/core# | Concepts and concept schemes |
 | dpv: | https://w3id.org/dpv# | Consent status / legal basis alignment |
 | healthdcat: | http://healthdataportal.eu/ns/health# | HealthDCAT-AP classes and properties |
-| dcatde: |   http://dcat-ap.de/def/dcatde/ (for references in mapping context) | DCAT-AP.de profile references |
+| dcatde: | http://dcat-ap.de/def/dcatde/ (for references in mapping context) | DCAT-AP.de profile references |
 | mex: | https://mex.rki.de/mex/model/ | MEx entity and field URIs |
 | item: | https://mex.rki.de/item/ | Controlled vocabulary concept URIs and base URI of instance data|
 | json-schema: | https://json-schema.org/ | JSON Schema specification reference |
@@ -41,7 +41,7 @@ The directory is divided into five subdirectories, each with a distinct role.
 
 These directories are not independent. Entities are linked to each other via properties using `$ref`. To link a vocabulary to a property, `useScheme` was defined as a custom-property. This and other properties that the JSON Schema format cannot express natively are defined in the `extension` directory.
 
-![MMEx Github layout](img/mex-git-relations.png "MEx Github layout")
+![MEx Github layout](img/mex-git-relations.png "MEx Github layout")
 
 ## Entities, Fields, Extensions, Vocabularies
 
@@ -101,9 +101,9 @@ This keeps entity files concise and ensures consistency for structural changes t
 
 ### Field Schema Detail
 
-```{mex-field} identifier  ```
-```{mex-field} link  ```
-```{mex-field} text  ```
+```{mex-field} identifier```
+```{mex-field} link```
+```{mex-field} text```
 
 ### Extension
 
