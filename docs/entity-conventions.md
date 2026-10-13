@@ -149,7 +149,7 @@ Both `ConceptScheme` and [Concept](#concept) are the only entity types that are 
 
 See `mex-model/vocabularies/concept-schemes.json` for details.
 
-```JSON
+```json
 {
    "description": [
     {"de": "Dieses Vokabular basiert auf dem Dublin Core Collection Description Frequency Vokabular, verfügbar unter https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/.",
@@ -181,7 +181,7 @@ Both `Concept` and [ConceptScheme](#concept-scheme) are the only entity types th
 
 See `mex-model/vocabularies/[vocabulary].json` for details.
 
-```JSON
+```json
 {
     "altLabel": [
             {
@@ -518,7 +518,7 @@ A `Resource` describes the dataset or data source. Its individual file represent
 
 #### Merged Resource
 
-```JSON
+```json
 {
   "contact": ["hJKL9mNoPqRsTuVwXyZ123"],
   "description": ["Surveillance indicators collected and curated for demonstration purposes."],
@@ -553,7 +553,7 @@ Use `VariableGroup` when variables within a `Resource` can be meaningfully organ
 
 #### Merged VariableGroup
 
-```JSON
+```json
 {
   "identifier": "sTuVwXyZ1234AbCdEfGhIj",
   "title": ["Case definitions"],
