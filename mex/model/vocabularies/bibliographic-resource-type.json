@@ -71,7 +71,8 @@
             "en": "Document submitted in support of candidature for a doctorate."
         },
         "exactMatch": [
-            "http://www.wikidata.org/entity/Q187685"
+            "http://www.wikidata.org/entity/Q187685",
+            "http://purl.org/ontology/bibo/Thesis"
         ],
         "identifier": "https://mex.rki.de/item/bibliographic-resource-type-4",
         "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
@@ -92,7 +93,8 @@
             "en": "Type of thesis necessary for teaching in German universities."
         },
         "exactMatch": [
-            "http://www.wikidata.org/entity/Q1414362"
+            "http://www.wikidata.org/entity/Q1414362",
+            "http://purl.org/ontology/bibo/Thesis"
         ],
         "identifier": "https://mex.rki.de/item/bibliographic-resource-type-5",
         "inScheme": "https://mex.rki.de/item/bibliographic-resource-type",
