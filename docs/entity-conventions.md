@@ -2,21 +2,23 @@
 
 Both the Extracted and Merged variants share the same set of descriptive properties. The Extracted variant additionally carries the four mandatory provenance properties (`identifier`, `hadPrimarySource`, `identifierInPrimarySource`, `stableTargetId`), while the Merged variant carries only `identifier` alongside descriptive properties. The Merged variant additionally includes `supersededBy`, which allows a deprecated or duplicate Merged entity to point to the preferred replacement.
 
-The Merged variant is the normalised, deduplicated record that consolidates descriptions from one or more primary sources. If a Merged entity has been superseded by another, e.g. following deduplication, the `supersededBy` property will point to the preferred replacement.
+The Merged variant is the normalized, deduplicated record that consolidates descriptions from one or more primary sources. If a Merged entity has been superseded by another, e.g. following deduplication, the `supersededBy` property will point to the preferred Merged item.
+
+## When to use Extracted and Merged
+
+Use `Extracted[EntityType]` when ingesting an item from a primary source system via an ETL pipeline. Each extracted record represents the item as described by that specific source, carrying the provenance properties that trace it back to its origin.
+
+Use `Merged[EntityType]` when referencing an item from another entity, or when consuming metadata in the catalogue or downstream systems.
 
 ## AccessPlatform
 
-The AccessPlatform entity describes a technical system or service that provides access to distributions or resources. It corresponds to `dcat:DataService`.
+The `AccessPlatform` entity describes a technical system or service that provides access to distributions and/or resources. It corresponds to `dcat:DataService`.
 
 ### When to use
 
-Use `AccessPlatform` to describe any technical system, API, or service through which a dataset or distribution can be accessed. For example, a REST API, a file server, a database interface, or a web portal. The entity captures both the technical characteristics of the access mechanism and the organisational responsibility for it.
+Use `AccessPlatform` to describe any technical system, API, or service through which a dataset or distribution can be accessed. For example, a REST API, a file server, a database interface, or a web portal. The entity captures both the technical characteristics of the access mechanism and the organizational responsibility for it.
 
 `AccessPlatform` should not be confused with `Distribution`, which describes a specific representation or download of a dataset. An `AccessPlatform` is the system through which one or more distributions are made available. A `Distribution` is the artefact that is made available through it.
-
-Use `ExtractedAccessPlatform` when ingesting access platform metadata from a primary source system via an ETL pipeline. Each extracted record represents the platform as described by that specific source, carrying the provenance properties that trace it back to its origin.
-
-Use `MergedAccessPlatform` when referencing an access platform from another entity, or when consuming access platform metadata in the catalogue or downstream systems.
 
 ### Mandatory fields & expected values
 
@@ -84,10 +86,6 @@ The `Activity` entity describes any activity carried out by the RKI, whether it 
 Use `Activity` to describe a research project, a statutory task performed under federal law, or any other organised activity conducted at the RKI. Activities provide essential context for datasets. A `Resource` can reference the `Activity` that generated it via the wasGeneratedBy property.
 
 `Activity` should not be confused with `Resource`, which describes the data itself. An `Activity` is the process or project that produced or is associated with data. A `Resource` is the dataset that resulted from or is used within that activity.
-
-Use `ExtractedActivity` when ingesting activity metadata from the primary source system such as a project database or HR system. Each extracted record represents the activity as described by that specific source.
-
-Use `MergedActivity` when referencing an activity from another entity, for example when linking a `Resource` to the project that generated it, when linken an `Activity` to a succeeding activity, or when consuming activity metadata in the catalogue.
 
 ### Mandatory fields & expected values
 
@@ -166,10 +164,6 @@ Use `BibliographicResource` to describe any publication associated with RKI rese
 
 `BibliographicResource` should not be confused with `Resource`, which describes a dataset or data collection. A `BibliographicResource` is a published document, a `Resource` is research data.
 
-Use `ExtractedBibliographicResource` when ingesting publication metadata from a primary source such as a publication database or repository.
-
-Use `MergedBibliographicResource` when referencing a publication from another entity, or when consuming publication metadata in the catalogue.
-
 ### Mandatory fields & expected values
 
 | Property | Variant | Type | Expected value |
@@ -234,10 +228,6 @@ The `Consent` entity records a data subject's consent for the use of their perso
 
 Use `Consent` to document GDPR-relevant consent records associated with research data. This entity is specific to the data privacy domain and is unlikely to be populated via automated extraction from most source systems.
 
-Use `ExtractedConsent` when ingesting consent records from a primary source that manages participant consent.
-
-Use `MergedConsent` when referencing a consent record fom another entity or consuming it downstream.
-
 ### Mandatory fields & extracted values
 
 | Property | Variant | Type | Expected value |
@@ -298,10 +288,6 @@ Use `ContactPoint` when a contact for an entity is a shared functional address, 
 
 `ContactPoint` should not be confused with `Person`, which represents an individual. If a named individual is mentioned, use a reference to a `MergedPerson`. If the contact is a role-based or shared address, use `ContactPoint`.
 
-Use `ExtractedContactPoint` when ingesting contact point metadata from a primary source system.
-
-Use `MergedContactPoint` when referencing a contact point from another entity such as an `Activity` or `Resource`.
-
 ### Mandatory fields & expected values
 
 | Property | Variant | Type | Expected value |
@@ -354,10 +340,6 @@ The `Distribution` entity describes a specific representation or downloadable fo
 Use `Distribution` to describe a specific file, format, or access form of a Resource, for example a CSV file, an API response, or a ZIP archive. A single Resource may have multiple `Distribution` items, one per format or access method.
 
 `Distribution` should not be confused with `AccessPlatform`. A `Distribution` is the artefact, the specific file or data representation. An `AccessPlatform` is the system through which it is served.
-
-Use `ExtractedDistribution` when ingesting distribution metadata from a primary source system.
-
-Use `MergedDistribution` when referencing a distribution from a Resource or consuming distribution metadata in the catalogue or downstream systems.
 
 ### Mandatory fields & expected values
 
@@ -421,10 +403,6 @@ Use `Organization` to represent an external institution, for example a funding b
 
 `Organization` should thus not be confused with `OrganizationalUnit`, which represents departments and units within the RKI. If the entity is part of the RKI, use `OrganizationalUnit`. If it is an external body, use `Organization`.
 
-Use `ExtractedOrganization` when ingesting external organisation metadata from a primary source, for example from Wikidata.
-
-Use `MergedOrganization` when referencing an external organisation from another entity, such as the `funderOrComissioner` or `externalAssociate` of an `Activity`.
-
 ### Mandatory fields & expected values
 
 | Property | Variant | Type | Expected value |
@@ -482,10 +460,6 @@ The `OrganizationalUnit` entity represents a department, team, or administrative
 Use `OrganizationalUnit` to represent any internal RKI structural unit: a department, a reference centre, a working group, or a project team. Organisational units can be arranged in a hierarchy using the `parentUnit` and `unitOf` properties.
 
 `OrganizationalUnit` should not be confused with `Organization`, which represents external institutions. If the body is part of the RKI, use `OrganizationalUnit`.
-
-Use `ExtractedOrganizationalUnit` when ingesting unit metadata from a primary source such as a database or organisational directory.
-
-Use `MergedOrganizationalUnit` when referencing an RKI unit from another entity, for example as the `responsibleUnit` of an `Activity` or the `unitInCharge` of an `AccessPlatform`.
 
 ### Mandatory fields & expected values
 
@@ -545,10 +519,6 @@ Use `Person` to represent a named individual, for example a person involved in a
 
 Person should not be confused with `ContactPoint`, which represents a shared functional address rather than an individual. If the contact is role-based or shared, use `ContactPoint`. if it is a specific named person, use `Person`.
 
-Use `ExtractedPerson` when ingesting person metadata from a primary source.
-
-Use `MergedPerson` when referencing an individual from another entity, for example as the `involvedPerson` of a project.
-
 ### Mandatory fields & expected values
 
 | Property | Variant | Type | Expected value |
@@ -607,10 +577,6 @@ Use `PrimarySource` to describe a system, database, or API that feeds metadata i
 
 `PrimarySource` is a technical provenance entity and is established when a new extractor pipeline is set up and registered in the system.
 
-Use `ExtractedPrimarySource` when registering a new source system in MEx.
-
-Use `MergedPrimarySource` when referencing the origin of an extracted record. This is the value supplied in the `hadPrimarySource` property of every Extracted entity.
-
 ### Mandatory fields & expected values
 
 | Property | Variant | Type | Expected value |
@@ -668,10 +634,6 @@ The `Resource` entity is the central entity of the MEx model. It describes a dat
 Use `Resource` to describe any research dataset or data collection produced or managed by the RKI, e.g. surveillance data, study data, registry data, or any other structured data asset. Resources are the central objects of discovery in the metadata catalogue.
 
 A `Resource` describes the dataset as a whole. Its individual access forms or file representations are described as `Distribution` entities. The project or activity that produced it is described as an `Activity` linked via `wasGeneratedBy`. Individual data variables within it may be described as Variable entities.
-
-Use `ExtractedResource` when ingesting dataset metadata from a primary source system such as a data repository or research database.
-
-Use `MergedResource` when referencing a dataset from another entity, or when consuming dataset metadata in the catalogue.
 
 ### Mandatory fields & expected values
 
@@ -738,10 +700,6 @@ The `ResourceSeries` entity describes a collection of resources that are publish
 Use `ResourceSeries` to represent a named series of related datasets that are released over time or in parts. For example, a weekly epidemiological bulletin where each edition is its own `Resource`, or a multi-wave survey where each wave produces a separate dataset.
 
 `ResourceSeries` should not be confused with `Resource`, which describes a single dataset. A `ResourceSeries` is the umbrella that groups multiple `Resource` entities. It should also not be confused with `VariableGroup`, which groups variables within a single resource rather than grouping resources together.
-
-Use `ExtractedResourceSeries` when ingesting series metadata from a primary source system.
-
-Use `MergedResourceSeries` when referencing a series from another entity or consuming series metadata in the catalogue.
 
 ### Mandatory fields & expected values
 
@@ -830,10 +788,6 @@ Use `Variable` to describe individual fields or variables within a `Resource`, p
 
 `Variable` should not be confused with `VariableGroup`, which is a logical grouping of multiple variables. A `Variable` is the individual field. A `VariableGroup` is the container that organises related variables.
 
-Use `ExtractedVariable` when ingesting variable-level metadata from a data dictionary or codebook in a primary source system.
-
-Use `MergedVariable` when referencing a variable from another entity or consuming variable metadata in the catalogue's dedicated variable search view.
-
 ### Mandatory fields & expected values
 
 | Property | Variant | Type | Expected value |
@@ -896,10 +850,6 @@ The `VariableGroup` entity represents a logical grouping of `Variable` entities 
 Use `VariableGroup` when variables within a `Resource` can be meaningfully organised into named groups, e.g. by instrument section, dataset table, topic, or measurement domain. It is optional and should only be used where grouping genuinely aids understanding of the dataset structure.
 
 `VariableGroup` should not be confused with `Variable`. A `VariableGroup` is the container. Individual fields belong in `Variable` entities that reference the group.
-
-Use `ExtractedVariableGroup` when ingesting grouping structure from a data dictionary or codebook in a primary source system.
-
-Use `MergedVariableGroup` when referencing a variable group from another entity or consuming variable group metadata in the catalogue.
 
 ### Mandatory fields & expected values
 
