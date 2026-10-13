@@ -7,7 +7,6 @@ The MEx metadata model did not grow in isolation. Its entity types, property nam
 ### MEx as a DCAT-inspired application profile
 
 MEx draws on two W3C Recommendations as its conceptual foundation:
-
 * DCAT 2.0: the Data Catalog Vocabulary, which provides the core classes Dataset, Distribution and DataService together with a rich set of metadata properties.
 * PROV-O: the Provenance Ontology, from which MEx inherits the notions of Activity and hadPrimarySource.
 
@@ -19,7 +18,7 @@ To make that relationship precise, every MEx entity class and every property is 
 | --- | --- | --- |
 | A | Adopted | Semantically identical to the corresponding DCAT or PROV-O term or a term from another standard. The only difference is the property name (JSON camelCase instead of a prefixed RDF URI). A round-trip conversion to DCAT is lossless. |
 | E | Extended | Based on a DCAT or PROV-O concept, but MEx adds constraints, narrows the range, or broadens the semantics beyond what the original standard defines. A conversion to DCAT is possible but may lose MEx-specific detail. |
-| P | Profile-specific | Defined by MEx with no direct counterpart in DCAT or PROV-O. These properties serve RKI-internal requirements — data-privacy tracking, variable-level descriptions, organisational hierarchy — that fall outside the scope of a general-purpose data-catalog vocabulary. |
+| P | Profile-specific | Defined by MEx with no direct counterpart in DCAT or PROV-O. These properties serve RKI-internal requirements — data-privacy tracking, variable-level descriptions, organisational hierarchy — that fall outside the scope of a general-purpose data-catalogue vocabulary. |
 
 These levels are recorded in the JSON Schema files themselves via exactMatch (for A and E properties that correspond to an existing RDF predicate) and closeMatch (where a MEx property specialises a broader standard property). The properties exactMatch and closeMatch derive from the standard SKOS and are commonly used for mappings between schemas (see Simple Standard for Sharing Ontological Mappings - SSSOM). The entity reference pages in this specification include the level for every property, making it straightforward to assess how much a given entity can be exported to a standards-compliant DCAT catalogue and what will require profile-specific handling.
 
@@ -86,11 +85,11 @@ Not every DCAT 2.0 property has a counterpart in the MEx model. Some were omitte
 
 ### MEx-specific extensions beyond DCAT
 
-The properties below have no counterpart in DCAT 2.0 or PROV-O. They exist because the RKI metadata landscape includes concerns such as data-privacy consent, variable-level documentation, internal organisational hierarchy, and source-system traceability, that a general-purpose data-catalog vocabulary was never designed to address.
+The properties below have no counterpart in DCAT 2.0 or PROV-O. They exist because the RKI metadata landscape includes concerns such as data-privacy consent, variable-level documentation, internal organisational hierarchy, and source-system traceability, that a general-purpose data-catalogue vocabulary was never designed to address.
 
 | MEx Property | MEx Entity | Description | Why DCAT Does Not Cover This |
 | --- | --- | --- | --- |
-| identifierInPrimarySource | All Extracted | The identifier of the item as it appears in the source system. | DCAT assumes a single catalog-issued identifier. MEx must track the original ID from each feeder system to support deduplication and provenance across dozens of independent sources. |
+| identifierInPrimarySource | All Extracted | The identifier of the item as it appears in the source system. | DCAT assumes a single catalogue-issued identifier. MEx must track the original ID from each feeder system to support deduplication and provenance across dozens of independent sources. |
 | stableTargetId | All Extracted | Reference from an Extracted item to its Merged counterpart. | DCAT has no concept of an extract-then-merge pipeline. This property is the structural glue between the two lifecycle stages. |
 | technicalAccessibility | AccessPlatform | Whether the platform is reachable from inside the RKI network, externally, or both. | DCAT's DataService describes what an endpoint offers, not who can reach it on the network level. RKI needs this to distinguish intranet-only services from public APIs. |
 | activityType | Activity | Classification of the activity (e.g. surveillance, research project, administrative process). | PROV-O's Activity is deliberately type-agnostic. RKI requires a controlled vocabulary to categorise its projects for reporting and discovery. |
@@ -109,7 +108,7 @@ The properties below have no counterpart in DCAT 2.0 or PROV-O. They exist becau
 | doi | BibliographicResource | Digital Object Identifier. | DCAT uses dcterms:identifier as a generic bucket. MEx separates DOI into its own property so that extractors and validators can enforce the DOI syntax without ambiguity. |
 | isbnIssn | BibliographicResource | ISBN or ISSN of the publication. | Same rationale as doi: a typed identifier field that would be lost in DCAT's generic dcterms:identifier. |
 
-The MEx team adds a profile-specific property only when the requirement cannot be met by adopting or constraining an existing DCAT/PROV-O term. Each addition is recorded with a Level: P annotation in the entity reference pages, making it easy to identify which parts of a MEx record will need special handling when exporting to a standards-compliant DCAT-catalog.
+The MEx team adds a profile-specific property only when the requirement cannot be met by adopting or contraining an existing DCAT/PROV-O term. Each addition is recorded with a Level: P annotation in the entity reference pages, making it easy to identify which parts of a MEx record will need special handling when exporting to a standards-compliant DCAT-catalogue.
 
 ## HealthDCAT-AP Mapping
 

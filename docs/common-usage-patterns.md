@@ -4,7 +4,7 @@ This section collects practical guidance for the most frequent modelling tasks. 
 
 ## Describing a dataset (Resource)
 
-Creating a Resource record is the most common starting point. A resource represents a single dataset, a data source (the entirety of the data collected for a specific purpose, e.g. surveillance of diseases), or a single sample or a collection of samples (e.g. biobank material) in the MEx catalogue. Metadata consumers most likely will encounter the model through this entity first.
+Creating a Resource record is the most common starting point. A resource represents a single dataset, a data source (the entirety of the data collected for a specific purpose, e.g. surveillance of diseases), or data single and collections of samples in the MEx catalogue. Metadata consumers most likely will encounter the model through this entity first.
 
 ### Minimal Viable Record
 
@@ -53,7 +53,7 @@ The following optional properties can be used to enrich the metadata description
 | populationCoverage | A free-text description of the population that is covered by the data. Especially used for population-based data. |
 | spatial | A location indicating the geographical coverage of the data. |
 | startDate/endDate | Dates that indicate the temporal coverage of the data. |
-| wasGeneratedBy | An activity, in which the data originated, e.g. a research project. *(under review)* |
+| wasGeneratedBy | An activity, in which the data originated, e.g. a research project. *(Still under review)* |
 
 ### Linking to Distributions, Activities and Responsible Units
 
@@ -61,7 +61,7 @@ A Resource rarely stands alone. The following links place it in context:
 
 #### Distribution
 
-Every concrete file format or download endpoint is a separate `Distribution`. The resource links to them via the `distribution` field, which holds an array of `MergedDistribution` identifiers. See Handling multiple distributions below for guidance on when to split.
+Every concrete file format or download endpoint is a separate `Distribution`. The resource links to them via the distribution field, which holds an array of MergedDistribution identifiers. See Handling Multiple Distributions below for guidance on when to split.
 
 #### Activity
 
@@ -208,7 +208,7 @@ MEx uses two separate entity types to represent organisational structure:
 
 | Entity | Represents | Examples |
 | --- | --- | --- |
-| Organization | A top-level legal entity | Robert Koch Institute, Charité, WHO |
+| Organization | A top-level legal entity | Robert Koch-Institut, Charité, WHO |
 | OrganizationalUnit | A subdivision within an organisation | FG 36, Abteilung 3, ZIG |
 
 The distinction matters because most MEx properties that express responsibility (`unitInCharge`, `responsibleUnit`, `involvedUnit`) reference an `OrganizationalUnit`, not an `Organization`. The `Organization` entity appears primarily as a publisher or external associate.
@@ -223,11 +223,11 @@ A typical RKI hierarchy:
 
 | Entity | identifier | property | reference |
 | --- | --- | --- | --- |
-| Organization: Robert Koch Institute | org-rki-001 | - | - |
+| Organization: Robert Koch-Institut | org-rki-001 | - | - |
 | OrganizationalUnit: Abteilung 3 | ou-abt3-001 | unitOf | ["org-rki-001"] |
 | OrganizationalUnit: FG 36 | ou-fg36-001 | parentUnit | ["ou-abt3-001"] |
 
-Reading bottom-up: FG 36 is part of Abteilung 3, which is a unit of the Robert Koch Institute.
+Reading bottom-up: FG 36 is part of Abteilung 3, which is a unit of the Robert Koch-Institut.
 A few conventions to keep in mind:
 
 * The top of the chain is always an `Organization`. An `OrganizationalUnit` can have one parent unit.
@@ -244,7 +244,7 @@ Administrative units that never appear in metadata references (e.g. a facilities
 
 ## Handling multiple distributions
 
-A `Distribution` describes a single concrete form in which a dataset can be obtained, e.g. a downloadable file, an API endpoint, a database export. A `Resource` links to its distributions via the `distribution` field, which accepts an array of `MergedDistribution` identifiers.
+A `Distribution` describes a single concrete form in which a dataset can be obtained, e.g. a downloadable file, an API endpoint, a database export. A `Resource` links to its distributions via the distribution field, which accepts an array of `MergedDistribution` identifiers.
 
 ### When to create multiple distribution records
 
@@ -268,13 +268,13 @@ Rule of thumb: If a data consumer would perceive two distinct things they could 
 
 ### Format and access URL conventions
 
-Every distribution should populate at least `accessURL`, the URL at which the distribution can be reached. Beyond that:
+Every distribution should populate at least accessURL, the URL at which the distribution can be reached. Beyond that:
 
 | Field | When to use |
 | --- | --- |
-| `accessURL` | Always. The entry point for obtaining the data, whether that is a download link, a landing page, or an API base URL. |
-| `downloadURL` | When the URL points directly to a downloadable file. If `accessURL` is a landing page that leads to a download, `downloadURL` should hold the direct file link. If they are the same, set both to the same value. |
-| `mediaType` | Always, if known. Use a Concept URI from the MIME Type vocabulary (e.g. text/csv, application/json). |
+| accessURL | Always. The entry point for obtaining the data, whether that is a download link, a landing page, or an API base URL. |
+| downloadURL | When the URL points directly to a downloadable file. If accessURL is a landing page that leads to a download, downloadURL should hold the direct file link. If they are the same, set both to the same value. |
+| mediaType | Always, if known. Use a Concept URI from the MIME Type vocabulary (e.g. text/csv, application/json). |
 
 ## Multilingual text
 
@@ -304,14 +304,14 @@ MEx uses two-letter ISO 639-1 codes. In practice, most commonly used values are 
 
 ### Conventions
 
-* Do not duplicate identical content: If a title is a proper noun, technical term, or abbreviation that reads the same in both languages (e.g. "SARS-CoV-2 PCR"), a single entry without a language tag or with one language tag is sufficient. *(under review)*
+* Do not duplicate identical content: If a title is a proper noun, technical term, or abbreviation that reads the same in both languages (e.g. "SARS-CoV-2 PCR"), a single entry without a language tag or with one language tag is sufficient. *(Still under review)*
 * Language tag is optional but strongly recommended: The schema allows Text objects without a language field. Omitting it means "language unspecified", the value will still be stored and displayed, but language-aware search and filtering cannot use it. Always set the tag when the language is known.
 * One value per language per property: Do not provide two German entries for the same property. If you need to express an alternative name, use alternativeTitle rather than a second title entry in the same language.
-* Keyword language tags: Keywords are often short terms where the language boundary is blurry (e.g. "influenza" is used in both German and English). Pick the language that best reflects the term's origin. *(under review)*
+* Keyword language tags: Keywords are often short terms where the language boundary is blurry (e.g. "influenza" is used in both German and English). Pick the language that best reflects the term's origin. *(Still under review)*
 
 ## Governance & change requests
 
-The MEx metadata model and its controlled vocabularies are maintained as open-source JSON Schema files in the mex-model GitHub repository. Changes to the model follow a structured process to ensure that updates are deliberate, reviewed, and backward-compatible where possible.
+The MEx metadata model and its controlled vocabularies are maintained as Open Source JSON Schema files in the MEx-Model Github repository. Changes to the model follow a structured process to ensure that updates are deliberate, reviewed, and backward-compatible where possible.
 
 ### How to request a change
 
@@ -322,11 +322,11 @@ Changes fall into two categories:
 | Model changes | Adding a property, changing a cardinality, introducing a new entity type, removing a deprecated field | GitHub issue on mex-model or internal Jira ticket |
 | Vocabulary changes | Adding a new concept to an existing vocabulary, aligning values with an EU code list, deprecating a concept | Same |
 
-For vocabulary-specific governance (who can propose new values, how additions are reviewed), see the Controlled vocabularies → Governance section above.
+For vocabulary-specific governance (who can propose new values, how additions are reviewed), see the Controlled Vocabularies → Governance section above.
 
 ### What a change request should include
 
-A useful change request, whether filed as a GitHub issue or a Jira ticket, should cover:
+A useful change request, whether filed as a Github issue or a Jira ticket, should cover:
 
 * What: the specific property, entity, or vocabulary affected.
 * Why: the use case or requirement driving the change (e.g. HealthDCAT-AP compliance, extractor needs, data steward feedback).
@@ -336,7 +336,7 @@ A useful change request, whether filed as a GitHub issue or a Jira ticket, shoul
 ### Review and release process
 
 :::{note}
-This section has not been written yet.
+This section still needs content.
 :::
 
 ### Who to contact
@@ -345,4 +345,4 @@ For questions about the model or to discuss a potential change before filing a f
 
 E-Mail: mex@rki.de
 
-GitHub: open an issue
+Github: open an issue

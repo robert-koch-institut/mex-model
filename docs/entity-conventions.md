@@ -80,13 +80,13 @@ The `Activity` entity describes any activity carried out by the RKI, whether it 
 
 ### When to use
 
-Use `Activity` to describe a research project, a statutory task performed under federal law, or any other organised activity conducted at the RKI. Activities provide essential context for datasets. A `Resource` can reference the `Activity` that generated it via the `wasGeneratedBy` property.
+Use `Activity` to describe a research project, a statutory task performed under federal law, or any other organised activity conducted at the RKI. Activities provide essential context for datasets. A `Resource` can reference the `Activity` that generated it via the wasGeneratedBy property.
 
 `Activity` should not be confused with `Resource`, which describes the data itself. An `Activity` is the process or project that produced or is associated with data. A `Resource` is the dataset that resulted from or is used within that activity.
 
 Use `ExtractedActivity` when ingesting activity metadata from the primary source system such as a project database or HR system. Each extracted record represents the activity as described by that specific source.
 
-Use `MergedActivity` when referencing an activity from another entity, for example when linking a `Resource` to the project that generated it, when linking an `Activity` to a succeeding activity, or when consuming activity metadata in the catalogue.
+Use `MergedActivity` when referencing an activity from another entity, for example when linking a `Resource` to the project that generated it, when linken an `Activity` to a succeeding activity, or when consuming activity metadata in the catalogue.
 
 ### Mandatory fields & expected values
 
@@ -255,7 +255,7 @@ Use `MergedConsent` when referencing a consent record from another entity or con
 ### Common pitfalls
 
 * Conflating consent status with access restriction: consent is a GDPR-compliant declaration of a data subject's (an instance of `Person`) declaration. Access restriction on a `BibliographicResource`, `Resource` or `Distribution` indicates an access level of a resource or technical system. These are distinct and should not substitute for one another.
-* Conflicting `Consent` items: For every person item, there is a corresponding consent item. When person items are extracted from various primary source systems, duplicates of person items may occur. These may also have conflicting consent statuses. These items cannot be merged. For detailed information on the concept of GDPR-compliant consents, see *(chapter reference to be added)*.
+* Conflicting `Consent` items: For every person item, there is a corresponding consent item. When person items are extracted from various primary source systems, duplicates of person items may occur. These may also have conflicting consent statuses. These items cannot be merged. For detailed information on the concept of GDPR-compliant consents, see *(Place correct chapter here)*.
 
 ### Example JSON instances
 
@@ -546,7 +546,7 @@ The `Person` entity represents an individual researcher, staff member, or named 
 
 Use `Person` to represent a named individual, for example a person involved in an activity, a dataset contributor, or a publication author. Person records are typically sourced from HR or directory systems and enriched with authority identifiers such as ORCID.
 
-`Person` should not be confused with `ContactPoint`, which represents a shared functional address rather than an individual. If the contact is role-based or shared, use `ContactPoint`. If it is a specific named person, use `Person`.
+Person should not be confused with `ContactPoint`, which represents a shared functional address rather than an individual. If the contact is role-based or shared, use `ContactPoint`. If it is a specific named person, use `Person`.
 
 Use `ExtractedPerson` when ingesting person metadata from a primary source.
 
