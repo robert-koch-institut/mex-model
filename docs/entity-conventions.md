@@ -42,7 +42,7 @@ Use `AccessPlatform` to describe any technical system, API, or service through w
   "description": [{"value": "REST API providing access to infectious disease surveillance data.", "language": "en"}],
   "endpointURL": {"url": "https://survstat.rki.de/api/v2"},
   "identifier": "gglGQVGwZNJtqYDkW4N8jL",
-  "technicalAccessibility": "https://mex.rki.de/item/technical-accessibility-1", #internal
+  "technicalAccessibility": "https://mex.rki.de/item/technical-accessibility-1",
   "title": [{"value": "SurvStat API", "language": "en"}],
   "unitInCharge": ["hJKL9mNoPqRsTuVwXyZ123"]
 }
@@ -579,10 +579,10 @@ Use `Variable` to describe individual fields or variables within a `Resource`, p
 {
   "belongsTo": ["mPpRrTuVaWcYzB9145CdBw"],
   "datatypeInPrimarySource": "integer",
-  "datatypeStandardized": "https://mex.rki.de/item/datatype-standardized-1",
-  "description": ["Number of reported cases per 100,000 inhabitants over the last 7 days."],
+  "datatypeStandardized": "https://mex.rki.de/item/datatype-standardized-1",
+  "description": ["Number of reported cases per 100,000 inhabitants over the last 7 days."],
   "identifier": "pQrStUvWxYzA1234BcDeFg",
-  "technicalName": ["7-day_incidence"],
+  "technicalName": ["7-day_incidence"],
   "usedIn": ["mNoPqRsTuVwXyZ1234AbCd"]
 }
 ```
