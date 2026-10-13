@@ -154,10 +154,11 @@ See `mex-model/vocabularies/concept-schemes.json` for details.
 
 ```JSON
 {
-   "description": {
-            "de": "Dieses Vokabular basiert auf dem Dublin Core Collection Description Frequency Vokabular, verfügbar unter https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/.",
-            "en": "This vocabulary is based on the Dublin Core Collection Description Frequency Vocabulary, available at https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/."
-    },
+   "description": [
+    {"de": "Dieses Vokabular basiert auf dem Dublin Core Collection Description Frequency Vokabular, verfügbar unter https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/.",
+    "en": "This vocabulary is based on the Dublin Core Collection Description Frequency Vocabulary, available at https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/."
+    }
+   ],
   "identifier": "https://mex.rki.de/item/frequency",
   "label": "Frequency vocabulary"
 }
@@ -234,9 +235,9 @@ Use `Consent` to document GDPR-relevant consent records associated with research
 
 ```JSON
 {
-  "identifier": "qRsTuVwXyZ1234AbCdEfGh",
   "hasConsentStatus": "https://mex.rki.de/item/consent-status-1",
   "hasDataSubject": "cKMPkdHHTky6TF6hqMdbe7",
+  "identifier": "qRsTuVwXyZ1234AbCdEfGh",
   "isIndicatedAtTime": "2022-09-30T20:48:35Z"
 }
 ```
@@ -267,8 +268,8 @@ Use `ContactPoint` when a contact for an entity is a shared functional address, 
 
 ```JSON
 {
-  "identifier": "hJKL9mNoPqRsTuVwXyZ123",
-  "email": ["mex@rki.de"]
+  "email": ["mex@rki.de"],
+  "identifier": "hJKL9mNoPqRsTuVwXyZ123"
 }
 ```
 
@@ -299,11 +300,10 @@ Use `Distribution` to describe a specific file, format, or access form of a Reso
 
 ```JSON
 {
-  "identifier": "rStUvWxYzA1234AbCdEfGh",
   "accessUrl": ["https://example.org/datasets/abc/distribution.csv"],
   "downloadUrl": ["https://example.org/datasets/abc/distribution.csv"],
-  "mediaType": ["text/csv"],
-  "format": ["CSV"]
+  "identifier": "rStUvWxYzA1234AbCdEfGh",
+  "mediaType": ["text/csv"]
 }
 ```
 ## Location
@@ -338,7 +338,8 @@ Use `Organization` to represent an external institution, for example a funding b
   "identifier": "tUvWxYzA1234AbCdEfGhIj",
   "officialName": ["Robert Koch-Institut"],
   "shortName": ["RKI"],
-  "website": [{"language": "de", "title": "Offizielle RKI-Website", "url": "https://www.rki.de/"}]
+  "website": [{"language": "de", "title": "Offizielle RKI-Website", "url": "https://www.rki.de/"}],
+  "wikidataId": ["http://www.wikidata.org/entity/Q679041"]
 }
 ```
 
@@ -370,9 +371,9 @@ Use `OrganizationalUnit` to represent any internal RKI unit: a department or uni
 ```JSON
 {
   "identifier": "cDeFgHiJkLmN1234OpQrSt",
+  "isPartOf": ["tUvWxYzA1234AbCdEfGhIj"],
   "officialName": [{"language": "en", "value": "Center for International Health Protection"}],
-  "shortName": ["ZIG"],
-  "isPartOf": ["tUvWxYzA1234AbCdEfGhIj"]
+  "shortName": ["ZIG"]
 }
 ```
 
@@ -403,10 +404,12 @@ Person should not be confused with `ContactPoint`, which represents a shared fun
 
 ```JSON
 {
-  "identifier": "fGhIjKlMnOpQ1234RsTuVw",
-  "fullName": ["Dr. Ada Lovelace"],
+  "affiliation": ["cDeFgHiJkLmN1234OpQrSt"],
   "email": ["ada.lovelace@example.org"],
-  "affiliation": ["cDeFgHiJkLmN1234OpQrSt"]
+  "familyName": ["Lovelace"],
+  "fullName": ["Ada Lovelace"],
+  "givenName": ["Ada"],
+  "identifier": "fGhIjKlMnOpQ1234RsTuVw"
 }
 ```
 
@@ -439,9 +442,8 @@ Use `PrimarySource` to describe a system, database, or API that feeds metadata i
 ```JSON
 {
   "identifier": "iJkLmNoPqRsT1234UvWxYz",
-  "officialName": ["Pathogen Database"],
-  "shortName": ["Pathogen DB"],
-  "website": ["https://pathogendb.local.org/"]
+  "locatedAt": ["www.example.org/server-address"],
+  "title": ["Pathogen Database"]
 }
 ```
 
@@ -474,22 +476,22 @@ Use `ResourceSeries` to represent a named series of related datasets that are re
 
 ```json
 {
-  "identifier": "mRsExAmPlE14chars01",
-  "title": [
-    {"value": "Epidemiologisches Bulletin", "language": "de"},
-    {"value": "Epidemiological Bulletin", "language": "en"}
-  ],
+  "accrualPeriodicity": "https://mex.rki.de/item/frequency-1",
+  "contact": ["hJKL9mNoPqRsTuVwXyZ123"],
   "description": [
     {"value": "Wöchentliche Veröffentlichungsreihe des RKI zu aktuellen infektionsepidemiologischen Themen.", "language": "de"}
   ],
+  "identifier": "mRsExAmPlE14chars01",
   "keyword": [
     {"value": "Infektionsepidemiologie", "language": "de"},
     {"value": "Infectious disease epidemiology", "language": "en"}
   ],
-  "accrualPeriodicity": "https://mex.rki.de/item/frequency-1",
-  "start": ["2001-01"],
   "publisher": ["tUvWxYzA1234AbCdEfGhIj"],
-  "contact": ["hJKL9mNoPqRsTuVwXyZ123"]
+  "title": [
+    {"value": "Epidemiologisches Bulletin", "language": "de"},
+    {"value": "Epidemiological Bulletin", "language": "en"}
+  ],
+  "start": ["2001-01"]
 }
 ```
 
@@ -520,12 +522,12 @@ A `Resource` describes the dataset or data source. Its individual file represent
 
 ```JSON
 {
-  "identifier": "mNoPqRsTuVwXyZ1234AbCd",
-  "title": ["Surveillance dataset: Example indicators (2021–2024)"],
+  "contact": ["hJKL9mNoPqRsTuVwXyZ123"],
   "description": ["Surveillance indicators collected and curated for demonstration purposes."],
+  "distribution": ["rStUvWxYzA1234AbCdEfGh"],
+  "identifier": "mNoPqRsTuVwXyZ1234AbCd",
   "publisher": ["tUvWxYzA1234AbCdEfGhIj"],
-  "contactPoint": ["hJKL9mNoPqRsTuVwXyZ123"],
-  "distribution": ["rStUvWxYzA1234AbCdEfGh"]
+  "title": ["Surveillance dataset: Example indicators (2021–2024)"]
 }
 ```
 
@@ -557,8 +559,8 @@ Use `VariableGroup` when variables within a `Resource` can be meaningfully organ
 ```JSON
 {
   "identifier": "sTuVwXyZ1234AbCdEfGhIj",
-  "containedBy": ["mNoPqRsTuVwXyZ1234AbCd"],
-  "label": ["Case definitions"]
+  "title": ["Case definitions"],
+  "usedIn": ["mNoPqRsTuVwXyZ1234AbCd"]
 }
 ```
 
@@ -589,11 +591,12 @@ Use `Variable` to describe individual fields or variables within a `Resource`, p
 
 ```JSON
 {
-  "identifier": "pQrStUvWxYzA1234BcDeFg",
   "belongsTo": ["mPpRrTuVaWcYzB9145CdBw"],
-  "label": ["7-day incidence"],
-  "description": ["Number of reported cases per 100,000 inhabitants over the last 7 days."],
-  "datatype": ["integer"],
-  "isUsedIn": ["mNoPqRsTuVwXyZ1234AbCd"]
+  "datatypeInPrimarySource": "integer",
+  "datatypeStandardized": "https://mex.rki.de/item/datatype-standardized-1",
+  "description": ["Number of reported cases per 100,000 inhabitants over the last 7 days."],
+  "identifier": "pQrStUvWxYzA1234BcDeFg",
+  "technicalName": ["7-day_incidence"],
+  "usedIn": ["mNoPqRsTuVwXyZ1234AbCd"]
 }
 ```
