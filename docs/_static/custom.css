@@ -25,9 +25,3 @@ table.docutils {
     margin-left: 0;
     margin-right: auto;
 }
-
-/* Center the footer text. */
-
-div.footer {
-    text-align: center;
-}
