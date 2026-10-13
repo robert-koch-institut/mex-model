@@ -78,10 +78,9 @@ Changes can result from:
 
 ## Concept and ConceptScheme
 
-The vocabularies themselves are described by two entities based on SKOS. Unlike most entities, they have no Extracted and Merged variants, as they are defined within the model rather than sourced from primary source systems.
-
-* `ConceptScheme` corresponds to `skos:ConceptScheme` and represents a vocabulary as a whole. Its `identifier` is the URI that the `useScheme` keyword of a property points to.
-* `Concept` corresponds to `skos:Concept` and represents a single permissible value. Its `identifier` is the URI used as the property value, and `inScheme` references the `ConceptScheme` it belongs to. Every concept requires at least one `prefLabel`, while `altLabel`, `definition`, `broader`, `exactMatch`, `notation` and `note` are optional.
+:::{note}
+TBD: this section is still to be written.
+:::
 
 ### Schema detail
 

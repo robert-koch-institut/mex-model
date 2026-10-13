@@ -72,7 +72,7 @@ The model currently defines these entity types:
 | Consent | Yes | Data subject consent record |
 | ContactPoint | Yes | Shared email address for a team |
 | Distribution | Yes | A specific downloadable or accessible version of a dataset |
-| Location | Yes | Spatial region or named place, such as a country |
+| Location | Yes | TBD |
 | Organization | Yes | External institution |
 | OrganizationalUnit | Yes | RKI department or unit |
 | Person | Yes | Individual researcher or contact |
