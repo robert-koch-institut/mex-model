@@ -187,32 +187,83 @@ Use `BibliographicResource` to describe any publication associated with RKI rese
 
 ## Concept Scheme
 
-A `ConceptScheme` is a controlled list of concepts - a vocabulary. It corresponds to `skos:ConceptScheme`.
+A `ConceptScheme` is a controlled list of concepts - a vocabulary. It corresponds to `skos:ConceptScheme`. All vocabularies in use within the MEx system are defined in `model/vocabularies/concept-schemes.json`.
 
 ### When to use
 
-Use `ConceptScheme` to describe a vocabulary. Do not confuse it with `Concept`, which describes a term within the vocabulary.
-
-All vocabularies in use within the MEx system are defined in `model/vocabularies/concept-schemes.json`
-
-
+Both `ConceptScheme` and [Concept](#concept) are the only entity types that are excepted from the Extracted and Merged principle. Vocabularies used within the MEx system are not extracted from primary sources but manually curated within the mex-model repository. See chapter [Controlled vocabularies](controlled-vocabularies.md) for further details.
 
 ### Schema Detail
 
 ```{mex-entity} ConceptScheme
 ```
+
 ### Common pitfalls
 
+`ConceptScheme` gets confused it with `Concept`, which describes a term within the vocabulary, while `ConceptScheme`describes the vocabulary itself.
+
+### Example JSON instances
+
+See `mex-model/vocabularies/concept-schemes.json` for details.
+
+```JSON
+{
+   "description": {
+            "de": "Dieses Vokabular basiert auf dem Dublin Core Collection Description Frequency Vokabular, verfügbar unter https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/.",
+            "en": "This vocabulary is based on the Dublin Core Collection Description Frequency Vocabulary, available at https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/."
+    },
+  "identifier": "https://mex.rki.de/item/frequency",
+  "label": "Frequency vocabulary"
+}
+
+```
+
 ## Concept
+
+A `Concept` is a term of a controlled list (vocabulary). It corresponds to `skos:Concept`. All vocabularies in use within the MEx system are defined in `model/vocabularies/concept-schemes.json`.
+
 ### When to use
 
+Both `Concept` and [ConceptScheme](#concept-scheme) are the only entity types that are excepted from the Extracted and Merged principle. Vocabularies used within the MEx system are not extracted from primary sources but manually curated within the mex-model repository. See chapter [Controlled vocabularies](controlled-vocabularies.md) for further details.
 
 ### Schema Detail
 
 ```{mex-entity} Concept
-:variant: single
 ```
+
 ### Common pitfalls
+
+`Concept` gets confused it with `ConceptScheme`, which describes the vocabulary, while `Concept`describes a single term within the vocabulary.
+
+### Example JSON instances
+
+See `mex-model/vocabularies/[vocabulary].json` for details.
+
+```JSON
+{
+    "altLabel": [
+            {
+                "de": "PHDR",
+                "en": "PHDR"
+            }
+    ],
+    "definition": [
+            {
+                "de": "Bevölkerungsbezogene Gesundheitsdatenregisterdaten (Register der öffentlichen Gesundheit)",
+                "en": "Data from population-based health data registries such as public health registries"
+            }
+    ],
+    "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/PHDR"
+    ],
+    "identifier": "https://mex.rki.de/item/health-category-16",
+    "inScheme": "https://mex.rki.de/item/health-category",
+    "prefLabel": {
+            "de": "Bevölkerungsbezogene Gesundheitsregisterdaten",
+            "en": "Data from population-based health data registries"
+    }
+}
+```
 
 ## Consent
 
