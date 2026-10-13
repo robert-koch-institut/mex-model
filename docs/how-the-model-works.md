@@ -5,8 +5,8 @@
 The MEx metadata model is not confined to a single application, but constitutes the backbone of multiple interconnected workflows across the MEx metadata management system. All components of the system that produce, process, or consume metadata are either directly governed by the model or interface with a component that is. More precisely, the model is used in the following contexts:
 
 * [mex-common](https://github.com/robert-koch-institut/mex-common): pydantic models: MEx is implemented as Python type definitions used by MEx components for validation and serialisation
-* mex-assets & [mex-extractors](https://github.com/robert-koch-institut/mex-extractors): primary source mappings: ETL pipelines map source-system data to MEx entities when extracting metadata from primary systems
-* [mex-admin](https://github.com/robert-koch-institut/mex-admin) & [mex-editor](https://github.com/robert-koch-institut/mex-editor): the model defines available, required or optional fields for metadata editing
+* mex-assets (RKI internal access only) & [mex-extractors](https://github.com/robert-koch-institut/mex-extractors): primary source mappings: ETL pipelines map source-system data to MEx entities when extracting metadata from primary systems
+* [mex-admin](https://github.com/robert-koch-institut/mex-editor) & [mex-editor](https://github.com/robert-koch-institut/mex-editor-ng): the model defines available, required or optional fields for metadata editing
 * [mex-invenio](https://github.com/robert-koch-institut/mex-invenio): the catalogue renders and exposes metadata records in conformance to the MEx model
 * repositories: usage in data repositories for structured metadata
 
@@ -19,7 +19,7 @@ The following process diagram illustrates how these components relate within the
 | Prefix | Namespace | Used for |
 | --- | --- | --- |
 | dcat: | http://www.w3.org/ns/dcat# | DCAT classes and properties |
-| dcterms: | http://purl.org/dc/terms/ | Dublin Core terms such as title, description, identifier |
+| dcterms: | http://purl.org/dc/terms/ | common Dublin Core terms such as title, description, identifier |
 | prov: | http://www.w3.org/ns/prov# | Provenance concepts |
 | foaf: | http://xmlns.com/foaf/0.1/ | Persons, organizations, pages |
 | org: | http://www.w3.org/ns/org# | Organizational units and hierarchy |
@@ -27,19 +27,19 @@ The following process diagram illustrates how these components relate within the
 | skos: | http://www.w3.org/2004/02/skos/core# | Concepts and concept schemes |
 | dpv: | https://w3id.org/dpv# | Consent status / legal basis alignment |
 | healthdcat: | http://healthdataportal.eu/ns/health# | HealthDCAT-AP classes and properties |
-| dcatap: | https://www.dcat-ap.de/def/ (for references in mapping context) | DCAT-AP.de profile references |
+| dcatde: |   http://dcat-ap.de/def/dcatde/ (for references in mapping context) | DCAT-AP.de profile references |
 | mex: | https://mex.rki.de/mex/model/ | MEx entity and field URIs |
-| item: | https://mex.rki.de/item/ | Controlled vocabulary concept URIs |
-| json-schema: | https://json-schema.org/ | Schema specification reference |
-| iana: | https://www.iana.org/assignments/media-types/ | MIME types as controlled values / reference list |
+| item: | https://mex.rki.de/item/ | Controlled vocabulary concept URIs and base URI of instance data|
+| json-schema: | https://json-schema.org/ | JSON Schema specification reference |
+| further namespaces | | used for matching vocabulary terms to existing (standard) vocabularies |
 
 ## Repository layout & JSON file types
 
-The MEx metadata model is defined entirely as a set of JSON files, maintained in the [RKI MEx-Model](https://github.com/robert-koch-institut/mex-model) Github repository. This machine-readable form is the authoritative source of truth for the model, with the specification being a derived and expanded subordinate to it.
+The MEx metadata model is defined entirely as a set of [JSON Schema](https://json-schema.org/) files, maintained in the [RKI MEx-Model](https://github.com/robert-koch-institut/mex-model) Github repository. This machine-readable form is the authoritative source of truth for the model, with the specification being a derived and expanded subordinate to it.
 
 The directory is divided into five subdirectories, each with a distinct role.
 
-These directories are not independent. Entities reference field types via `$ref`, link to vocabularies via the custom useScheme keyword, and are labelled by the i18n files. The extension/ directory adds display and grouping metadata that the JSON Schema format cannot express natively.
+These directories are not independent. Entities are linked to each other via properties using `$ref`. To link a vocabulary to a property, `useScheme` was defined as a custom-property. This and other properties that the JSON Schema format cannot express natively are defined in the `extension` directory.
 
 ![MEx Github layout](img/mex-git-relations.png "MEx Github layout")
 
@@ -47,7 +47,7 @@ These directories are not independent. Entities reference field types via `$ref`
 
 ### Entities
 
-Each entity in the model is defined as a standard JSON Schema document located in entities/. Entity types exist in two variants: Extracted and Merged. This results in two separate files per type (e.g. `extracted-resource.json` and `merged-resource.json`). The distinction between these variants is fundamental to the MEx architecture and will be covered in detail in the following section.
+Each entity in the model is defined as a standard JSON Schema document located in `entities/`. Entity types exist in two variants: Extracted and Merged. This results in two separate files per type (e.g. `extracted-resource.json` and `merged-resource.json`). The distinction between these variants is fundamental to the MEx architecture and will be covered in detail in the following section.
 Within each entity file, the following JSON Schema keywords are used:
 
 | Keyword | Purpose |
@@ -64,7 +64,7 @@ The model currently defines these entity types:
 
 | Entity | Extracted/Merged | Description |
 | --- | --- | --- |
-| AccessPlatform | Yes | Technical system providing access to distributions |
+| AccessPlatform | Yes | Technical system providing access to resources and distributions |
 | Activity | Yes | Research activity, project, or statutory task |
 | BibliographicResource | Yes | Publication, article, or report |
 | Concept | No | A single value from a controlled vocabulary, identified by URI |
@@ -72,27 +72,30 @@ The model currently defines these entity types:
 | Consent | Yes | Data subject consent record |
 | ContactPoint | Yes | Shared email address for a team |
 | Distribution | Yes | A specific downloadable or accessible version of a dataset |
-| Location | Yes | TBD |
-| Organization | Yes | External institution |
+| Location | Yes | A geographical region |
+| Organization | Yes | (External) institutions |
 | OrganizationalUnit | Yes | RKI department or unit |
 | Person | Yes | Individual researcher or contact |
 | PrimarySource | Yes | Source system from which metadata is extracted |
-| Resource | Yes | A dataset or data collection |
-| ResourceSeries | Yes | Collection of resources published separately but grouped by shared characteristics |
+| Resource | Yes | A dataset or data source |
+| Resource Series | Yes | Collection of resources published separately but grouped by shared characteristics |
 | Variable | Yes | A single data variable within a resource |
 | VariableGroup | Yes | A logical grouping of variables |
 
-For all entity types that carry the extracted/merged distinction, the two variants reflect the two stages of the MEx data lifecycle. Extracted entities contain metadata taken directly from their primary source system, without modification. The Merged entities represent the normalised (and possibly manually corrected) consolidation of that data, potentially drawing from multiple primary sources. `Concept` and `ConceptScheme` do not follow this pattern as they are not sourced from external systems, but define the controlled vocabulary structure used across the model.
+For all entity types that carry the extracted/merged distinction, the two variants reflect the two stages of the MEx data lifecycle. Extracted entities contain metadata taken directly from their primary source system, without modification. The Merged entities represent the normalised (and possibly manually corrected) consolidation of that data, potentially drawing from multiple primary sources.
+
+`Concept` and `ConceptScheme` do not follow this pattern as they are not sourced from external systems, but define the controlled vocabulary structure used across the model.
 
 ### Fields
 
-The `fields/` directory contains three reusable atomic type definitions that are shared across entity schemas via $ref. Rather than repeating the same structural constraints in every entity file, field types are defined once and referenced wherever needed. The three field types are:
+The `fields/` directory contains reusable atomic type definitions that are shared across entity schemas via `$ref`. Rather than repeating the same structural constraints in every entity file, field types are defined once and referenced wherever needed. The field types are:
 
-| Field | Description | Structure |
-| --- | --- | --- |
-| Identifier | A unique, opaque entity identifier | string matching `^[a-zA-Z0-9]{14,22}$, base62-encoded` |
-| Link | A URL with optional title and language tag | url (required), title (optional), language (optional) |
-| Text | A multilingual text value | value (required), language (optional) |
+| Field | Description |
+| --- | --- |
+| Category | A category that is defined for a value in a value set |
+| Identifier | A unique, opaque entity identifier |
+| Link | A URL with optional title and language tag |
+| Text | A multilingual text value |
 
 This keeps entity files concise and ensures consistency for structural changes to a shared type to all entities using it.
 
@@ -110,15 +113,15 @@ This keeps entity files concise and ensures consistency for structural changes t
 
 ### Extension
 
-The `extension/` directory contains a single file, definition.json. This defines three custom keywords that extend the JSON Schema vocabulary used by MEx entity files:
+The `extension/` directory contains a single file, `definition.json`. This defines custom keywords that extend the JSON Schema vocabulary used by MEx entity files:
 
 | Custom Keyword | Equivalent | Purpose |
 | --- | --- | --- |
-| useScheme | (MEx-specific) | Links a property to a controlled vocabulary concept scheme, identified by a URI matching `https://mex.rki.de/item/...` |
+| useScheme | (MEx-specific) | Links a property to a controlled vocabulary concept scheme, identified by a URI matching `https://mex.rki.de/concept-scheme/...`. This allows to say which vocabulary must be used for the property, whereas `$ref` is used to link the Concept itself.|
 | closeMatch | skos:closeMatch | Denotes a close semantic match between the MEx term and a term from an external ontology or data model |
 | exactMatch | skos:exactMatch | Denotes an exact semantic match between the MEx term and a term from an external ontology or data model. This annotation property is used, e.g., when matching terms from controlled vocabularies. |
 
-These keywords are not part of the JSON Schema standard and will be ignored by generic JSON Schema validators. However, they are actively used within the MEx toolchain. Most notably, `useScheme` appears in entity schema files to link classification properties to their controlled vocabularies and is therefore integral to the model's behaviour.
+These keywords are not part of the JSON Schema standard and will be ignored by generic JSON Schema validators. However, they are actively used within the MEx toolchain. Most notably, `useScheme` appears in entity schema files to link classification properties to their controlled vocabularies and is therefore integral to the model's behavior.
 
 ### Vocabularies
 
