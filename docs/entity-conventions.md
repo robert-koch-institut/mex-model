@@ -193,14 +193,12 @@ A `ConceptScheme` is a controlled list of concepts - a vocabulary. It correspond
 
 Both `ConceptScheme` and [Concept](#concept) are the only entity types that are excepted from the Extracted and Merged principle. Vocabularies used within the MEx system are not extracted from primary sources but manually curated within the mex-model repository. See chapter [Controlled vocabularies](controlled-vocabularies.md) for further details.
 
+`ConceptScheme` gets confused it with `Concept`, which describes a term within the vocabulary, while `ConceptScheme`describes the vocabulary itself.
+
 ### Schema Detail
 
 ```{mex-entity} ConceptScheme
 ```
-
-### Common pitfalls
-
-`ConceptScheme` gets confused it with `Concept`, which describes a term within the vocabulary, while `ConceptScheme`describes the vocabulary itself.
 
 ### Example JSON instances
 
@@ -226,14 +224,12 @@ A `Concept` is a term of a controlled list (vocabulary). It corresponds to `skos
 
 Both `Concept` and [ConceptScheme](#concept-scheme) are the only entity types that are excepted from the Extracted and Merged principle. Vocabularies used within the MEx system are not extracted from primary sources but manually curated within the mex-model repository. See chapter [Controlled vocabularies](controlled-vocabularies.md) for further details.
 
+`Concept` gets confused it with `ConceptScheme`, which describes the vocabulary, while `Concept`describes a single term within the vocabulary.
+
 ### Schema Detail
 
 ```{mex-entity} Concept
 ```
-
-### Common pitfalls
-
-`Concept` gets confused it with `ConceptScheme`, which describes the vocabulary, while `Concept`describes a single term within the vocabulary.
 
 ### Example JSON instances
 
@@ -267,11 +263,11 @@ See `mex-model/vocabularies/[vocabulary].json` for details.
 
 ## Consent
 
-The `Consent` entity records a data subject's consent for the use of their personal data. It is aligned with the W3C Data Privacy Vocabulary (`dpv:Consent`).
+The `Consent` entity records a data subject's consent for the use of their personal data. It is aligned with the W3C Data Privacy Vocabulary `dpv:Consent`.
 
 ### When to use
 
-Use `Consent` to document GDPR-relevant consent records associated with research data. This entity is specific to the data privacy domain and is unlikely to be populated via automated extraction from most source systems.
+Use `Consent` to document GDPR-relevant consent records associated with research data.
 
 ### Schema Detail
 
@@ -282,7 +278,7 @@ Use `Consent` to document GDPR-relevant consent records associated with research
 ### Common pitfalls
 
 * Conflating consent status with access restriction: consent is a GDPR-compliant declaration of a data subject's (an instance of `Person`) declaration. Access restriction on a `BibliographicResource`, `Resource` or `Distribution` indicates an access level of a resource or technical system. These are distinct and should not substitute for one another.
-* Conflicting `Consent` items: For every person item, there is a corresponding consent item. When person items are extracted from various primary source systems, duplicates of person items may occur. These may also have conflicting consent statuses. These items cannot be merged. For detailed information on the concept of GDPR-compliant consents, see Chapter XX. <PLACE CORRECT CHAPTER HERE>
+* Conflicting `Consent` items: For every person item, there is a corresponding consent item. When Person items are extracted from various primary source systems, duplicates of person items may occur. These may also have conflicting consent statuses. These items cannot be merged. For detailed information on the concept of GDPR-compliant consents, see Chapter XX. <PLACE CORRECT CHAPTER HERE>
 
 ### Example JSON instances
 
@@ -313,14 +309,13 @@ Use `Consent` to document GDPR-relevant consent records associated with research
 
 ## ContactPoint
 
-The `ContactPoint` entity represents a shared email address or contact channel for a team or organisational function. It corresponds to `vcard:Kind`.
+The `ContactPoint` entity represents a shared email address or functional account used by a team or organizational unit. It corresponds to `vcard:Kind`.
 
 ### When to use
 
 Use `ContactPoint` when a contact for an entity is a shared functional address, such as a team inbox, rather than an individual person. It provides a stable point of contact that does not depend on a specific individual remaining in post.
 
-`ContactPoint` should not be confused with `Person`, which represents an individual. If a named individual is mentioned, use a reference to a `MergedPerson`. If the contact is a role-based or shared address, use `ContactPoint`.
-
+`ContactPoint` should not be confused with `Person`, which represents an individual. If a named individual is mentioned, use a reference to a `MergedPerson`.
 
 ### Schema Detail
 
@@ -373,8 +368,8 @@ Use `Distribution` to describe a specific file, format, or access form of a Reso
 
 ### Common pitfalls
 
-* Creating one `Distribution` per dataset instead of per format: if a dataset is available in three formats, three `Distribution` records should exist, not one.
-* Confusing `accessURL` and `downloadURL`: `accessURL` points to a page where the distribution can be accessed. `downloadURL` points directly to the downloadable file. Both may be present simultaneously
+* Creating one `Distribution` per dataset instead of per format: if a dataset is available in three formats, three `Distribution` records should exist.
+* Confusing `accessURL` and `downloadURL`: `accessURL` points to a page where the distribution can be accessed. `downloadURL` points directly to the downloadable file. Both may be present simultaneously.
 
 ### Example JSON instances
 
@@ -404,16 +399,17 @@ Use `Distribution` to describe a specific file, format, or access form of a Reso
   "format": ["CSV"]
 }
 ```
+## Location
 
 ## Organization
 
-The `Organization` entity describes an external institution, a legal or administrative body outside the RKI. It corresponds to `foaf:Organization`.
+The `Organization` entity describes an institution, a legal or administrative body. It corresponds to `foaf:Organization` and `org:Organization`.
 
 ### When to use
 
-Use `Organization` to represent an external institution, for example a funding body, a cooperating university, or an international partner organisation.
+Use `Organization` to represent an external institution, for example a funding body, a cooperating university, or an international partner organization.
 
-`Organization` should thus not be confused with `OrganizationalUnit`, which represents departments and units within the RKI. If the entity is part of the RKI, use `OrganizationalUnit`. If it is an external body, use `Organization`.
+`Organization` should thus not be confused with `OrganizationalUnit`, which represents departments and units within the RKI.
 
 ### Schema Detail
 
@@ -423,8 +419,8 @@ Use `Organization` to represent an external institution, for example a funding b
 
 ### Common pitfalls
 
-* Using `Organization` for RKI units: internal RKI departments and units must be modelled as `OrganizationalUnit`, not `Organization`
-* Duplicating organisations across sources: the same external institution may appear in multiple source systems under slightly different names. Authority file identifiers (ROR, GND) should be used to enable deduplication.
+* Using `Organization` for RKI units: internal RKI departments and units must be modelled as `OrganizationalUnit`.
+* Duplicating organizations across sources: the same external institution may appear in multiple source systems under slightly different names. Further infos on de-duplication in chapter [How the model works](how-the-model-works.md). The MEx systems uses Wikidata as a authority to identify and ingest organizations into the database.
 
 ### Example JSON instances
 
@@ -455,13 +451,13 @@ Use `Organization` to represent an external institution, for example a funding b
 
 ## OrganizationalUnit
 
-The `OrganizationalUnit` entity represents a department, team, or administrative unit within the RKI. It corresponds to `org:OrganizationalUnit`.
+The `OrganizationalUnit` entity represents a department or unit within the RKI. It corresponds to `org:OrganizationalUnit`.
 
 ### When to use
 
-Use `OrganizationalUnit` to represent any internal RKI structural unit: a department, a reference centre, a working group, or a project team. Organisational units can be arranged in a hierarchy using the `parentUnit` and `unitOf` properties.
+Use `OrganizationalUnit` to represent any internal RKI unit: a department or unit. Organizational units can be arranged in a hierarchy using the `parentUnit` and `unitOf` properties.
 
-`OrganizationalUnit` should not be confused with `Organization`, which represents external institutions. If the body is part of the RKI, use `OrganizationalUnit`.
+`OrganizationalUnit` should not be confused with `Organization`, which represents an institution. If the unit is part of the RKI, use `OrganizationalUnit`.
 
 ### Schema Detail
 
@@ -471,8 +467,8 @@ Use `OrganizationalUnit` to represent any internal RKI structural unit: a depart
 
 ### Common pitfalls
 
-* Confusing `OrganizationalUnit` with `Organization`: a recurring error, particularly for units with close external partnerships. The rule is simple: if it is part of the RKI, it is an `OrganizationalUnit`.
-* Not modelling the hierarchy: `parentUnit` and `unitOf` should be populated where the organisational hierarchy is known, as this is important for catalogue navigation.
+* Confusing `OrganizationalUnit` with `Organization`: While the laater is an institution, a unit is part of an institution. Within the MEx system `OrganizationalUnit` is only used to represent internal units of RKI.
+* Not modelling the hierarchy: `parentUnit` and `unitOf` should be populated.
 
 ### Example JSON instances
 
@@ -503,13 +499,13 @@ Use `OrganizationalUnit` to represent any internal RKI structural unit: a depart
 
 ## Person
 
-The `Person` entity represents an individual researcher, staff member, or named contact associated with RKI activities or resources. It corresponds to `foaf:Person`.
+The `Person` entity represents an individual researcher, RKI staff member, or contributor associated with RKI activities or resources. It corresponds to `foaf:Person`.
 
 ### When to use
 
-Use `Person` to represent a named individual, for example a person involved in an activity, a dataset contributor, or a publication author. Person records are typically sourced from HR or directory systems and enriched with authority identifiers such as ORCID.
+Use `Person` to represent a named individual, for example a person involved in an activity, a dataset contributor, or a publication author. Person records are mainly sourced from RKI's directory system, which functions as a authrority for all RKI staff members. Other Person items are derived from primary sources such as authors of publications (Bibliographic Resource items). Person records and may be enriched with authority identifiers such as ORCID, which we use as an additional authority service for external persons, who can be as contributors to resources.
 
-Person should not be confused with `ContactPoint`, which represents a shared functional address rather than an individual. If the contact is role-based or shared, use `ContactPoint`. if it is a specific named person, use `Person`.
+Person should not be confused with `ContactPoint`, which represents a shared functional address rather than an individual. If the contact is role-based or shared, use `ContactPoint`.
 
 ### Schema Detail
 
@@ -520,8 +516,7 @@ Person should not be confused with `ContactPoint`, which represents a shared fun
 ### Common pitfalls
 
 * Referencing persons by `name` string instead of `identifier`: all references to persons in other entities must use the `MergedPerson` identifier, not a name string.
-* Creating duplicate person records: the same individual may appear in multiple source systems. Authority identifiers (ORCID) should be used to support deduplication. Take care identifying different persons carrying the same name.
-* Confusing `Person` with `ContactPoint`: see decision guide above
+* Creating duplicate person records: the same individual may appear in multiple source systems. Take care identifying different persons carrying the same name.
 
 ### Example JSON instances
 
@@ -558,7 +553,7 @@ The `PrimarySource` entity represents a source system from which metadata is ext
 
 Use `PrimarySource` to describe a system, database, or API that feeds metadata into MEx via an extractor pipeline.
 
-`PrimarySource` is a technical provenance entity and is established when a new extractor pipeline is set up and registered in the system.
+`PrimarySource` is established when a new extractor pipeline is set up and registered in the system.
 
 ### Schema Detail
 
@@ -599,69 +594,15 @@ Use `PrimarySource` to describe a system, database, or API that feeds metadata i
 }
 ```
 
-### Resource
-
-The `Resource` entity is the central entity of the MEx model. It describes a dataset, data collection, or other research data asset. It corresponds to `dcat:Dataset`.
-
-### When to use
-
-Use `Resource` to describe any research dataset or data collection produced or managed by the RKI, e.g. surveillance data, study data, registry data, or any other structured data asset. Resources are the central objects of discovery in the metadata catalogue.
-
-A `Resource` describes the dataset as a whole. Its individual access forms or file representations are described as `Distribution` entities. The project or activity that produced it is described as an `Activity` linked via `wasGeneratedBy`. Individual data variables within it may be described as Variable entities.
-
-### Schema Detail
-
-```{mex-entity} Resource
-:variant: both
-```
-
-### Common pitfalls
-
-* Confusing `Resource` with `Distribution`: the `Resource` is the abstract dataset. `Distribution` describes its concrete representations. A `Resource` without any `Distribution` is valid but may limit discoverability.
-* Confusing `Resource` with `BibliographicalResource`: a publication about a dataset is a `BibliographicResource`. The dataset itself is a `Resource`.
-
-### Example JSON instances
-
-#### Extracted Resource (representative, with commonly used optional fields):
-
-```JSON
-{
-  "identifier": "kLmNoPqRsTuVwX1234YzAb",
-  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
-  "identifierInPrimarySource": "RES-DATASET-ABC-001",
-  "stableTargetId": "mNoPqRsTuVwXyZ1234AbCd",
-  "title": ["Surveillance dataset: Example indicators (2021–2024)"],
-  "description": ["Surveillance indicators collected and curated for demonstration purposes."],
-  "publisher": ["tUvWxYzA1234AbCdEfGhIj"],
-  "contactPoint": ["hJKL9mNoPqRsTuVwXyZ123"],
-  "distribution": ["rStUvWxYzA1234AbCdEfGh"]
-}
-```
-
-#### Merged Resource:
-
-```JSON
-{
-  "identifier": "mNoPqRsTuVwXyZ1234AbCd",
-  "title": ["Surveillance dataset: Example indicators (2021–2024)"],
-  "description": ["Surveillance indicators collected and curated for demonstration purposes."],
-  "publisher": ["tUvWxYzA1234AbCdEfGhIj"],
-  "contactPoint": ["hJKL9mNoPqRsTuVwXyZ123"],
-  "distribution": ["rStUvWxYzA1234AbCdEfGh"]
-}
-```
-
 ## ResourceSeries
 
-The `ResourceSeries` entity describes a collection of resources that are published separately but share characteristics that group them, such as a recurring surveillance report or a longitudinal study with annual data releases. It corresponds to `healthdcat:DatasetSeries`.
+The `ResourceSeries` entity describes a collection of resources that are published separately but share characteristics that group them, such as a recurring surveillance report or a longitudinal study with annual data releases. It corresponds to `dcat:DatasetSeries`.
 
 ### When to use
 
 Use `ResourceSeries` to represent a named series of related datasets that are released over time or in parts. For example, a weekly epidemiological bulletin where each edition is its own `Resource`, or a multi-wave survey where each wave produces a separate dataset.
 
-`ResourceSeries` should not be confused with `Resource`, which describes a single dataset. A `ResourceSeries` is the umbrella that groups multiple `Resource` entities. It should also not be confused with `VariableGroup`, which groups variables within a single resource rather than grouping resources together.
-
-All other properties are optional.
+`ResourceSeries` should not be confused with `Resource`, which describes a single dataset or data source. A `ResourceSeries` is a container that groups multiple `Resource` entities. It should also not be confused with `VariableGroup`, which groups variables within a single resource rather than grouping resources together.
 
 ### Schema Detail
 
@@ -671,8 +612,8 @@ All other properties are optional.
 
 ### Common pitfalls
 
-* Confusing `ResourceSeries` with `Resource`: a `ResourceSeries` never describes data directly, it groups `Resource` entities. If the thing you are describing has distributions, variables, or access restrictions of its own, it is a `Resource`, not a `ResourceSeries`.
-* Not linking Resources to their series: a `ResourceSeries` is only useful if individual `Resource` entities reference it. Ensure the relationship is established from the resource side.
+* Confusing `ResourceSeries` with `Resource`: a `ResourceSeries` never describes data directly, it groups `Resource` entities. If the thing you are describing has distributions, variables, or access restrictions of its own, it is a `Resource`.
+* Not linking resources to their series: a `ResourceSeries` is only useful if individual `Resource` entities reference it. Ensure the relationship is established from the resource side.
 * Omitting `start`/`end`: while optional, temporal coverage helps catalogue users understand whether the series is ongoing or concluded and what time span it covers.
 * Using `ResourceSeries` for one-off collections: if a group of datasets was released once and will not grow, consider whether a single `Resource` with multiple `Distribution` records is more appropriate.
 
@@ -727,15 +668,113 @@ All other properties are optional.
 }
 ```
 
+### Resource
+
+The `Resource` entity is the central entity of the MEx model. It describes a dataset, data collection, or other research data asset. It corresponds to `dcat:Dataset`.
+
+### When to use
+
+Use `Resource` to describe any dataset or data collection produced or managed by RKI, e.g. surveillance data, study data, registry data, or any other structured data asset. Resources are the central objects of discovery in the Metadata Catalogue.
+
+A `Resource` describes the dataset or data source. Its individual file representations are described as `Distribution` entities. The project or activity that produced the resource is described as an `Activity`. Individual variables within it may be described as `Variable` entities.
+
+### Schema Detail
+
+```{mex-entity} Resource
+:variant: both
+```
+
+### Common pitfalls
+
+* Confusing `Resource` with `Distribution`: the `Resource` is the dataset or data source. `Distribution` describes its representations.
+* Confusing `Resource` with `BibliographicalResource`: a publication about a dataset is a `BibliographicResource`. The dataset itself is a `Resource`.
+
+### Example JSON instances
+
+#### Extracted Resource (representative, with commonly used optional fields):
+
+```JSON
+{
+  "identifier": "kLmNoPqRsTuVwX1234YzAb",
+  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
+  "identifierInPrimarySource": "RES-DATASET-ABC-001",
+  "stableTargetId": "mNoPqRsTuVwXyZ1234AbCd",
+  "title": ["Surveillance dataset: Example indicators (2021–2024)"],
+  "description": ["Surveillance indicators collected and curated for demonstration purposes."],
+  "publisher": ["tUvWxYzA1234AbCdEfGhIj"],
+  "contactPoint": ["hJKL9mNoPqRsTuVwXyZ123"],
+  "distribution": ["rStUvWxYzA1234AbCdEfGh"]
+}
+```
+
+#### Merged Resource:
+
+```JSON
+{
+  "identifier": "mNoPqRsTuVwXyZ1234AbCd",
+  "title": ["Surveillance dataset: Example indicators (2021–2024)"],
+  "description": ["Surveillance indicators collected and curated for demonstration purposes."],
+  "publisher": ["tUvWxYzA1234AbCdEfGhIj"],
+  "contactPoint": ["hJKL9mNoPqRsTuVwXyZ123"],
+  "distribution": ["rStUvWxYzA1234AbCdEfGh"]
+}
+```
+
+## VariableGroup
+
+The `VariableGroup` entity represents a logical grouping of `Variable` entities within a Resource, for example a section of a questionnaire or a thematic cluster of variables in a dataset. It is MEx-specific, but relates roughly to the concept of `csvw:Table`.
+
+### When to use
+
+Use `VariableGroup` when variables within a `Resource` can be meaningfully organized into named groups, e.g. by instrument section, dataset table, topic, or measurement domain. It is optional and should only be used where grouping genuinely aids understanding of the dataset structure.
+
+`VariableGroup` should not be confused with `Variable`. A `VariableGroup` is the container.
+
+### Schema Detail
+
+```{mex-entity} VariableGroup
+:variant: both
+```
+
+### Common pitfalls
+
+* Creating `VariableGroup`s without variable: a group with no member variables provides no value. Ensure that `Variable` entities reference their variable group.
+* Over-grouping: not every dataset requires variable groups. Only introduce grouping where it reflects a genuine and meaningful structure in the source data.
+
+### Example JSON instances
+
+#### Extracted VariableGroup (representative, with commonly used optional fields):
+
+```JSON
+{
+  "identifier": "qRsTuVwXyZ1234AbCdEfGh",
+  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
+  "identifierInPrimarySource": "VG-PRIMARYSOURCE-001",
+  "stableTargetId": "sTuVwXyZ1234AbCdEfGhIj",
+  "containedBy": ["mNoPqRsTuVwXyZ1234AbCd"],
+  "label": ["Case definitions"]
+}
+```
+
+#### Merged VariableGroup:
+
+```JSON
+{
+  "identifier": "sTuVwXyZ1234AbCdEfGhIj",
+  "containedBy": ["mNoPqRsTuVwXyZ1234AbCd"],
+  "label": ["Case definitions"]
+}
+```
+
 ## Variable
 
-The `Variable` entity describes a single data variable within a resource, for example a column in a dataset or a field in a data dictionary. It is MEx-specific with no direct DCAT equivalent. It corresponds to `CSVW` in HealthDCAT-AP.
+The `Variable` entity describes a single data variable within a resource, for example a column in a dataset or a field in a data dictionary. It corresponds to how `csvw:column` is defined within HealthDCAT-AP.
 
 ### When to use
 
 Use `Variable` to describe individual fields or variables within a `Resource`, particularly where variable-level documentation is meaningful for data reuse, for example coded variables, measurement units, or variables with complex value ranges.
 
-`Variable` should not be confused with `VariableGroup`, which is a logical grouping of multiple variables. A `Variable` is the individual field. A `VariableGroup` is the container that organises related variables.
+`Variable` should not be confused with `VariableGroup`, which is a logical grouping of multiple variables. A `Variable` is the individual field. A `VariableGroup` is the container that organizes related variables.
 
 ### Schema Detail
 
@@ -746,7 +785,7 @@ Use `Variable` to describe individual fields or variables within a `Resource`, p
 ### Common pitfalls
 
 * Confusing `Variable` with `VariableGroup`: individual fields belong in `Variable`. Use `VariableGroup` only to group related variables logically.
-* Not linking variables to their resource: a `Variable` should reference its parent `Resource` to be meaningful in the catalogue context.
+* Not linking variables to their resource: a `Variable` must reference its parent `Resource` to be meaningful.
 
 ### Example JSON instances
 
@@ -776,51 +815,5 @@ Use `Variable` to describe individual fields or variables within a `Resource`, p
   "description": ["Number of reported cases per 100,000 inhabitants over the last 7 days."],
   "datatype": ["integer"],
   "isUsedIn": ["mNoPqRsTuVwXyZ1234AbCd"]
-}
-```
-
-## VariableGroup
-
-The `VariableGroup` entity represents a logical grouping of `Variable` entities within a Resource, for example a section of a questionnaire or a thematic cluster of variables in a dataset. It is MEx-specific with no direct DCAT equivalent.
-
-### When to use
-
-Use `VariableGroup` when variables within a `Resource` can be meaningfully organised into named groups, e.g. by instrument section, dataset table, topic, or measurement domain. It is optional and should only be used where grouping genuinely aids understanding of the dataset structure.
-
-`VariableGroup` should not be confused with `Variable`. A `VariableGroup` is the container. Individual fields belong in `Variable` entities that reference the group.
-
-### Schema Detail
-
-```{mex-entity} VariableGroup
-:variant: both
-```
-
-### Common pitfalls
-
-* Creating `VariableGroup`s without `Variable`s: a group with no member variables provides no value. Ensure that `Variable` entities reference their parent group.
-* Over-grouping: not every dataset requires variable groups. Only introduce grouping where it reflects a genuine and meaningful structure in the source data.
-
-### Example JSON instances
-
-#### Extracted VariableGroup (representative, with commonly used optional fields):
-
-```JSON
-{
-  "identifier": "qRsTuVwXyZ1234AbCdEfGh",
-  "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
-  "identifierInPrimarySource": "VG-PRIMARYSOURCE-001",
-  "stableTargetId": "sTuVwXyZ1234AbCdEfGhIj",
-  "containedBy": ["mNoPqRsTuVwXyZ1234AbCd"],
-  "label": ["Case definitions"]
-}
-```
-
-#### Merged VariableGroup:
-
-```JSON
-{
-  "identifier": "sTuVwXyZ1234AbCdEfGhIj",
-  "containedBy": ["mNoPqRsTuVwXyZ1234AbCd"],
-  "label": ["Case definitions"]
 }
 ```
