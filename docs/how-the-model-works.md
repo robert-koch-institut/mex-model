@@ -2,7 +2,7 @@
 
 ## Where the model is used
 
-The MEx metadata model is not confined to a single application, but constitutes the backbone of multiple interconnected workflows across the MEx metadata management system. All components of the system that produce, process, or consume metadata are either directly governed by the model or interface with a component that is. More precisely, the model is used in the following contexts:
+The MEx metadata model is not confined to a single application, but constitutes the backbone of multiple interconnected workflows across the MEx metadata management system. All components of the system that produce, process, or consume metadata might either be directly governed by the model or interfaces with a component that is. More precisely, the model is used in the following contexts:
 
 * [mex-common](https://github.com/robert-koch-institut/mex-common): pydantic models: MEx is implemented as Python type definitions used by MEx components for validation and serialisation
 * mex-assets (RKI internal access only) & [mex-extractors](https://github.com/robert-koch-institut/mex-extractors): primary source mappings: ETL pipelines map source-system data to MEx entities when extracting metadata from primary systems
@@ -12,7 +12,7 @@ The MEx metadata model is not confined to a single application, but constitutes 
 
 The following process diagram illustrates how these components relate within the overall MEx workflow:
 
-![MEx metadata generation BPMN 2.0 workflow](img/mex-metadata-generation.png "MEx metadata generation BPMN 2.0 workflow")
+![MEx metadata generation BPMN 2.0 workflow](img/MEx-metadata-generation.png "MEx metadata generation BPMN 2.0 workflow")
 
 ## namespaces & prefixes
 
@@ -41,7 +41,7 @@ The directory is divided into five subdirectories, each with a distinct role.
 
 These directories are not independent. Entities are linked to each other via properties using `$ref`. To link a vocabulary to a property, `useScheme` was defined as a custom-property. This and other properties that the JSON Schema format cannot express natively are defined in the `extension` directory.
 
-![MEx Github layout](img/mex-git-relations.png "MEx Github layout")
+![MMEx Github layout](img/mex-git-relations.png "MEx Github layout")
 
 ## Entities, Fields, Extensions, Vocabularies
 
@@ -101,15 +101,9 @@ This keeps entity files concise and ensures consistency for structural changes t
 
 ### Field Schema Detail
 
-```{mex-field} identifier
-```
-
-```{mex-field} link
-```
-
-```{mex-field} text
-```
-
+```{mex-field} identifier  ```
+```{mex-field} link  ```
+```{mex-field} text  ```
 
 ### Extension
 
@@ -119,13 +113,13 @@ The `extension/` directory contains a single file, `definition.json`. This defin
 | --- | --- | --- |
 | useScheme | (MEx-specific) | Links a property to a controlled vocabulary concept scheme, identified by a URI matching `https://mex.rki.de/concept-scheme/...`. This allows to say which vocabulary must be used for the property, whereas `$ref` is used to link the Concept itself.|
 | closeMatch | skos:closeMatch | Denotes a close semantic match between the MEx term and a term from an external ontology or data model |
-| exactMatch | skos:exactMatch | Denotes an exact semantic match between the MEx term and a term from an external ontology or data model. This annotation property is usedi.e. in matching terms from controlled vocabularies. |
+| exactMatch | skos:exactMatch | Denotes an exact semantic match between the MEx term and a term from an external ontology or data model. This annotation property is used i.e. in matching terms from controlled vocabularies. |
 
 These keywords are not part of the JSON Schema standard and will be ignored by generic JSON Schema validators. However, they are actively used within the MEx toolchain. Most notably, `useScheme` appears in entity schema files to link classification properties to their controlled vocabularies and is therefore integral to the model's behavior.
 
 ### Vocabularies
 
-The vocabularies/ directory contains the controlled value lists used by classification properties across entity types. Each vocabulary is a JSON file defining a named set of concepts, where every concept is identified by a URI of the form `https//mex.rki.de/item/...`
+The `vocabularies/` directory contains the controlled value lists used by classification properties across entity types. Each vocabulary is a JSON file defining a named set of concepts, where every concept is identified by a URI of the form `https//mex.rki.de/item/...`
 An entity property references a vocabulary through the custom `useScheme` keyword:
 
 ```JSON
@@ -137,7 +131,7 @@ An entity property references a vocabulary through the custom `useScheme` keywor
 }
 ```
 
-The valid value for such a property is always the URI of a concept within the declared scheme, never a free-text string. This ensures machine-readability, unambiguous classification and mapping to EU-level controlled vocabularies where equivalents exist. More information on this can be found in the following subsection.
+The valid value for such a property is always the URI of a concept within the declared scheme, never a free-text string. This ensures machine-readability, unambiguous classification and mapping to external controlled vocabularies where equivalents exist. More information on this can be found in the following subsection on [How vocabularies are used](#how-vocabularies-are-used).
 
 #### Internationalization (i18n)
 
@@ -146,7 +140,7 @@ The `i18n/` directory contains JSON files that map property names to human-reada
 ### How vocabularies are used
 
 Controlled vocabularies in MEx serve as fixed reference lists for classification properties across entity types. Rather than accepting free-text input, properties that reference a vocabulary require a value in the form of a Concept URI. This is a stable, machine-readable identifier of the form `https://mex.rki.de/item/...` and ensures unambiguous, consistent classification that is both human-readable through the associated labels and ensures interoperability with external vocabulary systems.
-Within an entity schema, a property is linked to its vocabulary through the custom useScheme keyword, defined in `extension/definition.json`. The following example shows how the accessRestriction property on a Resource declares its vocabulary reference:
+Within an entity schema, a property is linked to its vocabulary through the custom `useScheme` keyword, defined in `extension/definition.json`. The following example shows how the property `accessRestriction` on a Resource declares its vocabulary reference:
 
 ```JSON
 {
