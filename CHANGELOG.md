@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- added updated specification for MEx
 - extend `schema-checks` array validation: flag an array property that has
   both `minItems` and a `default` set
 - extend `schema-checks` annotation validation: flag `closeMatch` and `exactMatch`
@@ -57,6 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - new template https://github.com/robert-koch-institut/mex-template/releases/tag/2.0.1
 - new template https://github.com/robert-koch-institut/mex-template/releases/tag/2.0.0
+
 ### Fixed
 
 - fixed malformed `closeMatch` URI (`http.//` instead of `http://`) on

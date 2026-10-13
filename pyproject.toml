@@ -11,6 +11,7 @@ dependencies = []
 
 [dependency-groups]
 dev = [
+    "docutils>=0.21",
     "ipdb>=0.13",
     "jsonschema>=4",
     "mypy>=1",
@@ -22,11 +23,12 @@ dev = [
     "ruff>=0.16",
     "sphinx-jsonschema>=1.19",
     "sphinx<9",
-    "types-jsonschema>=4",
+    "types-docutils",
+    "types-jsonschema",
 ]
 
 [tool.coverage.run]
-omit = ["docs/*"]
+omit = ["docs/conf.py"]
 
 [tool.cruft]
 template = "https://github.com/robert-koch-institut/mex-template"
@@ -38,11 +40,6 @@ context = 5
 [tool.mypy]
 show_error_codes = true
 strict = true
-
-# the sphinx extensions in `docs` are not part of the package and not type-checked
-[[tool.mypy.overrides]]
-module = ["navigation", "schemas"]
-ignore_missing_imports = true
 
 [tool.pydantic-mypy]
 warn_untyped_fields = true
