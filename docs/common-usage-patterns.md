@@ -73,7 +73,7 @@ If the dataset was produced by a research project or surveillance activity, link
 
 #### Minimal
 
-```JSON
+```json
 {
   "identifier": "aB1cDeFgHiJkLmNoPqRsTu",
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
@@ -89,7 +89,7 @@ If the dataset was produced by a research project or surveillance activity, link
 
 #### Well-Described
 
-```JSON
+```json
 {
   "identifier": "aB1cDeFgHiJkLmNoPqRsTu",
   "hadPrimarySource": "bFQoRhcVH5DHU6naEb1wng",
@@ -280,7 +280,7 @@ Several MEx properties, such as title, description, keyword, and others, accept 
 
 Structure of a text object:
 
-```JSON
+```json
 {
   "value": "Wöchentliche Meldedaten zu Influenza-Fällen",
   "language": "de"
@@ -289,7 +289,7 @@ Structure of a text object:
 
 Properties typed as Text are always arrays, so a bilingual title looks like this:
 
-```JSON
+```json
 "title": [
   {"value": "Meldedaten Influenza", "language": "de"},
   {"value": "Notifiable disease data: Influenza", "language": "en"}

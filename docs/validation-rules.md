@@ -37,7 +37,7 @@ The schema enforces types at the property level:
 
 Properties that reference a controlled vocabulary declare this via the custom `useScheme` keyword in the schema:
 
-```JSON
+```json
 {
   "technicalAccessibility": {
     "$ref": "/mex/model/entities/concept#/identifier",

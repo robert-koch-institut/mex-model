@@ -122,7 +122,7 @@ These keywords are not part of the JSON Schema standard and will be ignored by g
 The `vocabularies/` directory contains the controlled value lists used by classification properties across entity types. Each vocabulary is a JSON file defining a named set of concepts, where every concept is identified by a URI of the form `https//mex.rki.de/item/...`
 An entity property references a vocabulary through the custom `useScheme` keyword:
 
-```JSON
+```json
 {
   "accessRestriction": {
     "useScheme": "https://mex.rki.de/item/access-restriction",
@@ -142,7 +142,7 @@ The `i18n/` directory contains JSON files that map property names to human-reada
 Controlled vocabularies in MEx serve as fixed reference lists for classification properties across entity types. Rather than accepting free-text input, properties that reference a vocabulary require a value in the form of a Concept URI. This is a stable, machine-readable identifier of the form `https://mex.rki.de/item/...` and ensures unambiguous, consistent classification that is both human-readable through the associated labels and ensures interoperability with external vocabulary systems.
 Within an entity schema, a property is linked to its vocabulary through the custom `useScheme` keyword, defined in `extension/definition.json`. The following example shows how the property `accessRestriction` on a Resource declares its vocabulary reference:
 
-```JSON
+```json
 {
   "accessRestriction": {
     "useScheme": "https://mex.rki.de/item/access-restriction",

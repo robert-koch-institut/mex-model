@@ -25,7 +25,6 @@ Use `AccessPlatform` to describe any technical system, API, or service through w
 ### Schema Detail
 
 ```{mex-entity} AccessPlatform
-:variant: both
 ```
 
 ### Common pitfalls
@@ -38,7 +37,7 @@ Use `AccessPlatform` to describe any technical system, API, or service through w
 
 #### Merged AccessPlatform
 
-```JSON
+```json
 {
   "description": [{"value": "REST API providing access to infectious disease surveillance data.", "language": "en"}],
   "endpointURL": {"url": "https://survstat.rki.de/api/v2"},
@@ -62,7 +61,6 @@ Use `Activity` to describe a research project, a statutory task performed under 
 ### Schema Detail
 
 ```{mex-entity} Activity
-:variant: both
 ```
 
 ### Common pitfalls
@@ -76,7 +74,7 @@ Use `Activity` to describe a research project, a statutory task performed under 
 
 #### Merged Activity
 
-```JSON
+```json
 {
   "activityType": ["https://mex.rki.de/item/activity-type-1"],
   "contact": ["cKMPkdHHTky6TF6hqMdbe7"],
@@ -105,7 +103,6 @@ Use `BibliographicResource` to describe any publication associated with RKI rese
 ### Schema Detail
 
 ```{mex-entity} BibliographicResource
-:variant: both
 ```
 
 ### Common pitfalls
@@ -117,7 +114,7 @@ Use `BibliographicResource` to describe any publication associated with RKI rese
 
 #### Merged BibliographicResource
 
-```JSON
+```json
 {
   "identifier": "mNoPqRsTuVwXyZ1234AbCd",
   "accessRestriction": "https://mex.rki.de/item/access-restriction-1",
@@ -152,7 +149,7 @@ Both `ConceptScheme` and [Concept](#concept) are the only entity types that are 
 
 See `mex-model/vocabularies/concept-schemes.json` for details.
 
-```JSON
+```json
 {
    "description": [
     {"de": "Dieses Vokabular basiert auf dem Dublin Core Collection Description Frequency Vokabular, verfügbar unter https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/.",
@@ -184,7 +181,7 @@ Both `Concept` and [ConceptScheme](#concept-scheme) are the only entity types th
 
 See `mex-model/vocabularies/[vocabulary].json` for details.
 
-```JSON
+```json
 {
     "altLabel": [
             {
@@ -221,7 +218,6 @@ Use `Consent` to document GDPR-relevant consent records associated with research
 ### Schema Detail
 
 ```{mex-entity} Consent
-:variant: both
 ```
 
 ### Common pitfalls
@@ -233,7 +229,7 @@ Use `Consent` to document GDPR-relevant consent records associated with research
 
 #### Merged Consent
 
-```JSON
+```json
 {
   "hasConsentStatus": "https://mex.rki.de/item/consent-status-1",
   "hasDataSubject": "cKMPkdHHTky6TF6hqMdbe7",
@@ -255,7 +251,6 @@ Use `ContactPoint` when a contact for an entity is a shared functional address, 
 ### Schema Detail
 
 ```{mex-entity} ContactPoint
-:variant: both
 ```
 
 ### Common pitfalls
@@ -266,7 +261,7 @@ Use `ContactPoint` when a contact for an entity is a shared functional address, 
 
 #### Merged ContactPoint
 
-```JSON
+```json
 {
   "email": ["mex@rki.de"],
   "identifier": "hJKL9mNoPqRsTuVwXyZ123"
@@ -286,7 +281,6 @@ Use `Distribution` to describe a specific file, format, or access form of a Reso
 ### Schema Detail
 
 ```{mex-entity} Distribution
-:variant: both
 ```
 
 ### Common pitfalls
@@ -298,7 +292,7 @@ Use `Distribution` to describe a specific file, format, or access form of a Reso
 
 #### Merged Distribution
 
-```JSON
+```json
 {
   "accessUrl": ["https://example.org/datasets/abc/distribution.csv"],
   "downloadUrl": ["https://example.org/datasets/abc/distribution.csv"],
@@ -321,7 +315,6 @@ Use `Organization` to represent an external institution, for example a funding b
 ### Schema Detail
 
 ```{mex-entity} Organization
-:variant: both
 ```
 
 ### Common pitfalls
@@ -333,7 +326,7 @@ Use `Organization` to represent an external institution, for example a funding b
 
 #### Merged Organization
 
-```JSON
+```json
 {
   "identifier": "tUvWxYzA1234AbCdEfGhIj",
   "officialName": ["Robert Koch-Institut"],
@@ -356,7 +349,6 @@ Use `OrganizationalUnit` to represent any internal RKI unit: a department or uni
 ### Schema Detail
 
 ```{mex-entity} OrganizationalUnit
-:variant: both
 ```
 
 ### Common pitfalls
@@ -368,7 +360,7 @@ Use `OrganizationalUnit` to represent any internal RKI unit: a department or uni
 
 #### Merged OrganizationalUnit:
 
-```JSON
+```json
 {
   "identifier": "cDeFgHiJkLmN1234OpQrSt",
   "isPartOf": ["tUvWxYzA1234AbCdEfGhIj"],
@@ -390,7 +382,6 @@ Person should not be confused with `ContactPoint`, which represents a shared fun
 ### Schema Detail
 
 ```{mex-entity} Person
-:variant: both
 ```
 
 ### Common pitfalls
@@ -402,7 +393,7 @@ Person should not be confused with `ContactPoint`, which represents a shared fun
 
 #### Merged Person
 
-```JSON
+```json
 {
   "affiliation": ["cDeFgHiJkLmN1234OpQrSt"],
   "email": ["ada.lovelace@example.org"],
@@ -426,7 +417,6 @@ Use `PrimarySource` to describe a system, database, or API that feeds metadata i
 ### Schema Detail
 
 ```{mex-entity} PrimarySource
-:variant: both
 ```
 
 ### Common pitfalls
@@ -439,7 +429,7 @@ Use `PrimarySource` to describe a system, database, or API that feeds metadata i
 
 #### Merged PrimarySource
 
-```JSON
+```json
 {
   "identifier": "iJkLmNoPqRsT1234UvWxYz",
   "locatedAt": ["www.example.org/server-address"],
@@ -460,7 +450,6 @@ Use `ResourceSeries` to represent a named series of related datasets that are re
 ### Schema Detail
 
 ```{mex-entity} ResourceSeries
-:variant: both
 ```
 
 ### Common pitfalls
@@ -508,7 +497,6 @@ A `Resource` describes the dataset or data source. Its individual file represent
 ### Schema Detail
 
 ```{mex-entity} Resource
-:variant: both
 ```
 
 ### Common pitfalls
@@ -520,7 +508,7 @@ A `Resource` describes the dataset or data source. Its individual file represent
 
 #### Merged Resource
 
-```JSON
+```json
 {
   "contact": ["hJKL9mNoPqRsTuVwXyZ123"],
   "description": ["Surveillance indicators collected and curated for demonstration purposes."],
@@ -544,7 +532,6 @@ Use `VariableGroup` when variables within a `Resource` can be meaningfully organ
 ### Schema Detail
 
 ```{mex-entity} VariableGroup
-:variant: both
 ```
 
 ### Common pitfalls
@@ -556,7 +543,7 @@ Use `VariableGroup` when variables within a `Resource` can be meaningfully organ
 
 #### Merged VariableGroup:
 
-```JSON
+```json
 {
   "identifier": "sTuVwXyZ1234AbCdEfGhIj",
   "title": ["Case definitions"],
@@ -577,7 +564,6 @@ Use `Variable` to describe individual fields or variables within a `Resource`, p
 ### Schema Detail
 
 ```{mex-entity} Variable
-:variant: both
 ```
 
 ### Common pitfalls
@@ -589,7 +575,7 @@ Use `Variable` to describe individual fields or variables within a `Resource`, p
 
 #### Merged Variable
 
-```JSON
+```json
 {
   "belongsTo": ["mPpRrTuVaWcYzB9145CdBw"],
   "datatypeInPrimarySource": "integer",
