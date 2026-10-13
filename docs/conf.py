@@ -23,6 +23,9 @@ myst_enable_extensions = [
     "deflist",  # definition lists in MD
 ]
 
+# Generate slug anchors for h1-h3 so `[text](#heading-slug)` links resolve
+myst_heading_anchors = 3
+
 # All pages are written in markdown
 source_suffix = {".md": "markdown"}
 
