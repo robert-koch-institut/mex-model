@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - extend `schema-checks` array validation: flag an array property that has
   both `minItems` and a `default` set
+- extend `schema-checks` annotation validation: flag `closeMatch` and `exactMatch`
+  values that are not arrays, on entity properties and vocabulary concepts
 
 ### Changes
 
@@ -19,6 +21,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 ### Fixed
+
+- wrap single-string `closeMatch` values in arrays, as declared in
+  `extension/definition.json`: `Activity.funderOrCommissioner`,
+  `Activity.responsibleUnit`, `BibliographicResource.publicationYear`,
+  `BibliographicResource.publisher`, `OrganizationalUnit.name` and
+  `Resource.wasGeneratedBy`
+- wrap single-string `exactMatch` values of concepts in the `language`,
+  `health-category` and `resource-creation-method` vocabularies in arrays
+- remove `closeMatch` from concepts, which the concept schema does not allow:
+  `bibliographic-resource-type-4`, `bibliographic-resource-type-5`,
+  `resource-creation-method-5` and `resource-creation-method-21`
+- fix the `useScheme` pattern in `extension/definition.json` to match the
+  `https://mex.rki.de/item/...` URIs actually used, instead of `.../concept-scheme/...`
 
 ### Security
 
@@ -183,6 +198,8 @@ A new entity type, including the following properties (RKIMEX-14):
 - add examples to new properties of Resources for model update v5.0
 
 ## [5.0.0] - 2026-06-02
+
+### Added
 
 #### Added Vocabulary file
 
