@@ -2,6 +2,7 @@ from typing import Any
 
 import pytest
 from check_schemas import (
+    find_concept_annotation_violations,
     find_duplicate_concept_id_violations,
     find_unregistered_vocabulary_violations,
     find_unresolved_example_violations,
@@ -124,6 +125,38 @@ def test_duplicate_concept_id_violations_are_detected(
     vocabularies_by_name: dict[str, list[dict[str, Any]]], expected: list[str]
 ) -> None:
     violations = find_duplicate_concept_id_violations(vocabularies_by_name)
+    assert violations == expected
+
+
+@pytest.mark.parametrize(
+    ("vocabularies_by_name", "expected"),
+    [
+        pytest.param(
+            {"foo": [{"identifier": "a", "exactMatch": "https://example.com/a"}]},
+            ["foo.a.exactMatch: 'https://example.com/a' is not an array"],
+            id="string-instead-of-array",
+        ),
+        pytest.param(
+            {"foo": [{"identifier": "a", "closeMatch": ["not-a-uri"]}]},
+            ["foo.a.closeMatch: 'not-a-uri' is not a well-formed URI"],
+            id="malformed-uri",
+        ),
+        pytest.param(
+            {
+                "foo": [
+                    {"identifier": "a", "exactMatch": ["https://example.com/a"]},
+                    {"identifier": "b"},
+                ]
+            },
+            [],
+            id="valid-array-or-absent",
+        ),
+    ],
+)
+def test_concept_annotation_violations_are_detected(
+    vocabularies_by_name: dict[str, list[dict[str, Any]]], expected: list[str]
+) -> None:
+    violations = find_concept_annotation_violations(vocabularies_by_name)
     assert violations == expected
 
 

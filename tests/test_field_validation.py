@@ -160,6 +160,19 @@ def test_orphaned_field_violations_are_detected(
             id="duplicated-uri",
         ),
         pytest.param(
+            {"properties": {"foo": {"closeMatch": "https://example.com/a"}}},
+            ["dummy.foo.closeMatch: 'https://example.com/a' is not an array"],
+            id="string-instead-of-array",
+        ),
+        pytest.param(
+            {"properties": {"foo": {"exactMatch": "not-a-uri"}}},
+            [
+                "dummy.foo.exactMatch: 'not-a-uri' is not an array",
+                "dummy.foo.exactMatch: 'not-a-uri' is not a well-formed URI",
+            ],
+            id="malformed-string-instead-of-array",
+        ),
+        pytest.param(
             {"properties": {"foo": {"closeMatch": ["https://example.com/a"]}}},
             [],
             id="valid-uri",
