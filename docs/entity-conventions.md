@@ -1,16 +1,24 @@
 # Entity conventions
 
-## Extracted and Merged
+## Extracted and Merged Entities
 
-Both the Extracted and Merged variants share the same set of descriptive properties. The Extracted variant additionally carries the four mandatory provenance properties (`identifier`, `hadPrimarySource`, `identifierInPrimarySource`, `stableTargetId`), while the Merged variant carries only `identifier` alongside descriptive properties. The Merged variant additionally includes `supersededBy`, which allows a deprecated or duplicate Merged entity to point to the preferred replacement.
+Both the `Extracted[EntityType]` and `Merged[EntityType]` variants share the same set of descriptive properties. The Extracted variant additionally carries the four mandatory provenance properties `hadPrimarySource`, `identifierInPrimarySource`, `identifier`, and `stableTargetId`. The Merged variant only carries `identifier` alongside the descriptive properties. The property `supersededBy` is unique to the Merged variant and is not applicable for Extracted entities.
 
-The Merged variant is the normalized, deduplicated record that consolidates descriptions from one or more primary sources. If a Merged entity has been superseded by another, e.g. following deduplication, the `supersededBy` property will point to the preferred Merged item.
+The Merged variant is the normalized, deduplicated record that consolidates descriptions from one or more primary sources. If a Merged item has been superseded by another, e.g. following deduplication, the `supersededBy` property will point to the preferred Merged item.
 
 ### When to use
 
-Use `Extracted[EntityType]` when ingesting an item from a primary source system via an ETL pipeline. Each extracted record represents the item as described by that specific source, carrying the provenance properties that trace it back to its origin.
+`Extracted[EntityType]` is used when an item is extracted from a primary source system via an ETL pipeline. Each extracted record represents the item as described by that specific source, carrying the provenance properties that trace it back to its origin.
 
-Use `Merged[EntityType]` when referencing an item from another entity, or when consuming metadata in the catalogue or downstream systems.
+`Merged[EntityType]` is used referencing an item from another entity, or when consuming metadata in the catalogue or downstream systems. All properties that are relations to other entities use the identifier of a merged entity in their `$ref` attribute, i.e. `ExtractedResource.contributor` referencing a `MergedPerson`:
+
+```JSON
+"accessPlatform": "$ref": "/mex/model/entities/merged-access-platform#/identifier"
+```
+
+The following sections lay out the entities without their Extracted or Merged variant, but their general characteristics, that are independent from the variants.
+
+All sample JSON instances show examples of the Merged variant, which is considered sufficient within the scope of this specification.
 
 ## AccessPlatform
 
@@ -223,7 +231,7 @@ Use `Consent` to document GDPR-relevant consent records associated with research
 ### Common pitfalls
 
 * Conflating consent status with access restriction: consent is a GDPR-compliant declaration of a data subject's (an instance of `Person`) declaration. Access restriction on a `BibliographicResource`, `Resource` or `Distribution` indicates an access level of a resource or technical system. These are distinct and should not substitute for one another.
-* Conflicting `Consent` items: For every person item, there is a corresponding consent item. When Person items are extracted from various primary source systems, duplicates of person items may occur. These may also have conflicting consent statuses. These items cannot be merged. For detailed information on the concept of GDPR-compliant consents, see Chapter XX. *(Place correct chapter here)*
+* Conflicting `Consent` items: For every person item, there is a corresponding consent item. When Person items are extracted from various primary source systems, duplicates of person items may occur. These may also have conflicting consent statuses. These items cannot be merged.
 
 ### Example JSON instances
 
