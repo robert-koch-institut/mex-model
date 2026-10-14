@@ -303,13 +303,40 @@ Use `Distribution` to describe a specific file, format, or access form of a Reso
 
 ## Location
 
-:::{note}
-TBD: this section is still to be written.
-:::
+`Location` describes a geographical space on the earth such as a country, city or region. It corresponds to `dct:Location`.
+
+### When to use
+
+Use `Location` for geographical entities, i.e. when describing the geographical coverage of a dataset/data source.
 
 ### Schema Detail
 
 ```{mex-entity} Location
+```
+
+### Common pitfalls
+
+* Duplicating locations across sources: the same location may appear in multiple source systems under slightly different names. Further infos on de-duplication in chapter [How the model works](how-the-model-works.md). The MEx systems uses Wikidata as a authority to identify and ingest locations into the database.
+
+### Example JSON instances
+
+#### Merged Location
+
+```JSON
+{
+  "geoNamesId": [
+    "https://www.geonames.org/2950159",
+    "https://www.geonames.org/2950157"
+  ],
+  "identifier": "",
+  "name": [
+    {"language": "de", "value": "Berlin"},
+    {"language": "en", "value": "Berlin"}
+  ],
+  "wikidataId": [
+    "http://www.wikidata.org/entity/Q64"
+  ]
+}
 ```
 
 ## Organization
@@ -385,7 +412,7 @@ The `Person` entity represents an individual researcher, RKI staff member, or co
 
 ### When to use
 
-Use `Person` to represent a named individual, for example a person involved in an activity, a dataset contributor, or a publication author. Person records are mainly sourced from RKI's directory system, which functions as a authrority for all RKI staff members. Other Person items are derived from primary sources such as authors of publications (Bibliographic Resource items). Person records and may be enriched with authority identifiers such as ORCID, which we use as an additional authority service for external persons, who can be as contributors to resources.
+Use `Person` to represent a named individual, for example a person involved in an activity, a dataset contributor, or a publication author. Person records are mainly sourced from RKI's directory system, which functions as a authority for all RKI staff members. Other Person items are derived from primary sources such as authors of publications (Bibliographic Resource items). Person records and may be enriched with authority identifiers such as ORCID, which we use as an additional authority service for external persons, who can be as contributors to resources.
 
 Person should not be confused with `ContactPoint`, which represents a shared functional address rather than an individual. If the contact is role-based or shared, use `ContactPoint`.
 
