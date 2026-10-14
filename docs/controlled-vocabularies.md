@@ -4,7 +4,7 @@ As described in the How the model works section, properties that draw from a fix
 
 ## Vocabulary list
 
-The following vocabularies are defined as JSON files in `MEX/MODEL/VOCABULARIES`. The Used by column lists the entity types that reference each vocabulary.
+The following vocabularies are defined as JSON files in `mex/model/vocabularies/`. The Used by column lists the entity types that reference each vocabulary.
 
 | Vocabulary | File | Used by | Concepts |
 | --- | --- | --- | --- |
@@ -76,9 +76,24 @@ Changes can result from:
 * A change in an existing vocabulary would require a patch version
 * A corrective adjustment (e.g. typos) would require a patch version
 
+## Concept and ConceptScheme
+
+:::{note}
+TBD: this section is still to be written.
+:::
+
+### Schema Detail
+
+```{mex-entity} Concept
+```
+
+```{mex-entity} ConceptScheme
+```
+
 ## Vocabulary Detail
 
 The tables below are auto-generated from the vocabulary JSON files in the repository. Each table lists all concepts in the vocabulary with their label, identifier, and definition.
+
 ```{eval-rst}
 .. mexvocabularies:: ../mex/model/vocabularies
 ```

@@ -223,7 +223,7 @@ Use `Consent` to document GDPR-relevant consent records associated with research
 ### Common pitfalls
 
 * Conflating consent status with access restriction: consent is a GDPR-compliant declaration of a data subject's (an instance of `Person`) declaration. Access restriction on a `BibliographicResource`, `Resource` or `Distribution` indicates an access level of a resource or technical system. These are distinct and should not substitute for one another.
-* Conflicting `Consent` items: For every person item, there is a corresponding consent item. When Person items are extracted from various primary source systems, duplicates of person items may occur. These may also have conflicting consent statuses. These items cannot be merged. For detailed information on the concept of GDPR-compliant consents, see Chapter XX. <PLACE CORRECT CHAPTER HERE>
+* Conflicting `Consent` items: For every person item, there is a corresponding consent item. When Person items are extracted from various primary source systems, duplicates of person items may occur. These may also have conflicting consent statuses. These items cannot be merged. For detailed information on the concept of GDPR-compliant consents, see Chapter XX. *(Place correct chapter here)*
 
 ### Example JSON instances
 
@@ -300,7 +300,17 @@ Use `Distribution` to describe a specific file, format, or access form of a Reso
   "mediaType": ["text/csv"]
 }
 ```
+
 ## Location
+
+:::{note}
+TBD: this section is still to be written.
+:::
+
+### Schema Detail
+
+```{mex-entity} Location
+```
 
 ## Organization
 
@@ -358,7 +368,7 @@ Use `OrganizationalUnit` to represent any internal RKI unit: a department or uni
 
 ### Example JSON instances
 
-#### Merged OrganizationalUnit:
+#### Merged OrganizationalUnit
 
 ```json
 {
@@ -461,7 +471,7 @@ Use `ResourceSeries` to represent a named series of related datasets that are re
 
 ### Example JSON Instances
 
-#### Merged ResourceSeries:
+#### Merged ResourceSeries
 
 ```json
 {
@@ -484,7 +494,7 @@ Use `ResourceSeries` to represent a named series of related datasets that are re
 }
 ```
 
-### Resource
+## Resource
 
 The `Resource` entity is the central entity of the MEx model. It describes a dataset, data collection, or other research data asset. It corresponds to `dcat:Dataset`.
 
@@ -541,7 +551,7 @@ Use `VariableGroup` when variables within a `Resource` can be meaningfully organ
 
 ### Example JSON instances
 
-#### Merged VariableGroup:
+#### Merged VariableGroup
 
 ```json
 {

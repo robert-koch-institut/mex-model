@@ -14,6 +14,7 @@ The model exists within a broader landscape of standards such as DCAT, PROV-O, a
 ## Structure of the specification
 
 The specification is organised into the following sections:
+
 | Section | What it covers | Audience |
 | --- | --- | --- |
 | [How the Model Works](how-the-model-works.md) | The Extracted/Merged entity pattern, the concept model, JSON Schema conventions, and the custom extension keywords (useScheme, sameAs, subPropertyOf). | Everyone. **Read this first!** |

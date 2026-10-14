@@ -23,7 +23,7 @@ The schema enforces types at the property level:
 | Constraint | Example | Enforced by |
 | --- | --- | --- |
 | Identifier format | Alphanumeric, 14–22 characters | pattern: `^[a-zA-Z0-9]{14,22}$` on the identifier field type |
-| Source identifier format | Non-empty, no newlines, max 1000 characters | minLength: 1, maxLength: 1000, pattern: `^[^\\n\\r]+$` on `identifierInPrimarySource` |
+| Source identifier format | Non-empty, no newlines, max 1000 characters | minLength: 1, maxLength: 1000, pattern: `^[^\n\r]+$` on `identifierInPrimarySource` |
 | Date/time values | ISO 8601 strings | format: `date` or format: `date-time` on temporal properties with patterns for the required levels of precision |
 | Text objects | Object with value (string) and optional language (string) | `$ref` to the text field `definition` |
 | Link objects | Object with url (string) and optional metadata | `$ref` to the link field `definition` |
@@ -48,12 +48,12 @@ Properties that reference a controlled vocabulary declare this via the custom `u
 
 This means: the value of `technicalAccessibility` must be a valid Concept URI that belongs to the technical-accessibility vocabulary.
 
-### What validation checks:
+### What validation checks
 
 * The value must be a syntactically valid URL
 * The URI must exist as a concept in the vocabulary identified by the `useScheme` URI
 
-### What validation does not check at the schema level:
+### What validation does not check at the schema level
 
 JSON Schema validators do not natively understand `useScheme`, it is a custom keyword. Structural validation will confirm that the value is a string matching the concept identifier pattern, but verifying that the URI actually exists in the declared vocabulary requires an additional validation step. The MEx backend performs this check, standalone schema validation does not.
 

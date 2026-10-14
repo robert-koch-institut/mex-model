@@ -27,9 +27,9 @@ The following process diagram illustrates how these components relate within the
 | skos: | http://www.w3.org/2004/02/skos/core# | Concepts and concept schemes |
 | dpv: | https://w3id.org/dpv# | Consent status / legal basis alignment |
 | healthdcat: | http://healthdataportal.eu/ns/health# | HealthDCAT-AP classes and properties |
-| dcatde: |   http://dcat-ap.de/def/dcatde/ (for references in mapping context) | DCAT-AP.de profile references |
+| dcatde: | http://dcat-ap.de/def/dcatde/ (for references in mapping context) | DCAT-AP.de profile references |
 | mex: | https://mex.rki.de/mex/model/ | MEx entity and field URIs |
-| item: | https://mex.rki.de/item/ | Controlled vocabulary concept URIs and base URI of instance data|
+| item: | https://mex.rki.de/item/ | Controlled vocabulary concept URIs and base URI of instance data |
 | json-schema: | https://json-schema.org/ | JSON Schema specification reference |
 | further namespaces | | used for matching vocabulary terms to existing (standard) vocabularies |
 
@@ -116,7 +116,7 @@ The `extension/` directory contains a single file, `definition.json`. This defin
 
 | Custom Keyword | Equivalent | Purpose |
 | --- | --- | --- |
-| useScheme | (MEx-specific) | Links a property to a controlled vocabulary concept scheme, identified by a URI matching `https://mex.rki.de/concept-scheme/...`. This allows to say which vocabulary must be used for the property, whereas `$ref` is used to link the Concept itself.|
+| useScheme | (MEx-specific) | Links a property to a controlled vocabulary concept scheme, identified by a URI matching `https://mex.rki.de/concept-scheme/...`. This allows to say which vocabulary must be used for the property, whereas `$ref` is used to link the Concept itself. |
 | closeMatch | skos:closeMatch | Denotes a close semantic match between the MEx term and a term from an external ontology or data model |
 | exactMatch | skos:exactMatch | Denotes an exact semantic match between the MEx term and a term from an external ontology or data model. This annotation property is used i.e. in matching terms from controlled vocabularies. |
 

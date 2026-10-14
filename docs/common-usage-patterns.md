@@ -14,19 +14,21 @@ A valid ExtractedResource requires the system-managed fields (`identifier`, `had
 | --- | --- |
 | accessRestriction | A Concept URI from the Access Restriction vocabulary. |
 | contact | At least one reference to a `MergedContactPoint` or `MergedOrganizationalUnit`. This is who a data consumer should reach out to. |
-|description | Free-text summary of what the dataset contains, how it was collected, and what it covers.  |
+| description | Free-text summary of what the dataset contains, how it was collected, and what it covers. |
 | keyword | Free-text tags, that describe the character/subject of resource. |
-| resourceCreationMethod | At least Concept URI from the Resource Creation Method vocabulary.  |
+| resourceCreationMethod | At least one Concept URI from the Resource Creation Method vocabulary. |
 | title | At least one human-readable name. Use a Text object with a `language` tag (`de` or `en`). |
 | unitInCharge | At least one reference to the `MergedOrganizationalUnit` responsible for the dataset. |
 
-This is enough to pass schema validation, but it produces a sparse catalogue entry. A minimal record in this regard is sufficient for dataset discovery purposes, but lacks in-depth information, especially regarding the data's origin and its re-usabilty.
+This is enough to pass schema validation, but it produces a sparse catalogue entry. A minimal record in this regard is sufficient for dataset discovery purposes, but lacks in-depth information, especially regarding the data's origin and its re-usability.
 
 ### Well-Described Record
 
 A record that is genuinely useful to someone searching the catalogue to request access to the data should also include:
 
-<STILL UNDER REVISION>
+:::{note}
+This list is still under revision.
+:::
 
 | Field | Why it matters |
 | --- | --- |
@@ -42,16 +44,16 @@ The following optional properties can be used to enrich the metadata description
 
 | Field | Use case |
 | --- | --- |
-| geopoliticalResolution |  A Concept URI from the Geopolitical Resolution vocabulary. |
+| geopoliticalResolution | A Concept URI from the Geopolitical Resolution vocabulary. |
 | healthCategory | At least one Concept URI from the Health Category vocabulary. The vocabulary compiles the categories of health data as defined by EHDS Article 51. Required for HealthDCAT-AP export. |
 | hasCodeValues | A list of free-text values can be given, which contain codes that derive from standardized coding systems like `ICD`, `SNOMED CT` and `LOINC`. |
 | hasCodingSystem | A Concept URI from the Coding System vocabulary. If the dataset uses `ICD`, `SNOMED CT`, `LOINC`, or other standard terminologies, state them here. |
-| minTypicalAge/maxTypicalAge | A numerical value indicating the minimum/maximun age of the individuals contained in the data. Especially used for population-based data. |
+| minTypicalAge/maxTypicalAge | A numerical value indicating the minimum/maximum age of the individuals contained in the data. Especially used for population-based data. |
 | numberOfRecords, numberOfUniqueIndividuals | Gives users a sense of scale before they request access. |
 | populationCoverage | A free-text description of the population that is covered by the data. Especially used for population-based data. |
 | spatial | A location indicating the geographical coverage of the data. |
 | startDate/endDate | Dates that indicate the temporal coverage of the data. |
-| wasGeneratedBy | An activity, in which the data originated, e.g. a research project. <STILL UNDER REVIEW> |
+| wasGeneratedBy | An activity, in which the data originated, e.g. a research project. *(Still under review)* |
 
 ### Linking to Distributions, Activities and Responsible Units
 
@@ -125,7 +127,7 @@ If the dataset was produced by a research project or surveillance activity, link
 
 MEx entities do not exist in isolation. A dataset has distributions, belongs to an activity, is maintained by an organisational unit, and has contact persons. Getting these cross-references right is essential for a coherent catalogue. This subsection covers the conventions.
 
-### Golden Rule: Always refrence Merged IDs
+### Golden Rule: Always reference Merged IDs
 
 Every cross-entity reference points to a Merged identifier (`stableTargetId`), never to an Extracted identifier. This applies regardless of whether the referencing entity is itself Extracted or Merged.
 The reason is structural: multiple Extracted records from different source systems may describe the same real-world entity. They all share the same `stableTargetId`, which becomes the Merged record's identifier. By referencing the merged ID, the link survives deduplication. It does not matter which source system produced the target entity, or whether additional sources are added later.
@@ -159,7 +161,7 @@ This separation is deliberate: the activity carries project-level metadata (fund
 
 MEx distinguishes three types of "who" entities. Using the right one is important:
 
-| Entity | Represents | Use when\Idots |
+| Entity | Represents | Use when… |
 | --- | --- | --- |
 | Person | A named individual | You need to credit someone by name (e.g. `involvedPerson` on an `Activity`, `creator` on a `BibliographicResource`). |
 | OrganizationalUnit | A team, department, or division within an organisation | You need to indicate organisational responsibility (e.g. `unitInCharge`, `responsibleUnit`). |
@@ -213,7 +215,7 @@ The distinction matters because most MEx properties that express responsibility 
 
 ### Expressing Parent/Child relationships
 
-Organisational hierarchy is modelled through the `parentUnit` property on `OrganizationalUnit`. It is a references to `MergedOrganizationalUnit` identifiers, expressing an upward link.
+Organisational hierarchy is modelled through the `parentUnit` property on `OrganizationalUnit`. It is a reference to a `MergedOrganizationalUnit` identifier, expressing an upward link.
 
 An `OrganizationalUnit` is linked to its `Organization` with `unitOf`.
 
@@ -225,7 +227,7 @@ A typical RKI hierarchy:
 | OrganizationalUnit: Abteilung 3 | ou-abt3-001 | unitOf | ["org-rki-001"] |
 | OrganizationalUnit: FG 36 | ou-fg36-001 | parentUnit | ["ou-abt3-001"] |
 
-Reading bottom-up: FG 36 is part of Abteilung 3, which is a unit of the Robert-Koch-Institut.
+Reading bottom-up: FG 36 is part of Abteilung 3, which is a unit of the Robert Koch-Institut.
 A few conventions to keep in mind:
 
 * The top of the chain is always an `Organization`. An `OrganizationalUnit` can have one parent unit.
@@ -296,16 +298,16 @@ Properties typed as Text are always arrays, so a bilingual title looks like this
 ]
 ```
 
-Supported language codes
+### Supported language codes
 
 MEx uses two-letter ISO 639-1 codes. In practice, most commonly used values are `de` and `en` for German and English. The language field on a Text object describes the language of that specific text value, independent of the language property on a Resource, which describes the language of the data itself.
 
 ### Conventions
 
-* Do not duplicate identical content: If a title is a proper noun, technical term, or abbreviation that reads the same in both languages (e.g. SARS-CoV-2 PCR"), a single entry without a language tag or with one language tag is sufficient. <STILL UNDER REVIEW>
+* Do not duplicate identical content: If a title is a proper noun, technical term, or abbreviation that reads the same in both languages (e.g. "SARS-CoV-2 PCR"), a single entry without a language tag or with one language tag is sufficient. *(Still under review)*
 * Language tag is optional but strongly recommended: The schema allows Text objects without a language field. Omitting it means "language unspecified", the value will still be stored and displayed, but language-aware search and filtering cannot use it. Always set the tag when the language is known.
 * One value per language per property: Do not provide two German entries for the same property. If you need to express an alternative name, use alternativeTitle rather than a second title entry in the same language.
-* Keyword language tags: Keywords are often short terms where the language boundary is blurry (e.g. "influenza" is used in both German and English). Pick the language that best reflects the term's origin. <STILL UNDER REVIEW>
+* Keyword language tags: Keywords are often short terms where the language boundary is blurry (e.g. "influenza" is used in both German and English). Pick the language that best reflects the term's origin. *(Still under review)*
 
 ## Governance & change requests
 
@@ -333,7 +335,9 @@ A useful change request, whether filed as a Github issue or a Jira ticket, shoul
 
 ### Review and release process
 
-<STILL NEEDS CONTENT>
+:::{note}
+This section still needs content.
+:::
 
 ### Who to contact
 

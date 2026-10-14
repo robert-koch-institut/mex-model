@@ -7,6 +7,7 @@ The MEx metadata model did not grow in isolation. Its entity types, property nam
 ### MEx as a DCAT-inspired application profile
 
 MEx draws on two W3C Recommendations as its conceptual foundation:
+
 * DCAT 2.0: the Data Catalog Vocabulary, which provides the core classes Dataset, Distribution and DataService together with a rich set of metadata properties.
 * PROV-O: the Provenance Ontology, from which MEx inherits the notions of Activity and hadPrimarySource.
 
@@ -126,8 +127,10 @@ HealthDCAT-AP builds on DCAT-AP's foundation and adds elements specific to the h
 
 MEx's approach to HealthDCAT-AP is selective adoption. Where a HealthDCAT-AP concept adds genuine value to MEx's own users, for instance: structured legal-basis metadata or terminology references, it is incorporated into the MEx model directly through model updates. Where full adoption would require structural changes that do not benefit MEx internally (e.g. properties that duplicate information already captured differently, or EU-specific classification schemes that do not map to RKI workflows), the property is handled through an export-time mapping rather than a model change. This keeps the MEx model lean for its primary consumers while still enabling compliant HealthDCAT-AP output where required.
 
-> Work in progress
-> The HealthDCAT-AP alignment is under active development, as is HealthDCAT-AP itself. The mapping table, gap analysis, and workaround documentation in the following subsections will be populated once the model updates are stabilised. The canonical status of each property is tracked via the branches ingested into MEx.
+:::{admonition} Work in progress
+:class: note
+The HealthDCAT-AP alignment is under active development, as is HealthDCAT-AP itself. A mapping table, gap analysis, and workaround documentation will be added to this section once the model updates are stabilised. The canonical status of each property is tracked via the branches ingested into MEx.
+:::
 
 ### Mapping Table
 
