@@ -37,8 +37,6 @@ Use `AccessPlatform` to describe any technical system, API, or service through w
 ```{mex-entity} AccessPlatform
 ```
 
-
-
 ### Example JSON Instances
 
 #### Merged AccessPlatform
@@ -261,6 +259,7 @@ Use `ContactPoint` when a contact for an entity is a shared functional address, 
 
 ```{mex-entity} ContactPoint
 ```
+
 ### Example JSON instances
 
 #### Merged ContactPoint
@@ -321,6 +320,7 @@ Use `Location` for geographical entities, i.e. when describing the geographical 
 
 ```{mex-entity} Location
 ```
+
 ### Example JSON instances
 
 #### Merged Location
@@ -361,6 +361,7 @@ Use `Organization` to represent an external institution, for example a funding b
 
 ```{mex-entity} Organization
 ```
+
 ### Example JSON instances
 
 #### Merged Organization
@@ -396,6 +397,7 @@ Use `OrganizationalUnit` to represent any internal RKI unit: a department or uni
 
 ```{mex-entity} OrganizationalUnit
 ```
+
 ### Example JSON instances
 
 #### Merged OrganizationalUnit
@@ -428,6 +430,7 @@ Person should not be confused with `ContactPoint`, which represents a shared fun
 
 ```{mex-entity} Person
 ```
+
 ### Example JSON instances
 
 #### Merged Person
@@ -542,6 +545,7 @@ A `Resource` describes the dataset or data source. Its individual file represent
 
 ```{mex-entity} Resource
 ```
+
 ### Example JSON instances
 
 #### Merged Resource
@@ -577,6 +581,7 @@ Use `VariableGroup` when variables within a `Resource` can be meaningfully organ
 
 ```{mex-entity} VariableGroup
 ```
+
 ### Example JSON instances
 
 #### Merged VariableGroup
@@ -608,6 +613,7 @@ Use `Variable` to describe individual fields or variables within a `Resource`, p
 
 ```{mex-entity} Variable
 ```
+
 ### Example JSON instances
 
 #### Merged Variable
