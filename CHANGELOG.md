@@ -9,16 +9,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- extend `schema-checks` array validation: flag an array property that has
-  both `minItems` and a `default` set
-- extend `schema-checks` annotation validation: flag `closeMatch` and `exactMatch`
-  values that are not arrays, on entity properties and vocabulary concepts
-
 ### Changes
 
 ### Deprecated
 
 ### Removed
+
+### Fixed
+
+### Security
+
+## [5.2.0] - 2026-10-15
+
+### Added
+
+- extend `schema-checks` array validation: flag an array property that has
+  both `minItems` and a `default` set
+- extend `schema-checks` annotation validation: flag `closeMatch` and `exactMatch`
+  values that are not arrays, on entity properties and vocabulary concepts
 
 ### Fixed
 
@@ -35,8 +43,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `resource-creation-method-5` and `resource-creation-method-21`
 - fix the `useScheme` pattern in `extension/definition.json` to match the
   `https://mex.rki.de/item/...` URIs actually used, instead of `.../concept-scheme/...`
-
-### Security
 
 ## [5.1.4] - 2026-09-14
 
@@ -199,8 +205,6 @@ A new entity type, including the following properties (RKIMEX-14):
 - add examples to new properties of Resources for model update v5.0
 
 ## [5.0.0] - 2026-06-02
-
-### Added
 
 #### Added Vocabulary file
 
