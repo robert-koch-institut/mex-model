@@ -48,7 +48,7 @@ Use `AccessPlatform` to describe any technical system, API, or service through w
   "description": [{"value": "REST API providing access to infectious disease surveillance data.", "language": "en"}],
   "endpointURL": {"url": "https://survstat.rki.de/api/v2"},
   "identifier": "gglGQVGwZNJtqYDkW4N8jL",
-  "technicalAccessibility": "https://mex.rki.de/item/technical-accessibility-1",
+  "technicalAccessibility": "https://mex.rki.de/item/technical-accessibility-1", # internal
   "title": [{"value": "SurvStat API", "language": "en"}],
   "unitInCharge": ["hJKL9mNoPqRsTuVwXyZ123"]
 }
@@ -82,11 +82,10 @@ Use `Activity` to describe a research project, a statutory task performed under 
 
 ```json
 {
-  "activityType": ["https://mex.rki.de/item/activity-type-1"],
+  "activityType": ["https://mex.rki.de/item/activity-type-1"] # Third Party funded Project,
   "contact": ["cKMPkdHHTky6TF6hqMdbe7"],
   "end": ["2024-12-31"],
   "identifier": "gglGQVGwZNJtqYDkW4N8jL",
-
   "responsibleUnit": ["hJKL9mNoPqRsTuVwXyZ123"],
   "start": ["2020-03"],
   "title": [
@@ -122,17 +121,17 @@ Use `BibliographicResource` to describe any publication associated with RKI rese
 
 ```json
 {
-  "identifier": "mNoPqRsTuVwXyZ1234AbCd",
-  "accessRestriction": "https://mex.rki.de/item/access-restriction-1",
-  "title": [{"value": "Epidemiological characterisation of SARS-CoV-2 variants in Germany", "language": "en"}],
+  "accessRestriction": "https://mex.rki.de/item/access-restriction-1", # open
+  "bibliographicResourceType": ["https://mex.rki.de/item/bibliographic-resource-type-1"], # Book
   "creator": ["cKMPkdHHTky6TF6hqMdbe7"],
   "doi": "https://doi.org/10.2807/1560-7917.ES.2022.27.46.2200849",
-  "journal": [{"value": "Eurosurveillance", "language": "en"}],
+  "identifier": "mNoPqRsTuVwXyZ1234AbCd",
   "issued": "2022-11-17",
+  "journal": [{"value": "Eurosurveillance", "language": "en"}],
+  "language": ["https://mex.rki.de/item/language-1"], # German
+  "license": "https://mex.rki.de/item/license-1",  # CC-BY-4.0
   "publicationYear": "2022",
-  "language": ["https://mex.rki.de/item/language-1"],
-  "bibliographicResourceType": ["https://mex.rki.de/item/bibliographic-resource-type-1"],
-  "license": "https://mex.rki.de/item/license-1"
+  "title": [{"value": "Epidemiological characterisation of SARS-CoV-2 variants in Germany", "language": "en"}]
 }
 ```
 
@@ -170,7 +169,7 @@ See `mex-model/vocabularies/concept-schemes.json` for details.
 
 ## Concept
 
-A `Concept` is a term of a controlled list (vocabulary). It corresponds to `skos:Concept`. All vocabularies in use within the MEx system are defined in `model/vocabularies/concept-schemes.json`.
+A `Concept` is a term of a controlled list (vocabulary). It corresponds to `skos:Concept`. The vocabularies in use within the MEx system are stored in `model/vocabularies`.
 
 ### When to use
 
@@ -237,7 +236,7 @@ Use `Consent` to document GDPR-relevant consent records associated with research
 
 ```json
 {
-  "hasConsentStatus": "https://mex.rki.de/item/consent-status-1",
+  "hasConsentStatus": "https://mex.rki.de/item/consent-status-1", # Invalid for Processing
   "hasDataSubject": "cKMPkdHHTky6TF6hqMdbe7",
   "identifier": "qRsTuVwXyZ1234AbCdEfGh",
   "isIndicatedAtTime": "2022-09-30T20:48:35Z"
@@ -302,7 +301,7 @@ Use `Distribution` to describe a specific file, format, or access form of a Reso
   "accessUrl": ["https://example.org/datasets/abc/distribution.csv"],
   "downloadUrl": ["https://example.org/datasets/abc/distribution.csv"],
   "identifier": "rStUvWxYzA1234AbCdEfGh",
-  "mediaType": ["text/csv"]
+  "mediaType": ["https://mex.rki.de/item/mime-type-7"] # text/csv
 }
 ```
 
@@ -369,8 +368,10 @@ Use `Organization` to represent an external institution, for example a funding b
 ```json
 {
   "identifier": "tUvWxYzA1234AbCdEfGhIj",
-  "officialName": ["Robert Koch-Institut"],
-  "shortName": ["RKI"],
+  "officialName": [
+    {"language": "de", "value": "Robert Koch-Institut"}],
+  "shortName": [
+    {"language": "de", "value": "RKI"}],
   "website": [{"language": "de", "title": "Offizielle RKI-Website", "url": "https://www.rki.de/"}],
   "wikidataId": ["http://www.wikidata.org/entity/Q679041"]
 }
@@ -402,8 +403,8 @@ Use `OrganizationalUnit` to represent any internal RKI unit: a department or uni
 ```json
 {
   "identifier": "cDeFgHiJkLmN1234OpQrSt",
-  "isPartOf": ["tUvWxYzA1234AbCdEfGhIj"],
   "officialName": [{"language": "en", "value": "Center for International Health Protection"}],
+  "parentUnit": ["tUvWxYzA1234AbCdEfGhIj"],
   "shortName": ["ZIG"]
 }
 ```
@@ -503,7 +504,7 @@ Use `ResourceSeries` to represent a named series of related datasets that are re
 
 ```json
 {
-  "accrualPeriodicity": "https://mex.rki.de/item/frequency-1",
+  "accrualPeriodicity": "https://mex.rki.de/item/frequency-1", # triennial
   "contact": ["hJKL9mNoPqRsTuVwXyZ123"],
   "description": [
     {"value": "Wöchentliche Veröffentlichungsreihe des RKI zu aktuellen infektionsepidemiologischen Themen.", "language": "de"}
@@ -548,7 +549,8 @@ A `Resource` describes the dataset or data source. Its individual file represent
 ```json
 {
   "contact": ["hJKL9mNoPqRsTuVwXyZ123"],
-  "description": ["Surveillance indicators collected and curated for demonstration purposes."],
+  "description": [
+    {"language": "de", "value": "Surveillance indicators collected and curated for demonstration purposes."}],
   "distribution": ["rStUvWxYzA1234AbCdEfGh"],
   "identifier": "mNoPqRsTuVwXyZ1234AbCd",
   "publisher": ["tUvWxYzA1234AbCdEfGhIj"],
@@ -614,8 +616,9 @@ Use `Variable` to describe individual fields or variables within a `Resource`, p
 {
   "belongsTo": ["mPpRrTuVaWcYzB9145CdBw"],
   "datatypeInPrimarySource": "integer",
-  "datatypeStandardized": "https://mex.rki.de/item/datatype-standardized-1",
-  "description": ["Number of reported cases per 100,000 inhabitants over the last 7 days."],
+  "datatypeStandardized": "https://mex.rki.de/item/datatype-standardized-1", # URI
+  "description": [
+    {"langauge": "de", "value": "Number of reported cases per 100,000 inhabitants over the last 7 days."}],
   "identifier": "pQrStUvWxYzA1234BcDeFg",
   "technicalName": ["7-day_incidence"],
   "usedIn": ["mNoPqRsTuVwXyZ1234AbCd"]
