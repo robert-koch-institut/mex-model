@@ -11,9 +11,11 @@ dependencies = []
 
 [dependency-groups]
 dev = [
+    "docutils>=0.21",
     "ipdb>=0.13",
     "jsonschema>=4",
     "mypy>=1",
+    "myst-parser>=3",
     "pytest-cov>=7",
     "pytest-random-order>=1",
     "pytest-xdist>=3",
@@ -21,11 +23,15 @@ dev = [
     "ruff>=0.16",
     "sphinx-jsonschema>=1.19",
     "sphinx<9",
-    "types-jsonschema>=4",
+    "types-docutils",
+    "types-jsonschema",
+]
+docs = [
+    "mex-artificial>=3,<4",
 ]
 
 [tool.coverage.run]
-omit = ["docs/*"]
+omit = ["docs/conf.py"]
 
 [tool.cruft]
 template = "https://github.com/robert-koch-institut/mex-template"
@@ -37,11 +43,6 @@ context = 5
 [tool.mypy]
 show_error_codes = true
 strict = true
-
-# the sphinx extensions in `docs` are not part of the package and not type-checked
-[[tool.mypy.overrides]]
-module = ["navigation", "schemas"]
-ignore_missing_imports = true
 
 [tool.pydantic-mypy]
 warn_untyped_fields = true
@@ -126,6 +127,12 @@ known-first-party = ["mex", "tests"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
+
+[tool.uv]
+# the docs group pulls in mex-artificial, which depends on mex-common and thereby on
+# mex-model itself, so it is kept out of the package dependencies and only installed
+# for development, where uv resolves that requirement to this local project
+default-groups = ["dev", "docs"]
 
 [build-system]
 requires = ["hatchling>=1.28.0"]
