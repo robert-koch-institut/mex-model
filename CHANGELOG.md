@@ -11,8 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- CHANGELOG.md: add the missing documentation of model changes for version 5.2.0
-
 ### Deprecated
 
 ### Removed
@@ -20,6 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+## [5.2.1] - 2026-10-16
+
+### Changes
+
+- CHANGELOG.md: add the missing documentation of model changes for version 5.2.0
 
 ## [5.2.0] - 2026-10-15
 
@@ -39,8 +43,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - in `extracted-resource.json` and `merged-resource.json`
   New property:
   - `hasVersion`, relating translation entries in de.po, en.po
-
-### Changes
 
 #### mex/model/entities/
 
@@ -89,8 +91,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `language.json`: add concepts (all EU official languages + Chinese, Turkish, Japanese and Arabic) and exactMatches to terms from EU vocabularies
 - `health-category.json`: change `prefLabel` of concepts
 - `resource-creation-method.json`: add concepts and their respective matches to EU terms
-
-### Removed
 
 #### mex/model/vocabularies
 
