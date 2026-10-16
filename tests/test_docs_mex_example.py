@@ -9,7 +9,6 @@ from mex_example import (
     UnsupportedEntityError,
     find_concept,
     generate_artificial,
-    load_labels,
     setup,
     to_json,
 )
@@ -25,12 +24,6 @@ def make_directive(argument: str, **options: Any) -> MagicMock:  # noqa: ANN401
     # with an exception class as side effect would raise it without the message
     directive.error.side_effect = lambda msg: ValueError(msg)  # noqa: PLW0108
     return directive
-
-
-def test_load_labels() -> None:
-    labels = load_labels()
-
-    assert labels[f"{ITEM}/language-1"] == "German"
 
 
 def test_generate_artificial() -> None:
@@ -62,28 +55,8 @@ def test_find_concept_unknown() -> None:
         find_concept("Concept", "foo")
 
 
-def test_to_json_annotates_concepts() -> None:
-    instance = {
-        "identifier": f"{ITEM}/language-1",
-        "language": [f"{ITEM}/language-1", f"{ITEM}/language-2"],
-        "license": f"{ITEM}/license-1",
-        "theme": [f"{ITEM}/unknown-1"],
-    }
-
-    assert to_json(instance) == (
-        "{\n"
-        f'  "identifier": "{ITEM}/language-1",\n'
-        '  "language": [\n'
-        f'    "{ITEM}/language-1",  // German\n'
-        f'    "{ITEM}/language-2"  // English\n'
-        "  ],\n"
-        f'  "license": "{ITEM}/license-1",  '
-        "// Creative Commons Attribution 4.0 International\n"
-        '  "theme": [\n'
-        f'    "{ITEM}/unknown-1"\n'
-        "  ]\n"
-        "}"
-    )
+def test_to_json() -> None:
+    assert to_json({"b": ["ü"], "a": 1}) == '{\n  "a": 1,\n  "b": [\n    "ü"\n  ]\n}'
 
 
 def test_run_concept() -> None:

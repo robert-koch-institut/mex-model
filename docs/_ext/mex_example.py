@@ -5,17 +5,15 @@ Provides:
 
 The examples are generated with `mex-artificial`, which builds on the pydantic models
 of `mex-common`. `Concept` and `ConceptScheme` examples are not generated, but shown as
-they are stored in the local vocabularies. Concept identifiers in the examples are
-annotated with their labels.
+they are stored in the local vocabularies.
 """
 
 import json
 import logging
-import re
-from collections import defaultdict
 from collections.abc import Callable
 from functools import cache
 from importlib.metadata import version
+from itertools import islice
 from typing import Any, ClassVar
 
 from docutils import nodes
@@ -25,18 +23,17 @@ from sphinx.application import Sphinx
 from sphinx.util import logging as sphinx_logging
 from sphinx.util.docutils import SphinxDirective
 
-from mex.artificial.helpers import create_faker
+from mex.artificial.constants import DEFAULT_MODELS
+from mex.artificial.helpers import generate_artificial_extracted_items
 from mex.common.merged.main import create_merged_item
-from mex.common.models import EXTRACTED_MODEL_CLASSES, EXTRACTED_MODEL_CLASSES_BY_NAME
-from mex.common.types import Identifier, Validation
+from mex.common.models import EXTRACTED_MODEL_CLASSES_BY_NAME
+from mex.common.types import Validation
 
 logger = sphinx_logging.getLogger(__name__)
 
 CHATTINESS = 2
 CONCEPT_SCHEMES_FILE = "concept-schemes.json"
-CONCEPT_URL_AT_END = re.compile(r'"(https://mex\.rki\.de/item/[-A-Za-z0-9]+)",?$')
 ENCODING = "utf8"
-IDS_PER_TYPE = 3
 SEED = 0
 
 
@@ -52,15 +49,6 @@ def load_vocabularies() -> dict[str, list[dict[str, Any]]]:
     ]
     schemes = json.loads((vocabularies / CONCEPT_SCHEMES_FILE).read_text(ENCODING))
     return {"Concept": concepts, "ConceptScheme": schemes}
-
-
-@cache
-def load_labels() -> dict[str, str]:
-    """Return the english label of every concept by its identifier."""
-    return {
-        concept["identifier"]: concept["prefLabel"].get("en", "")
-        for concept in load_vocabularies()["Concept"]
-    }
 
 
 class UnsupportedEntityError(LookupError):
@@ -79,19 +67,14 @@ def generate_artificial(entity_name: str) -> dict[str, Any]:
     # silence the settings table that mex-common logs when it is first loaded
     logging.getLogger("mex").setLevel(logging.WARNING)
 
-    # provide some merged identifiers for every type, so references can be filled
-    ids_by_type = defaultdict(
-        list,
-        {
-            model.stemType: [
-                Identifier.generate(seed=type_index * IDS_PER_TYPE + id_index)
-                for id_index in range(IDS_PER_TYPE)
-            ]
-            for type_index, model in enumerate(EXTRACTED_MODEL_CLASSES)
-        },
+    # generate items of all types, so the references of the entity can be filled,
+    # and skip the first item, which is the hard-coded MEx primary source
+    items = generate_artificial_extracted_items(
+        seed=SEED, chattiness=CHATTINESS, stem_types=[*DEFAULT_MODELS, entity_name]
     )
-    faker = create_faker(seed=SEED, chattiness=CHATTINESS)
-    extracted = faker.extracted_item([entity_name], ids_by_type)
+    extracted = next(
+        item for item in islice(items, 1, None) if item.stemType == entity_name
+    )
     merged = create_merged_item(
         extracted.stableTargetId, [extracted], None, validation=Validation.STRICT
     )
@@ -108,20 +91,8 @@ def find_concept(entity_name: str, identifier: str) -> dict[str, Any]:
 
 
 def to_json(instance: dict[str, Any]) -> str:
-    """Dump the instance as JSON and annotate referenced concepts with their labels."""
-    labels = load_labels()
-    lines = []
-    for line in json.dumps(
-        instance, indent=2, sort_keys=True, ensure_ascii=False
-    ).splitlines():
-        if (
-            not line.lstrip().startswith('"identifier"')
-            and (match := CONCEPT_URL_AT_END.search(line))
-            and (label := labels.get(match[1]))
-        ):
-            line = f"{line}  // {label}"  # noqa: PLW2901
-        lines.append(line)
-    return "\n".join(lines)
+    """Dump the instance as indented JSON."""
+    return json.dumps(instance, indent=2, sort_keys=True, ensure_ascii=False)
 
 
 class MExExampleDirective(SphinxDirective):
