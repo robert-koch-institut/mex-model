@@ -77,7 +77,7 @@
             "default": null,
             "description": "Standardized datatype of the variable, as defined in the controlled vocabulary.",
             "exactMatch": [
-                "https://www.w3.org/ns/csvw#datatype"
+                "http://www.w3.org/ns/csvw#datatype"
             ]
         },
         "description": {
@@ -116,7 +116,7 @@
             "default": null,
             "description": "A URI template used to define the RDF predicate associated with the values in the column, relative to each row. The propertyUrl may point to standard, controlled vocabularies, or ontologies that define the semantic meaning of the column.",
             "exactMatch": [
-                "https://www.w3.org/ns/csvw#propertyUrl"
+                "http://www.w3.org/ns/csvw#propertyUrl"
             ]
         },
         "supersededBy": {

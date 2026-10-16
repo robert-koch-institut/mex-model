@@ -49,7 +49,7 @@
     },
     {
         "description": {
-            "de": "Dieses Vokabular basiert auf des XSD Datentypen: http://www.w3.org/2001/XMLSchema.",
+            "de": "Dieses Vokabular basiert auf den XSD Datentypen: http://www.w3.org/2001/XMLSchema.",
             "en": "This vocabulary is based on the XSD Datatype Vocabulary, available at http://www.w3.org/2001/XMLSchema."
         },
         "identifier": "https://mex.rki.de/item/datatype-standardized",

@@ -795,7 +795,7 @@ msgstr "Keywords describing the variable group"
 
 msgctxt "Variable"
 msgid "technicalName.singular"
-msgstr "Variable name"
+msgstr "Technical variable name"
 
 msgctxt "Variable"
 msgid "technicalName.description"
