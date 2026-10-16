@@ -1386,7 +1386,7 @@ msgstr "Data source/data set from which the variable originates"
 
 msgctxt "Variable"
 msgid "categories.singular"
-msgstr "Value set"
+msgstr "Categories"
 
 msgctxt "Variable"
 msgid "categories.description"

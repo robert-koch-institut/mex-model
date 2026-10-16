@@ -19,11 +19,11 @@
             "type": "array"
         },
         "categories": {
-            "default": [],
-            "description": "A set of predefined categories that serve as possible values for the variable.",
-            "exactMatch": [
+            "closeMatch": [
                 "https://datapackage.org/profiles/2.0/tableschema.json#categories"
             ],
+            "default": [],
+            "description": "A set of predefined categories that serve as possible values for the variable.",
             "items": {
                 "$ref": "/mex/model/fields/category",
                 "examples": [

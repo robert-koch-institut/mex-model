@@ -30,7 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `label` *required*
 
 - rename properties:
-  - `containedBy` (old) to `resource` (new) *required*
+  - `containedBy` (old) to `usedIn` (new) *required* in order to harmonize with `Variable.usedIn`
 
 #### extracted- and merged-variable.json
 
@@ -48,10 +48,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `dataType`
   - `label` (required)
   - `valueSet`
-
-- rename properties:
-  - `belongsTo` (old) to `variableGroup` (new)
-  - `usedIn` (old) to `resource` (new) *required*
 
 #### po files
 
