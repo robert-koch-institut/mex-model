@@ -13,6 +13,7 @@ extensions = [
     "jsonschema_patches",  # render JSON schemas as tables, adjusted for MEx
     "vocabularies",  # directive: mexvocabularies
     "mex_schema",  # directives: {mex-entity}, {mex-field}
+    "mex_example",  # directive: {mex-example}
 ]
 
 # --- MyST-Parser settings -------------------------------------------------

@@ -14,6 +14,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   both `minItems` and a `default` set
 - extend `schema-checks` annotation validation: flag `closeMatch` and `exactMatch`
   values that are not arrays, on entity properties and vocabulary concepts
+- add `{mex-example}` sphinx directive that renders example instances generated with
+  `mex-artificial` and validated against the local schemas, installed with the new
+  `docs` dependency group
 
 ### Changes
 
