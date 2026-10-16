@@ -41,15 +41,7 @@ Use `AccessPlatform` to describe any technical system, API, or service through w
 
 #### Merged AccessPlatform
 
-```json
-{
-  "description": [{"value": "REST API providing access to infectious disease surveillance data.", "language": "en"}],
-  "endpointURL": {"url": "https://survstat.rki.de/api/v2"},
-  "identifier": "gglGQVGwZNJtqYDkW4N8jL",
-  "technicalAccessibility": "https://mex.rki.de/item/technical-accessibility-1", # internal
-  "title": [{"value": "SurvStat API", "language": "en"}],
-  "unitInCharge": ["hJKL9mNoPqRsTuVwXyZ123"]
-}
+```{mex-example} AccessPlatform
 ```
 
 ## Activity
@@ -78,19 +70,7 @@ Use `Activity` to describe a research project, a statutory task performed under 
 
 #### Merged Activity
 
-```json
-{
-  "activityType": ["https://mex.rki.de/item/activity-type-1"] # Third Party funded Project,
-  "contact": ["cKMPkdHHTky6TF6hqMdbe7"],
-  "end": ["2024-12-31"],
-  "identifier": "gglGQVGwZNJtqYDkW4N8jL",
-  "responsibleUnit": ["hJKL9mNoPqRsTuVwXyZ123"],
-  "start": ["2020-03"],
-  "title": [
-    {"value": "COVID-19 Surveillance", "language": "en"},
-    {"value": "COVID-19-Surveillance", "language": "de"}
-  ]
-}
+```{mex-example} Activity
 ```
 
 ## BibliographicResource
@@ -117,20 +97,7 @@ Use `BibliographicResource` to describe any publication associated with RKI rese
 
 #### Merged BibliographicResource
 
-```json
-{
-  "accessRestriction": "https://mex.rki.de/item/access-restriction-1", # open
-  "bibliographicResourceType": ["https://mex.rki.de/item/bibliographic-resource-type-1"], # Book
-  "creator": ["cKMPkdHHTky6TF6hqMdbe7"],
-  "doi": "https://doi.org/10.2807/1560-7917.ES.2022.27.46.2200849",
-  "identifier": "mNoPqRsTuVwXyZ1234AbCd",
-  "issued": "2022-11-17",
-  "journal": [{"value": "Eurosurveillance", "language": "en"}],
-  "language": ["https://mex.rki.de/item/language-1"], # German
-  "license": "https://mex.rki.de/item/license-1",  # CC-BY-4.0
-  "publicationYear": "2022",
-  "title": [{"value": "Epidemiological characterisation of SARS-CoV-2 variants in Germany", "language": "en"}]
-}
+```{mex-example} BibliographicResource
 ```
 
 ## Concept Scheme
@@ -152,17 +119,8 @@ Both `ConceptScheme` and [Concept](#concept) are the only entity types that are 
 
 See `mex-model/vocabularies/concept-schemes.json` for details.
 
-```json
-{
-   "description": [
-    {"de": "Dieses Vokabular basiert auf dem Dublin Core Collection Description Frequency Vokabular, verfügbar unter https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/.",
-    "en": "This vocabulary is based on the Dublin Core Collection Description Frequency Vocabulary, available at https://www.dublincore.org/specifications/dublin-core/collection-description/frequency/."
-    }
-   ],
-  "identifier": "https://mex.rki.de/item/frequency",
-  "label": "Frequency vocabulary"
-}
-
+```{mex-example} ConceptScheme
+:identifier: https://mex.rki.de/item/frequency
 ```
 
 ## Concept
@@ -184,30 +142,8 @@ Both `Concept` and [ConceptScheme](#concept-scheme) are the only entity types th
 
 See `mex-model/vocabularies/[vocabulary].json` for details.
 
-```json
-{
-    "altLabel": [
-            {
-                "de": "PHDR",
-                "en": "PHDR"
-            }
-    ],
-    "definition": [
-            {
-                "de": "Bevölkerungsbezogene Gesundheitsdatenregisterdaten (Register der öffentlichen Gesundheit)",
-                "en": "Data from population-based health data registries such as public health registries"
-            }
-    ],
-    "exactMatch": [
-            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/PHDR"
-    ],
-    "identifier": "https://mex.rki.de/item/health-category-16",
-    "inScheme": "https://mex.rki.de/item/health-category",
-    "prefLabel": {
-            "de": "Bevölkerungsbezogene Gesundheitsregisterdaten",
-            "en": "Data from population-based health data registries"
-    }
-}
+```{mex-example} Concept
+:identifier: https://mex.rki.de/item/health-category-16
 ```
 
 ## Consent
@@ -232,13 +168,7 @@ Use `Consent` to document GDPR-relevant consent records associated with research
 
 #### Merged Consent
 
-```json
-{
-  "hasConsentStatus": "https://mex.rki.de/item/consent-status-1", # Invalid for Processing
-  "hasDataSubject": "cKMPkdHHTky6TF6hqMdbe7",
-  "identifier": "qRsTuVwXyZ1234AbCdEfGh",
-  "isIndicatedAtTime": "2022-09-30T20:48:35Z"
-}
+```{mex-example} Consent
 ```
 
 ## ContactPoint
@@ -264,11 +194,7 @@ Use `ContactPoint` when a contact for an entity is a shared functional address, 
 
 #### Merged ContactPoint
 
-```json
-{
-  "email": ["mex@rki.de"],
-  "identifier": "hJKL9mNoPqRsTuVwXyZ123"
-}
+```{mex-example} ContactPoint
 ```
 
 ## Distribution
@@ -295,13 +221,7 @@ Use `Distribution` to describe a specific file, format, or access form of a Reso
 
 #### Merged Distribution
 
-```json
-{
-  "accessUrl": ["https://example.org/datasets/abc/distribution.csv"],
-  "downloadUrl": ["https://example.org/datasets/abc/distribution.csv"],
-  "identifier": "rStUvWxYzA1234AbCdEfGh",
-  "mediaType": ["https://mex.rki.de/item/mime-type-7"] # text/csv
-}
+```{mex-example} Distribution
 ```
 
 ## Location
@@ -325,21 +245,7 @@ Use `Location` for geographical entities, i.e. when describing the geographical 
 
 #### Merged Location
 
-```JSON
-{
-  "geoNamesId": [
-    "https://www.geonames.org/2950159",
-    "https://www.geonames.org/2950157"
-  ],
-  "identifier": "",
-  "name": [
-    {"language": "de", "value": "Berlin"},
-    {"language": "en", "value": "Berlin"}
-  ],
-  "wikidataId": [
-    "http://www.wikidata.org/entity/Q64"
-  ]
-}
+```{mex-example} Location
 ```
 
 ## Organization
@@ -366,16 +272,7 @@ Use `Organization` to represent an external institution, for example a funding b
 
 #### Merged Organization
 
-```json
-{
-  "identifier": "tUvWxYzA1234AbCdEfGhIj",
-  "officialName": [
-    {"language": "de", "value": "Robert Koch-Institut"}],
-  "shortName": [
-    {"language": "de", "value": "RKI"}],
-  "website": [{"language": "de", "title": "Offizielle RKI-Website", "url": "https://www.rki.de/"}],
-  "wikidataId": ["http://www.wikidata.org/entity/Q679041"]
-}
+```{mex-example} Organization
 ```
 
 ## OrganizationalUnit
@@ -402,13 +299,7 @@ Use `OrganizationalUnit` to represent any internal RKI unit: a department or uni
 
 #### Merged OrganizationalUnit
 
-```json
-{
-  "identifier": "cDeFgHiJkLmN1234OpQrSt",
-  "officialName": [{"language": "en", "value": "Center for International Health Protection"}],
-  "parentUnit": ["tUvWxYzA1234AbCdEfGhIj"],
-  "shortName": ["ZIG"]
-}
+```{mex-example} OrganizationalUnit
 ```
 
 ## Person
@@ -435,15 +326,7 @@ Person should not be confused with `ContactPoint`, which represents a shared fun
 
 #### Merged Person
 
-```json
-{
-  "affiliation": ["cDeFgHiJkLmN1234OpQrSt"],
-  "email": ["ada.lovelace@example.org"],
-  "familyName": ["Lovelace"],
-  "fullName": ["Ada Lovelace"],
-  "givenName": ["Ada"],
-  "identifier": "fGhIjKlMnOpQ1234RsTuVw"
-}
+```{mex-example} Person
 ```
 
 ## PrimarySource
@@ -471,12 +354,7 @@ Use `PrimarySource` to describe a system, database, or API that feeds metadata i
 
 #### Merged PrimarySource
 
-```json
-{
-  "identifier": "iJkLmNoPqRsT1234UvWxYz",
-  "locatedAt": ["www.example.org/server-address"],
-  "title": ["Pathogen Database"]
-}
+```{mex-example} PrimarySource
 ```
 
 ## ResourceSeries
@@ -505,25 +383,7 @@ Use `ResourceSeries` to represent a named series of related datasets that are re
 
 #### Merged ResourceSeries
 
-```json
-{
-  "accrualPeriodicity": "https://mex.rki.de/item/frequency-1", # triennial
-  "contact": ["hJKL9mNoPqRsTuVwXyZ123"],
-  "description": [
-    {"value": "Wöchentliche Veröffentlichungsreihe des RKI zu aktuellen infektionsepidemiologischen Themen.", "language": "de"}
-  ],
-  "identifier": "mRsExAmPlE14chars01",
-  "keyword": [
-    {"value": "Infektionsepidemiologie", "language": "de"},
-    {"value": "Infectious disease epidemiology", "language": "en"}
-  ],
-  "publisher": ["tUvWxYzA1234AbCdEfGhIj"],
-  "title": [
-    {"value": "Epidemiologisches Bulletin", "language": "de"},
-    {"value": "Epidemiological Bulletin", "language": "en"}
-  ],
-  "start": ["2001-01"]
-}
+```{mex-example} ResourceSeries
 ```
 
 ## Resource
@@ -550,16 +410,7 @@ A `Resource` describes the dataset or data source. Its individual file represent
 
 #### Merged Resource
 
-```json
-{
-  "contact": ["hJKL9mNoPqRsTuVwXyZ123"],
-  "description": [
-    {"language": "de", "value": "Surveillance indicators collected and curated for demonstration purposes."}],
-  "distribution": ["rStUvWxYzA1234AbCdEfGh"],
-  "identifier": "mNoPqRsTuVwXyZ1234AbCd",
-  "publisher": ["tUvWxYzA1234AbCdEfGhIj"],
-  "title": ["Surveillance dataset: Example indicators (2021–2024)"]
-}
+```{mex-example} Resource
 ```
 
 ## VariableGroup
@@ -586,12 +437,7 @@ Use `VariableGroup` when variables within a `Resource` can be meaningfully organ
 
 #### Merged VariableGroup
 
-```json
-{
-  "identifier": "sTuVwXyZ1234AbCdEfGhIj",
-  "title": ["Case definitions"],
-  "usedIn": ["mNoPqRsTuVwXyZ1234AbCd"]
-}
+```{mex-example} VariableGroup
 ```
 
 ## Variable
@@ -618,15 +464,5 @@ Use `Variable` to describe individual fields or variables within a `Resource`, p
 
 #### Merged Variable
 
-```json
-{
-  "belongsTo": ["mPpRrTuVaWcYzB9145CdBw"],
-  "datatypeInPrimarySource": "integer",
-  "datatypeStandardized": "https://mex.rki.de/item/datatype-standardized-1", # URI
-  "description": [
-    {"langauge": "de", "value": "Number of reported cases per 100,000 inhabitants over the last 7 days."}],
-  "identifier": "pQrStUvWxYzA1234BcDeFg",
-  "technicalName": ["7-day_incidence"],
-  "usedIn": ["mNoPqRsTuVwXyZ1234AbCd"]
-}
+```{mex-example} Variable
 ```
