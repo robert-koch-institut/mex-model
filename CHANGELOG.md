@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
+- CHANGELOG.md: add the missing documentation of model changes for version 5.2.0
+
 ### Deprecated
 
 ### Removed
@@ -27,6 +29,72 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   both `minItems` and a `default` set
 - extend `schema-checks` annotation validation: flag `closeMatch` and `exactMatch`
   values that are not arrays, on entity properties and vocabulary concepts
+
+#### mex/model/entities/
+
+- new entity type: `extracted-location.json` and `merged-location.json`
+  Including the following required descriptive properties (RKIMEX-126):
+  - name
+
+- in `extracted-resource.json` and `merged-resource.json`
+  New property:
+  - `hasVersion`, relating translation entries in de.po, en.po
+
+### Changes
+
+#### mex/model/entities/
+
+- all entities (where applicable):
+  - Switching annotation properties sameAs, subpropertyOf to closeMatch in
+  - Replacing $comment entries by indicating source in HealthDCAT-AP with closeMatch
+
+- in `extracted-access-platform.json` and `merged-access-platform.json`:
+  - make `title` required
+
+- in `extracted-activity.json` and `merged-activity.json`
+  - `externalAssociate`: remove person as range
+
+- in `extracted-organization.json` and `merged-organization.json`:
+  - `country`: change range to accept a merged-location#identifier
+
+- in `extracted-primary-source.json` and `merged-primary-source.json`:
+  - make `title` required
+
+- in `extracted-resource-series.json` and `merged-resource-series.json`:
+  - `hasLegalBasis`: change range to include `fields/text.json`and `fields/link.json`
+
+- in `extracted-resource.json` and `merged-resource.json`:
+  - `hasLegalBasis`: change range to include `fields/text.json`and `fields/link.json`
+  - `hasPurpose`: change range of property to vocabulary `purpose.json` and amending translation entries in de.po, en.po accordingly
+  - `qualityInformation`: new definition/ usage note, amended translation entries in de.po, en.po
+  - add `hasVersion`
+  - make `resourceCreationMethod` required
+
+- in `extracted-person.json` and `merged-person.json`:
+  - make `fullName` required
+
+#### mex/model/extension
+
+- definition.json:
+  - delete  `sameAs`and `subPropertyOf`
+
+#### mex/model/i18n
+
+- de.po & en.po:
+  - amending translation entries for added/changed entities and properties
+
+#### mex/model/vocabularies
+
+- `concept-schemes.json`: remove `https://mex.rki.de/item/country`
+- `language.json`: add concepts (all EU official languages + Chinese, Turkish, Japanese and Arabic) and exactMatches to terms from EU vocabularies
+- `health-category.json`: change `prefLabel` of concepts
+- `resource-creation-method.json`: add concepts and their respective matches to EU terms
+
+### Removed
+
+#### mex/model/vocabularies
+
+- `country.json`: deleted, because we decided to have locations as entities and not in a vocabulary
 
 ### Fixed
 
@@ -61,8 +129,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- new template https://github.com/robert-koch-institut/mex-template/releases/tag/2.0.1
-- new template https://github.com/robert-koch-institut/mex-template/releases/tag/2.0.0
+- new template <https://github.com/robert-koch-institut/mex-template/releases/tag/2.0.1>
+- new template <https://github.com/robert-koch-institut/mex-template/releases/tag/2.0.0>
+
 ### Fixed
 
 - fixed malformed `closeMatch` URI (`http.//` instead of `http://`) on
@@ -176,7 +245,7 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Changes
 
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/192830
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/192830>
 - change propertes `start` and `end` in extracted-resource.json and merged-resource.json to be of type `array` and align them to `Activity.start`and `Activity.end`.
 
 ## [5.0.2] - 2026-06-24
@@ -187,12 +256,12 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Changes
 
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/11612b
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/11612b>
 
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/52887e
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/52887e>
 
 - dependencies update (2026-06-16)
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/1d816d
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/1d816d>
 
 ### Fixed
 
