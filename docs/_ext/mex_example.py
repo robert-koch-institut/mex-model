@@ -16,7 +16,7 @@ from collections import defaultdict
 from collections.abc import Callable
 from functools import cache
 from importlib.metadata import version
-from typing import Any, ClassVar, cast
+from typing import Any, ClassVar
 
 from docutils import nodes
 from docutils.parsers.rst import directives
@@ -28,7 +28,6 @@ from sphinx.util.docutils import SphinxDirective
 from mex.artificial.helpers import create_faker
 from mex.common.merged.main import create_merged_item
 from mex.common.models import EXTRACTED_MODEL_CLASSES, EXTRACTED_MODEL_CLASSES_BY_NAME
-from mex.common.transform import MExEncoder
 from mex.common.types import Identifier, Validation
 
 logger = sphinx_logging.getLogger(__name__)
@@ -38,7 +37,6 @@ CONCEPT_SCHEMES_FILE = "concept-schemes.json"
 CONCEPT_URL_AT_END = re.compile(r'"(https://mex\.rki\.de/item/[-A-Za-z0-9]+)",?$')
 ENCODING = "utf8"
 IDS_PER_TYPE = 3
-MAX_ITEMS = 2
 SEED = 0
 
 
@@ -63,19 +61,6 @@ def load_labels() -> dict[str, str]:
         concept["identifier"]: concept["prefLabel"].get("en", "")
         for concept in load_vocabularies()["Concept"]
     }
-
-
-def _simplify(value: Any) -> Any:  # noqa: ANN401
-    """Remove empty values and the `entityType` discriminator and shorten lists."""
-    if isinstance(value, dict):
-        return {
-            k: _simplify(v)
-            for k, v in value.items()
-            if v not in (None, []) and k != "entityType"
-        }
-    if isinstance(value, list):
-        return [_simplify(v) for v in value[:MAX_ITEMS]]
-    return value
 
 
 class UnsupportedEntityError(LookupError):
@@ -108,11 +93,9 @@ def generate_artificial(entity_name: str) -> dict[str, Any]:
     faker = create_faker(seed=SEED, chattiness=CHATTINESS)
     extracted = faker.extracted_item([entity_name], ids_by_type)
     merged = create_merged_item(
-        extracted.stableTargetId, [extracted], None, validation=Validation.IGNORE
+        extracted.stableTargetId, [extracted], None, validation=Validation.STRICT
     )
-    return cast(
-        "dict[str, Any]", _simplify(json.loads(json.dumps(merged, cls=MExEncoder)))
-    )
+    return merged.model_dump(mode="json", exclude={"entityType"}, exclude_none=True)
 
 
 def find_concept(entity_name: str, identifier: str) -> dict[str, Any]:

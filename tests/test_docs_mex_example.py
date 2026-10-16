@@ -7,7 +7,6 @@ from docutils import nodes
 from mex_example import (
     MExExampleDirective,
     UnsupportedEntityError,
-    _simplify,
     find_concept,
     generate_artificial,
     load_labels,
@@ -32,17 +31,6 @@ def test_load_labels() -> None:
     labels = load_labels()
 
     assert labels[f"{ITEM}/language-1"] == "German"
-
-
-def test_simplify() -> None:
-    value = {
-        "entityType": "MergedThing",
-        "empty": [],
-        "none": None,
-        "list": [{"keep": 1, "drop": None}, 2, 3, 4],
-    }
-
-    assert _simplify(value) == {"list": [{"keep": 1}, 2]}
 
 
 def test_generate_artificial() -> None:
