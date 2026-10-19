@@ -124,7 +124,7 @@ SUPERSEDED_GATE_EXCLUDED_FIELDS = frozenset({"identifier", "supersededBy"})
 def find_superseded_gate_violations(
     entity_name: str, schema: dict[str, Any]
 ) -> list[str]:
-    """Check a merged schema's supersededBy if/then/else gate (ADR-002, ADR-004).
+    """Check a merged schema's supersededBy if/then/else gate.
 
     Active items (`supersededBy` is null) must populate the gated fields
     listed in `then`, while superseded items must leave every field except
