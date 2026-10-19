@@ -5,6 +5,13 @@
     "additionalProperties": false,
     "allOf": [
         {
+            "else": {
+                "properties": {
+                    "email": {
+                        "maxItems": 0
+                    }
+                }
+            },
             "if": {
                 "properties": {
                     "supersededBy": {

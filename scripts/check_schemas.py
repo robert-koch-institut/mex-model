@@ -117,6 +117,57 @@ def find_field_validation_violations(
     return violations
 
 
+SUPERSEDED_GATE_IF = {"properties": {"supersededBy": {"type": "null"}}}
+SUPERSEDED_GATE_EXCLUDED_FIELDS = frozenset({"identifier", "supersededBy"})
+
+
+def find_superseded_gate_violations(
+    entity_name: str, schema: dict[str, Any]
+) -> list[str]:
+    """Check a merged schema's supersededBy if/then/else gate (ADR-002, ADR-004).
+
+    Active items (`supersededBy` is null) must populate the gated fields
+    listed in `then`, while superseded items must leave every field except
+    `identifier` and `supersededBy` at its default, as pinned in `else`.
+    """
+    properties = schema.get("properties", {})
+    if schema.get("required") != ["identifier"]:
+        return [f"{entity_name}: top-level required must only list identifier"]
+    gates = schema.get("allOf", [])
+    if len(gates) != 1 or gates[0].get("if") != SUPERSEDED_GATE_IF:
+        return [f"{entity_name}: missing supersededBy gate in allOf"]
+    then = gates[0].get("then", {})
+    then_properties = then.get("properties", {})
+    then_required = set(then.get("required", []))
+    else_properties = gates[0].get("else", {}).get("properties", {})
+    violations = []
+    if then_required != set(then_properties):
+        violations.append(
+            f"{entity_name}: gate then.required does not match then.properties"
+        )
+    gateable = set(properties) - SUPERSEDED_GATE_EXCLUDED_FIELDS
+    if not then_required <= gateable:
+        violations.append(f"{entity_name}: gate then.required lists unknown fields")
+    if set(else_properties) != gateable:
+        violations.append(
+            f"{entity_name}: gate else.properties must cover every field "
+            "except identifier and supersededBy"
+        )
+    for name in sorted(gateable):
+        is_array = properties[name].get("type") == "array"
+        expected_else = {"maxItems": 0} if is_array else {"type": "null"}
+        if name in else_properties and else_properties[name] != expected_else:
+            violations.append(
+                f"{entity_name}.{name}: gate else must be {expected_else}"
+            )
+        expected_then = {"minItems": 1} if is_array else {"not": {"type": "null"}}
+        if name in then_properties and then_properties[name] != expected_then:
+            violations.append(
+                f"{entity_name}.{name}: gate then must be {expected_then}"
+            )
+    return violations
+
+
 def find_extracted_merged_parity_violations(
     extracted_by_name: dict[str, dict[str, Any]],
     merged_by_name: dict[str, dict[str, Any]],
@@ -164,11 +215,17 @@ def _normalize_field_definition(node: object) -> object:
         any_of = normalized.get("anyOf")
         if isinstance(any_of, list):
             # strip null type since it will differ between required and optional fields
-            normalized["anyOf"] = [
+            non_null_options = [
                 option
                 for option in any_of
                 if not (isinstance(option, dict) and option.get("type") == "null")
             ]
+            normalized["anyOf"] = non_null_options
+            # unwrap a lone remaining option, so an optional `anyOf: [X, null]`
+            # compares equal to the same field declared as a required bare `X`
+            if len(non_null_options) == 1 and isinstance(non_null_options[0], dict):
+                del normalized["anyOf"]
+                normalized.update(non_null_options[0])
         return normalized
     if isinstance(node, list):
         return [_normalize_field_definition(item) for item in node]
@@ -523,6 +580,8 @@ def _collect_violations() -> list[str]:
     for name, schema in sorted(all_entities.items()):
         violations += find_field_validation_violations(name, schema)
         violations += find_annotation_uri_violations(name, schema)
+    for name, schema in sorted(MERGED_MODEL_JSON_BY_NAME.items()):
+        violations += find_superseded_gate_violations(f"merged-{name}", schema)
     violations += find_extracted_merged_parity_violations(
         EXTRACTED_MODEL_JSON_BY_NAME, MERGED_MODEL_JSON_BY_NAME
     )

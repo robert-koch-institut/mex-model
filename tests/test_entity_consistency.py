@@ -148,6 +148,34 @@ def test_extracted_merged_parity_violations_are_detected(
         ),
         pytest.param(
             {
+                "a": {
+                    "properties": {
+                        "foo": {
+                            "anyOf": [
+                                {"$ref": "x", "examples": ["y"]},
+                                {"type": "null"},
+                            ],
+                            "default": None,
+                        }
+                    }
+                },
+                "b": {"properties": {"foo": {"$ref": "x", "examples": ["z"]}}},
+            },
+            [],
+            id="required-ness-bare-scalar-vs-nullable-any-of-is-ignored",
+        ),
+        pytest.param(
+            {
+                "a": {
+                    "properties": {"foo": {"anyOf": [{"$ref": "x"}, {"type": "null"}]}}
+                },
+                "b": {"properties": {"foo": {"$ref": "y"}}},
+            },
+            ["foo: ['b'] declared differently than ['a']"],
+            id="bare-scalar-vs-nullable-any-of-with-different-ref-is-flagged",
+        ),
+        pytest.param(
+            {
                 "a": {"properties": {"stableTargetId": {"$ref": "a"}}},
                 "b": {"properties": {"stableTargetId": {"$ref": "b"}}},
             },

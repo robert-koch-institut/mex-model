@@ -11,7 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- made `email` conditionally required on `merged-contact-point.json`: only enforced via `if`/`then` when `supersededBy` is unset, as a proof of concept for validating superseded merged items
+- BREAKING: required fields on all `merged-*.json` schemas (except `identifier`) are now only enforced when `supersededBy` is unset, via an `if`/`then` gate inside `allOf` (see ADR-004); outside the gate, required arrays carry `"default": []` instead of `minItems: 1` and required scalars became nullable with `"default": null`
+- superseded merged items (`supersededBy` set) must leave every field except `identifier` and `supersededBy` at its default, enforced via the gate's `else` branch (see ADR-002, ADR-004)
 
 ### Deprecated
 
