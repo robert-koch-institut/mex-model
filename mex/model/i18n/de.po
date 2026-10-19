@@ -22,6 +22,16 @@ msgctxt "Resource"
 msgid "accessPlatform.description"
 msgstr "Zugriffsplattform für die Daten"
 
+msgctxt "ResourceSeries"
+msgid "accessPlatform.singular"
+msgid_plural "accessPlatform.plural"
+msgstr[0] "Zugriffsplattform"
+msgstr[1] "Zugriffsplattformen"
+
+msgctxt "ResourceSeries"
+msgid "accessPlatform.description"
+msgstr "Zugriffsplattform für die Kollektion"
+
 msgid "accessRestriction.singular"
 msgstr "Zugriffsbeschränkung"
 
@@ -73,6 +83,14 @@ msgstr "Aktualisierungsfrequenz"
 msgctxt "Resource"
 msgid "accrualPeriodicity.description"
 msgstr "Die Häufigkeit/Frequenz, mit der Daten aktualisiert werden"
+
+msgctxt "ResourceSeries"
+msgid "accrualPeriodicity.singular"
+msgstr "Aktualisierungsfrequenz"
+
+msgctxt "ResourceSeries"
+msgid "accrualPeriodicity.description"
+msgstr "Die Häufigkeit/Frequenz, mit der die Kollektion ergänzt wird"
 
 msgctxt "Activity"
 msgid "activityType.singular"
@@ -295,6 +313,16 @@ msgctxt "Variable"
 msgid "description.description"
 msgstr "Fachliche Beschreibung der Variable"
 
+msgctxt "BibliographicResource"
+msgid "distribution.singular"
+msgid_plural "distribution.plural"
+msgstr[0] "Datei"
+msgstr[1] "Dateien"
+
+msgctxt "BibliographicResource"
+msgid "distribution.description"
+msgstr "Zur Publikation dazugehörige Dateien"
+
 msgctxt "Resource"
 msgid "distribution.singular"
 msgid_plural "distribution.plural"
@@ -392,6 +420,14 @@ msgctxt "Resource"
 msgid "end.description"
 msgstr "Ende des Zeitraumes, den die Daten abdecken"
 
+msgctxt "ResourceSeries"
+msgid "end.singular"
+msgstr "Ende"
+
+msgctxt "ResourceSeries"
+msgid "end.description"
+msgstr "Ende des Zeitraumes, den die Kollektion abdeckt"
+
 msgctxt "AccessPlatform"
 msgid "endpointDescription.singular"
 msgstr "Schnittstellen-Beschreibung"
@@ -471,6 +507,14 @@ msgctxt "Activity"
 msgid "fundingProgram.description"
 msgstr "Das Programm, in dem das Projekt gefördert wird, z. B. Horizont Europa"
 
+msgctxt "Location"
+msgid "geoNamesId.singular"
+msgstr "GeoNames ID"
+
+msgctxt "Location"
+msgid "geoNamesId.description"
+msgstr "GeoNames ist eine Online-Datenbank mit geografischen Orten weltweit. Sie hilft dabei, Ortsnamen einheitlich zu erfassen."
+
 msgctxt "Organization"
 msgid "geprisId.singular"
 msgstr "GEPRIS"
@@ -532,6 +576,16 @@ msgstr ""
 "Rechtliche Grundlagen werden durch Gesetze und Vorschriften definiert, auf "
 "deren Basis die Daten erhoben werden"
 
+msgctxt "ResourceSeries"
+msgid "hasLegalBasis.singular"
+msgstr "Rechtliche Grundlage"
+
+msgctxt "ResourceSeries"
+msgid "hasLegalBasis.description"
+msgstr ""
+"Rechtliche Grundlagen werden durch Gesetze und Vorschriften definiert, auf "
+"deren Basis die Daten erhoben werden"
+
 msgctxt "Resource"
 msgid "hasPersonalData.singular"
 msgstr "Personenbezogene Daten"
@@ -542,18 +596,31 @@ msgstr "Gibt an, ob die Daten einen Personenbezug aufweisen"
 
 msgctxt "Resource"
 msgid "hasPurpose.singular"
-msgstr "Zweck der Datenverarbeitung"
+msgstr "Zweck der Datenerhebung"
 
 msgctxt "Resource"
 msgid "hasPurpose.description"
-msgstr ""
-"Beschreibung des Zweckes der Datenverarbeitung, insbesondere bei Daten mit "
-"Personenbezug"
+msgstr "Auswahl aus möglichen Zwecken der ursprünglichen Datenerhebung"
 
 msgctxt "Resource"
 msgid "hasPurposeDescription.singular"
+msgstr "Beschreibung des Zwecks"
+
+msgctxt "Resource"
+msgid "hasPurposeDescription.description"
 msgstr ""
 "Detaillierte Beschreibung des Zwecks der ursprünglichen Datenerhebung"
+
+msgctxt "Resource"
+msgid "hasVersion.description"
+msgstr "Ein verwandter Datensatz, bei dem es sich um eine Version, "
+"eine Ausgabe oder eine Adaption des beschriebenen Datensatzes handelt"
+
+msgctxt "Resource"
+msgid "hasVersion.singular"
+msgid_plural "hasVersion.plural"
+msgstr[0] "Version des beschriebenen Datensatzes"
+msgstr[1] "Versionen des beschriebenen Datensatzes"
 
 msgctxt "Resource"
 msgid "healthCategory.singular"
@@ -602,6 +669,22 @@ msgid "inSeries.description"
 msgstr "Kollektion von Datensätzen, der der Datensatz angehört"
 
 msgctxt "Resource"
+msgid "inSeriesFirstResource.singular"
+msgstr "Erster Datensatz"
+
+msgctxt "Resource"
+msgid "inSeriesFirstResource.description"
+msgstr "Der vorliegende Datensatz ist der erste Datensatz in der verknüpften Datensatzkollektion"
+
+msgctxt "Resource"
+msgid "inSeriesLastResource.singular"
+msgstr "Letzter Datensatz"
+
+msgctxt "Resource"
+msgid "inSeriesLastResource.description"
+msgstr "Der vorliegende Datensatz ist der letzte Datensatz in der verknüpften Datensatzkollektion"
+
+msgctxt "Resource"
 msgid "instrumentToolOrApparatus.singular"
 msgid_plural "usedInstrumentToolOrApparatus.plural"
 msgstr[0] "Tool"
@@ -642,6 +725,14 @@ msgid "isbnIssn.description"
 msgstr ""
 "Internationale Standardbuchnummer (ISBN) oder Internationale Standardnummer "
 "für fortlaufende Sammelwerke (ISSN) für Zeitschriften"
+
+msgctxt "Consent"
+msgid "isIndicatedAtTime.singular"
+msgstr "Datum der Einwilligung"
+
+msgctxt "Consent"
+msgid "isIndicatedAtTime.description"
+msgstr "Datum und Uhrzeit, zu der die betroffene Person ihre Einwilligung erteilt hat"
 
 msgid "isniId.singular"
 msgstr "ISNI"
@@ -840,6 +931,16 @@ msgstr "Letzte Änderung"
 msgid "modified.description"
 msgstr "Datum, an dem die Daten zuletzt verändert worden sind"
 
+msgctxt "Location"
+msgid "name.singular"
+msgid_plural "officialName.plural"
+msgstr[0] "Name"
+msgstr[1] "Namen"
+
+msgctxt "Location"
+msgid "name.description"
+msgstr "Bezeichnung des Ortes"
+
 msgctxt "Organization"
 msgid "officialName.singular"
 msgstr "Name"
@@ -847,6 +948,16 @@ msgstr "Name"
 msgctxt "Organization"
 msgid "officialName.description"
 msgstr "Offizieller Name der Institution"
+
+msgctxt "Organization"
+msgid "alternativeName.singular"
+msgid_plural "alternativeName.plural"
+msgstr[0] "Anderer Name"
+msgstr[1] "Andere Namen"
+
+msgctxt "Organization"
+msgid "alternativeName.description"
+msgstr "Anderer Name der Institution"
 
 msgctxt "OrganizationalUnit"
 msgid "alternativeName.singular"
@@ -990,14 +1101,26 @@ msgid "publisher.description"
 msgstr ""
 "Verantwortliche(r) für die Verfügbarmachung/Bereitstellung der Daten"
 
+msgctxt "ResourceSeries"
+msgid "publisher.singular"
+msgid_plural "publisher.plural"
+msgstr[0] "Herausgebende Institution"
+msgstr[1] "Herausgebende Institutionen"
+
+msgctxt "ResourceSeries"
+msgid "publisher.description"
+msgstr ""
+"Verantwortliche(r) für die Verfügbarmachung/Bereitstellung der Kollektion"
+
 msgctxt "Resource"
 msgid "qualityInformation.singular"
-msgstr "Qualitätsinformationen"
+msgstr "Zusatzinformationen"
 
 msgctxt "Resource"
 msgid "qualityInformation.description"
 msgstr ""
-"Angaben zu Genauigkeit, Zuverlässigkeit und Validität der Daten"
+"Jegliche Art von relevanten Informationen, die über den Datenbestand/Datensatz "
+"bekannt sind und noch nicht durch die anderen Felder abgedeckt sind"
 
 msgctxt "Activity"
 msgid "relatedActivity.singular"
@@ -1138,6 +1261,14 @@ msgctxt "Resource"
 msgid "spatial.description"
 msgstr "Geografische Abdeckung der Daten"
 
+msgctxt "ResourceSeries"
+msgid "spatial.singular"
+msgstr "Räumlicher Bezug"
+
+msgctxt "ResourceSeries"
+msgid "spatial.description"
+msgstr "Geografische Abdeckung der Kollektion"
+
 msgid "stableTargetId.singular"
 msgstr "Stabiler Identifikator"
 
@@ -1162,6 +1293,14 @@ msgstr "Beginn"
 msgctxt "Resource"
 msgid "start.description"
 msgstr "Beginn des Zeitraumes, den die Daten abdecken"
+
+msgctxt "ResourceSeries"
+msgid "start.singular"
+msgstr "Beginn"
+
+msgctxt "ResourceSeries"
+msgid "start.description"
+msgstr "Beginn des Zeitraumes, den die Kollektion abdeckt"
 
 msgctxt "Resource"
 msgid "stateOfDataProcessing.singular"
@@ -1329,6 +1468,18 @@ msgctxt "Organization"
 msgid "wikidataId.singular"
 msgstr "Wikidata Concept URI"
 
+msgctxt "Location"
+msgid "wikidataId.singular"
+msgstr "Wikidata Concept URI"
+
+msgctxt "Location"
+msgid "wikidataId.description"
+msgstr ""
+"Wikidata ist eine freie, gemeinsame, mehrsprachige und sekundäre Datenbank "
+"zur Sammlung strukturierter Daten zur Unterstützung von Wikipedia und wird "
+"auch als Referenzdatenbank für die Identifikation von Dingen (im Sinne von "
+"Linked Data) genutzt"
+
 msgctxt "Organization"
 msgid "wikidataId.description"
 msgstr ""
@@ -1373,6 +1524,9 @@ msgstr "Einwilligung"
 msgid "Distribution"
 msgstr "Datei"
 
+msgid "Location"
+msgstr "Ort"
+
 msgid "Organization"
 msgstr "Organisation"
 
@@ -1388,7 +1542,7 @@ msgstr "Primärsystem"
 msgid "Resource"
 msgstr "Datenbestand/Datensatz"
 
-msgid "Resource Series"
+msgid "ResourceSeries"
 msgstr "Kollektion von Datenbeständen/Datensätzen"
 
 msgid "Variable"

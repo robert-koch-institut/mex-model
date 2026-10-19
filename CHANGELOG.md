@@ -21,6 +21,134 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [5.2.1] - 2026-10-16
+
+### Changes
+
+- CHANGELOG.md: add the missing documentation of model changes for version 5.2.0
+
+## [5.2.0] - 2026-10-15
+
+### Added
+
+- extend `schema-checks` array validation: flag an array property that has
+  both `minItems` and a `default` set
+- extend `schema-checks` annotation validation: flag `closeMatch` and `exactMatch`
+  values that are not arrays, on entity properties and vocabulary concepts
+
+#### mex/model/entities/
+
+- new entity type: `extracted-location.json` and `merged-location.json`
+  Including the following required descriptive properties (RKIMEX-126):
+  - name
+
+- in `extracted-resource.json` and `merged-resource.json`
+  New property:
+  - `hasVersion`, relating translation entries in de.po, en.po
+
+#### mex/model/entities/
+
+- all entities (where applicable):
+  - Switching annotation properties sameAs, subpropertyOf to closeMatch in
+  - Replacing $comment entries by indicating source in HealthDCAT-AP with closeMatch
+
+- in `extracted-access-platform.json` and `merged-access-platform.json`:
+  - make `title` required
+
+- in `extracted-activity.json` and `merged-activity.json`
+  - `externalAssociate`: remove person as range
+
+- in `extracted-organization.json` and `merged-organization.json`:
+  - `country`: change range to accept a merged-location#identifier
+
+- in `extracted-primary-source.json` and `merged-primary-source.json`:
+  - make `title` required
+
+- in `extracted-resource-series.json` and `merged-resource-series.json`:
+  - `hasLegalBasis`: change range to include `fields/text.json`and `fields/link.json`
+
+- in `extracted-resource.json` and `merged-resource.json`:
+  - `hasLegalBasis`: change range to include `fields/text.json`and `fields/link.json`
+  - `hasPurpose`: change range of property to vocabulary `purpose.json` and amending translation entries in de.po, en.po accordingly
+  - `qualityInformation`: new definition/ usage note, amended translation entries in de.po, en.po
+  - add `hasVersion`
+  - make `resourceCreationMethod` required
+
+- in `extracted-person.json` and `merged-person.json`:
+  - make `fullName` required
+
+#### mex/model/extension
+
+- definition.json:
+  - delete  `sameAs`and `subPropertyOf`
+
+#### mex/model/i18n
+
+- de.po & en.po:
+  - amending translation entries for added/changed entities and properties
+
+#### mex/model/vocabularies
+
+- `concept-schemes.json`: remove `https://mex.rki.de/item/country`
+- `language.json`: add concepts (all EU official languages + Chinese, Turkish, Japanese and Arabic) and exactMatches to terms from EU vocabularies
+- `health-category.json`: change `prefLabel` of concepts
+- `resource-creation-method.json`: add concepts and their respective matches to EU terms
+
+#### mex/model/vocabularies
+
+- `country.json`: deleted, because we decided to have locations as entities and not in a vocabulary
+
+### Fixed
+
+- wrap single-string `closeMatch` values in arrays, as declared in
+  `extension/definition.json`: `Activity.funderOrCommissioner`,
+  `Activity.responsibleUnit`, `BibliographicResource.publicationYear`,
+  `BibliographicResource.publisher`, `OrganizationalUnit.name` and
+  `Resource.wasGeneratedBy`
+- wrap single-string `exactMatch` values of concepts in the `language`,
+  `health-category` and `resource-creation-method` vocabularies in arrays
+- move `closeMatch` URIs of concepts, which the concept schema does not allow,
+  into their `exactMatch` arrays to keep the external references:
+  `bibliographic-resource-type-4`, `bibliographic-resource-type-5`,
+  `resource-creation-method-5` and `resource-creation-method-21`
+- fix the `useScheme` pattern in `extension/definition.json` to match the
+  `https://mex.rki.de/item/...` URIs actually used, instead of `.../concept-scheme/...`
+
+## [5.1.4] - 2026-09-14
+
+### Added
+
+- add automated schema-correctness checks (`scripts/check_schemas.py`), run via a
+  `schema-checks` pre-commit hook: field validation shape, extracted/merged field
+  parity, cross-entity field identity (same field name must have the same shape
+  everywhere, ignoring annotation properties, `$comment`/`description`,
+  `examples`, and required-ness-derived differences), vocabulary registration,
+  duplicate concept identifiers, unresolved `examples`/`useScheme` references,
+  orphaned shared fields, annotation URI well-formedness, JSON Schema
+  meta-validation, `$id`/`$$target` path consistency, and i18n translation
+  coverage (every entity name and every entity field must have a `de.po`/`en.po`
+  label that is either context-free or scoped to that entity's own `msgctxt`)
+
+### Changes
+
+- new template <https://github.com/robert-koch-institut/mex-template/releases/tag/2.0.1>
+- new template <https://github.com/robert-koch-institut/mex-template/releases/tag/2.0.0>
+
+### Fixed
+
+- fixed malformed `closeMatch` URI (`http.//` instead of `http://`) on
+  `responsibleUnit` in extracted- and merged-activity.json
+- added missing `year_month_day_time` variant to `Activity.start`/`end` in
+  extracted- and merged-activity.json, matching `Resource`/`ResourceSeries`
+- fixed `ResourceSeries` entity label, which was keyed as `Resource Series`
+  (with a space) and therefore never matched
+- added missing labels for fields whose only translation was scoped to another
+  entity's `msgctxt`: seven `ResourceSeries` fields (`accessPlatform`,
+  `accrualPeriodicity`, `end`, `hasLegalBasis`, `publisher`, `spatial`,
+  `start`), `BibliographicResource.distribution`, and
+  `Organization.alternativeName`
+- fixed English `Resource.distribution` plural forms (`Files`/`FIles`)
+
 ## [5.1.3] - 2026-08-28
 
 ### Fixed
@@ -63,7 +191,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Added Vocabulary file
 
 - mex/model/vocabularies/coding-system.json (RKIMEX-25)
-- mex/model/vocabularies/country.json (RKIMEX-103)
 - mex/model/vocabularies/purpose.json (RKIMEX-100)
 
 - add vocabularies to concept-schemes.json
@@ -108,7 +235,6 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Changes
 
-- new template https://github.com/robert-koch-institut/mex-template/releases/tag/1.5.0
 - Changed files by adding translation entries for entities named in added: en.po, de.po
 - change annotation properties sameAs and subPropertyOf to closeMatch. delete sameAs and subPropertyOf from extension/definition.json
 
@@ -121,7 +247,7 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Changes
 
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/192830
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/192830>
 - change propertes `start` and `end` in extracted-resource.json and merged-resource.json to be of type `array` and align them to `Activity.start`and `Activity.end`.
 
 ## [5.0.2] - 2026-06-24
@@ -132,12 +258,12 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Changes
 
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/11612b
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/11612b>
 
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/52887e
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/52887e>
 
 - dependencies update (2026-06-16)
-- updated template to https://github.com/robert-koch-institut/mex-template/commit/1d816d
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/1d816d>
 
 ### Fixed
 
