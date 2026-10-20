@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   only enforced when `supersededBy` is unset
 - BREAKING: superseded merged items (`supersededBy` is set) must leave every field at
   the default, except `identifier` and `supersededBy`
+- add python 3.15 support
 
 ### Deprecated
 
