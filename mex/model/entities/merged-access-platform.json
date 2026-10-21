@@ -3,6 +3,67 @@
     "$id": "https://mex.rki.de/mex/model/entities/merged-access-platform",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "allOf": [
+        {
+            "else": {
+                "properties": {
+                    "alternativeTitle": {
+                        "maxItems": 0
+                    },
+                    "contact": {
+                        "maxItems": 0
+                    },
+                    "description": {
+                        "maxItems": 0
+                    },
+                    "endpointDescription": {
+                        "type": "null"
+                    },
+                    "endpointType": {
+                        "type": "null"
+                    },
+                    "endpointURL": {
+                        "type": "null"
+                    },
+                    "landingPage": {
+                        "maxItems": 0
+                    },
+                    "technicalAccessibility": {
+                        "type": "null"
+                    },
+                    "title": {
+                        "maxItems": 0
+                    },
+                    "unitInCharge": {
+                        "maxItems": 0
+                    }
+                }
+            },
+            "if": {
+                "properties": {
+                    "supersededBy": {
+                        "type": "null"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "technicalAccessibility": {
+                        "not": {
+                            "type": "null"
+                        }
+                    },
+                    "title": {
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "technicalAccessibility",
+                    "title"
+                ]
+            }
+        }
+    ],
     "closeMatch": [
         "http://www.w3.org/ns/dcat#DataService"
     ],
@@ -132,25 +193,33 @@
             "description": "A merged item which is the preferred duplicate, because it replaces, consolidates or otherwise makes the current merged item obsolete."
         },
         "technicalAccessibility": {
-            "$ref": "/mex/model/entities/concept#/identifier",
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/concept#/identifier",
+                    "examples": [
+                        "https://mex.rki.de/item/technical-accessibility-1"
+                    ],
+                    "useScheme": "https://mex.rki.de/item/technical-accessibility"
+                },
+                {
+                    "type": "null"
+                }
+            ],
             "closeMatch": [
                 "http://purl.org/dc/terms/type"
             ],
-            "description": "Indicates if the platform can be accessed only within RKI network (internally) or if the platform is accessible publicly (externally).",
-            "examples": [
-                "https://mex.rki.de/item/technical-accessibility-1"
-            ],
-            "useScheme": "https://mex.rki.de/item/technical-accessibility"
+            "default": null,
+            "description": "Indicates if the platform can be accessed only within RKI network (internally) or if the platform is accessible publicly (externally)."
         },
         "title": {
             "closeMatch": [
                 "http://purl.org/dc/terms/title"
             ],
+            "default": [],
             "description": "The name of the access platform.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "minItems": 1,
             "type": "array"
         },
         "unitInCharge": {
@@ -166,9 +235,7 @@
         }
     },
     "required": [
-        "identifier",
-        "technicalAccessibility",
-        "title"
+        "identifier"
     ],
     "title": "Merged Access Platform",
     "type": "object"

@@ -3,6 +3,52 @@
     "$id": "https://mex.rki.de/mex/model/entities/merged-organizational-unit",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "allOf": [
+        {
+            "else": {
+                "properties": {
+                    "alternativeName": {
+                        "maxItems": 0
+                    },
+                    "email": {
+                        "maxItems": 0
+                    },
+                    "name": {
+                        "maxItems": 0
+                    },
+                    "parentUnit": {
+                        "type": "null"
+                    },
+                    "shortName": {
+                        "maxItems": 0
+                    },
+                    "unitOf": {
+                        "maxItems": 0
+                    },
+                    "website": {
+                        "maxItems": 0
+                    }
+                }
+            },
+            "if": {
+                "properties": {
+                    "supersededBy": {
+                        "type": "null"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "name": {
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            }
+        }
+    ],
     "closeMatch": [
         "http://www.w3.org/ns/org#OrganizationalUnit",
         "http://www.w3.org/2006/vcard/ns#Group",
@@ -50,11 +96,11 @@
             "closeMatch": [
                 "http://xmlns.com/foaf/0.1/name"
             ],
+            "default": [],
             "description": "The official name of the organizational unit.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "minItems": 1,
             "type": "array"
         },
         "parentUnit": {
@@ -118,8 +164,7 @@
         }
     },
     "required": [
-        "identifier",
-        "name"
+        "identifier"
     ],
     "title": "Merged Organizational Unit",
     "type": "object"

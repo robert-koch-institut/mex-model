@@ -3,6 +3,40 @@
     "$id": "https://mex.rki.de/mex/model/entities/merged-location",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "allOf": [
+        {
+            "else": {
+                "properties": {
+                    "geoNamesId": {
+                        "maxItems": 0
+                    },
+                    "name": {
+                        "maxItems": 0
+                    },
+                    "wikidataId": {
+                        "maxItems": 0
+                    }
+                }
+            },
+            "if": {
+                "properties": {
+                    "supersededBy": {
+                        "type": "null"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "name": {
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            }
+        }
+    ],
     "description": "A spatial region or named place.",
     "properties": {
         "geoNamesId": {
@@ -30,11 +64,11 @@
             "closeMatch": [
                 "https://schema.org/name"
             ],
+            "default": [],
             "description": "Name of the location.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "minItems": 1,
             "type": "array"
         },
         "supersededBy": {
@@ -66,8 +100,7 @@
         }
     },
     "required": [
-        "identifier",
-        "name"
+        "identifier"
     ],
     "title": "Merged Location",
     "type": "object"
