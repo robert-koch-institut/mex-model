@@ -132,7 +132,9 @@
             "type": "array"
         },
         "funderOrCommissioner": {
-            "closeMatch": "http://www.wikidata.org/entity/P8324",
+            "closeMatch": [
+                "http://www.wikidata.org/entity/P8324"
+            ],
             "default": [],
             "description": "An agent that has either funded or commissioned the activity.",
             "items": {
@@ -232,7 +234,9 @@
             "type": "array"
         },
         "responsibleUnit": {
-            "closeMatch": "http://dcat-ap.de/def/dcatde/maintainer",
+            "closeMatch": [
+                "http://dcat-ap.de/def/dcatde/maintainer"
+            ],
             "description": "A unit that is responsible for the activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"

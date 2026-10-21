@@ -3,6 +3,58 @@
     "$id": "https://mex.rki.de/mex/model/entities/merged-primary-source",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "allOf": [
+        {
+            "else": {
+                "properties": {
+                    "alternativeTitle": {
+                        "maxItems": 0
+                    },
+                    "contact": {
+                        "maxItems": 0
+                    },
+                    "contributor": {
+                        "maxItems": 0
+                    },
+                    "description": {
+                        "maxItems": 0
+                    },
+                    "documentation": {
+                        "maxItems": 0
+                    },
+                    "locatedAt": {
+                        "maxItems": 0
+                    },
+                    "title": {
+                        "maxItems": 0
+                    },
+                    "unitInCharge": {
+                        "maxItems": 0
+                    },
+                    "version": {
+                        "type": "null"
+                    }
+                }
+            },
+            "if": {
+                "properties": {
+                    "supersededBy": {
+                        "type": "null"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "title": {
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "title"
+                ]
+            }
+        }
+    ],
     "closeMatch": [
         "http://www.w3.org/ns/prov#PrimarySource"
     ],
@@ -102,11 +154,11 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/title"
             ],
+            "default": [],
             "description": "The name of the primary source.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "minItems": 1,
             "type": "array"
         },
         "unitInCharge": {
@@ -140,8 +192,7 @@
         }
     },
     "required": [
-        "identifier",
-        "title"
+        "identifier"
     ],
     "title": "Merged Primary Source",
     "type": "object"

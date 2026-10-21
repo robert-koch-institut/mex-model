@@ -3,6 +3,102 @@
     "$id": "https://mex.rki.de/mex/model/entities/merged-activity",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "allOf": [
+        {
+            "else": {
+                "properties": {
+                    "abstract": {
+                        "maxItems": 0
+                    },
+                    "activityType": {
+                        "maxItems": 0
+                    },
+                    "alternativeTitle": {
+                        "maxItems": 0
+                    },
+                    "contact": {
+                        "maxItems": 0
+                    },
+                    "documentation": {
+                        "maxItems": 0
+                    },
+                    "end": {
+                        "maxItems": 0
+                    },
+                    "externalAssociate": {
+                        "maxItems": 0
+                    },
+                    "funderOrCommissioner": {
+                        "maxItems": 0
+                    },
+                    "fundingProgram": {
+                        "maxItems": 0
+                    },
+                    "involvedPerson": {
+                        "maxItems": 0
+                    },
+                    "involvedUnit": {
+                        "maxItems": 0
+                    },
+                    "isPartOfActivity": {
+                        "maxItems": 0
+                    },
+                    "publication": {
+                        "maxItems": 0
+                    },
+                    "relatedActivity": {
+                        "maxItems": 0
+                    },
+                    "responsibleUnit": {
+                        "maxItems": 0
+                    },
+                    "shortName": {
+                        "maxItems": 0
+                    },
+                    "start": {
+                        "maxItems": 0
+                    },
+                    "succeeds": {
+                        "maxItems": 0
+                    },
+                    "theme": {
+                        "maxItems": 0
+                    },
+                    "title": {
+                        "maxItems": 0
+                    },
+                    "website": {
+                        "maxItems": 0
+                    }
+                }
+            },
+            "if": {
+                "properties": {
+                    "supersededBy": {
+                        "type": "null"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "contact": {
+                        "minItems": 1
+                    },
+                    "responsibleUnit": {
+                        "minItems": 1
+                    },
+                    "title": {
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "contact",
+                    "responsibleUnit",
+                    "title"
+                ]
+            }
+        }
+    ],
     "closeMatch": [
         "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
         "http://purl.org/dc/terms/Activity",
@@ -51,6 +147,7 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#contactPoint"
             ],
+            "default": [],
             "description": "An agent serving as a contact for the activity.",
             "items": {
                 "anyOf": [
@@ -62,7 +159,6 @@
                     }
                 ]
             },
-            "minItems": 1,
             "type": "array"
         },
         "documentation": {
@@ -132,7 +228,9 @@
             "type": "array"
         },
         "funderOrCommissioner": {
-            "closeMatch": "http://www.wikidata.org/entity/P8324",
+            "closeMatch": [
+                "http://www.wikidata.org/entity/P8324"
+            ],
             "default": [],
             "description": "An agent that has either funded or commissioned the activity.",
             "items": {
@@ -213,12 +311,14 @@
             "type": "array"
         },
         "responsibleUnit": {
-            "closeMatch": "http://dcat-ap.de/def/dcatde/maintainer",
+            "closeMatch": [
+                "http://dcat-ap.de/def/dcatde/maintainer"
+            ],
+            "default": [],
             "description": "A unit that is responsible for the activity.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
             },
-            "minItems": 1,
             "type": "array"
         },
         "shortName": {
@@ -318,11 +418,11 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/title"
             ],
+            "default": [],
             "description": "The official title of the activity.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "minItems": 1,
             "type": "array"
         },
         "website": {
@@ -339,10 +439,7 @@
         }
     },
     "required": [
-        "contact",
-        "identifier",
-        "responsibleUnit",
-        "title"
+        "identifier"
     ],
     "title": "Merged Activity",
     "type": "object"

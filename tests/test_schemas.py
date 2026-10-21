@@ -2,7 +2,18 @@ import json
 from pathlib import Path
 from unittest.mock import MagicMock
 
-from schemas import MExSchemasDirective, Schema, load_schemas, setup
+import pytest
+from schemas import (
+    SUPERSEDED_GATE_IF,
+    SUPERSEDED_GATE_NOTE,
+    MExSchemasDirective,
+    Schema,
+    fold_superseded_gate,
+    load_schemas,
+    setup,
+)
+
+from mex.model import MERGED_MODEL_JSON_BY_NAME
 
 
 def test_schema_titles() -> None:
@@ -55,3 +66,63 @@ def test_setup() -> None:
     }
     app.setup_extension.assert_called_once_with("sphinx-jsonschema")
     app.add_directive.assert_called_once_with("mexschemas", MExSchemasDirective)
+
+
+def test_fold_superseded_gate() -> None:
+    other = {"required": ["baz"]}
+    gate = {
+        "if": SUPERSEDED_GATE_IF,
+        "then": {"properties": {"foo": {"minItems": 1}}, "required": ["foo"]},
+        "else": {"properties": {"foo": {"maxItems": 0}}},
+    }
+    schema = {
+        "allOf": [gate, other],
+        "description": "A dummy.",
+        "properties": {"foo": {"type": "array"}},
+        "required": ["identifier"],
+    }
+
+    assert fold_superseded_gate(schema) == {
+        "allOf": [other],
+        "description": f"A dummy.\n\n{SUPERSEDED_GATE_NOTE}",
+        "properties": {"foo": {"type": "array"}},
+        "required": ["foo", "identifier"],
+    }
+    # the original schema is left untouched
+    assert schema["allOf"] == [gate, other]
+    assert schema["required"] == ["identifier"]
+
+
+def test_fold_superseded_gate_without_other_combinators_or_description() -> None:
+    schema = {"allOf": [{"if": SUPERSEDED_GATE_IF, "then": {"required": ["foo"]}}]}
+
+    assert fold_superseded_gate(schema) == {
+        "description": SUPERSEDED_GATE_NOTE,
+        "required": ["foo"],
+    }
+
+
+@pytest.mark.parametrize(
+    "schema",
+    [
+        pytest.param(True, id="boolean-schema"),
+        pytest.param({"required": ["foo"]}, id="no-all-of"),
+        pytest.param({"allOf": [{"if": {"required": ["foo"]}}]}, id="other-if"),
+    ],
+)
+def test_fold_superseded_gate_ignores_schemas_without_gate(schema: object) -> None:
+    assert fold_superseded_gate(schema) is schema
+
+
+@pytest.mark.parametrize("entity_name", sorted(MERGED_MODEL_JSON_BY_NAME))
+def test_fold_superseded_gate_restores_required_fields_of_real_schemas(
+    entity_name: str,
+) -> None:
+    schema = MERGED_MODEL_JSON_BY_NAME[entity_name]
+    (gate,) = schema["allOf"]
+
+    folded = fold_superseded_gate(schema)
+
+    assert isinstance(folded, dict)
+    assert "allOf" not in folded
+    assert folded["required"] == sorted(["identifier", *gate["then"]["required"]])

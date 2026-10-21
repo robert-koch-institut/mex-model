@@ -1094,7 +1094,9 @@
                     "type": "null"
                 }
             ],
-            "closeMatch": "http://www.w3.org/ns/prov#wasGeneratedBy",
+            "closeMatch": [
+                "http://www.w3.org/ns/prov#wasGeneratedBy"
+            ],
             "default": null,
             "description": "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation."
         }

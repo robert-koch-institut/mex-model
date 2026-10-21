@@ -3,17 +3,52 @@
     "$id": "https://mex.rki.de/mex/model/entities/merged-variable-group",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "allOf": [
+        {
+            "else": {
+                "properties": {
+                    "containedBy": {
+                        "maxItems": 0
+                    },
+                    "label": {
+                        "maxItems": 0
+                    }
+                }
+            },
+            "if": {
+                "properties": {
+                    "supersededBy": {
+                        "type": "null"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "containedBy": {
+                        "minItems": 1
+                    },
+                    "label": {
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "containedBy",
+                    "label"
+                ]
+            }
+        }
+    ],
     "description": "The grouping of variables according to a certain aspect, e.g. how the information is modelled in the primary source.",
     "properties": {
         "containedBy": {
             "closeMatch": [
                 "http://purl.org/dc/terms/isPartOf"
             ],
+            "default": [],
             "description": "The resource that the variable group is contained by. Used to connect a variable group to its resource.",
             "items": {
                 "$ref": "/mex/model/entities/merged-resource#/identifier"
             },
-            "minItems": 1,
             "type": "array"
         },
         "identifier": {
@@ -28,11 +63,11 @@
             "closeMatch": [
                 "http://www.w3.org/2000/01/rdf-schema#label"
             ],
+            "default": [],
             "description": "The name of the variable group.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "minItems": 1,
             "type": "array"
         },
         "supersededBy": {
@@ -49,9 +84,7 @@
         }
     },
     "required": [
-        "containedBy",
-        "identifier",
-        "label"
+        "identifier"
     ],
     "title": "Merged Variable Group",
     "type": "object"

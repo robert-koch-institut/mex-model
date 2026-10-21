@@ -67,6 +67,8 @@ def _find_array_shape_violations(
     has_default = "default" in definition
     if has_min_items and name not in required:
         violations.append(f"{entity_name}.{name}: has minItems but is not in required")
+    if has_min_items and has_default:
+        violations.append(f"{entity_name}.{name}: has minItems but also has a default")
     if not has_min_items and name in required:
         violations.append(f"{entity_name}.{name}: is required but has no minItems")
     if not has_min_items and not has_default:
@@ -111,6 +113,57 @@ def find_field_validation_violations(
         elif name not in required:
             violations += _find_optional_scalar_violations(
                 entity_name, name, definition
+            )
+    return violations
+
+
+SUPERSEDED_GATE_IF = {"properties": {"supersededBy": {"type": "null"}}}
+SUPERSEDED_GATE_EXCLUDED_FIELDS = frozenset({"identifier", "supersededBy"})
+
+
+def find_superseded_gate_violations(
+    entity_name: str, schema: dict[str, Any]
+) -> list[str]:
+    """Check a merged schema's supersededBy if/then/else gate.
+
+    Active items (`supersededBy` is null) must populate the gated fields
+    listed in `then`, while superseded items must leave every field except
+    `identifier` and `supersededBy` at its default, as pinned in `else`.
+    """
+    properties = schema.get("properties", {})
+    if schema.get("required") != ["identifier"]:
+        return [f"{entity_name}: top-level required must only list identifier"]
+    gates = schema.get("allOf", [])
+    if len(gates) != 1 or gates[0].get("if") != SUPERSEDED_GATE_IF:
+        return [f"{entity_name}: missing supersededBy gate in allOf"]
+    then = gates[0].get("then", {})
+    then_properties = then.get("properties", {})
+    then_required = set(then.get("required", []))
+    else_properties = gates[0].get("else", {}).get("properties", {})
+    violations = []
+    if then_required != set(then_properties):
+        violations.append(
+            f"{entity_name}: gate then.required does not match then.properties"
+        )
+    gateable = set(properties) - SUPERSEDED_GATE_EXCLUDED_FIELDS
+    if not then_required <= gateable:
+        violations.append(f"{entity_name}: gate then.required lists unknown fields")
+    if set(else_properties) != gateable:
+        violations.append(
+            f"{entity_name}: gate else.properties must cover every field "
+            "except identifier and supersededBy"
+        )
+    for name in sorted(gateable):
+        is_array = properties[name].get("type") == "array"
+        expected_else = {"maxItems": 0} if is_array else {"type": "null"}
+        if name in else_properties and else_properties[name] != expected_else:
+            violations.append(
+                f"{entity_name}.{name}: gate else must be {expected_else}"
+            )
+        expected_then = {"minItems": 1} if is_array else {"not": {"type": "null"}}
+        if name in then_properties and then_properties[name] != expected_then:
+            violations.append(
+                f"{entity_name}.{name}: gate then must be {expected_then}"
             )
     return violations
 
@@ -162,11 +215,17 @@ def _normalize_field_definition(node: object) -> object:
         any_of = normalized.get("anyOf")
         if isinstance(any_of, list):
             # strip null type since it will differ between required and optional fields
-            normalized["anyOf"] = [
+            non_null_options = [
                 option
                 for option in any_of
                 if not (isinstance(option, dict) and option.get("type") == "null")
             ]
+            normalized["anyOf"] = non_null_options
+            # unwrap a lone remaining option, so an optional `anyOf: [X, null]`
+            # compares equal to the same field declared as a required bare `X`
+            if len(non_null_options) == 1 and isinstance(non_null_options[0], dict):
+                del normalized["anyOf"]
+                normalized.update(non_null_options[0])
         return normalized
     if isinstance(node, list):
         return [_normalize_field_definition(item) for item in node]
@@ -392,30 +451,55 @@ def find_orphaned_field_violations(
     ]
 
 
+def _find_uri_list_violations(location: str, value: object) -> list[str]:
+    """Check that an annotation is an array of well-formed, unique URIs.
+
+    `extension/definition.json` declares `closeMatch` and `exactMatch` as arrays,
+    so a bare string is flagged, but its URI is still checked for well-formedness.
+    """
+    violations = []
+    if isinstance(value, list):
+        uris = [str(uri) for uri in value]
+    else:
+        violations.append(f"{location}: {value!r} is not an array")
+        uris = [str(value)]
+    seen: set[str] = set()
+    for uri in uris:
+        parsed = urlparse(uri)
+        if not parsed.scheme or not (parsed.netloc or parsed.path):
+            violations.append(f"{location}: {uri!r} is not a well-formed URI")
+        if uri in seen:
+            violations.append(f"{location}: {uri!r} is duplicated")
+        seen.add(uri)
+    return violations
+
+
 def find_annotation_uri_violations(
     entity_name: str, schema: dict[str, Any]
 ) -> list[str]:
-    """Check that annotation URIs on each field are well-formed and unique."""
+    """Check that annotation URIs on each field are well-formed, unique arrays."""
     violations = []
     for field_name, definition in sorted(schema.get("properties", {}).items()):
         for key in ANNOTATION_URI_KEYS:
-            value = definition.get(key)
-            if value is None:
-                continue
-            uris = value if isinstance(value, list) else [value]
-            seen: set[str] = set()
-            for uri in uris:
-                parsed = urlparse(uri)
-                if not parsed.scheme or not (parsed.netloc or parsed.path):
-                    violations.append(
-                        f"{entity_name}.{field_name}.{key}: {uri!r} is not a "
-                        "well-formed URI"
+            if key in definition:
+                violations += _find_uri_list_violations(
+                    f"{entity_name}.{field_name}.{key}", definition[key]
+                )
+    return violations
+
+
+def find_concept_annotation_violations(
+    vocabularies_by_name: dict[str, list[dict[str, Any]]],
+) -> list[str]:
+    """Check that annotation URIs on each concept are well-formed, unique arrays."""
+    violations = []
+    for name, concepts in sorted(vocabularies_by_name.items()):
+        for concept in concepts:
+            for key in ANNOTATION_URI_KEYS:
+                if key in concept:
+                    violations += _find_uri_list_violations(
+                        f"{name}.{concept['identifier']}.{key}", concept[key]
                     )
-                if uri in seen:
-                    violations.append(
-                        f"{entity_name}.{field_name}.{key}: {uri!r} is duplicated"
-                    )
-                seen.add(uri)
     return violations
 
 
@@ -496,6 +580,8 @@ def _collect_violations() -> list[str]:
     for name, schema in sorted(all_entities.items()):
         violations += find_field_validation_violations(name, schema)
         violations += find_annotation_uri_violations(name, schema)
+    for name, schema in sorted(MERGED_MODEL_JSON_BY_NAME.items()):
+        violations += find_superseded_gate_violations(f"merged-{name}", schema)
     violations += find_extracted_merged_parity_violations(
         EXTRACTED_MODEL_JSON_BY_NAME, MERGED_MODEL_JSON_BY_NAME
     )
@@ -504,6 +590,7 @@ def _collect_violations() -> list[str]:
         VOCABULARY_JSON_BY_NAME, concept_scheme_identifiers
     )
     violations += find_duplicate_concept_id_violations(VOCABULARY_JSON_BY_NAME)
+    violations += find_concept_annotation_violations(VOCABULARY_JSON_BY_NAME)
     violations += find_unresolved_example_violations(
         all_entities, VOCABULARY_JSON_BY_NAME
     )

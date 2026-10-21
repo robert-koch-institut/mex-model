@@ -3,6 +3,74 @@
     "$id": "https://mex.rki.de/mex/model/entities/merged-resource-series",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "allOf": [
+        {
+            "else": {
+                "properties": {
+                    "accessPlatform": {
+                        "maxItems": 0
+                    },
+                    "accrualPeriodicity": {
+                        "type": "null"
+                    },
+                    "alternativeTitle": {
+                        "maxItems": 0
+                    },
+                    "contact": {
+                        "maxItems": 0
+                    },
+                    "description": {
+                        "maxItems": 0
+                    },
+                    "documentation": {
+                        "maxItems": 0
+                    },
+                    "end": {
+                        "maxItems": 0
+                    },
+                    "hasLegalBasis": {
+                        "maxItems": 0
+                    },
+                    "keyword": {
+                        "maxItems": 0
+                    },
+                    "publisher": {
+                        "maxItems": 0
+                    },
+                    "spatial": {
+                        "maxItems": 0
+                    },
+                    "start": {
+                        "maxItems": 0
+                    },
+                    "title": {
+                        "maxItems": 0
+                    }
+                }
+            },
+            "if": {
+                "properties": {
+                    "supersededBy": {
+                        "type": "null"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "description": {
+                        "minItems": 1
+                    },
+                    "title": {
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "description",
+                    "title"
+                ]
+            }
+        }
+    ],
     "closeMatch": [
         "http://healthdataportal.eu/ns/health#DatasetSeries"
     ],
@@ -71,11 +139,11 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/description"
             ],
+            "default": [],
             "description": "A text describing the nature of the resource series.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "minItems": 1,
             "type": "array"
         },
         "documentation": {
@@ -259,18 +327,16 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/title"
             ],
+            "default": [],
             "description": "The name of the resource series.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "minItems": 1,
             "type": "array"
         }
     },
     "required": [
-        "description",
-        "identifier",
-        "title"
+        "identifier"
     ],
     "title": "Merged Resource Series",
     "type": "object"

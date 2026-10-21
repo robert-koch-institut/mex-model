@@ -384,12 +384,16 @@
                     "type": "null"
                 }
             ],
-            "closeMatch": "http://datacite.org/schema/kernel-4/publicationYear",
+            "closeMatch": [
+                "http://datacite.org/schema/kernel-4/publicationYear"
+            ],
             "default": null,
             "description": "The year in which the publication was issued."
         },
         "publisher": {
-            "closeMatch": "http://purl.org/dc/terms/publisher",
+            "closeMatch": [
+                "http://purl.org/dc/terms/publisher"
+            ],
             "default": [],
             "description": "An entity responsible for making the publication available ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/)).",
             "items": {
