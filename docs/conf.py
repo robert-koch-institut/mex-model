@@ -1,66 +1,47 @@
-# sphinx configuration
+"""Sphinx configuration for MEx model specification."""
 
-import importlib
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent))
+# Make the _ext directory importable
+sys.path.insert(0, str(Path(__file__).parent / "_ext"))
 
-from navigation import build_nav_links
-from schemas import fold_superseded_gate
+# --- Extensions -----------------------------------------------------------
 
-extensions = ["sphinx-jsonschema", "schemas", "vocabularies"]
+extensions = [
+    "myst_parser",  # parse .md files
+    "jsonschema_patches",  # render JSON schemas as tables, adjusted for MEx
+    "vocabularies",  # directive: mexvocabularies
+    "mex_schema",  # directives: {mex-entity}, {mex-field}
+    "mex_example",  # directive: {mex-example}
+]
+
+# --- MyST-Parser settings -------------------------------------------------
+
+myst_enable_extensions = [
+    "colon_fence",  # ::: directive syntax
+    "fieldlist",  # field lists in MD
+    "deflist",  # definition lists in MD
+]
+
+# Generate slug anchors for h1-h3 so `[text](#heading-slug)` links resolve
+myst_heading_anchors = 3
+
+# All pages are written in markdown
+source_suffix = {".md": "markdown"}
+
+# --- Project metadata ------------------------------------------------------
+
+project = "mex-model"
+
+# --- HTML output settings --------------------------------------------------
+
 html_theme = "alabaster"
 html_theme_options = {
-    "extra_nav_links": build_nav_links(Path(__file__).parent / "index.rst"),
-    "page_width": "80%",
-    "body_max_width": "100%",
+    "page_width": "100%",
     "fixed_sidebar": "true",
     "sidebar_width": "300px",
 }
-project = "mex-model"
 templates_path = ["."]
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
-
-
-# Customizing json-schema conversion
-# see https://sphinx-jsonschema.readthedocs.io/en/latest/extensions.html
-
-
-def _patched_sphinx_jsonschema_simpletype(self, schema):  # noqa: ANN001, ANN202
-    """Render the `useScheme` schema properties for every vocabulary type."""
-    rows = _original_sphinx_jsonschema_simpletype(self, schema)
-    if "useScheme" in schema:
-        scheme = schema.pop("useScheme")
-        rows.append(
-            self._line(
-                self._cell("useScheme"),
-                self._cell(f":ref:`{scheme} <{scheme}>`"),
-            )
-        )
-    return rows
-
-
-def _patched_sphinx_jsonschema_kvpairs(self, schema, keys):  # noqa: ANN001, ANN202
-    """Render `default` and `pattern` schema properties as inline code-blocks."""
-    for k in keys:
-        if k in schema:
-            value = schema[k]
-            if k in ("default", "pattern"):
-                schema[k] = f"``{value}``"
-    return _original_sphinx_jsonschema_kvpairs(self, schema, keys)
-
-
-def _patched_sphinx_jsonschema_run(self, schema, pointer=""):  # noqa: ANN001, ANN202
-    """Render the supersededBy gate of merged schemas in a readable way."""
-    return _original_sphinx_jsonschema_run(self, fold_superseded_gate(schema), pointer)
-
-
-sjs_wide_format = importlib.import_module("sphinx-jsonschema.wide_format")
-_original_sphinx_jsonschema_simpletype = sjs_wide_format.WideFormat._simpletype
-sjs_wide_format.WideFormat._simpletype = _patched_sphinx_jsonschema_simpletype
-_original_sphinx_jsonschema_kvpairs = sjs_wide_format.WideFormat._kvpairs
-sjs_wide_format.WideFormat._kvpairs = _patched_sphinx_jsonschema_kvpairs
-_original_sphinx_jsonschema_run = sjs_wide_format.WideFormat.run
-sjs_wide_format.WideFormat.run = _patched_sphinx_jsonschema_run
