@@ -6,7 +6,8 @@
 introduction
 how-the-model-works
 entity-conventions
-mappings
+merging logic
 controlled-vocabularies
 common-usage-patterns
 validation-rules
+mappings

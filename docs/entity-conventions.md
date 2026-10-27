@@ -2,7 +2,9 @@
 
 ## Extracted and Merged Entities
 
-Both the `Extracted[EntityType]` and `Merged[EntityType]` variants share the same set of descriptive properties. The Extracted variant additionally carries the four mandatory provenance properties `hadPrimarySource`, `identifierInPrimarySource`, `identifier`, and `stableTargetId`. The Merged variant only carries `identifier` alongside the descriptive properties. The property `supersededBy` is unique to the Merged variant and is not applicable for Extracted entities.
+Both the `Extracted[EntityType]` and `Merged[EntityType]` variants share the same set of descriptive properties. The Extracted variant additionally carries the provenance properties `hadPrimarySource`, `identifierInPrimarySource` as well as the identification properties `identifier`, and `stableTargetId`. The provenance properties are used to trace the origin of the Extracted item. The identification property `identifier` is the identifier of the Extracted item and `stableTargetId` points to the related Merged item.
+
+The Merged variant does not carry any of the provenance properties, since it is the normalized version. For identification purposes, it carries only the `identifier` property, which holds the same identifier as the `stableTargetId` of the related Extracted item. The property `supersededBy` is unique to the Merged variant and is not applicable for Extracted entities.
 
 The Merged variant is the normalized, deduplicated record that consolidates descriptions from one or more primary sources. If a Merged item has been superseded by another, e.g. following deduplication, the `supersededBy` property will point to the preferred Merged item.
 
@@ -15,6 +17,55 @@ The Merged variant is the normalized, deduplicated record that consolidates desc
 The following sections lay out the entities without their Extracted or Merged variant, but their general characteristics, that are independent from the variants.
 
 All sample JSON instances show examples of the Merged variant, which is considered sufficient within the scope of this specification.
+
+### Conditional modelling of Merged Entities
+
+If a Merged item is superseded by another Merged item, it may lose values of its required fields. This would lead to broken items. See chapter on [merging logic](merging-logic.md) for additional information. To avoid that, we introduced a conditional modelling depending on the `supersededBy` property. If a Merged item has no value for the `supersededBy` property, then defined properties are required.
+
+Example:
+
+``` JSON
+"allOf": [
+        {
+            "else": {
+                "properties": {
+                    "alternativeTitle": {
+                        "maxItems": 0
+                    },
+                    "description": {
+                        "maxItems": 0
+                    },
+                    "title": {
+                        "maxItems": 0
+                    }
+                }
+            },
+            "if": {
+                "properties": {
+                    "supersededBy": {
+                        "type": "null"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "description": {
+                        "minItems": 1
+                    },
+                    "title": {
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "description",
+                    "title"
+                ]
+            }
+        }
+    ],
+```
+
+
 
 ## AccessPlatform
 
