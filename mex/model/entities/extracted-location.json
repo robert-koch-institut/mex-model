@@ -13,7 +13,7 @@
             ],
             "items": {
                 "format": "uri",
-                "pattern": "^http://www\\.geonames\\.org/[0-9]{7}$",
+                "pattern": "^https://www\\.geonames\\.org/[0-9]+$",
                 "type": "string"
             },
             "type": "array"
