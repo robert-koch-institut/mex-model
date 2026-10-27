@@ -11,21 +11,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- BREAKING: required fields (except `identifier`) on all `merged-*.json` schemas are now
-  only enforced when `supersededBy` is unset
-- BREAKING: superseded merged items (`supersededBy` is set) must leave every field at
-  the default, except `identifier` and `supersededBy`
-- add python 3.15 support
-
 ### Deprecated
 
 ### Removed
 
 ### Fixed
 
-- fix pattern of geoNamesId in extracted- and merged-location.json
-
 ### Security
+
+## [5.2.2] - 2026-10-27
+
+### Changes
+
+- BREAKING: required fields (except `identifier`) on all `merged-*.json` schemas are now
+  only enforced when `supersededBy` is unset
+- BREAKING: superseded merged items (`supersededBy` is set) must leave every field at
+  the default, except `identifier` and `supersededBy`
+- add python 3.15 support
+
+### Fixed
+
+- fix pattern of geoNamesId in extracted- and merged-location.json
 
 ## [5.2.1] - 2026-10-16
 
