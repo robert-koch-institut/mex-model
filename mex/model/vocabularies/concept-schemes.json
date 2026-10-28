@@ -1,21 +1,41 @@
 [
     {
+        "description": {
+            "de": "Dieses Vokabular definiert die Zugriffsbeschränkungen auf das beschriebene Objekt.",
+            "en": "This vocabulary defines the access restrictions for the described item."
+        },
         "identifier": "https://mex.rki.de/item/access-restriction",
         "label": "Access restriction vocabulary"
     },
     {
+        "description": {
+            "de": "Dieses Vokabular definiert die Arten von Finanzierung, die RKI-Aktivitäten betreffen.",
+            "en": "This vocabulary defines the types of funding that affect RKI activities."
+        },
         "identifier": "https://mex.rki.de/item/activity-type",
         "label": "Activity type vocabulary"
     },
     {
+        "description": {
+            "de": "Dieses Vokabular definiert die Arten von Anonymisierung und Pseudonymisierung, die auf die beschriebenen Daten angewendet werden.",
+            "en": "This vocabulary defines the types of anonymization and pseudonymization applied to the described data."
+        },
         "identifier": "https://mex.rki.de/item/anonymization-pseudonymization",
         "label": "Anonymization and pseudonymization vocabulary"
     },
     {
+        "description": {
+            "de": "Dieses Vokabular definiert die Arten von APIs.",
+            "en": "This vocabulary defines the types of APIs available."
+        },
         "identifier": "https://mex.rki.de/item/api-type",
         "label": "Endpoint vocabulary"
     },
     {
+        "description": {
+            "de": "Dieses Vokabular definiert die Arten von Publikationen (z.B. Artikel, Bücher).",
+            "en": "This vocabulary defines publication types like articles and books."
+        },
         "identifier": "https://mex.rki.de/item/bibliographic-resource-type",
         "label": "Bibliographic resource type vocabulary"
     },
@@ -52,6 +72,10 @@
         "label": "Consent type vocabulary"
     },
     {
+        "description": {
+            "de": "Dieses Vokabular definiert die Arten von Datenverarbeitungszuständen.",
+            "en": "This vocabulary defines the types of data processing states."
+        },
         "identifier": "https://mex.rki.de/item/data-processing-state",
         "label": "Data processing state vocabulary"
     },
@@ -85,13 +109,17 @@
         "label": "Health category vocabulary"
     },
     {
+        "description": {
+            "de": "Dieses Vokabular definiert Sprachen und ist mit dem EU-Vokabular http://publications.europa.eu/resource/authority/language abgeglichen.",
+            "en": "This vocabulary defines languages and is aligned with the EU vocabulary http://publications.europa.eu/resource/authority/language."
+        },
         "identifier": "https://mex.rki.de/item/language",
         "label": "Language vocabulary"
     },
     {
         "description": {
-            "de": "Dieses Vokabular enthält gängige Lizenzen.",
-            "en": "This vocabulary contains established licenses."
+            "de": "Dieses Vokabular enthält gängige Lizenzen basierend auf SPDX https://spdx.org/licenses.",
+            "en": "This vocabulary contains established licenses based on SPDX https://spdx.org/licenses."
         },
         "identifier": "https://mex.rki.de/item/license",
         "label": "License vocabulary"
@@ -105,6 +133,10 @@
         "label": "MIME type vocabulary based on IANA media types"
     },
     {
+        "description": {
+            "de": "Dieses Vokabular definiert die Arten von personenbezogenen Daten,.",
+            "en": "This vocabulary defines the types of personal data."
+        },
         "identifier": "https://mex.rki.de/item/personal-data",
         "label": "Personal Data"
     },
@@ -117,10 +149,18 @@
         "label": "Purpose vocabulary"
     },
     {
+        "description": {
+            "de": "Dieses Vokabular definiert die Arten von Methoden der Datengenerierung, z.B. Surveys, Register oder Labor. Es ist mit dem EU-Vokabular Health Activities https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity abgeglichen.",
+            "en": "This vocabulary defines the types of methods for data generation, e.g., surveys, registers, or labs. It is aligned with the EU vocabulary https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity."
+        },
         "identifier": "https://mex.rki.de/item/resource-creation-method",
         "label": "Resource creation method vocabulary"
     },
     {
+        "description": {
+            "de": "Dieses Vokabular beschreibt allgemeine Typen von Ressourcen.",
+            "en": "This vocabulary describes general types of resources."
+        },
         "identifier": "https://mex.rki.de/item/resource-type-general",
         "label": "General resource type vocabulary"
     },
@@ -141,6 +181,10 @@
         "label": "Health standards controlled vocabulary"
     },
     {
+        "description": {
+            "de": "Dieses Vokabular definiert Formen des technischen Zugriffs auf Objekte.",
+            "en": "This vocabulary defines types of technical access to items."
+        },
         "identifier": "https://mex.rki.de/item/technical-accessibility",
         "label": "Technical accessibility vocabulary"
     },
