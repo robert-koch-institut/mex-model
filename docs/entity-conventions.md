@@ -8,16 +8,6 @@ The Merged variant does not carry any of the provenance properties, since it is 
 
 The Merged variant is the normalized, deduplicated record that consolidates descriptions from one or more primary sources. If a Merged item has been superseded by another, e.g. following deduplication, the `supersededBy` property will point to the preferred Merged item.
 
-### When to use
-
-`Extracted[EntityType]` is used when an item is extracted from a primary source system via an ETL pipeline. Each extracted record represents the item as described by that specific source, carrying the provenance properties that trace it back to its origin.
-
-`Merged[EntityType]` is used referencing an item from another entity, or when consuming metadata in the catalogue or downstream systems. All properties that are relations to other entities use the identifier of a Merged entity in their `$ref` attribute, i.e. `ExtractedResource.contributor` referencing a `MergedPerson` using `"$ref": "/mex/model/entities/merged-person#/identifier"`.
-
-The following sections lay out the entities without their Extracted or Merged variant, but their general characteristics, that are independent from the variants.
-
-All sample JSON instances show examples of the Merged variant, which is considered sufficient within the scope of this specification.
-
 ### Conditional modelling of Merged Entities
 
 If a Merged item is superseded by another Merged item, it may lose values of its required fields. This would lead to broken items. See chapter on [Deduplication mechanism](deduplication-mechanism.md) for additional information. To avoid that, we introduced a conditional modelling depending on the `supersededBy` property. If a Merged item has no value for the `supersededBy` property, then the defined properties are required.
@@ -64,6 +54,15 @@ Example:
         }
     ],
 ```
+### When to use
+
+`Extracted[EntityType]` is used when an item is extracted from a primary source system via an ETL pipeline. Each extracted record represents the item as described by that specific source, carrying the provenance properties that trace it back to its origin.
+
+`Merged[EntityType]` is used referencing an item from another entity, or when consuming metadata in the catalogue or downstream systems. All properties that are relations to other entities use the identifier of a Merged entity in their `$ref` attribute, i.e. `ExtractedResource.contributor` referencing a `MergedPerson` using `"$ref": "/mex/model/entities/merged-person#/identifier"`.
+
+The following sections lay out the entities without their Extracted or Merged variant, but their general characteristics, that are independent from the variants.
+
+All sample JSON instances show examples of the Merged variant, which is considered sufficient within the scope of this specification.
 
 ## AccessPlatform
 
