@@ -1,6 +1,6 @@
 # Controlled Vocabularies
 
-As described in the How the model works section, properties that draw from a fixed set of permissible values reference a controlled vocabulary via the useScheme keyword in the JSON Schema. The property value is always a Concept URI from that vocabulary. This section lists all vocabularies currently defined in the model, describes their alignment with EU-maintained code lists, and outlines how vocabularies are governed.
+As described in the chapter [How the model works](how-the-model-works.md), properties that draw from a fixed set of permissible values reference a controlled vocabulary via the `useScheme` property in the JSON Schema. The value is always a Concept URI from that vocabulary. This section lists all vocabularies defined in the model, describes their alignment with EU-maintained code lists, and outlines how vocabularies are governed.
 
 ## Vocabulary list
 
@@ -27,30 +27,31 @@ The following vocabularies are defined as JSON files in `mex/model/vocabularies/
 | Technical Accessibility | technical-accessibility.json | AccessPlatform | Network reachability (internal, external, both) |
 | Theme | theme.json | Resource, Activity | Topic classification of datasets and activities (scheduled for removal, RKIMEX-130) |
 
-Additionally, `concept-scheme.json` serves as a registry of all vocabulary URIs (the `ConceptScheme` instances).
+The file `concept-schemes.json` serves as a registry of all vocabulary URIs (the `ConceptScheme` instances).
 
-## EU alignment
+## Alignment with EU vocabularies and other standards
 
-Several MEx vocabularies correspond to code lists maintained by the EU Publications Office or by other standards bodies. Where a correspondence exists, MEx values should be mappable to the EU equivalent, though MEx may carry additional RKI-specific values that have no EU counterpart.
+Several MEx vocabularies correspond to vocabularies and lists maintained by the EU Publications Office or by other standard bodies. Where a correspondence exists, MEx terms should be mappable to the standard equivalent, though MEx may carry additional RKI-specific values that have no counterpart in a standard.
 
-| MEx Vocabulary | EU/External Equivalent | Alignment Status |
+| MEx Vocabulary | External Source | Alignment Status |
 | --- | --- | --- |
-| Access Restriction | [EU Access Right](https://op.europa.eu/s/y9RF) | Partial — MEx uses finer-grained internal access levels; mapping flattens these |
-| Frequency | [EU Frequency](https://op.europa.eu/s/y9RG) | Under review — MEx code list to be aligned (RKIMEX-43) |
-| Language | [EU Languages](https://op.europa.eu/s/y9RH) | Aligned — vocabulary updated to match the EU authority table |
-| License | [DCAT-AP.de Licenses](https://www.dcat-ap.de/def/licenses/) | under review |
-| MIME Type | [IANA Media Types](https://www.iana.org/assignments/media-types/) | Aligned — values drawn from IANA registry |
-| Resource Type General | [EU Dataset Type](https://op.europa.eu/s/y9RI) | Partial — MEx carries additional values |
-| Consent Status | [DPV Consent Status](https://w3id.org/dpv#ConsentStatus) | Aligned — values modelled after the W3C Data Privacy Vocabulary |
-| Health Category | HealthDCAT-AP Health Category | Added for HealthDCAT-AP alignment |
-| Resource Creation Method | HealthDCAT-AP wasGeneratedBy | Aligned — vocabulary aligned to HealthDCAT-AP controlled vocabulary "Health Activities" |
-| Personal Data | HealthDCAT-AP Personal Data | Partial — RKI-specific adaptations; vocabulary scheduled for removal from the model (will be mapped at export) |
+| Access Restriction | [EU Access Right](https://publications.europa.eu/resource/authority/access-right) | Terms are matched with external source. MEx only uses terms that are relevant in the scope of RKI.  |
+| Bibliographic Resource Type | [Bibliographic Ontology](http://purl.org/ontology/bibo/) and [Wikidata](http://www.wikidata.org) | All terms are matched with Bibo and/or Wikidata. MEx only uses types that are in the scope of RKI. |
+| Coding System | [HealthDCAT-AP Coding Systems](https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system) and [Wikidata](http://www.wikidata.org) | All terms are derived and matched with the HealthDCAT-AP vocabulary and are additionally matched with Wikidata. |
+| Consent Status | [DPV Consent Status](https://w3id.org/dpv#ConsentStatus) | All terms are derived and matched with external source. MEx only uses terms that are relevant in the scope of RKI. |
+| Consent Type | [DPV Consent Type](https://w3id.org/dpv) | All terms derived are matched with external source. MEx only uses terms that are relevant in the scope of RKI. |
+| Frequency | [EU Frequency](http://publications.europa.eu/resource/authority/frequency/) and [Dublin Core Collection Description Frequency Vocabulary](http://purl.org/cld/freq) | All terms are derived and matched with both external sources. MEx only includes terms which are relevant in the scope of RKI. |
+| Geopolitical Resolution | [GND of German National Library](https://d-nb.info/gnd/) | Terms are matched with external source. |
+| Health Category | [HealthDCAT-AP Health Category](https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories) | All terms are derived and matched with the external source. MEx only uses terms that are relevant in the scope of RKI. |
+| Health Standard | [HealthDCAT-AP Standard](https://hdeu-dcat.data.health.europa.eu/resource/authority/standard) | All terms are derived and matched with external source. |
+| Language | [EU Languages](http://publications.europa.eu/resource/authority/language) | All terms are derived and matched with external source. MEx only uses terms that are relevant in the scope of RKI. |
+| License | [SPDX Licenses](https://spdx.org/licenses) | All terms are derived and matched with the external source. |
+| MIME Type | [IANA Media Types](https://www.iana.org/assignments/media-types/) | Most terms are matched with external source. MEx only uses terms that are relevant in the scope of RKI.|
+| Resource Creation Method | [HealthDCAT-AP Health Actvity](https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity) | Where applicable, terms are matched with the HealthDCAT-AP vocabulary. |
 
-Vocabularies not listed above (Activity Type, API Type, Anonymization/Pseudonymization, Bibliographic Resource Type, Consent Type, Data Processing State, Technical Accessibility) are MEx-specific with no EU equivalent.
+Vocabularies not listed above are MEx-specific with no alignment to external sources.
 
 ## Governance
-
-### Who can propose changes?
 
 Changes can result from:
 
@@ -66,29 +67,6 @@ Changes can result from:
 * When concepts are deleted, the identifier is not reassigned
 * However, existing concepts can be assigned new pref- and altLabel values; the identifier remains the same
 * Since MEx is not a reference vocabulary, there is no complex maintenance, and changes are tracked only via Git
-
-### What is the relationship between vocabulary changes and schema versioning?
-
-* A new vocabulary also requires a new property
-* A new mandatory property requires a major version change
-* A new optional property requires a minor version change
-* A new vocabulary without a new property would also require a minor version change
-* A change in an existing vocabulary would require a patch version
-* A corrective adjustment (e.g. typos) would require a patch version
-
-## Concept and ConceptScheme
-
-:::{note}
-TBD: this section is still to be written.
-:::
-
-### Schema Detail
-
-```{mex-entity} Concept
-```
-
-```{mex-entity} ConceptScheme
-```
 
 ## Vocabulary Detail
 
