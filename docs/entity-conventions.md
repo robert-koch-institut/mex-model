@@ -20,7 +20,7 @@ All sample JSON instances show examples of the Merged variant, which is consider
 
 ### Conditional modelling of Merged Entities
 
-If a Merged item is superseded by another Merged item, it may lose values of its required fields. This would lead to broken items. See chapter on [merging logic](merging-logic.md) for additional information. To avoid that, we introduced a conditional modelling depending on the `supersededBy` property. If a Merged item has no value for the `supersededBy` property, then defined properties are required.
+If a Merged item is superseded by another Merged item, it may lose values of its required fields. This would lead to broken items. See chapter on [Deduplication mechanism](deduplication-mechanism.md) for additional information. To avoid that, we introduced a conditional modelling depending on the `supersededBy` property. If a Merged item has no value for the `supersededBy` property, then the defined properties are required.
 
 Example:
 
@@ -64,8 +64,6 @@ Example:
         }
     ],
 ```
-
-
 
 ## AccessPlatform
 

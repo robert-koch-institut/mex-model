@@ -6,7 +6,7 @@
 introduction
 how-the-model-works
 entity-conventions
-merging logic
+deduplication-mechanism
 controlled-vocabularies
 common-usage-patterns
 validation-rules

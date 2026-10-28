@@ -219,7 +219,7 @@ Metadata can also be edited and changed by using MEx Admin. MEx Admin introduces
 
 ### Merging rules and conflict resolution
 
-When the merging service processes Extracted items that share a `stableTargetId`, it combines them into a single Merged item. Merging items is a manual process. When there are conflicting values for a metadata field, a metadata manager decides, which values takes preference in the Merged item.
+When the merging service processes Extracted items that share a `stableTargetId`, it combines them into a single Merged item. Merging items is a manual process. When there are conflicting values for a metadata field, a metadata manager decides, which values takes preference in the Merged item. See chapter [Deduplication mechanism](deduplication-mechanism.md) for detailed information.
 
 ## Identifier system
 
