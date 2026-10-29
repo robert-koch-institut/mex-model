@@ -5,7 +5,7 @@ The MEx model improves the **F**indability, **A**ccessibility, **I**nteroperabil
 ## Purpose of the specification
 
 The purpose of this document is threefold:
-New team members (i.e. data stewards, developers, metadata specialists) need a single place to understand what the MEx model looks like, why it is structured the way it is, and how to produce valid metadata records. The [How the Model Works](how-the-model-works.md) and [Common Usage Patterns](common-usage-patterns.md) sections are the recommended starting points.
+New team members (i.e. developer, metadata specialists, project manager) need a single place to understand what the MEx model looks like, why it is structured the way it is, and how to produce valid metadata records. The [How the Model Works](how-the-model-works.md) and [Common Usage Patterns](common-usage-patterns.md) sections are the recommended starting points.
 
 Experienced users need quick access to entity definitions, mandatory fields, vocabulary values, and mapping tables without reading prose. The sections [Entity Conventions](entity-conventions.md), [Controlled Vocabularies](controlled-vocabularies.md), and [Validation Rules](validation-rules.md) are designed for lookup rather than sequential reading.
 
@@ -13,17 +13,16 @@ The model exists within a broader landscape of standards such as DCAT, PROV-O, a
 
 ## Structure of the specification
 
-The specification is organised into the following sections:
+The specification is organized into the following chapters:
 
 | Section | What it covers | Audience |
 | --- | --- | --- |
-| [How the Model Works](how-the-model-works.md) | The Extracted/Merged entity pattern, the concept model, JSON Schema conventions, and the custom extension keywords (useScheme, sameAs, subPropertyOf). | Everyone. **Read this first!** |
-| [Entity Conventions](entity-conventions.md) | Per-entity guidance: when to use each entity type, mandatory fields, common pitfalls, and example JSON instances. | Developers, Data stewards, Metadata specialists |
-| [Mappings](mappings.md) — DCAT Property Mapping | The relationship between MEx and DCAT 2.0 / PROV-O: interoperability levels (A/E/P), renamed properties, omitted DCAT properties, and MEx-specific extensions. | Developers, Standards specialists |
-| [Mappings](mappings.md) — HealthDCAT-AP | Background on HealthDCAT-AP and EHDS compliance, the current mapping table, gap analysis, and interim workarounds. | Developers, Standards specialists, Project leads |
-| [Controlled Vocabularies](controlled-vocabularies.md) | Complete list of vocabularies, EU alignment status, and governance. | Developers, Data stewards |
-| [Validation Rules](validation-rules.md) | Schema validation, vocabulary validation, cardinality rules, cross-entity validation, and obligation levels (MUST / SHOULD / MAY). | Developers, Quality assurance |
-| [Common Usage Patterns](common-usage-patterns.md) | Practical guidance: describing a dataset, linking entities, modelling organisational hierarchy, handling distributions, multilingual text, and change requests. | Developers, Data stewards |
-| Normative Status & Changelog | Version history and change log. | Everyone |
+| [How the Model Works](how-the-model-works.md) | The concept model, JSON Schema conventions, the layout of the repository. | Everyone. **Read this first!** |
+| [Entity Conventions](entity-conventions.md) | Difference between Extracted/Merged entity variants, per-entity guidance: when to use each entity type, mandatory fields, common pitfalls, and example JSON instances. | Developers, Metadata specialists |
+| [Deduplication Mechanism](deduplication-mechanism.md) | Description of the mechanism used to deduplicate items deriving from different source systems. | Developers, Metadata specialists, Project managers |
+| [Controlled Vocabularies](controlled-vocabularies.md) | Complete list of vocabularies, EU alignment status, and governance. | Metadata specialists, Project leads |
+| [Validation Rules](validation-rules.md) | Schema validation, vocabulary validation, cardinality rules, cross-entity validation, and obligation levels (MUST / MAY). | Metadata specialists, Developers, Quality assurance |
+| [Mappings](mappings.md) | How standardization and alignments to external standards and sources is represented in MEx model,  interoperability levels (A/E/P) and usage of annotation properties, relationship between MEx and DCAT, Mapping to HealthDCAT-AP incl. background and EHDS compliance | Standards and Metadata specialists, Project leads |
+| Maintaining the Specification | How the specification is maintained. | Metadata specialists |
 
-Sections are designed to be read independently. Cross-references point to related material where context would help, but no section assumes you have read the others. [How the Model Works](how-the-model-works.md) is the exception. This section introduces concepts used throughout the model.
+Chapters are designed to be read independently. Cross-references point to related material where context would help, but no chapter assumes you have read the others. [How the Model Works](how-the-model-works.md) is the exception. This section introduces concepts used throughout the model and should therefore be read first.
