@@ -8,6 +8,5 @@ how-the-model-works
 entity-conventions
 deduplication-mechanism
 controlled-vocabularies
-common-usage-patterns
 validation-rules
 mappings
