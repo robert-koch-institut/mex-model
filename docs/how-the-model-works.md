@@ -117,7 +117,7 @@ The directory contains PO files that map property names to human-readable labels
 
 ### `mex/model/vocabularies`
 
-The directory contains the controlled value lists used by classification properties across entity types. Each vocabulary is a JSON file defining a named set of concepts, where every concept is identified by a URI of the form `https//mex.rki.de/item/...`
+The directory contains the controlled value lists used by classification properties across entity types. Each vocabulary is a JSON file defining a named set of concepts, where every concept is identified by a URI of the form `https://mex.rki.de/item/...`
 An entity property references a vocabulary through the custom `useScheme` keyword:
 
 ```json
