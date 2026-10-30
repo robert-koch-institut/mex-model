@@ -23,6 +23,6 @@ The specification is organized into the following chapters:
 | [Controlled Vocabularies](controlled-vocabularies.md) | Complete list of vocabularies, alignment status with standards, and governance. | Metadata specialists, Project leads |
 | [Validation Rules](validation-rules.md) | Schema validation, vocabulary validation, cardinality rules, cross-entity validation, and obligation levels (MUST / MAY). | Developers, Metadata specialists |
 | [Mappings](mappings.md) | How standardization and alignments to external standards and sources is represented in MEx model, interoperability levels (A/E/P) and usage of annotation properties, relationship between MEx and DCAT, Mapping to HealthDCAT-AP incl. background and EHDS compliance | Standards and Metadata specialists, Project leads |
-| Maintaining the Specification | How the specification is maintained. | Metadata specialists |
+| [Maintaining the Specification](maintaining-the-specification.md) | How the specification is maintained. | Metadata specialists, Developers |
 
 Chapters are designed to be read independently. Cross-references point to related material where context would help, but no chapter assumes you have read the others. [How the Model Works](how-the-model-works.md) is the exception. This section introduces concepts used throughout the model and should therefore be read first.
