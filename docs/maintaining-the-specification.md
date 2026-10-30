@@ -208,7 +208,7 @@ After a model release, check that the examples in the published specification ma
 
 ## Synchronising local vocabulary copies
 
-MEx keeps local copies of external vocabularies (see [How vocabularies are used](how-the-model-works.md)). Their synchronisation with the upstream source is a manual task. The following procedure is recommended:
+MEx keeps local copies of external vocabularies (see [How external sources are managed](controlled-vocabularies.md)). Their synchronisation with the upstream source is a manual task. The following procedure is recommended:
 
 1. Record for every derived vocabulary the upstream source and the version or date it was last compared with. The table "Alignment with EU vocabularies and other standards" in [Controlled vocabularies](controlled-vocabularies.md) is the place to document the source.
 2. Check the upstream sources regularly and in any case before a major release of the model and after a new release of HealthDCAT-AP.
