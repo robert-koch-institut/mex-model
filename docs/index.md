@@ -10,3 +10,4 @@ deduplication-mechanism
 controlled-vocabularies
 validation-rules
 mappings
+maintaining-the-specification
