@@ -54,6 +54,7 @@ Example:
         }
     ],
 ```
+
 ### When to use
 
 `Extracted[EntityType]` is used when an item is extracted from a primary source system via an ETL pipeline. Each extracted record represents the item as described by that specific source, carrying the provenance properties that trace it back to its origin.

@@ -5,10 +5,9 @@
 The MEx metadata model is not confined to a single application, but constitutes the backbone of multiple interconnected workflows across the MEx metadata management system. All components of the system that produce, process, or consume metadata might either be directly governed by the model or interfaces with a component that is. More precisely, the model is used in the following contexts:
 
 * [mex-common](https://github.com/robert-koch-institut/mex-common): pydantic models: MEx is implemented as Python type definitions used by MEx components for validation and serialisation
-* mex-assets (RKI internal access only) & [mex-extractors](https://github.com/robert-koch-institut/mex-extractors): primary source mappings: ETL pipelines map source-system data to MEx entities when extracting metadata from primary systems
+* mex-assets (RKI internal access only) for primary source mappings & [mex-extractors](https://github.com/robert-koch-institut/mex-extractors) for ETL pipelines. The primary source mappings define the rules and the ETL pipelines transform metadata to MEx entities when extracting metadata from primary systems
 * [mex-admin](https://github.com/robert-koch-institut/mex-editor) & [mex-editor](https://github.com/robert-koch-institut/mex-editor-ng): the model defines available, required or optional fields for metadata editing
-* [mex-invenio](https://github.com/robert-koch-institut/mex-invenio): the catalogue renders and exposes metadata records in conformance to the MEx model
-* repositories: usage in data repositories for structured metadata
+* [mex-invenio](https://github.com/robert-koch-institut/mex-invenio): the metadata catalogue renders and exposes metadata records in conformance to the MEx model
 
 The following process diagram illustrates how these components relate within the overall MEx workflow:
 
@@ -18,19 +17,19 @@ The following process diagram illustrates how these components relate within the
 
 | Prefix | Namespace | Used for |
 | --- | --- | --- |
-| dcat: | http://www.w3.org/ns/dcat# | DCAT classes and properties |
-| dcterms: | http://purl.org/dc/terms/ | common Dublin Core terms such as title, description, identifier |
-| prov: | http://www.w3.org/ns/prov# | Provenance concepts |
-| foaf: | http://xmlns.com/foaf/0.1/ | Persons, organizations, pages |
-| org: | http://www.w3.org/ns/org# | Organizational units and hierarchy |
-| vcard: | http://www.w3.org/2006/vcard/ns# | Contact points |
-| skos: | http://www.w3.org/2004/02/skos/core# | Concepts and concept schemes |
-| dpv: | https://w3id.org/dpv# | Consent status / legal basis alignment |
-| healthdcat: | http://healthdataportal.eu/ns/health# | HealthDCAT-AP classes and properties |
-| dcatde: | http://dcat-ap.de/def/dcatde/ (for references in mapping context) | DCAT-AP.de profile references |
-| mex: | https://mex.rki.de/mex/model/ | MEx entity and field URIs |
-| item: | https://mex.rki.de/item/ | Controlled vocabulary concept URIs and base URI of instance data |
-| json-schema: | https://json-schema.org/ | JSON Schema specification reference |
+| dcat: | <http://www.w3.org/ns/dcat#> | DCAT classes and properties |
+| dcterms: | <http://purl.org/dc/terms/> | common Dublin Core terms such as title, description, identifier |
+| prov: | <http://www.w3.org/ns/prov#> | Provenance concepts |
+| foaf: | <http://xmlns.com/foaf/0.1/> | Persons, organizations, pages |
+| org: | <http://www.w3.org/ns/org#> | Organizational units and hierarchy |
+| vcard: | <http://www.w3.org/2006/vcard/ns#> | Contact points |
+| skos: | <http://www.w3.org/2004/02/skos/core#> | Concepts and concept schemes |
+| dpv: | <https://w3id.org/dpv#> | Consent status / legal basis alignment |
+| healthdcat: | <http://healthdataportal.eu/ns/health#> | HealthDCAT-AP classes and properties |
+| dcatde: | <http://dcat-ap.de/def/dcatde/> (for references in mapping context) | DCAT-AP.de profile references |
+| mex: | <https://mex.rki.de/mex/model/> | MEx entity and field URIs |
+| item: | <https://mex.rki.de/item/> | Controlled vocabulary concept URIs and base URI of instance data |
+| json-schema: | <https://json-schema.org/> | JSON Schema specification reference |
 | further namespaces | | used for matching vocabulary terms to existing (standard) vocabularies |
 
 ## Repository layout & JSON file types
@@ -39,17 +38,15 @@ The MEx metadata model is defined entirely as a set of [JSON Schema](https://jso
 
 The directory is divided into five subdirectories, each with a distinct role.
 
-These directories are not independent. Entities are linked to each other via properties using `$ref`. To link a vocabulary to a property, `useScheme` was defined as a custom-property. This and other properties that the JSON Schema format cannot express natively are defined in the `extension` directory.
+These directories are not independent. Entities are linked to each other via properties using `$ref`. To link a vocabulary to a property, `useScheme` was defined as a custom-property. This and other properties that the JSON Schema format cannot express natively are defined in `mex/model/extension`.
 
 ![MEx Github layout](img/mex-git-relations.png "MEx Github layout")
 
-## Entities, Fields, Extensions, Internalization, Vocabularies
+### `mex/model/entities`
 
-### Entities
+Each entity in the model is defined as a standard JSON Schema document. Entity types exist in two variants: Extracted and Merged. This results in two separate files per type (e.g. `extracted-resource.json` and `merged-resource.json`). The distinction between these variants is fundamental to the MEx metadata lifecycle and will be explained in the sections [Lifecycle of a MEx item](#lifecycle-of-a-mex-item) and [Entity Conventions](entity-conventions.md).
 
-Each entity in the model is defined as a standard JSON Schema document located in `entities/`. Entity types exist in two variants: Extracted and Merged. This results in two separate files per type (e.g. `extracted-resource.json` and `merged-resource.json`). The distinction between these variants is fundamental to the MEx metadata lifecycle and will be explained in the sections [Lifecycle of a MEx item](#lifecycle-of-a-mex-item) and [Entity Conventions](entity-conventions.md).
-
-`Concept` and `ConceptScheme` do not follow this pattern as they are not sourced from external systems, but define the controlled vocabulary structure used across the model.
+The entities `Concept` and `ConceptScheme` do not follow this pattern as they are not sourced from external systems, but define the controlled vocabulary structure used across the model.
 
 Within each entity file, the following JSON Schema keywords are used:
 
@@ -85,19 +82,19 @@ The model currently defines these entity types:
 | Variable | Yes | A single data variable within a resource |
 | VariableGroup | Yes | A logical grouping of variables |
 
-### Extension
+### `mex/model/extension`
 
-The `extension/` directory contains a single file, `definition.json`. This defines custom keywords that extend the JSON Schema vocabulary used by MEx entity files.
+The directory contains a single file, `definition.json`. This defines custom keywords that extend the JSON Schema vocabulary used by MEx entity files.
 
 These keywords are not part of the JSON Schema standard and will be ignored by generic JSON Schema validators. However, they are actively used within the MEx toolchain. Most notably, `useScheme` appears in entity schema files to link classification properties to their controlled vocabularies and is therefore integral to the model's behavior.
 
-### Fields
+### `mex/model/fields`
 
-The `fields/` directory contains reusable atomic type definitions that are shared across entity schemas via `$ref`. Rather than repeating the same structural constraints in every entity file, field types are defined once and referenced wherever needed.
+The directory contains reusable atomic type definitions that are shared across entity schemas via `$ref`. Rather than repeating the same structural constraints in every entity file, field types are defined once and referenced wherever needed.
 
 This keeps entity files concise and ensures consistency for structural changes to a shared type to all entities using it.
 
-### Field Schema Detail
+#### Field Schema Detail
 
 ```{mex-field} category
 ```
@@ -111,13 +108,13 @@ This keeps entity files concise and ensures consistency for structural changes t
 ```{mex-field} text
 ```
 
-### Internationalization (i18n)
+### `mex/model/i18n` (Internationalization)
 
-The `i18n/` directory contains JSON files that map property names to human-readable labels in German (`de.json`) and English (`en.json`). These labels are used exclusively by UI components such as the MEx Editor and are not part of schema validation. They are non-normative from the perspective of this specification.
+The directory contains PO files that map property names to human-readable labels in German (`de.po`) and English (`en.po`). These labels are used exclusively by UI components such as MEx Admin, the MEx Editor and the metadata catalog (Invenio). They are not part of schema validation. They are non-normative from the perspective of this specification.
 
-### Vocabularies
+### `mex/model/vocabularies`
 
-The `vocabularies/` directory contains the controlled value lists used by classification properties across entity types. Each vocabulary is a JSON file defining a named set of concepts, where every concept is identified by a URI of the form `https//mex.rki.de/item/...`
+The directory contains the controlled value lists used by classification properties across entity types. Each vocabulary is a JSON file defining a named set of concepts, where every concept is identified by a URI of the form `https//mex.rki.de/item/...`
 An entity property references a vocabulary through the custom `useScheme` keyword:
 
 ```json
@@ -129,30 +126,16 @@ An entity property references a vocabulary through the custom `useScheme` keywor
 }
 ```
 
-The valid value for such a property is always the URI of a concept within the declared scheme, never a free-text string. This ensures machine-readability, unambiguous classification and mapping to external controlled vocabularies where equivalents exist. More information on this can be found in the following subsection on [How vocabularies are used](#how-vocabularies-are-used).
+The valid value for such a property is always the URI of a concept within the declared scheme, never a free-text string. This ensures machine-readability, unambiguous classification and mapping to external controlled vocabularies where equivalents exist. More information on this can be found in the following subsection.
 
 #### How vocabularies are used
 
-Controlled vocabularies in MEx serve as fixed reference lists for classification properties across entity types. Rather than accepting free-text input, properties that reference a vocabulary require a value in the form of a Concept URI. This is a stable, machine-readable identifier of the form `https://mex.rki.de/item/...` and ensures unambiguous, consistent classification that is both human-readable through the associated labels and ensures interoperability with external vocabulary systems.
-Within an entity schema, a property is linked to its vocabulary through the custom `useScheme` keyword, defined in `extension/definition.json`. The following example shows how the property `accessRestriction` on a Resource declares its vocabulary reference:
+Controlled vocabularies in MEx serve as fixed reference lists for classification properties across entity types. Properties that reference a vocabulary require a value in the form of a Concept URI. This is a stable, machine-readable identifier of the form `https://mex.rki.de/item/...` and ensures unambiguous, consistent classification that is both human-readable through the associated labels and ensures interoperability with external vocabulary systems.
 
-```json
-{
-  "accessRestriction": {
-    "useScheme": "https://mex.rki.de/item/access-restriction",
-    "examples": ["https://mex.rki.de/item/access-restriction-1"]
-  }
-}
-```
-
+Within an entity schema, a property is linked to its vocabulary through the custom `useScheme` keyword, defined in `mex/model/extension/definition.json`.
 The value provided for such a property at runtime must be a URI of a Concept that belongs to the declared ConceptScheme. This enables automated validation of the values used.
-Where MEx vocabularies correspond to established controlled vocabularies, such as EU Data Theme or IANA Media Types, MEx does not reference those external vocabularies directly. Instead, it maintains a local copy within the vocabulary/ directory of the repository, with its own Concept URIs.
 
-This is a deliberate design decision, primarily motivated by versioning control. By maintaining its own copy, MEx can update a vocabulary on its own schedule and ensure that the version in use at any given time is explicitly known and documented. A live reference to an external vocabulary, by contrast, would mean that changes made upstream, such as additions, deprecations, or restructuring of concept hierarchies, would take effect immediately and without a corresponding entry in the MEx changelog. This would possibly break existing records silently as validation routines would fail.
-
-However, this approach also introduces a maintenance burden. Local copies must be actively kept in sync with their upstream sources, and divergence can accumulate over time. This risk is particularly pronounced for large vocabularies, where upstream changes may be frequent and where outdated values in MEx could lead to incorrect or incomplete classifications. Crucially, this synchronization is only reliable if upstream changes are well-documented in the external vocabulary's own changelog, which cannot always be guaranteed.
-
-Where a MEx vocabulary has an (established) equivalent, values should be mappable to that external vocabulary. The relevant mapping is maintained alongside the vocabulary definition in the `vocabularies/` directory. A full list of all vocabularies, their URIs, the entity properties that reference them, and their equivalents where applicable, is provided in the corresponding chapter on [Controlled Vocabularies](controlled-vocabularies.md).
+A full list of all vocabularies, their URIs, the entity properties that reference them, and their equivalents where applicable, is provided in the corresponding chapter on [Controlled Vocabularies](controlled-vocabularies.md).
 
 ## Identifier system
 
@@ -213,17 +196,17 @@ The lifecycle of a MEx item follows a five-stage process chain:
 
 The diagram above illustrates components involved at each stage.
 
-### Stage 1: Extraction
+#### Stage 1: Extraction
 
 The lifecycle begins at the primary source systems. Automated extractors retrieve metadata from these systems on a daily basis and map it to MEx entities according to the transformation rules defined in versioned, validated YAML primary source mapping files (maintained in the mex-assets repository, RKI internal only). The result of this process is a set of Extracted entities, each carrying the metadata exactly as sourced, alongside the mandatory provenance properties (hadPrimarySource, identifierInPrimarySource, stableTargetId) that anchor the record to its origin. MEx Drop provides an alternative ingestion path, allowing metadata to be transferred directly from primary systems. This service allows data holders within the RKI to send their metadata to MEx, so MEx does not need to access any primary system itself, ensuring the protection of potentially sensitive data. MEx transforms the metadata using the `identifierInPrimarySource` and primary source (inferred by the data owner's MEx Drop account) to generate the `stableTargetId`.
 
-### Stage 2: Storage and merging
+#### Stage 2: Storage and merging
 
 Extracted entities are written to a neo4j graph database, which serves as the central store for all MEx metadata ([mex-backend](https://github.com/robert-koch-institut/mex-backend)). The merging service consolidates Extracted entities that share a `stableTargetId` into a single Merged entity. Extracted items share the same `stableTargetId`, which points to the Merged item as its `identifier`. The Extracted items are kept in the database allowing to keep track of the items provenance.
 
 The graph database exposes its contents via a FastAPI-based API, used by MEx Admin, MEx Editor and the Metadata Catalogue.
 
-### Stage 3: Manual metadata curation
+#### Stage 3: Manual metadata curation
 
 MEx Admin is a metadata expert tool to administrate and curate MEx's metadata. It connects directly to the graph database and provides a manual curation layer on top of the automated merging process. Metadata curators use it to deduplicate records, correct transcription errors, improve incomplete values, and enrich metadata with authority data, including ingestion from sources such as Wikidata.
 
@@ -233,12 +216,12 @@ The deduplication of items is a manual process. When there are conflicting value
 
 Another tool for manual creation of metadata is the MEx Editor. The editor is targeted to RKI data owners and allows them to create metadata initially. We defined the MEx Editor as its own primary source to be able to keep provenance of the items created manually as well.
 
-### Stage 4: Publication
+#### Stage 4: Publication
 
 Merged, curated metadata is published to the Metadata Catalogue, which runs on Invenio. The catalogue exposes metadata via API and provides dedicated landing pages for datasets, projects, publications, and variables, with a dedicated search view for the latter. This is the layer at which metadata becomes findable to users.
 
 The entire process chain is overseen by an orchestration and management layer responsible for scheduling, monitoring and controlling pipeline runs.
 
-### Stage 5 (/ Stage 3.b): Metadata updates
+#### Stage 5 (/ Stage 3.b): Metadata updates
 
 When Metadata changes in the primary system, the changes are caught by the extractors and updates will be present in the MEx metadata management system the next day. The records are not versioned in the graph database, but changes are tracked by the Metadata Catalog, where each change creates a new version of the metadata record.

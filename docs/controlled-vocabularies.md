@@ -47,17 +47,28 @@ Several MEx vocabularies correspond to vocabularies and lists maintained by the 
 | Language | [EU Languages](http://publications.europa.eu/resource/authority/language) | All terms are derived and matched with external source. MEx only uses terms that are relevant in the scope of RKI. |
 | License | [SPDX Licenses](https://spdx.org/licenses) | All terms are derived and matched with the external source. |
 | MIME Type | [IANA Media Types](https://www.iana.org/assignments/media-types/) | Most terms are matched with external source. MEx only uses terms that are relevant in the scope of RKI.|
-| Resource Creation Method | [HealthDCAT-AP Health Actvity](https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity) | Where applicable, terms are matched with the HealthDCAT-AP vocabulary. |
+| Resource Creation Method | [HealthDCAT-AP Health Activity](https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity) | Where applicable, terms are matched with the HealthDCAT-AP vocabulary. |
 
 Vocabularies not listed above are MEx-specific with no alignment to external sources.
 
 ## Governance
 
-Changes can result from:
+### How the external sources are managed
+
+Where MEx vocabularies correspond to established controlled vocabularies, MEx does not reference those external vocabularies directly. Instead, it maintains a local copy within the vocabulary/ directory of the repository, with its own Concept URIs.
+
+This is a deliberate design decision, primarily motivated by versioning control. By maintaining its own copy, MEx can update a vocabulary on its own schedule and ensure that the version in use at any given time is explicitly known and documented. A live reference to an external vocabulary, by contrast, would mean that changes made upstream, such as additions, deprecations, or restructuring of concept hierarchies, would take effect immediately and without a corresponding entry in the MEx changelog. This would possibly break existing records silently as validation routines would fail.
+
+However, this approach also introduces a maintenance burden. Local copies must be actively kept in sync with their upstream sources, and divergence can accumulate over time. This risk is particularly pronounced for large vocabularies, where upstream changes may be frequent and where outdated values in MEx could lead to incorrect or incomplete classifications. Crucially, this synchronization is only reliable if upstream changes are well-documented in the external vocabulary's own changelog, which cannot always be guaranteed.
+
+Where a MEx vocabulary has an (established) equivalent, values should be mappable to that external vocabulary. The relevant mapping is maintained alongside the vocabulary definition.
+
+### Change requests can result from
 
 * The subject area
 * User feedback
 * External requirements
+* Changes in the external sources used for vocabulary alignment
 * Through technical assessment from a FAIR/metadata perspective (e.g. encountering a "new" standard)
 * External rulings (such as EHDS)
 
