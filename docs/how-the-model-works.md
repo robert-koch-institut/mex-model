@@ -96,8 +96,11 @@ This keeps entity files concise and ensures consistency for structural changes t
 
 #### Field Schema Detail
 
+<!-- Scheduled for model v5.4
+
 ```{mex-field} category
 ```
+-->
 
 ```{mex-field} identifier
 ```

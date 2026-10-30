@@ -5,7 +5,7 @@ The MEx model improves the **F**indability, **A**ccessibility, **I**nteroperabil
 ## Purpose of the specification
 
 The purpose of this document is threefold:
-New team members (i.e. developer, metadata specialists, project manager) need a single place to understand what the MEx model looks like, why it is structured the way it is, and how to produce valid metadata records. The [How the Model Works](how-the-model-works.md) and [Common Usage Patterns](common-usage-patterns.md) sections are the recommended starting points.
+New team members (i.e. developer, metadata specialists, project manager) need a single place to understand what the MEx model looks like, why it is structured the way it is, and how to produce valid metadata records. [How the Model Works](how-the-model-works.md) ist the recommended starting point.
 
 Experienced users need quick access to entity definitions, mandatory fields, vocabulary values, and mapping tables without reading prose. The sections [Entity Conventions](entity-conventions.md), [Controlled Vocabularies](controlled-vocabularies.md), and [Validation Rules](validation-rules.md) are designed for lookup rather than sequential reading.
 
