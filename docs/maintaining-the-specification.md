@@ -1,6 +1,6 @@
 # Maintaining the specification
 
-This chapter describes how the specification is kept consistent with the MEx model. It is primarily addressed to developers who change schemas, vocabularies or the documentation toolchain. Metadata specialists will find the checklists for content changes in the section [Checklists for model changes](#checklists-for-model-changes).
+This chapter describes how the specification is kept consistent with the MEx model. It is primarily addressed to metadata specialists who change schemas and vocabularies and developers who change the documentation toolchain. Metadata specialists will find the checklists for content changes in the section [Checklists for model changes](#checklists-for-model-changes).
 
 ## Principles
 
@@ -86,14 +86,11 @@ Locally, the same checks are run with `make lint` and `make test`. The specifica
 
 Every change to the model or the specification follows the same workflow:
 
-1. Create a feature branch from `main`.
-2. Change the schemas, vocabularies or documentation.
-3. Update all manually maintained content that is affected by the change (see [Checklists for model changes](#checklists-for-model-changes)).
-4. Add an entry to `CHANGELOG.md` in the appropriate section of the unreleased version. The changelog follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), the project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-5. Open a pull request. An assignee is added automatically, linting, tests and the changelog check run on every push.
-6. After review and approval, merge the pull request into `main`. The `main` branch is mirrored automatically to [OpenCoDE](https://gitlab.opencode.de/robert-koch-institut/mex/mex-model).
-7. To publish a release, a maintainer starts the release workflow (`release.yml`) manually and selects `major`, `minor` or `patch`. The workflow runs `mex release`, creates the tag, publishes the package to PyPI, signs the artifacts and creates a GitHub release.
-8. The new tag triggers the documentation workflow (`documentation.yml`), which builds the specification and deploys it to [GitHub Pages](https://robert-koch-institut.github.io/mex-model/).
+1. Schemas, vocabularies or documentation are changed.
+2. Update all manually maintained content that is affected by the change (see [Checklists for model changes](#checklists-for-model-changes)).
+3. Follow the usual routines (open a PR, review cycle, merge into main).
+4. After publishing a release, a maintainer starts the release workflow (`release.yml`) manually and selects `major`, `minor` or `patch`. The workflow runs `mex release`, creates the tag, publishes the package to PyPI, signs the artifacts and creates a GitHub release.
+5. The new tag triggers the documentation workflow (`documentation.yml`), which builds the specification and deploys it to [GitHub Pages](https://robert-koch-institut.github.io/mex-model/).
 
 Changes merged into `main` are not visible in the published specification until the next release.
 
@@ -106,12 +103,11 @@ Each checklist distinguishes between content that is updated automatically and c
 Updated automatically:
 
 * Schema tables in [Entity conventions](entity-conventions.md), as long as the section contains the `{mex-entity}` directive
-* Links to vocabularies used by the entity
 * Note on the `supersededBy` condition, as long as the condition in the Merged schema has exactly the form `"if": {"properties": {"supersededBy": {"type": "null"}}}`
 
 Update by hand:
 
-* Create both `extracted-<entity>.json` and `merged-<entity>.json`. Both must declare the same properties, except for the provenance and identification properties of the Extracted variant and `supersededBy` of the Merged variant.
+* For each entity type create an `extracted-[entity].json` and `merged-[entity]>.json` variant. Both must declare the same descriptive properties.
 * Add the conditional `allOf` block for `supersededBy` to the Merged schema (see [Conditional modelling of Merged Entities](entity-conventions.md)).
 * Add the entity label and the labels of all its properties to `mex/model/i18n/de.po` and `mex/model/i18n/en.po`.
 * Add mapping annotations (`exactMatch`, `closeMatch`, `broadMatch`, `narrowMatch`, `relatedMatch`) where a corresponding concept exists in a standard.
@@ -222,16 +218,6 @@ MEx keeps local copies of external vocabularies (see [How external sources are m
 
 | Role | Responsibilities |
 | --- | --- |
-| Maintainer | Reviews and merges pull requests, starts releases, handles Renovate and template updates, manages repository settings, secrets and GitHub Pages |
-| Developer | Changes schemas, fields and vocabularies, maintains the Sphinx extensions and tests, keeps the build free of warnings |
-| Metadata specialist | Maintains the prose chapters, vocabularies, mapping annotations and mapping tables, synchronises local vocabulary copies, reviews changes for semantic correctness |
+| Developer | Maintains the Sphinx extensions and tests, keeps the build free of warnings |
+| Metadata specialist | Changes schemas, fields, vocabularies, po files, maintains the prose chapters, mapping annotations and mapping tables, synchronizes local vocabulary copies, reviews changes for semantic correctness |
 | Maintainers of `mex-common` and `mex-artificial` | Implement model changes in the pydantic models, so that examples can be generated |
-
-## Summary checklist for every pull request
-
-* The change is described in `CHANGELOG.md`.
-* `make lint` and `make test` pass locally.
-* All manually maintained tables affected by the change are updated (entity overview, namespaces, vocabulary list, alignment table, mapping tables).
-* New entities, fields and vocabularies are referenced by the corresponding directive in the specification.
-* Translations exist in German and English for all new entities and properties.
-* No directive, cross-reference or example refers to a removed entity, field, vocabulary or concept.
