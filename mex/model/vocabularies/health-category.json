@@ -6,12 +6,14 @@
                 "en": "EHRS"
             }
         ],
-        "definition": {
-            "de": "Elektronische Gesundheitsakten",
-            "en": "Electronic Health Data from EHRs"
-        },
+        "definition": [
+            {
+                "de": "Elektronische Gesundheitsakten",
+                "en": "Electronic Health Data from EHRs"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/EHRS"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/EHRS"
         ],
         "identifier": "https://mex.rki.de/item/health-category-1",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -27,12 +29,14 @@
                 "en": "MRMR"
             }
         ],
-        "definition": {
-            "de": "Daten aus medizinischen Registern und Sterberegistern",
-            "en": "Data from medical registries and mortality registries"
-        },
+        "definition": [
+            {
+                "de": "Daten aus medizinischen Registern und Sterberegistern",
+                "en": "Data from medical registries and mortality registries"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/MRMR"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/MRMR"
         ],
         "identifier": "https://mex.rki.de/item/health-category-2",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -48,12 +52,14 @@
                 "en": "HPML"
             }
         ],
-        "definition": {
-            "de": "Andere menschliche molekulare Daten wie proteomische, transkriptomische, metabolomische, lipidomische und andere omische Daten",
-            "en": "Other human molecular data such as proteomic, transcriptomic, metabolomic, lipidomic and other omic data"
-        },
+        "definition": [
+            {
+                "de": "Andere menschliche molekulare Daten wie proteomische, transkriptomische, metabolomische, lipidomische und andere omische Daten",
+                "en": "Other human molecular data such as proteomic, transcriptomic, metabolomic, lipidomic and other omic data"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/HPML"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/HPML"
         ],
         "identifier": "https://mex.rki.de/item/health-category-3",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -69,12 +75,14 @@
                 "en": "IDHP"
             }
         ],
-        "definition": {
-            "de": "Daten zum beruflichen Status, zur Spezialisierung und zur Einrichtung von Gesundheitsfachkräften, die an der Behandlung einer natürlichen Person beteiligt sind",
-            "en": "Data on professional status, and on the specialisation and institution of health professionals involved in the treatment of a natural person"
-        },
+        "definition": [
+            {
+                "de": "Daten zum beruflichen Status, zur Spezialisierung und zur Einrichtung von Gesundheitsfachkräften, die an der Behandlung einer natürlichen Person beteiligt sind",
+                "en": "Data on professional status, and on the specialisation and institution of health professionals involved in the treatment of a natural person"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/IDHP"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/IDHP"
         ],
         "identifier": "https://mex.rki.de/item/health-category-4",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -90,12 +98,14 @@
                 "en": "RMMD"
             }
         ],
-        "definition": {
-            "de": "Daten aus Registern für Arzneimittel und Medizinprodukte",
-            "en": "Data from registries for medicinal products and medical devices"
-        },
+        "definition": [
+            {
+                "de": "Daten aus Registern für Arzneimittel und Medizinprodukte",
+                "en": "Data from registries for medicinal products and medical devices"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/RMMD"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/RMMD"
         ],
         "identifier": "https://mex.rki.de/item/health-category-5",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -111,12 +121,14 @@
                 "en": "DIOH"
             }
         ],
-        "definition": {
-            "de": "Daten zu gesundheitsbeeinflussenden Faktoren, einschließlich sozioökonomischer, umweltbedingter und verhaltensbezogener Determinanten der Gesundheit",
-            "en": "Data on factors impacting on health, including socio-economic, environmental and behavioural determinants of health"
-        },
+        "definition": [
+            {
+                "de": "Daten zu gesundheitsbeeinflussenden Faktoren, einschließlich sozioökonomischer, umweltbedingter und verhaltensbezogener Determinanten der Gesundheit",
+                "en": "Data on factors impacting on health, including socio-economic, environmental and behavioural determinants of health"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/DIOH"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/DIOH"
         ],
         "identifier": "https://mex.rki.de/item/health-category-6",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -132,12 +144,14 @@
                 "en": "RQSH"
             }
         ],
-        "definition": {
-            "de": "Daten aus Forschungskohorten, Fragebögen und Umfragen im Zusammenhang mit Gesundheit, nach der ersten Veröffentlichung der Ergebnisse",
-            "en": "Data from research cohorts, questionnaires and surveys related to health, after the first publication of the related results"
-        },
+        "definition": [
+            {
+                "de": "Daten aus Forschungskohorten, Fragebögen und Umfragen im Zusammenhang mit Gesundheit, nach der ersten Veröffentlichung der Ergebnisse",
+                "en": "Data from research cohorts, questionnaires and surveys related to health, after the first publication of the related results"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/RQSH"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/RQSH"
         ],
         "identifier": "https://mex.rki.de/item/health-category-7",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -153,12 +167,14 @@
                 "en": "EMRD"
             }
         ],
-        "definition": {
-            "de": "Andere Gesundheitsdaten von Medizinprodukten",
-            "en": "Other health data from medical devices"
-        },
+        "definition": [
+            {
+                "de": "Andere Gesundheitsdaten von Medizinprodukten",
+                "en": "Other health data from medical devices"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/EMRD"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/EMRD"
         ],
         "identifier": "https://mex.rki.de/item/health-category-8",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -174,12 +190,14 @@
                 "en": "EHCT"
             }
         ],
-        "definition": {
-            "de": "Daten aus klinischen Prüfungen, klinischen Studien und klinischen Untersuchungen, die der Verordnung (EU) 536/2014, der Verordnung (EU) 2024/1938, der Verordnung (EU) 2017/745 und der Verordnung (EU) 2017/746 unterliegen",
-            "en": "Data from clinical trials, clinical studies, clinical investigations and performance studies subject to Regulation (EU) No 536/2014, Regulation (EU) 2024/1938 of the European Parliament and of the Council, Regulation (EU) 2017/745 and Regulation (EU) 2017/746"
-        },
+        "definition": [
+            {
+                "de": "Daten aus klinischen Prüfungen, klinischen Studien und klinischen Untersuchungen, die der Verordnung (EU) 536/2014, der Verordnung (EU) 2024/1938, der Verordnung (EU) 2017/745 und der Verordnung (EU) 2017/746 unterliegen",
+                "en": "Data from clinical trials, clinical studies, clinical investigations and performance studies subject to Regulation (EU) No 536/2014, Regulation (EU) 2024/1938 of the European Parliament and of the Council, Regulation (EU) 2017/745 and Regulation (EU) 2017/746"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/EHCT"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/EHCT"
         ],
         "identifier": "https://mex.rki.de/item/health-category-9",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -195,12 +213,14 @@
                 "en": "NRPE"
             }
         ],
-        "definition": {
-            "de": "Aggregierte Daten zu Gesundheitsbedürfnissen, den für die Gesundheitsversorgung zugewiesenen Ressourcen, der Bereitstellung und dem Zugang zur Gesundheitsversorgung, den Gesundheitsausgaben und der Gesundheitsfinanzierung",
-            "en": "Aggregated data on healthcare needs, resources allocated to healthcare, the provision of and access to healthcare, healthcare expenditure and financing"
-        },
+        "definition": [
+            {
+                "de": "Aggregierte Daten zu Gesundheitsbedürfnissen, den für die Gesundheitsversorgung zugewiesenen Ressourcen, der Bereitstellung und dem Zugang zur Gesundheitsversorgung, den Gesundheitsausgaben und der Gesundheitsfinanzierung",
+                "en": "Aggregated data on healthcare needs, resources allocated to healthcare, the provision of and access to healthcare, healthcare expenditure and financing"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/NRPE"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/NRPE"
         ],
         "identifier": "https://mex.rki.de/item/health-category-10",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -216,12 +236,14 @@
                 "en": "PGEH"
             }
         ],
-        "definition": {
-            "de": "Automatisch generierte persönliche elektronische Gesundheitsdaten durch medizinische Geräte",
-            "en": "Personal electronic health data automatically generated through medical devices"
-        },
+        "definition": [
+            {
+                "de": "Automatisch generierte persönliche elektronische Gesundheitsdaten durch medizinische Geräte",
+                "en": "Personal electronic health data automatically generated through medical devices"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/PGEH"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/PGEH"
         ],
         "identifier": "https://mex.rki.de/item/health-category-11",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -237,12 +259,14 @@
                 "en": "HGPD"
             }
         ],
-        "definition": {
-            "de": "Menschliche genetische, epigenomische und genomische Daten",
-            "en": "Human genetic, epigenomic and genomic data"
-        },
+        "definition": [
+            {
+                "de": "Menschliche genetische, epigenomische und genomische Daten",
+                "en": "Human genetic, epigenomic and genomic data"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/HGPD"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/HGPD"
         ],
         "identifier": "https://mex.rki.de/item/health-category-12",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -258,12 +282,14 @@
                 "en": "HRAD"
             }
         ],
-        "definition": {
-            "de": "Verwaltungsdaten im Zusammenhang mit dem Gesundheitswesen, einschließlich Daten zur Abgabe, zu Ansprüchen und zur Erstattung",
-            "en": "Healthcare-related administrative data, including on dispensations, reimbursement claims and reimbursements"
-        },
+        "definition": [
+            {
+                "de": "Verwaltungsdaten im Zusammenhang mit dem Gesundheitswesen, einschließlich Daten zur Abgabe, zu Ansprüchen und zur Erstattung",
+                "en": "Healthcare-related administrative data, including on dispensations, reimbursement claims and reimbursements"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/HRAD"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/HRAD"
         ],
         "identifier": "https://mex.rki.de/item/health-category-13",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -279,12 +305,14 @@
                 "en": "RPDG"
             }
         ],
-        "definition": {
-            "de": "Pathogendaten mit Auswirkungen auf die menschliche Gesundheit",
-            "en": "Data on pathogens that impact human health"
-        },
+        "definition": [
+            {
+                "de": "Pathogendaten mit Auswirkungen auf die menschliche Gesundheit",
+                "en": "Data on pathogens that impact human health"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/RPDG"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/RPDG"
         ],
         "identifier": "https://mex.rki.de/item/health-category-14",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -300,12 +328,14 @@
                 "en": "EINS"
             }
         ],
-        "definition": {
-            "de": "Gesundheitsdaten aus Biobanken und zugehörigen Datenbanken",
-            "en": "Health data from biobanks and associated databases"
-        },
+        "definition": [
+            {
+                "de": "Gesundheitsdaten aus Biobanken und zugehörigen Datenbanken",
+                "en": "Health data from biobanks and associated databases"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/EINS"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/EINS"
         ],
         "identifier": "https://mex.rki.de/item/health-category-15",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -321,12 +351,14 @@
                 "en": "PHDR"
             }
         ],
-        "definition": {
-            "de": "Bevölkerungsbezogene Gesundheitsdatenregisterdaten (Register der öffentlichen Gesundheit)",
-            "en": "Data from population-based health data registries such as public health registries"
-        },
+        "definition": [
+            {
+                "de": "Bevölkerungsbezogene Gesundheitsdatenregisterdaten (Register der öffentlichen Gesundheit)",
+                "en": "Data from population-based health data registries such as public health registries"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/PHDR"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/PHDR"
         ],
         "identifier": "https://mex.rki.de/item/health-category-16",
         "inScheme": "https://mex.rki.de/item/health-category",
@@ -342,12 +374,14 @@
                 "en": "WELA"
             }
         ],
-        "definition": {
-            "de": "Daten aus Wellness-Anwendungen",
-            "en": "Data from wellness applications"
-        },
+        "definition": [
+            {
+                "de": "Daten aus Wellness-Anwendungen",
+                "en": "Data from wellness applications"
+            }
+        ],
         "exactMatch": [
-            "http://13.81.34.152:1101/resource/authority/healthcategories/WELA"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/healthcategories/WELA"
         ],
         "identifier": "https://mex.rki.de/item/health-category-17",
         "inScheme": "https://mex.rki.de/item/health-category",

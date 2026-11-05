@@ -5,20 +5,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgctxt "Activity"
 msgid "abstract.singular"
 msgstr "Kurzbeschreibung"
 
 msgctxt "Activity"
 msgid "abstract.description"
-msgstr "Kurze Beschreibung des Kontexts, in dem die Daten verarbeitet wurden"
+msgstr "Kurze Beschreibung des Projekts"
 
-msgctxt "Resource"
+msgctxt "BibliographicResource"
+msgid "abstract.singular"
+msgstr "Zusammenfassung"
+
+msgctxt "BibliographicResource"
+msgid "abstract.description"
+msgstr "Kurze Zusammenfassung des Inhalts"
+
 msgid "accessPlatform.singular"
 msgid_plural "accessPlatform.plural"
 msgstr[0] "Zugriffsplattform"
 msgstr[1] "Zugriffsplattformen"
 
-msgctxt "Resource"
 msgid "accessPlatform.description"
 msgstr "Zugriffsplattform für die Daten"
 
@@ -75,6 +82,14 @@ msgstr[1] "Zugriffs-URLs"
 msgctxt "Distribution"
 msgid "accessURL.description"
 msgstr "Eine URL, die Zugriff auf die Dateien ermöglicht"
+
+msgctxt "ResourceSeries"
+msgid "accrualPeriodicity.singular"
+msgstr "Aktualisierungsfrequenz"
+
+msgctxt "ResourceSeries"
+msgid "accrualPeriodicity.description"
+msgstr "Die Häufigkeit/Frequenz, mit die Datenkollektion aktualisiert wird"
 
 msgctxt "Resource"
 msgid "accrualPeriodicity.singular"
@@ -190,20 +205,24 @@ msgstr[1] "Standards"
 
 msgctxt "Resource"
 msgid "conformsTo.description"
-msgstr "Etablierter Standard, dem die beschriebenen Daten entsprechen"
+msgstr "Etablierter Standard aus dem Bereich der Gesundheitsdaten, dem die beschriebenen Daten entsprechen"
 
 msgid "contact.singular"
 msgid_plural "contact.plural"
 msgstr[0] "Kontakt"
 msgstr[1] "Kontakte"
 
+msgid "contact.description"
+msgstr "Kontaktmöglichkeit"
+
 msgctxt "Activity"
 msgid "contact.description"
 msgstr "Kontakt für das Projekt/Vorhaben"
 
+msgctxt "AccessPlatform"
 msgid "contact.description"
 msgstr ""
-"Person oder Fachgruppe, die weiß, wie man auf die Plattform zugreift, "
+"Kontakt oder Fachgruppe, der*die weiß, wie man auf die Plattform zugreift, "
 "Probleme behebt oder anderweitig Probleme im Zusammenhang mit der Plattform "
 "löst"
 
@@ -300,6 +319,11 @@ msgid "description.description"
 msgstr ""
 "Kurze Beschreibung der Daten, ihrer Komponenten und des Erstellungskontexts"
 
+msgctxt "ResourceSeries"
+msgid "description.description"
+msgstr ""
+"Kurze Beschreibung der Datenkollektion, ihrer Komponenten und des Erstellungskontexts"
+
 msgctxt "AccessPlatform"
 msgid "description.description"
 msgstr ""
@@ -345,6 +369,10 @@ msgstr "Link zur Dokumentation des Projekts/Vorhabens"
 msgctxt "Resource"
 msgid "documentation.description"
 msgstr "Weiterführende Informationen zu den Daten"
+
+msgctxt "ResourceSeries"
+msgid "documentation.description"
+msgstr "Weiterführende Informationen zu der Datenkollektion"
 
 msgctxt "PrimarySource"
 msgid "documentation.description"
@@ -416,18 +444,13 @@ msgctxt "Resource"
 msgid "end.singular"
 msgstr "Ende"
 
-msgctxt "Resource"
-msgid "end.description"
-msgstr "Ende des Zeitraumes, den die Daten abdecken"
-
 msgctxt "ResourceSeries"
 msgid "end.singular"
 msgstr "Ende"
 
-msgctxt "ResourceSeries"
+msgctxt "Resource"
 msgid "end.description"
-msgstr "Ende des Zeitraumes, den die Kollektion abdeckt"
-
+msgstr "Ende des Zeitraumes, den die Daten abdecken"
 msgctxt "AccessPlatform"
 msgid "endpointDescription.singular"
 msgstr "Schnittstellen-Beschreibung"
@@ -515,6 +538,14 @@ msgctxt "Location"
 msgid "geoNamesId.description"
 msgstr "GeoNames ist eine Online-Datenbank mit geografischen Orten weltweit. Sie hilft dabei, Ortsnamen einheitlich zu erfassen."
 
+msgctxt "Resource"
+msgid "geopoliticalResolution.singular"
+msgstr "Geopolitische Auflösung"
+
+msgctxt "Resource"
+msgid "geopoliticalResolution.description"
+msgstr "Angabe der geopolitischen/ verwaltungspolitischen Auflösung der Ortsangabe des Datensatzes"
+
 msgctxt "Organization"
 msgid "geprisId.singular"
 msgstr "GEPRIS"
@@ -553,8 +584,8 @@ msgstr[0] "Kodierter Wert"
 msgstr[1] "Kodierte Werte"
 
 msgctxt "Resource"
-msgid "hasCodingSystem.description"
-msgstr "Spezifizierung des verwendeten Kodiersystems"
+msgid "hasCodeValues.description"
+msgstr "Wert(e) aus standardisierten Kodiersystemen"
 
 msgctxt "Resource"
 msgid "hasCodingSystem.singular"
@@ -563,10 +594,9 @@ msgstr[0] "Verwendetes Kodiersystem"
 msgstr[1] "Verwendete Kodiersysteme"
 
 msgctxt "Resource"
-msgid "hasCodeValues.description"
-msgstr "Wert(e) aus standardisierten Kodiersystemen"
+msgid "hasCodingSystem.description"
+msgstr "Spezifizierung des verwendeten Kodiersystems"
 
-msgctxt "Resource"
 msgid "hasLegalBasis.singular"
 msgstr "Rechtliche Grundlage"
 
@@ -794,13 +824,8 @@ msgid_plural "keyword.plural"
 msgstr[0] "Stichwort"
 msgstr[1] "Stichworte"
 
-msgctxt "BibliographicResource"
 msgid "keyword.description"
-msgstr "Die Publikation beschreibende Stichworte"
-
-msgctxt "Resource"
-msgid "keyword.description"
-msgstr "Die Daten beschreibende Stichworte"
+msgstr "Beschreibende Stichworte"
 
 msgid "label.singular"
 msgstr "Bezeichnung"
@@ -944,6 +969,16 @@ msgstr "Bezeichnung des Ortes"
 msgctxt "Organization"
 msgid "officialName.singular"
 msgstr "Name"
+
+msgctxt "Location"
+msgid "name.singular"
+msgid_plural "name.plural"
+msgstr[0] "Name"
+msgstr[1] "Namen"
+
+msgctxt "Location"
+msgid "name.description"
+msgstr "Bezeichnung des Ortes"
 
 msgctxt "Organization"
 msgid "officialName.description"
@@ -1128,9 +1163,19 @@ msgid_plural "relatedActivity.plural"
 msgstr[0] "Zusammenhängendes Projekt"
 msgstr[1] "Zusammenhängende Projekte"
 
+msgctxt "Resource"
+msgid "relatedActivity.singular"
+msgid_plural "relatedActivity.plural"
+msgstr[0] "Verknüpftes Projekt"
+msgstr[1] "Verknüpfte Projekte"
+
 msgctxt "Activity"
 msgid "relatedActivity.description"
 msgstr "Andere(s) Projekt(e), die mit dem beschriebenen in Zusammenhang stehen"
+
+msgctxt "Resource"
+msgid "relatedActivity.description"
+msgstr "Projekt(e) in Verbindung mit dem Datenbestand/ dem Datensatz"
 
 msgctxt "Resource"
 msgid "relatedResource.singular"
@@ -1253,11 +1298,9 @@ msgctxt "Resource"
 msgid "source.description"
 msgstr "Ein Datensatz oder mehrere Datensätze, die als Quelle für den beschriebenen Datensatz genutzt wurden"
 
-msgctxt "Resource"
 msgid "spatial.singular"
-msgstr "Räumlicher Bezug"
+msgstr "Ort oder geographische Region"
 
-msgctxt "Resource"
 msgid "spatial.description"
 msgstr "Geografische Abdeckung der Daten"
 
