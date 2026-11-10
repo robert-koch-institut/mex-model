@@ -18,6 +18,42 @@ from sphinx.util.docutils import SphinxDirective
 
 DEFAULT_PATTERN = "*.json"
 ENCODING = "utf8"
+SUPERSEDED_GATE_IF = {"properties": {"supersededBy": {"type": "null"}}}
+SUPERSEDED_GATE_NOTE = (
+    "Fields in **bold** are required, as long as ``supersededBy`` is not set. "
+    "Once ``supersededBy`` is set, the merged item is superseded and every field "
+    "except ``identifier`` and ``supersededBy`` must keep its default value."
+)
+
+
+def fold_superseded_gate(schema: object) -> object:
+    """Fold a merged schema's supersededBy if/then/else gate for rendering.
+
+    `sphinx-jsonschema` only highlights fields from the top-level `required` list
+    and would render the gate as a long, raw `allOf`/`if`/`then`/`else` table.
+    Instead, the fields that are required on active items are highlighted again,
+    the gate is dropped and its meaning is summarized in the description.
+    """
+    if not isinstance(schema, dict):
+        return schema
+    all_of = schema.get("allOf", [])
+    gates = [s for s in all_of if s.get("if") == SUPERSEDED_GATE_IF]
+    if not gates:
+        return schema
+    (gate,) = gates
+    folded = {**schema, "allOf": [s for s in all_of if s is not gate]}
+    if not folded["allOf"]:
+        del folded["allOf"]
+    folded["required"] = sorted(
+        {*schema.get("required", []), *gate.get("then", {}).get("required", [])}
+    )
+    description = schema.get("description")
+    folded["description"] = (
+        f"{description}\n\n{SUPERSEDED_GATE_NOTE}"
+        if description
+        else SUPERSEDED_GATE_NOTE
+    )
+    return folded
 
 
 @dataclass(frozen=True)

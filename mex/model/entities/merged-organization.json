@@ -3,6 +3,61 @@
     "$id": "https://mex.rki.de/mex/model/entities/merged-organization",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "allOf": [
+        {
+            "else": {
+                "properties": {
+                    "alternativeName": {
+                        "maxItems": 0
+                    },
+                    "country": {
+                        "maxItems": 0
+                    },
+                    "geprisId": {
+                        "maxItems": 0
+                    },
+                    "gndId": {
+                        "maxItems": 0
+                    },
+                    "isniId": {
+                        "maxItems": 0
+                    },
+                    "officialName": {
+                        "maxItems": 0
+                    },
+                    "rorId": {
+                        "maxItems": 0
+                    },
+                    "shortName": {
+                        "maxItems": 0
+                    },
+                    "viafId": {
+                        "maxItems": 0
+                    },
+                    "wikidataId": {
+                        "maxItems": 0
+                    }
+                }
+            },
+            "if": {
+                "properties": {
+                    "supersededBy": {
+                        "type": "null"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "officialName": {
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "officialName"
+                ]
+            }
+        }
+    ],
     "closeMatch": [
         "http://www.w3.org/ns/org#Organization",
         "http://xmlns.com/foaf/0.1/Organization",
@@ -99,11 +154,11 @@
             "closeMatch": [
                 "http://www.wikidata.org/entity/P1448"
             ],
+            "default": [],
             "description": "The official name of the organization.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "minItems": 1,
             "type": "array"
         },
         "rorId": {
@@ -182,8 +237,7 @@
         }
     },
     "required": [
-        "identifier",
-        "officialName"
+        "identifier"
     ],
     "title": "Merged Organization",
     "type": "object"

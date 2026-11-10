@@ -3,21 +3,93 @@
     "$id": "https://mex.rki.de/mex/model/entities/merged-distribution",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "allOf": [
+        {
+            "else": {
+                "properties": {
+                    "accessRestriction": {
+                        "type": "null"
+                    },
+                    "accessService": {
+                        "type": "null"
+                    },
+                    "accessURL": {
+                        "maxItems": 0
+                    },
+                    "downloadURL": {
+                        "maxItems": 0
+                    },
+                    "issued": {
+                        "type": "null"
+                    },
+                    "license": {
+                        "type": "null"
+                    },
+                    "mediaType": {
+                        "type": "null"
+                    },
+                    "modified": {
+                        "type": "null"
+                    },
+                    "title": {
+                        "maxItems": 0
+                    }
+                }
+            },
+            "if": {
+                "properties": {
+                    "supersededBy": {
+                        "type": "null"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "accessRestriction": {
+                        "not": {
+                            "type": "null"
+                        }
+                    },
+                    "issued": {
+                        "not": {
+                            "type": "null"
+                        }
+                    },
+                    "title": {
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "accessRestriction",
+                    "issued",
+                    "title"
+                ]
+            }
+        }
+    ],
     "closeMatch": [
         "http://www.w3.org/ns/dcat#Distribution"
     ],
     "description": "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above) ([DCAT, 2020-02-04](https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/)).",
     "properties": {
         "accessRestriction": {
-            "$ref": "/mex/model/entities/concept#/identifier",
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/concept#/identifier",
+                    "examples": [
+                        "https://mex.rki.de/item/access-restriction-1"
+                    ],
+                    "useScheme": "https://mex.rki.de/item/access-restriction"
+                },
+                {
+                    "type": "null"
+                }
+            ],
             "closeMatch": [
                 "http://purl.org/dc/terms/accessRights"
             ],
-            "description": "Indicates how access to the distribution is restricted.",
-            "examples": [
-                "https://mex.rki.de/item/access-restriction-1"
-            ],
-            "useScheme": "https://mex.rki.de/item/access-restriction"
+            "default": null,
+            "description": "Indicates how access to the distribution is restricted."
         },
         "accessService": {
             "anyOf": [
@@ -97,11 +169,15 @@
                     ],
                     "pattern": "^[0-9]{4}$",
                     "type": "string"
+                },
+                {
+                    "type": "null"
                 }
             ],
             "closeMatch": [
                 "http://purl.org/dc/terms/issued"
             ],
+            "default": null,
             "description": "Date of formal issuance of the resource ([DCT, 2020-01-20](http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/))."
         },
         "license": {
@@ -204,19 +280,16 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/title"
             ],
+            "default": [],
             "description": "The name of the distribution.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "minItems": 1,
             "type": "array"
         }
     },
     "required": [
-        "accessRestriction",
-        "identifier",
-        "issued",
-        "title"
+        "identifier"
     ],
     "title": "Merged Distribution",
     "type": "object"

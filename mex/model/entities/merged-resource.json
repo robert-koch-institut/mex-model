@@ -3,6 +3,254 @@
     "$id": "https://mex.rki.de/mex/model/entities/merged-resource",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "allOf": [
+        {
+            "else": {
+                "properties": {
+                    "accessPlatform": {
+                        "maxItems": 0
+                    },
+                    "accessRestriction": {
+                        "type": "null"
+                    },
+                    "accrualPeriodicity": {
+                        "type": "null"
+                    },
+                    "alternativeTitle": {
+                        "maxItems": 0
+                    },
+                    "analytics": {
+                        "maxItems": 0
+                    },
+                    "anonymizationPseudonymization": {
+                        "maxItems": 0
+                    },
+                    "conformsTo": {
+                        "maxItems": 0
+                    },
+                    "contact": {
+                        "maxItems": 0
+                    },
+                    "contributingUnit": {
+                        "maxItems": 0
+                    },
+                    "contributor": {
+                        "maxItems": 0
+                    },
+                    "created": {
+                        "type": "null"
+                    },
+                    "creator": {
+                        "maxItems": 0
+                    },
+                    "description": {
+                        "maxItems": 0
+                    },
+                    "distribution": {
+                        "maxItems": 0
+                    },
+                    "documentation": {
+                        "maxItems": 0
+                    },
+                    "doi": {
+                        "type": "null"
+                    },
+                    "end": {
+                        "maxItems": 0
+                    },
+                    "externalPartner": {
+                        "maxItems": 0
+                    },
+                    "hasCodeValues": {
+                        "maxItems": 0
+                    },
+                    "hasCodingSystem": {
+                        "maxItems": 0
+                    },
+                    "hasLegalBasis": {
+                        "maxItems": 0
+                    },
+                    "hasPersonalData": {
+                        "type": "null"
+                    },
+                    "hasPurpose": {
+                        "maxItems": 0
+                    },
+                    "hasPurposeDescription": {
+                        "maxItems": 0
+                    },
+                    "hasVersion": {
+                        "maxItems": 0
+                    },
+                    "healthCategory": {
+                        "maxItems": 0
+                    },
+                    "icd10code": {
+                        "maxItems": 0
+                    },
+                    "inSeries": {
+                        "maxItems": 0
+                    },
+                    "inSeriesFirstResource": {
+                        "maxItems": 0
+                    },
+                    "inSeriesLastResource": {
+                        "maxItems": 0
+                    },
+                    "instrumentToolOrApparatus": {
+                        "maxItems": 0
+                    },
+                    "isPartOf": {
+                        "maxItems": 0
+                    },
+                    "keyword": {
+                        "maxItems": 0
+                    },
+                    "landingPage": {
+                        "maxItems": 0
+                    },
+                    "language": {
+                        "maxItems": 0
+                    },
+                    "license": {
+                        "type": "null"
+                    },
+                    "loincId": {
+                        "maxItems": 0
+                    },
+                    "maxTypicalAge": {
+                        "type": "null"
+                    },
+                    "meshId": {
+                        "maxItems": 0
+                    },
+                    "method": {
+                        "maxItems": 0
+                    },
+                    "methodDescription": {
+                        "maxItems": 0
+                    },
+                    "minTypicalAge": {
+                        "type": "null"
+                    },
+                    "modified": {
+                        "type": "null"
+                    },
+                    "numberOfRecords": {
+                        "type": "null"
+                    },
+                    "numberOfUniqueIndividuals": {
+                        "type": "null"
+                    },
+                    "populationCoverage": {
+                        "maxItems": 0
+                    },
+                    "provenance": {
+                        "maxItems": 0
+                    },
+                    "publication": {
+                        "maxItems": 0
+                    },
+                    "publisher": {
+                        "maxItems": 0
+                    },
+                    "qualityInformation": {
+                        "maxItems": 0
+                    },
+                    "relatedResource": {
+                        "maxItems": 0
+                    },
+                    "resourceCreationMethod": {
+                        "maxItems": 0
+                    },
+                    "resourceTypeGeneral": {
+                        "maxItems": 0
+                    },
+                    "resourceTypeSpecific": {
+                        "maxItems": 0
+                    },
+                    "rights": {
+                        "maxItems": 0
+                    },
+                    "sample": {
+                        "maxItems": 0
+                    },
+                    "sizeOfDataBasis": {
+                        "type": "null"
+                    },
+                    "source": {
+                        "maxItems": 0
+                    },
+                    "spatial": {
+                        "maxItems": 0
+                    },
+                    "start": {
+                        "maxItems": 0
+                    },
+                    "stateOfDataProcessing": {
+                        "maxItems": 0
+                    },
+                    "temporal": {
+                        "type": "null"
+                    },
+                    "theme": {
+                        "maxItems": 0
+                    },
+                    "title": {
+                        "maxItems": 0
+                    },
+                    "unitInCharge": {
+                        "maxItems": 0
+                    },
+                    "version": {
+                        "type": "null"
+                    },
+                    "wasGeneratedBy": {
+                        "type": "null"
+                    }
+                }
+            },
+            "if": {
+                "properties": {
+                    "supersededBy": {
+                        "type": "null"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "accessRestriction": {
+                        "not": {
+                            "type": "null"
+                        }
+                    },
+                    "contact": {
+                        "minItems": 1
+                    },
+                    "resourceCreationMethod": {
+                        "minItems": 1
+                    },
+                    "theme": {
+                        "minItems": 1
+                    },
+                    "title": {
+                        "minItems": 1
+                    },
+                    "unitInCharge": {
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "accessRestriction",
+                    "contact",
+                    "resourceCreationMethod",
+                    "theme",
+                    "title",
+                    "unitInCharge"
+                ]
+            }
+        }
+    ],
     "closeMatch": [
         "http://www.w3.org/ns/dcat#Dataset"
     ],
@@ -20,15 +268,23 @@
             "type": "array"
         },
         "accessRestriction": {
-            "$ref": "/mex/model/entities/concept#/identifier",
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/concept#/identifier",
+                    "examples": [
+                        "https://mex.rki.de/item/access-restriction-1"
+                    ],
+                    "useScheme": "https://mex.rki.de/item/access-restriction"
+                },
+                {
+                    "type": "null"
+                }
+            ],
             "closeMatch": [
                 "http://purl.org/dc/terms/accessRights"
             ],
-            "description": "Indicates how access to the resource is restricted.",
-            "examples": [
-                "https://mex.rki.de/item/access-restriction-1"
-            ],
-            "useScheme": "https://mex.rki.de/item/access-restriction"
+            "default": null,
+            "description": "Indicates how access to the resource is restricted."
         },
         "accrualPeriodicity": {
             "anyOf": [
@@ -104,6 +360,7 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#contactPoint"
             ],
+            "default": [],
             "description": "An agent that serves as a contact for the resource.",
             "items": {
                 "anyOf": [
@@ -118,7 +375,6 @@
                     }
                 ]
             },
-            "minItems": 1,
             "type": "array"
         },
         "contributingUnit": {
@@ -775,6 +1031,7 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/type"
             ],
+            "default": [],
             "description": "Method how the resource was created.",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
@@ -783,7 +1040,6 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/resource-creation-method"
             },
-            "minItems": 1,
             "type": "array"
         },
         "resourceTypeGeneral": {
@@ -993,6 +1249,7 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#theme"
             ],
+            "default": [],
             "description": "A main category of the resource. A resource can have multiple themes.",
             "items": {
                 "$ref": "/mex/model/entities/concept#/identifier",
@@ -1001,29 +1258,28 @@
                 ],
                 "useScheme": "https://mex.rki.de/item/theme"
             },
-            "minItems": 1,
             "type": "array"
         },
         "title": {
             "closeMatch": [
                 "http://purl.org/dc/terms/title"
             ],
+            "default": [],
             "description": "The name of the resource.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "minItems": 1,
             "type": "array"
         },
         "unitInCharge": {
             "closeMatch": [
                 "http://dcat-ap.de/def/dcatde/maintainer"
             ],
+            "default": [],
             "description": "This property refers to agents who assume responsibility and accountability for the resource and its appropriate maintenance.",
             "items": {
                 "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
             },
-            "minItems": 1,
             "type": "array"
         },
         "version": {
@@ -1064,13 +1320,7 @@
         }
     },
     "required": [
-        "accessRestriction",
-        "contact",
-        "identifier",
-        "resourceCreationMethod",
-        "theme",
-        "title",
-        "unitInCharge"
+        "identifier"
     ],
     "title": "Merged Resource",
     "type": "object"

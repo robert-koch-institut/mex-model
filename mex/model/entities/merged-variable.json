@@ -3,6 +3,69 @@
     "$id": "https://mex.rki.de/mex/model/entities/merged-variable",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "allOf": [
+        {
+            "else": {
+                "properties": {
+                    "belongsTo": {
+                        "maxItems": 0
+                    },
+                    "categories": {
+                        "type": "null"
+                    },
+                    "datatypeInPrimarySource": {
+                        "type": "null"
+                    },
+                    "datatypeStandardized": {
+                        "maxItems": 0
+                    },
+                    "description": {
+                        "maxItems": 0
+                    },
+                    "propertyURL": {
+                        "type": "null"
+                    },
+                    "surveyInstrument": {
+                        "maxItems": 0
+                    },
+                    "technicalName": {
+                        "type": "null"
+                    },
+                    "title": {
+                        "maxItems": 0
+                    },
+                    "usedIn": {
+                        "maxItems": 0
+                    }
+                }
+            },
+            "if": {
+                "properties": {
+                    "supersededBy": {
+                        "type": "null"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "datatypeInPrimarySource": {
+                        "minLength": 1
+                    },
+                    "technicalName": {
+                        "minLength": 1
+                    },
+                    "usedIn": {
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "datatypeInPrimarySource",
+                    "technicalName",
+                    "usedIn"
+                ]
+            }
+        }
+    ],
     "closeMatch": [
         "http://www.w3.org/ns/csvw#Column",
         "https://datapackage.org/profiles/2.0/tableschema.json#field"
@@ -176,19 +239,16 @@
             "type": "array"
         },
         "usedIn": {
+            "default": [],
             "description": "The resource that the variable is used in.",
             "items": {
                 "$ref": "/mex/model/entities/merged-resource#/identifier"
             },
-            "minItems": 1,
             "type": "array"
         }
     },
     "required": [
-        "datatypeInPrimarySource",
-        "identifier",
-        "technicalName",
-        "usedIn"
+        "identifier"
     ],
     "title": "Merged Variable",
     "type": "object"

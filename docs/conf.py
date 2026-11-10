@@ -7,6 +7,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from navigation import build_nav_links
+from schemas import fold_superseded_gate
 
 extensions = ["sphinx-jsonschema", "schemas", "vocabularies"]
 html_theme = "alabaster"
@@ -51,8 +52,15 @@ def _patched_sphinx_jsonschema_kvpairs(self, schema, keys):  # noqa: ANN001, ANN
     return _original_sphinx_jsonschema_kvpairs(self, schema, keys)
 
 
+def _patched_sphinx_jsonschema_run(self, schema, pointer=""):  # noqa: ANN001, ANN202
+    """Render the supersededBy gate of merged schemas in a readable way."""
+    return _original_sphinx_jsonschema_run(self, fold_superseded_gate(schema), pointer)
+
+
 sjs_wide_format = importlib.import_module("sphinx-jsonschema.wide_format")
 _original_sphinx_jsonschema_simpletype = sjs_wide_format.WideFormat._simpletype
 sjs_wide_format.WideFormat._simpletype = _patched_sphinx_jsonschema_simpletype
 _original_sphinx_jsonschema_kvpairs = sjs_wide_format.WideFormat._kvpairs
 sjs_wide_format.WideFormat._kvpairs = _patched_sphinx_jsonschema_kvpairs
+_original_sphinx_jsonschema_run = sjs_wide_format.WideFormat.run
+sjs_wide_format.WideFormat.run = _patched_sphinx_jsonschema_run

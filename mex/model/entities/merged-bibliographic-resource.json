@@ -3,6 +3,134 @@
     "$id": "https://mex.rki.de/mex/model/entities/merged-bibliographic-resource",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "allOf": [
+        {
+            "else": {
+                "properties": {
+                    "abstract": {
+                        "maxItems": 0
+                    },
+                    "accessRestriction": {
+                        "type": "null"
+                    },
+                    "alternateIdentifier": {
+                        "maxItems": 0
+                    },
+                    "alternativeTitle": {
+                        "maxItems": 0
+                    },
+                    "bibliographicResourceType": {
+                        "maxItems": 0
+                    },
+                    "contributingUnit": {
+                        "maxItems": 0
+                    },
+                    "creator": {
+                        "maxItems": 0
+                    },
+                    "distribution": {
+                        "maxItems": 0
+                    },
+                    "doi": {
+                        "type": "null"
+                    },
+                    "edition": {
+                        "type": "null"
+                    },
+                    "editor": {
+                        "maxItems": 0
+                    },
+                    "editorOfSeries": {
+                        "maxItems": 0
+                    },
+                    "isbnIssn": {
+                        "maxItems": 0
+                    },
+                    "issue": {
+                        "type": "null"
+                    },
+                    "issued": {
+                        "type": "null"
+                    },
+                    "journal": {
+                        "maxItems": 0
+                    },
+                    "keyword": {
+                        "maxItems": 0
+                    },
+                    "language": {
+                        "maxItems": 0
+                    },
+                    "license": {
+                        "type": "null"
+                    },
+                    "pages": {
+                        "type": "null"
+                    },
+                    "publicationPlace": {
+                        "type": "null"
+                    },
+                    "publicationYear": {
+                        "type": "null"
+                    },
+                    "publisher": {
+                        "maxItems": 0
+                    },
+                    "repositoryURL": {
+                        "maxItems": 0
+                    },
+                    "section": {
+                        "type": "null"
+                    },
+                    "subtitle": {
+                        "maxItems": 0
+                    },
+                    "title": {
+                        "maxItems": 0
+                    },
+                    "titleOfBook": {
+                        "maxItems": 0
+                    },
+                    "titleOfSeries": {
+                        "maxItems": 0
+                    },
+                    "volume": {
+                        "type": "null"
+                    },
+                    "volumeOfSeries": {
+                        "type": "null"
+                    }
+                }
+            },
+            "if": {
+                "properties": {
+                    "supersededBy": {
+                        "type": "null"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "accessRestriction": {
+                        "not": {
+                            "type": "null"
+                        }
+                    },
+                    "creator": {
+                        "minItems": 1
+                    },
+                    "title": {
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "accessRestriction",
+                    "creator",
+                    "title"
+                ]
+            }
+        }
+    ],
     "closeMatch": [
         "http://purl.org/dc/terms/BibliographicResource"
     ],
@@ -20,15 +148,23 @@
             "type": "array"
         },
         "accessRestriction": {
-            "$ref": "/mex/model/entities/concept#/identifier",
+            "anyOf": [
+                {
+                    "$ref": "/mex/model/entities/concept#/identifier",
+                    "examples": [
+                        "https://mex.rki.de/item/access-restriction-1"
+                    ],
+                    "useScheme": "https://mex.rki.de/item/access-restriction"
+                },
+                {
+                    "type": "null"
+                }
+            ],
             "closeMatch": [
                 "http://purl.org/dc/terms/accessRights"
             ],
-            "description": "Indicates how access to the publication is restricted.",
-            "examples": [
-                "https://mex.rki.de/item/access-restriction-1"
-            ],
-            "useScheme": "https://mex.rki.de/item/access-restriction"
+            "default": null,
+            "description": "Indicates how access to the publication is restricted."
         },
         "alternateIdentifier": {
             "closeMatch": [
@@ -82,11 +218,11 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/creator"
             ],
+            "default": [],
             "description": "The author of the publication.",
             "items": {
                 "$ref": "/mex/model/entities/merged-person#/identifier"
             },
-            "minItems": 1,
             "type": "array"
         },
         "distribution": {
@@ -427,11 +563,11 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/title"
             ],
+            "default": [],
             "description": "The full title of the publication.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
-            "minItems": 1,
             "type": "array"
         },
         "titleOfBook": {
@@ -494,10 +630,7 @@
         }
     },
     "required": [
-        "accessRestriction",
-        "creator",
-        "identifier",
-        "title"
+        "identifier"
     ],
     "title": "Merged Bibliographic Resource",
     "type": "object"

@@ -3,6 +3,44 @@
     "$id": "https://mex.rki.de/mex/model/entities/merged-variable-group",
     "$schema": "http://json-schema.org/draft/2020-12/schema",
     "additionalProperties": false,
+    "allOf": [
+        {
+            "else": {
+                "properties": {
+                    "keyword": {
+                        "maxItems": 0
+                    },
+                    "title": {
+                        "maxItems": 0
+                    },
+                    "usedIn": {
+                        "maxItems": 0
+                    }
+                }
+            },
+            "if": {
+                "properties": {
+                    "supersededBy": {
+                        "type": "null"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "title": {
+                        "minItems": 1
+                    },
+                    "usedIn": {
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "title",
+                    "usedIn"
+                ]
+            }
+        }
+    ],
     "closeMatch": [
         "http://www.w3.org/ns/csvw#Table",
         "https://datapackage.org/profiles/2.0/tableschema.json"
@@ -62,9 +100,7 @@
         }
     },
     "required": [
-        "identifier",
-        "title",
-        "usedIn"
+        "identifier"
     ],
     "title": "Merged Variable Group",
     "type": "object"
