@@ -11,13 +11,15 @@
                         "maxItems": 0
                     },
                     "categories": {
-                        "type": "null"
+                        "maxItems": 0
                     },
                     "datatypeInPrimarySource": {
-                        "type": "null"
+                       "not": {
+                            "type": "null"
+                        }
                     },
                     "datatypeStandardized": {
-                        "maxItems": 0
+                        "type": "null"
                     },
                     "description": {
                         "maxItems": 0
@@ -29,7 +31,9 @@
                         "maxItems": 0
                     },
                     "technicalName": {
-                        "type": "null"
+                        "not": {
+                            "type": "null"
+                        }
                     },
                     "title": {
                         "maxItems": 0
@@ -110,19 +114,25 @@
             "type": "array"
         },
         "datatypeInPrimarySource": {
-            "description": "Datatype of the variable, as defined in the original primary source system.",
-            "examples": [
-                "image",
-                "int55",
-                "integer",
-                "note",
-                "number",
-                "select_one",
-                "Text"
+            "anyOf": [
+                {
+                    "examples": [
+                        "image",
+                        "int55",
+                        "integer",
+                        "note",
+                        "number",
+                        "select_one",
+                        "Text"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
             ],
-            "maxLength": 1000,
-            "minLength": 1,
-            "type": "string"
+            "default": null,
+            "description": "Datatype of the variable, as defined in the original primary source system."
         },
         "datatypeStandardized": {
             "anyOf": [
@@ -203,19 +213,25 @@
             "type": "array"
         },
         "technicalName": {
+            "anyOf": [
+                {
+                    "examples": [
+                        "date_of_sampling",
+                        "KHEfehlb",
+                        "Koerpergroesse_in_cm",
+                        "StateId"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": "null",
             "description": "A technical name given to the variable.",
             "exactMatch": [
                 "http://www.w3.org/ns/csvw#name"
-            ],
-            "examples": [
-                "date_of_sampling",
-                "KHEfehlb",
-                "Koerpergroesse_in_cm",
-                "StateId"
-            ],
-            "maxLength": 1000,
-            "minLength": 1,
-            "type": "string"
+            ]
         },
         "title": {
             "default": [],
