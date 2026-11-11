@@ -82,8 +82,8 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/title"
             ],
-            "description": "The name of the variable group.",
             "default": [],
+            "description": "The name of the variable group.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
@@ -91,8 +91,8 @@
         },
         "usedIn": {
             "$comment": "This can be loosely regarded as the inverse property of healthdcatap:hasVariables, which relates the dataset to its variables (a table group). MEx models this in the other direction, where the variable group (table) is related to the resource using mex:usedIn. There can be multiple tables, but MEx does not model csvw:TableGroup, instead the tables are linked directly to their resource.",
-            "description": "The resource that the variable group is used in. Used to connect a variable group to its resource.",
             "default": [],
+            "description": "The resource that the variable group is used in. Used to connect a variable group to its resource.",
             "items": {
                 "$ref": "/mex/model/entities/merged-resource#/identifier"
             },

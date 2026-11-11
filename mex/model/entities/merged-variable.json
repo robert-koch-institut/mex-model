@@ -125,7 +125,7 @@
                 "Text"
             ],
             "type": "string"
-                    },
+        },
         "datatypeStandardized": {
             "anyOf": [
                 {
