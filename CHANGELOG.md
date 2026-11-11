@@ -53,6 +53,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - adapted translations according to the declared changes made in mex/model/entities
 
+- new template https://github.com/robert-koch-institut/mex-template/releases/tag/2.1.0
 ### Deprecated
 
 ### Removed
