@@ -213,6 +213,8 @@
                         "Koerpergroesse_in_cm",
                         "StateId"
                     ],
+                    "maxLength": 1000,
+                    "minLength": 1,
                     "type": "string"
                 },
                 {
