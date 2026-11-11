@@ -14,9 +14,7 @@
                         "maxItems": 0
                     },
                     "datatypeInPrimarySource": {
-                       "not": {
-                            "type": "null"
-                        }
+                        "type": "null"
                     },
                     "datatypeStandardized": {
                         "type": "null"
@@ -31,9 +29,7 @@
                         "maxItems": 0
                     },
                     "technicalName": {
-                        "not": {
-                            "type": "null"
-                        }
+                        "type": "null"
                     },
                     "title": {
                         "maxItems": 0
@@ -53,10 +49,14 @@
             "then": {
                 "properties": {
                     "datatypeInPrimarySource": {
-                        "minLength": 1
+                        "not": {
+                            "type": "null"
+                        }
                     },
                     "technicalName": {
-                        "minLength": 1
+                        "not": {
+                            "type": "null"
+                        }
                     },
                     "usedIn": {
                         "minItems": 1
@@ -227,7 +227,7 @@
                     "type": "null"
                 }
             ],
-            "default": "null",
+            "default": null,
             "description": "A technical name given to the variable.",
             "exactMatch": [
                 "http://www.w3.org/ns/csvw#name"
