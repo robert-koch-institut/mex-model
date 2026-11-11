@@ -114,17 +114,27 @@
             "type": "array"
         },
         "datatypeInPrimarySource": {
-            "description": "Datatype of the variable, as defined in the original primary source system.",
-            "examples": [
-                "image",
-                "int55",
-                "integer",
-                "note",
-                "number",
-                "select_one",
-                "Text"
+            "anyOf": [
+                {
+                    "examples": [
+                        "image",
+                        "int55",
+                        "integer",
+                        "note",
+                        "number",
+                        "select_one",
+                        "Text"
+                    ],
+                    "maxLength": 1000,
+                    "minLength": 1,
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
             ],
-            "type": "string"
+            "default": null,
+            "description": "Datatype of the variable, as defined in the original primary source system."
         },
         "datatypeStandardized": {
             "anyOf": [
