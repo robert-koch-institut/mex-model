@@ -9,7 +9,49 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- add to mex/model/fields:
+  - category.json
+- add to mex/model/vocabularies:
+  - datatype-standardized.json
+- extend `schema-checks` array validation: flag an array property that has
+  both `minItems` and a `default` set
+- extend `schema-checks` annotation validation: flag `closeMatch` and `exactMatch`
+  values that are not arrays, on entity properties and vocabulary concepts
+
 ### Changes
+
+#### extracted- and merged-variable-group.json
+
+- add properties:
+  - `keyword`
+  - `title` *required*
+
+- delete properties:
+  - `label` *required*
+
+- rename properties:
+  - `containedBy` (old) to `usedIn` (new) *required* in order to harmonize with `Variable.usedIn`
+
+#### extracted- and merged-variable.json
+
+- add properties:
+  - `categories`
+  - `datatypeInPrimarySource` *required*
+  - `datatypeStandardized`
+  - `propertyURL`
+  - `surveyInstrument`
+  - `technicalName` *required*
+  - `title`
+
+- delete properties:
+  - `codingSystem`
+  - `dataType`
+  - `label` (required)
+  - `valueSet`
+
+#### po files
+
+- adapted translations according to the declared changes made in mex/model/entities
 
 - new template https://github.com/robert-koch-institut/mex-template/releases/tag/2.1.0
 ### Deprecated
