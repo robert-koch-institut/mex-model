@@ -58,14 +58,6 @@ msgstr ""
 "Description of whether the file is accessible to everyone (open) or has "
 "restricted access (restricted)"
 
-msgctxt "ResourceSeries"
-msgid "accrualPeriodicity.singular"
-msgstr "Update frequency"
-
-msgctxt "ResourceSeries"
-msgid "accrualPeriodicity.description"
-msgstr "The frequency with which the data series is updated"
-
 msgctxt "Resource"
 msgid "accessRestriction.description"
 msgstr ""
@@ -106,7 +98,7 @@ msgstr "Update frequency"
 
 msgctxt "ResourceSeries"
 msgid "accrualPeriodicity.description"
-msgstr "Rate/frequency with which items are added to the collection"
+msgstr "Rate/frequency with which items are added to the data collection"
 
 msgctxt "Activity"
 msgid "activityType.singular"

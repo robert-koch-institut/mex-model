@@ -99,14 +99,6 @@ msgctxt "Resource"
 msgid "accrualPeriodicity.description"
 msgstr "Die Häufigkeit/Frequenz, mit der Daten aktualisiert werden"
 
-msgctxt "ResourceSeries"
-msgid "accrualPeriodicity.singular"
-msgstr "Aktualisierungsfrequenz"
-
-msgctxt "ResourceSeries"
-msgid "accrualPeriodicity.description"
-msgstr "Die Häufigkeit/Frequenz, mit der die Kollektion ergänzt wird"
-
 msgctxt "Activity"
 msgid "activityType.singular"
 msgid_plural "activityType.plural"
