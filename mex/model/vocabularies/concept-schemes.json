@@ -49,14 +49,6 @@
     },
     {
         "description": {
-            "de": "Dieses kontrollierte Vokabular definiert die für die beschriebene Ressource verwendeten Kodierungssysteme.",
-            "en": "This controlled vocabulary defines the coding systems in use for the described resource."
-        },
-        "identifier": "https://mex.rki.de/item/coding-system",
-        "label": "Coding systems vocabulary"
-    },
-    {
-        "description": {
             "de": "Dieses Vokabular basiert auf dem W3C Standard DPV, Data Privacy Vocabulary, verfügbar unter https://w3c.github.io/dpv/2.0/dpv/. Insbesondere auf der Klasse dpv:ConsentStatus und deren Subklassen.",
             "en": "This vocabulary is based on the W3C Standard DPV, Data Privacy Vocabulary, available at https://w3c.github.io/dpv/2.0/dpv/. Specifically dpv:ConsentStatus and its subclasses."
         },
@@ -166,15 +158,7 @@
     },
     {
         "description": {
-            "de": "Dieses Vokular definiert Gesundheitsdatenstandards, die in den beschriebenen Datensätzen genutzt werden.",
-            "en": "This controlled vocabulary defines the standards in use for the described resources."
-        },
-        "identifier": "https://mex.rki.de/item/health-standard",
-        "label": "Health standards controlled vocabulary"
-    },
-    {
-        "description": {
-            "de": "Dieses Vokular definiert Gesundheitsdatenstandards, die in den beschriebenen Datensätzen genutzt werden.",
+            "de": "Dieses Vokabular definiert Gesundheitsdatenstandards, die in den beschriebenen Datensätzen genutzt werden.",
             "en": "This controlled vocabulary defines the standards in use for the described resources."
         },
         "identifier": "https://mex.rki.de/item/health-standard",
