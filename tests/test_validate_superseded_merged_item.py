@@ -24,6 +24,7 @@ ACTIVE_VALUE_BY_FIELD: dict[str, Any] = {
     "hasDataSubject": REFERENCE,
     "isIndicatedAtTime": "2022-09-30T20:48:35Z",
     "issued": "2024",
+    "keyword": [TEXT],
     "label": [TEXT],
     "name": [TEXT],
     "officialName": [TEXT],
