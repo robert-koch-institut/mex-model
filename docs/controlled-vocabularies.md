@@ -6,26 +6,8 @@ As described in the chapter [How the model works](how-the-model-works.md), prope
 
 The following vocabularies are defined as JSON files in `mex/model/vocabularies/`. The Used by column lists the entity types that reference each vocabulary.
 
-| Vocabulary | File | Used by | Concepts |
-| --- | --- | --- | --- |
-| Access Restriction | access-restriction.json | Resource, Distribution, BibliographicResource | Access levels for datasets and distributions |
-| Activity Type | activity-type.json | Activity | Classification of RKI activities, surveillance, research, etc. |
-| Anonymization / Pseudonymization | anonymization-pseudonymization.json | Resource | Whether data is anonymized, pseudonymized, or neither (scheduled for removal, RKIMEX-134) |
-| API Type | api-type.json | AccessPlatform | Protocol type of a service endpoint (scheduled for removal, RKIMEX-63) |
-| Bibliographic Resource Type | bibliographic-resource-type.json | BibliographicResource | Publication format (article, report, etc.) |
-| Consent Status | consent-status.json | Consent | GDPR consent status values |
-| Consent Type | consent-type.json | Consent | Type of consent granted |
-| Data Processing State | data-processing-state.json | Resource | Processing stage of the data (raw, cleaned, aggregated, etc.) (scheduled for removal, RKIMEX-135) |
-| Frequency | frequency.json | Resource | Update frequency of a dataset |
-| Health Category | health-category.json | Resource | Health-domain classification (added for HealthDCAT-AP alignment) |
-| Language | language.json | Resource, BibliographicResource | Language of the dataset or publication |
-| License | license.json | Distribution, BibliographicResource | License under which data is published |
-| MIME Type | mime-type.json | Distribution | Media type of a distribution file |
-| Personal Data | personal-data.json | Resource | Whether the dataset contains personal data (scheduled for removal, RKIMEX-91) |
-| Resource Creation Method | resource-creation-method.json | Resource | How the dataset was generated (survey, register, model, etc.) |
-| Resource Type General | resource-type-general.json | Resource | High-level dataset type classification |
-| Technical Accessibility | technical-accessibility.json | AccessPlatform | Network reachability (internal, external, both) |
-| Theme | theme.json | Resource, Activity | Topic classification of datasets and activities (scheduled for removal, RKIMEX-130) |
+{eval-rst}
+.. mexvocabularylist:: ../mex/model/vocabularies
 
 The file `concept-schemes.json` serves as a registry of all vocabulary URIs (the `ConceptScheme` instances).
 
@@ -78,6 +60,18 @@ Where a MEx vocabulary has an (established) equivalent, values should be mappabl
 * When concepts are deleted, the identifier is not reassigned
 * However, existing concepts can be assigned new pref- and altLabel values; the identifier remains the same
 * Since MEx is not a reference vocabulary, there is no complex maintenance, and changes are tracked only via Git
+
+### Synchronising local copies of external vocabularies
+
+MEx keeps local copies of external vocabularies (see [How external sources are managed](controlled-vocabularies.md)). Their synchronisation with the upstream source is a manual task. The following procedure is recommended:
+
+1. Record for every derived vocabulary the upstream source and the version or date it was last compared with. The table "Alignment with EU vocabularies and other standards" in [Controlled vocabularies](controlled-vocabularies.md) is the place to document the source.
+2. Check the upstream sources regularly and in any case before a major release of the model and after a new release of HealthDCAT-AP.
+3. Compare the upstream changes with the local copy. MEx only adopts terms that are relevant in the scope of RKI, so not every upstream addition has to be adopted.
+4. Add adopted terms as new concepts with new identifiers, following the governance rules. Do not reuse identifiers of deleted concepts.
+5. Handle deprecated upstream terms as deprecations in MEx and check existing metadata before removing a concept.
+6. Update the matches to the upstream vocabulary.
+7. Document the change in `CHANGELOG.md`, including the upstream version it is based on.
 
 ## Vocabulary Detail
 

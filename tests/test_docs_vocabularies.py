@@ -8,8 +8,10 @@ import vocabularies
 from docutils import nodes
 from vocabularies import (
     MExVocabulariesDirective,
+    MExVocabularyListDirective,
     Vocabulary,
     _localized,
+    load_scheme_usage,
     load_vocabularies,
     setup,
 )
@@ -86,6 +88,96 @@ def test_load_vocabularies(vocabulary_dir: Path) -> None:
     # a mismatching inScheme is kept, so both spellings can be linked
     assert other.identifiers == {f"{ITEM}/other-thing", f"{ITEM}/other"}
 
+def test_load_scheme_usage_recursively(tmp_path: Path) -> None:
+    entities_dir = tmp_path / "entities"
+    entities_dir.mkdir()
+
+    scheme = f"{ITEM}/license"
+
+    write_json(
+        entities_dir / "merged-distribution.json",
+        {
+            "title": "Merged Distribution",
+            "properties": {
+                "license": {
+                    "anyOf": [
+                        {
+                            "$ref": "/mex/model/entities/concept",
+                            "useScheme": scheme,
+                        },
+                        {"type": "null"},
+                    ]
+                },
+                "anotherLicense": {
+                    "allOf": [{"useScheme": scheme}]
+                },
+            },
+        },
+    )
+
+    write_json(
+        entities_dir / "extracted-distribution.json",
+        {
+            "title": "Extracted Distribution",
+            "properties": {
+                "other": {"useScheme": f"{ITEM}/ignored"},
+            },
+        },
+    )
+
+    assert load_scheme_usage(entities_dir) == {
+        scheme: ["Distribution"],
+    }
+
+def test_vocabulary_list_directive_run(
+    vocabulary_dir: Path,
+) -> None:
+    entities_dir = vocabulary_dir.parent / "entities"
+    entities_dir.mkdir()
+
+    scheme = f"{ITEM}/frequency"
+
+    write_json(
+        entities_dir / "merged-resource.json",
+        {
+            "title": "Merged Resource",
+            "properties": {
+                "frequency": {
+                    "anyOf": [
+                        {"useScheme": scheme},
+                        {"type": "null"},
+                    ]
+                }
+            },
+        },
+    )
+
+    directive = MagicMock()
+    directive.arguments = ["../vocabularies"]
+    directive.lineno = 7
+    directive.columns = MExVocabularyListDirective.columns
+    directive.column_widths = MExVocabularyListDirective.column_widths
+    directive.env.relfn2path.return_value = (
+        "vocabularies",
+        str(vocabulary_dir),
+    )
+    directive._cell.side_effect = lambda text, **_: text
+
+    MExVocabularyListDirective.run(directive)
+
+    table_data = directive.state.build_table.call_args.args[0]
+    header = table_data[1]
+    rows = table_data[2]
+
+    assert header == [
+        ["Vocabulary", "File", "Used by", "Concepts"]
+    ]
+    assert [
+        "Frequency vocabulary",
+        "frequency",
+        "Resource",
+        "How often",
+    ] in rows
 
 def test_directive_run(monkeypatch: pytest.MonkeyPatch, vocabulary_dir: Path) -> None:
     logger = MagicMock()
@@ -221,4 +313,8 @@ def test_setup() -> None:
     }
     app.add_directive.assert_called_once_with(
         "mexvocabularies", MExVocabulariesDirective
+    )
+    app.add_directive.assert_any_call(
+    "mexvocabularylist",
+    MExVocabularyListDirective,
     )

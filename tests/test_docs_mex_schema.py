@@ -2,9 +2,12 @@ from pathlib import Path
 from unittest.mock import MagicMock
 
 import pytest
+import json
+import mex_schema
 from mex_schema import (
     MODEL_DIR,
     MExEntityDirective,
+    MExEntityListDirective,
     MExFieldDirective,
     _MExSchemaDirective,
     setup,
@@ -102,6 +105,52 @@ def test_render_unknown_schema() -> None:
 
     directive.parse_text_to_nodes.assert_not_called()
 
+def test_entity_list_run(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    model_dir = tmp_path / "mex" / "model"
+    entities_dir = model_dir / "entities"
+    entities_dir.mkdir(parents=True)
+
+    (entities_dir / "merged-resource.json").write_text(
+        json.dumps(
+            {
+                "title": "Merged Resource",
+                "description": "A dataset.",
+            }
+        ),
+        "utf-8",
+    )
+    (entities_dir / "extracted-resource.json").write_text(
+        json.dumps(
+            {
+                "title": "Extracted Resource",
+                "description": "An extracted dataset.",
+            }
+        ),
+        "utf-8",
+    )
+    (entities_dir / "concept-scheme.json").write_text(
+        json.dumps(
+            {
+                "title": "ConceptScheme",
+                "description": "A controlled vocabulary.",
+            }
+        ),
+        "utf-8",
+    )
+
+    monkeypatch.setattr(mex_schema, "MODEL_DIR", model_dir)
+
+    directive = make_directive("")
+    MExEntityListDirective.run(directive)
+
+    table = directive.parse_text_to_nodes.call_args.args[0]
+
+    assert "| Resource | Yes | A dataset. |" in table
+    assert "| ConceptScheme | No | A controlled vocabulary. |" in table
+    assert "Extracted Resource" not in table
 
 def test_setup() -> None:
     app = MagicMock()
@@ -114,3 +163,4 @@ def test_setup() -> None:
     app.setup_extension.assert_called_once_with("jsonschema_patches")
     app.add_directive.assert_any_call("mex-entity", MExEntityDirective)
     app.add_directive.assert_any_call("mex-field", MExFieldDirective)
+    app.add_directive.assert_any_call("mex-entity-list", MExEntityListDirective)

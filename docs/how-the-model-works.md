@@ -40,7 +40,11 @@ The directory is divided into five subdirectories, each with a distinct role.
 
 These directories are not independent. Entities are linked to each other via properties using `$ref`. To link a vocabulary to a property, `useScheme` was defined as a custom-property. This and other properties that the JSON Schema format cannot express natively are defined in `mex/model/extension`.
 
-![MEx Github layout](img/mex-git-relations.png "MEx Github layout")
+{figure} img/mex-metadata-generation.png
+:name: fig-mex-metadata-generation
+:alt: MEx metadata generation BPMN 2.0 workflow
+
+MEx metadata generation BPMN 2.0 workflow
 
 ### `mex/model/entities`
 
@@ -62,25 +66,8 @@ Within each entity file, the following JSON Schema keywords are used:
 
 The model currently defines these entity types:
 
-| Entity | Extracted/Merged | Description |
-| --- | --- | --- |
-| AccessPlatform | Yes | Technical system providing access to resources and distributions |
-| Activity | Yes | Research activity, project, or statutory task |
-| BibliographicResource | Yes | Publication, article, or report |
-| Concept | No | A single value from a controlled vocabulary, identified by URI |
-| ConceptScheme | No | A named controlled vocabulary — a collection of Concepts |
-| Consent | Yes | Data subject consent record |
-| ContactPoint | Yes | Shared email address for a team |
-| Distribution | Yes | A specific downloadable or accessible version of a dataset |
-| Location | Yes | A geographical region |
-| Organization | Yes | (External) institutions |
-| OrganizationalUnit | Yes | RKI department or unit |
-| Person | Yes | Individual researcher or contact |
-| PrimarySource | Yes | Source system from which metadata is extracted |
-| Resource | Yes | A dataset or data source |
-| Resource Series | Yes | Collection of resources published separately but grouped by shared characteristics |
-| Variable | Yes | A single data variable within a resource |
-| VariableGroup | Yes | A logical grouping of variables |
+The following overview is generated from the entity schemas in `mex/model/entities/`.
+```{mex-entity-list}
 
 ### `mex/model/extension`
 
@@ -95,6 +82,8 @@ The directory contains reusable atomic type definitions that are shared across e
 This keeps entity files concise and ensures consistency for structural changes to a shared type to all entities using it.
 
 #### Field Schema Detail
+
+The following tables are generated from the field definitions in `mex/model/fields/`.
 
 <!-- Scheduled for model v5.4
 
@@ -139,6 +128,18 @@ Within an entity schema, a property is linked to its vocabulary through the cust
 The value provided for such a property at runtime must be a URI of a Concept that belongs to the declared ConceptScheme. This enables automated validation of the values used.
 
 A full list of all vocabularies, their URIs, the entity properties that reference them, and their equivalents where applicable, is provided in the corresponding chapter on [Controlled Vocabularies](controlled-vocabularies.md).
+
+#### Synchronising local vocabulary copies
+
+MEx keeps local copies of external vocabularies (see [How external sources are managed](controlled-vocabularies.md)). Their synchronisation with the upstream source is a manual task. The following procedure is recommended:
+
+1. Record for every derived vocabulary the upstream source and the version or date it was last compared with. The table "Alignment with EU vocabularies and other standards" in [Controlled vocabularies](controlled-vocabularies.md) is the place to document the source.
+2. Check the upstream sources regularly and in any case before a major release of the model and after a new release of HealthDCAT-AP.
+3. Compare the upstream changes with the local copy. MEx only adopts terms that are relevant in the scope of RKI, so not every upstream addition has to be adopted.
+4. Add adopted terms as new concepts with new identifiers, following the governance rules. Do not reuse identifiers of deleted concepts.
+5. Handle deprecated upstream terms as deprecations in MEx and check existing metadata before removing a concept.
+6. Update the matches to the upstream vocabulary.
+7. Document the change in `CHANGELOG.md`, including the upstream version it is based on.
 
 ## Identifier system
 
@@ -197,7 +198,7 @@ The lifecycle of a MEx item follows a five-stage process chain:
 4. and finally published to make it findable (in the MEx metadata catalogue).
 5. metadata is changed/edited in the primary system, MEx Admin and/or MEx Editor
 
-The diagram above illustrates components involved at each stage.
+The {ref}`MEx metadata generation workflow <fig-mex-metadata-generation>` illustrates the components involved at each stage.
 
 #### Stage 1: Extraction
 

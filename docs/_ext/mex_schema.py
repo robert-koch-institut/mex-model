@@ -7,6 +7,7 @@ Provides:
 """
 
 import os
+import json
 from pathlib import Path
 from typing import Any
 
@@ -82,6 +83,54 @@ class MExFieldDirective(_MExSchemaDirective):
         field = self.arguments[0].strip().lower()
         return self._render([MODEL_DIR / "fields" / f"{field}.json"])
 
+class MExEntityListDirective(SphinxDirective):
+    """Render an overview table of all entity schemas."""
+
+    has_content = False
+    required_arguments = 0
+    optional_arguments = 0
+
+    def run(self) -> list[nodes.Node]:
+        """Build a table from the entity schemas in the model."""
+        entities_dir = MODEL_DIR / "entities"
+        paths = sorted(
+            path
+            for path in entities_dir.glob("*.json")
+            if not path.name.startswith("extracted-")
+        )
+
+        rows: list[str] = []
+
+        for path in paths:
+            self.env.note_dependency(str(path))
+            schema = json.loads(path.read_text(ENCODING))
+
+            title = str(schema.get("title") or path.stem)
+            entity_name = title.removeprefix("Merged ")
+
+            is_merged_schema = path.name.startswith("merged-")
+            file_stem = path.stem.removeprefix("merged-")
+            has_extracted_variant = (
+                is_merged_schema
+                and (entities_dir / f"extracted-{file_stem}.json").is_file()
+            )
+            variants = "Yes" if has_extracted_variant else "No"
+
+            description = " ".join(
+                str(schema.get("description", "")).split()
+            ).replace("|", r"\|")
+
+            rows.append(
+                f"| {entity_name} | {variants} | {description} |"
+            )
+
+        lines = [
+            "| Entity | Extracted/Merged | Description |",
+            "| --- | --- | --- |",
+            *rows,
+        ]
+
+        return self.parse_text_to_nodes("\n".join(lines))
 
 def to_filename(entity_name: str) -> str:
     """Convert 'AccessPlatform' to 'access-platform'."""
@@ -98,4 +147,5 @@ def setup(app: Sphinx) -> dict[str, Any]:
     app.setup_extension("jsonschema_patches")
     app.add_directive("mex-entity", MExEntityDirective)
     app.add_directive("mex-field", MExFieldDirective)
+    app.add_directive("mex-entity-list", MExEntityListDirective)
     return {"parallel_read_safe": True, "parallel_write_safe": True, "version": "1.0"}
