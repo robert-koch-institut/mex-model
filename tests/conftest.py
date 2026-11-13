@@ -12,9 +12,9 @@ from referencing.jsonschema import DRAFT202012
 
 from mex.model import FIELD_JSON_BY_NAME, MERGED_MODEL_JSON_BY_NAME
 
-# the sphinx extensions live in `docs` and are imported by their bare module names,
-# just like `conf.py` does it, so the docs folder has to be on the import path
-DOCS_DIR = Path(__file__).resolve().parent.parent / "docs"
+# the sphinx extensions live in `docs/_ext` and are imported by their bare module names,
+# just like `conf.py` does it, so the extension folder has to be on the import path
+DOCS_DIR = Path(__file__).resolve().parent.parent / "docs" / "_ext"
 sys.path.insert(0, str(DOCS_DIR))
 
 # the schema checks live in `scripts` and are imported by their bare module name,

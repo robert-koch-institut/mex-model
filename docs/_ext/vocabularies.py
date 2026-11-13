@@ -12,13 +12,16 @@ import re
 import sys
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, ClassVar
+from typing import TYPE_CHECKING, Any, ClassVar, cast
 
 from docutils import nodes, statemachine
 from docutils.nodes import fully_normalize_name as normalize_name
 from sphinx.application import Sphinx
 from sphinx.util import logging
 from sphinx.util.docutils import SphinxDirective
+
+if TYPE_CHECKING:
+    from docutils.parsers.rst.states import Body
 
 logger = logging.getLogger(__name__)
 
@@ -46,16 +49,6 @@ class Vocabulary:
         """Return all identifiers this vocabulary should be linkable by."""
         return {self.identifier, self.scheme_identifier}
 
-    @property
-    def anchor(self) -> str:
-        """Return the html anchor that docutils will assign to this vocabulary."""
-        return nodes.make_id(normalize_name(self.title))
-
-    @property
-    def nav_title(self) -> str:
-        """Return a shortened title for use in the navigation sidebar."""
-        return self.title.removesuffix(TITLE_SUFFIX) or self.title
-
 
 def _localized(value: Any, language: str = "en") -> str:  # noqa: ANN401
     """Return the text of the given language from a possibly localized value."""
@@ -63,6 +56,41 @@ def _localized(value: Any, language: str = "en") -> str:  # noqa: ANN401
         return str(value.get(language) or next(iter(value.values()), ""))
     return str(value or "")
 
+def _collect_use_schemes(node: Any) -> set[str]:
+    """Collect all useScheme values recursively from a schema node."""
+    schemes: set[str] = set()
+
+    if isinstance(node, dict):
+        scheme = node.get("useScheme")
+        if isinstance(scheme, str):
+            schemes.add(scheme)
+
+        for value in node.values():
+            schemes.update(_collect_use_schemes(value))
+
+    elif isinstance(node, list):
+        for value in node:
+            schemes.update(_collect_use_schemes(value))
+
+    return schemes
+
+
+def load_scheme_usage(entities_dir: Path) -> dict[str, list[str]]:
+    """Map each concept scheme identifier to the entities that use it."""
+    usage: dict[str, set[str]] = {}
+
+    for path in sorted(entities_dir.glob("merged-*.json")):
+        schema = json.loads(path.read_text("utf-8"))
+        title = str(schema.get("title") or path.stem)
+        entity_name = title.removeprefix("Merged ")
+
+        for scheme in _collect_use_schemes(schema):
+            usage.setdefault(scheme, set()).add(entity_name)
+
+    return {
+        scheme: sorted(entity_names)
+        for scheme, entity_names in usage.items()
+    }
 
 def _title_from_path(path: Path) -> str:
     """Derive a human-readable scheme title from a vocabulary filename."""
@@ -165,19 +193,72 @@ class MExVocabulariesDirective(SphinxDirective):
             ]
             for concept in vocabulary.concepts
         ]
-        return self.state.build_table((self.column_widths, head, body), self.lineno)
+        state = cast("Body", self.state)  # the table builder lives on the body state
+        return state.build_table((self.column_widths, head, body), self.lineno)
 
     def _cell(self, text: str, *, escape: bool = True) -> Cell:
         """Convert a string into a cell as expected by the docutils table builder."""
         if escape:
             text = ESCAPE_PATTERN.sub(r"\\\1", text)
         lines = statemachine.string2lines(text)
-        source = self.state.document.current_source
+        source = self.state.document.current_source or ""
         items = [(source, self.lineno)] * len(lines)
         return (0, 0, self.lineno, statemachine.StringList(lines, items=items))
 
+class MExVocabularyListDirective(MExVocabulariesDirective):
+    """Render an overview table of all concept schemes."""
+
+    columns: ClassVar[list[str]] = [
+        "Vocabulary",
+        "File",
+        "Used by",
+        "Concepts",
+    ]
+    column_widths: ClassVar[list[int]] = [20, 20, 25, 35]
+
+    def run(self) -> list[nodes.Node]:
+        """Build a table of concept schemes and the entities that use them."""
+        directory = Path(self.env.relfn2path(self.arguments[0])[1])
+        schemes_path = directory / CONCEPT_SCHEMES_FILE
+        self.env.note_dependency(str(schemes_path))
+
+        entities_dir = directory.parent / "entities"
+        entity_paths = sorted(entities_dir.glob("merged-*.json"))
+
+        for path in entity_paths:
+            self.env.note_dependency(str(path))
+
+        schemes = json.loads(schemes_path.read_text("utf-8"))
+        usage = load_scheme_usage(entities_dir)
+
+        head = [[self._cell(column) for column in self.columns]]
+        body = []
+
+        for scheme in schemes:
+            identifier = str(scheme.get("identifier", ""))
+            file_name = identifier.removeprefix(ITEM_URL)
+            label = _localized(scheme.get("label"))
+            used_by = ", ".join(usage.get(identifier, [])) or "None"
+            description = _localized(scheme.get("description"))
+
+            body.append(
+                [
+                    self._cell(label),
+                    self._cell(file_name),
+                    self._cell(used_by),
+                    self._cell(description),
+                ]
+            )
+
+        state = cast("Body", self.state)
+        table = state.build_table(
+            (self.column_widths, head, body),
+            self.lineno,
+        )
+        return [table]
 
 def setup(app: Sphinx) -> dict[str, Any]:
     """Register the vocabularies directive."""
     app.add_directive("mexvocabularies", MExVocabulariesDirective)
+    app.add_directive("mexvocabularylist", MExVocabularyListDirective)
     return {"parallel_read_safe": True, "parallel_write_safe": True, "version": "1.0"}
