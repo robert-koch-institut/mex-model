@@ -61,7 +61,7 @@ Example:
 
 `Merged[EntityType]` is used referencing an item from another entity, or when consuming metadata in the catalogue or downstream systems. All properties that are relations to other entities use the identifier of a Merged entity in their `$ref` attribute, i.e. `ExtractedResource.contributor` referencing a `MergedPerson` using `"$ref": "/mex/model/entities/merged-person#/identifier"`.
 
-The following sections lay out the entities without their Extracted or Merged variant, but their general characteristics, that are independent from the variants.
+The following sections lay out the entities in their Extracted and Merged variant.
 
 All sample JSON instances show examples of the Merged variant, which is considered sufficient within the scope of this specification.
 
