@@ -62,12 +62,12 @@
         },
         "analytics": {
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#analytics"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/analytics"
             ],
             "default": [],
             "description": "An analytics distribution of the dataset.",
             "exactMatch": [
-                "http://healthdataportal.eu/ns/health#analytics"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/analytics"
             ],
             "items": {
                 "$ref": "/mex/model/entities/merged-distribution#/identifier"
@@ -323,7 +323,7 @@
         },
         "hasCodeValues": {
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#hasCodeValues"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/hasCodeValues"
             ],
             "default": [],
             "description": "The code values of the respective coding systems that are applied to the dataset, for example code value 'U07.1' as used in the coding system 'ICD-10'.",
@@ -334,7 +334,7 @@
         },
         "hasCodingSystem": {
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#hasCodingSystem"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/hasCodingSystem"
             ],
             "default": [],
             "description": "Coding systems in use (e.g. ICD-10, SNOMED-CT).",
@@ -423,7 +423,7 @@
         },
         "healthCategory": {
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#healthCategory"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/healthCategory"
             ],
             "default": [],
             "description": "The category of electronic data for secondary use to which this resource belongs, as described in Article 51 of the Commission Regulation on the European Health Data Space.",
@@ -609,7 +609,7 @@
                 }
             ],
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#maxtypicalage"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/maxtypicalage"
             ],
             "default": null,
             "description": "Specifies the maximum age of the population within the data collection, expressed in years."
@@ -662,7 +662,7 @@
                 }
             ],
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#mintypicalage"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/mintypicalage"
             ],
             "default": null,
             "description": "Specifies the minimum age of the population within the data collection, expressed in years."
@@ -721,7 +721,7 @@
                 }
             ],
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#numberOfRecords"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/numberOfRecords"
             ],
             "default": null,
             "description": "The total number of records in the dataset. The number reflects the total data entries (e.g., consultations, prescriptions, lab results, hospital admissions) according to the dataset's content."
@@ -736,14 +736,14 @@
                 }
             ],
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#numberOfUniqueIndividuals"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/numberOfUniqueIndividuals"
             ],
             "default": null,
             "description": "The number of records for unique individuals represented in the dataset."
         },
         "populationCoverage": {
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#populationcoverage"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/populationcoverage"
             ],
             "default": [],
             "description": "The type of population common to all subjects of the data collection.",
@@ -755,7 +755,7 @@
         "provenance": {
             "closeMatch": [
                 "http://purl.org/dc/terms/provenance",
-                "http://healthdataportal.eu/ns/health#provenance"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/provenance"
             ],
             "default": [],
             "description": "A statement about the lineage of a Dataset. Information about how the data was collected, including methodologies, tools, and protocols used.",
