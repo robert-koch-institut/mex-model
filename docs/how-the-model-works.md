@@ -67,7 +67,9 @@ Within each entity file, the following JSON Schema keywords are used:
 The model currently defines these entity types:
 
 The following overview is generated from the entity schemas in `mex/model/entities/`.
+
 ```{mex-entity-list}
+```
 
 ### `mex/model/extension`
 
