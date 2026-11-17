@@ -62,7 +62,7 @@
         ],
         "exactMatch": [
             "http://purl.org/cld/freq/semiannual",
-            "https://publications.europa.eu/resource/authority/frequency/ANNUAL_2"
+            "http://publications.europa.eu/resource/authority/frequency/ANNUAL_2"
         ],
         "identifier": "https://mex.rki.de/item/frequency-4",
         "inScheme": "https://mex.rki.de/item/frequency",
