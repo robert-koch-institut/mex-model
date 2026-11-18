@@ -1,12 +1,14 @@
 [
     {
-        "definition": {
-            "de": "Internationale Klassifikation der Krankheiten, 10. Revision",
-            "en": "International Classification of Diseases, 10th Revision"
-        },
+        "definition": [
+            {
+                "de": "Internationale Klassifikation der Krankheiten, 10. Revision",
+                "en": "International Classification of Diseases, 10th Revision"
+            }
+        ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q45127",
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICD-10"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICD-10"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-1",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -16,13 +18,15 @@
         }
     },
     {
-        "definition": {
-            "de": "Internationale Klassifikation der Krankheiten, 11. Revision",
-            "en": "International Classification of Diseases, 11th Revision"
-        },
+        "definition": [
+            {
+                "de": "Internationale Klassifikation der Krankheiten, 11. Revision",
+                "en": "International Classification of Diseases, 11th Revision"
+            }
+        ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q55695727",
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICD-11"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICD-11"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-2",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -32,13 +36,15 @@
         }
     },
     {
-        "definition": {
-            "de": "Internationaler Standard zur Kennzeichnung von Laborbefunden, klinischen Messwerten und diagnostischen Befunden",
-            "en": "International standard for identifying laboratory observations, clinical measurements, and diagnostic reports"
-        },
+        "definition": [
+            {
+                "de": "Internationaler Standard zur Kennzeichnung von Laborbefunden, klinischen Messwerten und diagnostischen Befunden",
+                "en": "International standard for identifying laboratory observations, clinical measurements, and diagnostic reports"
+            }
+        ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q502480",
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/LOINC"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/LOINC"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-3",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -48,13 +54,15 @@
         }
     },
     {
-        "definition": {
-            "de": "Umfassende klinische Gesundheitswesensterminologie",
-            "en": "Comprehensive clinical healthcare terminology"
-        },
+        "definition": [
+            {
+                "de": "Umfassende klinische Gesundheitswesensterminologie",
+                "en": "Comprehensive clinical healthcare terminology"
+            }
+        ],
         "exactMatch": [
             "http://www.wikidata.org/entity/Q1753883",
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/SNOMED-CT"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/SNOMED-CT"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-4",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -64,12 +72,14 @@
         }
     },
     {
-        "definition": {
-            "de": "Standardterminologie für pharmazeutische Darreichungsformen, Verabreichungswege und -methoden, Verpackungen sowie damit verbundene Produkteigenschaften",
-            "en": "Standard terminology for pharmaceutical dose forms, routes and methods of administration, packaging, and related product characteristics"
-        },
+        "definition": [
+            {
+                "de": "Standardterminologie für pharmazeutische Darreichungsformen, Verabreichungswege und -methoden, Verpackungen sowie damit verbundene Produkteigenschaften",
+                "en": "Standard terminology for pharmaceutical dose forms, routes and methods of administration, packaging, and related product characteristics"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/EDQM"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/EDQM"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-5",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -79,12 +89,14 @@
         }
     },
     {
-        "definition": {
-            "de": "WHO-Klassifikation zur Dokumentation und Berichterstattung über Gesundheitsmaßnahmen",
-            "en": "WHO classification for documenting and reporting health interventions"
-        },
+        "definition": [
+            {
+                "de": "WHO-Klassifikation zur Dokumentation und Berichterstattung über Gesundheitsmaßnahmen",
+                "en": "WHO classification for documenting and reporting health interventions"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICHI"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICHI"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-6",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -94,12 +106,14 @@
         }
     },
     {
-        "definition": {
-            "de": "Internationale medizinische Terminologie für regulatorische Kommunikation, Kodierung und Sicherheitsberichterstattung",
-            "en": "International medical terminology used for regulatory communication, coding, and safety reporting"
-        },
+        "definition": [
+            {
+                "de": "Internationale medizinische Terminologie für regulatorische Kommunikation, Kodierung und Sicherheitsberichtserstattung",
+                "en": "International medical terminology used for regulatory communication, coding, and safety reporting"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/MEDDRA"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/MEDDRA"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-7",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -109,12 +123,14 @@
         }
     },
     {
-        "definition": {
-            "de": "Kontrollierte Terminologie für die Identifizierung und Kodierung seltener Krankheiten",
-            "en": "Controlled terminology for the identification and coding of rare diseases"
-        },
+        "definition": [
+            {
+                "de": "Kontrollierte Terminologie für die Identifizierung und Kodierung seltener Krankheiten",
+                "en": "Controlled terminology for the identification and coding of rare diseases"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ORPHACODE"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ORPHACODE"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-8",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -124,12 +140,14 @@
         }
     },
     {
-        "definition": {
-            "de": "Standardnomenklatur für Medizinprodukte",
-            "en": "Standard nomenclature for medical devices"
-        },
+        "definition": [
+            {
+                "de": "Standardnomenklatur für Medizinprodukte",
+                "en": "Standard nomenclature for medical devices"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/GMDN"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/GMDN"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-9",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -139,12 +157,14 @@
         }
     },
     {
-        "definition": {
-            "de": "Symbole des HUGO Gene Nomenclature Committee",
-            "en": "Approved gene symbols and names"
-        },
+        "definition": [
+            {
+                "de": "Symbole des HUGO Gene Nomenclature Committee",
+                "en": "Approved gene symbols and names"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/HGNC"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/HGNC"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-10",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -154,12 +174,14 @@
         }
     },
     {
-        "definition": {
-            "de": "Deutscher Operationen- und Prozedurenschlüssel",
-            "en": "German procedure coding system"
-        },
+        "definition": [
+            {
+                "de": "Deutsche Operations- und Prozedurenschlüssel",
+                "en": "German procedure coding system"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/OPS"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/OPS"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-11",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -169,12 +191,14 @@
         }
     },
     {
-        "definition": {
-            "de": "Einheitliche Kodierung für Maßeinheiten",
-            "en": "Standardized coding for measurement units"
-        },
+        "definition": [
+            {
+                "de": "Einheitliche Kodierung für Maßeinheiten",
+                "en": "Standardized coding for measurement units"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/UCUM"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/UCUM"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-12",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -184,12 +208,14 @@
         }
     },
     {
-        "definition": {
-            "de": "Normalisierte Nomenklatur für Arzneimittel",
-            "en": "Normalized naming system for clinical drugs"
-        },
+        "definition": [
+            {
+                "de": "Normalisierte Nomenklatur für Arzneimittel ",
+                "en": "Normalized naming system for clinical drugs"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/RXNORM"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/RXNORM"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-13",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -199,12 +225,14 @@
         }
     },
     {
-        "definition": {
-            "de": "WHO-Klassifikation für Arzneimittel nach Organ oder System und deren therapeutischen, pharmakologischen und chemischen Eigenschaften",
-            "en": "WHO classification system for medicines according to the organ or system they act on and their therapeutic, pharmacological, and chemical properties"
-        },
+        "definition": [
+            {
+                "de": "WHO-Klassifikation für Arzneimittel nach Organ oder System und deren therapeutischen, pharmakologischen und chemischen Eigenschaften",
+                "en": "WHO classification system for medicines according to the organ or system they act on and their therapeutic, pharmacological, and chemical properties"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ATC"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ATC"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-14",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -214,12 +242,14 @@
         }
     },
     {
-        "definition": {
-            "de": "Metathesaurus für die Integration multipler biomedizinischer Vokabulare",
-            "en": "Metathesaurus integrating multiple biomedical vocabularies"
-        },
+        "definition": [
+            {
+                "de": "Metathesaurus für die Integration multipler biomedizinischer Vokabulare",
+                "en": "Metathesaurus integrating multiple biomedical vocabularies"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/UMLS"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/UMLS"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-15",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -229,12 +259,14 @@
         }
     },
     {
-        "definition": {
-            "de": "Klinische Anpassung der ICD-9 für die Diagnosekodierung",
-            "en": "Clinical modification of ICD-9 used for diagnosis coding"
-        },
+        "definition": [
+            {
+                "de": "Klinische Anpassung der ICD-9 für die Diagnosekodierung",
+                "en": "Clinical modification of ICD-9 used for diagnosis coding"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICD-9-CM"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICD-9-CM"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-16",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -244,12 +276,14 @@
         }
     },
     {
-        "definition": {
-            "de": "Klassifizierung der Morphologie und Topografie in der Onkologie",
-            "en": "Oncology morphology and topography classification"
-        },
+        "definition": [
+            {
+                "de": "Klassifizierung der Morphologie und Topografie in der Onkologie",
+                "en": "Oncology morphology and topography classification"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICD-O-3"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICD-O-3"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-17",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -259,12 +293,14 @@
         }
     },
     {
-        "definition": {
-            "de": "WHO-Rahmenwerk für Gesundheit und Behinderung",
-            "en": "WHO framework for health and disability"
-        },
+        "definition": [
+            {
+                "de": "WHO-Rahmenwerk für Gesundheit und Behinderung",
+                "en": "WHO framework for health and disability"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICF"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICF"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-18",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -274,12 +310,14 @@
         }
     },
     {
-        "definition": {
-            "de": "Internationale Klassifikation der Primärversorgung, 3. Ausgabe",
-            "en": "Primary care classification system, 3rd Edition"
-        },
+        "definition": [
+            {
+                "de": "Internationale Klassifikation der Primärversorgung, 3. Ausgabe",
+                "en": "Primary care classification system, 3rd Edition"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICPC-3"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICPC-3"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-19",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -289,12 +327,14 @@
         }
     },
     {
-        "definition": {
-            "de": "Internationale Klassifikation der Primärversorgung, 2. Ausgabe",
-            "en": "Primary care classification system, 2nd Edition"
-        },
+        "definition": [
+            {
+                "de": "Internationale Klassifikation der Primärversorgung, 2. Ausgabe",
+                "en": "Primary care classification system, 2nd Edition"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/ICPC-2"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICPC-2"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-20",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -304,12 +344,14 @@
         }
     },
     {
-        "definition": {
-            "de": "Kontrolliertes Vokabular für biomedizinische Literatur",
-            "en": "Controlled vocabulary for biomedical literature"
-        },
+        "definition": [
+            {
+                "de": "Kontrolliertes Vokabular für biomedizinische Literatur",
+                "en": "Controlled vocabulary for biomedical literature"
+            }
+        ],
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/coding-system/MESH"
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/MESH"
         ],
         "identifier": "https://mex.rki.de/item/coding-system-21",
         "inScheme": "https://mex.rki.de/item/coding-system",
@@ -319,7 +361,194 @@
         }
     },
     {
+        "definition": [
+            {
+                "de": "Nationale Prozedurenkodes",
+                "en": "National procedure codes"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/PROC-CODES-NAT"
+        ],
         "identifier": "https://mex.rki.de/item/coding-system-22",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "PROC-CODES-NAT",
+            "en": "PROC-CODES-NAT"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Europäische Nomenklatur für Medizinprodukte",
+                "en": "European Medical Device Nomenclature"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/EMDN"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-23",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "EMDN",
+            "en": "EMDN"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Nationale ICD-10-Varianten",
+                "en": "National ICD-10 variants"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ICD-10-NAT"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-24",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "ICD-10-NAT",
+            "en": "ICD-10-NAT"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Orphanet-Ontologie für seltene Krankheiten",
+                "en": "Orphanet Rare Disease Ontology"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/ORDO"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-25",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "ORDO",
+            "en": "ORDO"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "OHDSI-standardisierte Vokabulare",
+                "en": "OHDSI Standardized Vocabularies"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/OHDSI-VOCAB"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-26",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "OHDSI-VOCAB",
+            "en": "OHDSI-VOCAB"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Substanzen, Produkte, Organisationen und Referenzen der Europäischen Arzneimittel-Agentur",
+                "en": "European Medicines Agency Substances, Products, Organisations and Referentials"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/EMA-SPOR"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-27",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "EMA-SPOR",
+            "en": "EMA-SPOR"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Kontrollierte Terminologie für digitale Bildgebung und Kommunikation in der Medizin",
+                "en": "Digital Imaging and Communications in Medicine Controlled Terminology"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/DICOM-CT"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-28",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "DICOM-CT",
+            "en": "DICOM-CT"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "WHODrug Global",
+                "en": "WHODrug Global"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/WHODRUG"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-29",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "WHODRUG",
+            "en": "WHODRUG"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Thesaurus des National Cancer Institute",
+                "en": "National Cancer Institute Thesaurus"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/NCIT"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-30",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "NCIT",
+            "en": "NCIT"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Ontologie des menschlichen Phänotyps",
+                "en": "Human Phenotype Ontology"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/HPO"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-31",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "HPO",
+            "en": "HPO"
+        }
+    },
+    {
+        "definition": [
+            {
+                "de": "Nomenklatur für Eigenschaften und Einheiten",
+                "en": "Nomenclature for Properties and Units"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/NPU"
+        ],
+        "identifier": "https://mex.rki.de/item/coding-system-32",
+        "inScheme": "https://mex.rki.de/item/coding-system",
+        "prefLabel": {
+            "de": "NPU",
+            "en": "NPU"
+        }
+    },
+    {
+        "identifier": "https://mex.rki.de/item/coding-system-33",
         "inScheme": "https://mex.rki.de/item/coding-system",
         "prefLabel": {
             "de": "Sonstiges",

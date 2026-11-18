@@ -62,10 +62,13 @@
         },
         "analytics": {
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#analytics"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/analytics"
             ],
             "default": [],
             "description": "An analytics distribution of the dataset.",
+            "exactMatch": [
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/analytics"
+            ],
             "items": {
                 "$ref": "/mex/model/entities/merged-distribution#/identifier"
             },
@@ -88,15 +91,13 @@
                 "http://purl.org/dc/terms/conformsTo"
             ],
             "default": [],
-            "description": "Standards used in the creation, analysis or transmission of the resource.",
+            "description": "Standards used in the creation, analysis or transmission of the resource. The Health Standards controlled vocabulary must be used.",
             "items": {
+                "$ref": "/mex/model/entities/concept#/identifier",
                 "examples": [
-                    "FHIR",
-                    "LOINC",
-                    "SNOMED",
-                    "ICD-10"
+                    "https://mex.rki.de/item/health-standard-1"
                 ],
-                "type": "string"
+                "useScheme": "https://mex.rki.de/item/health-standard"
             },
             "type": "array"
         },
@@ -109,9 +110,6 @@
                 "anyOf": [
                     {
                         "$ref": "/mex/model/entities/merged-organizational-unit#/identifier"
-                    },
-                    {
-                        "$ref": "/mex/model/entities/merged-person#/identifier"
                     },
                     {
                         "$ref": "/mex/model/entities/merged-contact-point#/identifier"
@@ -202,11 +200,11 @@
             "closeMatch": [
                 "http://purl.org/dc/terms/description"
             ],
-            "default": [],
             "description": "A text describing the nature of the resource.",
             "items": {
                 "$ref": "/mex/model/fields/text"
             },
+            "minItems": 1,
             "type": "array"
         },
         "distribution": {
@@ -219,7 +217,7 @@
         },
         "documentation": {
             "closeMatch": [
-                "http://purl.org/dc/terms/isReferencedBy"
+                "http://xmlns.com/foaf/0.1/page"
             ],
             "default": [],
             "description": "A link to a document documenting the resource.",
@@ -304,6 +302,18 @@
             },
             "type": "array"
         },
+        "geopoliticalResolution": {
+            "default": [],
+            "description": "Geopolitical resolution or administrative level of the location information of the resource.",
+            "items": {
+                "$ref": "/mex/model/entities/concept#/identifier",
+                "examples": [
+                    "https://mex.rki.de/item/geopolitical-resolution-1"
+                ],
+                "useScheme": "https://mex.rki.de/item/geopolitical-resolution"
+            },
+            "type": "array"
+        },
         "hadPrimarySource": {
             "$ref": "/mex/model/entities/merged-primary-source#/identifier",
             "closeMatch": [
@@ -313,7 +323,7 @@
         },
         "hasCodeValues": {
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#hasCodeValues"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/hasCodeValues"
             ],
             "default": [],
             "description": "The code values of the respective coding systems that are applied to the dataset, for example code value 'U07.1' as used in the coding system 'ICD-10'.",
@@ -324,7 +334,7 @@
         },
         "hasCodingSystem": {
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#hasCodingSystem"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/hasCodingSystem"
             ],
             "default": [],
             "description": "Coding systems in use (e.g. ICD-10, SNOMED-CT).",
@@ -413,7 +423,7 @@
         },
         "healthCategory": {
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#healthCategory"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/healthCategory"
             ],
             "default": [],
             "description": "The category of electronic data for secondary use to which this resource belongs, as described in Article 51 of the Commission Regulation on the European Health Data Space.",
@@ -510,11 +520,18 @@
             "closeMatch": [
                 "http://www.w3.org/ns/dcat#keyword"
             ],
-            "default": [],
             "description": "A keyword or tag describing the resource.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "anyOf": [
+                    {
+                        "$ref": "/mex/model/fields/text"
+                    },
+                    {
+                        "$ref": "/mex/model/fields/link"
+                    }
+                ]
             },
+            "minItems": 1,
             "type": "array"
         },
         "landingPage": {
@@ -592,7 +609,7 @@
                 }
             ],
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#maxtypicalage"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/maxtypicalage"
             ],
             "default": null,
             "description": "Specifies the maximum age of the population within the data collection, expressed in years."
@@ -645,7 +662,7 @@
                 }
             ],
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#mintypicalage"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/mintypicalage"
             ],
             "default": null,
             "description": "Specifies the minimum age of the population within the data collection, expressed in years."
@@ -704,7 +721,7 @@
                 }
             ],
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#numberOfRecords"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/numberOfRecords"
             ],
             "default": null,
             "description": "The total number of records in the dataset. The number reflects the total data entries (e.g., consultations, prescriptions, lab results, hospital admissions) according to the dataset's content."
@@ -719,14 +736,14 @@
                 }
             ],
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#numberOfUniqueIndividuals"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/numberOfUniqueIndividuals"
             ],
             "default": null,
             "description": "The number of records for unique individuals represented in the dataset."
         },
         "populationCoverage": {
             "closeMatch": [
-                "http://healthdataportal.eu/ns/health#populationcoverage"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/populationcoverage"
             ],
             "default": [],
             "description": "The type of population common to all subjects of the data collection.",
@@ -738,7 +755,7 @@
         "provenance": {
             "closeMatch": [
                 "http://purl.org/dc/terms/provenance",
-                "http://healthdataportal.eu/ns/health#provenance"
+                "https://data.health.europa.eu/healthdcat-ap/ns/health/provenance"
             ],
             "default": [],
             "description": "A statement about the lineage of a Dataset. Information about how the data was collected, including methodologies, tools, and protocols used.",
@@ -774,6 +791,17 @@
             "description": "Any additional information about the resource",
             "items": {
                 "$ref": "/mex/model/fields/text"
+            },
+            "type": "array"
+        },
+        "relatedActivity": {
+            "closeMatch": [
+                "http://purl.org/dc/terms/relation"
+            ],
+            "default": [],
+            "description": "An Activity that is related to the Resource.",
+            "items": {
+                "$ref": "/mex/model/entities/merged-activity#/identifier"
             },
             "type": "array"
         },
@@ -879,9 +907,9 @@
                 "http://purl.org/dc/terms/spatial"
             ],
             "default": [],
-            "description": "Spatial coverage of the resource.",
+            "description": "Location or geographic region covered by the resource.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "$ref": "/mex/model/entities/merged-location#/identifier"
             },
             "type": "array"
         },
@@ -1076,9 +1104,11 @@
     "required": [
         "accessRestriction",
         "contact",
+        "description",
         "hadPrimarySource",
         "identifier",
         "identifierInPrimarySource",
+        "keyword",
         "resourceCreationMethod",
         "stableTargetId",
         "theme",
