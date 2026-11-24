@@ -2,6 +2,7 @@ from collections.abc import Mapping
 
 import pytest
 from check_schemas import (
+    find_malformed_msgid_violations,
     find_misplaced_translation_violations,
     find_missing_entity_label_violations,
     find_missing_plural_translation_violations,
@@ -329,4 +330,65 @@ def test_misplaced_translation_violations_are_detected(
     violations = find_misplaced_translation_violations(
         field_names_by_entity, po_data_by_language
     )
+    assert violations == expected
+
+
+@pytest.mark.parametrize(
+    ("po_data_by_language", "expected"),
+    [
+        pytest.param(
+            {
+                "en": 'msgid "Resource"\nmsgstr "Resource"\n'
+                "\n"
+                'msgid "title.description"\nmsgstr "Name"\n'
+                "\n"
+                'msgid "keyword.singular"\n'
+                'msgid_plural "keyword.plural"\n'
+                'msgstr[0] "Keyword"\n'
+                'msgstr[1] "Keywords"\n'
+            },
+            [],
+            id="well-formed",
+        ),
+        pytest.param(
+            {"en": 'msgctxt "Activity"\nmsgid "title.singluar"\nmsgstr "Title"\n'},
+            ["en: msgid 'title.singluar' has invalid suffix 'singluar'"],
+            id="invalid-suffix",
+        ),
+        pytest.param(
+            {
+                "en": 'msgid "keyword.singular"\n'
+                'msgid_plural "keywords.plural"\n'
+                'msgstr[0] "Keyword"\n'
+                'msgstr[1] "Keywords"\n'
+            },
+            [
+                (
+                    "en: msgid 'keyword.singular' has msgid_plural 'keywords.plural', "
+                    "expected 'keyword.plural'"
+                )
+            ],
+            id="mismatched-msgid-plural",
+        ),
+        pytest.param(
+            {
+                "en": 'msgid "keyword.description"\n'
+                'msgid_plural "keyword.plural"\n'
+                'msgstr[0] "Keyword"\n'
+                'msgstr[1] "Keywords"\n'
+            },
+            [
+                (
+                    "en: msgid 'keyword.description' has a msgid_plural but is not "
+                    "a .singular msgid"
+                )
+            ],
+            id="msgid-plural-on-non-singular",
+        ),
+    ],
+)
+def test_malformed_msgid_violations_are_detected(
+    po_data_by_language: dict[str, str], expected: list[str]
+) -> None:
+    violations = find_malformed_msgid_violations(po_data_by_language)
     assert violations == expected

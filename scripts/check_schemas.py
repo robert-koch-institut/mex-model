@@ -497,6 +497,41 @@ def find_misplaced_translation_violations(
     return violations
 
 
+MSGID_SUFFIXES = ("singular", "description")
+
+
+def find_malformed_msgid_violations(po_data_by_language: dict[str, str]) -> list[str]:
+    """Check that msgid suffixes and msgid_plural keys follow the naming scheme.
+
+    A dotted msgid must end in one of `MSGID_SUFFIXES`; bare msgids (entity
+    labels, `supersededBy`) are not checked. A `msgid_plural` is only allowed
+    on a `<field>.singular` msgid and must be `<field>.plural`.
+    """
+    violations: list[str] = []
+    for language, po_text in sorted(po_data_by_language.items()):
+        for _, msgid in sorted(_extract_msgids(po_text), key=lambda key: key[1]):
+            _, dot, suffix = msgid.partition(".")
+            if dot and suffix not in MSGID_SUFFIXES:
+                violations.append(
+                    f"{language}: msgid {msgid!r} has invalid suffix {suffix!r}"
+                )
+        for _, msgid, plural in sorted(
+            _extract_plural_msgids(po_text), key=lambda key: key[1:]
+        ):
+            field, _, suffix = msgid.partition(".")
+            if suffix == "singular" and plural != f"{field}.plural":
+                violations.append(
+                    f"{language}: msgid {msgid!r} has msgid_plural {plural!r}, "
+                    f"expected {field + '.plural'!r}"
+                )
+            elif suffix != "singular":
+                violations.append(
+                    f"{language}: msgid {msgid!r} has a msgid_plural but is not "
+                    "a .singular msgid"
+                )
+    return violations
+
+
 def find_missing_entity_label_violations(
     entity_names: Iterable[str], po_data_by_language: dict[str, str]
 ) -> list[str]:
@@ -708,6 +743,7 @@ def _collect_violations() -> list[str]:
     violations += find_misplaced_translation_violations(
         field_names_by_entity, I18N_PO_DATA_BY_LANGUAGE
     )
+    violations += find_malformed_msgid_violations(I18N_PO_DATA_BY_LANGUAGE)
     for name, schema in sorted(all_entities.items()):
         violations += find_meta_schema_violations(name, schema)
         violations += find_id_path_violations(name, "entities", schema)
