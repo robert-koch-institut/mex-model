@@ -7,7 +7,7 @@ msgstr ""
 
 msgctxt "Activity"
 msgid "abstract.singular"
-msgstr "Kurzbeschreibung"
+msgstr "Short description"
 
 msgctxt "Activity"
 msgid "abstract.description"
@@ -444,10 +444,6 @@ msgid "end.description"
 msgstr "The end of the time period covered by the data"
 
 msgctxt "ResourceSeries"
-msgid "end.singular"
-msgstr "End"
-
-msgctxt "ResourceSeries"
 msgid "end.description"
 msgstr "The end of the time period covered by the collection"
 
@@ -538,11 +534,11 @@ msgstr "GeoNames is a online database of places worldwide. It helps standardize 
 
 msgctxt "Resource"
 msgid "geopoliticalResolution.singular"
-msgstr "geopolitical resolution"
+msgstr "Geopolitical resolution"
 
 msgctxt "Resource"
 msgid "geopoliticalResolution.description"
-msgstr "geopoliticial resolution or administrativel level of the location information of the dataset"
+msgstr "Geopolitical resolution or administrative level of the location information of the dataset"
 
 msgctxt "Organization"
 msgid "geprisId.singular"
@@ -635,20 +631,6 @@ msgstr ""
 "A detailed description of purpose for which the data was originally collected"
 
 msgctxt "Resource"
-msgid "hasVersion.description"
-msgstr "A related dataset that is a version, edition, or adaptation of the described dataset"
-
-msgctxt "Resource"
-msgid "hasVersion.singular"
-msgid_plural "hasVersion.plural"
-msgstr[0] "Version of the described dataset"
-msgstr[1] "Versions of the described dataset"
-
-msgctxt "Resource"
-msgid "hasVersion.description"
-msgstr "A related dataset that is a version, edition, or adaptation of the described dataset"
-
-msgctxt "Resource"
 msgid "hasVersion.singular"
 msgid_plural "hasVersion.plural"
 msgstr[0] "Version of the described dataset"
@@ -718,7 +700,7 @@ msgstr "This dataset is the last dataset in the linked data series"
 
 msgctxt "Resource"
 msgid "instrumentToolOrApparatus.singular"
-msgid_plural "usedInstrumentToolOrApparatus.plural"
+msgid_plural "instrumentToolOrApparatus.plural"
 msgstr[0] "Tool"
 msgstr[1] "Tools"
 
@@ -747,7 +729,7 @@ msgctxt "Activity"
 msgid "involvedUnit.description"
 msgstr "Organizational unit(s) involved in the project/endeavor"
 
-msgctxt "Activity"
+msgctxt "BibliographicResource"
 msgid "isbnIssn.singular"
 msgstr "ISBN / ISSN"
 

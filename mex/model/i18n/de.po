@@ -443,6 +443,11 @@ msgstr "Ende"
 msgctxt "Resource"
 msgid "end.description"
 msgstr "Ende des Zeitraumes, den die Daten abdecken"
+
+msgctxt "ResourceSeries"
+msgid "end.description"
+msgstr "Ende des Zeitraumes, den die Kollektion abdeckt"
+
 msgctxt "AccessPlatform"
 msgid "endpointDescription.singular"
 msgstr "Schnittstellen-Beschreibung"
@@ -708,7 +713,7 @@ msgstr "Der vorliegende Datensatz ist der letzte Datensatz in der verknüpften D
 
 msgctxt "Resource"
 msgid "instrumentToolOrApparatus.singular"
-msgid_plural "usedInstrumentToolOrApparatus.plural"
+msgid_plural "instrumentToolOrApparatus.plural"
 msgstr[0] "Tool"
 msgstr[1] "Tools"
 
@@ -738,7 +743,7 @@ msgctxt "Activity"
 msgid "involvedUnit.description"
 msgstr "An dem Projekt/Vorhaben mitwirkende Fachgebiete"
 
-msgctxt "Activity"
+msgctxt "BibliographicResource"
 msgid "isbnIssn.singular"
 msgstr "ISBN / ISSN"
 
@@ -947,16 +952,6 @@ msgstr "Letzte Änderung"
 
 msgid "modified.description"
 msgstr "Datum, an dem die Daten zuletzt verändert worden sind"
-
-msgctxt "Location"
-msgid "name.singular"
-msgid_plural "officialName.plural"
-msgstr[0] "Name"
-msgstr[1] "Namen"
-
-msgctxt "Location"
-msgid "name.description"
-msgstr "Bezeichnung des Ortes"
 
 msgctxt "Organization"
 msgid "officialName.singular"
