@@ -368,7 +368,7 @@
     },
     {
         "exactMatch": [
-            "http://www.w3.org/2001/XMLSchema#duration"
+            "http://www.w3.org/2001/XMLSchema#gYearMonth"
         ],
         "identifier": "https://mex.rki.de/item/datatype-standardized-14",
         "inScheme": "https://mex.rki.de/item/datatype-standardized",
