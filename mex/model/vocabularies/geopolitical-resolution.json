@@ -128,14 +128,14 @@
                 "en": "Three digit postal code"
             }
         ],
-        "closeMatch": [
-            "http://d-nb.info/gnd/4316292-7 "
-        ],
         "definition": [
             {
                 "de": "Die ersten drei Ziffern der eigentlich 5-stelligen Postleitzahl.",
                 "en": "First three digits of the five digit postal code."
             }
+        ],
+        "exactMatch": [
+            "http://d-nb.info/gnd/4316292-7 "
         ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-8",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
