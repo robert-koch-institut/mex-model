@@ -31,6 +31,7 @@ EXCLUDED_PROVENANCE_FIELDS = frozenset(
 ANNOTATION_URI_KEYS = ("closeMatch", "exactMatch", "sameAs", "subPropertyOf")
 MSGID_PATTERN = re.compile(r'^msgid "((?:[^"\\]|\\.)*)"')
 MSGCTXT_PATTERN = re.compile(r'^msgctxt "((?:[^"\\]|\\.)*)"')
+MSGID_PLURAL_PATTERN = re.compile(r'^msgid_plural "((?:[^"\\]|\\.)*)"')
 
 
 def _iter_use_scheme_nodes(node: object) -> Iterator[dict[str, Any]]:
@@ -374,6 +375,28 @@ def _extract_msgids(po_text: str) -> set[tuple[str | None, str]]:
     return msgids
 
 
+def _extract_plural_msgids(po_text: str) -> set[tuple[str | None, str, str]]:
+    """Extract all `(msgctxt, msgid, msgid_plural)` triples from a .po file's text.
+
+    Only entries that declare an `msgid_plural` are returned, paired with the
+    singular `msgid` of the same entry.
+    """
+    plurals: set[tuple[str | None, str, str]] = set()
+    context: str | None = None
+    msgid: str | None = None
+    for line in po_text.splitlines():
+        if match := MSGCTXT_PATTERN.match(line):
+            context = match.group(1)
+        elif match := MSGID_PATTERN.match(line):
+            msgid = match.group(1)
+        elif (match := MSGID_PLURAL_PATTERN.match(line)) and msgid is not None:
+            plurals.add((context, msgid, match.group(1)))
+        elif not line.strip():
+            context = None
+            msgid = None
+    return plurals
+
+
 def _has_msgid(
     msgids: set[tuple[str | None, str]], entity_name: str, msgid: str
 ) -> bool:
@@ -407,6 +430,30 @@ def find_missing_translation_violations(
                     violations.append(f"{prefix}.singular")
                 if not _has_msgid(msgids, entity_name, f"{field}.description"):
                     violations.append(f"{prefix}.description")
+    return violations
+
+
+def find_missing_plural_translation_violations(
+    array_field_names_by_entity: Mapping[str, Iterable[str]],
+    po_data_by_language: dict[str, str],
+) -> list[str]:
+    """Check that every array field has a plural label in each .po file.
+
+    The plural label is an entry with `msgid "<field>.singular"` and
+    `msgid_plural "<field>.plural"`. Like the singular label, it must either
+    carry the entity's own `msgctxt` or no `msgctxt` at all.
+    """
+    violations: list[str] = []
+    for language, po_text in sorted(po_data_by_language.items()):
+        plurals = _extract_plural_msgids(po_text)
+        for entity_name, field_names in sorted(array_field_names_by_entity.items()):
+            for field in sorted(set(field_names)):
+                pair = (f"{field}.singular", f"{field}.plural")
+                if (None, *pair) not in plurals and (entity_name, *pair) not in plurals:
+                    violations.append(
+                        f"{language}: no plural translation found for "
+                        f"{entity_name}.{field}.plural"
+                    )
     return violations
 
 
@@ -631,15 +678,24 @@ def _collect_violations() -> list[str]:
     )
     violations += find_orphaned_field_violations(FIELD_JSON_BY_NAME, all_entities)
     field_names_by_entity: dict[str, set[str]] = {}
+    array_field_names_by_entity: dict[str, set[str]] = {}
     for stem, schema in all_entities.items():
-        field_names_by_entity.setdefault(
-            _entity_name_from_file_stem(stem), set()
-        ).update(schema.get("properties", {}))
+        entity_name = _entity_name_from_file_stem(stem)
+        properties = schema.get("properties", {})
+        field_names_by_entity.setdefault(entity_name, set()).update(properties)
+        array_field_names_by_entity.setdefault(entity_name, set()).update(
+            name
+            for name, definition in properties.items()
+            if definition.get("type") == "array"
+        )
     violations += find_missing_entity_label_violations(
         field_names_by_entity, I18N_PO_DATA_BY_LANGUAGE
     )
     violations += find_missing_translation_violations(
         field_names_by_entity, I18N_PO_DATA_BY_LANGUAGE
+    )
+    violations += find_missing_plural_translation_violations(
+        array_field_names_by_entity, I18N_PO_DATA_BY_LANGUAGE
     )
     violations += find_misplaced_translation_violations(
         field_names_by_entity, I18N_PO_DATA_BY_LANGUAGE

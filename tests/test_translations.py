@@ -4,6 +4,7 @@ import pytest
 from check_schemas import (
     find_misplaced_translation_violations,
     find_missing_entity_label_violations,
+    find_missing_plural_translation_violations,
     find_missing_translation_violations,
 )
 
@@ -129,6 +130,87 @@ def test_missing_translation_violations_are_detected(
 ) -> None:
     violations = find_missing_translation_violations(
         field_names_by_entity, po_data_by_language
+    )
+    assert violations == expected
+
+
+@pytest.mark.parametrize(
+    ("array_field_names_by_entity", "po_data_by_language", "expected"),
+    [
+        pytest.param(
+            {"Resource": {"keyword"}},
+            {
+                "en": 'msgid "keyword.singular"\n'
+                'msgid_plural "keyword.plural"\n'
+                'msgstr[0] "Keyword"\n'
+                'msgstr[1] "Keywords"\n'
+            },
+            [],
+            id="plural-present",
+        ),
+        pytest.param(
+            {"Resource": {"keyword"}},
+            {"en": 'msgid "keyword.singular"\nmsgstr "Keyword"\n'},
+            ["en: no plural translation found for Resource.keyword.plural"],
+            id="singular-only",
+        ),
+        pytest.param(
+            {"Resource": {"keyword"}},
+            {"en": 'msgid "keyword.plural"\nmsgstr "Keywords"\n'},
+            ["en: no plural translation found for Resource.keyword.plural"],
+            id="standalone-plural-msgid-does-not-count",
+        ),
+        pytest.param(
+            {"Resource": {"keyword"}},
+            {
+                "en": 'msgid "keyword.singular"\n'
+                'msgid_plural "keywords"\n'
+                'msgstr[0] "Keyword"\n'
+                'msgstr[1] "Keywords"\n'
+            },
+            ["en: no plural translation found for Resource.keyword.plural"],
+            id="wrong-msgid-plural",
+        ),
+        pytest.param(
+            {"Resource": {"keyword"}, "ResourceSeries": {"keyword"}},
+            {
+                "de": 'msgid "keyword.singular"\n'
+                'msgid_plural "keyword.plural"\n'
+                'msgstr[0] "Schlagwort"\n'
+                'msgstr[1] "Schlagwörter"\n',
+                "en": 'msgctxt "Resource"\n'
+                'msgid "keyword.singular"\n'
+                'msgid_plural "keyword.plural"\n'
+                'msgstr[0] "Keyword"\n'
+                'msgstr[1] "Keywords"\n',
+            },
+            ["en: no plural translation found for ResourceSeries.keyword.plural"],
+            id="ignores-other-entities-context",
+        ),
+        pytest.param(
+            {"Resource": {"keyword"}},
+            {
+                "en": 'msgctxt "Resource"\n'
+                'msgid "abstract.singular"\n'
+                'msgstr "Abstract"\n'
+                "\n"
+                'msgid "keyword.singular"\n'
+                'msgid_plural "keyword.plural"\n'
+                'msgstr[0] "Keyword"\n'
+                'msgstr[1] "Keywords"\n'
+            },
+            [],
+            id="context-resets-on-blank-line",
+        ),
+    ],
+)
+def test_missing_plural_translation_violations_are_detected(
+    array_field_names_by_entity: Mapping[str, set[str]],
+    po_data_by_language: dict[str, str],
+    expected: list[str],
+) -> None:
+    violations = find_missing_plural_translation_violations(
+        array_field_names_by_entity, po_data_by_language
     )
     assert violations == expected
 
