@@ -73,8 +73,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `access-restriction.json`: add exactMatches to the EU access-right vocabulary
 - `coding-system.json`: add concepts EMDN, DICOM-CT, EMA-SPOR, NCIT, HPO, ORDO,
   OHDSI-VOCAB, NPU, WHODRUG and ICD-10-NAT, and update matches to HealthDCAT-AP
-  Release 8 URIs. BREAKING: `coding-system-22` changes from "Other" to
-  PROC-CODES-NAT; "Other" is now `coding-system-33`
+  Release 8 URIs.
 - `frequency.json`: add concepts "every 5 years", "every 10 years", "as needed",
   "never" and "other", and exactMatches to the EU frequency vocabulary (RKIMEX-43).
   BREAKING: remove `frequency-5` (three times a year), `frequency-9` (semimonthly),

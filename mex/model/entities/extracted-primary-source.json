@@ -6,7 +6,7 @@
     "closeMatch": [
         "http://www.w3.org/ns/prov#PrimarySource"
     ],
-    "description": "A collection of information, that is managed and curated by an RKI unit and lists activities and/or resources.",
+    "description": "A collection of information that is managed and curated by an RKI unit and lists activities and/or resources.",
     "properties": {
         "alternativeTitle": {
             "closeMatch": [
