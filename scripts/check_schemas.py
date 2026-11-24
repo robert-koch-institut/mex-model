@@ -32,6 +32,8 @@ ANNOTATION_URI_KEYS = ("closeMatch", "exactMatch", "sameAs", "subPropertyOf")
 MSGID_PATTERN = re.compile(r'^msgid "((?:[^"\\]|\\.)*)"')
 MSGCTXT_PATTERN = re.compile(r'^msgctxt "((?:[^"\\]|\\.)*)"')
 MSGID_PLURAL_PATTERN = re.compile(r'^msgid_plural "((?:[^"\\]|\\.)*)"')
+MSGSTR_PATTERN = re.compile(r'^msgstr(?:\[\d+\])? "((?:[^"\\]|\\.)*)"')
+CONTINUATION_PATTERN = re.compile(r'^"((?:[^"\\]|\\.)*)"')
 
 
 def _iter_use_scheme_nodes(node: object) -> Iterator[dict[str, Any]]:
@@ -357,44 +359,50 @@ def find_unresolved_use_scheme_violations(
     return violations
 
 
-def _extract_msgids(po_text: str) -> set[tuple[str | None, str]]:
-    """Extract all `(msgctxt, msgid)` pairs from a raw .po file's text.
+def _iter_translated_entries(
+    po_text: str,
+) -> Iterator[tuple[str | None, str, str | None]]:
+    """Yield `(msgctxt, msgid, msgid_plural)` for each translated .po entry.
 
     Entries without an `msgctxt` yield a `None` context; those act as the
-    fallback that applies to every entity.
+    fallback that applies to every entity. Entries with an empty `msgstr` (or
+    an empty `msgstr[n]` plural form) are skipped, because gettext falls back
+    to the raw msgid for them. A multi-line `msgstr ""` followed by
+    continuation lines counts as translated.
     """
-    msgids: set[tuple[str | None, str]] = set()
-    context: str | None = None
-    for line in po_text.splitlines():
-        if match := MSGCTXT_PATTERN.match(line):
-            context = match.group(1)
-        elif match := MSGID_PATTERN.match(line):
-            msgids.add((context, match.group(1)))
-        elif not line.strip():
-            context = None
-    return msgids
-
-
-def _extract_plural_msgids(po_text: str) -> set[tuple[str | None, str, str]]:
-    """Extract all `(msgctxt, msgid, msgid_plural)` triples from a .po file's text.
-
-    Only entries that declare an `msgid_plural` are returned, paired with the
-    singular `msgid` of the same entry.
-    """
-    plurals: set[tuple[str | None, str, str]] = set()
     context: str | None = None
     msgid: str | None = None
-    for line in po_text.splitlines():
+    plural: str | None = None
+    msgstrs: list[bool] = []
+    for line in [*po_text.splitlines(), ""]:
         if match := MSGCTXT_PATTERN.match(line):
             context = match.group(1)
         elif match := MSGID_PATTERN.match(line):
             msgid = match.group(1)
-        elif (match := MSGID_PLURAL_PATTERN.match(line)) and msgid is not None:
-            plurals.add((context, msgid, match.group(1)))
+        elif match := MSGID_PLURAL_PATTERN.match(line):
+            plural = match.group(1)
+        elif match := MSGSTR_PATTERN.match(line):
+            msgstrs.append(bool(match.group(1)))
+        elif (match := CONTINUATION_PATTERN.match(line)) and msgstrs:
+            msgstrs[-1] = msgstrs[-1] or bool(match.group(1))
         elif not line.strip():
-            context = None
-            msgid = None
-    return plurals
+            if msgid is not None and msgstrs and all(msgstrs):
+                yield context, msgid, plural
+            context, msgid, plural, msgstrs = None, None, None, []
+
+
+def _extract_msgids(po_text: str) -> set[tuple[str | None, str]]:
+    """Extract the `(msgctxt, msgid)` pairs of all translated .po entries."""
+    return {(context, msgid) for context, msgid, _ in _iter_translated_entries(po_text)}
+
+
+def _extract_plural_msgids(po_text: str) -> set[tuple[str | None, str, str]]:
+    """Extract the `(msgctxt, msgid, msgid_plural)` triples of translated entries."""
+    return {
+        (context, msgid, plural)
+        for context, msgid, plural in _iter_translated_entries(po_text)
+        if plural is not None
+    }
 
 
 def _has_msgid(

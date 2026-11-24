@@ -121,6 +121,29 @@ from check_schemas import (
             ["en: no translation found for ResourceSeries.abstract.description"],
             id="context-resets-on-blank-line",
         ),
+        pytest.param(
+            {"Resource": {"abstract"}},
+            {
+                "en": 'msgid "abstract.singular"\nmsgstr ""\n'
+                "\n"
+                'msgid "abstract.description"\nmsgstr ""\n'
+            },
+            [
+                "en: no translation found for Resource.abstract.singular",
+                "en: no translation found for Resource.abstract.description",
+            ],
+            id="empty-msgstr-counts-as-missing",
+        ),
+        pytest.param(
+            {"Resource": {"abstract"}},
+            {
+                "en": 'msgid "abstract.singular"\nmsgstr ""\n"Abs"\n"tract"\n'
+                "\n"
+                'msgid "abstract.description"\nmsgstr "Summary"\n'
+            },
+            [],
+            id="multi-line-msgstr-is-not-empty",
+        ),
     ],
 )
 def test_missing_translation_violations_are_detected(
@@ -202,6 +225,17 @@ def test_missing_translation_violations_are_detected(
             [],
             id="context-resets-on-blank-line",
         ),
+        pytest.param(
+            {"Resource": {"keyword"}},
+            {
+                "en": 'msgid "keyword.singular"\n'
+                'msgid_plural "keyword.plural"\n'
+                'msgstr[0] "Keyword"\n'
+                'msgstr[1] ""\n'
+            },
+            ["en: no plural translation found for Resource.keyword.plural"],
+            id="empty-plural-form-counts-as-missing",
+        ),
     ],
 )
 def test_missing_plural_translation_violations_are_detected(
@@ -235,6 +269,12 @@ def test_missing_plural_translation_violations_are_detected(
             {"en": 'msgctxt "Resource"\nmsgid "ResourceSeries"\nmsgstr "Collection"\n'},
             ["en: no translation found for entity 'ResourceSeries'"],
             id="entity-label-must-be-context-free",
+        ),
+        pytest.param(
+            {"ResourceSeries"},
+            {"en": 'msgid "ResourceSeries"\nmsgstr ""\n'},
+            ["en: no translation found for entity 'ResourceSeries'"],
+            id="entity-label-empty",
         ),
     ],
 )
