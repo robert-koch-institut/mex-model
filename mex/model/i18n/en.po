@@ -571,7 +571,7 @@ msgstr[1] "GeoNames IDs"
 msgctxt "Location"
 msgid "geoNamesId.description"
 msgstr ""
-"GeoNames is a online database of places worldwide. It helps standardize place names "
+"GeoNames is an online database of places worldwide. It helps standardize place names "
 "and ensures they are recorded consistently"
 
 msgctxt "Organization"
