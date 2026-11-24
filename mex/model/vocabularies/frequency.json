@@ -1,9 +1,11 @@
 [
     {
-        "definition": {
-            "de": "Das Ereignis findet alle drei Jahre statt.",
-            "en": "The event occurs every three years."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis findet alle drei Jahre statt.",
+                "en": "The event occurs every three years."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/triennial"
         ],
@@ -15,10 +17,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Das Ereignis findet alle zwei Jahre statt.",
-            "en": "The event occurs every two years."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis findet alle zwei Jahre statt.",
+                "en": "The event occurs every two years."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/biennial"
         ],
@@ -30,10 +34,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Das Ereignis findet einmal im Jahr statt.",
-            "en": "The event occurs once a year."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis findet einmal im Jahr statt.",
+                "en": "The event occurs once a year."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/annual"
         ],
@@ -45,10 +51,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Das Ereignis findet zweimal im Jahr statt.",
-            "en": "The event occurs twice a year."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis findet zweimal im Jahr statt.",
+                "en": "The event occurs twice a year."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/semiannual"
         ],
@@ -60,10 +68,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Das Ereignis findet dreimal im Jahr statt.",
-            "en": "The event occurs three times a year."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis findet dreimal im Jahr statt.",
+                "en": "The event occurs three times a year."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/threeTimesAYear"
         ],
@@ -75,10 +85,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Das Ereignis findet alle drei Monate statt.",
-            "en": "The event occurs every three months."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis findet alle drei Monate statt.",
+                "en": "The event occurs every three months."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/quarterly"
         ],
@@ -90,10 +102,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Das Ereignis findet alle zwei Monate statt.",
-            "en": "The event occurs every two months."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis findet alle zwei Monate statt.",
+                "en": "The event occurs every two months."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/bimonthly"
         ],
@@ -105,10 +119,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Das Ereignis findet einmal im Monat statt.",
-            "en": "The event occurs once a month."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis findet einmal im Monat statt.",
+                "en": "The event occurs once a month."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/monthly"
         ],
@@ -120,10 +136,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Das Ereignis findet zweimal im Monat statt.",
-            "en": "The event occurs twice a month."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis findet zweimal im Monat statt.",
+                "en": "The event occurs twice a month."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/semimonthly"
         ],
@@ -135,10 +153,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Das Ereignis findet alle zwei Wochen statt.",
-            "en": "The event occurs every two weeks."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis findet alle zwei Wochen statt.",
+                "en": "The event occurs every two weeks."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/biweekly"
         ],
@@ -150,10 +170,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Das Ereignis findet dreimal im Monat statt.",
-            "en": "The event occurs three times a month."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis findet dreimal im Monat statt.",
+                "en": "The event occurs three times a month."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/threeTimesAMonth"
         ],
@@ -165,10 +187,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Das Ereignis findet einmal in der Woche statt.",
-            "en": "The event occurs once a week."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis findet einmal in der Woche statt.",
+                "en": "The event occurs once a week."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/weekly"
         ],
@@ -180,10 +204,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Das Ereignis findet zweimal in der Woche statt.",
-            "en": "The event occurs twice a week."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis findet zweimal in der Woche statt.",
+                "en": "The event occurs twice a week."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/semiweekly"
         ],
@@ -195,10 +221,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Das Ereignis findet dreimal in der Woche statt.",
-            "en": "The event occurs three times a week."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis findet dreimal in der Woche statt.",
+                "en": "The event occurs three times a week."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/threeTimesAWeek"
         ],
@@ -210,10 +238,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Das Ereignis findet einmal am Tag statt.",
-            "en": "The event occurs once a day."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis findet einmal am Tag statt.",
+                "en": "The event occurs once a day."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/daily"
         ],
@@ -225,10 +255,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Das Ereignis wiederholt sich ununterbrochen.",
-            "en": "The event repeats without interruption."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis wiederholt sich ununterbrochen.",
+                "en": "The event repeats without interruption."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/continuous"
         ],
@@ -240,10 +272,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Das Ereignis findet unregelmäßig statt.",
-            "en": "The event occurs at uneven intervals."
-        },
+        "definition": [
+            {
+                "de": "Das Ereignis findet unregelmäßig statt.",
+                "en": "The event occurs at uneven intervals."
+            }
+        ],
         "exactMatch": [
             "http://purl.org/cld/freq/irregular"
         ],

@@ -58,7 +58,12 @@ class Vocabulary:
 
 
 def _localized(value: Any, language: str = "en") -> str:  # noqa: ANN401
-    """Return the text of the given language from a possibly localized value."""
+    """Return the text of the given language from a possibly localized value.
+
+    A list of localized values, like a concept's `definition`, is joined by spaces.
+    """
+    if isinstance(value, list):
+        return " ".join(filter(None, (_localized(item, language) for item in value)))
     if isinstance(value, dict):
         return str(value.get(language) or next(iter(value.values()), ""))
     return str(value or "")

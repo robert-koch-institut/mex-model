@@ -16,7 +16,19 @@
                 "http://www.w3.org/2004/02/skos/core#altLabel"
             ],
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "additionalProperties": false,
+                "minProperties": 1,
+                "properties": {
+                    "de": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "en": {
+                        "minLength": 1,
+                        "type": "string"
+                    }
+                },
+                "type": "object"
             },
             "type": "array"
         },
@@ -42,7 +54,19 @@
                 "http://www.w3.org/2004/02/skos/core#definition"
             ],
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "additionalProperties": false,
+                "minProperties": 1,
+                "properties": {
+                    "de": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "en": {
+                        "minLength": 1,
+                        "type": "string"
+                    }
+                },
+                "type": "object"
             },
             "type": "array"
         },
@@ -91,27 +115,46 @@
             "type": "string"
         },
         "note": {
+            "additionalProperties": false,
             "closeMatch": [
                 "http://www.w3.org/2004/02/skos/core#note"
             ],
-            "default": [],
             "exactMatch": [
                 "http://www.w3.org/2004/02/skos/core#note"
             ],
-            "items": {
-                "$ref": "/mex/model/fields/text"
+            "minProperties": 1,
+            "properties": {
+                "de": {
+                    "minLength": 1,
+                    "type": "string"
+                },
+                "en": {
+                    "minLength": 1,
+                    "type": "string"
+                }
             },
-            "type": "array"
+            "type": "object"
         },
         "prefLabel": {
+            "additionalProperties": false,
             "exactMatch": [
                 "http://www.w3.org/2004/02/skos/core#prefLabel"
             ],
-            "items": {
-                "$ref": "/mex/model/fields/text"
+            "properties": {
+                "de": {
+                    "minLength": 1,
+                    "type": "string"
+                },
+                "en": {
+                    "minLength": 1,
+                    "type": "string"
+                }
             },
-            "minItems": 1,
-            "type": "array"
+            "required": [
+                "de",
+                "en"
+            ],
+            "type": "object"
         }
     },
     "required": [
