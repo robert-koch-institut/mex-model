@@ -126,7 +126,7 @@
     },
     {
         "description": {
-            "de": "Dieses Vokabular definiert die Arten von personenbezogenen Daten,.",
+            "de": "Dieses Vokabular definiert die Arten von personenbezogenen Daten.",
             "en": "This vocabulary defines the types of personal data."
         },
         "identifier": "https://mex.rki.de/item/personal-data",

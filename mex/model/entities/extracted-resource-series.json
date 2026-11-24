@@ -212,7 +212,7 @@
                 "http://purl.org/dc/terms/spatial"
             ],
             "default": [],
-            "description": "Spatial coverage of the resource series.",
+            "description": "Location or geographic region covered by the resource series.",
             "items": {
                 "$ref": "/mex/model/entities/merged-location#/identifier"
             },
