@@ -1,9 +1,11 @@
 [
     {
-        "definition": {
-            "de": "Drittmittelprojekte werden durch Fördermittelgebende mitfinanziert. Diese finanziellen Mittel (Drittmittel) werden durch die Forschungseinrichtungen neben den laufenden Haushaltsmitteln (vom Bund zur Verfügung gestellt) zusätzlich von dritter Seite eingeworben. Sie werden für die Förderung von Forschung und Entwicklung sowie des wissenschaftlichen Nachwuchses für einen befristeten Zeitraum zur Verfügung gestellt.",
-            "en": "Third-party funded projects are co-financed by funding agencies. These financial resources (third-party funds) are raised by the research institutions from third parties in addition to the current budget funds (provided by the federal government). They are made available for a limited period of time to support research and development as well as young scientists."
-        },
+        "definition": [
+            {
+                "de": "Drittmittelprojekte werden durch Fördermittelgebende mitfinanziert. Diese finanziellen Mittel (Drittmittel) werden durch die Forschungseinrichtungen neben den laufenden Haushaltsmitteln (vom Bund zur Verfügung gestellt) zusätzlich von dritter Seite eingeworben. Sie werden für die Förderung von Forschung und Entwicklung sowie des wissenschaftlichen Nachwuchses für einen befristeten Zeitraum zur Verfügung gestellt.",
+                "en": "Third-party funded projects are co-financed by funding agencies. These financial resources (third-party funds) are raised by the research institutions from third parties in addition to the current budget funds (provided by the federal government). They are made available for a limited period of time to support research and development as well as young scientists."
+            }
+        ],
         "identifier": "https://mex.rki.de/item/activity-type-1",
         "inScheme": "https://mex.rki.de/item/activity-type",
         "prefLabel": {
@@ -12,10 +14,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Von Haushaltsmitteln des RKI (vom Bund zur Verfügung gestellt) finanziertes Projekt oder Vorhaben.",
-            "en": "Project or endeavor financed with RKI budget (provided by the federal government)."
-        },
+        "definition": [
+            {
+                "de": "Von Haushaltsmitteln des RKI (vom Bund zur Verfügung gestellt) finanziertes Projekt oder Vorhaben.",
+                "en": "Project or endeavor financed with RKI budget (provided by the federal government)."
+            }
+        ],
         "identifier": "https://mex.rki.de/item/activity-type-3",
         "inScheme": "https://mex.rki.de/item/activity-type",
         "prefLabel": {
@@ -24,10 +28,12 @@
         }
     },
     {
-        "definition": {
-            "de": "Nicht näher definierte oder unbekannte Projektart.",
-            "en": "Undefined or unknown project type."
-        },
+        "definition": [
+            {
+                "de": "Nicht näher definierte oder unbekannte Projektart.",
+                "en": "Undefined or unknown project type."
+            }
+        ],
         "identifier": "https://mex.rki.de/item/activity-type-6",
         "inScheme": "https://mex.rki.de/item/activity-type",
         "prefLabel": {

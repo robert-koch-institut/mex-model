@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- new `vocabulary-checks` to validate concepts abd concept-schemes
+- new `vocabulary-checks` to validate concepts and concept-schemes
 
 ### Changes
 
@@ -17,11 +17,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - BREAKING: `concept.json` and `concept-scheme.json` now describe the vocabulary
   files as they are actually written:
   - `prefLabel`: an object with `de` and `en` (both required)
-  - `definition`, `note` and every `altLabel` item: an object with `de` and/or `en`
-  - `broader`: a single concept identifier
+  - `note` and every `altLabel` and `definition` item: an object with `de` and/or `en`
   - concept scheme `label`: a string, now required
   - concept scheme `description`: an object with `de` and/or `en`
 - split `scripts/check_schemas.py` into entity and vocabulary checks
+- BREAKING: in all vocabularies, `definition` is now a list of `de`/`en` objects and
+  `broader` a list of concept identifiers
 
 ### Deprecated
 

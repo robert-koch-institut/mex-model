@@ -283,8 +283,8 @@ def test_unresolved_example_violations_are_detected(
             _concept(
                 1,
                 altLabel=[{"en": "Subject"}],
-                broader=f"{THEME}-2",
-                definition={"en": "A topic."},
+                broader=[f"{THEME}-2"],
+                definition=[{"en": "A topic."}],
                 exactMatch=["https://example.com/topic"],
                 notation="1.0",
                 note={"de": "Hinweis", "en": "Note"},
@@ -313,10 +313,10 @@ def test_unresolved_example_violations_are_detected(
             id="pref-label-missing-language",
         ),
         pytest.param(
-            _concept(1, definition={"fr": "Sujet"}),
+            _concept(1, definition=[{"fr": "Sujet"}]),
             [
                 (
-                    "theme.https://mex.rki.de/item/theme-1.definition: "
+                    "theme.https://mex.rki.de/item/theme-1.definition.0: "
                     "Additional properties are not allowed ('fr' was unexpected)"
                 )
             ],

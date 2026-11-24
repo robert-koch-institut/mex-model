@@ -33,34 +33,42 @@
             "type": "array"
         },
         "broader": {
-            "$ref": "/mex/model/entities/concept#/identifier",
             "closeMatch": [
                 "http://www.w3.org/2004/02/skos/core#broader"
             ],
+            "default": [],
             "exactMatch": [
                 "http://www.w3.org/2004/02/skos/core#broader"
-            ]
+            ],
+            "items": {
+                "$ref": "/mex/model/entities/concept#/identifier"
+            },
+            "type": "array"
         },
         "definition": {
-            "additionalProperties": false,
             "closeMatch": [
                 "http://www.w3.org/2004/02/skos/core#definition"
             ],
+            "default": [],
             "exactMatch": [
                 "http://www.w3.org/2004/02/skos/core#definition"
             ],
-            "minProperties": 1,
-            "properties": {
-                "de": {
-                    "minLength": 1,
-                    "type": "string"
+            "items": {
+                "additionalProperties": false,
+                "minProperties": 1,
+                "properties": {
+                    "de": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "en": {
+                        "minLength": 1,
+                        "type": "string"
+                    }
                 },
-                "en": {
-                    "minLength": 1,
-                    "type": "string"
-                }
+                "type": "object"
             },
-            "type": "object"
+            "type": "array"
         },
         "exactMatch": {
             "closeMatch": [
