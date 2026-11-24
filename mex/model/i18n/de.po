@@ -1174,7 +1174,7 @@ msgctxt "Resource"
 msgid "populationCoverage.singular"
 msgid_plural "populationCoverage.plural"
 msgstr[0] "Bevölkerungsabdeckung"
-msgstr[1] "Bevölkerungsabdeckung"
+msgstr[1] "Bevölkerungsabdeckungen"
 
 msgctxt "Resource"
 msgid "populationCoverage.description"
