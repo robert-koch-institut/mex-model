@@ -1327,7 +1327,7 @@ msgstr "Für das Projekt/Vorhaben verantwortliche(s) Fachgebiet(e)"
 msgctxt "Resource"
 msgid "rights.singular"
 msgid_plural "rights.plural"
-msgstr[0] "Nutzungsbedingungen"
+msgstr[0] "Nutzungsbedingung"
 msgstr[1] "Nutzungsbedingungen"
 
 msgctxt "Resource"
