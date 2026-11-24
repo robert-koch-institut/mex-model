@@ -1377,7 +1377,7 @@ msgctxt "Resource"
 msgid "spatial.singular"
 msgid_plural "spatial.plural"
 msgstr[0] "Geographical coverage"
-msgstr[1] "Geographical coverage"
+msgstr[1] "Geographical coverages"
 
 msgctxt "Resource"
 msgid "spatial.description"
