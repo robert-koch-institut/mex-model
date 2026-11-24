@@ -1158,7 +1158,7 @@ msgctxt "Resource"
 msgid "populationCoverage.singular"
 msgid_plural "populationCoverage.plural"
 msgstr[0] "Population coverage"
-msgstr[1] "Population coverage"
+msgstr[1] "Population coverages"
 
 msgctxt "Resource"
 msgid "populationCoverage.description"
