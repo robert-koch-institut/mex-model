@@ -1308,7 +1308,7 @@ msgstr "Organizational unit(s) responsible for the project/endeavor"
 msgctxt "Resource"
 msgid "rights.singular"
 msgid_plural "rights.plural"
-msgstr[0] "Usage conditions"
+msgstr[0] "Usage condition"
 msgstr[1] "Usage conditions"
 
 msgctxt "Resource"
