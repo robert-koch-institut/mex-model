@@ -8,14 +8,22 @@
     ],
     "properties": {
         "description": {
+            "additionalProperties": false,
             "closeMatch": [
                 "http://purl.org/dc/elements/1.1/description"
             ],
-            "default": [],
-            "items": {
-                "$ref": "/mex/model/fields/text"
+            "minProperties": 1,
+            "properties": {
+                "de": {
+                    "minLength": 1,
+                    "type": "string"
+                },
+                "en": {
+                    "minLength": 1,
+                    "type": "string"
+                }
             },
-            "type": "array"
+            "type": "object"
         },
         "identifier": {
             "closeMatch": [
@@ -34,15 +42,13 @@
             "closeMatch": [
                 "http://www.w3.org/2000/01/rdf-schema#label"
             ],
-            "default": [],
-            "items": {
-                "$ref": "/mex/model/fields/text"
-            },
-            "type": "array"
+            "minLength": 1,
+            "type": "string"
         }
     },
     "required": [
-        "identifier"
+        "identifier",
+        "label"
     ],
     "title": "Concept Scheme",
     "type": "object"

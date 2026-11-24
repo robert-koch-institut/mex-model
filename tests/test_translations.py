@@ -1,7 +1,7 @@
 from collections.abc import Mapping
 
 import pytest
-from check_schemas import (
+from check_entities import (
     find_missing_entity_label_violations,
     find_missing_translation_violations,
 )

@@ -1,7 +1,7 @@
 from typing import Any
 
 import pytest
-from check_schemas import (
+from check_entities import (
     find_extracted_merged_parity_violations,
     find_field_identity_violations,
 )

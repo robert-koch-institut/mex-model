@@ -1,7 +1,7 @@
 from typing import Any
 
 import pytest
-from check_schemas import (
+from check_entities import (
     find_annotation_uri_violations,
     find_field_validation_violations,
     find_orphaned_field_violations,

@@ -9,14 +9,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- new `vocabulary-checks` to validate concepts abd concept-schemes
+
 ### Changes
 
 - new template https://github.com/robert-koch-institut/mex-template/releases/tag/2.1.0
+- BREAKING: `concept.json` and `concept-scheme.json` now describe the vocabulary
+  files as they are actually written:
+  - `prefLabel`: an object with `de` and `en` (both required)
+  - `definition`, `note` and every `altLabel` item: an object with `de` and/or `en`
+  - `broader`: a single concept identifier
+  - concept scheme `label`: a string, now required
+  - concept scheme `description`: an object with `de` and/or `en`
+- split `scripts/check_schemas.py` into entity and vocabulary checks
+
 ### Deprecated
 
 ### Removed
 
+- remove the stray `entityType` key from `activity-type-1` and `activity-type-3`
+
 ### Fixed
+
+- fix the health-activity code of `resource-creation-method-7`: `MODELS_SIMULATION`
+  does not exist in the EU vocabulary, the published code is `MODELS_SIMULATIONS`
+- turn the health-category description in `concept-schemes.json` into a `de`/`en`
+  object like every other scheme
 
 ### Security
 

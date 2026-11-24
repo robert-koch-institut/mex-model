@@ -160,7 +160,7 @@
             "en": "Use of computational or statistical models to simulate clinical or population outcomes."
         },
         "exactMatch": [
-            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/MODELS_SIMULATION"
+            "https://hdeu-dcat.acceptance.data.health.europa.eu/resource/authority/health-activity/MODELS_SIMULATIONS"
         ],
         "identifier": "https://mex.rki.de/item/resource-creation-method-7",
         "inScheme": "https://mex.rki.de/item/resource-creation-method",

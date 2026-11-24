@@ -1,9 +1,10 @@
-"""Standalone schema-correctness checks for mex-model.
+"""Standalone correctness checks for the mex-model entity and field schemas.
 
-Run directly (`uv run python scripts/check_schemas.py`) or via the
-`schema-checks` pre-commit hook. The same `find_*_violations` functions are
+Run directly (`uv run python scripts/check_entities.py`) or via the
+`entity-checks` pre-commit hook. The same `find_*_violations` functions are
 imported by the test suite for both real-data regression tests and
-fixture-based self-tests.
+fixture-based self-tests. Checks on the vocabularies, and on entity references
+into them, live in `check_vocabularies.py`.
 """
 
 import json
@@ -22,27 +23,14 @@ from mex.model import (
     FIELD_JSON_BY_NAME,
     I18N_PO_DATA_BY_LANGUAGE,
     MERGED_MODEL_JSON_BY_NAME,
-    VOCABULARY_JSON_BY_NAME,
 )
 
+ANNOTATION_URI_KEYS = ("closeMatch", "exactMatch", "sameAs", "subPropertyOf")
 EXCLUDED_PROVENANCE_FIELDS = frozenset(
     {"hadPrimarySource", "identifierInPrimarySource", "stableTargetId"}
 )
-ANNOTATION_URI_KEYS = ("closeMatch", "exactMatch", "sameAs", "subPropertyOf")
 MSGID_PATTERN = re.compile(r'^msgid "((?:[^"\\]|\\.)*)"')
 MSGCTXT_PATTERN = re.compile(r'^msgctxt "((?:[^"\\]|\\.)*)"')
-
-
-def _iter_use_scheme_nodes(node: object) -> Iterator[dict[str, Any]]:
-    """Yield every dict with a `useScheme` key found anywhere in a json structure."""
-    if isinstance(node, dict):
-        if "useScheme" in node:
-            yield node
-        for value in node.values():
-            yield from _iter_use_scheme_nodes(value)
-    elif isinstance(node, list):
-        for item in node:
-            yield from _iter_use_scheme_nodes(item)
 
 
 def _iter_refs(node: object) -> Iterator[str]:
@@ -265,97 +253,6 @@ def find_field_identity_violations(
     return violations
 
 
-def find_unregistered_vocabulary_violations(
-    vocabulary_names: Iterable[str], concept_scheme_identifiers: set[str]
-) -> list[str]:
-    """Check every vocabulary file is registered in concept-schemes.json."""
-    violations = []
-    for name in sorted(vocabulary_names):
-        identifier = f"https://mex.rki.de/item/{name.replace('_', '-')}"
-        if identifier not in concept_scheme_identifiers:
-            violations.append(
-                f"{name}: identifier {identifier!r} not found in concept-schemes.json"
-            )
-    return violations
-
-
-def find_duplicate_concept_id_violations(
-    vocabularies_by_name: dict[str, list[dict[str, Any]]],
-) -> list[str]:
-    """Check that concept identifiers are unique within each vocabulary."""
-    violations = []
-    for name, concepts in sorted(vocabularies_by_name.items()):
-        seen: set[str] = set()
-        for concept in concepts:
-            identifier = concept["identifier"]
-            if identifier in seen:
-                violations.append(f"{name}: duplicate identifier {identifier!r}")
-            seen.add(identifier)
-    return violations
-
-
-def find_unresolved_example_violations(
-    all_schemas_by_name: dict[str, dict[str, Any]],
-    vocabularies_by_name: dict[str, list[dict[str, Any]]],
-) -> list[str]:
-    """Check that entity field examples resolve to real vocabulary concepts."""
-    violations = []
-    for schema_name, schema in sorted(all_schemas_by_name.items()):
-        for use_scheme_node in _iter_use_scheme_nodes(schema):
-            if "examples" not in use_scheme_node:
-                continue
-            use_scheme = str(use_scheme_node["useScheme"])
-            examples = list(use_scheme_node["examples"])
-            vocabulary_name = use_scheme.rsplit("/", 1)[-1].replace("-", "_")
-            concepts = vocabularies_by_name.get(vocabulary_name)
-            if concepts is None:
-                violations.append(
-                    f"{schema_name}: useScheme {use_scheme!r} has no matching "
-                    "vocabulary file"
-                )
-                continue
-            known_ids = {concept["identifier"] for concept in concepts}
-            violations.extend(
-                f"{schema_name}: example {example!r} not found in "
-                f"vocabulary {vocabulary_name!r}"
-                for example in examples
-                if example not in known_ids
-            )
-    return violations
-
-
-def find_unresolved_use_scheme_violations(
-    all_schemas_by_name: dict[str, dict[str, Any]],
-    vocabularies_by_name: dict[str, list[dict[str, Any]]],
-) -> list[str]:
-    """Check that every useScheme reference resolves to a known vocabulary.
-
-    A vocabulary matches either by its filename-derived identifier or by the
-    `inScheme` value of any of its concepts, since the two do not always
-    agree.
-    """
-    known_schemes = {
-        f"https://mex.rki.de/item/{name.replace('_', '-')}"
-        for name in vocabularies_by_name
-    } | {
-        str(concept["inScheme"])
-        for concepts in vocabularies_by_name.values()
-        for concept in concepts
-        if "inScheme" in concept
-    }
-    violations: list[str] = []
-    for schema_name, schema in sorted(all_schemas_by_name.items()):
-        use_schemes = {
-            str(node["useScheme"]) for node in _iter_use_scheme_nodes(schema)
-        }
-        violations.extend(
-            f"{schema_name}: useScheme {use_scheme!r} has no matching vocabulary"
-            for use_scheme in sorted(use_schemes)
-            if use_scheme not in known_schemes
-        )
-    return violations
-
-
 def _extract_msgids(po_text: str) -> set[tuple[str | None, str]]:
     """Extract all `(msgctxt, msgid)` pairs from a raw .po file's text.
 
@@ -451,7 +348,7 @@ def find_orphaned_field_violations(
     ]
 
 
-def _find_uri_list_violations(location: str, value: object) -> list[str]:
+def uri_list_violations(location: str, value: object) -> list[str]:
     """Check that an annotation is an array of well-formed, unique URIs.
 
     `extension/definition.json` declares `closeMatch` and `exactMatch` as arrays,
@@ -482,24 +379,9 @@ def find_annotation_uri_violations(
     for field_name, definition in sorted(schema.get("properties", {}).items()):
         for key in ANNOTATION_URI_KEYS:
             if key in definition:
-                violations += _find_uri_list_violations(
+                violations += uri_list_violations(
                     f"{entity_name}.{field_name}.{key}", definition[key]
                 )
-    return violations
-
-
-def find_concept_annotation_violations(
-    vocabularies_by_name: dict[str, list[dict[str, Any]]],
-) -> list[str]:
-    """Check that annotation URIs on each concept are well-formed, unique arrays."""
-    violations = []
-    for name, concepts in sorted(vocabularies_by_name.items()):
-        for concept in concepts:
-            for key in ANNOTATION_URI_KEYS:
-                if key in concept:
-                    violations += _find_uri_list_violations(
-                        f"{name}.{concept['identifier']}.{key}", concept[key]
-                    )
     return violations
 
 
@@ -527,18 +409,26 @@ def find_id_path_violations(
     return violations
 
 
-def _load_concept_scheme_identifiers() -> set[str]:
-    """Load the set of identifiers registered in concept-schemes.json."""
-    raw = files("mex.model.vocabularies").joinpath("concept-schemes.json")
-    schemes = json.loads(raw.read_text("utf-8"))
-    return {scheme["identifier"] for scheme in schemes}
-
-
 def _load_extension_definition() -> dict[str, Any]:
     """Load the extension/definition.json schema document."""
     raw = files("mex.model.extension").joinpath("definition.json")
     definition: dict[str, Any] = json.loads(raw.read_text("utf-8"))
     return definition
+
+
+def _load_concept_schemas() -> dict[str, dict[str, Any]]:
+    """Load `concept.json` and `concept-scheme.json`, keyed by normalized name.
+
+    These two describe the vocabulary files rather than extracted or merged
+    items, so they get the document-level checks but not the field-shape ones.
+    """
+    entities = files("mex.model.entities")
+    return {
+        name.replace("-", "_"): json.loads(
+            entities.joinpath(f"{name}.json").read_text("utf-8")
+        )
+        for name in ("concept", "concept-scheme")
+    }
 
 
 def _entity_name_from_file_stem(stem: str) -> str:
@@ -551,7 +441,7 @@ def _entity_name_from_file_stem(stem: str) -> str:
     return "".join(part.capitalize() for part in re.split(r"[-_]", bare))
 
 
-def _all_entity_schemas_by_file_stem() -> dict[str, dict[str, Any]]:
+def entity_schemas_by_file_stem() -> dict[str, dict[str, Any]]:
     """Combine extracted and merged schemas keyed by their actual file stem.
 
     `EXTRACTED_MODEL_JSON_BY_NAME` and `MERGED_MODEL_JSON_BY_NAME` both use
@@ -572,9 +462,8 @@ def _all_entity_schemas_by_file_stem() -> dict[str, dict[str, Any]]:
 
 
 def _collect_violations() -> list[str]:
-    """Run all schema-correctness checks against the real schema files."""
-    all_entities = _all_entity_schemas_by_file_stem()
-    concept_scheme_identifiers = _load_concept_scheme_identifiers()
+    """Run all entity and field checks against the real schema files."""
+    all_entities = entity_schemas_by_file_stem()
 
     violations: list[str] = []
     for name, schema in sorted(all_entities.items()):
@@ -586,17 +475,6 @@ def _collect_violations() -> list[str]:
         EXTRACTED_MODEL_JSON_BY_NAME, MERGED_MODEL_JSON_BY_NAME
     )
     violations += find_field_identity_violations(all_entities)
-    violations += find_unregistered_vocabulary_violations(
-        VOCABULARY_JSON_BY_NAME, concept_scheme_identifiers
-    )
-    violations += find_duplicate_concept_id_violations(VOCABULARY_JSON_BY_NAME)
-    violations += find_concept_annotation_violations(VOCABULARY_JSON_BY_NAME)
-    violations += find_unresolved_example_violations(
-        all_entities, VOCABULARY_JSON_BY_NAME
-    )
-    violations += find_unresolved_use_scheme_violations(
-        all_entities, VOCABULARY_JSON_BY_NAME
-    )
     violations += find_orphaned_field_violations(FIELD_JSON_BY_NAME, all_entities)
     field_names_by_entity: dict[str, set[str]] = {}
     for stem, schema in all_entities.items():
@@ -612,6 +490,9 @@ def _collect_violations() -> list[str]:
     for name, schema in sorted(all_entities.items()):
         violations += find_meta_schema_violations(name, schema)
         violations += find_id_path_violations(name, "entities", schema)
+    for name, schema in sorted(_load_concept_schemas().items()):
+        violations += find_meta_schema_violations(name, schema)
+        violations += find_id_path_violations(name, "entities", schema)
     for name, schema in sorted(FIELD_JSON_BY_NAME.items()):
         violations += find_meta_schema_violations(f"fields/{name}", schema)
         violations += find_id_path_violations(name, "fields", schema)
@@ -625,8 +506,8 @@ def _collect_violations() -> list[str]:
     return violations
 
 
-def main() -> int:  # pragma: no cover -- thin CLI wrapper, exercised via pre-commit
-    """Run all schema-correctness checks and report the result."""
+def main() -> int:  # pragma: no cover
+    """Run all entity and field checks and report the result."""
     violations = _collect_violations()
     for violation in violations:
         print(violation, file=sys.stderr)  # noqa: T201

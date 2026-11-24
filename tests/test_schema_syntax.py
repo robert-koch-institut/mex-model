@@ -1,38 +1,45 @@
 import re
 from collections.abc import Callable
+from types import ModuleType
 from typing import Any
 
-import check_schemas
+import check_entities
+import check_vocabularies
 import pytest
-from check_schemas import (
-    _collect_violations,
+from check_entities import (
     find_id_path_violations,
     find_meta_schema_violations,
 )
 
-CHECK_FUNCTION_NAME_PATTERN = re.compile(r"^find_.*_violations$")
+CHECK_FUNCTION_NAME_PATTERN = re.compile(r"^find_.*_(violations|warnings)$")
+CHECK_MODULES = [
+    pytest.param(check_entities, id="check_entities"),
+    pytest.param(check_vocabularies, id="check_vocabularies"),
+]
 
 
+@pytest.mark.parametrize("module", CHECK_MODULES)
 def test_collect_violations_calls_every_check_function(
-    monkeypatch: pytest.MonkeyPatch,
+    module: ModuleType, monkeypatch: pytest.MonkeyPatch
 ) -> None:
-    """Every `find_*_violations` function must be wired into `_collect_violations`.
+    """Every check function must be wired into its collector.
 
-    Check functions are discovered by name convention rather than a hand-kept
+    `find_*_violations` functions must be called from `_collect_violations` and
+    `find_*_warnings` functions from `_collect_warnings`. Check functions are discovered by name convention rather than a hand-kept
     list, so adding a new check and forgetting to call it from
     `_collect_violations` fails here instead of silently never running against
     real data.
     """
     check_names = [
         name
-        for name, value in vars(check_schemas).items()
+        for name, value in vars(module).items()
         if CHECK_FUNCTION_NAME_PATTERN.match(name) and callable(value)
     ]
     assert check_names  # sanity check the discovery mechanism finds something
 
     call_counts = dict.fromkeys(check_names, 0)
     for name in check_names:
-        original: Callable[..., list[str]] = getattr(check_schemas, name)
+        original: Callable[..., list[str]] = getattr(module, name)
 
         def spy(
             *args: object,
@@ -43,17 +50,26 @@ def test_collect_violations_calls_every_check_function(
             call_counts[_name] += 1
             return _original(*args, **kwargs)
 
-        monkeypatch.setattr(check_schemas, name, spy)
+        monkeypatch.setattr(module, name, spy)
 
-    check_schemas._collect_violations()
+    module._collect_violations()
+    if hasattr(module, "_collect_warnings"):
+        module._collect_warnings()
 
     uncalled = [name for name, count in call_counts.items() if count == 0]
     assert uncalled == []
 
 
-def test_collect_violations_finds_nothing_for_real_schemas() -> None:
-    """Exercises the same aggregation used by the schema-checks pre-commit hook."""
-    assert _collect_violations() == []
+@pytest.mark.parametrize("module", CHECK_MODULES)
+def test_collect_violations_finds_nothing_for_real_data(module: ModuleType) -> None:
+    """Exercises the same aggregation used by the pre-commit hooks."""
+    assert module._collect_violations() == []
+
+
+def test_collect_warnings_reports_shared_exact_matches_for_real_data() -> None:
+    """Warnings are advisory: they are collected but never count as violations."""
+    warnings = check_vocabularies._collect_warnings()
+    assert all(" is shared by " in warning for warning in warnings)
 
 
 @pytest.mark.parametrize(

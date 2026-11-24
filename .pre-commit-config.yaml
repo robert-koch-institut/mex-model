@@ -47,9 +47,17 @@ repos:
       language: system
       pass_filenames: false
       types: [python]
-    - id: schema-checks
-      name: schema checks
-      entry: uv run python scripts/check_schemas.py
+    - id: entity-checks
+      name: entity checks
+      entry: uv run python scripts/check_entities.py
       language: system
       files: ^mex/model/(entities|fields|vocabularies|extension)/.*\.json$
       pass_filenames: false
+    - id: vocabulary-checks
+      name: vocabulary checks
+      entry: uv run python scripts/check_vocabularies.py
+      language: system
+      files: ^mex/model/(entities|fields|vocabularies|extension)/.*\.json$
+      pass_filenames: false
+      # show warnings, e.g. shared exactMatch targets, even when the check passes
+      verbose: true
