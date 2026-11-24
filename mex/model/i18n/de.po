@@ -1693,7 +1693,7 @@ msgid "wikidataId.description"
 msgstr ""
 "Wikidata ist eine freie, gemeinsame, mehrsprachige und sekundäre Datenbank zur "
 "Sammlung strukturierter Daten zur Unterstützung von Wikipedia und wird auch als "
-"Referenzdatenbank für die Identifikation von Dinge (im Sinne von Linked Data) genutzt"
+"Referenzdatenbank für die Identifikation von Dingen (im Sinne von Linked Data) genutzt"
 
 msgctxt "Consent"
 msgid "hasConsentStatus.singular"
