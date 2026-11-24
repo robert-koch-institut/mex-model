@@ -290,9 +290,6 @@
                     },
                     {
                         "$ref": "/mex/model/fields/link"
-                    },
-                    {
-                        "type": "null"
                     }
                 ]
             },

@@ -66,9 +66,6 @@
             ],
             "default": [],
             "description": "An analytics distribution of the dataset.",
-            "exactMatch": [
-                "https://data.health.europa.eu/healthdcat-ap/ns/health/analytics"
-            ],
             "items": {
                 "$ref": "/mex/model/entities/merged-distribution#/identifier"
             },

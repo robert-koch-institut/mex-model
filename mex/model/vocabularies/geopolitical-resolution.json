@@ -72,7 +72,7 @@
             }
         ],
         "exactMatch": [
-            "https://d-nb.info/gnd/4019956-3 "
+            "https://d-nb.info/gnd/4019956-3"
         ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-5",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
@@ -135,7 +135,7 @@
             }
         ],
         "exactMatch": [
-            "http://d-nb.info/gnd/4316292-7 "
+            "http://d-nb.info/gnd/4316292-7"
         ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-8",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
