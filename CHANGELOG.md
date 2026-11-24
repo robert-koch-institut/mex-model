@@ -9,14 +9,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- add missing `.description` translations for 25 entity fields in `de.po` and `en.po`
+- add missing `msgid_plural` forms for all array fields in `de.po` and `en.po`
+- schema checks now flag msgids scoped to an unknown entity or to an entity that lacks
+  the field
+
 ### Changes
 
 - new template https://github.com/robert-koch-institut/mex-template/releases/tag/2.1.0
+- schema checks now require both a label and a description for every field and language
+
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+- fix `isbnIssn` label being scoped to `Activity` instead of `BibliographicResource`
+- fix missing english label for `Activity.publication`
+- fix wrong `msgid_plural` for `instrumentToolOrApparatus` and `Location.name`
 
 ### Security
 

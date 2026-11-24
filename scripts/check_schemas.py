@@ -374,39 +374,71 @@ def _extract_msgids(po_text: str) -> set[tuple[str | None, str]]:
     return msgids
 
 
-def _has_translation(
-    msgids: set[tuple[str | None, str]], entity_name: str, field: str
+def _has_msgid(
+    msgids: set[tuple[str | None, str]], entity_name: str, msgid: str
 ) -> bool:
-    """Check whether one entity's field is covered by any msgid in a .po file."""
-    return any(
-        context in (None, entity_name)
-        and (msgid == field or msgid.startswith(f"{field}."))
-        for context, msgid in msgids
-    )
+    """Check whether a msgid is visible to an entity, scoped to it or context-free."""
+    return (None, msgid) in msgids or (entity_name, msgid) in msgids
 
 
 def find_missing_translation_violations(
     field_names_by_entity: Mapping[str, Iterable[str]],
     po_data_by_language: dict[str, str],
 ) -> list[str]:
-    """Check that every field has a translated label in each i18n .po file.
+    """Check that every field has a label and a description in each .po file.
 
-    A field matches either an exact `msgid` (e.g. `supersededBy`) or one
-    prefixed with the field name followed by a dot (e.g.
-    `abstract.singular`, `abstract.description`). The matching msgid must
-    either carry the entity's own `msgctxt` or no `msgctxt` at all, because a
-    msgid scoped to a different entity is not found when the label is looked
-    up for this one and the UI falls back to the raw msgid.
+    The label is the `<field>.singular` msgid, or the bare `<field>` msgid
+    (e.g. `supersededBy`). The description is the `<field>.description`
+    msgid. Each matching msgid must either carry the entity's own `msgctxt`
+    or no `msgctxt` at all, because a msgid scoped to a different entity is
+    not found when the label is looked up for this one and the UI falls back
+    to the raw msgid.
     """
     violations: list[str] = []
     for language, po_text in sorted(po_data_by_language.items()):
         msgids = _extract_msgids(po_text)
-        violations.extend(
-            f"{language}: no translation found for field {entity_name}.{field}"
-            for entity_name, field_names in sorted(field_names_by_entity.items())
-            for field in sorted(set(field_names))
-            if not _has_translation(msgids, entity_name, field)
-        )
+        for entity_name, field_names in sorted(field_names_by_entity.items()):
+            for field in sorted(set(field_names)):
+                prefix = f"{language}: no translation found for {entity_name}.{field}"
+                if not (
+                    _has_msgid(msgids, entity_name, f"{field}.singular")
+                    or _has_msgid(msgids, entity_name, field)
+                ):
+                    violations.append(f"{prefix}.singular")
+                if not _has_msgid(msgids, entity_name, f"{field}.description"):
+                    violations.append(f"{prefix}.description")
+    return violations
+
+
+def find_misplaced_translation_violations(
+    field_names_by_entity: Mapping[str, Iterable[str]],
+    po_data_by_language: dict[str, str],
+) -> list[str]:
+    """Check that every entity-scoped msgid belongs to a field of that entity.
+
+    A msgid scoped to an unknown entity, or to an entity that lacks the field,
+    is never looked up and usually means the `msgctxt` was set to the wrong
+    entity. Context-free msgids are not checked.
+    """
+    violations: list[str] = []
+    for language, po_text in sorted(po_data_by_language.items()):
+        for context, msgid in sorted(
+            (context, msgid)
+            for context, msgid in _extract_msgids(po_text)
+            if context is not None
+        ):
+            if context not in field_names_by_entity:
+                violations.append(
+                    f"{language}: msgctxt {context!r} is not a known entity "
+                    f"(msgid {msgid!r})"
+                )
+                continue
+            field = msgid.split(".", 1)[0]
+            if field not in set(field_names_by_entity[context]):
+                violations.append(
+                    f"{language}: msgctxt {context!r} has msgid {msgid!r} "
+                    f"but {context} has no field {field}"
+                )
     return violations
 
 
@@ -607,6 +639,9 @@ def _collect_violations() -> list[str]:
         field_names_by_entity, I18N_PO_DATA_BY_LANGUAGE
     )
     violations += find_missing_translation_violations(
+        field_names_by_entity, I18N_PO_DATA_BY_LANGUAGE
+    )
+    violations += find_misplaced_translation_violations(
         field_names_by_entity, I18N_PO_DATA_BY_LANGUAGE
     )
     for name, schema in sorted(all_entities.items()):
