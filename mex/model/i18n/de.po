@@ -1478,7 +1478,7 @@ msgctxt "Activity"
 msgid "succeeds.singular"
 msgid_plural "succeeds.plural"
 msgstr[0] "Nachfolge von"
-msgstr[1] "Nachfolge von"
+msgstr[1] "Nachfolgen von"
 
 msgctxt "Activity"
 msgid "succeeds.description"
