@@ -361,20 +361,11 @@
         }
     },
     {
-        "definition": [
-            {
-                "de": "Nationale Prozedurenkodes",
-                "en": "National procedure codes"
-            }
-        ],
-        "exactMatch": [
-            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/PROC-CODES-NAT"
-        ],
         "identifier": "https://mex.rki.de/item/coding-system-22",
         "inScheme": "https://mex.rki.de/item/coding-system",
         "prefLabel": {
-            "de": "PROC-CODES-NAT",
-            "en": "PROC-CODES-NAT"
+            "de": "Sonstiges",
+            "en": "Other"
         }
     },
     {
@@ -548,11 +539,20 @@
         }
     },
     {
+        "definition": [
+            {
+                "de": "Nationale Prozedurenkodes",
+                "en": "National procedure codes"
+            }
+        ],
+        "exactMatch": [
+            "https://hdeu-dcat.data.health.europa.eu/resource/authority/coding-system/PROC-CODES-NAT"
+        ],
         "identifier": "https://mex.rki.de/item/coding-system-33",
         "inScheme": "https://mex.rki.de/item/coding-system",
         "prefLabel": {
-            "de": "Sonstiges",
-            "en": "Other"
+            "de": "PROC-CODES-NAT",
+            "en": "PROC-CODES-NAT"
         }
     }
 ]
