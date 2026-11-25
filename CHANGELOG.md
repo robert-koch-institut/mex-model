@@ -9,6 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+### Changes
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [5.3.0] - 2026-11-25
+
 #### mex/model/entities/
 
 - in `extracted-resource.json` and `merged-resource.json`:
@@ -84,14 +96,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   (RKIMEX-136)
 - `resource-creation-method.json`: update matches to HealthDCAT-AP Release 8 URIs;
   change the English `prefLabel` of `resource-creation-method-4` to "Laboratory"
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [5.2.2] - 2026-10-27
 
