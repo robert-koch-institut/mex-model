@@ -9,9 +9,82 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### mex/model/entities/
+
+- in `extracted-resource.json` and `merged-resource.json`:
+  - new property `geopoliticalResolution`, using the new vocabulary
+    `geopolitical-resolution.json` (RKIMEX-133)
+  - new property `relatedActivity`, referencing a merged Activity (RKIMEX-137)
+
+#### mex/model/vocabularies/
+
+- new vocabulary `datatype-standardized.json`: data types as defined by CSVW and
+  XML Schema (RKIMEX-84); not yet used by any entity
+- new vocabulary `geopolitical-resolution.json` (RKIMEX-127)
+- new vocabulary `health-standard.json`, aligned with the HealthDCAT-AP standards
+  vocabulary (RKIMEX-123)
+- register the three new vocabularies in `concept-schemes.json`
+
 ### Changes
 
 - new template https://github.com/robert-koch-institut/mex-template/releases/tag/2.1.0
+
+#### mex/model/entities/
+
+- all entities (where applicable):
+  - BREAKING: `contact`: remove Person as range, in AccessPlatform, Activity,
+    PrimarySource, Resource and ResourceSeries (RKIMEX-38)
+  - `documentation`: change `closeMatch` from `dct:isReferencedBy` to `foaf:page`
+  - replace the HealthDCAT-AP namespace `http://healthdataportal.eu/ns/health#`
+    in annotation properties with the official one announced for Release 9,
+    `https://data.health.europa.eu/healthdcat-ap/ns/health/`
+
+- in `extracted-resource.json` and `merged-resource.json`:
+  - BREAKING: make `description` and `keyword` required (RKIMEX-81, RKIMEX-52)
+  - BREAKING: `conformsTo`: change range from free text to the new vocabulary
+    `health-standard.json` (RKIMEX-37)
+  - BREAKING: `spatial`: change range from text to a merged-location#identifier
+    (RKIMEX-125)
+  - `keyword`: change range to include `fields/link.json` (RKIMEX-52)
+
+- in `extracted-resource-series.json` and `merged-resource-series.json`:
+  - BREAKING: `spatial`: change range from text to a merged-location#identifier
+  - `keyword`: change range to include `fields/link.json`
+
+- in `extracted-bibliographic-resource.json` and `merged-bibliographic-resource.json`:
+  - `keyword`: change range to include `fields/link.json`
+
+- in `extracted-primary-source.json` and `merged-primary-source.json`:
+  - remove `dcat:Catalog` from the class `closeMatch`
+
+#### mex/model/i18n
+
+- de.po & en.po:
+  - add translation entries for the new and changed properties, and for the
+    ResourceSeries fields
+  - remove duplicate entries, and file `isbnIssn` under BibliographicResource
+    instead of Activity
+
+#### mex/model/vocabularies
+
+- all vocabularies: BREAKING: `definition` is now a list of `de`/`en` objects and
+  `broader` a list of concept identifiers
+- `concept-schemes.json`: add `de`/`en` descriptions to the schemes that had none
+- `access-restriction.json`: add exactMatches to the EU access-right vocabulary
+- `coding-system.json`: add concepts EMDN, DICOM-CT, EMA-SPOR, NCIT, HPO, ORDO,
+  OHDSI-VOCAB, NPU, WHODRUG and ICD-10-NAT, and update matches to HealthDCAT-AP
+  Release 8 URIs.
+- `frequency.json`: add concepts "every 5 years", "every 10 years", "as needed",
+  "never" and "other", and exactMatches to the EU frequency vocabulary (RKIMEX-43).
+  BREAKING: remove `frequency-5` (three times a year), `frequency-9` (semimonthly),
+  `frequency-11` (three times a month) and `frequency-14` (three times a week)
+- `health-category.json`: update matches to HealthDCAT-AP Release 8 URIs
+- `license.json`: extend from one license to the 729 licenses of the SPDX license
+  list, with the SPDX identifier as `prefLabel` and the full name as `altLabel`
+  (RKIMEX-136)
+- `resource-creation-method.json`: update matches to HealthDCAT-AP Release 8 URIs;
+  change the English `prefLabel` of `resource-creation-method-4` to "Laboratory"
+
 ### Deprecated
 
 ### Removed
@@ -287,6 +360,10 @@ A new entity type, including the following properties (RKIMEX-14):
 ### Added
 
 - add examples to new properties of Resources for model update v5.0
+
+### Changes
+
+- updated template to <https://github.com/robert-koch-institut/mex-template/commit/26afa8>
 
 ## [5.0.0] - 2026-06-02
 
