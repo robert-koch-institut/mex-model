@@ -33,6 +33,17 @@
             },
             "type": "array"
         },
+        "closeMatch": {
+            "default": [],
+            "exactMatch": [
+                "http://www.w3.org/2004/02/skos/core#closeMatch"
+            ],
+            "items": {
+                "format": "uri",
+                "type": "string"
+            },
+            "type": "array"
+        },
         "definition": {
             "closeMatch": [
                 "http://www.w3.org/2004/02/skos/core#definition"
