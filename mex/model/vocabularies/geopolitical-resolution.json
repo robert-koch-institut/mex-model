@@ -21,7 +21,7 @@
             }
         ],
         "exactMatch": [
-            "https://d-nb.info/gnd/4034013-2"
+            "http://d-nb.info/gnd/4034013-2"
         ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-2",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
@@ -38,7 +38,7 @@
             }
         ],
         "exactMatch": [
-            "https://d-nb.info/gnd/4177408-5"
+            "http://d-nb.info/gnd/4177408-5"
         ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-3",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
@@ -55,7 +55,7 @@
             }
         ],
         "exactMatch": [
-            "https://d-nb.info/gnd/4073976-4"
+            "http://d-nb.info/gnd/4073976-4"
         ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-4",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
@@ -72,7 +72,7 @@
             }
         ],
         "exactMatch": [
-            "https://d-nb.info/gnd/4019956-3"
+            "http://d-nb.info/gnd/4019956-3"
         ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-5",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
@@ -89,7 +89,7 @@
             }
         ],
         "exactMatch": [
-            "https://d-nb.info/gnd/4165603-9"
+            "http://d-nb.info/gnd/4165603-9"
         ],
         "identifier": "https://mex.rki.de/item/geopolitical-resolution-6",
         "inScheme": "https://mex.rki.de/item/geopolitical-resolution",
