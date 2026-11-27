@@ -1564,7 +1564,7 @@ msgctxt "Variable"
 msgid "usedIn.singular"
 msgid_plural "usedIn.plural"
 msgstr[0] "Related dataset"
-msgstr[1] "Related data"
+msgstr[1] "Related datasets"
 
 msgctxt "Variable"
 msgid "usedIn.description"
