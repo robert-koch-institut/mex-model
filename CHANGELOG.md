@@ -9,7 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- add missing `.description` translations for 25 entity fields in `de.po` and `en.po`
+- add missing `msgid_plural` forms for all array fields in `de.po` and `en.po`
+- schema checks now flag msgids scoped to an unknown entity or to an entity that lacks
+  the field
+
 ### Changes
+
+- schema checks now require both a label and a description for every field and language
+- merge translations that are identical for every entity into one context-free
+  entry in `de.po` and `en.po`, and drop scoped entries that repeat the fallback
+- align `de.po` and `en.po` to the same entries and the same alphabetical order
+- scope `keyword.description` per entity in `de.po`, matching `en.po`
+- silence dennis `W302` warnings for entity labels that are correctly identical to
+  their msgid, e.g. `Person`
 
 ### Deprecated
 
@@ -17,9 +30,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- fix `isbnIssn` label being scoped to `Activity` instead of `BibliographicResource`
+- fix missing english label for `Activity.publication`
+- fix wrong `msgid_plural` for `instrumentToolOrApparatus` and `Location.name`
+- fix `de.po` syntax error caused by a malformed plural `msgstr` for
+  `Organization.officialName`
+- fix missing plural forms for `BibliographicResource.abstract` and
+  `Resource.geopoliticalResolution`
+- fix missing english label for `BibliographicResource.abstract`
+- fix duplicate `ResourceSeries` entries for `description.description` and
+  `documentation.description`
+- fix german grammar in `ResourceSeries.accrualPeriodicity` description
+- fix capitalization of the english `Resource` and `ResourceSeries` labels
+
 ### Security
 
 ## [5.3.0] - 2026-11-25
+
+### Added
 
 #### mex/model/entities/
 
@@ -136,8 +164,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   New property:
   - `hasVersion`, relating translation entries in de.po, en.po
 
-#### mex/model/entities/
-
 - all entities (where applicable):
   - Switching annotation properties sameAs, subpropertyOf to closeMatch in
   - Replacing $comment entries by indicating source in HealthDCAT-AP with closeMatch
@@ -159,8 +185,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - in `extracted-resource.json` and `merged-resource.json`:
   - `hasLegalBasis`: change range to include `fields/text.json`and `fields/link.json`
-  - `hasPurpose`: change range of property to vocabulary `purpose.json` and amending translation entries in de.po, en.po accordingly
-  - `qualityInformation`: new definition/ usage note, amended translation entries in de.po, en.po
+  - `hasPurpose`: change range of property to vocabulary `purpose.json` and amending
+    translation entries in de.po, en.po accordingly
+  - `qualityInformation`: new definition/ usage note, amended translation entries in
+    de.po, en.po
   - add `hasVersion`
   - make `resourceCreationMethod` required
 
@@ -180,13 +208,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### mex/model/vocabularies
 
 - `concept-schemes.json`: remove `https://mex.rki.de/item/country`
-- `language.json`: add concepts (all EU official languages + Chinese, Turkish, Japanese and Arabic) and exactMatches to terms from EU vocabularies
+- `language.json`: add concepts (all EU official languages + Chinese, Turkish, Japanese
+  and Arabic) and exactMatches to terms from EU vocabularies
 - `health-category.json`: change `prefLabel` of concepts
 - `resource-creation-method.json`: add concepts and their respective matches to EU terms
-
-#### mex/model/vocabularies
-
-- `country.json`: deleted, because we decided to have locations as entities and not in a vocabulary
+- `country.json`: deleted, because we decided to have locations as entities and not in a
+  vocabulary
 
 ### Fixed
 
@@ -285,7 +312,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - add vocabularies to concept-schemes.json
 
-#### Added mex/model/entities/extracted-resource-series.json and mex/model/entities/merged-resource-series.json
+#### Added extracted- and merged-resource-series.json
 
 A new entity type, including the following properties (RKIMEX-14):
 
@@ -309,11 +336,11 @@ A new entity type, including the following properties (RKIMEX-14):
 - closeMatch (RKIMEX-116)
 - exactMatch (RKIMEX-116)
 
-#### Added properties to mex/model/entities/extracted-organization.json and mex/model/entities/merged-organization.json
+#### Added properties to extracted- and merged-organization.json
 
 - country (RKIMEX-73)
 
-#### Added properties to mex/model/entities/extracted-resource.json and mex/model/entities/merged-resource.json
+#### Added properties to extracted- and merged-resource.json
 
 - hasPurposeDescription (RKIMEX-106)
 - inSeries (RKIMEX-13)
@@ -326,7 +353,8 @@ A new entity type, including the following properties (RKIMEX-14):
 ### Changes
 
 - Changed files by adding translation entries for entities named in added: en.po, de.po
-- change annotation properties sameAs and subPropertyOf to closeMatch. delete sameAs and subPropertyOf from extension/definition.json
+- change annotation properties sameAs and subPropertyOf to closeMatch. delete sameAs and
+  subPropertyOf from extension/definition.json
 
 ### Fixed
 
@@ -337,8 +365,9 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Changes
 
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/192830>
-- change propertes `start` and `end` in extracted-resource.json and merged-resource.json to be of type `array` and align them to `Activity.start`and `Activity.end`.
+- new template <https://github.com/robert-koch-institut/mex-template/commit/192830>
+- change properties `start` and `end` in extracted- and merged-resource.json to be of
+  type `array` and align them to `Activity.start`and `Activity.end`.
 
 ## [5.0.2] - 2026-06-24
 
@@ -348,12 +377,10 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Changes
 
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/11612b>
-
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/52887e>
-
+- new template <https://github.com/robert-koch-institut/mex-template/commit/11612b>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/52887e>
 - dependencies update (2026-06-16)
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/1d816d>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/1d816d>
 
 ### Fixed
 
@@ -367,15 +394,17 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Changes
 
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/26afa8>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/26afa8>
 
 ## [5.0.0] - 2026-06-02
+
+### Added
 
 #### Added Vocabulary file
 
 - mex/model/vocabularies/health-category.json (RKIMEX-62)
 
-#### Added properties to mex/model/entities/extracted-resource.json and mex/model/entities/merged-resource.json
+#### Added properties to extracted- and merged-resource.json
 
 - analytics (RKIMEX-12)
 - end (RKIMEX-87)
@@ -388,11 +417,11 @@ A new entity type, including the following properties (RKIMEX-14):
 - source (RKIMEX-18)
 - start (RKIMEX-87)
 
-#### Added properties to mex/model/entities/extracted-activity.json and mex/model/entities/merged-activity.json
+#### Added properties to extracted- and merged-activity.json
 
 - relatedActivity (RKIMEX-69)
 
-#### Added properties to mex/model/entities/extracted-primary-source.json and mex/model/entities/merged-primary-source.json
+#### Added properties to extracted- and merged-primary-source.json
 
 - contributor (RKIMEX-77)
 
@@ -400,8 +429,8 @@ A new entity type, including the following properties (RKIMEX-14):
 
 - Changed files by adding translation entries for entities named in added: en.po, de.po
 - Changed file by adding vocabulary reference: concept-schemes.json
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/57105a>
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/dd987e>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/57105a>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/dd987e>
 - dependency update(2026-06-01)
 
 ### Fixed
@@ -414,12 +443,12 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Changes
 
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/43f715>
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/efc70e>
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/48ce42>
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/172aac>
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/491e2d>
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/0c16a6>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/43f715>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/efc70e>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/48ce42>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/172aac>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/491e2d>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/0c16a6>
 
 ### Fixed
 
@@ -434,15 +463,16 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Changes
 
-- add translations for contact point and organizational unit (alternativeName, name) in po files
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/81bc5b>
+- add translations for contact point and organizational unit (alternativeName, name) in
+  po files
+- new template <https://github.com/robert-koch-institut/mex-template/commit/81bc5b>
 
 ## [4.9.1] - 2026-01-23
 
 ### Changes
 
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/33ca3a>
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/ad26e4>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/33ca3a>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/ad26e4>
 
 ## [4.9.0] - 2026-01-22
 
@@ -452,7 +482,7 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Changes
 
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/8c253f>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/8c253f>
 - lock file maintenance (2026-01-12)
 - switch package manager from pdm to uv
 
@@ -464,8 +494,8 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Changes
 
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/203934>
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/c5ff3e>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/203934>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/c5ff3e>
 - lock file maintenance (2026-01-05)
 - Update actions/cache action to v5
 
@@ -495,9 +525,9 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ### Changes
 
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/7c3e75>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/7c3e75>
 - split extracted item and merged item schemas
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/a67c71>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/a67c71>
 - lock file maintenance (2025-11-24)
 - narrow python version to 3.11 to prevent dependency issues
 
@@ -519,8 +549,8 @@ A new entity type, including the following properties (RKIMEX-14):
 ### Changes
 
 - Removed .mo conversion from release action due to runtime conversion in mex-editor
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/6009e2>
-- updated template to <https://github.com/robert-koch-institut/mex-template/commit/3c389d>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/6009e2>
+- new template <https://github.com/robert-koch-institut/mex-template/commit/3c389d>
 
 ## [4.4.0] - 2025-10-22
 
@@ -620,6 +650,10 @@ A new entity type, including the following properties (RKIMEX-14):
 
 ## [3.5.7] - 2025-04-29
 
+### Changes
+
+- version maintenance
+
 ## [3.5.6] - 2025-02-28
 
 ### Changes
@@ -700,6 +734,10 @@ A new entity type, including the following properties (RKIMEX-14):
 - fix cruft diffs in README, pyproject and requirements
 
 ## [3.2.0] - 2024-11-18
+
+### Changes
+
+- version maintenance
 
 ## [3.1.0] - 2024-10-28
 

@@ -31,6 +31,9 @@ EXCLUDED_PROVENANCE_FIELDS = frozenset(
 ANNOTATION_URI_KEYS = ("closeMatch", "exactMatch", "sameAs", "subPropertyOf")
 MSGID_PATTERN = re.compile(r'^msgid "((?:[^"\\]|\\.)*)"')
 MSGCTXT_PATTERN = re.compile(r'^msgctxt "((?:[^"\\]|\\.)*)"')
+MSGID_PLURAL_PATTERN = re.compile(r'^msgid_plural "((?:[^"\\]|\\.)*)"')
+MSGSTR_PATTERN = re.compile(r'^msgstr(?:\[\d+\])? "((?:[^"\\]|\\.)*)"')
+CONTINUATION_PATTERN = re.compile(r'^"((?:[^"\\]|\\.)*)"')
 
 
 def _iter_use_scheme_nodes(node: object) -> Iterator[dict[str, Any]]:
@@ -356,57 +359,176 @@ def find_unresolved_use_scheme_violations(
     return violations
 
 
-def _extract_msgids(po_text: str) -> set[tuple[str | None, str]]:
-    """Extract all `(msgctxt, msgid)` pairs from a raw .po file's text.
+def _iter_translated_entries(
+    po_text: str,
+) -> Iterator[tuple[str | None, str, str | None]]:
+    """Yield `(msgctxt, msgid, msgid_plural)` for each translated .po entry.
 
     Entries without an `msgctxt` yield a `None` context; those act as the
-    fallback that applies to every entity.
+    fallback that applies to every entity. Entries with an empty `msgstr` (or
+    an empty `msgstr[n]` plural form) are skipped, because gettext falls back
+    to the raw msgid for them. A multi-line `msgstr ""` followed by
+    continuation lines counts as translated.
     """
-    msgids: set[tuple[str | None, str]] = set()
     context: str | None = None
-    for line in po_text.splitlines():
+    msgid: str | None = None
+    plural: str | None = None
+    msgstrs: list[bool] = []
+    for line in [*po_text.splitlines(), ""]:
         if match := MSGCTXT_PATTERN.match(line):
             context = match.group(1)
         elif match := MSGID_PATTERN.match(line):
-            msgids.add((context, match.group(1)))
+            msgid = match.group(1)
+        elif match := MSGID_PLURAL_PATTERN.match(line):
+            plural = match.group(1)
+        elif match := MSGSTR_PATTERN.match(line):
+            msgstrs.append(bool(match.group(1)))
+        elif (match := CONTINUATION_PATTERN.match(line)) and msgstrs:
+            msgstrs[-1] = msgstrs[-1] or bool(match.group(1))
         elif not line.strip():
-            context = None
-    return msgids
+            if msgid is not None and msgstrs and all(msgstrs):
+                yield context, msgid, plural
+            context, msgid, plural, msgstrs = None, None, None, []
 
 
-def _has_translation(
-    msgids: set[tuple[str | None, str]], entity_name: str, field: str
+def _extract_msgids(po_text: str) -> set[tuple[str | None, str]]:
+    """Extract the `(msgctxt, msgid)` pairs of all translated .po entries."""
+    return {(context, msgid) for context, msgid, _ in _iter_translated_entries(po_text)}
+
+
+def _extract_plural_msgids(po_text: str) -> set[tuple[str | None, str, str]]:
+    """Extract the `(msgctxt, msgid, msgid_plural)` triples of translated entries."""
+    return {
+        (context, msgid, plural)
+        for context, msgid, plural in _iter_translated_entries(po_text)
+        if plural is not None
+    }
+
+
+def _has_msgid(
+    msgids: set[tuple[str | None, str]], entity_name: str, msgid: str
 ) -> bool:
-    """Check whether one entity's field is covered by any msgid in a .po file."""
-    return any(
-        context in (None, entity_name)
-        and (msgid == field or msgid.startswith(f"{field}."))
-        for context, msgid in msgids
-    )
+    """Check whether a msgid is visible to an entity, scoped to it or context-free."""
+    return (None, msgid) in msgids or (entity_name, msgid) in msgids
 
 
 def find_missing_translation_violations(
     field_names_by_entity: Mapping[str, Iterable[str]],
     po_data_by_language: dict[str, str],
 ) -> list[str]:
-    """Check that every field has a translated label in each i18n .po file.
+    """Check that every field has a label and a description in each .po file.
 
-    A field matches either an exact `msgid` (e.g. `supersededBy`) or one
-    prefixed with the field name followed by a dot (e.g.
-    `abstract.singular`, `abstract.description`). The matching msgid must
-    either carry the entity's own `msgctxt` or no `msgctxt` at all, because a
-    msgid scoped to a different entity is not found when the label is looked
-    up for this one and the UI falls back to the raw msgid.
+    The label is the `<field>.singular` msgid, or the bare `<field>` msgid
+    (e.g. `supersededBy`). The description is the `<field>.description`
+    msgid. Each matching msgid must either carry the entity's own `msgctxt`
+    or no `msgctxt` at all, because a msgid scoped to a different entity is
+    not found when the label is looked up for this one and the UI falls back
+    to the raw msgid.
     """
     violations: list[str] = []
     for language, po_text in sorted(po_data_by_language.items()):
         msgids = _extract_msgids(po_text)
-        violations.extend(
-            f"{language}: no translation found for field {entity_name}.{field}"
-            for entity_name, field_names in sorted(field_names_by_entity.items())
-            for field in sorted(set(field_names))
-            if not _has_translation(msgids, entity_name, field)
-        )
+        for entity_name, field_names in sorted(field_names_by_entity.items()):
+            for field in sorted(set(field_names)):
+                prefix = f"{language}: no translation found for {entity_name}.{field}"
+                if not (
+                    _has_msgid(msgids, entity_name, f"{field}.singular")
+                    or _has_msgid(msgids, entity_name, field)
+                ):
+                    violations.append(f"{prefix}.singular")
+                if not _has_msgid(msgids, entity_name, f"{field}.description"):
+                    violations.append(f"{prefix}.description")
+    return violations
+
+
+def find_missing_plural_translation_violations(
+    array_field_names_by_entity: Mapping[str, Iterable[str]],
+    po_data_by_language: dict[str, str],
+) -> list[str]:
+    """Check that every array field has a plural label in each .po file.
+
+    The plural label is an entry with `msgid "<field>.singular"` and
+    `msgid_plural "<field>.plural"`. Like the singular label, it must either
+    carry the entity's own `msgctxt` or no `msgctxt` at all.
+    """
+    violations: list[str] = []
+    for language, po_text in sorted(po_data_by_language.items()):
+        plurals = _extract_plural_msgids(po_text)
+        for entity_name, field_names in sorted(array_field_names_by_entity.items()):
+            for field in sorted(set(field_names)):
+                pair = (f"{field}.singular", f"{field}.plural")
+                if (None, *pair) not in plurals and (entity_name, *pair) not in plurals:
+                    violations.append(
+                        f"{language}: no plural translation found for "
+                        f"{entity_name}.{field}.plural"
+                    )
+    return violations
+
+
+def find_misplaced_translation_violations(
+    field_names_by_entity: Mapping[str, Iterable[str]],
+    po_data_by_language: dict[str, str],
+) -> list[str]:
+    """Check that every entity-scoped msgid belongs to a field of that entity.
+
+    A msgid scoped to an unknown entity, or to an entity that lacks the field,
+    is never looked up and usually means the `msgctxt` was set to the wrong
+    entity. Context-free msgids are not checked.
+    """
+    violations: list[str] = []
+    for language, po_text in sorted(po_data_by_language.items()):
+        for context, msgid in sorted(
+            (context, msgid)
+            for context, msgid in _extract_msgids(po_text)
+            if context is not None
+        ):
+            if context not in field_names_by_entity:
+                violations.append(
+                    f"{language}: msgctxt {context!r} is not a known entity "
+                    f"(msgid {msgid!r})"
+                )
+                continue
+            field = msgid.split(".", 1)[0]
+            if field not in set(field_names_by_entity[context]):
+                violations.append(
+                    f"{language}: msgctxt {context!r} has msgid {msgid!r} "
+                    f"but {context} has no field {field}"
+                )
+    return violations
+
+
+MSGID_SUFFIXES = ("singular", "description")
+
+
+def find_malformed_msgid_violations(po_data_by_language: dict[str, str]) -> list[str]:
+    """Check that msgid suffixes and msgid_plural keys follow the naming scheme.
+
+    A dotted msgid must end in one of `MSGID_SUFFIXES`; bare msgids (entity
+    labels, `supersededBy`) are not checked. A `msgid_plural` is only allowed
+    on a `<field>.singular` msgid and must be `<field>.plural`.
+    """
+    violations: list[str] = []
+    for language, po_text in sorted(po_data_by_language.items()):
+        for _, msgid in sorted(_extract_msgids(po_text), key=lambda key: key[1]):
+            _, dot, suffix = msgid.partition(".")
+            if dot and suffix not in MSGID_SUFFIXES:
+                violations.append(
+                    f"{language}: msgid {msgid!r} has invalid suffix {suffix!r}"
+                )
+        for _, msgid, plural in sorted(
+            _extract_plural_msgids(po_text), key=lambda key: key[1:]
+        ):
+            field, _, suffix = msgid.partition(".")
+            if suffix == "singular" and plural != f"{field}.plural":
+                violations.append(
+                    f"{language}: msgid {msgid!r} has msgid_plural {plural!r}, "
+                    f"expected {field + '.plural'!r}"
+                )
+            elif suffix != "singular":
+                violations.append(
+                    f"{language}: msgid {msgid!r} has a msgid_plural but is not "
+                    "a .singular msgid"
+                )
     return violations
 
 
@@ -599,16 +721,29 @@ def _collect_violations() -> list[str]:
     )
     violations += find_orphaned_field_violations(FIELD_JSON_BY_NAME, all_entities)
     field_names_by_entity: dict[str, set[str]] = {}
+    array_field_names_by_entity: dict[str, set[str]] = {}
     for stem, schema in all_entities.items():
-        field_names_by_entity.setdefault(
-            _entity_name_from_file_stem(stem), set()
-        ).update(schema.get("properties", {}))
+        entity_name = _entity_name_from_file_stem(stem)
+        properties = schema.get("properties", {})
+        field_names_by_entity.setdefault(entity_name, set()).update(properties)
+        array_field_names_by_entity.setdefault(entity_name, set()).update(
+            name
+            for name, definition in properties.items()
+            if definition.get("type") == "array"
+        )
     violations += find_missing_entity_label_violations(
         field_names_by_entity, I18N_PO_DATA_BY_LANGUAGE
     )
     violations += find_missing_translation_violations(
         field_names_by_entity, I18N_PO_DATA_BY_LANGUAGE
     )
+    violations += find_missing_plural_translation_violations(
+        array_field_names_by_entity, I18N_PO_DATA_BY_LANGUAGE
+    )
+    violations += find_misplaced_translation_violations(
+        field_names_by_entity, I18N_PO_DATA_BY_LANGUAGE
+    )
+    violations += find_malformed_msgid_violations(I18N_PO_DATA_BY_LANGUAGE)
     for name, schema in sorted(all_entities.items()):
         violations += find_meta_schema_violations(name, schema)
         violations += find_id_path_violations(name, "entities", schema)
