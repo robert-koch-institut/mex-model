@@ -37,13 +37,20 @@
             "type": "string"
         },
         "keyword": {
-            "default": [],
-            "description": "A keyword or tag describing the variable group.",
-            "exactMatch": [
+            "closeMatch": [
                 "http://www.w3.org/ns/dcat#keyword"
             ],
+            "default": [],
+            "description": "A keyword or tag describing the variable group.",
             "items": {
-                "$ref": "/mex/model/fields/text"
+                "anyOf": [
+                    {
+                        "$ref": "/mex/model/fields/text"
+                    },
+                    {
+                        "$ref": "/mex/model/fields/link"
+                    }
+                ]
             },
             "type": "array"
         },
