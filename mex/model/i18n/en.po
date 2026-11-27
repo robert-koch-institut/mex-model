@@ -34,12 +34,6 @@ msgid "accessPlatform.description"
 msgstr "Access platform for the data"
 
 msgctxt "ResourceSeries"
-msgid "accessPlatform.singular"
-msgid_plural "accessPlatform.plural"
-msgstr[0] "Access platform"
-msgstr[1] "Access platforms"
-
-msgctxt "ResourceSeries"
 msgid "accessPlatform.description"
 msgstr "Access platform for the collection"
 
@@ -87,17 +81,12 @@ msgctxt "Distribution"
 msgid "accessURL.description"
 msgstr "URL provides access to the files"
 
-msgctxt "Resource"
 msgid "accrualPeriodicity.singular"
 msgstr "Update frequency"
 
 msgctxt "Resource"
 msgid "accrualPeriodicity.description"
 msgstr "Rate/frequency with which data is updated"
-
-msgctxt "ResourceSeries"
-msgid "accrualPeriodicity.singular"
-msgstr "Update frequency"
 
 msgctxt "ResourceSeries"
 msgid "accrualPeriodicity.description"
@@ -133,6 +122,19 @@ msgstr[1] "Other identifiers"
 msgctxt "BibliographicResource"
 msgid "alternateIdentifier.description"
 msgstr "Other identifier(s) for the publication, e.g. from other repositories"
+
+msgid "alternativeName.singular"
+msgid_plural "alternativeName.plural"
+msgstr[0] "Other name"
+msgstr[1] "Other names"
+
+msgctxt "Organization"
+msgid "alternativeName.description"
+msgstr "Other name of the institution"
+
+msgctxt "OrganizationalUnit"
+msgid "alternativeName.description"
+msgstr "Other name of the organizational unit"
 
 msgid "alternativeTitle.singular"
 msgid_plural "alternativeTitle.plural"
@@ -238,6 +240,19 @@ msgctxt "VariableGroup"
 msgid "containedBy.description"
 msgstr "Data source/data set, the variable group belongs to"
 
+msgid "contributingUnit.singular"
+msgid_plural "contributingUnit.plural"
+msgstr[0] "Contributing Unit"
+msgstr[1] "Contributing Units"
+
+msgctxt "BibliographicResource"
+msgid "contributingUnit.description"
+msgstr "Organizational unit(s) contributing to the publication"
+
+msgctxt "Resource"
+msgid "contributingUnit.description"
+msgstr "Organizational unit(s) contributing to the data"
+
 msgctxt "Resource"
 msgid "contributor.singular"
 msgid_plural "contributor.plural"
@@ -257,19 +272,6 @@ msgstr[1] "Contact persons"
 msgctxt "PrimarySource"
 msgid "contributor.description"
 msgstr "Persons, who serve as contact for the primary source"
-
-msgid "contributingUnit.singular"
-msgid_plural "contributingUnit.plural"
-msgstr[0] "Contributing Unit"
-msgstr[1] "Contributing Units"
-
-msgctxt "BibliographicResource"
-msgid "contributingUnit.description"
-msgstr "Organizational unit(s) contributing to the publication"
-
-msgctxt "Resource"
-msgid "contributingUnit.description"
-msgstr "Organizational unit(s) contributing to the data"
 
 msgctxt "Organization"
 msgid "country.singular"
@@ -324,12 +326,6 @@ msgstr ""
 "Brief description of the data, its components, and the context of how the data was "
 "created"
 
-msgctxt "ResourceSeries"
-msgid "description.description"
-msgstr ""
-"Brief description of the data series, its components, and the context of how the "
-"data was created"
-
 msgctxt "AccessPlatform"
 msgid "description.description"
 msgstr "Brief description of the access platform in which the data is stored"
@@ -346,7 +342,6 @@ msgctxt "ResourceSeries"
 msgid "description.description"
 msgstr "Brief description of the nature of the collection"
 
-msgctxt "BibliographicResource"
 msgid "distribution.singular"
 msgid_plural "distribution.plural"
 msgstr[0] "File"
@@ -355,12 +350,6 @@ msgstr[1] "Files"
 msgctxt "BibliographicResource"
 msgid "distribution.description"
 msgstr "Files belonging to the publication"
-
-msgctxt "Resource"
-msgid "distribution.singular"
-msgid_plural "distribution.plural"
-msgstr[0] "File"
-msgstr[1] "Files"
 
 msgctxt "Resource"
 msgid "distribution.description"
@@ -378,10 +367,6 @@ msgstr "URL leading to further documentation of the project/endeavor"
 msgctxt "Resource"
 msgid "documentation.description"
 msgstr "Further information about the data"
-
-msgctxt "ResourceSeries"
-msgid "documentation.description"
-msgstr "Further information about the data series"
 
 msgctxt "PrimarySource"
 msgid "documentation.description"
@@ -661,22 +646,35 @@ msgctxt "Resource"
 msgid "hasCodingSystem.description"
 msgstr "Specification of coding system in use"
 
+msgctxt "Consent"
+msgid "hasConsentStatus.singular"
+msgstr "Consent Status"
+
+msgctxt "Consent"
+msgid "hasConsentStatus.description"
+msgstr "State or status of the consent"
+
+msgctxt "Consent"
+msgid "hasConsentType.singular"
+msgstr "Consent Type"
+
+msgctxt "Consent"
+msgid "hasConsentType.description"
+msgstr "Type of the consent"
+
+msgctxt "Consent"
+msgid "hasDataSubject.singular"
+msgstr "Person concerned"
+
+msgctxt "Consent"
+msgid "hasDataSubject.description"
+msgstr "Person to whom the consent refers"
+
 msgid "hasLegalBasis.singular"
 msgid_plural "hasLegalBasis.plural"
 msgstr[0] "Legal basis"
 msgstr[1] "Legal bases"
 
-msgctxt "Resource"
-msgid "hasLegalBasis.description"
-msgstr "Laws and regulations that are the basis on which data is collected"
-
-msgctxt "ResourceSeries"
-msgid "hasLegalBasis.singular"
-msgid_plural "hasLegalBasis.plural"
-msgstr[0] "Legal basis"
-msgstr[1] "Legal bases"
-
-msgctxt "ResourceSeries"
 msgid "hasLegalBasis.description"
 msgstr "Laws and regulations that are the basis on which data is collected"
 
@@ -843,16 +841,6 @@ msgstr ""
 "International Standard Name Identifier, an ISO-certified identifier for persons and "
 "institutions"
 
-msgctxt "Activity"
-msgid "isPartOfActivity.singular"
-msgid_plural "isPartOfActivity.plural"
-msgstr[0] "Superordinate project/endeavor"
-msgstr[1] "Superordinate projects/endeavors"
-
-msgctxt "Activity"
-msgid "isPartOfActivity.description"
-msgstr "This activity is part of a superordinate project, e.g. a sub-project"
-
 msgctxt "Resource"
 msgid "isPartOf.singular"
 msgid_plural "isPartOf.plural"
@@ -862,6 +850,16 @@ msgstr[1] "Superordinate data sources/data sets"
 msgctxt "Resource"
 msgid "isPartOf.description"
 msgstr "This data forms a subset of the superordinate data source/data set"
+
+msgctxt "Activity"
+msgid "isPartOfActivity.singular"
+msgid_plural "isPartOfActivity.plural"
+msgstr[0] "Superordinate project/endeavor"
+msgstr[1] "Superordinate projects/endeavors"
+
+msgctxt "Activity"
+msgid "isPartOfActivity.description"
+msgstr "This activity is part of a superordinate project, e.g. a sub-project"
 
 msgctxt "BibliographicResource"
 msgid "issue.singular"
@@ -1048,6 +1046,19 @@ msgstr "Modified"
 msgid "modified.description"
 msgstr "Date on which the data was last changed"
 
+msgid "name.singular"
+msgid_plural "name.plural"
+msgstr[0] "Name"
+msgstr[1] "Names"
+
+msgctxt "Location"
+msgid "name.description"
+msgstr "Name of the location"
+
+msgctxt "OrganizationalUnit"
+msgid "name.description"
+msgstr "Official name of the organizational unit"
+
 msgctxt "Resource"
 msgid "numberOfRecords.singular"
 msgstr "Number of records"
@@ -1090,46 +1101,6 @@ msgctxt "Organization"
 msgid "officialName.description"
 msgstr "Official name of the institution"
 
-msgctxt "Organization"
-msgid "alternativeName.singular"
-msgid_plural "alternativeName.plural"
-msgstr[0] "Other name"
-msgstr[1] "Other names"
-
-msgctxt "Organization"
-msgid "alternativeName.description"
-msgstr "Other name of the institution"
-
-msgctxt "OrganizationalUnit"
-msgid "alternativeName.singular"
-msgid_plural "alternativeName.plural"
-msgstr[0] "Other name"
-msgstr[1] "Other names"
-
-msgctxt "OrganizationalUnit"
-msgid "alternativeName.description"
-msgstr "Other name of the organizational unit"
-
-msgctxt "OrganizationalUnit"
-msgid "name.singular"
-msgid_plural "name.plural"
-msgstr[0] "Name"
-msgstr[1] "Names"
-
-msgctxt "Location"
-msgid "name.singular"
-msgid_plural "name.plural"
-msgstr[0] "Name"
-msgstr[1] "Names"
-
-msgctxt "Location"
-msgid "name.description"
-msgstr "Name of the location"
-
-msgctxt "OrganizationalUnit"
-msgid "name.description"
-msgstr "Official name of the organizational unit"
-
 msgctxt "Person"
 msgid "orcidId.singular"
 msgid_plural "orcidId.plural"
@@ -1160,28 +1131,6 @@ msgid "parentUnit.description"
 msgstr "Next higher-level organizational unit"
 
 msgctxt "Resource"
-msgid "provenance.singular"
-msgid_plural "provenance.plural"
-msgstr[0] "Data provenance"
-msgstr[1] "Data provenances"
-
-msgctxt "Resource"
-msgid "provenance.description"
-msgstr ""
-"Description of how the data was generated, where it came from, how it was collected; "
-"which data sources were used to compile the data"
-
-msgctxt "BibliographicResource"
-msgid "publicationPlace.singular"
-msgid_plural "publicationPlace.plural"
-msgstr[0] "Publication place"
-msgstr[1] "Publication places"
-
-msgctxt "BibliographicResource"
-msgid "publicationPlace.description"
-msgstr "Place where the publication was issued"
-
-msgctxt "Resource"
 msgid "populationCoverage.singular"
 msgid_plural "populationCoverage.plural"
 msgstr[0] "Population coverage"
@@ -1192,6 +1141,18 @@ msgid "populationCoverage.description"
 msgstr ""
 "Indication of which part or group of the population is the subject of the data "
 "collection, e.g. infants aged 1 to 3 years or patients with type 2 diabetes"
+
+msgctxt "Resource"
+msgid "provenance.singular"
+msgid_plural "provenance.plural"
+msgstr[0] "Data provenance"
+msgstr[1] "Data provenances"
+
+msgctxt "Resource"
+msgid "provenance.description"
+msgstr ""
+"Description of how the data was generated, where it came from, how it was collected; "
+"which data sources were used to compile the data"
 
 msgid "publication.singular"
 msgid_plural "publication.plural"
@@ -1205,6 +1166,16 @@ msgstr "Publication(s) associated with the project/endeavor"
 msgctxt "Resource"
 msgid "publication.description"
 msgstr "Publication related to the data"
+
+msgctxt "BibliographicResource"
+msgid "publicationPlace.singular"
+msgid_plural "publicationPlace.plural"
+msgstr[0] "Publication place"
+msgstr[1] "Publication places"
+
+msgctxt "BibliographicResource"
+msgid "publicationPlace.description"
+msgstr "Place where the publication was issued"
 
 msgctxt "BibliographicResource"
 msgid "publicationYear.singular"
@@ -1496,6 +1467,11 @@ msgctxt "Activity"
 msgid "succeeds.description"
 msgstr "Another project/endeavor that preceded the one described here"
 
+msgid "supersededBy.description"
+msgstr ""
+"An item which is the preferred duplicate, because it replaces, consolidates or "
+"otherwise renders this item obsolete."
+
 msgid "technicalAccessibility.singular"
 msgstr "Technical accessibility"
 
@@ -1617,17 +1593,12 @@ msgstr ""
 "Total of all possible values that a variable can assume, i.e. different "
 "characteristic values or values that are permissible for this variable"
 
-msgctxt "PrimarySource"
 msgid "version.singular"
 msgstr "Version"
 
 msgctxt "PrimarySource"
 msgid "version.description"
 msgstr "Version of the original data storage (primary source)"
-
-msgctxt "Resource"
-msgid "version.singular"
-msgstr "Version"
 
 msgctxt "Resource"
 msgid "version.description"
@@ -1679,7 +1650,6 @@ msgstr[1] "Websites"
 msgid "website.description"
 msgstr "Website(s) providing further information"
 
-msgctxt "Location"
 msgid "wikidataId.singular"
 msgid_plural "wikidataId.plural"
 msgstr[0] "Wikidata Concept URI"
@@ -1693,49 +1663,14 @@ msgstr ""
 "database for identifying things (in the sense of Linked Data)"
 
 msgctxt "Organization"
-msgid "wikidataId.singular"
-msgid_plural "wikidataId.plural"
-msgstr[0] "Wikidata Concept URI"
-msgstr[1] "Wikidata Concept URIs"
-
-msgctxt "Organization"
 msgid "wikidataId.description"
 msgstr ""
 "Wikidata is a free, shared, multilingual and secondary database for the collection of "
 "structured data to support Wikipedia and is also used as a reference database for the "
 "identification of things (in the sense of Linked Data)"
 
-msgctxt "Consent"
-msgid "hasConsentStatus.singular"
-msgstr "Consent Status"
-
-msgctxt "Consent"
-msgid "hasConsentStatus.description"
-msgstr "State or status of the consent"
-
-msgctxt "Consent"
-msgid "hasConsentType.singular"
-msgstr "Consent Type"
-
-msgctxt "Consent"
-msgid "hasConsentType.description"
-msgstr "Type of the consent"
-
-msgctxt "Consent"
-msgid "hasDataSubject.singular"
-msgstr "Person concerned"
-
-msgctxt "Consent"
-msgid "hasDataSubject.description"
-msgstr "Person to whom the consent refers"
-
 msgid "supersededBy"
 msgstr "superseded by"
-
-msgid "supersededBy.description"
-msgstr ""
-"An item which is the preferred duplicate, because it replaces, consolidates or "
-"otherwise renders this item obsolete."
 
 msgid "AccessPlatform"
 msgstr "Access platform"
@@ -1775,10 +1710,10 @@ msgid "PrimarySource"
 msgstr "Primary source"
 
 msgid "Resource"
-msgstr "Data Source/Dataset"
+msgstr "Data source/dataset"
 
 msgid "ResourceSeries"
-msgstr "Collection of Data sources/Datasets"
+msgstr "Collection of data sources/datasets"
 
 #. dennis-ignore: W302
 msgid "Variable"
