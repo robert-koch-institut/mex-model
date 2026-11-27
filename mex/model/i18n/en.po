@@ -1136,7 +1136,7 @@ msgctxt "Resource"
 msgid "provenance.singular"
 msgid_plural "provenance.plural"
 msgstr[0] "Data provenance"
-msgstr[1] "Data provenance"
+msgstr[1] "Data provenances"
 
 msgctxt "Resource"
 msgid "provenance.description"
