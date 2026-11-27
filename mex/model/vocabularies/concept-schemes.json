@@ -73,11 +73,11 @@
     },
     {
         "description": {
-            "de": "Dieses Vokabular definiert Datentypen gemäß https://w3c.github.io/csvw/metadata/#datatypes.",
-            "en": "This vocabulary replicates Data Types as defined in https://w3c.github.io/csvw/metadata/#datatypes."
+            "de": "Dieses Vokabular basiert auf den XSD Datentypen: http://www.w3.org/2001/XMLSchema.",
+            "en": "This vocabulary is based on the XSD Datatype Vocabulary, available at http://www.w3.org/2001/XMLSchema."
         },
         "identifier": "https://mex.rki.de/item/datatype-standardized",
-        "label": "Data type vocabulary"
+        "label": "Standardized datatype vocabulary"
     },
     {
         "description": {
