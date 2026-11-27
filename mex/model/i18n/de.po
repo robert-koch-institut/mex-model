@@ -1489,6 +1489,9 @@ msgctxt "Activity"
 msgid "succeeds.description"
 msgstr "Ein anderes Vorhaben, das dem hier beschriebenen vorausgegangen ist"
 
+msgid "supersededBy"
+msgstr "ersetzt durch"
+
 msgid "supersededBy.description"
 msgstr ""
 "Zugehöriger Eintrag der ein bevorzugtes Duplikat ist, weil er diesen Eintrag ersetzt, "
@@ -1693,8 +1696,6 @@ msgstr ""
 "Sammlung strukturierter Daten zur Unterstützung von Wikipedia und wird auch als "
 "Referenzdatenbank für die Identifikation von Dingen (im Sinne von Linked Data) genutzt"
 
-msgid "supersededBy"
-msgstr "ersetzt durch"
 
 msgid "AccessPlatform"
 msgstr "Zugriffsplattform"
@@ -1705,11 +1706,11 @@ msgstr "Projekt"
 msgid "BibliographicResource"
 msgstr "Publikation"
 
-msgid "ContactPoint"
-msgstr "Funktionspostfach"
-
 msgid "Consent"
 msgstr "Einwilligung"
+
+msgid "ContactPoint"
+msgstr "Funktionspostfach"
 
 msgid "Distribution"
 msgstr "Datei"

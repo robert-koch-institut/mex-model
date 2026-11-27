@@ -16,8 +16,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changes
 
-- new template https://github.com/robert-koch-institut/mex-template/releases/tag/2.1.0
 - schema checks now require both a label and a description for every field and language
+- merge translations that are identical for every entity into one context-free
+  entry in `de.po` and `en.po`, and drop scoped entries that repeat the fallback
+- align `de.po` and `en.po` to the same entries and the same alphabetical order
+- scope `keyword.description` per entity in `de.po`, matching `en.po`
+- silence dennis `W302` warnings for entity labels that are correctly identical to
+  their msgid, e.g. `Person`
 
 ### Deprecated
 
@@ -28,6 +33,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fix `isbnIssn` label being scoped to `Activity` instead of `BibliographicResource`
 - fix missing english label for `Activity.publication`
 - fix wrong `msgid_plural` for `instrumentToolOrApparatus` and `Location.name`
+- fix `de.po` syntax error caused by a malformed plural `msgstr` for
+  `Organization.officialName`
+- fix missing plural forms for `BibliographicResource.abstract` and
+  `Resource.geopoliticalResolution`
+- fix missing english label for `BibliographicResource.abstract`
+- fix duplicate `ResourceSeries` entries for `description.description` and
+  `documentation.description`
+- fix german grammar in `ResourceSeries.accrualPeriodicity` description
+- fix capitalization of the english `Resource` and `ResourceSeries` labels
 
 ### Security
 

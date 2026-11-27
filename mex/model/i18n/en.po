@@ -1467,6 +1467,9 @@ msgctxt "Activity"
 msgid "succeeds.description"
 msgstr "Another project/endeavor that preceded the one described here"
 
+msgid "supersededBy"
+msgstr "superseded by"
+
 msgid "supersededBy.description"
 msgstr ""
 "An item which is the preferred duplicate, because it replaces, consolidates or "
@@ -1669,8 +1672,6 @@ msgstr ""
 "structured data to support Wikipedia and is also used as a reference database for the "
 "identification of things (in the sense of Linked Data)"
 
-msgid "supersededBy"
-msgstr "superseded by"
 
 msgid "AccessPlatform"
 msgstr "Access platform"
@@ -1681,12 +1682,12 @@ msgstr "Project"
 msgid "BibliographicResource"
 msgstr "Publication"
 
-msgid "ContactPoint"
-msgstr "Functional account"
-
 #. dennis-ignore: W302
 msgid "Consent"
 msgstr "Consent"
+
+msgid "ContactPoint"
+msgstr "Functional account"
 
 msgid "Distribution"
 msgstr "File"
