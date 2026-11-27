@@ -5,6 +5,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgctxt "Activity"
 msgid "abstract.singular"
 msgid_plural "abstract.plural"
 msgstr[0] "Kurzbeschreibung"
@@ -12,11 +13,17 @@ msgstr[1] "Kurzbeschreibungen"
 
 msgctxt "Activity"
 msgid "abstract.description"
-msgstr "Kurze Beschreibung des Kontexts, in dem die Daten verarbeitet wurden"
+msgstr "Kurze Beschreibung des Projekts"
+
+msgctxt "BibliographicResource"
+msgid "abstract.singular"
+msgid_plural "abstract.plural"
+msgstr[0] "Zusammenfassung"
+msgstr[1] "Zusammenfassungen"
 
 msgctxt "BibliographicResource"
 msgid "abstract.description"
-msgstr "Zusammenfassung des Inhalts der Publikation"
+msgstr "Kurze Zusammenfassung des Inhalts"
 
 msgctxt "Resource"
 msgid "accessPlatform.singular"
@@ -24,7 +31,6 @@ msgid_plural "accessPlatform.plural"
 msgstr[0] "Zugriffsplattform"
 msgstr[1] "Zugriffsplattformen"
 
-msgctxt "Resource"
 msgid "accessPlatform.description"
 msgstr "Zugriffsplattform für die Daten"
 
@@ -82,6 +88,14 @@ msgctxt "Distribution"
 msgid "accessURL.description"
 msgstr "Eine URL, die Zugriff auf die Dateien ermöglicht"
 
+msgctxt "ResourceSeries"
+msgid "accrualPeriodicity.singular"
+msgstr "Aktualisierungsfrequenz"
+
+msgctxt "ResourceSeries"
+msgid "accrualPeriodicity.description"
+msgstr "Die Häufigkeit/Frequenz, mit die Datenkollektion aktualisiert wird"
+
 msgctxt "Resource"
 msgid "accrualPeriodicity.singular"
 msgstr "Aktualisierungsfrequenz"
@@ -89,14 +103,6 @@ msgstr "Aktualisierungsfrequenz"
 msgctxt "Resource"
 msgid "accrualPeriodicity.description"
 msgstr "Die Häufigkeit/Frequenz, mit der Daten aktualisiert werden"
-
-msgctxt "ResourceSeries"
-msgid "accrualPeriodicity.singular"
-msgstr "Aktualisierungsfrequenz"
-
-msgctxt "ResourceSeries"
-msgid "accrualPeriodicity.description"
-msgstr "Die Häufigkeit/Frequenz, mit der die Kollektion ergänzt wird"
 
 msgctxt "Activity"
 msgid "activityType.singular"
@@ -201,17 +207,21 @@ msgstr[1] "Standards"
 
 msgctxt "Resource"
 msgid "conformsTo.description"
-msgstr "Etablierter Standard, dem die beschriebenen Daten entsprechen"
+msgstr "Etablierter Standard aus dem Bereich der Gesundheitsdaten, dem die beschriebenen Daten entsprechen"
 
 msgid "contact.singular"
 msgid_plural "contact.plural"
 msgstr[0] "Kontakt"
 msgstr[1] "Kontakte"
 
+msgid "contact.description"
+msgstr "Kontaktmöglichkeit"
+
 msgctxt "Activity"
 msgid "contact.description"
 msgstr "Kontakt für das Projekt/Vorhaben"
 
+msgctxt "AccessPlatform"
 msgid "contact.description"
 msgstr ""
 "Person oder Fachgruppe, die weiß, wie man auf die Plattform zugreift, Probleme behebt "
@@ -315,6 +325,11 @@ msgctxt "Resource"
 msgid "description.description"
 msgstr "Kurze Beschreibung der Daten, ihrer Komponenten und des Erstellungskontexts"
 
+msgctxt "ResourceSeries"
+msgid "description.description"
+msgstr ""
+"Kurze Beschreibung der Datenkollektion, ihrer Komponenten und des Erstellungskontexts"
+
 msgctxt "AccessPlatform"
 msgid "description.description"
 msgstr "Kurze Beschreibung der Zugangsplattform, in der die Daten vorgehalten werden"
@@ -363,6 +378,10 @@ msgstr "Link zur Dokumentation des Projekts/Vorhabens"
 msgctxt "Resource"
 msgid "documentation.description"
 msgstr "Weiterführende Informationen zu den Daten"
+
+msgctxt "ResourceSeries"
+msgid "documentation.description"
+msgstr "Weiterführende Informationen zu der Datenkollektion"
 
 msgctxt "PrimarySource"
 msgid "documentation.description"
@@ -453,15 +472,15 @@ msgid_plural "end.plural"
 msgstr[0] "Ende"
 msgstr[1] "Enden"
 
-msgctxt "Resource"
-msgid "end.description"
-msgstr "Ende des Zeitraumes, den die Daten abdecken"
-
 msgctxt "ResourceSeries"
 msgid "end.singular"
 msgid_plural "end.plural"
 msgstr[0] "Ende"
 msgstr[1] "Enden"
+
+msgctxt "Resource"
+msgid "end.description"
+msgstr "Ende des Zeitraumes, den die Daten abdecken"
 
 msgctxt "ResourceSeries"
 msgid "end.description"
@@ -574,6 +593,16 @@ msgstr ""
 "GeoNames ist eine Online-Datenbank mit geografischen Orten weltweit. Sie hilft dabei, "
 "Ortsnamen einheitlich zu erfassen."
 
+msgctxt "Resource"
+msgid "geopoliticalResolution.singular"
+msgid_plural "geopoliticalResolution.plural"
+msgstr[0] "Geopolitische Auflösung"
+msgstr[1] "Geopolitische Auflösungen"
+
+msgctxt "Resource"
+msgid "geopoliticalResolution.description"
+msgstr "Angabe der geopolitischen/ verwaltungspolitischen Auflösung der Ortsangabe des Datensatzes"
+
 msgctxt "Organization"
 msgid "geprisId.singular"
 msgid_plural "geprisId.plural"
@@ -620,8 +649,8 @@ msgstr[0] "Kodierter Wert"
 msgstr[1] "Kodierte Werte"
 
 msgctxt "Resource"
-msgid "hasCodingSystem.description"
-msgstr "Spezifizierung des verwendeten Kodiersystems"
+msgid "hasCodeValues.description"
+msgstr "Wert(e) aus standardisierten Kodiersystemen"
 
 msgctxt "Resource"
 msgid "hasCodingSystem.singular"
@@ -630,10 +659,9 @@ msgstr[0] "Verwendetes Kodiersystem"
 msgstr[1] "Verwendete Kodiersysteme"
 
 msgctxt "Resource"
-msgid "hasCodeValues.description"
-msgstr "Wert(e) aus standardisierten Kodiersystemen"
+msgid "hasCodingSystem.description"
+msgstr "Spezifizierung des verwendeten Kodiersystems"
 
-msgctxt "Resource"
 msgid "hasLegalBasis.singular"
 msgid_plural "hasLegalBasis.plural"
 msgstr[0] "Rechtliche Grundlage"
@@ -878,13 +906,8 @@ msgid_plural "keyword.plural"
 msgstr[0] "Stichwort"
 msgstr[1] "Stichworte"
 
-msgctxt "BibliographicResource"
 msgid "keyword.description"
-msgstr "Die Publikation beschreibende Stichworte"
-
-msgctxt "Resource"
-msgid "keyword.description"
-msgstr "Die Daten beschreibende Stichworte"
+msgstr "Beschreibende Stichworte"
 
 msgctxt "ResourceSeries"
 msgid "keyword.description"
@@ -1036,6 +1059,12 @@ msgstr "Letzte Änderung"
 msgid "modified.description"
 msgstr "Datum, an dem die Daten zuletzt verändert worden sind"
 
+msgctxt "Organization"
+msgid "officialName.singular"
+msgid_plural "officialName.plural"
+msgstr[0] "Name"
+msgstr[1] "Namen"
+
 msgctxt "Location"
 msgid "name.singular"
 msgid_plural "name.plural"
@@ -1045,12 +1074,6 @@ msgstr[1] "Namen"
 msgctxt "Location"
 msgid "name.description"
 msgstr "Bezeichnung des Ortes"
-
-msgctxt "Organization"
-msgid "officialName.singular"
-msgid_plural "officialName.plural"
-msgstr[0] "Name"
-msgstr[1] "Namen"
 
 msgctxt "Organization"
 msgid "officialName.description"
@@ -1252,9 +1275,19 @@ msgid_plural "relatedActivity.plural"
 msgstr[0] "Zusammenhängendes Projekt"
 msgstr[1] "Zusammenhängende Projekte"
 
+msgctxt "Resource"
+msgid "relatedActivity.singular"
+msgid_plural "relatedActivity.plural"
+msgstr[0] "Verknüpftes Projekt"
+msgstr[1] "Verknüpfte Projekte"
+
 msgctxt "Activity"
 msgid "relatedActivity.description"
 msgstr "Andere(s) Projekt(e), die mit dem beschriebenen in Zusammenhang stehen"
+
+msgctxt "Resource"
+msgid "relatedActivity.description"
+msgstr "Projekt(e) in Verbindung mit dem Datenbestand/ dem Datensatz"
 
 msgctxt "Resource"
 msgid "relatedResource.singular"
@@ -1395,13 +1428,11 @@ msgstr ""
 "Ein Datensatz oder mehrere Datensätze, die als Quelle für den beschriebenen Datensatz "
 "genutzt wurden"
 
-msgctxt "Resource"
 msgid "spatial.singular"
 msgid_plural "spatial.plural"
-msgstr[0] "Räumlicher Bezug"
-msgstr[1] "Räumliche Bezüge"
+msgstr[0] "Ort oder geographische Region"
+msgstr[1] "Orte oder geographische Regionen"
 
-msgctxt "Resource"
 msgid "spatial.description"
 msgstr "Geografische Abdeckung der Daten"
 
@@ -1754,6 +1785,7 @@ msgstr "Organisation"
 msgid "OrganizationalUnit"
 msgstr "Organisationseinheit"
 
+#. dennis-ignore: W302
 msgid "Person"
 msgstr "Person"
 
@@ -1766,6 +1798,7 @@ msgstr "Datenbestand/Datensatz"
 msgid "ResourceSeries"
 msgstr "Kollektion von Datenbeständen/Datensätzen"
 
+#. dennis-ignore: W302
 msgid "Variable"
 msgstr "Variable"
 
