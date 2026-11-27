@@ -1563,7 +1563,7 @@ msgstr "Institute to which the organizational unit belongs"
 msgctxt "Variable"
 msgid "usedIn.singular"
 msgid_plural "usedIn.plural"
-msgstr[0] "Related data"
+msgstr[0] "Related dataset"
 msgstr[1] "Related data"
 
 msgctxt "Variable"
